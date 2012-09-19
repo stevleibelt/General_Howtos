@@ -1,0 +1,3 @@
+To check a file run:
+phpcs –standard=MyStandard /path/to/your/file.php
+

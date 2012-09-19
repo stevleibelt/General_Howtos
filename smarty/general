@@ -1,0 +1,17 @@
+zwischen zwei klassen im html wechseln
+    {cycle assign="tr_class" values="list_white,list_grey"}
+
+isset
+{if isset($foo)}
+
+var_dump
+{$var|@var_dump}
+
+md5
+{md5 var=$var}
+
+assign var in script
+{assign var='form_name' value='document_upload_select'}
+
+{if}{elseif}{else}{/if}
+

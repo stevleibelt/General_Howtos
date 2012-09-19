@@ -1,0 +1,8 @@
+SET @myVar = 'foo';
+
+SELECT 
+  foo
+FROM
+  bar
+WHERE
+  foobar = @myVar;

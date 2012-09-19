@@ -1,0 +1,15 @@
+mkdir ~/www/currentRelease
+[svn checkout https://mydomain.de/svn/myrepro/releases/$release . | svn switch ... ]
+
+-- show difference between branches
+sh ~/code/sh/svn/showChanges.sh
+
+-- dry-run
+svn merge --dry-run -c $changesetNr[,$changesetNr] https://mydomain.de/svn/myrepro/trunk .
+https://mydomain.de/svn/myrepro/branches/mybranch
+
+-- final merge
+svn merge -c $changesetNr[,$changesetNr] https://mydomain.de/svn/myrepro/trunk .
+
+-- and commit it
+svn commit

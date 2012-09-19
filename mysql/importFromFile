@@ -1,0 +1,1 @@
+mysql --user=user --password=password --database=database < ~/path/to/my/file

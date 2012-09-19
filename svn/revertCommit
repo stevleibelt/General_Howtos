@@ -1,0 +1,4 @@
+_figure out the commit number of the last commit and -change it
+svn merge -c -24583 .
+_to be shure, try an svn diff and see if changes are reverted
+svn commit -m "undoing commit 24583"

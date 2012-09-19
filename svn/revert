@@ -1,0 +1,7 @@
+_revert all
+svn revert -R .
+_revert via script
+svn st -q | awk '{print $2;}' | xargs svn revert
+_revert commit
+# importent is the "-" before the $revisionNumber
+svn merge -c -$revisonNumber .

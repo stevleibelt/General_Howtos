@@ -1,0 +1,2 @@
+# get all content between tag "joblinks" from xml
+sed -n -e 's/.*<job_link>\(.*\)<\/job_link>.*/\1/p' index.html\?un\=969178095 > joblinks671195e754ca9765a0f2c11db4d58fd4\&id\=72\&et\=d6a6d33d0168b486199de22acf7e7495 > joblink

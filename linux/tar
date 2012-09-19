@@ -1,0 +1,4 @@
+# tar directory foo with bzip compression
+tar -cjvf test.tbz foo/
+# untar 
+tar -xjvf test.tbz

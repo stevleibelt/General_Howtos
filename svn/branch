@@ -1,0 +1,6 @@
+svn info to get the svn-path
+
+svn copy https://mydomain.de/svn/myrepro/trunk https://mydomain.de/svn/myrepo/branches/mybranch -m "myComment"
+
+cd /my/branch/path
+svn switch https://mydomain.de/svn/myrepro/branches/mybranch

@@ -1,0 +1,2 @@
+//current date
+SET @TODAY = DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%s');

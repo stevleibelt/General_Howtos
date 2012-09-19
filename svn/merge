@@ -1,0 +1,18 @@
+cd mytrunk
+
+!Attation only use "--reintegrate" if your branch is finished. After using this, you can not use the branch anymore.
+
+_dry run
+svn merge --dry-run --reintegrate https://mydoman.de/svn/myrepro/branches/mybranch .
+
+_real run
+svn merge --reintegrate https://mydoman.de/svn/myrepro/branches/mybranch .
+
+_resolve problems
+__resolve tree conflicts
+svn resolve --accept working -R *
+_you have to commit all (even the .)
+svn commit
+
+_delete old branch
+svn remove https://mydomain.de/svn/myrepro/branches/mybranch
