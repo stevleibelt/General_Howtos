@@ -1,0 +1,2 @@
+# get all content between tag "mylink" from xml
+sed -n -e 's/.*<mylink>\(.*\)<\/mylink>.*/\1/p' exampleXml > myfile
