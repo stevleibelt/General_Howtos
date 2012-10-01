@@ -1,2 +1,0 @@
-# get content containing myWord
-sed -n -e 's/myWord/p' exampleFile > fileWithExtractedLines
