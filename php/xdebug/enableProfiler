@@ -1,0 +1,3 @@
+-- in apache vhost setting
+php_value xdebug.profiler_enable_trigger 1
+php_value xdebug.profiler_output_dir /path/to/my/output/dir
