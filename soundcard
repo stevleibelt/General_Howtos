@@ -1,0 +1,7 @@
+cat /proc/asound/cards
+
+lspci -nnk | grep -iA2 audio
+
+lsmod | grep 'snd'
+
+ps -C pulseaudio

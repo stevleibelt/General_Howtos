@@ -1,0 +1,5 @@
+download and untar
+cd $directory
+make
+sudo make install
+sudo echo '/usr/local/bin/noip2' >> /etc/rc.local

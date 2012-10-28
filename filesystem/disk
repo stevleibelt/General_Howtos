@@ -1,0 +1,2 @@
+-show current harddrive layout
+/sbin/fdisk -l
