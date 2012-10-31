@@ -1,0 +1,1 @@
+svn diff [--summarize] http[s]://my.domain.net/svn/release/1.2.3.4/[my/sub/path] http[s]://my.domain.net/svn/release/0.8.1.5/[my/sub/path]
