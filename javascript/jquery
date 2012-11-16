@@ -14,6 +14,9 @@ function test(paramA) {
 	paramA = paramA || 'default';
 }
 
+//inArray - is in array
+jQuery.inArray(value, array);
+
 //create a class
 function MyClass {
 	this.myFunction = function(parameter1)
