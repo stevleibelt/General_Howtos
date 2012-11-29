@@ -6,6 +6,7 @@
 
 #array
 #based on http://www.thegeekstuff.com/2010/06/bash-array-tutorial/
+#http://wiki.bash-hackers.org/syntax/arrays
 declare -a ARRAY_ENTRIES=('foo' 'bar' 'foobar');
 
 echo "Array has "${#ARRAY_ENTRIES[@]}" elements."

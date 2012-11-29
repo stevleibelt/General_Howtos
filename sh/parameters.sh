@@ -8,6 +8,8 @@
 # @since 2012-11-27
 #####
 
+#http://tldp.org/LDP/abs/html/comparison-ops.html
+
 # check is variable is null/zero
 if [ -z "$1" ]; then 
   echo "\$1 is null."
