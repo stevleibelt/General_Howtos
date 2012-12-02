@@ -1,0 +1,5 @@
+if [[ $ZSH_VERSION = 3.* ]]; then
+  print This is a release of the third version of zsh.
+else
+  print This is either very new or very old.
+fi

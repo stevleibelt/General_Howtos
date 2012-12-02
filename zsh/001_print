@@ -1,0 +1,2 @@
+print $ZSH_VERSION
+print $CPUTYPE
