@@ -4,7 +4,9 @@ ALTER TABLE
 ADD 
     `my_column` TINYINT( 1 ) NOT NULL DEFAULT 0,
 ADD 
-    INDEX `my_column` (`my_column`);
+    INDEX `my_column` (`my_column`),
+ADD 
+    INDEX `my_other_column` (`my_other_column`);
 
 -- delete column with index
 ALTER TABLE 
@@ -12,7 +14,9 @@ ALTER TABLE
 DROP 
     `my_column`,
 DROP 
-    INDEX `my_column`;
+    INDEX `my_column`,
+DROP
+    INDEX `my_other_column`;
 
 -- add index
 ALTER TABLE 
