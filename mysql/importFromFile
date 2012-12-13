@@ -1,1 +1,4 @@
 mysql --user=user --password=password --database=database < ~/path/to/my/file
+
+-- if you get some problems with umlauts, try to add a --default_character_set utf8 
+mysql --user=user --password=password --default_character_set utf8 --database=database < ~/path/to/my/file
