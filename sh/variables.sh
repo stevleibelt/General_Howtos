@@ -6,6 +6,7 @@
 
 #array
 #based on http://www.thegeekstuff.com/2010/06/bash-array-tutorial/
+#http://wiki.bash-hackers.org/syntax/arrays
 declare -a ARRAY_ENTRIES=('foo' 'bar' 'foobar');
 
 echo "Array has "${#ARRAY_ENTRIES[@]}" elements."
@@ -16,3 +17,8 @@ for ARRAY_ENTRY in $ARRAY_ENTRIES; do
 done;
 
 echo "Calling two elements, starting from second position: "${ARRAY_ENTRIES[@]:1:2}
+
+#inarray
+if [[ ${ARRAY_ENTRIES[*]} =~ bar ]];  then
+  echo "There is a bar in the foo!"
+fi
