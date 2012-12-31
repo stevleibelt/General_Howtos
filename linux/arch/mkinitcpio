@@ -1,0 +1,3 @@
+#edit file /etc/mkinitcpio.conf
+#generate new initramfs
+makeinitcpio -p linux
