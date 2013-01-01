@@ -1,0 +1,2 @@
+makepkg
+pacman -U *.tar.xz
