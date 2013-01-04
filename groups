@@ -1,0 +1,9 @@
+# list groups per user
+groups $user
+# add user to group
+usermod -a -G $group,$group $user
+# add groupid
+chmod -R g+s $path
+chmod -R 2775 $path
+# add stickybit
+chmod -R +d $path

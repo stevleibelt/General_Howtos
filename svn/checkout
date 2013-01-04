@@ -1,1 +1,1 @@
-svn checkout https://my.domain.de/svn/mytrunk/myrelease/release-0-8-1-5-/ .
+svn checkout https://my.domain.org/svn/myProject/release/myRelease-0-8-1-5/ .
