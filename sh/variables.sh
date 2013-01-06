@@ -12,7 +12,7 @@ declare -a ARRAY_ENTRIES=('foo' 'bar' 'foobar');
 echo "Array has "${#ARRAY_ENTRIES[@]}" elements."
 echo "First entry has "${#ARRAY_ENTRIES}" characters."
 
-for ARRAY_ENTRY in $ARRAY_ENTRIES; do
+for ARRAY_ENTRY in ${ARRAY_ENTRIES[@]}; do
   echo "$ARRAY_ENTRY";
 done;
 
