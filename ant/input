@@ -1,0 +1,5 @@
+<input
+    message="Enter a build path:"
+    addproperty="directory.build"
+    defaultValue="/tmp"
+/>

@@ -1,0 +1,8 @@
+<!-- create a directory-/filestructure in path ${basedir}/template -->
+<!-- use "@my.var" to define variables -->
+<copy todir="${basedir}/build">
+    <fileset dir="${basedir}/template" />
+    <filterset>
+        <filter toke="my.var" value="foobar" />
+    </filterset>
+</copy>

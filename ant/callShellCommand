@@ -1,0 +1,3 @@
+<exec executable="ls" dir="${basedir}/foo">
+    <arg value="-halt" />
+<exec>

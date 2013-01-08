@@ -1,0 +1,4 @@
+<ant antfile="${filepath.subBuild}" target="main" >
+    <property name="foo" value="bar" />
+    <property name="bar" value="foo" />
+</ant>

@@ -1,0 +1,10 @@
+<if>
+    <available dir="${directory.foo}" />
+    <then>
+        <echo message="removing foo" />
+        <delete dir="${directory.foo}" />
+    </then>
+    <else>
+        <echo message="nothing to do" />
+    </else>
+</if>

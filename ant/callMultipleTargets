@@ -1,0 +1,5 @@
+<target name="main">
+    <antcall target="clean" />
+    <antcall target="init" />
+    <antcall target="make" />
+</target>
