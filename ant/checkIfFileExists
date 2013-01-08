@@ -1,0 +1,10 @@
+<!-- source: http://theoreticaltechstuff.blogspot.de/2010/10/ant-example-check-if-directory-is-empty.html -->
+    <if>
+         <available file="path_to_file"/>
+         <then>
+              <!-- File Exists -->
+         </then>
+         <else>
+              <!-- File Doesn't Exists -->
+         </else>
+    </if>
