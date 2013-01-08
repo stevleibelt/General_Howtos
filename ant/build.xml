@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<project name="ant howto example file" default="main" basedir=".">
+    <target name="test" description="testing area">
+        <mkdir dir="foo" />
+        <mkdir dir="bar" />
+        <exec executable="touch" dir="${basedir}/foo">
+            <arg value="bar-foobar.foo" />
+        </exec>
+        <fileset dir="${basedir}/foo" id="install">
+            <filename regex="bar-*.foo"/>
+        </fileset>
+        <echo message="${toString:install}" />
+
+        <tar  basedir="${basedir}/foo" destfile="${basedir}/foo.tar" />
+        <gzip src="${basedir}/foo.tar" destfile="${basedir}/foo.tar.gz" />
+        <delete dir="${basedir}/foo" />
+        <delete file="${basedir}/foo.tar" />
+        <move file="${basedir}/foo.tar.gz" todir="${basedir}/bar"/>
+
+        <antcall target="-gunzip_and_untar">
+            <param name="directory" value="${basedir}/bar" />
+            <param name="source.tar" value="foo.tar" />
+        </antcall>
+    </target>
+</project>
