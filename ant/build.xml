@@ -1,25 +1,45 @@
 <?xml version="1.0"?>
 <project name="ant howto example file" default="main" basedir=".">
-    <target name="test" description="testing area">
+    <target name="main" description="all examples">
+        <antcall target="directory-and-files" />
+        <antcall target="directory-and-files-clean" />
+    </target>
+
+    <target name="directory-and-files" description="example area for directory and file">
+        <echo message="creating directories foo and bar" />
         <mkdir dir="foo" />
         <mkdir dir="bar" />
-        <exec executable="touch" dir="${basedir}/foo">
-            <arg value="bar-foobar.foo" />
-        </exec>
-        <fileset dir="${basedir}/foo" id="install">
-            <filename regex="bar-*.foo"/>
-        </fileset>
-        <echo message="${toString:install}" />
 
+        <echo message="creating file bar-23_-23.foobar.foo.bar in foo/" />
+        <exec executable="touch" dir="${basedir}/foo">
+            <arg value="bar-23_-23.foobar.foo.bar" />
+        </exec>
+
+        <echo message="searching for file in foo/" />
+        <fileset dir="${basedir}/foo" id="install">
+            <filename regex="bar-*.foo.bar"/>
+        </fileset>
+        <echo message="file found with name ${toString:install}" />
+
+        <echo message="tar and gzip directory foo" />
         <tar  basedir="${basedir}/foo" destfile="${basedir}/foo.tar" />
         <gzip src="${basedir}/foo.tar" destfile="${basedir}/foo.tar.gz" />
+
+        <echo message="deleting directory foo and file foo.tar" />
         <delete dir="${basedir}/foo" />
         <delete file="${basedir}/foo.tar" />
+
+        <echo message="moving file foo.tar.gz into directory bar" />
         <move file="${basedir}/foo.tar.gz" todir="${basedir}/bar"/>
 
-        <antcall target="-gunzip_and_untar">
-            <param name="directory" value="${basedir}/bar" />
-            <param name="source.tar" value="foo.tar" />
-        </antcall>
+        <echo message="gzip and untar file foo.tar.gz ino bar" />
+        <gunzip src="${basedir}/bar/foo.tar.gz" dest="${basedir}/bar" />
+        <untar src="${basedir}/bar/foo.tar" dest="${basedir}/bar" />
+        <delete file="${basedir}/bar/foo.tar.gz" />
+    </target>
+
+    <target name="directory-and-files-clean" description="clean up for direcotry-and-file target">
+        <echo message="delete directory bar" />
+        <delete dir="${basedir}/bar" />
     </target>
 </project>
