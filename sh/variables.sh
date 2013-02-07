@@ -22,3 +22,6 @@ echo "Calling two elements, starting from second position: "${ARRAY_ENTRIES[@]:1
 if [[ ${ARRAY_ENTRIES[*]} == bar ]];  then
   echo "There is a bar in the foo!"
 fi
+
+#remove first internal variable
+#shift
