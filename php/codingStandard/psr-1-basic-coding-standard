@@ -1,0 +1,8 @@
+#based on:
+#https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
+must follow psr-0
+use "<?php" or "<?="
+has UTF-8 only
+classname must be declared in StudlyCaps
+class constants mut be declared in all uppercase with UNDERSORCE_SEPARATORS
+method names must deckared camelCase

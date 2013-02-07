@@ -1,0 +1,16 @@
+#based on:
+#https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
+code must follow psr-1
+code must use 4 spaces instead of tabs
+lines should be soft limited to 120 characters
+lines should be limited to 80 characters
+one blank line after namespace
+one blank line after last use
+opening braces for classes must go on the next line
+closing braces must for classes go on the next line
+opening braces for methods must go on the next line
+closing braces must for methods go on the next line
+visibiliy must be declared on all properties and methods
+abstract and final must be declared before visibility
+control structure keywords must have one space after them, method- and functioncalls must not
+opening parentheses for control structures must not have spaces after or before them

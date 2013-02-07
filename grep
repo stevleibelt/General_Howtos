@@ -1,0 +1,7 @@
+#http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/
+#or
+grep 'pattern1\|pattern2'
+#and
+# there is no real and so we have to use grep in extended mode
+#instead of grep -e you can also use egrep
+grep -e 'pattern1.*pattern2'
