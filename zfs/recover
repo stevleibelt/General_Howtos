@@ -1,0 +1,5 @@
+zdb -e $tank
+zdb -l /dev/disk/by-id/$device
+
+zpool import -f $tank
+zpool import -Fn $tank
