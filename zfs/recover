@@ -1,5 +1,15 @@
+#check if a pool is importable
+zpool import -f -F -n $tank
+#if possible, import it
+zpool import -f -F $tank
+
+zpool import -o readonly=on $tank
+
 zdb -e $tank
 zdb -l /dev/disk/by-id/$device
 
 zpool import -f $tank
 zpool import -Fn $tank
+
+zpool clear -F $tank
+zpool detach $tank $device

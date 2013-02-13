@@ -1,1 +1,7 @@
+#http://docs.oracle.com/cd/E19253-01/819-5461/gavwg/index.html
 zpool events -v
+zpool history $tank
+zpool status -v
+zpool status -x
+zpool status $tank
+zpool clear $tank
