@@ -1,0 +1,4 @@
+#based on:
+#https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md
+methodnames are: debug, info, notice, warning, error, critical, alert, emergeny
+methodname log accepts a log level as first argument

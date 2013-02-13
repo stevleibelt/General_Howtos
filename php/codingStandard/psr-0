@@ -1,0 +1,10 @@
+#based on:
+#https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
+
+#fully qualified namespace based folder structure
+\<VendorName>\<Namespace>\<ClassName>
+Toplevel namespace is <VendorName>
+Each namespace separator is converted into a DIRECTORY_SEPARATOR
+Each "_" in a classname is converted into a DIRECTORY_SEPARATOR
+Each classname is extended with .php (likewise) as filename
+Names in namespace, classname and vendorname can combine any lower and uppercase alphabetic characters
