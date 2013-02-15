@@ -27,3 +27,7 @@ mod1+k x	destroy frame
 mod1+s		split frame vertically
 mod1+k s	split frame horizontally
 
+mod1+t		tag current window
+mod1+k a	attach tagged windows to current frame
+mod1+k t	clear tags
+mod1+l		lock screen
