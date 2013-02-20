@@ -1,0 +1,6 @@
+#example by installing "sudo"
+##compile and install it
+cd /usr/ports/security/sudo
+make install clean
+##configure it
+visudo -f /usr/local/etc/sudoers
