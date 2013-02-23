@@ -1,0 +1,9 @@
+#for testing, add following line to crontab
+*/5 * * * * root /sbin/pfctl -d
+#available actions
+#redirect
+rdr
+#block
+block
+#pass
+pass
