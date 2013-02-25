@@ -1,0 +1,4 @@
+-- some usefull select statements
+-- 
+-- create md5 based on current unix timestamp
+SELECT md5(UNIX_TIMESTAMP());
