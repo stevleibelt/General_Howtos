@@ -2,4 +2,5 @@
 ListenAddress <ip-address>
 #root is not allowed to log in
 PermitRootLogin no
-
+#generate key
+ssh-keygen -t rsa
