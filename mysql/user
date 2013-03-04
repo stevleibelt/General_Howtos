@@ -9,9 +9,12 @@ SELECT user FROM mysql.user;
 
 #grant privilege
 GRANT ALL PRIVILEGES ON 'mytable' TO 'user'@'localhost';
+
 #reload
 flush privileges;
+
 #grant options
 SELECT|USAGE|ALTER|CREATE|INSERT|...
+
 #grant multiple
 GRANT SELECT, INSERT ON 
