@@ -22,3 +22,5 @@ jobs
 fg [$numberOfJobFromList]
 #continue job in background
 bg [$numberOfJobFromList]
+#start two commands in the background
+(commandOne; commandTwo);
