@@ -1,0 +1,1 @@
+sed -n -e 's/^.*MyWord\ with\ whitespaces\ "\(.*\)"\ and\ more.*/\1/p' sourceFile > destinationFile
