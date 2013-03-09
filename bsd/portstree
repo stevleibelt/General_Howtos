@@ -1,7 +1,9 @@
 #install
 portsnap fetch extract
+
 #update
 portsnap fetch update
+
 #search
 whereis $tool
 locate $tool
@@ -9,6 +11,9 @@ http://www.freshports.org
 
 #get software needs to be updated
 pkg_version -l "<"
+
+#update all ports using portupgrade -r
+portupgrade -r <port>
 
 #validate installed ports
 portaudit -Fda
