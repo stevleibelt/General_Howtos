@@ -13,6 +13,9 @@ make showconfig
 #manpage for ports
 man ports
 
+#list installed ports
+pkg_info
+
 #update/upgrade
 portupgrade -r $portOne [$portTwo ...]
 
