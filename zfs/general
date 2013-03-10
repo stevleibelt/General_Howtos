@@ -5,3 +5,9 @@ zpool status -v
 zpool status -x
 zpool status $tank
 zpool clear $tank
+
+#try zpool import without mounting it
+zpool import -N
+
+#change mountpoint
+zfs set mountpoing=/path/to/mountpoin myTank

@@ -8,6 +8,10 @@ pflog_logfile="/var/log/pflog"
 
 #file
 /etc/pf.conf
+
+#test file
+pfctl -nf /etc/pf.conf
+
 #terms
 ##makro
 #a list of values represented by a name
