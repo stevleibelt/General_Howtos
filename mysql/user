@@ -8,7 +8,7 @@ CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
 SELECT user FROM mysql.user;
 
 #grant privilege
-GRANT ALL PRIVILEGES ON 'mytable' TO 'user'@'localhost';
+GRANT ALL PRIVILEGES ON 'mytable' TO 'user'@'localhost' WIHT GRANT OPTION;
 
 #reload
 flush privileges;
