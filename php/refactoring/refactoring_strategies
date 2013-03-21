@@ -1,0 +1,186 @@
+#extract method
+You have a lot of code that can be grouped together.
+-> Turn code into a method named to explain the purpose of the method.
+
+##steps
+- create new method with fitting name (what it does not how)
+- copy extracted code into new method
+- look for variables in the scope of the method and add it as parameter to the method
+- look for returned variables and return them (as single property, array, object)
+- replace extracted code with methodcall
+- run tests
+
+#inline method
+The code in your method is doing more than its name.
+-> Move the called code into the body of the caller and remove the called method
+-> It is possible that you split the big code up into smaller pieces afterwards
+
+##steps
+- verify the method is not overwritten by subclasses
+- find all calls to the method
+- replace calls with method body
+- run tests
+- remove method
+
+#inline temp
+A simple expression is assigned once to a temporary variable and is used as return value or as validation.
+-> Replace variable with simple expression
+
+##example
+
+public function isToMuch($number)
+{
+    $isToMuch = ($number > 666);
+
+    return $isToMuch;
+}
+
+#replace temp with query
+You are using temporary variables to store and hold an expression result
+-> Extract a new method and replace all references to the variable with the method call
+
+##steps
+- look for variables that is assigned once
+- extract right-hand-side of the assignment and move into a private method
+- run tests
+- replace variable with methodcall
+- run tests
+
+#introduce explaining variable
+You have a complicated expression.
+-> Put the expression into a temporary variable with a clear name.
+
+##steps
+- declare a variable
+- assign result of expression on it
+- run tests
+
+#split temporary variable
+A temporary vaiable is assigned more then once.
+-> Declare and assign a separate variable for each assignment.
+
+##steps
+- validate that variable is not used as a iterator or something similar
+- change the name of the variable at its first declaration
+- run tests
+- repeat change naming for each declaration and run tests
+
+#replace method with method object
+You have a long method and you can not apply "extract method".
+-> Create a new class, instantiate an object and create a method. Then refactor it.
+
+##steps
+- create a new class named as the method
+- give new class an attribute for the original object and for each variable or parameter
+- write a constructor to accept source object and paramenters
+- create a "compute()" method in the new class
+- copy the body of the old method into the new one
+- prefix variable calls with "this->"
+- replace old method with new object instance creation and call of the "compute()" method
+- decompose the "compute()" method as much as needed 
+
+#substitue algorithm
+You want to replace an algorithm with another.
+->Replace body of the method with new algorithm
+
+##steps
+- prepare your alternative algorithm
+- run tests
+- use both algorithms to run tests and debugging
+- compare speed and readability
+
+#move method
+A class method is more used by methods of another class then by the class it is defined
+-> Create a new method in the other class and copy code. Decide if you want to duplicate the code or create a delegation to the new method or remove it.
+
+##steps
+- write unittests for the class
+- identify the method and move it
+- observe the attributes used inside the method and move them also or pass them as paraemters
+- validate that the method is not extended in subclasses or extends a superclass
+- write a unittest for the destination class
+- move the method in the destination class, most likly you can change the name to better fitting one
+- run unittests
+- change source method (should call the new method now)
+- run unittests
+- decide what to do with the source method (remove it or keep the delegation in)
+
+#move property
+A property of a class describes a feature of another class instead of a feature of the current class.
+-> Create a new property and change all calls to the new class property.
+
+##steps
+- write unittest for source and destination class
+- define new property in destination class 
+- create getter/setter methods in destination class
+- run tests
+- replace property by referencing to the destination class method
+- run tests
+
+#extract class
+A class has responsibilities for more than one class.
+-> Create a new class and move properties and methods into it, that doesn't belong to the source class.
+
+##steps
+- create unittest for source class.
+- decide which properties and|or methods to extract
+- create unittest for new class
+- create new class
+- store an instance of the new class in the constructor of the old class
+- use "move property" method to move each property in the new class
+- run tests
+- use "move method" method to move each method in the new class
+- run tests
+- decide how to handle the new class in the calls of the old class (move old calls to new class?)
+
+##example
+A class "book" holds informations of the an "author" (first name, last name, address).
+-> create class "author" and inject it in class "book".
+
+#inline class
+A class isn't doing very much
+-> Move all its features into another class and delete it.
+
+##steps
+- write unittest for source and destination class
+- use "move property" and|or "move method" to move property and|or method from source to destination
+- replace calls with calls to destination class
+- run all tests
+
+##example
+A class "author" is injected into a class "book" and only has the properties "firstName" and "lastName".
+
+#hide delegate
+A client is calling a delegate class of an object.
+-> Create methods to hide the delegate.
+
+##steps
+- write unittest
+- declare methods to hide the delegate methods from the client
+- run tests
+- change all calls from clients to the new delegate method
+- run tests
+- remove unused methods
+
+#remove the middle man.
+A class is doing to much simple delegation.
+-> Get the cliend to call the delegate directly.
+
+##steps
+- write tests
+- add new method in the server class
+- run tests
+- change all client calls to the new server method
+- remove delegate methods
+- adapt server class tests
+- run all tests
+
+#introduce foreign method
+A server class needs an additional method but can't be modified.
+-> Create a method in the client class with the server class as first parameter.
+
+##steps
+- write test for client class
+- run tests
+- create method in client class
+- run tests

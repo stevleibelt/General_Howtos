@@ -1,0 +1,54 @@
+#why we should do it
+- refactoring improves the design of our software (everybody wants to have elegant code)
+- refactoring makes our software easier (when removing if's we never use)
+- refactoring helps to find bugs (most likly when we cover code with unittests)
+- refactoring makes the team more productive (everybody wants to implement the feature)
+
+#principles
+- Keep it simple (and) stupid - KISS
+	- code is hard to read/understand? No Kiss
+- Don't repleat yourself - DRY
+	- same code on different areas? Its wet
+- Test Driven Development - TDD
+	- add test
+	- run all tests to see if new one fails
+	- write a simple test that cause the code to pass
+	- run tests and extend until all (known) behaviours are covered
+	- refactor code
+
+#when should e do refactoring?
+- when written tests are green :-)
+-> you have finished to implement the feature
+-> you have covered the feature with tests that covers all acceptance criterias
+-> you realize you can improve the code? Refactore it now since you are deep in the topic
+
+#when we should refactor
+##rule of three
+same code on three areas -> move it in a central class
+
+##refactor when you add functionality
+you have to read the code anyways, if you find thinks complicated, refactor it and prepare the code for the new feature. Since all is covered by unittests, the light has to stay green.
+
+##refactor when fixing a bug
+- investigate why your unittest doesn't fail
+- if needed, add a unittest that fails
+- fix bug until the lights are green
+- after fixing the bug, we can refactor the code
+
+#when we shouldn't refactor
+complex, old and not covered by unittest code -> interview all peoples to figure out the value/features of the code and rewrite it from scratch
+
+#simple rules
+- test before refactoring
+- make small and simple changes
+	- find the code you have to change
+	- write unittest if no one exists
+	- do small step to improve
+	- run unittest and fix until lights are green
+	- go back to step three
+- never change functionality
+	- refactoring never adds functionality
+	- functionality is added after a first "prepared" refactoring (if needed)
+	- refactoring can be done after adding a functionality (that is covered with a unittest)
+- follow the bad smells
+- follow refactoring techniques step-by-step
