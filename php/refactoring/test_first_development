@@ -1,6 +1,6 @@
 #why?
 tests will decrease the time you have to spend for fixing bugs.
-communicate with your customer and show functional tests as early as possible. If you have code coverd by tests, you are not afraid to change anything inside.
+communicate with your customer and show functional tests as early as possible. If you have code covered by tests, you are not afraid to change anything inside.
 
 #put the chaos in the cage
 cover code with unit tests and functional tests (selenium, phantomjs)

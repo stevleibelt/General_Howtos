@@ -222,7 +222,7 @@ echo 'Hello ' . $user;
 
 ##refactoring strategies
 - collapse hierarchy
-- incline class
+- inline class
 
 ##remove speculative (maybe good for the future) code
 
