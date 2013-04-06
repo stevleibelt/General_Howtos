@@ -1,4 +1,7 @@
-#http://hub.opensolaris.org/bin/download/Community+Group+zfs/docs/zfsadmin.pdf
+#links
+http://hub.opensolaris.org/bin/download/Community+Group+zfs/docs/zfsadmin.pdf
+http://www.sysadmin-cookbook.net/zfs/
+
 #prepare empty disk and add gpt/efi lable
 gdisk /dev/myDevice
 #create tank with name "myTank"
@@ -30,5 +33,11 @@ zpool import -N
 #snapshot
 zfs snapshot myTank/myFileSystem@mySnapshot
 
+#rollback
+zfs rollback myTank/myFileSystem@mySnapshot
+
 #clone
 zfs clone myTank/myFileSystem@mySnapshot myTank/myFileSystem/myClone
+
+#backup
+zfs send [-D -R -I @snapshot | ssh backup.me.com zfs recv [-u -d -F]tank/backup
