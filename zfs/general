@@ -1,3 +1,21 @@
+#http://hub.opensolaris.org/bin/download/Community+Group+zfs/docs/zfsadmin.pdf
+#prepare empty disk and add gpt/efi lable
+gdisk /dev/myDevice
+#create tank with name "myTank"
+zpool create myTank /dev/myDevice
+
+#create filesystem
+zfs create myTank/myFileSystem
+#set mountpoint (if needed)
+zfs set mountpoint=/path/to/mountpoint myTank
+zfs set mountpoint=/foo/bar myTank/myFileSystem
+
+#get all flags
+zfs get all myTank
+
+#add compression to fileSystem
+zfs set compression=on myTank/myFileSystem
+
 #http://docs.oracle.com/cd/E19253-01/819-5461/gavwg/index.html
 zpool events -v
 zpool history $tank
@@ -9,5 +27,8 @@ zpool clear $tank
 #try zpool import without mounting it
 zpool import -N
 
-#change mountpoint
-zfs set mountpoing=/path/to/mountpoin myTank
+#snapshot
+zfs snapshot myTank/myFileSystem@mySnapshot
+
+#clone
+zfs clone myTank/myFileSystem@mySnapshot myTank/myFileSystem/myClone
