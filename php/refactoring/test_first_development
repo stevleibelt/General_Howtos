@@ -1,0 +1,11 @@
+#why?
+tests will decrease the time you have to spend for fixing bugs.
+communicate with your customer and show functional tests as early as possible. If you have code covered by tests, you are not afraid to change anything inside.
+
+#put the chaos in the cage
+cover code with unit tests and functional tests (selenium, phantomjs)
+
+#how?
+create a unittest that should cover the new functionality -> test should run red
+implement functionality -> test should run green
+refactor code as long as tests are green

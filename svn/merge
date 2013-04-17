@@ -11,6 +11,8 @@ svn merge --reintegrate https://mydoman.de/svn/myrepro/branches/mybranch .
 _resolve problems
 __resolve tree conflicts
 svn resolve --accept working -R *
+
+svn resolve -R --accept theirs-full *
 _you have to commit all (even the .)
 svn commit
 

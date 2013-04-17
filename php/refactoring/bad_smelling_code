@@ -1,0 +1,294 @@
+#first signs of bad smells
+- difficult to understand/read or following the logic of code
+- a lot of commented lines
+- sensation of fear when you have to implement new features
+- a lot of files with thousands of thousands of lines of code
+- hard to create testdata
+- procedural code
+
+#examples
+
+##duplicated code
+
+###example
+class BasicUser extends User 
+{
+    public function getGreetingName()
+    {
+        return $this->getFirstName() . ' ' . $this->getLastName();
+    }
+}
+
+class AdminUser extends User 
+{
+    public function getGreetingName()
+    {
+        return $this->getFirstName() . ' ' . $this->getLastName();
+    }
+}
+
+###steps to solve
+- move duplication into parent class.
+
+###refactoring strategies
+- extract method
+- pull up field
+- form template method
+- subsitute algorithm
+
+##method with a size of many lines
+
+###steps to solve
+- extract lines of code that can be readed as "a block of code" into a new method
+- find a name of the method that does not explain how it works, but what it does
+- repeat this until you can read the method and understand the flow
+
+###refactoring strategies
+- extract method
+- move method
+
+##classes with a size of many lines, properties or methods
+
+###steps to solve
+- create blocks of properties that are belonging together
+- move this blocks into classes
+- inject this classes (if needed) with setter and getter methods into current class
+- if some properties are only used by a special circicumstance, move them into a subclass that extends the current class
+
+###refactoring strategies
+- extract class
+- extract subclass
+
+##methods with many parameters
+
+###example
+
+public function sendMailToUser($firstName, $lastName, $emailAddress, ...)
+{
+//CODE//
+}
+
+public function sendMailToUser(User $user)
+{
+//use $user->getFirstName() and so on//
+}
+
+###refactoring strategies
+- replace parameter with method
+- replace parameter with object
+- preserve whole object
+- ontroduce parameter object
+
+##multiple changes to introduce a new feature of fix a bug
+
+###example
+
+class Storage
+{
+    public function findAll()
+    {
+        $connection = mysql_connect(...
+
+        //CODE//
+    }
+
+    public function findOne()
+    {
+        $connection = mysql_connect(...
+
+        //CODE//
+    }
+}
+
+###steps to solve
+- extract method into a general method or new class
+
+###refactoring strategies
+- extract class
+
+##classes that are doing small things like a class for a property
+
+###example
+
+class User
+{
+    public function getStreetname()
+    {
+        return $this->streetname->getValue();
+    }
+
+    public function getStreetnumber()
+    {
+        return $this->streetnumber->getValue();
+    }
+}
+
+class User
+{
+    public function getStreetname()
+    {
+        return $this->address->getStreetname();
+    }
+}
+
+class User
+{
+    public function getStreetname()
+    {
+        return $this->streetname;
+    }
+}
+
+###steps to solve it
+- move method to responsible class
+- move property into current class
+
+###refactoring strategies
+- move method
+- move property/field
+- inline class
+
+##a class is responsible for another class -> a class process data of another class
+
+###steps to solve
+- extract and move methods to responsible class
+
+###refactoring strategies
+- move method
+- extract method
+
+##many attributes have to change in different classes when new feature is inserted
+
+###steps to solve
+- extract attributes into a new class
+- inject class into classes that are using this attributes
+
+###refactoring strategies
+- extract class
+- introduce parameter object
+- preserve whole object
+
+##to many primitive types (string, integer) are used (more then once in the code) to represent certain data
+
+###example
+
+$resultArray = $database->fetch('SELECT first_name, last_name FROM user where id = ' . $id);
+
+echo 'Hello ' . $resultArray['first_name'] . ' ' . '$resultArray['last_name'];
+
+class User
+{
+    public function getGreeting()
+    {
+        return $this->firstName . ' ' . $this->lastName;
+    }
+
+    public function __toString()
+    {
+        return $this->getGreeting();
+    }
+}
+
+echo 'Hello ' . $user->getGreeting();
+echo 'Hello ' . $user;
+
+###steps to solve it
+- replace data value with an object
+- replace usage in code with new object
+
+###refactoring strategies
+- replace data value with object
+- replace type code with class
+- replace type code with subclasses
+- replace type code with state/strategy
+
+##switch statements used more then once in the code
+## the switch changes the behaviour of an object based on given parameter(s)
+
+###steps to solve
+- extract switch in a method
+- move new method in the fitting class
+
+###refactoring strategies
+- extract method
+- move method
+- replace type code with subclass
+- replace type code with state/strategy
+- replace conditional with polymorphism
+- introduce nullObject
+
+##lazy class - a class that it not used that often
+## each class has a cost of maintenance -> sometimes it is usefull to move it back in the class
+
+##refactoring strategies
+- collapse hierarchy
+- inline class
+
+##remove speculative (maybe good for the future) code
+
+###example
+
+A abstract class is extended only by one class.
+A method is only used for testing
+
+###refactoring strategies
+- collapse hierarchy
+- inline class
+- remove parameter
+- rename method
+
+##temporary field
+
+###example
+
+class Customer
+{
+    private $isCompany;
+    private $companyName;  //is only used if Customer is a company
+    private $firstName;
+    private $lastName;
+}
+
+
+Class Customer
+{
+    private $firstName;
+    private $lastName;
+}
+
+Class Company extends Customer
+{
+    private $companyName;
+}
+
+###refactoring strategies
+- extract subclass
+- introduce nullObject (abstract class)
+
+##data class
+## happens when a class with a lot of public attributes have to reduce the publicity of their attributes
+
+###refactoring strategies
+- encapsulate filed (create getter and setter)
+- encapsulate collection
+- remove setting method
+
+##comments
+
+###steps to solve
+- replace comment with a method where name express what the method does not how
+- invoke the method where we want to put the comment
+
+###refactoring strategies
+- extract method
+- preserve whole object
+- introduce parameter object
+
+##procedural code
+
+###steps to solve
+- cover current code with unittest (with all know behaviours)
+- move code to object oriented code
+
+###refactorie strategies
+- big refactoring

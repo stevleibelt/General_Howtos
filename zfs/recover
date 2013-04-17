@@ -5,6 +5,8 @@ zpool import -f -F $tank
 
 zpool import -o readonly=on $tank
 
+zdb -C $tank
+zdb -d $tank
 zdb -e $tank
 zdb -l /dev/disk/by-id/$device
 
