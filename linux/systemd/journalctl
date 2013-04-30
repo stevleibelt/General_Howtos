@@ -1,0 +1,14 @@
+#source urls:
+#  http://0pointer.de/blog/projects/journalctl.html
+
+#configfile
+/etc/systemd/journald.conf
+
+#list journal of current boot
+journalctl -b
+
+#list journal of current boot with debug level error and worse
+jounralctl -b -p err
+
+#filter against device or binaries
+jounrlactl /dev/sdc /usr/sbin/pacman
