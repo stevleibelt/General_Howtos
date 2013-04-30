@@ -3,6 +3,9 @@
 # https://wiki.archlinux.org/index.php/Systemd#Journal
 # http://en.gentoo-wiki.com/wiki/Systemd
 
+#list status of given unit - important for debugging
+systemctl status foo.service
+
 #list current running jobs (good directly after boot to detect slow running processes)
 systemctl list-jobs
 
