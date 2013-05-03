@@ -2,6 +2,24 @@
 You have a lot of code that can be grouped together.
 -> Turn code into a method named to explain the purpose of the method.
 
+##example
+Before
+<php>
+    echo ‘name: ‘ $user->getName() . PHP_EOL;
+    echo ‘amount: ‘ $user->getAmount() . PHP_EOL;
+</php>
+
+After
+<php>
+$this->printDetails($user);
+
+function printDetails(User $user) 
+{
+    echo ‘name: ‘ $user->getName() . PHP_EOL;
+    echo ‘amount: ‘ $user->getAmount() . PHP_EOL;
+}
+</php>
+
 ##steps
 - create new method with fitting name (what it does not how)
 - copy extracted code into new method
@@ -15,6 +33,18 @@ The code in your method is doing more than its name.
 -> Move the called code into the body of the caller and remove the called method
 -> It is possible that you split the big code up into smaller pieces afterwards
 
+##example
+Before
+<php>
+    $anotherNumber = $class->getAnotherNumber();
+    $b = $a + $anotherNumber;
+</php>
+
+After
+<php>
+    $b = $a + $class->getAnotherNumber();
+</php>
+
 ##steps
 - verify the method is not overwritten by subclasses
 - find all calls to the method
@@ -22,22 +52,60 @@ The code in your method is doing more than its name.
 - run tests
 - remove method
 
-#inline temp
+#inline temp variable
 A simple expression is assigned once to a temporary variable and is used as return value or as validation.
 -> Replace variable with simple expression
 
 ##example
+Before
+<php>
+    public function isOverbooked() 
+    {
+        $isOverbooked = count($this->travellers) > $numberOfSeats;
+        return $isOverbooked;
+    }
+</php>
 
-public function isToMuch($number)
-{
-    $isToMuch = ($number > 666);
-
-    return $isToMuch;
-}
+After
+<php>
+    public function isOverbooked() 
+    {
+        return count($this->travellers) > $numberOfSeats;
+    }
+</php>
 
 #replace temp with query
 You are using temporary variables to store and hold an expression result
 -> Extract a new method and replace all references to the variable with the method call
+
+##example
+Before
+<php>
+    public function getPrice()
+    {
+        $basePrice = $this->price * $this->quantity;
+        $discount = ($basePrice > 1000) ? .9 : 1;
+        return $basePrice * $discount;
+    }
+</php>
+
+After
+<php>
+    public function getPrice()
+    {
+        return $basePrice * $discount;
+    }
+
+    private function getDiscount()
+    {
+        return ($this->getBasePrice > 1000) ? .9 : 1;
+    }
+
+    private function getBasePrice()
+    {
+        return $this->price * $this->quantity;
+    }
+</php>
 
 ##steps
 - look for variables that is assigned once
@@ -50,6 +118,27 @@ You are using temporary variables to store and hold an expression result
 You have a complicated expression.
 -> Put the expression into a temporary variable with a clear name.
 
+##example
+Before
+<php>
+    public function getPrice()
+    {
+        return $this->price * $this->quantity - 
+            max($this->quantity - 150, 0) * $this->price * 0.1;
+    }
+</php>
+
+After
+<php>
+    public function getPrice()
+    {
+        $basePrirce = $this->price * $this->quantity;
+        $discount = max($this->quantity - 150, 0) * $this->price * 0.1;
+
+        return $basePrice - $discount;
+    }
+</php>
+
 ##steps
 - declare a variable
 - assign result of expression on it
@@ -58,6 +147,33 @@ You have a complicated expression.
 #split temporary variable
 A temporary vaiable is assigned more then once.
 -> Declare and assign a separate variable for each assignment.
+
+##example
+Before
+<php>
+    public function calculateTotal()
+    {
+        $total = 0;
+        $total += $this->getPrice();
+        $total += $this->getBonus();
+
+        return $total;
+    }
+</php>
+
+After
+<php>
+    public function calculateTotal()
+    {
+        $total = 0;
+        $price = $this->getPrice();
+        $total = $this->getBonus();
+
+        $total = $price + $total;
+
+        return $total;
+    }
+</php>
 
 ##steps
 - validate that variable is not used as a iterator or something similar
@@ -68,6 +184,62 @@ A temporary vaiable is assigned more then once.
 #replace method with method object
 You have a long method and you can not apply "extract method".
 -> Create a new class, instantiate an object and create a method. Then refactor it.
+
+##example
+Before
+<php>
+    public function foo($firstValue, $secondValue)
+    {
+        $tempOne = $firstValue * $secondValue;
+        $tempTwo = $firstValue - $this->getDiscount();
+
+        if (($tempOne - $tempTwo) % 2) {
+            return $firstValue - 2;
+        }
+
+        return $secondValue + 4;
+    }
+</php>
+
+After
+<php>
+    public function foo($firstValue, $secondValue)
+    {
+        $foo = new Foo($firstValue, $secondValue, $this->getDiscount());
+
+        return $foo->compute();
+    }
+
+class FooCalculator
+{
+    private $firstValue;
+    private $secondValue;
+    private $discount;
+
+    public function __construct($firstValue, $secondValue, $discount)
+    {
+        $this->firstValue = $firstValue;
+        $this->secondValue = $secondValue;
+        $this->discount = $discount;
+        $this->setup();
+    }
+
+    public function compute()
+    {
+        if (($this->tempOne - $this->tempTwo) % 2) {
+            return $this->firstValue - 2;
+        }
+
+        return $this->secondValue + 4;
+    }
+
+    private function setup()
+    {
+        $this->tempOne = $this->firstValue * $this->secondValue;
+        $this->tempTwo = $this->firstValue - $this->discount();
+    }
+}
+</php>
 
 ##steps
 - create a new class named as the method
@@ -109,6 +281,47 @@ A class method is more used by methods of another class then by the class it is 
 A property of a class describes a feature of another class instead of a feature of the current class.
 -> Create a new property and change all calls to the new class property.
 
+##example
+Before
+<php>
+class User
+{
+    private $generalDiscount = 0.01;
+
+    public function getPrice()
+    {
+        return ($this->price * $this->generalDiscount);
+    }
+}
+</php>
+
+After
+<php>
+class UserType
+{
+    private $generalDiscount = 0.01;
+
+    public function setGeneralDiscount($discount)
+    {
+        $this->generalDiscount = $discount;
+    }
+
+    public function getGeneralDiscount()
+    {
+        return $this->generalDiscount;
+    }
+}
+
+//general discount is injected by user factory
+class BasicUser extends UserType
+{
+    public function getPrice()
+    {
+        return ($this->price * $this->getGeneralDiscount());
+    }
+}
+</php>
+
 ##steps
 - write unittest for source and destination class
 - define new property in destination class 
@@ -120,6 +333,64 @@ A property of a class describes a feature of another class instead of a feature 
 #extract class
 A class has responsibilities for more than one class.
 -> Create a new class and move properties and methods into it, that doesn't belong to the source class.
+
+##example
+A class "book" holds informations of the an "author" (first name, last name, address).
+-> create class "author" and inject it in class "book".
+
+Before
+<php>
+class User
+{
+    private $city;
+    private $zip;
+
+    public function getAddress()
+    {
+        return $this->zip . ' ' . $this->city;
+    }
+}
+</php>
+
+After
+<php>
+class Address
+{
+    private $city;
+    private $zip;
+
+    public function __construct($zip, $city)
+    {
+        $this->city = $city;
+        $this->zip = $zip;
+    }
+
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    public function getZip()
+    {
+        return $this->zip;
+    }
+
+    public function toString()
+    {
+        return $this->getZip() . ' ' . $this->getCity();
+    }
+}
+class User
+{
+    private $city;
+    private $zip;
+
+    public function getAddress()
+    {
+        return $this->address->toString();
+    }
+}
+</php>
 
 ##steps
 - create unittest for source class.
@@ -133,10 +404,6 @@ A class has responsibilities for more than one class.
 - run tests
 - decide how to handle the new class in the calls of the old class (move old calls to new class?)
 
-##example
-A class "book" holds informations of the an "author" (first name, last name, address).
--> create class "author" and inject it in class "book".
-
 #inline class
 A class isn't doing very much
 -> Move all its features into another class and delete it.
@@ -147,12 +414,66 @@ A class isn't doing very much
 - replace calls with calls to destination class
 - run all tests
 
-##example
-A class "author" is injected into a class "book" and only has the properties "firstName" and "lastName".
-
 #hide delegate
 A client is calling a delegate class of an object.
 -> Create methods to hide the delegate.
+
+##example
+A class "author" is injected into a class "book" and only has the properties "firstName" and "lastName".
+
+Before
+<php>
+class User
+{
+    private $city;
+    private $zip;
+
+    public function getCity()
+    {
+        return $this->city;
+    }
+}
+</php>
+
+After
+<php>
+class Address
+{
+    private $city;
+    private $zip;
+
+    public function __construct($zip, $city)
+    {
+        $this->city = $city;
+        $this->zip = $zip;
+    }
+
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    public function getZip()
+    {
+        return $this->zip;
+    }
+
+    public function toString()
+    {
+        return $this->getZip() . ' ' . $this->getCity();
+    }
+}
+class User
+{
+    private $city;
+    private $zip;
+
+    public function getCity()
+    {
+        return $this->address->getCity();
+    }
+}
+</php>
 
 ##steps
 - write unittest
@@ -184,3 +505,6 @@ A server class needs an additional method but can't be modified.
 - run tests
 - create method in client class
 - run tests
+
+#weblinks
+https://www.jetbrains.com/idea/webhelp/refactoring-source-code.html
