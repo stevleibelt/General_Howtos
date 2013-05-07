@@ -1,0 +1,15 @@
+var today = new Date();
+var year = today.getFullYear();
+var month = today.getMonth();
+var day = today.getDay();
+
+alert('date:: ' + year + '-' + month + '-' + day);
+
+if (month < 10) {
+    month = '0' + month;
+}
+if (day < 10) {
+    day = '0' + day;
+}
+
+alert('date:: ' + year + '-' + month + '-' + day);
