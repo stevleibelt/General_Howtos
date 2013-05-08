@@ -29,20 +29,41 @@ function printDetails(User $user)
 - run tests
 
 #inline method
-The code in your method is doing more than its name.
+The code in your method is not more than its name.
 -> Move the called code into the body of the caller and remove the called method
 -> It is possible that you split the big code up into smaller pieces afterwards
 
 ##example
 Before
 <php>
-    $anotherNumber = $class->getAnotherNumber();
-    $b = $a + $anotherNumber;
+    public firstName;
+    public lastName;
+
+    public function getCompleteName()
+    {
+        return $this->getFirstName() . ' ' . $this->getLastName();
+    }
+
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
 </php>
 
 After
 <php>
-    $b = $a + $class->getAnotherNumber();
+    public firstName;
+    public lastName;
+
+    public function getCompleteName()
+    {
+        return $this->firstName . ' ' . $this->lastName;
+    }
 </php>
 
 ##steps
@@ -81,6 +102,9 @@ You are using temporary variables to store and hold an expression result
 ##example
 Before
 <php>
+    private $price;
+    private $quantity;
+
     public function getPrice()
     {
         $basePrice = $this->price * $this->quantity;
@@ -91,9 +115,12 @@ Before
 
 After
 <php>
+    private $price;
+    private $quantity;
+
     public function getPrice()
     {
-        return $basePrice * $discount;
+        return $this->getBasePrice() * $this->getDiscount();
     }
 
     private function getDiscount()
@@ -166,12 +193,10 @@ After
     public function calculateTotal()
     {
         $total = 0;
-        $price = $this->getPrice();
-        $total = $this->getBonus();
+        $totalWithPrice += $this->getPrice();
+        $totalWithPriceAndBonus += $this->getBonus();
 
-        $total = $price + $total;
-
-        return $total;
+        return $totalWithPriceAndBonus;
     }
 </php>
 
@@ -345,6 +370,26 @@ class User
     private $city;
     private $zip;
 
+    public function setCity($city)
+    {
+        $this->city = $city;
+    }
+
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    public function setZip($zip)
+    {
+        $this->zip = $zip;
+    }
+
+    public function getZip()
+    {
+        return $this->zip;
+    }
+
     public function getAddress()
     {
         return $this->zip . ' ' . $this->city;
@@ -359,15 +404,19 @@ class Address
     private $city;
     private $zip;
 
-    public function __construct($zip, $city)
+    public function setCity($city)
     {
         $this->city = $city;
-        $this->zip = $zip;
     }
 
     public function getCity()
     {
         return $this->city;
+    }
+
+    public function setZip($zip)
+    {
+        $this->zip = $zip;
     }
 
     public function getZip()
@@ -382,12 +431,36 @@ class Address
 }
 class User
 {
-    private $city;
-    private $zip;
+    private $address;
+
+    public function __construct()
+    {
+        $this->address = new Address();
+    }
 
     public function getAddress()
     {
         return $this->address->toString();
+    }
+
+    public function setCity($city)
+    {
+        $this->address->setCity($city);
+    }
+
+    public function getCity()
+    {
+        return $this->address->getCity();
+    }
+
+    public function setZip($zip)
+    {
+        $this->address->setZip($zip);
+    }
+
+    public function getZip()
+    {
+        return $this->address->getZip();
     }
 }
 </php>
@@ -408,6 +481,63 @@ class User
 A class isn't doing very much
 -> Move all its features into another class and delete it.
 
+##example
+Before
+<php>
+class Author
+{
+    private $fullName;
+
+    public function setFullName($fullName)
+    {
+        $this->fullName = $fullName;
+    }
+
+    public function getFullName()
+    {
+        return $this->fullName;
+    }
+}
+
+class User
+{
+    private $author;
+
+    public function __construct()
+    {
+        $this->author = new Author();
+    }
+
+    public function setAuthorFullName($name)
+    {
+        $this->author->setFullName($name);
+    }
+
+    public function getAuthorFullName()
+    {
+        return $this->author->getFullName();
+    }
+}
+</php>
+
+After
+<php>
+class User
+{
+    private $authorFullName;
+
+    public function setAuthorFullName($name)
+    {
+        $this->authorFullName = $name;
+    }
+
+    public function getAuthorFullName()
+    {
+        return $this->authorFullName;
+    }
+}
+</php>
+
 ##steps
 - write unittest for source and destination class
 - use "move property" and|or "move method" to move property and|or method from source to destination
@@ -419,60 +549,83 @@ A client is calling a delegate class of an object.
 -> Create methods to hide the delegate.
 
 ##example
-A class "author" is injected into a class "book" and only has the properties "firstName" and "lastName".
-
 Before
 <php>
-class User
+class Project
 {
-    private $city;
-    private $zip;
+    private $manager;
 
-    public function getCity()
+    public function getManager()
     {
-        return $this->city;
+        return $this->manager;
+    }
+
+    public function setManager(User $manager)
+    {
+        $this->manager = $manager;
     }
 }
+
+class User
+{
+    private $project;
+
+    public function getProject()
+    {
+        return $this->project;
+    }
+
+    public function setProject(Project $project)
+    {
+        $this->project = $project;
+    }
+}
+
+//figure out who is the project manager
+$me = new User();
+$you = new User();
+$project = new Project();
+
+$project->setManager($me);
+$you->setProject($project);
+$you->getProject()->getManager();
 </php>
 
 After
 <php>
-class Address
-{
-    private $city;
-    private $zip;
-
-    public function __construct($zip, $city)
-    {
-        $this->city = $city;
-        $this->zip = $zip;
-    }
-
-    public function getCity()
-    {
-        return $this->city;
-    }
-
-    public function getZip()
-    {
-        return $this->zip;
-    }
-
-    public function toString()
-    {
-        return $this->getZip() . ' ' . $this->getCity();
-    }
-}
 class User
 {
-    private $city;
-    private $zip;
+    private $project;
 
-    public function getCity()
+    public function getProject()
     {
-        return $this->address->getCity();
+        return $this->project;
+    }
+
+    public function setProject(Project $project)
+    {
+        $this->project = $project;
+    }
+
+    public function getManager()
+    {
+        return $this->project->getManager();
+    }
+
+    public function setManager(User $manager)
+    {
+        $this->project->setManager($manager);
     }
 }
+
+//figure out who is the project manager
+$me = new User();
+$you = new User();
+$project = new Project();
+
+$project->setManager($me);
+$you->setProject($project);
+$you->getManager();
 </php>
 
 ##steps
@@ -486,6 +639,86 @@ class User
 #remove the middle man.
 A class is doing to much simple delegation.
 -> Get the cliend to call the delegate directly.
+
+##example
+Before
+<php>
+class User
+{
+    private $project;
+
+    public function getProject()
+    {
+        return $this->project;
+    }
+
+    public function setProject(Project $project)
+    {
+        $this->project = $project;
+    }
+
+    public function getManager()
+    {
+        return $this->project->getManager();
+    }
+
+    public function setManager(User $manager)
+    {
+        $this->project->setManager($manager);
+    }
+}
+
+//figure out who is the project manager
+$me = new User();
+$you = new User();
+$project = new Project();
+
+$project->setManager($me);
+$you->setProject($project);
+$you->getManager();
+</php>
+
+After
+<php>
+class Project
+{
+    private $manager;
+
+    public function getManager()
+    {
+        return $this->manager;
+    }
+
+    public function setManager(User $manager)
+    {
+        $this->manager = $manager;
+    }
+}
+
+class User
+{
+    private $project;
+
+    public function getProject()
+    {
+        return $this->project;
+    }
+
+    public function setProject(Project $project)
+    {
+        $this->project = $project;
+    }
+}
+
+//figure out who is the project manager
+$me = new User();
+$you = new User();
+$project = new Project();
+
+$project->setManager($me);
+$you->setProject($project);
+$you->getProject()->getManager();
+</php>
 
 ##steps
 - write tests
@@ -508,3 +741,5 @@ A server class needs an additional method but can't be modified.
 
 #weblinks
 https://www.jetbrains.com/idea/webhelp/refactoring-source-code.html
+https://github.com/schambers/days-of-refactoring
+http://www.refactoring.com/catalog/introduceForeignMethod.html
