@@ -1,7 +1,7 @@
 var today = new Date();
 var year = today.getFullYear();
-var month = today.getMonth();
-var day = today.getDay();
+var month = today.getMonth() + 1; //getMonth starts with 0
+var day = today.getDate(); //getDay returns current weekday [0-6]
 
 alert('date:: ' + year + '-' + month + '-' + day);
 
