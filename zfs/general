@@ -30,6 +30,9 @@ zpool clear $tank
 #try zpool import without mounting it
 zpool import -N
 
+#import pool for current run (not permanently) with different root path
+zpool import -R /path/to/mountpoint zpoolId
+
 #snapshot
 zfs snapshot myTank/myFileSystem@mySnapshot
 
