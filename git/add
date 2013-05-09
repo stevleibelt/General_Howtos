@@ -1,0 +1,11 @@
+# Add a file to the index/staging
+git add
+
+# Add all files
+git add -A
+
+# Remove from index/staging
+git reset HEAD -- $file
+
+# Add alias
+git config --global alias.unadd 'reset HEAD --'
