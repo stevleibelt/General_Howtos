@@ -1,0 +1,100 @@
+//Inspired by http://daringfireball.net/projects/markdown/basics
+
+# Headline
+
+H1
+==
+
+# H1
+
+H2
+--
+
+## H2
+
+### H3
+
+# Blockquote - <blockquote />
+
+> a blockquote
+> 
+> above is an empty line
+
+# Paragraphs
+
+Each text followed by a empty line is a paragrap.
+
+# Breaks - <br />
+
+Empty line with two spaces
+
+# Emphasized - <em />
+
+*text*
+_text_
+
+# Strong - <strong />
+
+**text**
+__text__
+
+# Unordered List
+
+* Item One
+* Item Two
+
++ Item One
++ Item Two
+
+- Item One
+- Item Two
+
+* Multiline 
+
+  Item One
+* Item Two
+
+# Ordered List
+
+1. Item One
+2. Item Two
+
+# Links
+
+## Simple
+
+[Linkname](https://www.example.de/)
+[Linkname](https://www.example.de/ "with title")
+
+## References
+I get 10 times more traffic from [Google][1] than from
+[Yahoo][2] or [MSN][3].
+
+[1]: http://google.com/        "Google"
+[2]: http://search.yahoo.com/  "Yahoo Search"
+[3]: http://search.msn.com/    "MSN Search"
+
+## Reference To Headline
+
+[Linkname](#headlineId)
+
+----
+
+I start my morning with a cup of coffee and
+[The New York Times][NY Times].
+
+[ny times]: http://www.nytimes.com/
+
+# Image
+
+## With No References
+![alt text](/path/to/img.jpg "Title")
+
+## With References
+![alt text][id]
+
+[id]: /path/to/img.jpg "Title"
+
+# Escape
+
+`<escaped html />`
