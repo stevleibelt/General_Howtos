@@ -51,7 +51,8 @@ var steps = [
 
 interval = setInterval(
     function() {
-        if (!loadInProgress && typeof steps[testindex] == "function") {
+        if (!loadInProgress 
+            && typeof steps[testindex] == "function") {
             console.log("step " + (testindex + 1));
             steps[testindex]();
             testindex++;
