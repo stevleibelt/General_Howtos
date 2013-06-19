@@ -12,6 +12,7 @@ var casper = require('casper').create({
     }
     });
 var url = 'http://www.google.de';
+var filename = 'foo.png';
 
 casper.on('remote.message', function printRemoteMessage(message) {
     this.echo('remote message caught: ' + message);
@@ -25,6 +26,7 @@ casper.start(
     url,
     function loadPageAndFillUpForm() {
         console.log('page "' + this.getCurrentUrl() + '" loaded');
+
         this.test.assertExists('form#gbqf', 'form found');
         this.fill('form#gbqf', {
             q: 'stev leibelt'
@@ -34,6 +36,11 @@ casper.start(
 
 casper.thenEvaluate(function evaluateAfterFillUp(){
     console.log('Page title ' + document.title);
+});
+
+casper.then(function clickSubmit() {
+    this.click('form#gbqf button#gbqfba');
+    this.capture(filename);
 });
 
 casper.run();
