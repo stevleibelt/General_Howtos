@@ -24,3 +24,6 @@ pacman -R $name
 
 #remove package and all dependencies
 pacman -Rs $name
+
+#reinstall with force
+pacman -Syy --force <package>
