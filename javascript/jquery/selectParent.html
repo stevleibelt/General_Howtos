@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    </head>
+    <body>
+        <!-- taken from: http://api.jquery.com/parent/ -->
+        <div class="foo">
+            <div>
+                <div class="bar">
+                    <p>Hello</p>
+                </div>
+            </div>
+            <div class="bar">
+                <div>Just a div</div>
+                <div class="selected"><p>Hello Again</p></div>
+            </div>
+        </div>
+           
+        <script>
+            $("p").parent(".selected").css("background", "yellow");
+            $(".selected").parent(".bar").css("background", "red");
+            $("p").parents(".foo").css("background", "blue");
+        </script>
+    </body>
+</html>
