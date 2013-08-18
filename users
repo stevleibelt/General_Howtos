@@ -1,4 +1,0 @@
-usermod -s /usr/sbin/nologin $username
-
-useradd $username
-usermod -a -G mygroup user

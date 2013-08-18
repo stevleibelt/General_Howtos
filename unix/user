@@ -1,0 +1,8 @@
+usermod -s /usr/sbin/nologin $username
+
+useradd $username
+usermod -a -G mygroup[,myothergroup] user
+
+# Links
+
+* https://wiki.archlinux.org/index.php/Users_and_Groups#User_management
