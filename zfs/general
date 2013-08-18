@@ -1,25 +1,36 @@
-#links
-http://hub.opensolaris.org/bin/download/Community+Group+zfs/docs/zfsadmin.pdf
-http://www.sysadmin-cookbook.net/zfs/
+# Links
 
-#prepare empty disk and add gpt/efi lable
+* http://hub.opensolaris.org/bin/download/Community+Group+zfs/docs/zfsadmin.pdf
+* http://www.sysadmin-cookbook.net/zfs/
+* http://www.solarisinternals.com/wiki/index.php/ZFS_Troubleshooting_Guide
+
+# Prepare empty disk and add gpt/efi lable
+
 gdisk /dev/myDevice
-#create tank with name "myTank"
+
+# Create tank with name "myTank"
+
 zpool create myTank /dev/myDevice
 
-#create filesystem
+# Create filesystem
+
 zfs create myTank/myFileSystem
-#set mountpoint (if needed)
+
+# Set mountpoint (if needed)
+
 zfs set mountpoint=/path/to/mountpoint myTank
 zfs set mountpoint=/foo/bar myTank/myFileSystem
 
-#get all flags
+# Get all flags
+
 zfs get all myTank
 
-#add compression to fileSystem
+# Add compression to fileSystem
+
 zfs set compression=on myTank/myFileSystem
 
 #http://docs.oracle.com/cd/E19253-01/819-5461/gavwg/index.html
+
 zpool events -v
 zpool history $tank
 zpool status -v
@@ -27,20 +38,35 @@ zpool status -x
 zpool status $tank
 zpool clear $tank
 
-#try zpool import without mounting it
+# try zpool import without mounting it
+
 zpool import -N
 
-#import pool for current run (not permanently) with different root path
+# Import pool for current run (not permanently) with different root path
+
 zpool import -R /path/to/mountpoint zpoolId
 
-#snapshot
+# Snapshot
+
 zfs snapshot myTank/myFileSystem@mySnapshot
 
-#rollback
+# Rollback
+
 zfs rollback myTank/myFileSystem@mySnapshot
 
-#clone
+# Clone
+
 zfs clone myTank/myFileSystem@mySnapshot myTank/myFileSystem/myClone
 
-#backup
+# Backup
+
 zfs send [-D -R -I @snapshot | ssh backup.me.com zfs recv [-u -d -F]tank/backup
+
+# Replace Unavailable Disk
+
+* zpool status
+* zpool detach $pool $dead-device
+
+# Stop Scrub
+
+zpool scrub -s $pool
