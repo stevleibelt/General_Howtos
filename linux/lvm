@@ -12,6 +12,10 @@
 * cfdisk - prepare disk (new bootable partition of type 8E) (cfdisk /dev/sda)
 * gdisk -l $disk-device (gdisk -l /dev/sda)
 
+## Create Partition For Booting
+
+* 32 mb in size and of type 8e00
+
 ## Create Physical Volume
 * pvcreate $disk-device - create physical volume (pvcreate /dev/sda1)
 * pvdisplay - shows available physical volumes
@@ -31,8 +35,14 @@
 ## Create Filesystems
 
 * mkfs.ext4 /dev/mapper/
+* mkswap /dev/mapper/$disk-device-lvol-swap
+
 
 ## Add lvm hook to mkinitcpio.conf
 
 * vi /etc/mkinitcpio.conf
 * add hoot "lvm2" previous "filesystems"
+
+## Regenerate Ramdisk
+
+* mkinitcpio -p linux
