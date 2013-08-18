@@ -10,7 +10,8 @@ gdisk /dev/myDevice
 
 # Create tank with name "myTank"
 
-zpool create myTank /dev/myDevice
+ls -lah /dev/disk/by-id
+zpool create -f -m /my/mount/point pool-name  mirror|raidz id1[ id2[ id3]]
 
 # Create filesystem
 
@@ -37,6 +38,14 @@ zpool status -v
 zpool status -x
 zpool status $tank
 zpool clear $tank
+
+# List Available Pools
+
+zpool import
+
+# Import A Pool Under A Different Name
+
+zpool import $pool $my-other-name
 
 # try zpool import without mounting it
 
