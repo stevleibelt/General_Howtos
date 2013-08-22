@@ -1,26 +1,51 @@
-#get last command
+# get last command
+
 arrow-up
-#delete one character of last command
+
+# delete one character of last command
+
 CTRL-h
-#delete whole inputline
+
+# delete whole inputline
+
 CTRL-u
-#pause output
+
+# pause output
+
 CTRL-s
-#restart paused output
+
+# restart paused output
+
 CTRL-q
-#send end of input signal
+
+# send end of input signal
+
 CTRL-d
-#cancel
+
+# cancel
+
 CTRL-c
-#reset
+
+# reset
+
 CTRL-j
-#stop job
+
+# stop job
+
 CTRL-z
-#list jobs
+
+# list jobs
+
 jobs
-#bring job back
+
+# bring job back
+
 fg [$numberOfJobFromList]
-#continue job in background
+
+# continue job in background
+
 bg [$numberOfJobFromList]
-#start two commands in the background
+
+# start two commands in the background
+
 (commandOne; commandTwo);

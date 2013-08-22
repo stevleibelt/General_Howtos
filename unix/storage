@@ -1,0 +1,7 @@
+# check smart values
+
+smartctl -A /dev/sda
+
+# get all availabale harddisk parameters
+
+hdparm -I /dev/sda | less
