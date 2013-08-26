@@ -1,0 +1,2 @@
+# remove file or directory from stage
+git reset <name>
