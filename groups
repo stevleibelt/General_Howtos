@@ -4,6 +4,7 @@ groups $user
 usermod -a -G $group,$group $user
 # add groupid
 chmod -R g+s $path
+# add group sticky bit
 chmod -R 2775 $path
-# add stickybit
-chmod -R +d $path
+# add sticky bit
+chmod -R +s $path
