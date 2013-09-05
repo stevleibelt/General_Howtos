@@ -1,5 +1,7 @@
 # Links
 
+* http://docs.oracle.com/cd/E19253-01/819-5461/zfsover-1/index.html
+* http://manpages.ubuntu.com/manpages/maverick/man1/zpool.1M.html
 * http://hub.opensolaris.org/bin/download/Community+Group+zfs/docs/zfsadmin.pdf
 * http://www.sysadmin-cookbook.net/zfs/
 * http://www.solarisinternals.com/wiki/index.php/ZFS_Troubleshooting_Guide
@@ -21,6 +23,10 @@ zfs create myTank/myFileSystem
 
 zfs set mountpoint=/path/to/mountpoint myTank
 zfs set mountpoint=/foo/bar myTank/myFileSystem
+
+#set quota
+zfs set quota=10G boo/bar
+zfs set quota=none boo/bar
 
 # Get all flags
 
