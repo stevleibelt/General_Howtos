@@ -1,12 +1,19 @@
--retriev network device
+# retriev network device
 lspci | grep -i net
--config lan
+
+# config lan
 ifconfig
--config wlan
+
+# config wlan
 iwconfig
--bring interface up
+
+# bring interface up
 ip ling set wlan0 up
--get used firmeware
+
+# show status of current ling
+iwlist wlan0 rate
+
+# get used firmeware
 dmesg | grep firmware
 -scan for nearby ESSID
 iwlist wlan0 scan
