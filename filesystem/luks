@@ -10,7 +10,7 @@
 * fill your partition with random data
     * shred -v /dev/sda
 * format drive / initialize your partition
-    * cryptsetup --cipher aes-xts-plain64 --key-size 512 --hash sha512 --iter-time 5000 --use-random --verify-passphrase luksFormat /dev/sda
+    * cryptsetup --cipher aes-xts-plain64|serpent-xts-plain64 --key-size 512 --hash sha512 --iter-time 5000 --use-random --verify-passphrase luksFormat /dev/sda
 * open partition
     * cryptsetup luksOpen /dev/sda cryptDisk01
 
