@@ -1,3 +1,5 @@
+# key - description
+
 f1		manpage
 f2		xterm
 f3		execute
