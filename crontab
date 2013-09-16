@@ -1,4 +1,0 @@
-_list crontab
-crontab -l
-_edit crontab
-crontab -e
