@@ -1,26 +1,29 @@
-# Tagging
-## List
-git tag
-## List with pattern
+# list
+git tag -l
+
+# list with pattern
 git tag -l 'v1.2.3.*'
 
-## Create
+# checkout
+git checkout tags/<tag_name>
+
+# create
 git tag -a v1.2.3 -m 'version v1.2.3 created because of feature freeze'
 
-## Delete
+# delete
 git tag -d v1.2.3
 git push orgin :refs/tags/v1.2.3
 
-## Show information
+# show information
 git show v1.2.3
 
-## Sign with gpg
+# sign with gpg
 git tag -s v1.2.3 -m 'signed version1.2.3'
 
-## Push to repository
+# push to repository
 git push orgin v1.2.3
 
-# Links
+# links
 * http://git-scm.com/book/de
 * http://git-scm.com/book/de/Git-Grundlagen-Tags
 * http://nathanhoad.net/how-to-delete-a-remote-git-tag
