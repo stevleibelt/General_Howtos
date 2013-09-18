@@ -1,5 +1,0 @@
-# Create Multiple Files At Once
-
-## Create foo1 foo2 foo3 foo4
-
-touch foo{1,2,3,4}
