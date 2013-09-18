@@ -1,0 +1,58 @@
+ctrl+d	1/2 page down
+ctrl+u	1/2 page up
+0	scrolls to the absolute left of the document
+$	scrolls to the absolute right of the document
+gg	go to the top
+G	go to the end
+30%	scroll to 30% of the document
+
+H	history back
+L	history forward
+
+gt	next tab
+gT	previous tab
+d	delete tab
+
+f	follow link in current tab
+F	follow link in new tab
+
+r	reload page
+R	reload page without cache
+
+y	yank current location to clipboard
+zi	zoom in
+zo	zoom out
+zz	resets zoom
+
+mkp	save current settings
+
+ZZ	quit after saving session
+ZQ	quit without saving session
+
+:emenu	open firefox menu
+:bmarks	open bookmakrs
+:dialog	open dialog like "add bookmark"
+:addons	opens add ons
+
+:o	open url in current tab
+:t	open url in new tab
+:s	open search prompt
+:S	open search prompt in new tab
+:tabu	doublicate current tab
+:w	like tab open but all arguments in separat tab
+:st	stop loading current page
+:frameo	shows frame only
+
+/	start search forward
+?	start search backward
+n	find next
+N	find previous
+*	search forwart
+#	search backward
+
+n	normal browser mode
+v	visual mode when selecting text with cursor keys
+i	insert mode when interacting with text fields
+t	text editing mode
+c	command line mode
+o	operator mode
