@@ -1,3 +1,6 @@
+# list groups
+cat /etc/group | sort | less
+
 # list groups per user
 groups $user
 
