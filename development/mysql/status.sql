@@ -1,0 +1,2 @@
+-- for innodb
+SHOW ENGINE INNODB STATUS
