@@ -1,5 +1,16 @@
+-- 
 -- some usefull select statements
 -- 
+
+-- SELECT [DISTINCT] 
+--     `table_alias`.`column_one` [AS `column_alias`]
+-- FROM 
+--     `source_table` [ [AS] `table_alias`]
+-- [WHERE ]
+-- [GROUP BY ]
+-- [HAVING ]
+-- [ORDER BY [ASC|DESC])]
+-- [LIMIT];
 
 -- create md5 based on current unix timestamp
 SELECT md5(UNIX_TIMESTAMP());
