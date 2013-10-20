@@ -1,0 +1,34 @@
+# following is a list of basic, common or important ones
+## based on: http://yum.baseurl.org/wiki/YumCommands
+## see also: http://yum.baseurl.org/wiki/Guides
+
+# list all packages in all repositories
+yum list [all]
+
+# list all available to install packages
+yum list available
+
+# list installed
+yum list installed
+
+# list installed but not covered by any repository software
+yum list extras
+
+# list obsolete packages (not needed by any installed package)
+yum list obsolete
+
+# check if updates are availalbe
+yum check-update
+yum list updates
+
+# display information about specific package
+yum info [package name]
+
+# search in repositories
+yum search [package name]
+
+# download/cache metadata for currently enabled repostiroeis
+yum makecache
+
+# clean up cache for metadatas
+yum clean [paadata, dbache, all] 
