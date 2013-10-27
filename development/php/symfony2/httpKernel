@@ -1,0 +1,21 @@
+# HttpKernel component
+
+* transform a request into a response
+* event driven (via (event) dispatcher and (controller) resolver
+
+# KernelEvents
+
+* REQUEST - perfect for security handling
+* CONTROLLER
+* VIEW
+* RESPONSE
+* TERMINATE
+* EXCEPTION
+
+
+# Link
+
+* [http kernel doc](http://symfony.com/doc/current/components/http_kernel/introduction.html)
+* [kernel events](http://symfony.com/doc/current/components/http_kernel/introduction.html#http-kernel-creating-listener)
+* [router listener](http://api.symfony.com/2.3/Symfony/Component/HttpKernel/EventListener/RouterListener.html)
+* [controller resolver interface](http://api.symfony.com/2.3/Symfony/Component/HttpKernel/Controller/ControllerResolverInterface.html)
