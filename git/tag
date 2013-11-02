@@ -21,7 +21,7 @@ git show v1.2.3
 git tag -s v1.2.3 -m 'signed version1.2.3'
 
 # push to repository
-git push orgin v1.2.3
+git push origin v1.2.3
 
 # links
 * http://git-scm.com/book/de
