@@ -23,3 +23,6 @@
 {foreachelse}
   no items available
 {/foreach}
+
+# array_key_exists
+{if array_key_exists('foo', $myArray)}foo exists{else}no foo{/if}
