@@ -1,15 +1,26 @@
+--
+-- based on: http://dev.mysql.com/doc/refman/5.1/en/control-flow-functions.html
+--
+
 SELECT 
-  `um`.`title` AS `umTitle`,
-  CASE
-    WHEN `um`.`campaign_id` IS NULL 
-      THEN 'KEINE CAMPAGNE' 
-    ELSE 
-      CASE
-        WHEN (SELECT `c`.`uid` FROM `campaign` AS `c` WHERE `c`.`id` = `um`.`campaign_id`) = '0e0ea0f7328d9632778ce9c31ee51a82'
-          THEN 'Profilversand-1'
-        ELSE 
-          `um`.`number`
-      END
-  END  AS `Profil_ID` 
-FROM 
-  `user_memberships` AS `um`;
+    `my_table`.`my_column` AS `my_table_column`
+    CASE
+        WHEN `my_table`.`my_other_column` IS NULL
+            THEN 'no other column entry'
+        ELSE
+            CASE
+                WHEN (
+                    SELECT
+                        `my_other_table`.`my_column_with_named_value`
+                    FROM
+                        `my_other_table`
+                    WHERE
+                        `my_other_table`.`my_column` = `my_table`.`my_column`
+                    ) = 'my_expected_named_value'
+                    THEN 'thats my value'
+                ELSE
+                    'i can not handle this value'
+            END
+    END
+FROM
+    `my_table`;
