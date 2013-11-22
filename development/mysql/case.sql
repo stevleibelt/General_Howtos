@@ -21,6 +21,6 @@ SELECT
                 ELSE
                     'i can not handle this value'
             END
-    END
+    END AS `my_case_table`
 FROM
     `my_table`;
