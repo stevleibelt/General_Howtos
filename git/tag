@@ -2,27 +2,28 @@
 git tag -l
 
 # list with pattern
-git tag -l 'v1.2.3.*'
+git tag -l '1.2.3.*'
 
 # checkout
 git checkout tags/<tag_name>
 
 # create
-git tag -a v1.2.3 -m 'version v1.2.3 created because of feature freeze'
+git tag -a 1.2.3 -m 'version 1.2.3 created because of feature freeze'
 
 # delete
-git tag -d v1.2.3
-git push orgin :refs/tags/v1.2.3
+git tag -d 1.2.3
+git push --delete origin 1.2.3
+git push orgin :refs/tags/1.2.3
 git push --tags
 
 # show information
-git show v1.2.3
+git show 1.2.3
 
 # sign with gpg
-git tag -s v1.2.3 -m 'signed version1.2.3'
+git tag -s 1.2.3 -m 'signed version 1.2.3'
 
 # push to repository
-git push origin v1.2.3
+git push origin 1.2.3
 
 # links
 * http://git-scm.com/book/de
