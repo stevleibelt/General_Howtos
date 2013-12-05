@@ -1,8 +1,8 @@
-# Check If A Pool Is Importable
+#Check If A Pool Is Importable
 
 zpool import -f -F -n $tank
 
-# If Possible, Import It
+#If Possible, Import It
 zpool import -f -F $tank
 
 zpool import -o readonly=on $tank
