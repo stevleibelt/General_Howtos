@@ -73,10 +73,16 @@ remove local branch
 
 git branch -d my_branch
 
-remove remote branch after local deletion
+Remove remote branch after local deletion
 -----------------------------------------
 
 git push origin :my_branch
+
+Merge
+-----
+
+git checkout master
+git merge my_branch
 
 Reset
 =====
