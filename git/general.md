@@ -1,3 +1,31 @@
+Log
+===
+
+git reflog
+git log
+
+Remove Local Changes
+====================
+
+git clean -f -d #will remove untracked files (-f) and directories (-d)
+git reset --hard HEAD #will not remove untracked files
+
+Revert Changes On Local Copy
+----------------------------
+
+git checkout .
+
+Revert Changes On Index
+-----------------------
+
+git reset
+
+Revert Last Commited Change
+---------------------------
+
+git revert ...
+
+
 Add And Unadd
 =============
 
