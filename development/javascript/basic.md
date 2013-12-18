@@ -1,9 +1,14 @@
-#This file will contain a lot of basic knowledge for javascript.
-#If you memorize this, you can code better java script.
-
-#if is undefined
+If Is Undefined
+---------------
 
 if (myVariable === undefined) {
 }
 
-#Object Oriented Code
+Default Value
+-------------
+
+function foobar(foo)
+{
+    var foo = foo || 'bar';
+    //...
+}
