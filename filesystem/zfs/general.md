@@ -6,6 +6,7 @@
 * http://www.sysadmin-cookbook.net/zfs/
 * http://www.solarisinternals.com/wiki/index.php/ZFS_Troubleshooting_Guide
 * http://www.funtoo.org/ZFS_Fun
+* http://docs.huihoo.com/opensolaris/solaris-zfs-administration-guide/html/ch05s05.html
 
 #Prepare empty disk and add gpt/efi lable
 
