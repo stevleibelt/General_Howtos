@@ -12,3 +12,6 @@ jounralctl -b -p err
 
 #filter against device or binaries
 jounrlactl /dev/sdc /usr/sbin/pacman
+
+#filter against one unit
+journalctl --unit=zfs
