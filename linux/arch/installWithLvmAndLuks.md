@@ -59,3 +59,4 @@ cryptdevice=/dev/mapper/root:root:allow-discards
 * https://wiki.archlinux.org/index.php/SSD#TRIM
 * https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_Entire_System
 * http://suddenkernelpanic.blogspot.de/2013/03/arch-linux-lvm-on-top-of-luks-2013-style.html
+* http://vimeo.com/40694871
