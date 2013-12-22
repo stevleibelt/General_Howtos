@@ -1,21 +1,21 @@
 # partition disk
 
 * pacman -S lvm2 gdisk
-* gdisk /dev/sdX
-* create new partition 1 size 4mb type ef02
+* gdisk/cfdisk /dev/sdX
 * create new partition 2 size 400 mv type 8300
 * create new partition 3 size 8e00 (lvm)
 
 # crypt disk
 
 * modprope dm_mod
+* modprope dm-crypt
 * cryptsetup --cipher aes-xts-plain64|serpent-xts-plain64 --key-size 512 --hash sha512 --iter-time 5000 --use-random --verify-passphrase luksFormat /dev/sdX3 --debug
-* cryptsetup open --type luks /dev/sdX3 lvm-name
+* cryptsetup open --type luks /dev/sdX3 luks-name
 
 # partition lvm
 
-* pvcreate [--dataalignment 1m] /dev/mapper/lvm-name
-* vgcreate myVolumeGroup00 /dev/mapper/lvm-name
+* pvcreate [--dataalignment 1m] /dev/mapper/luks-name
+* vgcreate myVolumeGroup00 /dev/mapper/luks-name
 * lvcreate -L 20G myVolumeGroup00 -n root
 * lvcreate -L 10G myVolumeGroup00 -n var
 * lvcreate -L x0G myVolumeGroup00 -n home
@@ -40,9 +40,16 @@ mkfs -t ext2 /dev/sdX2
 mount /dev/sdX2 /mnt/boot
 
 # contiune with normal install
-pacmstrap /mnt grub-bios base base-devel
+pacstrap /mnt grub-bios base base-devel
+genfstab -p -U /mnt > /mnt/etc/fstab
 ...
 * adapt "mkinitcpio.conf" and add "keymap encrypt lvm2" before "filesystems" and "shutdown" after
+* add 'ext4' to MODULES section
+* grub-install --target=i386-pc --recheck --debug /dev/sda
+* add to /etc/default/grub
+    GRUB_CMDLINE_LINUX_DEFAULT="cryptdevice=/dev/sdx2:myVolumeGroup00"
+    GRUB_DISABLE_SUBMENU=y
+    grub-kmkonfig -o /boot/grub/grub.cfg
 
 # enable trim suppot if you use an ssd
 
@@ -60,3 +67,4 @@ cryptdevice=/dev/mapper/root:root:allow-discards
 * https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_Entire_System
 * http://suddenkernelpanic.blogspot.de/2013/03/arch-linux-lvm-on-top-of-luks-2013-style.html
 * http://vimeo.com/40694871
+* http://blog.philippbeck.net/linux/archlinux-install-encryption-lvm-luks-grub2-69
