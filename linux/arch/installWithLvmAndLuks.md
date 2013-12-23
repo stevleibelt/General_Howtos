@@ -47,8 +47,9 @@ genfstab -p -U /mnt > /mnt/etc/fstab
 * add 'ext4' to MODULES section
 * grub-install --target=i386-pc --recheck --debug /dev/sda
 * add to /etc/default/grub
-    GRUB_CMDLINE_LINUX_DEFAULT="cryptdevice=/dev/sdx2:myVolumeGroup00"
-    GRUB_DISABLE_SUBMENU=y
+    blkid
+    GRUB_CMDLINE_LINUX_DEFAULT="cryptdevice=/dev/disk/by-uuid/123:myVolumeGroup00"
+    #GRUB_DISABLE_SUBMENU=y
     grub-kmkonfig -o /boot/grub/grub.cfg
 
 # enable trim suppot if you use an ssd
