@@ -3,3 +3,12 @@
 ## Create foo1 foo2 foo3 foo4
 
 touch foo{1,2,3,4}
+
+# Rename
+
+rename oldname newname files
+
+## Example
+
+rename oldPrefix- newPrefix- oldPrefix-*
+rename .oldSuffix .newSuffix *.oldSuffix
