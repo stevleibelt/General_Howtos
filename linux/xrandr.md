@@ -6,6 +6,10 @@ xrandr --auto
 
 xrandr --output VGA1 --mode 1024x768
 
+## list current modes
+
+xrandr --current
+
 # links
 
 * https://wiki.debian.org/XStrikeForce/HowToRandR12
