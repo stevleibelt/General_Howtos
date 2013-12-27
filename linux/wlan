@@ -1,13 +1,10 @@
-lsmod | hp
-rmmod hp_wmi
-rmmod iw4*
-modprob iw4*
-push bottom
-
-#scannen
+Scannen
+=======
 iwlist wlan0 scan
 
-#network management
+Network Management
+==================
+
 #take a look to /etc/network.d/examples
 #https://wiki.archlinux.de/title/(W)LAN_und_Arch_Linux
 
