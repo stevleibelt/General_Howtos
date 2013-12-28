@@ -2,6 +2,13 @@
 
 /etc/systemd/journald.conf
 
+## Some  Configurations
+
+* Compress=yes
+* SystemMaxFileSize=100M
+* RuntimeMaxFileSize=50M
+* MaxFileSec=1week
+
 # Tail
 
 journalctl -f
