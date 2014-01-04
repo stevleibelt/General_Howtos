@@ -10,6 +10,9 @@ pacman -Sy
 #update installed packages
 pacman -Su
 
+#update list and upgrade packages
+pacman -Syu
+
 #build up local database
 pacman -Syuu
 
