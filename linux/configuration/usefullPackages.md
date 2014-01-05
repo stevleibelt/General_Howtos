@@ -1,8 +1,17 @@
 # administration
 
 htop
+ntop
+iotop
+iftop
 lsof
 strace
+
+# editor / ide
+
+geany
+gvim
+ninja-ide
 
 # network
 
@@ -18,13 +27,24 @@ vlc
 ffmpeg
 gnash
 
+# user
+
+slock
+
 # security
 
+iptraf-ng
+nmap
 fail2ban
+nessus
 openssh
 openssl
 openvpn
+snort
 sshguard
+tcpdum
+tripwire
+vnstat
 wireshark-cli
 
 # work
