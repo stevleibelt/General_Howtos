@@ -2,4 +2,19 @@ download and untar
 cd $directory
 make
 sudo make install
+
+# sysV
 sudo echo '/usr/local/bin/noip2' >> /etc/rc.local
+# systemd
+vim /etc/systemd/system/noip.service
+>>[Unit]
+Description=No-IP Dynamic DNS Update Client
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/noip2
+
+[Install]
+WantedBy=multi-user.target
+<<
