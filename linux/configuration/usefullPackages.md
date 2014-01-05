@@ -5,6 +5,7 @@ ntop
 iotop
 iftop
 lsof
+screen
 strace
 
 # editor / ide
