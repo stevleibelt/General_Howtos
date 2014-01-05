@@ -19,6 +19,7 @@ ninja-ide
 irssi
 firefox
 thunderbird
+netctl
 
 # multimedia
 
