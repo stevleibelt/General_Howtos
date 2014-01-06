@@ -19,7 +19,7 @@ source vars
 ./build-ca
 ./build-key-server my-server
 ./build-dh
-./build-key clientpi
+./build-key client-key # repeat until all client keys are generated
 
 # links
 
@@ -30,3 +30,4 @@ source vars
 * http://www.raspberrypi.org/phpBB3/viewtopic.php?f=36&t=21566
 * https://wiki.archlinux.org/index.php/Create_a_Public_Key_Infrastructure_Using_the_easy-rsa_Scripts
 * https://wiki.archlinux.org/index.php/Openvpn
+* http://archlinuxarm.org/forum/viewtopic.php?f=30&t=5170
