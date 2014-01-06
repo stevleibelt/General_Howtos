@@ -36,3 +36,4 @@ openvpn --genkey --secret keys/server.key
 * https://wiki.archlinux.org/index.php/Create_a_Public_Key_Infrastructure_Using_the_easy-rsa_Scripts
 * https://wiki.archlinux.org/index.php/Openvpn
 * http://archlinuxarm.org/forum/viewtopic.php?f=30&t=5170
+* http://raspberrypi-hacks.com/29/turn-your-raspberry-into-an-openvpn-vpn-server/
