@@ -20,6 +20,11 @@ source vars
 ./build-key-server my-server
 ./build-dh
 ./build-key client-key # repeat until all client keys are generated
+./build-key-pkcs12 client-key # repeat until all client keys are generated
+
+cd keys
+cp ca.crt ca.key dh4096.pem server.crt server.key /etc/openvpn/
+openvpn --genkey --secret keys/server.key
 
 # links
 
