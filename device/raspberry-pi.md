@@ -13,3 +13,7 @@ search for "gpu" and set fitting entry
 vim /boot/config.text
 
 uncomment fitting "arm_freq" entries
+
+# Links
+
+* https://wiki.gentoo.org/index.php?title=Raspberry_Pi&redirect=no:wq
