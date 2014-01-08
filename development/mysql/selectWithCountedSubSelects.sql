@@ -6,7 +6,7 @@ SELECT
     `main`.`column_id` AS `main_column_id`,
     (
         SELECT
-            count(`t`.`id`)
+            COUNT(`t`.`id`)
         FROM
             `my_table` AS `t`
         WHERE
@@ -16,7 +16,7 @@ SELECT
     ) AS `number_of_condition_one`,
     (
         SELECT
-            count(`t`.`id`)
+            COUNT(`t`.`id`)
         FROM
             `my_table` AS `t`
         WHERE
