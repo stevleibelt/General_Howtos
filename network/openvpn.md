@@ -26,8 +26,16 @@ cd keys
 cp ca.crt ca.key dh4096.pem server.crt server.key /etc/openvpn/
 openvpn --genkey --secret keys/server.key
 
+# server
+
+## enable forwarding
+
+echo 1 > /proc/sys/net/pv4/ip_forward
+
 # links
 
+* http://openvpn.net/index.php/open-source/documentation/howto.html
+* http://openvpn.net/index.php/open-source/faq.html
 * http://nyxbox.com/openvpn-on-raspberry-pi/
 * http://n0where.net/openvpn-raspberry-pi/
 * http://raspberrypihelp.net/tutorials/1-openvpn-server-tutorial
