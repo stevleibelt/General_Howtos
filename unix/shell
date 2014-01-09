@@ -1,3 +1,11 @@
+# Get Current Used Shell
+
+which bash
+
+# Change Shell
+
+chsh-s /path/to/the/shell userName
+
 # Parameter Expansion In Bash
 
 ## Expand $var To value If Empty
