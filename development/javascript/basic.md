@@ -4,6 +4,12 @@ If Is Undefined
 if (myVariable === undefined) {
 }
 
+If Is A Function
+----------------
+
+if (typeof callback === "function") {
+}
+
 Default Value
 -------------
 
