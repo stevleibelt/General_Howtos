@@ -2,6 +2,10 @@
 
 faillog -a
 
+# Scan (Your Local!) Network For Open Ports
+
+nmap -T Aggressive -A -v 127.0.0.1 -p 1-65000
+
 # Links
 
 * http://www.farinspace.com/secure-login-linux-server/
