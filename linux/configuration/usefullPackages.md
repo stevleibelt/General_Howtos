@@ -5,6 +5,7 @@ ntop
 iotop
 iftop
 lsof
+net-tools
 screen
 strace
 
