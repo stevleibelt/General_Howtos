@@ -1,6 +1,4 @@
 # following is a list of basic, common or important ones
-## based on: http://yum.baseurl.org/wiki/YumCommands
-## see also: http://yum.baseurl.org/wiki/Guides
 
 # list all packages in all repositories
 yum list [all]
@@ -32,3 +30,15 @@ yum makecache
 
 # clean up cache for metadatas
 yum clean [paadata, dbache, all] 
+
+# install package
+yum install [package name]
+
+# install from local rpm
+yum localinstall [package name]
+
+# Links
+
+* http://www.fedorasolved.org/Members/zcat/yum-rpm-faq
+* http://yum.baseurl.org/wiki/YumCommands
+* http://yum.baseurl.org/wiki/Guides
