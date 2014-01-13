@@ -1,14 +1,23 @@
-# Create Multiple Files At Once
+# create multiple files at once
 
-## Create foo1 foo2 foo3 foo4
+## create foo1 foo2 foo3 foo4
 
 touch foo{1,2,3,4}
 
-# Rename
+# rename
 
 rename oldname newname files
 
-## Example
+## example
 
 rename oldPrefix- newPrefix- oldPrefix-*
 rename .oldSuffix .newSuffix *.oldSuffix
+
+### parameters
+
+* -v - verbose
+* -n - testrune (not available everywhere)
+
+# links
+
+* http://tips.webdesign10.com/how-to-bulk-rename-files-in-linux-in-the-terminal
