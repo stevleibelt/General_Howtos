@@ -1,8 +1,12 @@
-# Show Failed Logins
+# show failed logins
 
 faillog -a
 
-# Scan (Your Local!) Network For Open Ports
+# get available services 
+
+cat /etc/services | less
+
+# scan (your local!) network for open ports
 
 nmap -T Aggressive -A -v 127.0.0.1 -p 1-65000
 
@@ -13,7 +17,7 @@ Adapt /etc/hosts.allow and /etc/hosts.deny
 This is not supported by arch linux (https://www.archlinux.org/news/dropping-tcp_wrappers-support/).
 Try to use a firewall instead (https://www.archlinux.org/packages/?q=firewall).
 
-# Disable X11 For Other Machines
+# disable X11 for other machines
 
 By default, your xserver is listening on port 6000 (tcp).
 By adding the following lines to your local configuration, you will stop your xserver from listening.
@@ -23,11 +27,11 @@ echo exec xhosts +local: >> /etc/X11/xinit/xserverrc
 
 You have to add " -- -nolisten tcp" into your xinitrc case block (where you call your windowmanager/desktop environment)
 
-# Print Linked Libaries
+# print linked libaries
 
 ldd /usr/bin/bash
 
-# Links
+# links
 
 * http://www.farinspace.com/secure-login-linux-server/
 * http://www.cyberciti.biz/tips/linux-how-do-i-display-failed-login-attempt.html
