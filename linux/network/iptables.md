@@ -1,3 +1,7 @@
+# list available policies and rules
+
+iptables -t filter -L
+
 # block ip address
 
 iptables -A INPUT -s <ip.address> -j DROP
@@ -11,6 +15,21 @@ iptables -D INPUT -s <ip.address> -j DROP
 iptables -A INPUT -s <ip.address> -p tcp --destination-port <port> -j DROP
 
 # basic knowledge
+
+## parameters
+
+* -t <table> (default is "filter")
+* -P <chain> <target> (sets overall policy if no rule matches packet handling)
+* -A <chain> (append rule to chain)
+* -I <rule_number> <chain> (inserts an appended rule into a well defined location)
+* -D <chain> <rule_number> (deletes a selected rule)
+* -j <target> (if criteria is met, the firewall should jump to the target)
+* -d <ip_address> (destination)
+* -s <ip_address> (source)
+* -p <protocol> (tcp, udp)
+* --dport <port_number> (destination)
+* --sport <port_number> (source)
+* -m state --state <network_state> (state like RELATED, ESTABLISH)
 
 ## terms
 
