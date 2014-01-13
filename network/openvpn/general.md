@@ -11,6 +11,14 @@ echo 'tun' >> /etc/modules-load.d/tun.conf
 * tun device is for adding a pc to a network
 * tab device is for adding a network to a network (via a pc acting as switch)
 
+# simple server config (for point to multipoint modus)
+
+port 1194
+proto udp
+dev tun0
+mode server
+server 10.8.0.0 255.255.255.0
+
 # links
 
 * http://openvpn.net/index.php/open-source/documentation/howto.html
