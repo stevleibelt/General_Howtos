@@ -21,6 +21,7 @@ irssi
 firefox
 thunderbird
 netctl
+ufw, ferm, shorewall (iptables cli frontend)
 
 # multimedia
 
