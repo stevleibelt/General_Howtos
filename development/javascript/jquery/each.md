@@ -9,3 +9,13 @@ jQuery.each(listOfItems, function(iterator, item) {
     console.log('item');
     console.log(item);
 });
+
+# Breat Out
+
+var itemToBreakOut = 3;
+
+jQuery.each(items, function(iterator, item) {
+    if (item === itemToBreakOut) {
+        return false;
+    }
+});
