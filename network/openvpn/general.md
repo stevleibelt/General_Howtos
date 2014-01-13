@@ -32,6 +32,11 @@ openvpn --genkey --secret keys/server.key
 
 echo 1 > /proc/sys/net/pv4/ip_forward
 
+# tun or tab
+
+* tun device is for adding a pc to a network
+* tab device is for adding a network to a network (via a pc acting as switch)
+
 # links
 
 * http://openvpn.net/index.php/open-source/documentation/howto.html
