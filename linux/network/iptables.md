@@ -1,6 +1,22 @@
 # list available policies and rules
 
-iptables -t filter -L
+iptables -L
+
+## list available policies and rules per filter
+
+iptables -t <filter> -L
+
+# remove all available policies and rules
+
+iptables -F
+
+# restore from configuration file
+
+iptables-restore < /etc/iptables/iptables.rules
+
+# save to configuration file
+
+iptables-save > /etc/iptables/iptables.rules
 
 # block ip address
 
@@ -85,3 +101,7 @@ Based on the policy, following (incomplete) list of targets can be used:
 
 * http://www.cyberciti.biz/faq/how-do-i-block-an-ip-on-my-linux-server/
 * https://wiki.archlinux.org/index.php/Iptables
+
+# books
+
+* Linux BIBLE - Eight Edition (wiley) page 710 ff
