@@ -8,6 +8,11 @@ nmap -T Aggressive -A -v 127.0.0.1 -p 1-65000
 
 # Setup Access Control
 
+Adapt /etc/hosts.allow and /etc/hosts.deny
+
+This is not supported by arch linux (https://www.archlinux.org/news/dropping-tcp_wrappers-support/).
+Try to use a firewall instead (https://www.archlinux.org/packages/?q=firewall).
+
 # Disable X11 For Other Machines
 
 By default, your xserver is listening on port 6000 (tcp).
