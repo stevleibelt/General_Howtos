@@ -6,6 +6,8 @@ faillog -a
 
 nmap -T Aggressive -A -v 127.0.0.1 -p 1-65000
 
+# Setup Access Control
+
 # Disable X11 For Other Machines
 
 By default, your xserver is listening on port 6000 (tcp).
@@ -14,8 +16,11 @@ By adding the following lines to your local configuration, you will stop your xs
 echo exec /usr/bin/X -nolisten tcp >> /etc/X11/xinit/xserverrc
 echo exec xhosts +local: >> /etc/X11/xinit/xserverrc
 
-
 You have to add " -- -nolisten tcp" into your xinitrc case block (where you call your windowmanager/desktop environment)
+
+# Print Linked Libaries
+
+ldd /usr/bin/bash
 
 # Links
 
