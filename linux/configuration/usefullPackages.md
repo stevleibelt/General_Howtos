@@ -53,6 +53,7 @@ wireshark-cli
 
 # work
 
+freemind
 vim
 
 # links
