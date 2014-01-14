@@ -1,5 +1,13 @@
 # creation keys and certs
 
+## by hand
+
+### root certificat
+
+openssl req -x509 -newkey rsa:4096 -days 3650 -keyout br00_root.key -out br00_root.crt
+
+## easy-rsa
+
 cd
 cp -r /usr/share/easy-rsa .
 cd easy-rsa
