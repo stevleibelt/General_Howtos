@@ -1,8 +1,11 @@
+# json
+
 alert(JSON.stringify(myObjectOrVar));
 
 var responseObj = jQuery.praseJSON(response);
 
-#find
+# find
+
 $(this).find('img') -> list of all img's
 $('img', this); -> same as above
 $(this).children('img:first'); -> first img found
@@ -14,7 +17,7 @@ function test(paramA) {
 	paramA = paramA || 'default';
 }
 
-#inArray - is in array
+# inArray - is in array
 jQuery.inArray(value, array);
 
 //create a class
@@ -26,7 +29,7 @@ function MyClass {
 }
 MyClass.myFunction('foo');
 
-#check if find returns anything
+# check if find returns anything
 
 myElement = jQuery.find('my-selector');
 
