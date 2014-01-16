@@ -18,12 +18,14 @@ vim /etc/ssl/openssl.cnf
 
 configure:
 dir         #basedir
-database    #index filre for certificates
+database    #index file for certificates
 serial      #serial number
 certificate #path/to/root.crt
 private_key #path/to/root.key
 
 #### hint
+
+echo '01' > index.txt
 
 add following entries also:
 localityName_default            = Some-Locality
@@ -35,6 +37,12 @@ emailAddress_default            = some@email.address
 
 openssl ca -cert <master certificate> -keyfile <master certificate key> -out <certificate>  -in <certificate signing request>
 openssl ca -cert root.crt -keyfile root.key -out server_one.crt -in server_one.csr
+
+
+#### hint
+
+you can also create a topology (root certificate that creates other certificates and so on) of certificates.
+search for "-extension v3_ca".
 
 ## easy-rsa
 
