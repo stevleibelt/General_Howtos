@@ -44,6 +44,12 @@ openssl ca -cert root.crt -keyfile root.key -out server_one.crt -in server_one.c
 you can also create a topology (root certificate that creates other certificates and so on) of certificates.
 search for "-extension v3_ca".
 
+openssl req -newkey rsa:4096 -keyout openVpn.key -out openVpn.csr
+
+openssl ca -cert root.crt -keyfile root.key -in openVpn.csr -out openVpn.crt -extensions v3_ca
+
+openssl req -newkey rsa:4096 -keyout server_one.key -out server_one.csr
+
 ## easy-rsa
 
 cd
@@ -74,3 +80,4 @@ echo 1 > /proc/sys/net/pv4/ip_forward
 
 * http://community.spiceworks.com/how_to/show/1469-how-to-become-your-own-certificate-authority-and-secure-spiceworks
 * http://www.martinahrer.at/tag/linux/
+* http://wiki.openssl.org/index.php/Command_Line_Utilities
