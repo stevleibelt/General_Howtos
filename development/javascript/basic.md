@@ -1,20 +1,28 @@
-If Is Undefined
----------------
+# if is undefined
 
 if (myVariable === undefined) {
 }
 
-If Is A Function
-----------------
+# if is a function
 
 if (typeof callback === "function") {
 }
 
-Default Value
--------------
+# default value
 
 function foobar(foo)
 {
     var foo = foo || 'bar';
     //...
+}
+
+# switch
+
+switch (expression) {
+    case foo:
+        doFoo();
+        [break;]
+    default:
+        doDefault();
+        [break;]
 }
