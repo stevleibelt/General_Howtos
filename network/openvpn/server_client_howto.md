@@ -4,7 +4,13 @@
 
 ### root certificat
 
-openssl req -x509 -newkey rsa:4096 -days 3650 -keyout br00_root.key -out br00_root.crt
+openssl req <certificate request> -newkey <type:keylength> -days <validity in days> -keyout <private certificate key> -out <certificate>
+openssl req -x509 -newkey rsa:4096 -days 3650 -keyout root_certificate.key -out root.crt
+
+### server certificate
+
+openssl req -newkey <tye:keylength> -keyout <private certificate key> -out <certificate signing request>
+openssl req -newkey rsa:4096 -keyout server_one.key -out server_one.csr
 
 ## easy-rsa
 
