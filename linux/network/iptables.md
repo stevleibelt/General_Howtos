@@ -1,6 +1,7 @@
 # list available policies and rules
 
 iptables -L
+iptables -nvL
 
 ## list available policies and rules per filter
 
@@ -94,8 +95,12 @@ A packet can be identified by following (incomplete) list of policies:
 Based on the policy, following (incomplete) list of targets can be used:
 
 * ACCEPT
-* REJECT - rejection message is sent
 * DROP - no rejection message is sent
+* QUEUE
+* RETURN
+[target extensions]
+* LOG
+* REJECT - rejection message is sent
 
 # links
 
