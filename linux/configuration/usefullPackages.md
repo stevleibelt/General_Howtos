@@ -17,11 +17,13 @@ ninja-ide
 
 # network
 
-irssi
 firefox
-thunderbird
+irssi
+luakit
 netctl
+thunderbird
 ufw, ferm, shorewall (iptables cli frontend)
+vimprobable2-git
 
 # multimedia
 
