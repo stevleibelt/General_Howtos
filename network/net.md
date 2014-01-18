@@ -19,6 +19,10 @@ dmesg | grep firmware
 # scan for nearby ESSID
 iwlist wlan0 scan
 
+# use netctl
+
+do not put your wifi in an "up" stage (ip link set wlan0 down), otherwise, no connection possible.
+
 # connect with wpa
 ## backup current wpa file
 mv /etc/wpa_supplicant.conf /etc/wpa_supplicatn.conf.original
