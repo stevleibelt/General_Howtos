@@ -1,12 +1,4 @@
-# creation keys and certs
-
-## by hand
-
-### root certificat
-
-openssl req -x509 -newkey rsa:4096 -days 3650 -keyout br00_root.key -out br00_root.crt
-
-## easy-rsa
+# creation keys and certs with easy-rsa
 
 cd
 cp -r /usr/share/easy-rsa .
@@ -25,9 +17,3 @@ source vars
 cd keys
 cp ca.crt ca.key dh4096.pem server.crt server.key /etc/openvpn/
 openvpn --genkey --secret keys/server.key
-
-# server
-
-## enable forwarding
-
-echo 1 > /proc/sys/net/pv4/ip_forward
