@@ -13,6 +13,10 @@
 
 journalctl -f
 
+# general error
+
+journalctl -xn
+
 # List Journal Of Current Boot
 
 journalctl -b
