@@ -1,15 +1,15 @@
-# Configuration File
+# configuration file
 
 /etc/systemd/journald.conf
 
-## Some  Configurations
+## some configurations
 
 * Compress=yes
 * SystemMaxFileSize=100M
 * RuntimeMaxFileSize=50M
 * MaxFileSec=1week
 
-# Tail
+# tail
 
 journalctl -f
 
@@ -17,23 +17,23 @@ journalctl -f
 
 journalctl -xn
 
-# List Journal Of Current Boot
+# list journal of current boot
 
 journalctl -b
 
-# List journal Of Current Boot With Debug Level Error And Worse
+# list journal of current boot with debug level error and worse
 
 jounralctl -b -p err
 
-# Filter Against Device Or Binaries
+# filter against device or binaries
 
 jounrlactl /dev/sdc /usr/sbin/pacman
 
-# Filter Against One Unit
+# filter against one unit
 
 journalctl --unit=zfs
 
-# Links
+# links
 
 * http://0pointer.de/blog/projects/journalctl.html
 * http://www.freedesktop.org/software/systemd/man/journald.conf.html
