@@ -36,6 +36,7 @@ emailAddress_default            = some@email.address
 openssl ca -cert <master certificate> -keyfile <master certificate key> -out <certificate>  -in <certificate signing request>
 openssl ca -cert root.crt -keyfile root.key -out server_one.crt -in server_one.csr
 
+cat openVpn.crt root.crt > rootOpenVpnComplete.crt
 
 ### hint
 
