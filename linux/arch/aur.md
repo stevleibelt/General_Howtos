@@ -27,6 +27,12 @@ yaourt -B
 
 yaourt -Q --backupfile <file>
 
+## add yaourt repository
+
+[archlinuxfr]
+SigLevel = Never
+Server = http://repo.archlinux.fr/$arch
+
 ## links
 
 http://archlinux.fr/man/yaourt.8.html
