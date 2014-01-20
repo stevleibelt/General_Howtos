@@ -48,6 +48,10 @@ cat openVpn.crt root.crt > rootOpenVpnComplete.crt
 
 openssl ca -cert server_one.crt -keyfile server_one.key -out client_one.crt -in client_one.csr
 
+# create diffie hellman key exchange parameter
+
+openssl dhparam -out dhparams.key 4096
+
 ### hint
 
 if you create a ca topology, the organization have to be the same and the certificates have to be different in at least one entry (like common name).
