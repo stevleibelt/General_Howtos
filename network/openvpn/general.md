@@ -22,6 +22,7 @@ proto udp
 dev tun0
 mode server
 server 10.8.0.0 255.255.255.0
+client-config-dir /etc/openvpn/ip/ # adds fixed ips per client
 
 # links
 
@@ -37,6 +38,7 @@ server 10.8.0.0 255.255.255.0
 * http://archlinuxarm.org/forum/viewtopic.php?f=30&t=5170
 * http://raspberrypi-hacks.com/29/turn-your-raspberry-into-an-openvpn-vpn-server/
 * http://www.pro-linux.de/artikel/2/1650/2,konfiguration-des-servers.html
+* https://wiki.archlinux.de/title/OpenVPN
 
 * books
 
