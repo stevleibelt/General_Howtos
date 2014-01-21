@@ -8,7 +8,7 @@ vim vars
 # adapt all others
 source vars
 ./clean-all
-./build-ca
+./build-ca --pass
 ./build-key-server my-server
 ./build-dh
 ./build-key client-key # repeat until all client keys are generated
