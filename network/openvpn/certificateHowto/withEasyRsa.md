@@ -16,7 +16,7 @@ source vars
 
 cd keys
 cp ca.crt ca.key dh4096.pem server.crt server.key /etc/openvpn/
-openvpn --genkey --secret keys/server.key
+openvpn --genkey --secret keys/ta.key
 
 # links
 
