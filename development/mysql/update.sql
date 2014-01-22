@@ -10,7 +10,7 @@ WHERE
 UPDATE 
     `my_table` as `destination` 
     INNER JOIN `my_table` as `source` 
-        IN (`destination`.`parent_id` = `source`.`id` 
+        ON (`destination`.`parent_id` = `source`.`id` 
 SET 
     `destination`.`another_id` = `source`.`another_id` 
 WHERE 
