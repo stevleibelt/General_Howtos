@@ -6,18 +6,6 @@ SET
 WHERE 
     `my_column` <> 666;
 
--- update with subselect
-UPDATE 
-    `my_table` as `mt` 
-SET `mt`.`column_one`=(
-    SELECT 
-        `ot`.`column_two`
-    FROM 
-        `other_table` AS `ot` 
-    WHERE 
-        `ot`.`id` = `mt`.`other_table_id`)
-WHERE `mt`.`column_two` = 0;
-
 -- update by using same table
 UPDATE 
     `my_table` as `destination` 
