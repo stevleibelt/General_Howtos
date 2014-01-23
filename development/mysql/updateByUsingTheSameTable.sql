@@ -1,4 +1,7 @@
--- update by using same table
+-- 
+--- update by using same table
+-- 
+
 UPDATE 
     `my_table` as `destination` 
     INNER JOIN `my_table` as `source` 

@@ -1,5 +1,8 @@
+-- 
 -- updating mutliple tables
 -- http://dev.mysql.com/doc/refman/5.0/en/update.html
+-- 
+
 UPDATE
     `my_table_one`, `my_table_two`
 SET

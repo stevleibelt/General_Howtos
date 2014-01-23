@@ -1,5 +1,8 @@
---- update multiple and joined tables
+-- 
+-- update multiple and joined tables
 -- http://stackoverflow.com/questions/806882/update-multiple-tables-in-mysql-using-left-join
+-- 
+
 UPDATE 
     `my_table_one` AS `t1`
 JOIN

@@ -1,4 +1,7 @@
+-- 
 -- simple update
+-- 
+
 UPDATE 
     `my_table` 
 SET 

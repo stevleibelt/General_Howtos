@@ -1,4 +1,7 @@
+-- 
 -- update with subselect
+-- 
+
 UPDATE 
     `my_table` as `mt` 
 SET `mt`.`column_one`=(
