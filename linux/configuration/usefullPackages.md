@@ -15,6 +15,11 @@ geany
 gvim
 ninja-ide
 
+# image
+
+mirage
+scrot (screenshot tool)
+
 # network
 
 firefox
