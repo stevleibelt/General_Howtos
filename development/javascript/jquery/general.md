@@ -36,3 +36,8 @@ myElement = jQuery.find('my-selector');
 if (myElement.length === 0) {
     console.log('no element found for my-selector');
 }
+
+# links
+
+* http://learn.jquery.com/javascript-101/
+* http://learn.jquery.com/

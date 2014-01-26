@@ -10,6 +10,12 @@ openssl req -x509 -newkey rsa:4096 -days 3650 -keyout root.key -out root.crt
 openssl req -newkey <tye:keylength> -keyout <private certificate key> -out <certificate signing request>
 openssl req -newkey rsa:4096 -keyout server_one.key -out server_one.csr
 
+## create client certificate requests
+
+openssl req -newkey rsa:4096 -keyout client_one.key -out client_one.csr
+
+### create as many clients as needed
+
 ## prepare openssl
 
 vim /etc/ssl/openssl.cnf
@@ -36,6 +42,15 @@ emailAddress_default            = some@email.address
 openssl ca -cert <master certificate> -keyfile <master certificate key> -out <certificate>  -in <certificate signing request>
 openssl ca -cert root.crt -keyfile root.key -out server_one.crt -in server_one.csr
 
+cat openVpn.crt root.crt > rootOpenVpnComplete.crt
+
+## sign client certificate request with server certificate
+
+openssl ca -cert server_one.crt -keyfile server_one.key -out client_one.crt -in client_one.csr
+
+# create diffie hellman key exchange parameter
+
+openssl dhparam -out dhparams.key 4096
 
 ### hint
 
