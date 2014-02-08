@@ -38,6 +38,10 @@ vlc
 ffmpeg
 gnash
 
+# other
+
+ntfs-3g
+
 # user
 
 slock
