@@ -40,6 +40,7 @@ gnash
 
 # other
 
+dosfstools
 ntfs-3g
 
 # security
