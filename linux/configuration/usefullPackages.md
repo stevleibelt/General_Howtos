@@ -42,10 +42,6 @@ gnash
 
 ntfs-3g
 
-# user
-
-slock
-
 # security
 
 iptraf-ng
@@ -61,6 +57,10 @@ tcpdum
 tripwire
 vnstat
 wireshark-cli
+
+# user
+
+slock
 
 # work
 
