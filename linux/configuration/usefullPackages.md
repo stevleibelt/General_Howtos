@@ -38,11 +38,6 @@ vlc
 ffmpeg
 gnash
 
-# other
-
-dosfstools
-ntfs-3g
-
 # security
 
 iptraf-ng
@@ -58,6 +53,12 @@ tcpdum
 tripwire
 vnstat
 wireshark-cli
+
+# storage devices
+
+dosfstools
+ntfs-3g
+f3[-git]
 
 # user
 
