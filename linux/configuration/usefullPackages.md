@@ -1,5 +1,6 @@
 # administration
 
+dnsutils
 htop
 ntop
 iotop
