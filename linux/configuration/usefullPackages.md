@@ -43,6 +43,10 @@ vlc
 ffmpeg
 gnash
 
+# other
+aurvote
+yaourt
+
 # security
 
 iptraf-ng
@@ -64,6 +68,7 @@ wireshark-cli
 dosfstools
 ntfs-3g
 f3[-git]
+rsync
 
 # user
 
