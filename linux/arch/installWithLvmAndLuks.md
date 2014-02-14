@@ -50,7 +50,8 @@ genfstab -p -U /mnt > /mnt/etc/fstab
     blkid
     GRUB_CMDLINE_LINUX_DEFAULT="cryptdevice=/dev/disk/by-uuid/123:myVolumeGroup00"
     #GRUB_DISABLE_SUBMENU=y
-    grub-kmkonfig -o /boot/grub/grub.cfg
+    [ * update-grub ]
+    grub-mkconfig -o /boot/grub/grub.cfg
 
 # enable trim suppot if you use an ssd
 
