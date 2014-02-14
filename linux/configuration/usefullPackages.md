@@ -16,6 +16,10 @@ geany
 gvim
 ninja-ide
 
+# general
+
+bash-completion
+
 # image
 
 mirage
