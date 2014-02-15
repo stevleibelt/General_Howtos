@@ -37,6 +37,11 @@ yum install [package name]
 # install from local rpm
 yum localinstall [package name]
 
+# install only n-numbers of kernels
+set in: /etc/yum/pluginconf.d/installonlyn.conf 
+installonlyn = 3
+to install only 3 kernel versions
+
 # Links
 
 * http://www.fedorasolved.org/Members/zcat/yum-rpm-faq
