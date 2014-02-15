@@ -12,7 +12,12 @@ useradd -m -g myGroup -G myOtherGroup -s /bin/bash myUser
 
 # add groups
 
-usermod -a -G mygroup[,myothergroup] user
+usermod -a -G myGroup[,myOtherGroup] User
+gpasswd -a myUser myGroup
+
+# remove group
+
+gpasswd -d myUser myGroup
 
 # list users
 
