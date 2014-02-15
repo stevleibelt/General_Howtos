@@ -1,9 +1,8 @@
-Scannen
-=======
+# scannen
+
 iwlist wlan0 scan
 
-Network Management
-==================
+# network management
 
 #take a look to /etc/network.d/examples
 #https://wiki.archlinux.de/title/(W)LAN_und_Arch_Linux
