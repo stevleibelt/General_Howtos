@@ -31,7 +31,7 @@ scrot (screenshot tool)
 firefox
 irssi
 luakit
-mtr
+nethogs
 netctl
 thunderbird
 ufw, ferm, shorewall (iptables cli frontend)
