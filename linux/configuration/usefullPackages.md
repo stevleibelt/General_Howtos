@@ -1,6 +1,7 @@
 # administration
 
 dnsutils
+dstat
 htop
 ntop
 iotop
