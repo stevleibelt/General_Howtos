@@ -45,3 +45,10 @@ dhcpcd wlan0
 
 # test connection
 ping -c 3 www.google.de
+
+# measure network connection speed
+on server:
+iperf -s -B <server ip address>
+
+on client:
+iperf -c <server ip address> -d -t 60 -i 10
