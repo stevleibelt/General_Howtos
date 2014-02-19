@@ -2,6 +2,7 @@
 -- some usefull select statements
 -- 
 
+-- [EXPLAIN]
 -- SELECT [DISTINCT] 
 --     `table_alias`.`column_one` [AS `column_alias`]
 -- FROM 
