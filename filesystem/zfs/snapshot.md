@@ -2,6 +2,10 @@
 
 zfs snapshot [-r] myTank@mySnapshotName
 
+# remove
+
+zfs destroy myTank@mySnapshotName
+
 # list
 
 zfs list -t snapshot
