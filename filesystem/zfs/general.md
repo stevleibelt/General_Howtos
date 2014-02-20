@@ -1,13 +1,3 @@
-# links
-
-* http://docs.oracle.com/cd/E19253-01/819-5461/zfsover-1/index.html
-* http://manpages.ubuntu.com/manpages/maverick/man1/zpool.1M.html
-* http://hub.opensolaris.org/bin/download/Community+Group+zfs/docs/zfsadmin.pdf
-* http://www.sysadmin-cookbook.net/zfs/
-* http://www.solarisinternals.com/wiki/index.php/ZFS_Troubleshooting_Guide
-* http://www.funtoo.org/ZFS_Fun
-* http://docs.huihoo.com/opensolaris/solaris-zfs-administration-guide/html/ch05s05.html
-
 # prepare empty disk and add gpt/efi lable
 
 gdisk /dev/myDevice
@@ -90,6 +80,21 @@ zfs send [-D -R -I myTank@mySnapshopName | zfs receive [-u -d -F] myOtherTank
 
 zfs send [-D -R -I @snapshot | ssh backup.me.com zfs recv [-u -d -F]tank/backup
 
+## backup entire pool
+
+zfs snapshot -r sourcePool@backupSnapshot
+zfs send -R sourcePool@backupSnapshot | zfs receive -F destinationPool
+
+## hints
+
+* install "pipe view" (pv) to monitor progress
+    zfs send sourceTank/[filesystem]@mySnapshotName | pv | zfs receive destinationPool/[filesystem]
+* repeat snapshot send and receive at least twice (second run with disabled user access to source pool) to get all data in sync
+
+## rename
+
+zfs rename myTank@mySnapshotName myTank@myOtherSnapshotName
+
 # replace unavailable disk
 
 * zpool status
@@ -97,4 +102,16 @@ zfs send [-D -R -I @snapshot | ssh backup.me.com zfs recv [-u -d -F]tank/backup
 
 # stop scrub
 
-zpool scrub -s $pool
+* zpool scrub -s $pool
+
+# links
+
+* http://docs.oracle.com/cd/E19253-01/819-5461/zfsover-1/index.html
+* http://manpages.ubuntu.com/manpages/maverick/man1/zpool.1M.html
+* http://hub.opensolaris.org/bin/download/Community+Group+zfs/docs/zfsadmin.pdf
+* http://www.sysadmin-cookbook.net/zfs/
+* http://www.solarisinternals.com/wiki/index.php/ZFS_Troubleshooting_Guide
+* http://www.funtoo.org/ZFS_Fun
+* http://docs.huihoo.com/opensolaris/solaris-zfs-administration-guide/html/ch05s05.html
+* http://wiki.nas4free.org/doku.php?id=zfs:main
+* http://cuddletech.com/ZFSNinja-Slides.pdf
