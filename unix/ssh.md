@@ -17,3 +17,24 @@ AllowGroups myGroupOne[,myGroupTwo]
 # generate key
 
 ssh-keygen -t rsa -b 4096
+
+# copy key to destination
+
+ssh-copy-id -i .ssh/my_key.pub user@host
+
+# hints
+
+## secure file authorized_keys
+
+chmod 400 ~/.ssh/authorized_keys
+chattr +i ~/.ssh
+
+## disable password login
+
+/etc/ssh/sshd_config
+PasswordAuthentication no
+ChallengeResponseAuthentication no
+
+# links
+
+* https://wiki.archlinux.org/index.php/SSH_Keys
