@@ -1,4 +1,4 @@
-#Links
+# links
 
 * http://docs.oracle.com/cd/E19253-01/819-5461/zfsover-1/index.html
 * http://manpages.ubuntu.com/manpages/maverick/man1/zpool.1M.html
@@ -8,38 +8,38 @@
 * http://www.funtoo.org/ZFS_Fun
 * http://docs.huihoo.com/opensolaris/solaris-zfs-administration-guide/html/ch05s05.html
 
-#Prepare empty disk and add gpt/efi lable
+# prepare empty disk and add gpt/efi lable
 
 gdisk /dev/myDevice
 
-#Create tank with name "myTank"
+# create tank "myTank"
 
 ls -lah /dev/disk/by-id
 zpool create -f -m /my/mount/point pool-name  mirror|raidz id1[ id2[ id3]]
 
-#Create filesystem
+# create data set
 
-zfs create myTank/myFileSystem
+zfs create myTank/myDataSet
 
-#Set mountpoint (if needed)
+# set mountpoint (if needed)
 
 zfs set mountpoint=/path/to/mountpoint myTank
 zfs set mountpoint=/foo/bar myTank/myFileSystem
 
-#set quota
+# set quota
 
 zfs set quota=10G boo/bar
 zfs set quota=none boo/bar
 
-# Get all flags
+# get all flags
 
 zfs get all myTank
 
-#Add compression to fileSystem
+# add compression to fileSystem
 
 zfs set compression=on myTank/myFileSystem
 
-#http://docs.oracle.com/cd/E19253-01/819-5461/gavwg/index.html
+* http://docs.oracle.com/cd/E19253-01/819-5461/gavwg/index.html
 
 zpool events -v
 zpool history $tank
@@ -48,43 +48,53 @@ zpool status -x
 zpool status $tank
 zpool clear $tank
 
-#List Available Pools
+# list available pools
 
 zpool import
 
-#Import A Pool Under A Different Name
+# import a pool under different name
 
 zpool import $pool $my-other-name
 
-#try zpool import without mounting it
+# try zpool import without mounting it
 
 zpool import -N
 
-#Import pool for current run (not permanently) with different root path
+# import pool for current run (not permanently) with different root path
 
 zpool import -R /path/to/mountpoint zpoolId
 
-#Snapshot
+# snapshot
 
-zfs snapshot myTank/myFileSystem@mySnapshot
+## create
 
-#Rollback
+zfs snapshot [-r] myTank@mySnapshotName
 
-zfs rollback myTank/myFileSystem@mySnapshot
+## list
 
-#Clone
+zfs list -t snapshot
 
-zfs clone myTank/myFileSystem@mySnapshot myTank/myFileSystem/myClone
+## rollback
 
-#Backup
+zfs rollback myTank@mySnapshopName
+
+## clone
+
+zfs clone myTank@mySnapshotName myTank/myFileSystem/myClone
+
+## backup on same system
+
+zfs send [-D -R -I myTank@mySnapshopName | zfs receive [-u -d -F] myOtherTank
+
+## backup via ssh
 
 zfs send [-D -R -I @snapshot | ssh backup.me.com zfs recv [-u -d -F]tank/backup
 
-#Replace Unavailable Disk
+# replace unavailable disk
 
 * zpool status
 * zpool detach $pool $dead-device
 
-#Stop Scrub
+# stop scrub
 
 zpool scrub -s $pool

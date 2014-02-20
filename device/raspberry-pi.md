@@ -17,3 +17,4 @@ uncomment fitting "arm_freq" entries
 # Links
 
 * https://wiki.gentoo.org/index.php?title=Raspberry_Pi&redirect=no:wq
+* http://blog.philippklaus.de/2013/03/fix-time-on-arch-linux-systems-run-ntpd-s-every-hour-using-systemd/
