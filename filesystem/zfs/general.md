@@ -5,7 +5,7 @@ gdisk /dev/myDevice
 # create tank "myTank"
 
 ls -lah /dev/disk/by-id
-zpool create -f -m /my/mount/point pool-name  mirror|raidz id1[ id2[ id3]]
+zpool create -f -m /my/mount/point [-o $propertyName] pool-name  mirror|raidz id1[ id2[ id3]]
 
 # create data set
 
