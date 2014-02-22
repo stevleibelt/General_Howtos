@@ -13,13 +13,17 @@ strace
 
 # development
 
+cmake
 codeblocks
 cppcheck
 cppunit
+gdb
 geany
 gvim
 ninja-ide
 qtcreator
+qt5-doc
+valgrind
 
 # general
 
