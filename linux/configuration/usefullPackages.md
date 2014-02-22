@@ -11,11 +11,15 @@ net-tools
 screen
 strace
 
-# editor / ide
+# development
 
+codeblocks
+cppcheck
+cppunit
 geany
 gvim
 ninja-ide
+qtcreator
 
 # general
 
