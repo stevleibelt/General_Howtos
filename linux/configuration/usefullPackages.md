@@ -15,6 +15,7 @@ strace
 
 cmake
 codeblocks
+codelite
 cppcheck
 cppunit
 gdb
