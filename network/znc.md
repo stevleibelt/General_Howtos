@@ -28,7 +28,7 @@ uberspace-setup-service znc-daemon $HOME/bin/znc-daemon
 
 ## connect via ssh
 
-ssh -f -L 64321:localhost:64321 <username>@<server>.uberspace -N
+ssh -f -L 64321:localhost:64321 <username>@<server>.uberspace.de -N
 
 # links
 
