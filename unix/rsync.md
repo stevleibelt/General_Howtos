@@ -27,3 +27,5 @@ rsync -av host:file1 :file2 host:file{3,4} /dest/
 * -q - show only error messages
 * --progress - show progress
 * -a - equal to "-rlptgoD" (recursive, recreate symlinks, preserve permission, preserve time, preserver group, preserve owner, preserve device files)
+* --delete - deletes files on destination that no longer exists locally
+* --dry-run - dry run
