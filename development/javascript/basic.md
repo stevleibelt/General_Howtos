@@ -26,3 +26,24 @@ switch (expression) {
         doDefault();
         [break;]
 }
+
+# string
+
+## indexOf
+
+var myString = 'BarFoo';
+
+myString.indexOf('Foo');    //3
+
+## lastIndexOf
+
+var myString = 'BarFooFoo';
+
+myString.indexOf('Foo');    //6
+
+## rexEx
+
+var myString = 'BarFoo';
+
+console.log(myString.match(/^Bar/));    //true - starts with Bar
+console.log(myString.match(/Foo$/));    //true - ends with Foo
