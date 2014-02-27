@@ -37,7 +37,13 @@ if (myElement.length === 0) {
     console.log('no element found for my-selector');
 }
 
+# check type
+
+jQuery.type(3); //"number"
+jQuery.type("3"); //"string"
+
 # links
 
 * http://learn.jquery.com/javascript-101/
 * http://learn.jquery.com/
+* https://api.jquery.com/jQuery.type/
