@@ -1,6 +1,6 @@
 #!/bin/sh
 ########
-# @author stevleibelt
+# @author stevleibelt <artodeto@bazzline.net>
 # @since 2012-11-26
 ########
 
