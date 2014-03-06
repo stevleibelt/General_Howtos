@@ -1,3 +1,3 @@
 #in array
 
-jQuery.inArray('key', ['arrayValueOne', 'arrayValueTwo']);
+var keyIsInArray = (jQuery.inArray('key', ['arrayValueOne', 'arrayValueTwo']) > -1);
