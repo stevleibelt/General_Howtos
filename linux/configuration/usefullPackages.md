@@ -26,6 +26,13 @@ qtcreator
 qt5-doc
 valgrind
 
+# game
+
+0ad
+liquidwar
+openra
+openttd
+
 # general
 
 bash-completion
