@@ -63,6 +63,7 @@ gnash
 
 # other
 aurvote
+powertop
 yaourt
 
 # security
