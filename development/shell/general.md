@@ -1,5 +1,6 @@
 # links
 
+* http://tldp.org/LDP/abs/html/internalvariables.html
 * http://mywiki.wooledge.org/BashGuide/CompoundCommands
 * http://bash.cyberciti.biz/shell/academic/
 
