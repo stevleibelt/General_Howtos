@@ -1,3 +1,4 @@
+-- remove content
 DELETE FROM 
   `my_table` 
 WHERE 
