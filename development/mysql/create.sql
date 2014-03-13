@@ -1,4 +1,9 @@
-CREATE TABLE `my_table` 
+-- 
+-- create my_table
+-- https://dev.mysql.com/doc/refman/5.1/en/create-table.html
+-- 
+
+CREATE TABLE `my_table` [IF NOT EXISTS]
 (
   `id` INT NOT NULL AUTO_INCREMENT,
   `created_at` DATETIME NOT NULL,
