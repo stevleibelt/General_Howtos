@@ -3,7 +3,7 @@
 -- https://dev.mysql.com/doc/refman/5.1/en/create-table.html
 -- 
 
-CREATE TABLE `my_table` [IF NOT EXISTS]
+CREATE TABLE [IF NOT EXISTS] `my_table
 (
   `id` INT NOT NULL AUTO_INCREMENT,
   `created_at` DATETIME NOT NULL,
