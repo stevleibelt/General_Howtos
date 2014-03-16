@@ -18,6 +18,14 @@ rename .oldSuffix .newSuffix *.oldSuffix
 * -v - verbose
 * -n - testrune (not available everywhere)
 
+# set sticky bit
+
+chmod +t -R *
+
+# set gid
+
+chmod g+s -R *
+
 # links
 
 * http://tips.webdesign10.com/how-to-bulk-rename-files-in-linux-in-the-terminal

@@ -1,4 +1,0 @@
-# set sticky bit
-chmod +t -R *
-# set gid
-chmod g+s -R *
