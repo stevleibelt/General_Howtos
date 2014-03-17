@@ -1,2 +1,2 @@
-DROP TABLE my_table
-DROP DATABASE my_database
+DROP TABLE [IF EXISTS] my_table
+DROP DATABASE [IF EXISTS] my_database
