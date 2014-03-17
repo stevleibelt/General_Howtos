@@ -31,8 +31,12 @@ grep -e 'pattern1.*pattern2'
 
 # output <number of> lines before match
 
-grep -B<number> 'patter'
+grep -B<number> 'pattern'
 
-# output <number of> lines after patch
+# output <number of> lines after match
 
-grep -A<number> 'patter'
+grep -A<number> 'pattern'
+
+# output <number of> lines around match
+
+grep -C<number> 'pattern'
