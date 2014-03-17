@@ -36,6 +36,7 @@ openttd
 # general
 
 bash-completion
+tee
 
 # image
 
