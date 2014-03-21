@@ -23,7 +23,13 @@ $FOO='foo'
 echo $FOO'bar'  #works as expected
 echo ${FOO}bar  #works also
 
-# special characters / characters for escaping
+# parameter
+
+$#      -   number of parameters
+$0      -   script name
+$1-9    -   free for use
+
+# quoting - special characters / characters for escaping
 
 \$
 \`  -   aka "backticks", usefull for executing commands like: $PWD=`pwd`
@@ -32,9 +38,9 @@ echo ${FOO}bar  #works also
 \"  -   to wrapp text with whitespaces
 \'  -   like "" but without interpretion of characters like $, \ and so one
 
-# quoting
+# calculation
 
-## escape
+$SUM=`expr 1+1`
 
 # links
 
