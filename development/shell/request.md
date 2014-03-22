@@ -67,3 +67,8 @@ for <variable_one> in <list> ; do
         [...]
         [<order_n>]
 done
+
+# break and continue
+
+'break' stops the loop completely.
+'continue' stops iteration for current element (continues with next).
