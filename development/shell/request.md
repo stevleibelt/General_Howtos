@@ -34,7 +34,7 @@ case <expression> in
         ;;
     [<assumption_two>) <order_two>
         ;;]
-    ...
+    [...]
     [<assumption_n>) <order_n>
         ;;]
     [*) # default/fallback
@@ -45,7 +45,16 @@ esac
 
 while <order_one> : do
         <order_two> 
-        <order_three> 
-        ...
-        <order_n> 
+        [<order_three>]
+        [...]
+        [<order_n>]
+done
+
+# until loop
+
+until <order_one>; do
+        <order_two> 
+        [<order_three>]
+        [...]
+        [<order_n>]
 done
