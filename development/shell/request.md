@@ -1,5 +1,6 @@
 # test
 
+* write a test in braces [ test ]
 * -d            -   is directory
 * -f            -   is file
 * -r            -   is file and do we have read permission
@@ -18,3 +19,24 @@
 * 1 -eq 1 -a 2 -gt 1    -   test one and test two are true (true when [ 1 -eq 1 ] is true and [ 2 -gt 1 ] is true)
 * 1 -eq 1 -o 2 -gt 1    -   test one or test two is true (true when [ 1 -eq 1 ] is true or [ 2 -gt 1 ] is true)
 * man test if you want to know more
+
+# if query
+
+if <test_one>: then <order_one>;
+[ elif <test_two>; then <order_two>; ]
+[ else <order_three>; ]
+fi
+
+# case query
+
+case <expression> in
+    <assumption_one>) <order_one>
+        ;;
+    [<assumption_two>) <order_two>
+        ;;]
+    ...
+    [<assumption_n>) <order_n>
+        ;;]
+    [*) # default/fallback
+        ;;]
+esac
