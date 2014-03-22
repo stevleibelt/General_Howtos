@@ -58,3 +58,12 @@ until <order_one>; do
         [...]
         [<order_n>]
 done
+
+# for loop
+
+for <variable_one> in <list> ; do
+        <order_two> 
+        [<order_three>]
+        [...]
+        [<order_n>]
+done
