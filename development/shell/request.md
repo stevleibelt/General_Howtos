@@ -40,3 +40,12 @@ case <expression> in
     [*) # default/fallback
         ;;]
 esac
+
+# while loop
+
+while <order_one> : do
+        <order_two> 
+        <order_three> 
+        ...
+        <order_n> 
+done
