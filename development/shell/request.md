@@ -70,5 +70,5 @@ done
 
 # break and continue
 
-'break' stops the loop completely.
-'continue' stops iteration for current element (continues with next).
+'break' [level] stops the loop completely. level default is 1.
+'continue' [level] stops iteration for current element (continues with next). level default is 1.
