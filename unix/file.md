@@ -1,3 +1,7 @@
+# file
+
+use command 'file' to determine the file format
+
 # create multiple files at once
 
 ## create foo1 foo2 foo3 foo4
