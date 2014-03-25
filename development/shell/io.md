@@ -24,3 +24,14 @@ tput is usefull to get and set terminal attributes.
 * colors    -   returns number of supported colors
 * setaf <i> -   sets foreground color
 * setab <i> -   sets background color
+
+# colors
+
+* 0 -   black
+* 1 -   red
+* 2 -   green
+* 3 -   orange/yellow
+* 4 -   blue
+* 5 -   lila
+* 6 -   light blue
+* 7 -   grey
