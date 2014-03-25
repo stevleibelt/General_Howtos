@@ -32,4 +32,5 @@ systemctl restart nginx
 
 # links
 
+* http://www.homecomputerlab.com/nginx-php-mariadb-wordpress-on-archlinux-on-a-raspberry-pi
 * http://rasberrypibeginnersguide.tumblr.com/post/27283563130/nginx-php5-on-raspberry-pi-debian-wheezy
