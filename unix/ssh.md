@@ -2,6 +2,16 @@
 
 ListenAddress <ip-address>
 
+# restrict to local ip pool
+
+Block everything from everyone.
+
+    echo 'ALL : ALL' > /etc/hosts.deny
+
+Allow what we need
+
+    echo -e 'ALL : localhost\nsshd: <ip-address[with wildcards]>[\nanotherProgramm: <ip-address>]'
+
 # root is not allowed to log in
 
 PermitRootLogin no
