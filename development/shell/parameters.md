@@ -51,3 +51,7 @@ ${<parameter>##<prefix>}    #longest match
 # part of a parameter
 
 ${<parameter>:<offset>[:<length>]}
+
+# getopts
+
+getopts <options_string> <variable_name> [<argument>]
