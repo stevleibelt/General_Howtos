@@ -12,6 +12,8 @@ Allow what we need
 
     echo -e 'ALL : localhost\nsshd: <ip-address[with wildcards]>[\nanotherProgramm: <ip-address>]'
 
+    echo -e 'ALL : localhost\nsshd: 192.168.1.0'    #allow all from rane 192.168.1.x
+
 # root is not allowed to log in
 
 PermitRootLogin no
