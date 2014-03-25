@@ -1,16 +1,18 @@
-# echo
+# output
+
+## echo
 
 take a look at 'repository_root/unix/echo.md'.
 
-# printf
+## printf
 
 take a look at 'repository_root/unix/printf.md'.
 
-# tput
+## tput
 
 tput is usefull to get and set terminal attributes.
 
-## options
+### options
 
 * clear     -   clears screen
 * cup y x   -   set cursor to position y/x
@@ -25,7 +27,7 @@ tput is usefull to get and set terminal attributes.
 * setaf <i> -   sets foreground color
 * setab <i> -   sets background color
 
-# colors
+## colors
 
 * 0 -   black
 * 1 -   red
@@ -35,3 +37,15 @@ tput is usefull to get and set terminal attributes.
 * 5 -   lila
 * 6 -   light blue
 * 7 -   grey
+
+# input
+
+## read
+
+    read 'input: ' USERINOUT
+
+## select
+
+    select WORD in 'foo bar foobar' ; do
+        $WORD
+    done
