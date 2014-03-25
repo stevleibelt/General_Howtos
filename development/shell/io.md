@@ -38,6 +38,14 @@ tput is usefull to get and set terminal attributes.
 * 6 -   light blue
 * 7 -   grey
 
+## here doc
+
+    cat <<EOF
+    foo
+    bar
+    `pwd`
+    EOF
+
 # input
 
 ## read
