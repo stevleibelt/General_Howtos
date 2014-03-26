@@ -8,14 +8,14 @@ useradd http
 groupadd http
 
 mkdir -p /srv/http/demo
-chown http:http /srv/http
+chown -R http:http /srv/http
 chmod -R 750 /srv/http
 chmod -R g+s /srv/http
 mkdir /etc/nginx/sites-enabled
 
 vim /etc/nginx/nginx.conf
 
-    #put following line at the end of your file
+    #put following line at the end of your file but before final "}"
     include /etc/nginx/sites-enabled/*;
 
 vim /etc/nginx/sites-enabled/demo.local
