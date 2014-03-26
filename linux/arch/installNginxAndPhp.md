@@ -11,6 +11,7 @@ mkdir -p /srv/http/demo
 chown -R http:http /srv/http
 chmod -R 750 /srv/http
 chmod -R g+s /srv/http
+mkdir /etc/nginx/sites-available
 mkdir /etc/nginx/sites-enabled
 
 vim /etc/nginx/nginx.conf
@@ -18,7 +19,7 @@ vim /etc/nginx/nginx.conf
     #put following line at the end of your file but before final "}"
     include /etc/nginx/sites-enabled/*;
 
-vim /etc/nginx/sites-enabled/demo.local
+vim /etc/nginx/sites-available/demo.local
 
     server {
         listen      80;
@@ -33,6 +34,8 @@ vim /etc/nginx/sites-enabled/demo.local
             include fastcgi.conf;
         }
     }
+
+ln -s /etc/nginx/sites-available/demo.local /etc/nginx/sites-enabled/demo.local
 
 vim /etc/php/php-fpm.conf
 
