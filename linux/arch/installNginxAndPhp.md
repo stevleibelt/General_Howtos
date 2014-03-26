@@ -50,4 +50,5 @@ echo '<?php phpinfo(); ?>' > /srv/http/demo/index.php
 # links
 
 * http://www.homecomputerlab.com/nginx-php-mariadb-wordpress-on-archlinux-on-a-raspberry-pi
+* http://wiki.nginx.org/Configuration
 * http://rasberrypibeginnersguide.tumblr.com/post/27283563130/nginx-php5-on-raspberry-pi-debian-wheezy
