@@ -52,11 +52,11 @@
 ## Installation
 
 * pacstrap /mnt base base-devel
-* genfstab /mnt >> /etc/mnt/fstab
+* genfstab /mnt >> /etc/fstab
 * arch-chroot /mnt
 * pacman -Syy
-* pacman -S grub2-bios
-* grub-install –boot-directory=/boot –no-floppy –recheck –debug /dev/sda
+* pacman -S grub-bios
+* grub-install –-boot-directory=/boot -–no-floppy –-recheck -–debug /dev/sda
 * grub-mkconfig -o /boot/grub/grub.cfg
 * vi /etc/mkinitcpio.conf
 * ADD "lvm2" between sata and filesystems
