@@ -3,7 +3,6 @@
 ## Boot And Update
 
 * Boot into ArchLinux ISO
-* modprobe dm-mod
 * pacman -Syy
 * pacman -S gdisk
 
