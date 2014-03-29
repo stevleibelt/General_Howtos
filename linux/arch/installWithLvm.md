@@ -26,11 +26,11 @@
 
 * pvcreate /dev/sda2
 * vgcreate myVolumeGroup00 /dev/sda2
-* lvcreate -L 1G -n myVolumeGroup00 boot
-* lvcreate -C y -L 4G -n myVolumeGroup00 swap
-* lvcreate -L 10G -n myVolumeGroup00 root
-* lvcreate -L 10G -n myVolumeGroup00 var
-* lvcreate -l100%FREE -n myVolumeGroup00 home
+* lvcreate -L 1G -n boot myVolumeGroup00
+* lvcreate -C y -L 4G -n swap myVolumeGroup00
+* lvcreate -L 10G -n root myVolumeGroup00
+* lvcreate -L 10G -n var myVolumeGroup00
+* lvcreate -l100%FREE -n home myVolumeGroup00
 
 ## Formate Disks
 
