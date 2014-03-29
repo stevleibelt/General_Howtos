@@ -52,7 +52,7 @@
 ## Installation
 
 * pacstrap /mnt base base-devel
-* genfstab /mnt >> /etc/fstab
+* genfstab -p -U /mnt > /mnt/etc/fstab
 * arch-chroot /mnt
 * pacman -Syy
 * pacman -S grub-bios
