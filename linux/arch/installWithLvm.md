@@ -63,7 +63,7 @@
 * HOOKS=". . . lvm2 filesystems . . ."
 * run mkinitcpio -p linux
 * exit
-* umount -a
+* umount -R /mnt
 * reboot
 
 # Links
