@@ -25,28 +25,28 @@
 ## Create LVM Structure
 
 * pvcreate /dev/sda2
-* vgcreate arch /dev/sda2
-* lvcreate -L 1G -n boot arch
-* lvcreate -C y -L 4G -n swap arch
-* lvcreate -L 10G -n root arch
-* lvcreate -L 10G -n var arch
-* lvcreate -l100%FREE -n home arch
+* vgcreate myVolumeGroup00 /dev/sda2
+* lvcreate -L 1G -n myVolumeGroup00 boot
+* lvcreate -C y -L 4G -n myVolumeGroup00 swap
+* lvcreate -L 10G -n myVolumeGroup00 root
+* lvcreate -L 10G -n myVolumeGroup00 var
+* lvcreate -l100%FREE -n myVolumeGroup00 home
 
 ## Formate Disks
 
-* mkswap /dev/arch/swap
-* mkfs.xfs /dev/arch/root
-* mkfs.xfs /dev/arch/var
-* mkfs.xfs /dev/arch/home
-* mkfs.xfs /dev/arch/boot
+* mkswap /dev/myVolumeGroup00/swap
+* mkfs.xfs /dev/myVolumeGroup00/root
+* mkfs.xfs /dev/myVolumeGroup00/var
+* mkfs.xfs /dev/myVolumeGroup00/home
+* mkfs.xfs /dev/myVolumeGroup00/boot
 
 ## Mount Disks
 
-* mount /dev/arch/root /mnt
+* mount /dev/myVolumeGroup00/root /mnt
 * cd /mnt
 * mkdir home boot
-* mount /dev/arch/boot boot
-* mount /dev/arch/home home
+* mount /dev/myVolumeGroup00/boot boot
+* mount /dev/myVolumeGroup00/home home
 * cd ..
 
 ## Installation
