@@ -1,6 +1,11 @@
 # general
 
-Get all commands by calling "docker".
+Get all commands by calling "docker" or "docker info".
+Docker is server and client.
+
+## start docker server
+
+systemctl start docker
 
 ## get list of images running on your local host
 
@@ -34,6 +39,10 @@ docker ps -l
 
 docker run <vendor>/<image> <command> [<argument_one> [<argument_...> [<argument_n>]]]
 
+### run shell (sh as example)
+
+docker run -i -t <vendor> /bin/sh
+
 ### install software
 
 docker run <vendor>/<image> pacman -S <software>
@@ -46,3 +55,5 @@ docker commit [options] <container_id> [repository [tag]]
 
 * https://www.docker.io/gettingstarted/
 * https://www.docker.io/learn/dockerfile/
+* http://docs.docker.io/en/latest/use/basics/
+* http://docs.docker.io/en/latest/terms/image/
