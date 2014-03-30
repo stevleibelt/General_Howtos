@@ -1,9 +1,9 @@
-# Create playlist
+# create playlist
 
 ls *.mp3 > my_playlist
 mplayer -playlist my_playlist
 
-# Random Or Shuffel
+# random or shuffel
 
 mplayer -shuffle -playlist my_playlist
 mplayer -shuffle my/audio/directory/*
