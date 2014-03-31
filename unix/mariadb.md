@@ -32,6 +32,14 @@ on arch linux, start deamon and run "msql_secure_installation"
 * uncomment '#bind-address = ' and add your ip address
 * >mysql: GRANT ALL PRIVILEGES ON *.* TO 'root'@'<your-subnet>%' IDENTIFIED BY '<your remote password>' WITH GRANT OPTION;
 
+## reset root/user password
+
+    mysql -p -u root
+    USE MYSQL;
+    UPDATE user SET password=PASSWORD('<new password>') WHERE User='<user name>';
+    FLUSH PRIVILEGES;
+    QUIT
+
 # links
 
 * https://wiki.archlinux.org/index.php/MySQL
