@@ -1,32 +1,42 @@
-#Take a look to
-#https://wiki.archlinux.de/title/Pacman
+# Take a look to
+# https://wiki.archlinux.de/title/Pacman
 
-#cleare old/unused packages
+# cleare old/unused packages
+
 pacman -Sc
 
-#update local database
+# update local database
+
 pacman -Sy
 
-#update installed packages
+# update installed packages
+
 pacman -Su
 
-#update list and upgrade packages
+# update list and upgrade packages
+
 pacman -Syu
 
-#build up local database
+# build up local database
+
 pacman -Syuu
 
-#search for package
+# search for package
+
 pacman -Ss $name
 
-#show installed packages
+# show installed packages
+
 pacman -Q
 
-#remove package
+# remove package
+
 pacman -R $name
 
-#remove package and all dependencies
+# remove package and all dependencies
+
 pacman -Rs $name
 
-#reinstall with force
+# reinstall with force
+
 pacman -Syy --force <package>
