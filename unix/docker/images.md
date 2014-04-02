@@ -9,9 +9,17 @@ A layer is a read-only image. An image never changes.
 sudo docker pull busybox
 sudo docker pull bcbcarl/archlinux
 
+# build image
+
+sudo docker build -t <vendor|username>/<imagename>
+
 # run image
 
 sudo docker run bcbcarl/archlinux
+
+## run shell in image
+
+sudo docker run -i bcbcarl/archlinux /bin/bash
 
 ## hello world
 
