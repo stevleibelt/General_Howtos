@@ -47,6 +47,7 @@ EOF
 touch Dockerfile
 cat > Dockerfile <<EOF
 # DOCKER-VERSION 0.9.1
+# VERSION 0.0.1
 
 # choose base image
 FROM bcbcarl/archlinux
@@ -64,7 +65,7 @@ RUN cd /hello_world; npm install
 EXPOSE 8080
 
 # run node for application
-CMD["node", "/hello_world/index.js"]
+ENTRYPOINT ["node", "hello_world/index.js"]
 EOF
 
 # build image
@@ -73,7 +74,7 @@ sudo docker build -t <your username>/example-archlinux-node.js-hello-world .
 
 # run image
 
-sudo docker run -p 49160:8080 -d <your username>/example-archlinux-node.js-hello-world
+sudo docker run -p 49160:8080 -d -t <your username>/example-archlinux-node.js-hello-world
 
 # test
 
