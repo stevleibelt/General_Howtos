@@ -55,7 +55,8 @@ docker commit [options] <container_id> [repository [tag]]
 
 * [getting started](https://www.docker.io/gettingstarted/)
 * [dockerfile](https://www.docker.io/learn/dockerfile/)
-* [docker file best practices](http://crosbymichael.com/dockerfile-best-practices.html)
+* [docker file best practices - 1](http://crosbymichael.com/dockerfile-best-practices.html)
+* [docker file best practices - 2](http://crosbymichael.com/dockerfile-best-practices-take-2.html)
 * [basics](http://docs.docker.io/en/latest/use/basics/)
 * [lates docker build](http://docs.docker.io/en/latest/terms/image/)
 * [examples](http://docs.docker.io/en/latest/examples/)
