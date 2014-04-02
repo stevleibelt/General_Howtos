@@ -1,3 +1,7 @@
+# reload available units
+
+systemctl daemon-reload
+
 # list status of given unit - important for debugging
 
 systemctl status foo.service
