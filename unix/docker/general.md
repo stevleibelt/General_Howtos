@@ -57,3 +57,4 @@ docker commit [options] <container_id> [repository [tag]]
 * https://www.docker.io/learn/dockerfile/
 * http://docs.docker.io/en/latest/use/basics/
 * http://docs.docker.io/en/latest/terms/image/
+* http://docs.docker.io/en/latest/examples/
