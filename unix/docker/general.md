@@ -53,8 +53,9 @@ docker commit [options] <container_id> [repository [tag]]
 
 # links
 
-* https://www.docker.io/gettingstarted/
-* https://www.docker.io/learn/dockerfile/
-* http://docs.docker.io/en/latest/use/basics/
-* http://docs.docker.io/en/latest/terms/image/
-* http://docs.docker.io/en/latest/examples/
+* [getting started](https://www.docker.io/gettingstarted/)
+* [dockerfile](https://www.docker.io/learn/dockerfile/)
+* [basics](http://docs.docker.io/en/latest/use/basics/)
+* [lates docker build](http://docs.docker.io/en/latest/terms/image/)
+* [examples](http://docs.docker.io/en/latest/examples/)
+* [images](http://index.docker.io/)
