@@ -40,3 +40,21 @@ use "-t <name>" to tag it while building.
 # name maintainer
 
     MAINTAINER Stev Leibelt <artodeto@bazzline.net>
+
+# trigger command when container starts
+
+    # just say hello
+    ENTRYPOINT echo "there is no foo without a bar"
+    ENTRYPOINT["echo", "there is no foo without a bar"]
+
+    # start service
+    ENTRYPOINT["systemctl", "start", "httpd"]
+
+# run commands as different user
+
+    ENTRYPOINT["/bin/bash", "my_script.sh"]
+    USER <user>
+
+# expose ports (listen on them)
+
+    EXPOSE 8080
