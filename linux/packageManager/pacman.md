@@ -1,6 +1,10 @@
 # Take a look to
 # https://wiki.archlinux.de/title/Pacman
 
+# do not ask for confirmation (no good idea except you run pacman from a script)
+
+--noconfirm
+
 # cleare old/unused packages
 
 pacman -Sc
