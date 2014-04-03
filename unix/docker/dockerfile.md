@@ -66,3 +66,7 @@ use "-t <name>" to tag it while building.
 # change environment path
 
     ENV PATH $PATH:/add/your/directory
+
+# provide volume
+
+    VOLUME ["/root/path"]
