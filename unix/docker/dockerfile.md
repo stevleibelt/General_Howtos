@@ -62,3 +62,7 @@ use "-t <name>" to tag it while building.
 # add directories and content to image
 
     ADD realtive/path/from/build/context /absolute/path/to/image
+
+# change environment path
+
+    ENV PATH $PATH:/add/your/directory
