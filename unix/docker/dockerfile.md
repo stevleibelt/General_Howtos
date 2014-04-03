@@ -58,3 +58,7 @@ use "-t <name>" to tag it while building.
 # expose ports (listen on them)
 
     EXPOSE 8080
+
+# add directories and content to image
+
+    ADD realtive/path/from/build/context /absolute/path/to/image
