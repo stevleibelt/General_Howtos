@@ -2,10 +2,11 @@
 
 ## create application directory
 
-mkdir hello_world
+    mkdir hello_world
 
 ## create package.json
 
+```bash
 touch hello_world/package.json
 cat > hello_world/package.json <<EOF
 {
@@ -19,9 +20,11 @@ cat > hello_world/package.json <<EOF
     }
 }
 EOF
+```
 
 ## create index.js
 
+```bash
 touch hello_world/index.js
 cat > hello_world/index.js <<EOF
 //header
@@ -39,11 +42,13 @@ app.get('/', function (request, response) {
 app.listen(PORT);
 console.log('Running on http://localhost:'+PORT);
 EOF
+```
 
 # prepare docker
 
 ## create dockerfile
 
+```bash
 touch Dockerfile
 cat > Dockerfile <<EOF
 # DOCKER-VERSION 0.9.1
@@ -67,21 +72,22 @@ EXPOSE 8080
 # run node for application
 ENTRYPOINT ["node", "hello_world/index.js"]
 EOF
+```
 
 # build image
 
-sudo docker build -t <your username>/example-archlinux-node.js-hello-world .
+    sudo docker build -t stevleibelt/example-archlinux-node.js-hello-world .
 
 # run image
 
-sudo docker run -p 49160:8080 -d -t <your username>/example-archlinux-node.js-hello-world
+    sudo docker run -p 49160:8080 -d -t stevleibelt/example-archlinux-node.js-hello-world
 
 # test
 
 ## get container port
 
-sudo docker ps
+    sudo docker ps
 
 ## query node application
 
-curl -i localhost:<port>
+    curl -i localhost:<port>
