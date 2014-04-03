@@ -11,11 +11,17 @@ A layer is a read-only image. An image never changes.
 
 # build image
 
-    sudo docker build -t <vendor|username>/<imagename>
+    sudo docker build -rm -t <vendor|username>/<imagename>
+
+* -rm   -   remove intermediate containers
+* -t    -   buildtag
 
 # run image
 
     sudo docker run bcbcarl/archlinux
+
+* -d    -   run as daemon
+* -p    -   expose port
 
 ## run shell in image
 
