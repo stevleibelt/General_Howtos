@@ -37,3 +37,7 @@ EOF
     set docker awesome
     get docker
     exit
+
+# cleanup
+
+    docker rmi stevleibelt/example-archkinux-redis

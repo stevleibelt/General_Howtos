@@ -76,11 +76,11 @@ EOF
 
 # build image
 
-    sudo docker build -t stevleibelt/example-archlinux-node.js-hello-world .
+    sudo docker build -t stevleibelt/example-archlinux-node.js .
 
 # run image
 
-    sudo docker run -p 49160:8080 -d -t stevleibelt/example-archlinux-node.js-hello-world
+    sudo docker run -p 49160:8080 -d -t stevleibelt/example-archlinux-node.js
 
 # test
 
@@ -91,3 +91,7 @@ EOF
 ## query node application
 
     curl -i localhost:<port>
+
+# cleanup
+
+    docker rmi stevleibelt/example-archkinux-node.js
