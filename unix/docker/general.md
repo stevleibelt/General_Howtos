@@ -61,3 +61,5 @@ docker commit [options] <container_id> [repository [tag]]
 * [lates docker build](http://docs.docker.io/en/latest/terms/image/)
 * [examples](http://docs.docker.io/en/latest/examples/)
 * [images](http://index.docker.io/)
+* [german docker howto](http://www.heise.de/developer/artikel/Anwendungen-mit-Docker-transportabel-machen-2127220.html)
+* [german dockerfile howto](http://www.heise.de/developer/artikel/Mit-Docker-automatisiert-Anwendungscontainer-erstellen-2145030.html)
