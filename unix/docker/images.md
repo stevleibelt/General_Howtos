@@ -60,3 +60,7 @@ A layer is a read-only image. An image never changes.
 # remove image
 
     sudo docker rmi <vendor>/<name>
+
+Remove all images
+
+    sudo docker ps -a -q | xargs docker rm
