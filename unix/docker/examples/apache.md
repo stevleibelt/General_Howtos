@@ -20,6 +20,8 @@ EOF
 
 # links
 
+* https://github.com/splitbrain/docker-phpfarm
+* https://github.com/aestik/amp
 * https://github.com/jacksoncage/apache-docker
 * https://github.com/thomaswelton/docker-apache
 * https://github.com/thestonefox/docker-apache
