@@ -53,6 +53,7 @@ Docker is server and client.
 
 # links
 
+* [reference manual](http://docs.docker.io/en/latest/reference/)
 * [getting started](https://www.docker.io/gettingstarted/)
 * [dockerfile](https://www.docker.io/learn/dockerfile/)
 * [docker file best practices - 1](http://crosbymichael.com/dockerfile-best-practices.html)
