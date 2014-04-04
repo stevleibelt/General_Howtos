@@ -1,3 +1,7 @@
+# use/escape javascript/css code in templates
+
+    {ldelim} my content {rdelim} 
+
 # switch between two css class
 
     {cycle assign="tr_class" values="list_white,list_grey"}
