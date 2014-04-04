@@ -63,9 +63,11 @@ ffmpeg
 gnash
 
 # other
-aurvote
-powertop
-yaourt
+
+* aurvote
+* dos2unix
+* powertop
+* yaourt
 
 # security
 
