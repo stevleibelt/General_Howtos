@@ -1,20 +1,27 @@
-#import from file
-mysql -u <user> -p [database] < myfile
+# import from file
 
-#add user
-CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
+    mysql -u <user> -p [database] < myfile
 
-#get users
-SELECT user FROM mysql.user;
+# add user and set password
 
-#grant privilege
-GRANT ALL PRIVILEGES ON 'mytable' TO 'user'@'localhost' WIHT GRANT OPTION;
+    CREATE USER 'user'@'localhost' IDENTIFIED BY PASSWORD('password');
 
-#reload
-flush privileges;
+# get users
 
-#grant options
-SELECT|USAGE|ALTER|CREATE|INSERT|...
+    SELECT user FROM mysql.user;
 
-#grant multiple
-GRANT SELECT, INSERT ON 
+# grant privilege
+
+    GRANT ALL PRIVILEGES ON 'mytable' TO 'user'@'localhost' WIHT GRANT OPTION;
+
+# reload
+
+    flush privileges;
+
+# grant options
+
+    SELECT|USAGE|ALTER|CREATE|INSERT|...
+
+# grant multiple
+
+    GRANT SELECT, INSERT ON 
