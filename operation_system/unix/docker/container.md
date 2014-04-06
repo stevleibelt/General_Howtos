@@ -1,3 +1,7 @@
+# create data container
+
+docker run -v /var/volumeOne -v /var/volumneTwo busybox true
+
 # remove container
 
     docker rm <container_id>
