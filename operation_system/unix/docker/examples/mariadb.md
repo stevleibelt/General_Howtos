@@ -16,7 +16,7 @@ RUN pacman -S --noconfirm mariadb mariadb-clients
 
 EXPOSE 3306
 
-RUN "systemctl start mysqld.service"
+CMD ["/usr/bin/mysqld_safe"]
 EOF
 
 # build container
@@ -38,3 +38,4 @@ EOF
 * https://github.com/hans-d/docker-mariadb
 * https://github.com/corpick/docker-mariadb
 * https://github.com/Painted-Fox/docker-mariadb
+* http://txt.fliglio.com/2013/11/creating-a-mysql-docker-container/

@@ -11,10 +11,10 @@ A layer is a read-only image. An image never changes.
 
 # build image
 
-    sudo docker build -rm -t <vendor|username>/<imagename>
+    sudo docker build --rm --tag="<vendor|username>/<imagename>"
 
-* -rm   -   remove intermediate containers
-* -t    -   buildtag
+* --rm   -   remove intermediate containers
+* --tag    -   buildtag
 
 # run image
 
@@ -61,6 +61,19 @@ A layer is a read-only image. An image never changes.
 
     sudo docker rmi <vendor>/<name>
 
-Remove all images
+# remove all images
 
     sudo docker ps -a -q | xargs docker rm
+
+# image location on host machine
+
+    /var/lib/docker/graph/<id>/json
+
+# simple idea to run all your needed dockers
+
+    #!/bin/bash
+    $CONTAINER_ONE = (docker run <container_name>)
+    $CONTAINER_TWO = (docker run <container_name>)
+
+    echo "id of container one: "$CONTAINER_ONE  #use names like "mysql, apache, etc"
+    echo "id of container two: "$CONTAINER_TWO

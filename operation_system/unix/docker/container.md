@@ -1,6 +1,10 @@
+# get ip address of container
+
+    docker inspect --format '{{ .NetworkSettings.IPAddress }}' ${CID}
+
 # create data container
 
-docker run -v /var/volumeOne -v /var/volumneTwo busybox true
+    docker run -v /var/volumeOne -v /var/volumneTwo busybox true
 
 # remove container
 
