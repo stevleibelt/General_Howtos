@@ -1,27 +1,27 @@
 # remove login ability
 
-usermod -s /usr/sbin/nologin $username
+    usermod -s /usr/sbin/nologin $username
 
 # add user
 
-useradd $username
+    useradd $username
 
 # add user with creating home directory (-m), initial group (-g) and additional groups
 
-useradd -m -g myGroup -G myOtherGroup -s /bin/bash myUser
+    useradd -m -g myGroup -G myOtherGroup -s /bin/bash myUser
 
 # add groups
 
-usermod -a -G myGroup[,myOtherGroup] User
-gpasswd -a myUser myGroup
+    usermod -a -G myGroup[,myOtherGroup] User
+    gpasswd -a myUser myGroup
 
 # remove group
 
-gpasswd -d myUser myGroup
+    gpasswd -d myUser myGroup
 
 # list users
 
-cat /etc/passwd
+    cat /etc/passwd
 
 # links
 
