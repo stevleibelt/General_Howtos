@@ -23,6 +23,13 @@
 
     cat /etc/passwd
 
+# run command as other user
+
+    runuser -u <user> <command> <argument...>
+    su - <user> -c "<command> <argument...>"
+    sudo <command>
+
 # links
 
 * https://wiki.archlinux.org/index.php/Users_and_Groups#User_management
+* http://www.cyberciti.biz/open-source/command-line-hacks/linux-run-command-as-different-user/
