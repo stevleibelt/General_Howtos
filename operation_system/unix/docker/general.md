@@ -65,3 +65,4 @@ Docker is server and client.
 * [german docker howto](http://www.heise.de/developer/artikel/Anwendungen-mit-Docker-transportabel-machen-2127220.html)
 * [german dockerfile howto](http://www.heise.de/developer/artikel/Mit-Docker-automatisiert-Anwendungscontainer-erstellen-2145030.html)
 * [stackoverflow](http://stackoverflow.com/search?q=docker)
+# [docker on twitter](http://twitter.com/getdocker/)
