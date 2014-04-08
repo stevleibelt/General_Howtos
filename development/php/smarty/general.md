@@ -1,5 +1,6 @@
 # use/escape javascript/css code in templates
 
+    {literal} my content {/literal}
     {ldelim} my content {rdelim} 
 
 # switch between two css class
