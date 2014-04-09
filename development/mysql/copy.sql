@@ -10,3 +10,17 @@ FROM
 -- optional
 WHERE 
     `source`.`created_at` = NOW();
+
+-- copies data and structure (indexes etc.)
+
+CREATE TABLE
+    `my_destination_table`
+LIKE
+    `my_source_table`;
+
+INSERT INTO
+    `my_destination_table`
+SELECT
+     *
+FROM
+    `my_source_table`;
