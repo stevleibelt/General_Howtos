@@ -12,3 +12,7 @@ If you trust the source.
 Or as python package.
 
     sudo pip install -U fig
+
+Or as [aur package](https://aur.archlinux.org/packages/fig/)
+
+    yaourt -S fig
