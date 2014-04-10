@@ -16,7 +16,9 @@
 
 # link container
 
-    docker run -link container:prefix <vendor>/<name>
+    docker run -link container:alias <vendor>/<name>
+
+The alias is needed since [environment variables](http://docs.docker.io/en/latest/use/working_with_links_names/) are prefixed with that alias.
 
 # establish access to data
 
