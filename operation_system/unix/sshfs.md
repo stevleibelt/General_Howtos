@@ -4,7 +4,7 @@
 
 # mount
 
-    sshfs user@host:~/foo /home/bar/foo -C
+    sshfs user@host:~/foo /home/bar/foo -C  # -C enable compression
 
 # unount
 
