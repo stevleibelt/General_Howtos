@@ -1,5 +1,11 @@
-modprobe fuse
+# enable fuse
+
+    modprobe fuse
+
 # mount
-sshfs user@host:~/foo /home/bar/foo -C
+
+    sshfs user@host:~/foo /home/bar/foo -C
+
 # unount
-fusermount -u locatl/mount/point
+
+    fusermount -u locatl/mount/point
