@@ -17,3 +17,8 @@
 # unount
 
     fusermount -u locatl/mount/point
+
+# links
+
+* https://www.digitalocean.com/community/articles/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
+* https://wiki.archlinux.org/index.php/Sshfs
