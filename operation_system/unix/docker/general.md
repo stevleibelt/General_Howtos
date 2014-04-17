@@ -67,3 +67,4 @@ Docker is server and client.
 * [stackoverflow](http://stackoverflow.com/search?q=docker)
 # [docker on twitter](http://twitter.com/getdocker/)
 * [the docker guidebook](http://kencochrane.net/blog/2013/08/the-docker-guidebook/)
+* [Creating a MySQL Docker Container](http://txt.fliglio.com/2013/11/creating-a-mysql-docker-container/)
