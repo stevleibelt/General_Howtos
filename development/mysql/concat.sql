@@ -15,3 +15,10 @@ SELECT
     CONCAT_WS ('my_separator', `column_one`, `column_two`) 
 FROM
     `my_table`
+
+-- group concat strings with separator
+
+SELECT
+    GROUP_CONCAT(`my_table`.`id` SEPARATOR ', ')
+FROM
+    `my_table`
