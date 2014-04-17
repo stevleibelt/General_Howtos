@@ -1,10 +1,10 @@
 SELECT 
-  *  
+    *  
 FROM 
-  saved_search 
+    table 
 GROUP BY 
-  user_searchagent_id 
+    column_one 
 HAVING 
-  COUNT(*) > 1 
+    COUNT(*) > 1 
 ORDER BY 
-  user_searchagent_id DESC;
+    column_one DESC;
