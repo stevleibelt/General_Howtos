@@ -17,6 +17,7 @@ FROM
     `my_table`
 
 -- group concat strings with separator
+-- based on: http://dev.mysql.com/doc/refman/5.1/en/group-by-functions.html#function%5Fgroup-concat
 
 SELECT
     GROUP_CONCAT(`my_table`.`id` SEPARATOR ', ')
