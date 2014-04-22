@@ -7,6 +7,7 @@ CREATE TABLE [IF NOT EXISTS] `my_table`
 (
   `id` INT NOT NULL AUTO_INCREMENT,
   `created_at` DATETIME NOT NULL,
+  `counter` INT (4) UNSIGNED NOT NULL DEFAULT 0,    -- data_type [NOT NULL | NULL] [DEFAULT default_value]
   PRIMARY KEY (`id`),
   INDEX `createdAt` (`created_at`)
 ) Engine=InnoDB DEFAULT CHARSET=utf8 COMMENT='my short comment';
