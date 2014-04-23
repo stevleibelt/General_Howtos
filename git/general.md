@@ -1,45 +1,81 @@
-# Log
+# edit configuration
+
+    git config -e           #project based
+    git config -e --global  #global ;-)
+
+# log
 
     git reflog
     git log
 
-# Remove Local Changes
+# remove local changes
 
     git clean -f -d #will remove untracked files (-f) and directories (-d)
     git reset --hard HEAD #will not remove untracked files
 
-## Revert Changes On Local Copy
+## revert changes on local copy
 
     git checkout .
 
-## Revert Changes On Index
+## revert changes on index
 
     git reset
 
-## Revert Last Commited Change
+## revert last commited change
 
     git revert ...
 
+# commit
 
-# Add And Unadd
+    git commit -a               #commit all changes
+    git commit -v               #commit verbosely (includes diff)
+    git commit --amende         #edit message for the most recent commit
+    git commit --amende <file>  #redo previous commit including changes from files ...
 
-## Add a file to the index/staging
+# blame
 
-    git add
+    git blame <file> <revision>
+    git gui blame
+    git whatchanged <file>
 
-## Add all files
+# add, unadd, delete
 
-    git add -A
+## add a file to the index/staging
 
-## Remove from index/staging
+    git add <file>
+    git add -A  #all
+    git add -p  #interactively decide which changes to add
+    git add -i  #like patch but with no menu
+
+## add changes to stage
+
+    git stage <file>
+    git stage --patch       #interactively decide which changes to add to stage
+    git stage --interactive #like patch but with no menu
+
+## remove from index/staging
 
     git reset HEAD -- $file
 
-## Add alias
+## remove files from project
+
+    git rm <file>
+
+## remove deleted files
+
+    git rm $(git ls-files --deleted)
+
+## add alias
 
     git config --global alias.unadd 'reset HEAD --'
 
-# Branch
+# branch
+
+## list
+
+    git branch      #list all local branches
+    git branch -r   #list all remote branches
+    git branch -a   #list all local and remote branches
 
 ## create new local branch
 
@@ -85,6 +121,10 @@
 
     git push origin 1.2.3
 
+# squashing
+
+    git rebase --interactive HEAD~10    #squash last 10 commits to a big one
+
 # links
 
 * http://try.github.io/
@@ -93,3 +133,4 @@
 * http://git-scm.com/book/de/Git-Grundlagen-Tags
 * http://nathanhoad.net/how-to-delete-a-remote-git-tag
 * http://data.agaric.com/undo-git-add-remove-files-staged-git-commit
+* https://gist.github.com/iansheridan/870778
