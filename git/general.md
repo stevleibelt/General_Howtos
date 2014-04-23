@@ -1,114 +1,91 @@
-Log
-===
+# Log
 
-git reflog
-git log
+    git reflog
+    git log
 
-Remove Local Changes
-====================
+# Remove Local Changes
 
-git clean -f -d #will remove untracked files (-f) and directories (-d)
-git reset --hard HEAD #will not remove untracked files
+    git clean -f -d #will remove untracked files (-f) and directories (-d)
+    git reset --hard HEAD #will not remove untracked files
 
-Revert Changes On Local Copy
-----------------------------
+## Revert Changes On Local Copy
 
-git checkout .
+    git checkout .
 
-Revert Changes On Index
------------------------
+## Revert Changes On Index
 
-git reset
+    git reset
 
-Revert Last Commited Change
----------------------------
+## Revert Last Commited Change
 
-git revert ...
+    git revert ...
 
 
-Add And Unadd
-=============
+# Add And Unadd
 
-Add a file to the index/staging
--------------------------------
+## Add a file to the index/staging
 
-git add
+    git add
 
-Add all files
--------------
+## Add all files
 
-git add -A
+    git add -A
 
-Remove from index/staging
--------------------------
+## Remove from index/staging
 
-git reset HEAD -- $file
+    git reset HEAD -- $file
 
-Add alias
----------
+## Add alias
 
-git config --global alias.unadd 'reset HEAD --'
+    git config --global alias.unadd 'reset HEAD --'
 
-Branch
-======
+# Branch
 
-create new local branch
------------------------
+## create new local branch
 
-git checkout -b my_branch
+    git checkout -b my_branch
 
-switch to a local branch
-------------------------
+## switch to a local branch
 
-git checkout -b my_branch
+    git checkout -b my_branch
 
-switch to a remote branch
--------------------------
+## switch to a remote branch
 
-git fetch origin
-git checkout -b my_branch origin/my_branch
+    git fetch origin
+    git checkout -b my_branch origin/my_branch
 
-remove local branch
--------------------
+## remove local branch
 
-git branch -d my_branch
+    git branch -d my_branch
 
-Remove remote branch after local deletion
------------------------------------------
+## remove remote branch after local deletion
 
-git push origin :my_branch
+    git push origin :my_branch
 
-Merge
------
+## merge
 
-git checkout master
-git merge my_branch
+    git checkout master
+    git merge my_branch
 
-Reset
-=====
+# Reset
 
-remove file or directory from stage
------------------------------------
+## remove file or directory from stage
 
-git reset <name>
+    git reset <name>
 
-show information
-----------------
+## show information
 
-git show 1.2.3
+    git show 1.2.3
 
-sign with gpg
--------------
+## sign with gpg
 
-git tag -s 1.2.3 -m 'signed version 1.2.3'
+    git tag -s 1.2.3 -m 'signed version 1.2.3'
 
-push to repository
-------------------
+## push to repository
 
-git push origin 1.2.3
+    git push origin 1.2.3
 
-links
-=====
+# links
 
 * http://try.github.io/
 * https://www.kernel.org/pub/software/scm/git/docs/git-checkout.html
