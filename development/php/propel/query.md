@@ -1,3 +1,12 @@
+# get last executed query
+
+```php
+$connection = Propel::getConnection();
+if ($connection instanceof DebugPDO) {
+    $query = $connection->getLastExecutedQuery();
+}
+```
+
 # join
 
 ## simple inner join
