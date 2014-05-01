@@ -1,4 +1,5 @@
 # open files
+
 vim -o #open files in horizontally tiled
 vim -O #open files in vertically tiled
 vim -p #open files in tabs
@@ -13,6 +14,7 @@ ctrl+w o #close all windows except current
 ctrl+w v #duplicate current window
 
 # open directories
+
 o #opens file below cursor horizontally
 v #opens file below cursor vertically
 i #show more information
@@ -23,6 +25,7 @@ d #creates directory
 enter #opens file in current window
 
 # file operation
+
 :e #open/reload a file
 :e! #open/reload a file without asking for saving current one
 :w #save content in current file
@@ -30,6 +33,7 @@ enter #opens file in current window
 :q! #quit current file without asking for saving
 
 # movement
+
 h #left
 l #right
 j #down
@@ -38,6 +42,7 @@ ctrl+f #one page forward
 ctrl+b #one page back
 
 ## jumping
+
 gg #jump to the beginning of the file
 G #jump to the end/"ground" of the file
 0 #jump to the start of the line
@@ -47,6 +52,7 @@ b/B #jump "back" to the beginning of the last word
 e/E #jump to the "end" of the next word
 
 ### code jumping
+
 % #jump to matching brace
 ] #jump to the end of the paragraph
 [ #jump to the start of the paragraph
@@ -56,6 +62,7 @@ e/E #jump to the "end" of the next word
 ]] #move to the next function
 
 # search
+
 /foo #searches for "foo" forward
 ?foo #searches for "foo" backward
 n #jumps to next "foo"
@@ -65,9 +72,11 @@ fa #"findes" "a"
 :g/patern/ #show every line matching the regexp
 
 # help
+
 :help / #shows help for "/"
 
 # content manipulation
+
 i #insert before current cursor position
 I #insert at beginning of current line
 a #append/insert after current cursor position
@@ -93,6 +102,7 @@ O #"open" a new line above current cursor
 # #move to the previous use of the word under your cursor
 
 # registers - use :help registers
+
 :registers #presents you all used registers with content inside
 "0-"9 #yanked text to numbered register
 "a-"z #yanked text replaces current content of register
@@ -103,17 +113,20 @@ O #"open" a new line above current cursor
 "_ #/dev/null
 
 # marking
+
 v #mark character wise
 V #mark line wise
 ctrl+v #column wise marking
 gv #remark last marked area
 
 # completion - available in insert mode
+
 ctrl+n #complete a word (forward through choice list)
 ctrl+p #complete a word (backward through choice list)
 ctrl+x #counts up number below current cursor
 
 # configuration
+
 :options+enter #shows available options
 :browse set #shows all setable options
 
@@ -125,11 +138,14 @@ ctrl+x #counts up number below current cursor
     * mark an area and the command "rx" to replace marked area with "x"
 
 # shifting
+
 ## command mode
+
 < #shift to the left
 > #shift to the right
 3>> #shift three lines right
 
 ## insert mode
+
 ctrl+t #shift to the left
 ctrl+d #shift to the right
