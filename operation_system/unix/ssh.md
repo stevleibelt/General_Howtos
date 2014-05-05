@@ -8,11 +8,19 @@ Block everything from everyone.
 
     echo 'ALL : ALL' > /etc/hosts.deny
 
+Or block only all sshd conenctions
+
+    echo 'SSHD : ALL : DENY' > /etc/hosts.deny
+
 Allow what we need
 
     echo -e 'ALL : localhost\nsshd: <ip-address[with wildcards]>[\nanotherProgramm: <ip-address>]'
 
     echo -e 'ALL : localhost\nsshd: 192.168.1.0'    #allow all from rane 192.168.1.x
+
+or
+
+    echo 'SSHD : <ipaddress> : ALLOW' > /etc/hosts.allow
 
 # root is not allowed to log in
 
@@ -49,4 +57,5 @@ ChallengeResponseAuthentication no
 
 # links
 
-* https://wiki.archlinux.org/index.php/SSH_Keys
+* [ssh keys](https://wiki.archlinux.org/index.php/SSH_Keys)
+* [limit ssh acces by ip address](http://blog.serverbuddies.com/limit-ssh-access-by-ip-address/)
