@@ -19,5 +19,8 @@ LIKE `original_table`;
 
 -- copy structure and data
 
+-- uncomment foreign key checks if needed
+-- SET FOREIGN_KEY_CHECKS = 0;
 CREATE TABLE `copy_of_original_table`
 SELECT * FROM `original_table`;
+-- SET FOREIGN_KEY_CHECKS = 1;
