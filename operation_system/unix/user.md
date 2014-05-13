@@ -41,6 +41,14 @@
     # or
     chsh
 
+# lock user
+
+    usermod -L <username>
+
+# unlock user
+
+    usermod -U <username>
+
 # links
 
 * https://wiki.archlinux.org/index.php/Users_and_Groups#User_management
