@@ -24,36 +24,40 @@ or
 
 # root is not allowed to log in
 
-PermitRootLogin no
+    PermitRootLogin no
 
 # allow only following users to log in
 
-AllowUsers myUserOne[,myUserTwo]
+    AllowUsers myUserOne[,myUserTwo]
 
 # allow only following groups to log in
 
-AllowGroups myGroupOne[,myGroupTwo]
+    AllowGroups myGroupOne[,myGroupTwo]
 
 # generate key
 
-ssh-keygen -t rsa -b 4096
+    ssh-keygen -t rsa -b 4096
 
 # copy key to destination
 
-ssh-copy-id -i .ssh/my_key.pub user@host
+    ssh-copy-id -i .ssh/my_key.pub user@host
 
 # hints
 
 ## secure file authorized_keys
 
-chmod 400 ~/.ssh/authorized_keys
-chattr +i ~/.ssh
+    chmod 400 ~/.ssh/authorized_keys
+    chattr +i ~/.ssh
 
 ## disable password login
 
 /etc/ssh/sshd_config
 PasswordAuthentication no
 ChallengeResponseAuthentication no
+
+# enable verbose mode
+
+    ssh <user>@<host> -vvv
 
 # links
 
