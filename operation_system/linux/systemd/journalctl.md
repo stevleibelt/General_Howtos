@@ -1,37 +1,37 @@
 # configuration file
 
-/etc/systemd/journald.conf
+    /etc/systemd/journald.conf
 
 ## some configurations
 
-* Compress=yes
-* SystemMaxFileSize=100M
-* RuntimeMaxFileSize=50M
-* MaxFileSec=1week
+    * Compress=yes
+    * SystemMaxFileSize=100M
+    * RuntimeMaxFileSize=50M
+    * MaxFileSec=1week
 
 # tail
 
-journalctl -f
+    journalctl -f
 
 # general error
 
-journalctl -xn
+    journalctl -xn
 
 # list journal of current boot
 
-journalctl -b
+    journalctl -b
 
 # list journal of current boot with debug level error and worse
 
-jounralctl -b -p err
+    jounralctl -b -p err
 
 # filter against device or binaries
 
-jounrlactl /dev/sdc /usr/sbin/pacman
+    jounrlactl /dev/sdc /usr/sbin/pacman
 
 # filter against one unit
 
-journalctl --unit=zfs
+    journalctl --unit=zfs
 
 # links
 
