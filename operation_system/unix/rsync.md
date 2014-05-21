@@ -2,15 +2,19 @@
 
 ## connection via transport layer (ssh, rsh)
 
-rsync source:foo/ dest/
+    rsync source:foo/ destination/
 
 ## connection via network layer (deamon using tcp port)
 
-rsync source::module /dest
+    rsync source::module /destination
 
 ## requesting multiple files from host
 
-rsync -av host:file1 :file2 host:file{3,4} /dest/
+    rsync -av host:file1 :file2 host:file{3,4} /dest/
+
+## using ssh and key
+
+    rsync --delete -a /source/ -e "ssh -i /home/<user>/.ssh/<key>" <user>@<host>:/destination/
 
 # examples and hints
 
