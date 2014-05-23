@@ -1,2 +1,2 @@
 -- get structure of your table
-DESCRIPE `my_table`;
+DESCRIBE `my_table`;
