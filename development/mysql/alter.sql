@@ -34,3 +34,12 @@ ALTER TABLE
     `my_table`
 ADD
     INDEX `my_column` (`my_column`(10000)); -- length of the index, to find the longest string, use: SELECT MAX(LENGTH(field_to_query)) FROM table_to_query: SELECT MAX(LENGTH(`my_column`)) FROM `my_table`;
+
+-- change engine
+-- http://dev.mysql.com/doc/refman/5.0/en/converting-tables-to-innodb.html
+-- http://dev.mysql.com/doc/refman/5.6/en/innodb-storage-engine.html
+-- http://dev.mysql.com/doc/refman/5.6/en/storage-engines.html
+
+ALTER TABLE
+    `my_table`
+ENGINE=InnoDB;  -- InnoDB, MyISAM, ARCHIVE, MEMORY ...
