@@ -1,23 +1,20 @@
-# Find
+# find files by user foo or bar
 
-## Find Files By User foo Or bar
+    find /my/path \( -user foo -o -user bar \) -ls
 
-find /my/path \( -user foo -o -user bar \) -ls
+# find files by user foo and not in group bar
 
-## Find Files By User foo And Not In Group bar
+    find /my/path -user foo -not -group bar -ls
 
-find /my/path -user foo -not -group bar -ls
+# find files by user foo and by size of greater then one mb
 
-## Find Files By User foo And By Size Of Greater Then One MB
+    find /my/path -user foo -and -size +1M -ls
 
-find /my/path -user foo -and -size +1M -ls
+# delete all files
 
-# Using Locate
+    find /var/log -type f -delete
 
-## Updates Locate Database
+## delete all .gz and rotated files
 
-updatedb
-
-## Finds Filename
-
-locate filename
+    find /var/log -type -f -regex ".*\.gz$"
+    find /var/log -type -f -regex ".*\.[0-9]$"
