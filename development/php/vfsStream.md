@@ -15,7 +15,7 @@ $directory = vfsStream::newDirectory($name);
 $root->addChild($directory);
 ```
 
-# create fire
+# create file
 
 ```php
 //assuming that $root exists
