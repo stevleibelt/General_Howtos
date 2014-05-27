@@ -48,3 +48,4 @@ echo var_export(
 
 * https://github.com/mikey179/vfsStream/wiki
 * http://tech.vg.no/2011/03/09/mocking-the-file-system-using-phpunit-and-vfsstream/
+* http://blog.sebastiankleine.de/vfsstrem-with-phpunit/
