@@ -10,7 +10,11 @@
 * mkdir /srv/sftp
 * useradd sftp -b /srv/sftp
 * passwd sftp
-* usermod -s /bin/false sftp
+* disable shell access
+    usermod -s /bin/false sftp
+    # or
+    usermod -s /sbin/nologin sftp
+    # add "/sbin/nologin" to your "/etc/shells"
 * chown -R root:sftp /srv/sftp
 * chmod -R 755 /srv/sftp
 * mkdir /srv/sftp/upload
