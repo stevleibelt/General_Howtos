@@ -22,3 +22,15 @@ FROM
   `my_table_to_search_in` AS `s` 
 WHERE 
   substring(`s`.`json`, LOCATE('myVar":[', `s`.`json`), (LOCATE(']', `s`.`json`, LOCATE('myVar":[', `s`.`json`)) -  LOCATE('myVar":[', `s`.`json`) + 1)) LIKE '%parameter value to search for%';
+
+-- 
+-- group by substring
+-- assuming you want to group by a given suffix (like email providers)
+-- fetch the substring by removing the unique identifiers (email) and group by the created string
+-- 
+
+SELECT
+    SUBSTRING(`my_column`, LOCATE('my_search_string', `my_column`)) AS my_to_group_column
+FROM
+    `my_table`
+GROUP BY my_to_group_column
