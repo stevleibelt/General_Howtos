@@ -4,10 +4,36 @@
 
 ## some configurations
 
-    * Compress=yes
-    * SystemMaxFileSize=100M
-    * RuntimeMaxFileSize=50M
-    * MaxFileSec=1week
+    Compress=yes
+    SystemMaxFileSize=100M
+    RuntimeMaxFileSize=50M
+    MaxFileSec=1week
+
+# options
+
+* -h    - show help
+* -l    - show full line view (not truncated)
+* -a    - show all fields
+* -f    - follow most recent entries
+* -e    - jump to the end
+* -n    - number of lines to display
+* -r    - reverse output (newest first)
+* -o    - controls format of output (json, json-pretty, cat, export, short, verbose, ...)
+* -x    - extended output with explanation text from catalog
+* -q    - quiet output (without any warnings)
+* -m    - merged output from all available journals
+* -b    - show message from specific boot
+* -k    - kernel messages only
+* -p    - filter by priority (emerg, alert, crit, err, warning, notice, info, debug)
+* -u    - show message of given systemd service unit
+* --list-boots  - show list of available boot ids
+* --since       - show entries since YYYY-MM-DD[ HH:MM:SS], HH:MM:SS or yesterday etc.
+* --until       - show entries until YYYY-MM-DD[ HH:MM:SS]
+* --disk-usage  - show current diskusage
+* --interval=   - sets fss key pairh generation interval
+* --verify      - verifies journal
+* --system      - show systemlog
+* --user        - show userlog
 
 # tail
 
@@ -17,11 +43,11 @@
 
     journalctl -xn
 
-# list journal of current boot
+# list journal of previous boot
 
-    journalctl -b
+    journalctl -b +1 
 
-# list journal of current boot with debug level error and worse
+# list journal of current boot with debug priority error and worse
 
     jounralctl -b -p err
 
