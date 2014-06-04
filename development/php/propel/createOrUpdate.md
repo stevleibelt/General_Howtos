@@ -9,3 +9,7 @@ $myObject = MyPropelTableQuery::create()
 echo $myObject->getFoo();   //outputs 'bar'
 echo $myObject->getBar();   //outputs 'foo'
 ```
+
+# links
+
+* [propel reference](http://propelorm.org/reference/model-criteria.html#creating-an-object-based-on-a-query)
