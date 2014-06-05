@@ -1,14 +1,14 @@
 # default option
 
-xrandr --auto
+    xrandr --auto
 
 ## change resolution of one
 
-xrandr --output VGA1 --mode 1024x768
+    xrandr --output VGA1 --mode 1024x768
 
 ## list current modes
 
-xrandr --current
+    xrandr --current
 
 # links
 
