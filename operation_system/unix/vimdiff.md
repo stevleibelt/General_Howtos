@@ -14,7 +14,7 @@ vimdiff [options] <file_one> <file_two> [<file_three>]
 * dp            - copy changes from the current window into the other one
 * ]c            - jump to next change
 * [c            - jump to previous change
-* ctrl + W      - switch to other window
+* ctrl + w  w   - switch to other window
 * :diffupdate   - updates diff
 * :syntax off   - no syntax highlighting
 * zo            - open folded text
