@@ -52,6 +52,45 @@ WHERE `table_one`.`foo` = 'foobar';
     AND `table_two_column_two`.`column_two` = 'baz'
 ```
 
+# how to write complex queries
+
+If they are to special and pure relational, do not use propel but PDO instead.
+If the where and join parts are very long or complicated, try to use formatter objects
+
+```mysql
+--- find all the books not reviewed by :name
+SELECT * FROM book
+WHERE 
+    id NOT IN (
+        SELECT book_review.book_id 
+        FROM book_review
+            INNER JOIN author ON (book_review.author_id=author.ID)
+        WHERE author.last_name = :name
+        );
+```
+
+```php
+//prepare and execute an arbitrary SQL statement
+$con = Propel::getConnection(BookPeer::DATABASE_NAME);
+$sql = 'SELECT * 
+        FROM book 
+        WHERE id NOT IN (
+            SELECT book_review.book_id 
+            FROM book_review 
+                INNER JOIN author ON (book_review.author_id=author.ID) 
+            WHERE author.last_name = :name)';
+$stmt = $con->prepare($sql);
+$stmt->execute(array(':name' => 'Austen'));
+
+//hydrate Book objects with the result
+$formatter = new PropelObjectFormatter();
+$formatter->setClass('Book');
+$books = $formatter->format($stmt);
+```
+If the query is to long, try to split it up by writing small "filterBy" methods and chain this methods.
+If you need more than one query, use the "useFooQuery" method.
+
 # links
 
 * http://propelorm.org/reference/model-criteria.html
+* http://propelorm.org/blog/2011/02/02/how-can-i-write-this-query-using-an-orm-.html
