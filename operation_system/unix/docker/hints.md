@@ -8,3 +8,4 @@ docker -H unix://path
 # links
 
 * http://docs.docker.io/en/latest/use/basics/
+* https://registry.hub.docker.com/
