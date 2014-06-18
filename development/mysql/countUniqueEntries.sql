@@ -1,3 +1,7 @@
+-- 
+-- 
+-- 
+
 SELECT 
   COUNT(DISTINCT `my_table`.`my_column`) 
 FROM 
