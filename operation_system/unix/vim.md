@@ -69,7 +69,7 @@ n #jumps to next "foo"
 N #jumps to next "foo" the other direction
 ta #moves "to" "a"
 fa #"findes" "a"
-:g/patern/ #show every line matching the regexp
+:g/pattern/ #show every line matching the regexp
 
 # help
 
