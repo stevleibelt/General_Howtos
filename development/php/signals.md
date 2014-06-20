@@ -15,7 +15,7 @@ POSIX defines the list of "reliable signals" (standard signals).
 * SIGFPE
 * SIGSEGV
 * SIGPIPE
-* SIGALARM
+* SIGALRM
 * SIGTERM
 * SIGCHLD
 * SIGCONT
@@ -33,7 +33,7 @@ class Example
     public function execute()
     {
         declare(ticks = 10);
-        pcntl_signal(SIGUP, [$this, 'signalHandler']);
+        pcntl_signal(SIGHUP, array($this, 'signalHandler'));
         //... add all you need
 
         foreach ($this->items as $item) {
