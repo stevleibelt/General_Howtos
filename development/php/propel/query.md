@@ -69,6 +69,30 @@ WHERE
         );
 ```
 
+Filter between minimum and maximum values.
+
+```php
+/**
+ * see: http://propelorm.org/reference/model-criteria.html#generated-query-methods
+ */
+FooQuery::create()
+    ->filterByBar(
+        array(
+            'min' => 23,
+            'max' => 42
+        )
+    )
+    ->find();
+```
+Upper php code will create following mysql statement.
+
+```mysql
+SELECT * 
+FROM `foo` 
+WHERE `bar` >= 23 AND `bar` <= 42;
+```
+
+
 ```php
 //prepare and execute an arbitrary SQL statement
 $con = Propel::getConnection(BookPeer::DATABASE_NAME);
