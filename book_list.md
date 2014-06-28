@@ -1,6 +1,7 @@
 # Following a list of books where informations are possible taken from
 ## title - author - publisher
 
+* The Psychology of Computer Programming - Gerald M. Weinberg
 * Think Unix - Jon Lasser - Que
 * PHP 5 Kochbuck - David Sklar, Adam Trachtenberg
 * Pro PHP Application Perfromance - Armando Padilla, Tim Hawkins - Apress
