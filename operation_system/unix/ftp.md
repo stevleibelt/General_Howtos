@@ -1,43 +1,43 @@
 # connect to ftp
 
-ftp $hostname
+    ftp $hostname
 
 # upload filename to server
 
-put $filename
+    put $filename
 
 # upload multiple files - use wildcards if needed
 
-mput $filenames
+    mput $filenames
 
 # download file
 
-get $filename [$localFilename]
+    get $filename [$localFilename]
 
 # download multiple files - use wildcards if needed
 
-mget $filenames
+    mget $filenames
 
 # change ftp directory
 
-cd
+    cd
 
 # change local directory
 
-lcd
+    lcd
 
 # list fto directories
 
-dir
+    dir
 
 # enable binary transferemode
 
-binary
+    binary
 
 # enable text transferemode
 
-ascii
+    ascii
 
 # quit
 
-quit
+    quit

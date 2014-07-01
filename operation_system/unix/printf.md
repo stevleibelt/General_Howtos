@@ -1,7 +1,7 @@
 # general
 
-printf <string> <argument_one> [<argument_two> [... [<argument_n>]]]
-printf 'my %s content' 'super'
+    printf <string> <argument_one> [<argument_two> [... [<argument_n>]]]
+    printf 'my %s content' 'super'
 
 # patterns
 

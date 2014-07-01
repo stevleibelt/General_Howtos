@@ -1,7 +1,7 @@
 # Show All Input Devices
 
-xinput list
+    xinput list
 
 # Show All Mouse Input Devices
 
-xinput list-props <mouse brand>
+    xinput list-props <mouse brand>

@@ -10,12 +10,12 @@ touch foo{1,2,3,4}
 
 # rename
 
-rename oldname newname files
+    rename oldname newname files
 
 ## example
 
-rename oldPrefix- newPrefix- oldPrefix-*
-rename .oldSuffix .newSuffix *.oldSuffix
+    rename oldPrefix- newPrefix- oldPrefix-*
+    rename .oldSuffix .newSuffix *.oldSuffix
 
 ### parameters
 
@@ -24,11 +24,11 @@ rename .oldSuffix .newSuffix *.oldSuffix
 
 # set sticky bit
 
-chmod +t -R *
+    chmod +t -R *
 
 # set gid
 
-chmod g+s -R *
+    chmod g+s -R *
 
 # links
 

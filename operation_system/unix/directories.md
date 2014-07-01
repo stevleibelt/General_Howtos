@@ -1,19 +1,19 @@
 # general list
 
-ls
+    ls
 
 # list all files with human readable size orderd by time in long output mode
 
-ls -halt
+    ls -halt
 
 # list all '.txt' files
 
-ls *.txt
+    ls *.txt
 
 # an example what you can do with ls
 
-ls [0-9a-z]foo[A-Z].bar
+    ls [0-9a-z]foo[A-Z].bar
 
 # list all items starting with a 'a' followed by lower case characters
 
-ls a[a-z]
+    ls a[a-z]

@@ -12,7 +12,7 @@ x	execute/list
 
 # permit others reading
 
-chmod -R o+r *
+    chmod -R o+r *
 
 # setuid
 
@@ -29,10 +29,10 @@ chmod u+s web /usr/bin/myprogramm
 
 ## acts like the setuid but this time the group is used
 
-chmod g+s web /usr/bin/myprogramm
+    chmod g+s web /usr/bin/myprogramm
 
 # stickybit
 ## by setting the stickybit, only the user who creates a file is allowed to delete it
 ## very usefull for temporary directories or general shared space
 
-chmod +t
+    chmod +t

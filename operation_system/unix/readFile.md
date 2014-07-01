@@ -1,7 +1,7 @@
 # programms
 
-more
-less
-pg
-cat
-lynx
+    more
+    less
+    pg
+    cat
+    lynx

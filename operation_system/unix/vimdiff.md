@@ -1,6 +1,6 @@
 # general
 
-vimdiff [options] <file_one> <file_two> [<file_three>]
+    vimdiff [options] <file_one> <file_two> [<file_three>]
 
 # options
 

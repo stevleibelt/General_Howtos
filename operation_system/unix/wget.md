@@ -1,3 +1,3 @@
 # skip certificate validation
 
---no-check-certificate
+    --no-check-certificate

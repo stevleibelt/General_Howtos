@@ -1,3 +1,3 @@
 # install cdrkit
 
-wodim -v dev=/dev/cdrom image.iso
+    wodim -v dev=/dev/cdrom image.iso

@@ -1,51 +1,51 @@
 # get last command
 
-arrow-up
+    arrow-up
 
 # delete one character of last command
 
-CTRL-h
+    CTRL-h
 
 # delete whole inputline
 
-CTRL-u
+    CTRL-u
 
 # pause output
 
-CTRL-s
+    CTRL-s
 
 # restart paused output
 
-CTRL-q
+    CTRL-q
 
 # send end of input signal
 
-CTRL-d
+    CTRL-d
 
 # cancel
 
-CTRL-c
+    CTRL-c
 
 # reset
 
-CTRL-j
+    CTRL-j
 
 # stop job
 
-CTRL-z
+    CTRL-z
 
 # list jobs
 
-jobs
+    jobs
 
 # bring job back
 
-fg [$numberOfJobFromList]
+    fg [$numberOfJobFromList]
 
 # continue job in background
 
-bg [$numberOfJobFromList]
+    bg [$numberOfJobFromList]
 
 # start two commands in the background
 
-(commandOne; commandTwo);
+    (commandOne; commandTwo);
