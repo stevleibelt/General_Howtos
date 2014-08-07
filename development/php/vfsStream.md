@@ -3,7 +3,7 @@
 ```php
 $path = 'foo';
 $permissions = 0755;
-$root = vfsStream::create($path, $permissions);
+$root = vfsStream::setup($path, $permissions);
 ```
 
 # create directory
@@ -13,6 +13,9 @@ $root = vfsStream::create($path, $permissions);
 $name = 'bar';
 $directory = vfsStream::newDirectory($name);
 $root->addChild($directory);
+
+//get directory path
+echo $directory->url();
 ```
 
 # create file
@@ -22,6 +25,9 @@ $root->addChild($directory);
 $name = 'bar';
 $file = vfsStream::newFile($name);
 $root->addChild($file);
+
+//get file path
+echo $file->url();
 ```
 # create file in directory
 
@@ -31,6 +37,9 @@ $directory = vfsStream::newDirectory('foo');
 $file = vfsStream::newFile('bar');
 $directory->addChild($file);
 $root->addChild($directory);
+
+//get file path
+echo $file->url();
 ```
 
 # dump structure
