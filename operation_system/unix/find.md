@@ -38,6 +38,10 @@
     find . ! -newerct '2 hours ago'   # find files created more than two hours
     find . ! -newermt '2 hours ago'   # find files modified more than two hours
 
+## find number of files that are created and older than four hours
+
+    find . ! -newerct '4 hours ago' | wc | awk '{print $1}'
+
 # delete all files
 
     find /var/log -type f -delete
