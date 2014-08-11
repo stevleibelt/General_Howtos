@@ -28,6 +28,16 @@
     find . -mmin +5 -mmin -10   # find files modified between
                                 # 6 and 9 minutes ago
 
+## gnu find
+
+    find . -newerat '2 hours ago'   # find files accessed last two hours
+    find . -newerct '2 hours ago'   # find files created last two hours
+    find . -newermt '2 hours ago'   # find files modified last two hours
+
+    find . ! -newerat '2 hours ago'   # find files accessed more than two hours
+    find . ! -newerct '2 hours ago'   # find files created more than two hours
+    find . ! -newermt '2 hours ago'   # find files modified more than two hours
+
 # delete all files
 
     find /var/log -type f -delete
