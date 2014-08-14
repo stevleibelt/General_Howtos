@@ -90,3 +90,5 @@
 * http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/
 * http://www.gnu.org/software/grep/manual/html_node/Usage.html#Usage
 * http://www.gnu.org/software/grep/manual/html_node/Character-Classes-and-Bracket-Expressions.html#Character-Classes-and-Bracket-Expressions
+* https://www.gnu.org/software/findutils/manual/html_node/find_html/grep-regular-expression-syntax.html
+* http://www.robelle.com/smugbook/regexpr.html
