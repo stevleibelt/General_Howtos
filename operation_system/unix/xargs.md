@@ -22,4 +22,6 @@
 # links
 
 * http://www.cyberciti.biz/faq/linux-unix-bsd-xargs-construct-argument-lists-utility/
-* 
+* http://www.linuxplanet.com/linuxplanet/tutorials/6522/1/
+* https://en.wikipedia.org/wiki/Xargs
+* http://javarevisited.blogspot.de/2012/06/10-xargs-command-example-in-linux-unix.html
