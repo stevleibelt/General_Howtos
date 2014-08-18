@@ -32,6 +32,15 @@
     git commit --amende         #edit message for the most recent commit
     git commit --amende <file>  #redo previous commit including changes from files ...
 
+# diff
+
+    git diff --staged           #show diff using staged instead of commited
+
+# rm
+
+    git rm --cached             #remove files in stage/repository (but not in the filesystem)
+                                #good if you commited log files or something else you don't want to commit
+
 # blame
 
     git blame <file> <revision>
