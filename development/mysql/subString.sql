@@ -16,6 +16,10 @@ SELECT SUBSTRING('foobar', -3); -- 'bar'
 SELECT SUBSTRING('foobarbar', 4); -- 'barbar'
 SELECT SUBSTRING('foobarbar' FROM 4); -- 'barbar'
 
+-- matching on last character (".")
+
+SELECT * FROM `my_table` WHERE SUBSTRING(`my_column`, -1) = '.';
+
 -- 
 -- assuming you have entries in json format and want to retrieve entries with matching parametervalues
 --
