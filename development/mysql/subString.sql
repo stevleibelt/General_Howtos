@@ -3,6 +3,16 @@
 -- https://dev.mysql.com/doc/refman/5.0/en/string-functions.html#function_substr
 -- 
 
+-- get first three characters
+
+SELECT SUBSTRING('foobar', 1, 3); -- 'foo'
+
+-- get last three characters
+
+SELECT SUBSTRING('foobar', -3); -- 'bar'
+
+-- general
+
 SELECT SUBSTRING('foobarbar', 4); -- 'barbar'
 SELECT SUBSTRING('foobarbar' FROM 4); -- 'barbar'
 
