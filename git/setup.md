@@ -1,5 +1,4 @@
-Set Global User Settings
-========================
+# set global user settings
 
-git config --global user.email "foo@bar"
-git config --global user.name "foobar"
+    git config --global user.email "foo@bar"
+    git config --global user.name "foobar"
