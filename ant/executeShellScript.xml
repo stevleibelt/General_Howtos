@@ -1,0 +1,7 @@
+<project>
+    <target name="my_shell_script">
+        <exec executable="/bin/bash">
+            <arg value="${basedir}/path/to/my_shell_script.sh" />
+        </exec>
+    </target>
+</project>
