@@ -1,3 +1,4 @@
+* http://wiki.bash-hackers.org/
 * http://www.tldp.org/LDP/abs/html/untyped.html
 * http://www.softpanorama.org/Scripting/Shellorama/Reference/string_operations_in_shell.shtml#Index
 * http://www.theunixschool.com/2012/06/10-tips-to-improve-performance-of-shell.html
