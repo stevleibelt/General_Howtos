@@ -8,6 +8,10 @@
     tar -zxvf foo.tar.gz
     (x->extract)
 
+# list content
+
+    tar -tf foo.tar.gz
+
 # include symbolic links
 
     -h, --dereference
@@ -30,3 +34,6 @@
 # links
 
 * http://www.computerhope.com/unix/utar.htm
+* http://www.linuxquestions.org/questions/linux-general-1/list-tar-contents-only-first-level-then-subdirectory-and-extract-4175512405/
+* http://www.cyberciti.biz/faq/list-the-contents-of-a-tar-or-targz-file/
+* http://www.pendrivelinux.com/how-to-open-a-tar-file-in-unix-or-linux/
