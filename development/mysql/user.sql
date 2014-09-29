@@ -12,7 +12,7 @@
 
 # grant privilege
 
-    GRANT ALL PRIVILEGES ON 'mytable' TO 'user'@'localhost' WIHT GRANT OPTION;
+    GRANT ALL PRIVILEGES ON 'my_database'.'mytable' TO 'user'@'localhost' WITH GRANT OPTION;
 
 # reload
 
