@@ -12,7 +12,9 @@
 
 # grant privilege
 
-    GRANT ALL PRIVILEGES ON 'my_database'.'mytable' TO 'user'@'localhost' WITH GRANT OPTION;
+    GRANT ALL PRIVILEGES ON `my_database`.`mytable` TO 'user'@'localhost' WITH GRANT OPTION;
+    GRANT ALL PRIVILEGES ON `my_database`.* TO 'user'@'localhost' WITH GRANT OPTION;
+    GRANT ALL ON `my_database`.* TO 'user'@'localhost';
 
 # reload
 
@@ -25,3 +27,9 @@
 # grant multiple
 
     GRANT SELECT, INSERT ON 
+
+-- 
+-- http://www.ntchosting.com/mysql/create-user.html
+-- http://alvinalexander.com/blog/post/mysql/add-user-mysql
+-- https://dev.mysql.com/doc/refman/5.1/en/create-user.html
+-- http://www.mysqltutorial.org/mysql-create-user.aspx
