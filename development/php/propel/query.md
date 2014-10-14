@@ -7,6 +7,19 @@ if ($connection instanceof DebugPDO) {
 }
 ```
 
+# compare column_one with column_two
+
+```php
+Query::create('tableOne')
+    ->where('tableOne.columnOne > table.columnTwo');
+```
+
+```mysql
+SELECT * 
+FROM `my_table` 
+WHERE `column_one` > `column_two`
+```
+
 # join
 
 ## simple inner join
