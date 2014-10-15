@@ -11,6 +11,7 @@
     * [dockerfile](https://pulse-forum.ind.ie/t/dockerfile-for-syncthing/)
 * [config](https://pulse-forum.ind.ie/t/config-file-and-directory/) in '$HOME/.config/syncthing/config.xml'
 * disable "global discovery"
+* [android app available](https://github.com/Nutomic/syncthing-android)
 
 # How To
 
