@@ -13,7 +13,7 @@
 * disable "global discovery"
 * [android app available](https://github.com/Nutomic/syncthing-android)
 
-# How To
+# how to
 
 ## enable gui to outside
 
