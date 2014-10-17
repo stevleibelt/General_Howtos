@@ -1,6 +1,6 @@
 # general
 
-* [homepage](http://syncthing.net/)
+* [homepage](https://ind.ie/pulse/)
 * [github](https://github.com/syncthing/syncthing)
 * [documentation](https://pulse-forum.ind.ie/category/documentation)
     * [getting started](https://pulse-forum.ind.ie/t/getting-started/)
