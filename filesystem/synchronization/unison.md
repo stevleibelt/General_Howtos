@@ -11,6 +11,8 @@
 * [linuxjornal.com](http://www.linuxjournal.com/article/7712)
 * available for arm arch linux
 * configuration files in "~/.unison"
+    * create "example.prf" file in "~/.unison"
+    * call "unison example" and "example.prf" is used
 * a file called "DANGER.README" will be created if manual cleanup may be required because of the fact that unison was interrupted
 * unison does not understand hard links.
 
@@ -73,10 +75,19 @@ Simple prefix your directory location with "ssh://"
 
 ## configuration for beginners
 
-    merge = diff3 -m CURRENT1 OLD CURRENT2 > NEW
+* create a file "default.prf" in "~/.unison"
+
+    merge = diff3 -m CURRENT1 CURRENTARCH CURRENT2 > NEW    #<path specification> -> <merge command>, use merge multiple times to specify different behavior for different paths
+    # <merge command>, CURRENT1, CURRENT2, CURRENTARCH, CRRENTARCHOPT, NEW, PATH, NEW1, NEW2
+    diff = diff -y -W 79 --suppress-common-lines    #use diff command
     backup = Name *
+    backuplocation = central    #central | local, central means in the backup directory, local means in the same directory
+    backupdir = /home/<user name/<backup>
+    backup = Name *
+    backupprefix = $VERSION #VERSION, FILENAME
+    #backupsuffix
     maxbackups = 3
-    log = true
+    log = true  #log files to the terminal
     logfile = ~/.unison/unison.log
     rshargs = -C
     #auto = true    #no asking for non-conflicting changes
@@ -86,8 +97,51 @@ Simple prefix your directory location with "ssh://"
     #group = true   #synchronize group id
     #owner = true   #synchronize owner id
     #perms = true   #synchronize permissions
+    #include <name> #will include file name.prf
 
 # examples
+
+## minimal profile
+
+    label = this is the default profile file    #description
+    root = /home/<user name>
+    root = ssh://<host name>//home/<user name>
+
+    #paths
+    path = doc
+    path = image
+    path = template
+
+## advanced profile
+
+    include common  #include contents of common.prf
+    addprefsto = common #if preferences are changed in cli or ui, store them in common.prf
+
+    label = this is the advanced profile
+    root = /home/<user name>
+    root = ssh://<host name>//home/<user name>
+
+    ignore = Name name_to_ignore*
+    ignore = Path patch/to/ignore*
+
+# paths
+
+* Regex <regexp>
+* Name <name>
+* Path <path>
+* BelowPath <path>
+* default globbing conventions for <name> and <path>
+    * *             -   matchs any zero or multiple characters not including "/" and not beginning with "."
+    * ?             -   matchs any single character not including "/" and not beginning with "."
+    * [abc]         -   matchs characters "a", "b" or "c" not including "/" and not beginning with "."
+    * {a,bb,ccc}    -   matchs characters "a", "bbb" or "ccc" not including "/" and not beginning with "."
+
+# exit codes
+
+* 0     -   successful
+* 1     -   some files where skipped
+* 2     -   no fatal failures
+* 3     -   fatal failure occured
 
 # options
 
