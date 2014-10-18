@@ -100,6 +100,7 @@ Simple prefix your directory location with "ssh://"
     #perms = 0o1777         #synchronize all permissions except set-gid and set-uid
     #perms = -1             #synchronize all permissions 
     #include <name>         #will include file name.prf
+    #force = <root path>    #turns unison into a mirroring tool by forcing resolving all changes in favor of <root path>
 
 # examples
 
