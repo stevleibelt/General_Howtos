@@ -23,6 +23,8 @@ File synchronisation is not a backup.
 
 ## test cases
 
+* the case "a file/directory with same name and same path is created on multiple devices at the same time" is not seen as a practical/real world case
+
 ### files
 
 #### 01
@@ -72,3 +74,34 @@ File synchronisation is not a backup.
 * expectation
     * device_a as directory_a containing file_a
     * device_b as directory_a containing file_a
+
+#### 02
+
+* mkdir directory_a on device_a
+* mkdir directory_a on device_b
+* mkdir directory_a on device_c
+* touch file_a, file_b and file_c in directory_a on device_a
+* synchronize device_a with device_b
+* expectation
+    * directory_a on device_a contains file_a, file_b and file_c
+    * directory_a on device_b contains file_a, file_b and file_c
+* synchronize device_a with device_c
+* expectation
+    * directory_a on device_a contains file_a, file_b and file_c
+    * directory_a on device_c contains file_a, file_b and file_c
+* wait at least a second
+* remove file_b in directory_a on device_a
+* synchronize device_a with device_b
+* expectation
+    * directory_a on device_a contains file_a and file_c
+    * directory_a on device_b contains file_a and file_c
+* wait at least a second
+* remove file_c in directory_a on device_c
+* synchronize device_c with device_b
+* expectation
+    * directory_a on device_c contains file_a
+    * directory_a on device_b contains file_a
+* synchronize device_b with device_a
+* expectation
+    * directory_a on device_a contains file_a
+    * directory_a on device_b contains file_a
