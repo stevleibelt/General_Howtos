@@ -73,7 +73,7 @@ Simple typ "?" and read the output.
 
 Simple prefix your directory location with "ssh://"
 
-## configuration for beginners
+## [configuration](http://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html) for beginners
 
 * create a file "default.prf" in "~/.unison"
 
@@ -90,14 +90,16 @@ Simple prefix your directory location with "ssh://"
     log = true  #log files to the terminal
     logfile = ~/.unison/unison.log
     rshargs = -C
-    #auto = true    #no asking for non-conflicting changes
-    #batch = true   #no asking at all, conflicts will be skipped
-    #silent = true  #outputs only errors
-    #follow = true  #treat symboloc links as real filesystem item not as reference (copy content)
-    #group = true   #synchronize group id
-    #owner = true   #synchronize owner id
-    #perms = true   #synchronize permissions
-    #include <name> #will include file name.prf
+    #auto = true            #no asking for non-conflicting changes
+    #batch = true           #no asking at all, conflicts will be skipped
+    #silent = true          #outputs only errors
+    #follow = <pattern>     #treat symbolic links as real filesystem item not as reference (copy content) and copy all fitting pattern content
+    #group = true           #synchronize group name
+    #owner = true           #synchronize owner name
+    #numericids = true      #owner and group are synchronized by id instead of by name
+    #perms = 0o1777         #synchronize all permissions except set-gid and set-uid
+    #perms = -1             #synchronize all permissions 
+    #include <name>         #will include file name.prf
 
 # examples
 
