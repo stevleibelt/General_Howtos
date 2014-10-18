@@ -81,6 +81,9 @@ File synchronisation is not a backup.
 * mkdir directory_a on device_b
 * mkdir directory_a on device_c
 * touch file_a, file_b and file_c in directory_a on device_a
+* echo "a" > file_a in directory_a on device_a
+* echo "b" > file_b in directory_a on device_a
+* echo "c" > file_c in directory_a on device_a
 * synchronize device_a with device_b
 * expectation
     * directory_a on device_a contains file_a, file_b and file_c
