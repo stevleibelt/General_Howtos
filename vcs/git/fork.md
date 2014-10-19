@@ -2,20 +2,27 @@
 
 ## list avaiable remote address
 
-    git remote -v
+
+```shell
+git remote -v
+```
 
 ## add source as upstream
 
-    git remote add upstream https://git.my-domain.org/repository
+```shell
+git remote add upstream https://git.my-domain.org/repository
+```
 
 ## fetch from upstream
 
-    # update upstream branches
-    git fetch upstream
-    # switch to local master branch
-    git checkout master
-    # merge
-    git merge upstream/master
+```shell
+# update upstream branches
+git fetch upstream
+# switch to local master branch
+git checkout master
+# merge
+git merge upstream/master
+```
 
 # links
 
