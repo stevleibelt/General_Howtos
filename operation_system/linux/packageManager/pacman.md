@@ -52,3 +52,7 @@
 # remove unneeded packages
 
     pacman -Rsn `pacman -Qqdt`
+
+# links
+
+* https://wiki.archlinux.org/index.php/Pacnew_and_Pacsave_Files
