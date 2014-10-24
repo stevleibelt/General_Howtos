@@ -1,6 +1,3 @@
-# Take a look to
-# https://wiki.archlinux.de/title/Pacman
-
 # do not ask for confirmation (no good idea except you run pacman from a script)
 
     --noconfirm
@@ -53,6 +50,22 @@
 
     pacman -Rsn `pacman -Qqdt`
 
+# locate .pac* files
+
+    # in /etc
+    find /etc -regextype posix-extended -regex ".+\.pac(new|save|orig)" 2> /dev/null
+
+    # on entire file system
+    find / -regextype posix-extended -regex ".+\.pac(new|save|orig)" 2> /dev/null
+
+    # by locate
+    # updatedb
+    locate -e --regex "\.pac(new|orig|save)$"
+
+    # by pacmans log
+    egrep "pac(new|orig|save)" /var/log/pacman.log
+
 # links
 
+* https://wiki.archlinux.de/title/Pacman
 * https://wiki.archlinux.org/index.php/Pacnew_and_Pacsave_Files
