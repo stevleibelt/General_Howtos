@@ -1,6 +1,23 @@
+# general
+
+* a snapshot is a read only copy of the filesystem
+* when taken, it consumes nearly now additional disk space
+* a snapshot grows when data of the filesystem changes
+
 # create
 
+* use -R to craete a replication stream package (contains all properties, snapshots, descendent filesystems, clones ...
+* use -D to create a deduplicated stream
+* use -p to add the datasets properties to the stream
+* use -n to do a dry run
+* use -P to print machine-parsable verbose information
+* use -v to pront verbose informations
+
+    # use "-r" for all descendent file systems (recursive)
     zfs snapshot [-r] <pool name>@<snapshot name>
+
+    # use -i to create an incremental stream from the first snapshot
+    zfs snapshot -i <pool name>@<first snapshot name> <pool name>@<second snapshot name>
 
 # remove
 
@@ -10,7 +27,24 @@
 
     zfs list -t snapshot
 
-# rollback
+# diff
+
+## options
+
+* -F    display type of file
+* -H    give more (human readable) parsable informations
+* -t    display paths inode change time
+
+## output
+
+* -     the path has been removed
+* +     the path has been added
+* M     the path has been modified
+* R     the path has been renamed
+
+    zfs diff <source snapshot name> <destination snapshot name>|<file system>
+
+# rollback / restore
 
     zfs rollback <pool name>@<snapshot name>
 
@@ -22,16 +56,22 @@
 
 ## on same system
 
-    zfs send [-D -R -I <source pool name>@<snapshot name> | zfs receive [-u -d -F] <destination pool name>
+    zfs send <source pool name>@<snapshot name> | zfs receive <destination pool name>
 
 ## via ssh
 
-    zfs send [-D -R -I <source pool name>@<snapshot name> | ssh backup.me.com zfs recv [-u -d -F]<destination pool name>[/path]
+    zfs send <source pool name>@<snapshot name> | ssh backup.me.com zfs recv <destination pool name>[/path]
 
 ## entire pool
 
     zfs snapshot -r <source pool>@<snapshot name>
     zfs send -R <source pool name>@<snapshot name> | zfs receive -F <destination pool name>
+
+# rename
+
+    zfs rename <pool name>@<old snapshot name> <pool name>@<new snapshot name>
+    # same but short
+    zfs rename <pool name>@<old snapshot name> <new snapshot name>
 
 ## hints
 
@@ -41,11 +81,9 @@
 
 * repeat snapshot send and receive at least twice (second run with disabled user access to source pool) to get all data in sync
 
-## rename
-
-    zfs rename <source pool name>@<snapshot name> <destination pool name>@<snapshot name>
-
 # links
 
 * https://wiki.archlinux.org/index.php/ZFS#Experimenting_with_ZFS
 * http://docs.huihoo.com/opensolaris/solaris-zfs-administration-guide/html/ch06.html
+* http://docs.oracle.com/cd/E19253-01/819-5461/gbcya/index.html
+* http://googlux.com/zfs-snapshot.html
