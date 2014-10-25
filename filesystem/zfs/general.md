@@ -69,6 +69,8 @@
 # links
 
 * http://docs.oracle.com/cd/E19253-01/819-5461/zfsover-1/index.html
+* http://www.freebsd.org/doc/handbook/zfs-term.html#zfs-term-snapshot
+* http://www.freebsd.org/doc/handbook/zfs-zfs.html
 * http://manpages.ubuntu.com/manpages/maverick/man1/zpool.1M.html
 * http://hub.opensolaris.org/bin/download/Community+Group+zfs/docs/zfsadmin.pdf
 * http://www.sysadmin-cookbook.net/zfs/
