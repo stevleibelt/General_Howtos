@@ -1,33 +1,36 @@
 # prepare empty disk and add gpt/efi lable
 
-    gdisk /dev/myDevice
+    gdisk /dev/<device>
 
-# create tank "myTank"
+# create pool "my pool"
 
     ls -lah /dev/disk/by-id
-    zpool create -f -m /my/mount/point [-o $propertyName] pool-name  mirror|raidz id1[ id2[ id3]]
+    zpool create -f -m </my/mount/point> [-o $propertyName] <my pool>  mirror|raidz id1[ id2[ id3]]
 
 # create data set
 
-    zfs create myTank/myDataSet
+    zfs create <pool name>/<data set name>
 
 # set mountpoint (if needed)
 
-    zfs set mountpoint=/path/to/mountpoint myTank
-    zfs set mountpoint=/foo/bar myTank/myFileSystem
+    zfs set mountpoint=</path/to/mountpoint> <pool name>
+    zfs set mountpoint=</path/to/mountpoint/of/dataset> <pool name>/<data set name>
 
 # set quota
 
-    zfs set quota=10G boo/bar
-    zfs set quota=none boo/bar
+    # set quota to 10 GB
+    zfs set quota=10G <pool name>[/<data set name>]
 
-# get all flags
+    # remove quota
+    zfs set quota=none <pool name>[/<data set name>]
 
-    zfs get all myTank
+# get all flags of data set
 
-# add compression to fileSystem
+    zfs get all <pool name>[/<data set name>]
 
-    zfs set compression=on myTank/myFileSystem
+# add compression to data set
+
+    zfs set compression=on <pool name>[/<data set name>]
 
 * http://docs.oracle.com/cd/E19253-01/819-5461/gavwg/index.html
 
@@ -44,7 +47,7 @@
 
 # import a pool under different name
 
-    zpool import $pool $my-other-name
+    zpool import <source pool name> <destination pool name>
 
 # try zpool import without mounting it
 
@@ -52,16 +55,16 @@
 
 # import pool for current run (not permanently) with different root path
 
-    zpool import -R /path/to/mountpoint zpoolId
+    zpool import -R </path/to/mountpoint> <pool name>
 
 # replace unavailable disk
 
     zpool status
-    zpool detach $pool $dead-device
+    zpool detach <pool name> <dead device>
 
 # stop scrub
 
-    zpool scrub -s $pool
+    zpool scrub -s <pool name>
 
 # links
 
