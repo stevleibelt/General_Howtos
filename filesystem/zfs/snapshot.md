@@ -84,6 +84,7 @@
 # links
 
 * https://wiki.archlinux.org/index.php/ZFS#Experimenting_with_ZFS
+* http://www.freebsd.org/doc/handbook/zfs-zfs.html
+* http://googlux.com/zfs-snapshot.html
 * http://docs.huihoo.com/opensolaris/solaris-zfs-administration-guide/html/ch06.html
 * http://docs.oracle.com/cd/E19253-01/819-5461/gbcya/index.html
-* http://googlux.com/zfs-snapshot.html
