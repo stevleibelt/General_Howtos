@@ -79,3 +79,5 @@
 * http://docs.huihoo.com/opensolaris/solaris-zfs-administration-guide/html/ch05s05.html
 * http://wiki.nas4free.org/doku.php?id=zfs:main
 * http://cuddletech.com/ZFSNinja-Slides.pdf
+* https://wiki.archlinux.org/index.php/Experimenting_with_ZFS#Simulate_a_Disk_Failure_and_Rebuild_the_Zpool
+* https://wiki.archlinux.org/index.php/ZFS#Embed_the_archzfs_packages_into_an_archiso
