@@ -66,8 +66,17 @@
 
     zpool scrub -s <pool name>
 
+# limit the maximum arc size
+
+    touch /etc/modprobe.d/zfs.conf
+    # for a limit of 2 GiB
+    echo "options zfs zfs_arc_max=2147483648" > /etc/modprobe.d/zfs.conf
+    # for a limit of 4 GiB
+    echo "options zfs zfs_arc_max=4294967296" > /etc/modprobe.d/zfs.conf
+
 # links
 
+* https://pthree.org/2013/01/03/zfs-administration-part-xvii-best-practices-and-caveats/
 * http://docs.oracle.com/cd/E19253-01/819-5461/zfsover-1/index.html
 * http://www.freebsd.org/doc/handbook/zfs-term.html#zfs-term-snapshot
 * http://www.freebsd.org/doc/handbook/zfs-zfs.html
