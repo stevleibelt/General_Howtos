@@ -9,3 +9,8 @@ Server = http://demizerone.com/$repo/$arch
 pacman-key -r 0EE7A126
 pacman-key --lsign-key 0EE7A126
 pacman -Syy archzfs
+
+# links
+
+* https://github.com/demizer/archzfs
+* https://wiki.archlinux.org/index.php/ZFS
