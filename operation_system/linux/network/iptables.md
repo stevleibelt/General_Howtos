@@ -1,35 +1,35 @@
 # list available policies and rules
 
-iptables -L
-iptables -nvL
+    iptables -L
+    iptables -nvL
 
 ## list available policies and rules per filter
 
-iptables -t <filter> -L
+    iptables -t <filter> -L
 
 # remove all available policies and rules
 
-iptables -F
+    iptables -F
 
 # restore from configuration file
 
-iptables-restore < /etc/iptables/iptables.rules
+    iptables-restore < /etc/iptables/iptables.rules
 
 # save to configuration file
 
-iptables-save > /etc/iptables/iptables.rules
+    iptables-save > /etc/iptables/iptables.rules
 
 # block ip address
 
-iptables -A INPUT -s <ip.address> -j DROP
+    iptables -A INPUT -s <ip.address> -j DROP
 
 # unblock ip address
 
-iptables -D INPUT -s <ip.address> -j DROP
+    iptables -D INPUT -s <ip.address> -j DROP
 
 # block a port by ip address
 
-iptables -A INPUT -s <ip.address> -p tcp --destination-port <port> -j DROP
+    iptables -A INPUT -s <ip.address> -p tcp --destination-port <port> -j DROP
 
 # basic knowledge
 
@@ -102,10 +102,22 @@ Based on the policy, following (incomplete) list of targets can be used:
 * LOG
 * REJECT - rejection message is sent
 
+# example
+
+## open ssh
+
+    iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+    iptables -A OUTPUT -p tcp --sport 22 -j ACCEPT
+
 # links
 
+* https://www.frozentux.net/iptables-tutorial/iptables-tutorial.html
 * http://www.cyberciti.biz/faq/how-do-i-block-an-ip-on-my-linux-server/
 * https://wiki.archlinux.org/index.php/Iptables
+* http://wiki.centos.org/HowTos/Network/IPTables
+* https://help.ubuntu.com/community/IptablesHowTo
+* http://www.cyberciti.biz/faq/linux-open-iptables-firewall-port-22-23/
+* http://www.cyberciti.biz/tips/linux-iptables-4-block-all-incoming-traffic-but-allow-ssh.html
 
 # books
 
