@@ -24,8 +24,10 @@
 * [basic configuration](http://wiki.openwrt.nanl.de/doc/howto/basic.config)
 * [wireless overview](http://wiki.openwrt.nanl.de/doc/howto/wireless.overview)
 * [log](http://wiki.openwrt.org/doc/howto/log.essentials)
+* [packages](https://github.com/openwrt/packages)
 * [network overview](http://wiki.openwrt.org/doc/uci/network)
     * [users](http://wiki.openwrt.org/doc/uci/users)
+    * [netfilter](http://wiki.openwrt.org/doc/howto/netfilter
 * [firewall](http://wiki.openwrt.org/doc/uci/firewall)
 * [ddns](http://wiki.openwrt.org/doc/howto/ddns.client)
 * [ssh / dropbear](http://wiki.openwrt.org/doc/uci/dropbear)
