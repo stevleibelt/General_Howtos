@@ -67,5 +67,6 @@
 
 # links
 
+* https://wiki.archlinux.org/index.php/Pacman_tips#Custom_local_repository
 * https://wiki.archlinux.de/title/Pacman
 * https://wiki.archlinux.org/index.php/Pacnew_and_Pacsave_Files
