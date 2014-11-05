@@ -5,9 +5,14 @@
 ## some configurations
 
     Compress=yes
+    SystemMaxUse=500M
     SystemMaxFileSize=100M
     RuntimeMaxFileSize=50M
     MaxFileSec=1week
+
+# view messages from journal
+
+    strings /var/log/journal<your id>/<journal file name>.journal | grep -i message
 
 # options
 
