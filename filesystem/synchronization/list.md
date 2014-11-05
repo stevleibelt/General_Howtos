@@ -6,3 +6,5 @@
 * [DirSync Pro](https://en.wikipedia.org/wiki/DirSync_Pro#Features)
 * [iFolder](https://en.wikipedia.org/wiki/IFolder)
 * [grsync](http://www.opbyte.it/grsync/screenshot.html)
+* [backupPc](https://wiki.archlinux.org/index.php/BackupPC)
+* [burp](http://burp.grke.org/)
