@@ -1,6 +1,8 @@
 -- 
 -- select row with most recent date per user
--- http://stackoverflow.com/questions/17038193/select-row-with-most-recent-date-per-user
+-- see
+--  http://stackoverflow.com/questions/17038193/select-row-with-most-recent-date-per-user
+--  http://dev.mysql.com/doc/refman/5.0/en/example-maximum-column-group-row.html
 -- 
 
 SELECT 
