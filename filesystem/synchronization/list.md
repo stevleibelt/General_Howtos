@@ -8,3 +8,4 @@
 * [grsync](http://www.opbyte.it/grsync/screenshot.html)
 * [backupPc](https://wiki.archlinux.org/index.php/BackupPC)
 * [burp](http://burp.grke.org/)
+* [duplicity](http://duplicity.nongnu.org)
