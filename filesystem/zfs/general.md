@@ -32,6 +32,10 @@
 
     zfs set compression=on <pool name>[/<data set name>]
 
+# list space per data set
+
+    zfs list -o space
+
 * http://docs.oracle.com/cd/E19253-01/819-5461/gavwg/index.html
 
     zpool events -v
