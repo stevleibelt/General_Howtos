@@ -55,3 +55,8 @@ to
 * /<pattern>                    -   matches in current directory only
 * #include <path to named file> -   load patterns from a file
 * !<pattern>                    -   negates the pattern (files that are not ignored)
+
+# links
+
+* [syncthing repository for fedora](https://copr.fedoraproject.org/coprs/thunderbirdtr/Syncthing_for_Fedora/)
+* [syncthing rpm for fedora](https://github.com/thunderbirdtr/syncthing_rpm)
