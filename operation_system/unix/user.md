@@ -21,7 +21,10 @@
 
 # list users
 
+    #default way
     cat /etc/passwd
+    #or the cool way
+    getent passwd | grep '/home' | awk -F ':' '{ print $1 }'
 
 # run command as other user
 
