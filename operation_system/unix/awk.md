@@ -1,6 +1,6 @@
 # change default separator
 
-    #use ";" as separator instead of defaul " "
+    #use ";" as separator instead of default " "
     awk 'BEGIN { FS = ";" } ; { print $1 }'
 
 # links
