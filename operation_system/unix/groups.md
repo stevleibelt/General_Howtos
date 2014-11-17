@@ -1,3 +1,7 @@
+# add group
+
+    groupadd <name>
+
 # list groups
 
     cat /etc/group | sort | less
