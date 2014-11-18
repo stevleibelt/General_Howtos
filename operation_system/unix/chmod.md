@@ -47,3 +47,4 @@
 
 * http://www.computerhope.com/unix/uchmod.htm
 * https://en.wikipedia.org/wiki/Chmod
+* http://catcode.com/teachmod/
