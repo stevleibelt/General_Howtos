@@ -10,3 +10,7 @@
     source ~/.bashrc
 
     bash #opens a subshell
+
+# links
+
+* http://ss64.com/bash/
