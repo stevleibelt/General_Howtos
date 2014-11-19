@@ -127,6 +127,27 @@ $books = $formatter->format($stmt);
 If the query is to long, try to split it up by writing small "filterBy" methods and chain this methods.
 If you need more than one query, use the "useFooQuery" method.
 
+# update
+
+```mysql
+UPDATE `my_table`
+SET `column_one` = 1
+WHERE `column_two` = 2
+```
+
+```php
+//prepare and execute an arbitrary SQL statement
+FooQuery::create()
+    ->filterByColumnTwo(2)
+    ->update(
+        array(
+            ‘ColumnOne’ => 1
+        ),
+        null,
+        true
+    );
+```
+
 # links
 
 * http://propelorm.org/reference/model-criteria.html
