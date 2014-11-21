@@ -16,7 +16,17 @@
 
 # unount
 
-    fusermount -u locatl/mount/point
+    fusermount -u local/mount/point
+
+# help
+
+## “invalid_argument”
+
+    create local mount point
+
+## “???” after mounting
+
+    check user rights on destination
 
 # links
 
