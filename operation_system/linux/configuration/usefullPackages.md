@@ -6,6 +6,7 @@
 * ntop
 * iotop
 * iftop
+* nmon
 * lsof
 * net-tools
 * screen
@@ -47,12 +48,10 @@
 
 * firefox
 * irssi
-* luakit
 * nethogs
 * netctl
 * thunderbird
 * ufw, ferm, shorewall (iptables cli frontend)
-* vimprobable2-git
 
 # multimedia
 
