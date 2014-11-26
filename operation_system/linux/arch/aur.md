@@ -1,37 +1,37 @@
 # basic howto
 
-wget http://www.my.file .
-tar xzf my.file
-makepkg
-pacman -U *.tar.xz
+	wget http://www.my.file .
+	tar xzf my.file
+	makepkg
+	pacman -U *.tar.xz
 
 # yaourt
 
 ## search and install
 
-yaourt <search pattern>
+	yaourt <search pattern>
 
 ## update installed packages
 
-yaourt -Syua
+	yaourt -Syua
 
 ## build packages from source
 
-yaourt -Sb <package>
+	yaourt -Sb <package>
 
 ## backup database
 
-yaourt -B 
+	yaourt -B 
 
 ## query backup
 
-yaourt -Q --backupfile <file>
+	yaourt -Q --backupfile <file>
 
 ## add yaourt repository
 
-[archlinuxfr]
-SigLevel = Never
-Server = http://repo.archlinux.fr/$arch
+	[archlinuxfr]
+	SigLevel = Never
+	Server = http://repo.archlinux.fr/$arch
 
 ## links
 
