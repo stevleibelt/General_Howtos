@@ -48,6 +48,11 @@
     # find lines that contain 'paul' and 'frank'
     grep 'paul' * | grep 'frank'
 
+# include
+
+    # search "foo" in files named "bar.foo"
+    grep -r 'foo' --include="bar.foo" *
+
 # character classes
 
 * [:blank:]     - space and tab
@@ -87,6 +92,7 @@
 
 # links
 
+* http://www.commandlinefu.com/commands/view/2998/grep-certain-file-types-recursively
 * http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/
 * http://www.gnu.org/software/grep/manual/html_node/Usage.html#Usage
 * http://www.gnu.org/software/grep/manual/html_node/Character-Classes-and-Bracket-Expressions.html#Character-Classes-and-Bracket-Expressions
