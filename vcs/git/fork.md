@@ -16,6 +16,8 @@
     git checkout master
     # merge
     git merge upstream/master
+    # or rebase if needed
+    git rebase upstream/master
 
 # links
 
