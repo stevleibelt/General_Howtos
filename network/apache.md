@@ -8,7 +8,7 @@ First rule of all, enable mod_rewrite in your configuration.
     RewriteCond   %{SERVER_PORT}  !^443$
     RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
-## list of flas
+## list of flas (whoot?)
 
 * C     -   chained with following rule
 * CO=cookie     -   set specified cookie
@@ -28,6 +28,13 @@ First rule of all, enable mod_rewrite in your configuration.
 * QSA   -   query string append from reqest to subsituted url
 * S=x   -   skip next x rules
 * T=mime-type   -   force mime-type
+
+## error log format
+
+Take a look into the [directive](https://httpd.apache.org/docs/current/mod/core.html#errorlogformat) section.
+
+    #Simple example
+    ErrorLogFormat "[%t] [%l] [pid %P] %F: %E: [client %a] %M"
 
 # links
 
