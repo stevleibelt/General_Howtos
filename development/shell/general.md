@@ -52,3 +52,7 @@ $SUM=`expr 1+1`
 
 * read a file line by line - http://bash.cyberciti.biz/file-management/read-a-file-line-by-line/
 * write odd and even line to file - http://bash.cyberciti.biz/academic/write-odd-even-line-file/
+
+# links
+
+* http://stackoverflow.com/questions/3767267/check-if-file-exists
