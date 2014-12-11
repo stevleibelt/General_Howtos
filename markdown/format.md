@@ -22,3 +22,10 @@ _text_
 
 **text**
 __text__
+
+# comment
+
+\<\!\-\- single
+or multi
+line comment
+\-\-\>
