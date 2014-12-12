@@ -6,12 +6,12 @@
 
 # create
 
-* use -R to craete a replication stream package (contains all properties, snapshots, descendent filesystems, clones ...
+* use -R to create a replication stream package (contains all properties, snapshots, descendent filesystems, clones ...
 * use -D to create a deduplicated stream
 * use -p to add the datasets properties to the stream
 * use -n to do a dry run
 * use -P to print machine-parsable verbose information
-* use -v to pront verbose informations
+* use -v to print verbose informations
 
     # use "-r" for all descendent file systems (recursive)
     zfs snapshot [-r] <pool name>@<snapshot name>
