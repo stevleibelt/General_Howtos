@@ -1,5 +1,5 @@
 //Inspired by http://daringfireball.net/projects/markdown/basics
-# Blockquote - <blockquote />
+# Blockquote - \<blockquote /\>
 
 > a blockquote
 > 
@@ -9,16 +9,23 @@
 
 Each text followed by a empty line is a paragrap.
 
-# Breaks - <br />
+# Breaks - \<br /\>
 
 Empty line with two spaces
 
-# Emphasized - <em />
+# Emphasized - \<em /\>
 
 *text*
 _text_
 
-# Strong - <strong />
+# Strong - \<strong /\>
 
 **text**
 __text__
+
+# comment
+
+\<\!-- single
+or multi
+line comment
+-->
