@@ -56,3 +56,4 @@ $SUM=`expr 1+1`
 # links
 
 * http://stackoverflow.com/questions/3767267/check-if-file-exists
+* http://www.catonmat.net/download/bash-history-cheat-sheet.pdf
