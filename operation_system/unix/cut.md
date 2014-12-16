@@ -5,4 +5,4 @@
 # get part of content with defining differend separator
 
     #get first snippet from file where separator is ";"
-    cat my_file | cut -f1 -d=";"
+    cat my_file | cut -f1 -d=;
