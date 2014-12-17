@@ -5,6 +5,7 @@
 # debug
 
     soffice --headless --backtrace
+    strace -f soffice --headless
 
 # pdf
 
