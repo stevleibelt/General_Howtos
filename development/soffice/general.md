@@ -6,6 +6,7 @@
 
     soffice --headless --backtrace
     strace -f soffice --headless
+    strace -f -o strace.out soffice --headless
 
 # pdf
 
