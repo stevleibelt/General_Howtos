@@ -2,6 +2,8 @@
 
 * pacman -S lvm2 gdisk
 * gdisk/cfdisk /dev/sdX
+* create new GPT
+* create new partition 1 size 1 mb type ef02
 * create new partition 2 size 400 mb type 8300
 * create new partition 3 size 8e00 (lvm)
 
