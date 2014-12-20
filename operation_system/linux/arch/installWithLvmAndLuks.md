@@ -36,7 +36,7 @@
 
 # create boot
 
-    mkfs -t ext2 /dev/sdX2
+    mkfs.ext4 /dev/sdX2
     mount /dev/sdX2 /mnt/boot
 
 # contiune with normal install
