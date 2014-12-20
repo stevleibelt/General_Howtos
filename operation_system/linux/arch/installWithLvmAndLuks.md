@@ -21,13 +21,14 @@
 * lvcreate -L 20G myVolumeGroup00 -n root
 * lvcreate -L 10G myVolumeGroup00 -n var
 * lvcreate -L x0G myVolumeGroup00 -n home
-[ * lvcreate -C y -L xG myVolumeGroup00 -n swap ]
-[ * lvcreate -L x0G myVolumeGroup00 -n media ]
-[ * lvcreate -l +100%FREE myVolumeGroup00 -n rest ] #fills up the rest
-[ * lvdisplay ]
+* optional
+    * lvcreate -C y -L xG myVolumeGroup00 -n swap
+    * lvcreate -L x0G myVolumeGroup00 -n media
+    * lvcreate -l +100%FREE myVolumeGroup00 -n rest #fills up the rest
+* lvdisplay
 * mkfs.ext4 /dev/mapper/myVolumeGroup00-root
-...
-[ * mkswap /dev/mapper/myVolumeGroup00-swap ]
+* optional
+    * mkswap /dev/mapper/myVolumeGroup00-swap
 
     mount /dev/myVolumeGroup00/root /mnt
     mkdir /mnt/var
