@@ -29,13 +29,14 @@
 * mkfs.ext4 /dev/mapper/myVolumeGroup00-root
 * optional
     * mkswap /dev/mapper/myVolumeGroup00-swap
-
+```
     mount /dev/myVolumeGroup00/root /mnt
     mkdir /mnt/var
     mkdir /mnt/home
     mkdir /mnt/boot
     mount /dev/myVolumeGroup00/home /home
     mount /dev/myVolumeGroup00/var /var
+```
 
 # create boot
 
@@ -44,23 +45,30 @@
 
 # contiune with normal install
 
+```
     pacstrap /mnt grub-bios base base-devel
     genfstab -p -U /mnt > /mnt/etc/fstab
+```
 
 ...
 * adapt "mkinitcpio.conf" and add "keymap encrypt lvm2" before "filesystems" and "shutdown" after
 * add 'ext4' to MODULES section
 * grub-install --target=i386-pc --recheck --debug /dev/sda
 * add to /etc/default/grub
+
+```
     blkid
     GRUB_CMDLINE_LINUX_DEFAULT="cryptdevice=/dev/disk/by-uuid/123:myVolumeGroup00"
     #GRUB_DISABLE_SUBMENU=y
     [ * update-grub ]
     grub-mkconfig -o /boot/grub/grub.cfg
+```
 
 # enable trim suppot if you use an ssd
 
+```
     cryptdevice=/dev/mapper/root:root:allow-discards
+```
 
 # Links
 
