@@ -57,6 +57,7 @@
 * add to /etc/default/grub
 
 ```
+    lsblk -f
     blkid
     GRUB_CMDLINE_LINUX_DEFAULT="cryptdevice=/dev/disk/by-uuid/123:myVolumeGroup00"
     #GRUB_DISABLE_SUBMENU=y
