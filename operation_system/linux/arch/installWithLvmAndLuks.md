@@ -27,21 +27,23 @@
 ...
 [ * mkswap /dev/mapper/myVolumeGroup00-swap ]
 
-mount /dev/myVolumeGroup00/root /mnt
-mkdir /mnt/var
-mkdir /mnt/home
-mkdir /mnt/boot
-mount /dev/myVolumeGroup00/home /home
-mount /dev/myVolumeGroup00/var /var
+    mount /dev/myVolumeGroup00/root /mnt
+    mkdir /mnt/var
+    mkdir /mnt/home
+    mkdir /mnt/boot
+    mount /dev/myVolumeGroup00/home /home
+    mount /dev/myVolumeGroup00/var /var
 
 # create boot
 
-mkfs -t ext2 /dev/sdX2
-mount /dev/sdX2 /mnt/boot
+    mkfs -t ext2 /dev/sdX2
+    mount /dev/sdX2 /mnt/boot
 
 # contiune with normal install
-pacstrap /mnt grub-bios base base-devel
-genfstab -p -U /mnt > /mnt/etc/fstab
+
+    pacstrap /mnt grub-bios base base-devel
+    genfstab -p -U /mnt > /mnt/etc/fstab
+
 ...
 * adapt "mkinitcpio.conf" and add "keymap encrypt lvm2" before "filesystems" and "shutdown" after
 * add 'ext4' to MODULES section
@@ -55,7 +57,7 @@ genfstab -p -U /mnt > /mnt/etc/fstab
 
 # enable trim suppot if you use an ssd
 
-cryptdevice=/dev/mapper/root:root:allow-discards
+    cryptdevice=/dev/mapper/root:root:allow-discards
 
 # Links
 
