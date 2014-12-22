@@ -35,25 +35,25 @@ w  # write table to disk and exit
 # partition lvm
 
 * pvcreate [--dataalignment 1m] /dev/mapper/luks-name
-* vgcreate myVolumeGroup00 /dev/mapper/luks-name
-* lvcreate -L 20G myVolumeGroup00 -n root
-* lvcreate -L 10G myVolumeGroup00 -n var
-* lvcreate -L x0G myVolumeGroup00 -n home
+* vgcreate hostname-vg00 /dev/mapper/luks-name
+* lvcreate -L 20G hostname-vg00 -n root
+* lvcreate -L 10G hostname-vg00 -n var
+* lvcreate -L x0G hostname-vg00 -n home
 * optional
-    * lvcreate -C y -L xG myVolumeGroup00 -n swap
-    * lvcreate -L x0G myVolumeGroup00 -n media
-    * lvcreate -l +100%FREE myVolumeGroup00 -n rest #fills up the rest
+    * lvcreate -C y -L xG hostname-vg00 -n swap
+    * lvcreate -L x0G hostname-vg00 -n media
+    * lvcreate -l +100%FREE hostname-vg00 -n rest #fills up the rest
 * lvdisplay
-* mkfs.ext4 /dev/mapper/myVolumeGroup00-root
+* mkfs.ext4 /dev/mapper/hostname-vg00-root
 * optional
-    * mkswap /dev/mapper/myVolumeGroup00-swap
+    * mkswap /dev/mapper/hostname-vg00-swap
 ```
-    mount /dev/myVolumeGroup00/root /mnt
+    mount /dev/hostname-vg00/root /mnt
     mkdir /mnt/var
     mkdir /mnt/home
     mkdir /mnt/boot
-    mount /dev/myVolumeGroup00/home /home
-    mount /dev/myVolumeGroup00/var /var
+    mount /dev/hostname-vg00/home /home
+    mount /dev/hostname-vg00/var /var
 ```
 
 # create boot
@@ -76,7 +76,7 @@ w  # write table to disk and exit
 ```
     lsblk -f
     blkid (the uuid of the device that contains the luks/lvm, like sdX3)
-    GRUB_CMDLINE_LINUX_DEFAULT="cryptdevice=/dev/disk/by-uuid/123:myVolumeGroup00"
+    GRUB_CMDLINE_LINUX_DEFAULT="cryptdevice=/dev/disk/by-uuid/123:hostname-vg00"
     #GRUB_DISABLE_SUBMENU=y
     [ * update-grub ]
     grub-mkconfig -o /boot/grub/grub.cfg
