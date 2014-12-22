@@ -2,6 +2,24 @@
 
 * pacman -S lvm2 gdisk
 * gdisk/cfdisk /dev/sdX
+* if you need an [hybrid gpt/mbr](https://wiki.archlinux.org/index.php/GPT#gdisk_basic_.28with_hybrid_MBR.29)
+
+```
+# gdisk /dev/sdX
+o  # create new empty GUID partition table
+n  # partition 1 [enter], from beginning [enter], to 100GiB [+100GiB], linux fs type [enter]
+n  # partition 2 [enter], from beginning [enter], to 108GiB [+8GiB],   linux swap    [8200]
+n  # partition 3 [enter], from beginning [enter],           [+1MiB],   linux fs type [enter]
+r  # recovery/transformation menu
+h  # make hybrid mbr
+3  # add partition 3 to hybrid mbr
+Place EFI GPT (0xEE) partition first in MBR (good for GRUB)? (Y/N): N
+Enter an MBR hex code (default 83): [enter]
+Set the bootable flag? (Y/N): Y
+Unused partition space(s) found. Use one to protect more partitions? (Y/N): N
+w  # write table to disk and exit
+```
+
 * create new GPT
 * create new partition 1 size 4 mb type ef02
 * create new partition 2 size 400 mb type 8300
@@ -49,8 +67,7 @@
     pacstrap /mnt grub-bios base base-devel
     genfstab -p -U /mnt > /mnt/etc/fstab
 ```
-
-...
+* [configure base system](https://wiki.archlinux.org/index.php/Installation_guide#Configure_the_system)
 * adapt "mkinitcpio.conf" and add "keymap encrypt lvm2" before "filesystems" and "shutdown" after
 * add 'ext4' to MODULES section
 * grub-install --target=i386-pc --recheck --debug /dev/sda
@@ -58,7 +75,7 @@
 
 ```
     lsblk -f
-    blkid
+    blkid (the uuid of the device that contains the luks/lvm, like sdX3)
     GRUB_CMDLINE_LINUX_DEFAULT="cryptdevice=/dev/disk/by-uuid/123:myVolumeGroup00"
     #GRUB_DISABLE_SUBMENU=y
     [ * update-grub ]
