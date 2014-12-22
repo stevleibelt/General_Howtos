@@ -5,19 +5,19 @@
 * if you need an [hybrid gpt/mbr](https://wiki.archlinux.org/index.php/GPT#gdisk_basic_.28with_hybrid_MBR.29)
 
 ```
-# gdisk /dev/sdX
-o  # create new empty GUID partition table
-n  # partition 1 [enter], from beginning [enter], to 100GiB [+100GiB], linux fs type [enter]
-n  # partition 2 [enter], from beginning [enter], to 108GiB [+8GiB],   linux swap    [8200]
-n  # partition 3 [enter], from beginning [enter],           [+1MiB],   linux fs type [enter]
-r  # recovery/transformation menu
-h  # make hybrid mbr
-3  # add partition 3 to hybrid mbr
-Place EFI GPT (0xEE) partition first in MBR (good for GRUB)? (Y/N): N
-Enter an MBR hex code (default 83): [enter]
-Set the bootable flag? (Y/N): Y
-Unused partition space(s) found. Use one to protect more partitions? (Y/N): N
-w  # write table to disk and exit
+    # gdisk /dev/sdX
+    o  # create new empty GUID partition table
+    n  # partition 1 [enter], from beginning [enter], to 100GiB [+100GiB], linux fs type [enter]
+    n  # partition 2 [enter], from beginning [enter], to 108GiB [+8GiB],   linux swap    [8200]
+    n  # partition 3 [enter], from beginning [enter],           [+1MiB],   linux fs type [enter]
+    r  # recovery/transformation menu
+    h  # make hybrid mbr
+    3  # add partition 3 to hybrid mbr
+    Place EFI GPT (0xEE) partition first in MBR (good for GRUB)? (Y/N): N
+    Enter an MBR hex code (default 83): [enter]
+    Set the bootable flag? (Y/N): Y
+    Unused partition space(s) found. Use one to protect more partitions? (Y/N): N
+    w  # write table to disk and exit
 ```
 
 * create new GPT
