@@ -1,8 +1,12 @@
 # reload module
 
-modprobe -r <modulename>
+    ```
+    modprobe -r <modulename>
+    ```
 
 # list modules
 
-lsmod
-less /proc/modules
+    ```
+    lsmod
+    less /proc/modules
+    ```
