@@ -1,9 +1,12 @@
 # examples
 
-* see "/etc/bash_completion.d"
+* see:
+    *  "/etc/bash_completion.d"
+    * "/usr/share/bash-completion"
 
 # links
 
+* http://bash-completion.alioth.debian.org/
 * http://www.caliban.org/bash/ 
 * http://www.thegeekstuff.com/2013/12/bash-completion-complete/
 * http://buddylindsey.com/quick-and-dirty-write-your-own-bash-autocomplete/
