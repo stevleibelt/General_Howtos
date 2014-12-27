@@ -4,6 +4,10 @@
     *  "/etc/bash_completion.d"
     * "/usr/share/bash-completion"
 
+# how to add own completion
+
+* put them in "~/.bash_completion"
+
 # links
 
 * http://bash-completion.alioth.debian.org/
