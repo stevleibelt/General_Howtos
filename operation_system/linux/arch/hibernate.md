@@ -19,3 +19,8 @@
 ## tryout
 
 * systemctl hibernate
+
+# links
+
+* https://wiki.archlinux.org/index.php/Power_management#Power_management_with_systemd
+* https://wiki.archlinux.org/index.php/Suspend_and_hibernate#systemd
