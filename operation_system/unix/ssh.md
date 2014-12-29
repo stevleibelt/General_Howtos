@@ -28,11 +28,11 @@ or
 
 # allow only following users to log in
 
-    AllowUsers myUserOne[,myUserTwo]
+    AllowUsers myUserOne[ myUserTwo]
 
 # allow only following groups to log in
 
-    AllowGroups myGroupOne[,myGroupTwo]
+    AllowGroups myGroupOne[ myGroupTwo]
 
 # generate key
 
