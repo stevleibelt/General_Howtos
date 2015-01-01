@@ -33,6 +33,14 @@
 	SigLevel = Never
 	Server = http://repo.archlinux.fr/$arch
 
+# error
+
+## FAILED (unknown public key <key>)
+
+    ```
+    pgp --recv-keys <key>
+    ```
+
 ## links
 
 http://archlinux.fr/man/yaourt.8.html
