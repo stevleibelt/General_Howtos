@@ -1,57 +1,83 @@
 # print all lines that are not matching
 
+    ´´´
     grep -v
+    ´´´
 
 # print linenumbers
 
+    ´´´
     grep -n
+    ´´´
 
 # print only filenames
 
+    ´´´
     grep -l
+    ´´´
 
 # print count of matching lines
 
+    ´´´
     grep -c
+    ´´´
 
 # grep caseinsensitive
 
+    ´´´
     grep -i
+    ´´´
 
 # search recursively
 
+    ´´´
     grep -r 'pattern' *
+    ´´´
 
 # pattern has a leading "-"
 
+    ´´´
     grep -e '-pattern-' *
+    ´´´
 
 # search for a whole word, not a part
 
+    ´´´
     grep -w 'word' *
+    ´´´
 
 # search for words starting with 
 
+    ´´´
     grep  '\<hello' *
+    ´´´
 
 # search for words ending with 
 
+    ´´´
     grep  'hello\>' *
+    ´´´
 
 # do an or
 
+    ´´´
     # find lines that contain 'paul' or 'frank'
     grep 'paul|frank' *
+    ´´´
 
 # do an and
 
+    ´´´
     # find lines that contain 'paul' and 'frank'
     grep 'paul' * | grep 'frank'
+    ´´´
 
 # include
 
+    ´´´
     # search "foo" in files named "bar.foo"
     grep -r 'foo' --include="bar.foo" *
+    ´´´
 
 # character classes
 
@@ -70,25 +96,35 @@
 # http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/
 # or
 
+    ´´´
     grep 'pattern1\|pattern2'
+    ´´´
 
 # and
 #  there is no real and so we have to use grep in extended mode
 # instead of grep -e you can also use egrep
 
+    ´´´
     grep -e 'pattern1.*pattern2'
+    ´´´
 
 # output <number of> lines before match
 
+    ´´´
     grep -B<number> 'pattern'
+    ´´´
 
 # output <number of> lines after match
 
+    ´´´
     grep -A<number> 'pattern'
+    ´´´
 
 # output <number of> lines around match
 
+    ´´´
     grep -C<number> 'pattern'
+    ´´´
 
 # links
 
