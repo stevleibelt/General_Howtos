@@ -109,8 +109,8 @@ O #"open" a new line above current cursor
 "A-"Z #yanked text append to the current content of register
 " #default register
 "+ #system default register
-"* #select/drop register
-"_ #/dev/null
+"\* #select/drop register
+"\_ #/dev/null
 
 # marking
 
@@ -131,6 +131,7 @@ ctrl+x #counts up number below current cursor
 :browse set #shows all setable options
 
 # advanced help
+
 * create and edit your .vimrc file (in your home directory).
 * combine command with movement commands
     * dG #delete content from current cursor to the end of the file
