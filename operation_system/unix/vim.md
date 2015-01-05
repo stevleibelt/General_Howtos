@@ -150,3 +150,14 @@ ctrl+x #counts up number below current cursor
 
 ctrl+t #shift to the left
 ctrl+d #shift to the right
+
+# plugins
+
+## vundle
+
+    ```
+    mkdir -p .vim/bundle/Vundle.vim
+    cd .vim/bundle/Vundle.vim
+    git clone https://github.com/gmarik/Vundle.vim.git .
+    vim +PluginInstall +qall
+    ```
