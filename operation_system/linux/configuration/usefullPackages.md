@@ -6,8 +6,9 @@
 * ntop
 * iotop
 * iftop
-* nmon
 * lsof
+* ncdu
+* nmon
 * net-tools
 * screen
 * strace
@@ -21,7 +22,6 @@
 * cppunit
 * gdb
 * geany
-* gvim
 * ninja-ide
 * qtcreator
 * qt5-doc
