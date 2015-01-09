@@ -52,8 +52,16 @@
 
     usermod -U <username>
 
+# get user id
+
+    # all informations
+    id <username>
+    # only user id
+    id -u <username>
+
 # links
 
 * https://wiki.archlinux.org/index.php/Users_and_Groups#User_management
 * http://www.cyberciti.biz/open-source/command-line-hacks/linux-run-command-as-different-user/
 * http://www.cyberciti.biz/faq/howto-change-linux-unix-freebsd-login-shell/
+* http://www.computerhope.com/unix/uid.htm
