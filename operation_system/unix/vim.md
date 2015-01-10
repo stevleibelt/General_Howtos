@@ -71,6 +71,49 @@ ta #moves "to" "a"
 fa #"findes" "a"
 :g/pattern/ #show every line matching the regexp
 
+# search and replace
+
+## all occurrences of <search> with <replace> in file
+
+    #%s -   search in all lines
+    #/g -   replace all in current line
+    :%s/<search>/<replace>/g
+
+## all occurences of <search> with <replace> in current line (case insensitive)
+
+    #/i -   search <search> in case insensitive mode
+    :s/<search>/<replace>/gi
+
+## all occurences of <search> with <replace> in line 13 up to 23
+
+    :13,23s/<search>/<replace>/g
+
+## all occurences of <search> with <replace> by visual selected line limit
+
+    :'<,'>s/<search>/<replace>/g
+
+## all occurences of <search> with <replace> for the next 7 lines
+
+    :s/<search>/<replace>/g 7
+
+## all occurences of whole world of <search> with <replace>
+
+    #disables partial matches
+    :s/\<<search>\>/replace
+
+## replace multiple <search> terms with <replace>
+
+    #replaces "foo" and "bar" with "foobar"
+    :s/\(foo|bar\)/foobar/g
+
+## interactive replacement of <search> with <replace>
+
+    #y  -   replace current and goes to next
+    #n  -   will not replace current and goes to next
+    #a  -   replace all highlighted words
+    #l  -   replace current and terminate
+    :%s/<search>/<replace>/gc
+
 # help
 
 :help / #shows help for "/"
