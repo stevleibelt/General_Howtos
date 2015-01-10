@@ -13,6 +13,7 @@
 # add groups
 
     usermod -a -G myGroup[,myOtherGroup] User
+    #or
     gpasswd -a myUser myGroup
 
 # remove group
