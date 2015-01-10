@@ -9,3 +9,9 @@
 # set stickbit for ug
 
     chmod -R ug+s <folder>
+
+# links
+
+* https://www.samba.org/samba/docs/man/manpages-3/smb.conf.5.html
+* https://wiki.archlinux.org/index.php/Samba
+* https://help.ubuntu.com/community/Samba/SambaServerGuide?highlight=%28%5CbCategoryNetworking%5Cb%29
