@@ -10,6 +10,19 @@
 # create data set
 
     zfs create <pool name>/<data set name>
+ 
+# delete data set
+
+    zfs destroy <pool name>/<data set name>
+
+## options
+
+* -r    -   recursively all children
+* -R    -   recursively all dependents (also cloned file system outdise the hierachy)
+* -f    -   force an unmount 
+* -n    -   dry run
+* -p    -   print machine parseable verbose information
+* -v    -   verbose information
 
 # set mountpoint (if needed)
 
