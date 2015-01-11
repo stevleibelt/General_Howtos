@@ -19,9 +19,18 @@
     # use -i to create an incremental stream from the first snapshot
     zfs snapshot -i <pool name>@<first snapshot name> <pool name>@<second snapshot name>
 
-# remove
+# delete
 
     zfs destroy <pool name>@<snapshot name>
+
+## options
+
+* -d    -   defer snapshopt deletion
+* -r    -   recursively all children
+* -R    -   recursively all dependents (also cloned file system outdise the hierachy)
+* -f    -   force an unmount 
+* -n    -   dry run
+* -p    -   print machine parseable verbose information
 
 # list
 
