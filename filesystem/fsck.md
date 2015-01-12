@@ -17,3 +17,5 @@
 # links
 
 * https://wiki.archlinux.org/index.php/fsck
+* http://www.thegeekstuff.com/2012/08/fsck-command-examples/
+* http://www.cyberciti.biz/faq/linux-force-fsck-on-the-next-reboot-or-boot-sequence/
