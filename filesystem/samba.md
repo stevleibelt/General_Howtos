@@ -14,11 +14,21 @@
 
 ## options
 
-* path = <path>         -   path for the service
-* read only = no        -   
 * browseable = no       -   service is seen or not
-* hide dot files = no   -   hide dot files
+* create mask = 0765    -   file create mask
+* directory mask = 0765 -   directory create mask
 * follow symlinks = no  -   follow symbolic links
+* force group = <name>  -   create files or directories with group <name>
+* force user = <name>   -   create files or directories with user <name>
+* guest ok = no         -   grant guest account access
+* hide dot files = no   -   hide dot files
+* include <path>        -   include configuration file
+* path = <path>         -   path for the service
+* printable             -   grant spool write access
+* read only = no        -   service is read only (also by guests)
+* valid users = foo,bar -   list of valid users
+* wide links = no       -   allow system wide symbolic links
+* writeable = no        -   service is writeable
 
 ## macros
 
@@ -41,8 +51,28 @@
 * %g    -   primary group of %u
 * %H    -   home directory of %u
 
+# smbclient
+
+    #<server name> can be the host name or the ip address
+    #list available (public) shares
+    smbclient -L <server name>
+
+    #list available user based shares
+    smbclient -L <server name> -U <user name>
+
+    #login to a share
+    smbclient \\\\<server name>\\<share>
+
+# mount share 
+
+    #per session
+    mount –t cifs <server name>:/<share name> <local mount point> –o username=<user name>,workgroup=<work group>
+
+    #/etc/fstab
+
 # links
 
 * https://www.samba.org/samba/docs/man/manpages-3/smb.conf.5.html
+* https://www.samba.org/samba/docs/using_samba/ch08.html
 * https://wiki.archlinux.org/index.php/Samba
 * https://help.ubuntu.com/community/Samba/SambaServerGuide?highlight=%28%5CbCategoryNetworking%5Cb%29
