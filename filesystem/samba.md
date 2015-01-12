@@ -76,3 +76,4 @@
 * https://www.samba.org/samba/docs/using_samba/ch08.html
 * https://wiki.archlinux.org/index.php/Samba
 * https://help.ubuntu.com/community/Samba/SambaServerGuide?highlight=%28%5CbCategoryNetworking%5Cb%29
+* http://www.linuxhomenetworking.com/wiki/index.php/Quick_HOWTO_:_Ch10_:_Windows,_Linux,_and_Samba
