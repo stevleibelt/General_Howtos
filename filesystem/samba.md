@@ -24,7 +24,7 @@
 * hide dot files = no   -   hide dot files
 * include <path>        -   include configuration file
 * path = <path>         -   path for the service
-* printable             -   grant spool write access
+* printable = no        -   grant spool write access
 * read only = no        -   service is read only (also by guests)
 * valid users = foo,bar -   list of valid users
 * wide links = no       -   allow system wide symbolic links
