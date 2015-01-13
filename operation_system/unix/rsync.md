@@ -20,7 +20,7 @@
 
 ## useful options
 
-* -r - reqcursive
+* -r - recursive
 * -u - update (skip files that are newer on the destination)
 * -p - preserve permissions
 * -A - preserve ACL
