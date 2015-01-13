@@ -1,12 +1,20 @@
-# cp /etc/samba/smb.conf.default /etc/samba/smb.conf
+# quick start
+
+* cp /etc/samba/smb.conf.default /etc/samba/smb.conf
+
+## add user
 
     if [smbd -V >= 3.4.0]
-      pdbedit -a -u <user>
+        pdbedit -a -u <user>
     else
-      smbpasswd -a <user>
+        smbpasswd -a <user>
     fi
 
-# set stickbit for ug
+## list users
+
+    pdbedit -L
+
+## set stickbit for ug
 
     chmod -R ug+s <folder>
 
