@@ -25,9 +25,11 @@
 * include <path>        -   include configuration file
 * path = <path>         -   path for the service
 * printable = no        -   grant spool write access
+* read list = foo,bar  -   list of users that have write access
 * read only = no        -   service is read only (also by guests)
 * valid users = foo,bar -   list of valid users
 * wide links = no       -   allow system wide symbolic links
+* write list = foo,bar  -   list of users that have write access
 * writeable = no        -   service is writeable
 
 ## macros
@@ -69,6 +71,13 @@
     mount –t cifs <server name>/<share name> <local mount point> –o username=<user name>,workgroup=<work group>
 
     #/etc/fstab
+
+## options
+
+* gid       -   group id on your client
+* uid       -   user id on your client
+* username  -   username on the server
+* workgroup -   workgroup on the server
 
 # links
 
