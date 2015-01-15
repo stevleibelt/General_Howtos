@@ -103,6 +103,7 @@
 # links
 
 * http://try.github.io/
+* https://git.wiki.kernel.org/
 * https://www.kernel.org/pub/software/scm/git/docs/git-checkout.html
 * http://git-scm.com/book/de
 * http://git-scm.com/book/de/Git-Grundlagen-Tags
