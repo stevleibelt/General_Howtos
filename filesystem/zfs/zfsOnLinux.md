@@ -17,3 +17,19 @@
     dkms add -m zfs -v 0.6.0.90
     dkms install -m spl -v 0.6.0.90
     dkms install -m zfs -v 0.6.0.90
+
+# error handling
+
+## Cannot add dependency job for unit zfs.service
+
+### use zfs.target instead
+
+    #see https://aur.archlinux.org/packages/zfs-git/?comments=all
+    systemctl disable zfs.service
+    systemctl enable zfs.target
+
+### missing hostid
+
+    #see https://bbs.archlinux.org/viewtopic.php?id=170003
+    hostid > /etc/hostid
+    mkinitcpio -p linux
