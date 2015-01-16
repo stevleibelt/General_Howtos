@@ -87,6 +87,17 @@
 * username  -   username on the server
 * workgroup -   workgroup on the server
 
+# errors
+
+##  Unable to open printcap file /etc/printcap for read!
+
+    #add to smb.conf
+    #see: http://cmorse.org/blog/archives/142
+    [global]
+       printcap name = /dev/null
+       load printers = no
+       printing = bsd
+
 # links
 
 * https://www.samba.org/samba/docs/man/manpages-3/smb.conf.5.html
