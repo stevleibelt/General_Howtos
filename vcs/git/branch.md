@@ -1,5 +1,13 @@
 # branch
 
+## prevent tracking upstream branches
+
+    #instead of
+    git pull #what is git fetch + git rebase
+    #do
+    git pull --rebase #what is git fetch + git rebase
+    #http://stackoverflow.com/questions/16666089/whats-the-difference-between-git-merge-and-git-rebase/16666418#16666418
+
 ## list
 
     git branch      #list all local branches
