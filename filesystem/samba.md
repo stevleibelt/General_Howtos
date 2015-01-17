@@ -87,7 +87,7 @@
 * username  -   username on the server
 * workgroup -   workgroup on the server
 
-# errors
+# error handling
 
 ##  Unable to open printcap file /etc/printcap for read!
 
@@ -97,6 +97,15 @@
        printcap name = /dev/null
        load printers = no
        printing = bsd
+
+## Failed to delete pidfile /var/run/smbd.pid.
+
+    #see: https://bugs.archlinux.org/task/36338
+
+## protocol negotiation failed: NT_STATUS_INVALID_NETWORK_RESPONSE
+
+    #see: https://wiki.archlinux.org/index.php/Samba/Troubleshooting#protocol_negotiation_failed:_NT_STATUS_INVALID_NETWORK_RESPONSE
+    comment out your "hosts allow"
 
 # links
 
