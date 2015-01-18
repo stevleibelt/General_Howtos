@@ -22,23 +22,25 @@
 
 ## options
 
-* browseable = no       -   service is seen or not
-* create mask = 0765    -   file create mask
-* directory mask = 0765 -   directory create mask
-* follow symlinks = no  -   follow symbolic links
-* force group = <name>  -   create files or directories with group <name>
-* force user = <name>   -   create files or directories with user <name>
-* guest ok = no         -   grant guest account access
-* hide dot files = no   -   hide dot files
-* include <path>        -   include configuration file
-* path = <path>         -   path for the service
-* printable = no        -   grant spool write access
-* read list = foo,bar  -   list of users that have write access
-* read only = no        -   service is read only (also by guests)
-* valid users = foo,bar -   list of valid users
-* wide links = no       -   allow system wide symbolic links
-* write list = foo,bar  -   list of users that have write access
-* writeable = no        -   service is writeable
+* browseable = no           -   service is seen or not
+* create mask = 0765        -   file create mask
+* directory mask = 0765     -   directory create mask
+* dos charset = <charset>   -   charset for unix machins (dos charset = 850)
+* follow symlinks = no      -   follow symbolic links
+* force group = <name>      -   create files or directories with group <name>
+* force user = <name>       -   create files or directories with user <name>
+* guest ok = no             -   grant guest account access
+* hide dot files = no       -   hide dot files
+* include <path>            -   include configuration file
+* path = <path>             -   path for the service
+* printable = no            -   grant spool write access
+* read list = foo,bar       -   list of users that have write access
+* read only = no            -   service is read only (also by guests)
+* unix charset = <charset>  -   charset for unix machins (unix charset = utf8)
+* valid users = foo,bar     -   list of valid users
+* wide links = no           -   allow system wide symbolic links
+* write list = foo,bar      -   list of users that have write access
+* writeable = no            -   service is writeable
 
 ## macros
 
@@ -83,6 +85,7 @@
 ## options
 
 * gid       -   group id on your client
+* iocharset -   chaset (likeuicharset=utf8)
 * uid       -   user id on your client
 * username  -   username on the server
 * workgroup -   workgroup on the server
