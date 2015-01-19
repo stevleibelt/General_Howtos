@@ -146,6 +146,7 @@
 * http://try.github.io/
 * https://git.wiki.kernel.org/
 * https://www.kernel.org/pub/software/scm/git/docs/git-checkout.html
+* https://www.kernel.org/pub/software/scm/git/docs/everyday.html
 * http://git-scm.com/book/de
 * http://git-scm.com/book/de/Git-Grundlagen-Tags
 * http://nathanhoad.net/how-to-delete-a-remote-git-tag
