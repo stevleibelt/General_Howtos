@@ -20,7 +20,7 @@
 
 ## switch to a local branch
 
-    git checkout -b my_branch
+    git checkout my_branch
 
 ## switch to a remote branch
 
