@@ -57,3 +57,7 @@ tput is usefull to get and set terminal attributes.
     select WORD in 'foo bar foobar' ; do
         $WORD
     done
+
+# links
+
+* http://www.tldp.org/LDP/abs/html/io-redirection.html
