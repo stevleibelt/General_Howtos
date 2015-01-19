@@ -100,6 +100,47 @@
 
     git rebase --interactive HEAD~10    #squash last 10 commits to a big one
 
+# diamond shape in git log history
+
+    Suppose originally there were 3 commits, A,B,C:
+
+    Then developer Dan created commit D, and developer Ed created commit E:
+
+    Obviously, this conflict should be resolved somehow. For this, there are 2 ways:
+
+    MERGE:
+
+    Both commits D and E are still here, but we create merge commit M that inherits changes from both D and E. However, this creates diamond shape, which many people find very confusing.
+
+    REBASE:
+
+    We create commit R, which actual file content is identical to that of merge commit M above. But, we get rid of commit E, like it never existed (denoted by dots - vanishing line). Because of this obliteration, E should be local to developer Ed and should have never been pushed to any other repository. Advantage of rebase is that diamond shape is avoided, and history stays nice straight line - most developers love that!
+
+    The man pages are one almighty “fuck you”. They describe the commands from the perspective of a computer scientist, not a user. Case in point:
+
+        git-push – Update remote refs along with associated objects
+
+    Here’s a description for humans:
+
+        git-push – Upload changes from your local repository into a remote repository
+
+    Update, another example: (thanks cgd)
+
+        git-rebase – Forward-port local commits to the updated upstream head
+
+    Translation:
+
+        git-rebase – Sequentially regenerate a series of commits so they can be 
+    applied directly to the head node
+
+    And then we have
+
+        git-merge - Join two or more development histories together
+
+    which is a good description.
+
+[source](http://stackoverflow.com/questions/16666089/whats-the-difference-between-git-merge-and-git-rebase/16666418#16666418)
+
 # links
 
 * http://try.github.io/
@@ -110,3 +151,4 @@
 * http://nathanhoad.net/how-to-delete-a-remote-git-tag
 * http://data.agaric.com/undo-git-add-remove-files-staged-git-commit
 * https://gist.github.com/iansheridan/870778
+* http://stevebennett.me/2012/02/24/10-things-i-hate-about-git/
