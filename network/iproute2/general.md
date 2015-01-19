@@ -2,12 +2,12 @@
 
 | purpose | old tools | iproute2 |
 | ------- | --------- | -------- |
-| address/link configuration | ifconfig | ip addr, ip link |
-| routing tables | route | ip route |
-| neighbors | arp | ip neigh |
-| VLAN | vconfig | ip link |
-| tunnels | iptunnel | ip tunnel |
-| multicast | ipmaddr | ip maddr |
+| address/link configuration | ifconfig | [ip](ip.md) addr, [ip](ip.md) link |
+| routing tables | route | [ip](ip.md) route |
+| neighbors | arp | [ip](ip.md) neigh |
+| VLAN | vconfig | [ip](ip.md) link |
+| tunnels | iptunnel | [ip](ip.md) tunnel |
+| multicast | ipmaddr | [ip](ip.md) maddr |
 | statistics | netstat | ss |
 
 # links
