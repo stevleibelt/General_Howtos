@@ -6,7 +6,7 @@ use command 'file' to determine the file format
 
 ## create foo1 foo2 foo3 foo4
 
-touch foo{1,2,3,4}
+    touch foo{1,2,3,4}
 
 # rename
 
@@ -19,8 +19,10 @@ touch foo{1,2,3,4}
 
 ### parameters
 
-* -v - verbose
-* -n - testrune (not available everywhere)
+* -b        -   brief mode
+* -i        -   charset (--mime)
+* -n        -   testrune (not available everywhere)
+* -v        -   verbose
 
 # set sticky bit
 
