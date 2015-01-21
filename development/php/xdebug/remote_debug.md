@@ -1,3 +1,8 @@
+# start debugger
+
+    export XDEBUG_CONFIG="idekey=<session_name>"
+    php my_script.php
+
 # enable
 
     echo 'xdebug.remote_enable=ON\nxdebug.remote_host="<the ip address of the client>"' >> /etc/php/conf.d/xdebug.ini

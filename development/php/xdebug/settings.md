@@ -36,3 +36,4 @@
 # links
 
 * http://www.xdebug.org/docs/all_settings
+* http://gggeek.altervista.org/2007/11/26/the-completely-unofficial-xdebugini/
