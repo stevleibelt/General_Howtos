@@ -1,7 +1,24 @@
+-- database dumps
 -- see: http://dev.mysql.com/doc/refman/5.1/en/mysqldump.html
 
-mysqldump -u username -p database_name > dumpFile.sql
+    mysqldump -u username -p database_name > dumpFile.sql
 
 -- with gzipg
 
-mysqldump -u username -p database_name | gzip > dumpFile.sql.gz
+    mysqldump -u username -p database_name | gzip > dumpFile.sql.gz
+
+-- queries
+-- see:
+--  http://www.tech-recipes.com/rx/1475/save-mysql-query-results-into-a-text-or-csv-file/
+-- dump to text file
+
+    SELECT * FROM `foo`
+    INTO OUTFILE '/path/to/text/file'
+
+-- dump to csv file
+
+    SELECT * FROM `foo`
+    INTO OUTFILE '/path/to/csv/file.csv'
+    FIELDS TERMINATED BY ','
+    ENCLOSED BY '"'
+    LINES TERMINATED BY '\n'
