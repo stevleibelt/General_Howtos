@@ -13,5 +13,6 @@ mysql -u <user name> -p -h <localhost> <database name> < <file name>
 
 -- bypass foreign key chec
 SET foreign_key_checks = 0;
+
 -- you sql code
 SET foreign_key_checks = 1;
