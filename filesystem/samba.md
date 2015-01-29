@@ -82,6 +82,13 @@
 
     #/etc/fstab
 
+## mounting with write permissions
+
+    #get the <user id> from console command "id"
+    #share will be mounted with permissions 755
+    #see: http://microitblog.com/micro-it-blog/2011/04/21/mounting-cifs-shares-through-linux-with-write-permissions
+    mount -t cifs <server name>/<share name> <local mount point> -o username=<user name>,uid=<user id>
+
 ## options
 
 * gid       -   group id on your client
