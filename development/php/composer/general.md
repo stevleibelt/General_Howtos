@@ -1,38 +1,38 @@
 # install only required packages
 
-composer update --no-dev 
+    composer update --no-dev 
 
 # install also development packages
 
-composer update [--dev ]
+    composer update [--dev ]
 
 # update only one package (plus its dependencies)
 
-composer update <vendor>/<product>
+    composer update <vendor>/<product>
 
 # update composer.lock (after adding description/doing unimportant changes to composer.json)
 
-composer update --lock
+    composer update --lock
 
 # update composer.json with composer
 
-composer require "<vendor>/<product>:0.0.1"
+    composer require "<vendor>/<product>:0.0.1"
 
 # create composer.json with composer
 
-composer init
+    composer init
 
 ## without interactive questions
 
-composer init -n
+    composer init -n
 
 ## with dependency
 
-composer init --requre=<vendor>/<product>:0.0.1
+    composer init --requre=<vendor>/<product>:0.0.1
 
 # fork project with composer
 
-composer create-project <vendor>/<product> path 0.0.1
+    composer create-project <vendor>/<product> path 0.0.1
 
 # links
 
