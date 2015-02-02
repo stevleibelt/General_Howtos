@@ -1,5 +1,6 @@
 # administration
 
+* arandr / lxrandr / zarfy
 * dnsutils
 * dstat
 * htop
