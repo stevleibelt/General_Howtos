@@ -6,9 +6,12 @@
 
     composer update [--dev ]
 
-# update only one package (plus its dependencies)
+# update only one package
 
+    # see [composer update](https://getcomposer.org/doc/03-cli.md#update)
     composer update <vendor>/<product>
+    # with dependencies
+    composer update <vendor>/<product> --with-dependencies
 
 # update composer.lock (after adding description/doing unimportant changes to composer.json)
 
