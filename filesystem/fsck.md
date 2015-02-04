@@ -14,6 +14,10 @@
 
     tune2fs -c 20 <drive> #set frequency to 30, 0 means never, 1 means every boot
 
+# way to fix all automatically
+
+    fsck -cfkty <drive> #do a lot of magic
+
 # links
 
 * https://wiki.archlinux.org/index.php/fsck
