@@ -24,7 +24,9 @@
 
 ## switch to a remote branch
 
+    #update remote available branch references/list
     git fetch origin
+    #switch to branch
     git checkout -b my_branch origin/my_branch
 
 ## remove local branch
@@ -33,7 +35,7 @@
 
 ## remove remote branch after local deletion
 
-    git push origin :my_branch
+    git push origin --delete my_branch
 
 ## merge
 
