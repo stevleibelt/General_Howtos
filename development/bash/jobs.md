@@ -1,14 +1,14 @@
 # Start Command In The Forground
 
-my_command 
+    my_command 
 
 # Start Command In The Background
 
-my_command &
+    my_command &
 
 # List Jobs
 
-jobs
+    jobs
 
 # Links
 
