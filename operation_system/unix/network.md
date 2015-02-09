@@ -56,7 +56,7 @@ port 25, try "telnet hostname 25"
 available commands:
 - HELO
 - USER foo
-- PASS ****
+- PASS \*\*\*\*
 - LIST
 - RETR $numberOfListedMail
 - DELE $numberOfListedMail
@@ -64,6 +64,14 @@ available commands:
 - RCPT TO: foo@bar.de
 - QUIT
 - ...
+
+### 503 5.5.1 Error: authentication not enabled
+
+#### links
+
+* http://data.agaric.com/postfix-and-authenticated-smtp
+* https://workaround.org/ispmail/lenny/authenticated-smtp
+* http://htyp.org/503_5.5.1_Error:_authentication_not_enabled
 
 ## http
 
