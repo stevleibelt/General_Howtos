@@ -26,6 +26,7 @@
 * ninja-ide
 * qtcreator
 * qt5-doc
+* regexxer
 * valgrind
 
 # game
