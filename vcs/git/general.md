@@ -32,6 +32,14 @@
     git commit --amende         #edit message for the most recent commit
     git commit --amende <file>  #redo previous commit including changes from files ...
 
+## undo commit
+
+    git reset --soft HEAD~1
+    #
+    git commit --amend
+    #http://stackoverflow.com/questions/5203535/practical-uses-of-git-reset-soft
+    #http://git-scm.com/2011/07/11/reset.html
+
 # diff
 
     git diff --staged           #show diff using staged instead of commited
