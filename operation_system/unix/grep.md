@@ -57,6 +57,34 @@
     ´´´
     grep  'hello\>' *
     ´´´
+# and
+
+    ```
+    #with -E
+    grep 'foo.*bar'
+    #with |
+    grep -E 'foo' | grep -E 'bar'
+    ```
+
+# or
+
+    ```
+    #with \|
+    grep 'foo\|bar'
+    #with -E
+    grep -E 'foo|bar'
+    #with -e
+    grep -e 'foo' -e 'bar'
+    #with egrep
+    egrep 'foo|bar'
+    ```
+
+# not
+
+    ```
+    #with -v
+    grep -v 'foo'
+    ```
 
 # do an or
 
@@ -130,7 +158,9 @@
 
 * http://www.commandlinefu.com/commands/view/2998/grep-certain-file-types-recursively
 * http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/
+* http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/
 * http://www.gnu.org/software/grep/manual/html_node/Usage.html#Usage
 * http://www.gnu.org/software/grep/manual/html_node/Character-Classes-and-Bracket-Expressions.html#Character-Classes-and-Bracket-Expressions
 * https://www.gnu.org/software/findutils/manual/html_node/find_html/grep-regular-expression-syntax.html
 * http://www.robelle.com/smugbook/regexpr.html
+* http://www.shellhacks.com/en/Using-BASH-Grep-OR-Grep-AND-Grep-NOT-Operators
