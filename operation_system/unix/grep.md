@@ -154,6 +154,14 @@
     grep -C<number> 'pattern'
     ´´´
 
+# suppress errors
+
+    ´´´
+    grep -s <pattern>
+    #or
+    grep <pattern> 2>/dev/null
+    ´´´
+
 # links
 
 * http://www.commandlinefu.com/commands/view/2998/grep-certain-file-types-recursively
