@@ -8,3 +8,7 @@
     RewriteCond %{SERVER_PORT} !443
     RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,L]
     </IfModule>
+
+# links
+
+* https://github.com/phanan/htaccess
