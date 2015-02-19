@@ -204,3 +204,7 @@ ctrl+d #shift to the right
     git clone https://github.com/gmarik/Vundle.vim.git .
     vim +PluginInstall +qall
     ```
+
+# links
+
+* http://www.swaroopch.com/notes/vim/
