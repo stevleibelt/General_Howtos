@@ -4,7 +4,7 @@
     grep -v
     ´´´
 
-# print linenumbers
+# print line numbers
 
     ´´´
     grep -n
