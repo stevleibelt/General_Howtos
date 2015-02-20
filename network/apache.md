@@ -2,6 +2,16 @@
 
 First rule of all, enable mod_rewrite in your configuration.
 
+## .htpasswd
+
+    # add to .htaccess
+    # @see: http://weavervsworld.com/docs/other/passprotect.html
+    #       http://stackoverflow.com/questions/6111627/how-to-use-a-relative-path-with-authuserfile-in-htaccess
+    AuthUserFile <absolut path to >/.htpasswd
+    AuthType Basic
+    AuthName "<description>"
+    Require valid-user
+
 ## redirect http content to https
 
     RewriteEngine On
