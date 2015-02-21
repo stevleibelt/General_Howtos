@@ -10,6 +10,21 @@ dmidecode -t system | grep Version
 /proc/acpi/ibm
 ```
 
+# disable (keyboard / pc speaker) beep
+
+```
+####
+# @see
+# https://wiki.archlinux.org/index.php/Disable_PC_Speaker_Beep
+####
+
+#per session
+rmmod pcspkr
+
+#general
+echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
+´´´
+
 # links
 
 * http://www.thinkwiki.org/wiki/How_to_configure_the_TrackPoint
