@@ -36,6 +36,8 @@ or
 
 # generate key
 
+    cd ~
+    cd .ssh/
     ssh-keygen -t rsa -b 4096
 
 # copy key to destination
