@@ -36,9 +36,15 @@
 ## remove remote branch after local deletion
 
     git push origin --delete my_branch
+    #or
+    git push origin :my_branch
 
 ## merge
 
     git checkout master
     git merge my_branch
 
+# links
+
+* http://www.git-scm.com/book/en/v2/Git-Branching-Remote-Branches
+* http://stackoverflow.com/questions/17546171/how-to-delete-a-remote-branch-using-git
