@@ -10,9 +10,15 @@
 
 ## list
 
-    git branch      #list all local branches
-    git branch -r   #list all remote branches
-    git branch -a   #list all local and remote branches
+    git branch                      #list all local branches
+    git branch -r                   #list all remote branches - cached information
+    git remote show origin          #list all remote branches - realtime information
+    git ls-remote --heads origin    #list all remote branches - realtime information
+    git branch -a                   #list all local and remote branches - cached information
+
+## update remote branches
+
+    git remote prune origin
 
 ## create new local branch
 
