@@ -3,7 +3,7 @@
 ## parition disk
 
 * gdisk /dev/sdX
-* ```
+```
 # create new emtpy GUID parition table
 o
 Y
