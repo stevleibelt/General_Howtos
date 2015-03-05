@@ -48,7 +48,7 @@ modprobe zfs
 * cryptsetup --cipher aes-xts-plain64 --key-size 512 --hash sha512 --iter-time 5000 --use-random --verify-passphrase luksFormat /dev/sdX3 --debug
 * cryptsetup open --type luks /dev/sdX3 <luks pool name>
 * find uuid of the crypto disk
-* ```
+```
 # fetch dm-X id
 ls -halt /dev/sdX3
 # find uuid by seeing softlink endpoint
@@ -64,7 +64,10 @@ zpool create <pool name> /dev/mapper/<luks pool name>
 ```
 
 ## Continue with "Create necessary filesystems" from the official [arch linux wiki](https://wiki.archlinux.org/index.php/Installing_Arch_Linux_on_ZFS#Create_necessary_filesystems)
-* when it comes to "Finally, re-import the pool", simple do ```zpool import -R /mnt <pool name>```
+* when it comes to "Finally, re-import the pool", simple do
+```
+zpool import -R /mnt <pool name>
+```
 * when it comes to the point of adapting the grub.cfg, the "linux" section should look like:
 ```
 linux   /vmlinuz-linux zfs=<zpool name> rw cryptdevice=/dev/disk/by-uuid/<uuid of raw device/parition>:<decrypted device name/identifier> quit
