@@ -38,8 +38,6 @@ mkfs.ext4 /dev/sdX2
 ## load needed modules
 
 ```
-modprobe dm_mod
-modprobe dm-crypt
 modprobe zfs
 ```
 
@@ -55,6 +53,8 @@ ls -halt /dev/sdX3
 ls -halt /dev/disk/by-uuid/
 # verifiy
 lsblk -fs
+# or
+blkid
 ```
 
 ## create pool
@@ -85,6 +85,11 @@ zfs unmount -a
 zfs export
 zfs import -R /mnt <pool name>
 ```
+
+## grub-mkconfig -o /boot/grub/grub.cfg - failed to get canonical path of `/dev/<luks pool name>`
+
+* ln -s /dev/mapper/<luks pool name> /dev/<luks pool name>
+* try grub-mkconfig again
 
 # links
 
