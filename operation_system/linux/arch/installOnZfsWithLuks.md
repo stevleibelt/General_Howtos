@@ -68,6 +68,7 @@ zpool create <pool name> /dev/mapper/<luks pool name>
 ```
 zpool import -R /mnt <pool name>
 ```
+* i would not try to put "var" and more to a separate zfs since this leads to some errors while booting up right now (2015-03-03)
 * when it comes to the point of adapting the grub.cfg, the "linux" section should look like:
 ```
 linux   /vmlinuz-linux zfs=<zpool name> rw cryptdevice=/dev/disk/by-uuid/<uuid of raw device/parition>:<decrypted device name/identifier> quit
@@ -90,6 +91,14 @@ zfs import -R /mnt <pool name>
 
 * ln -s /dev/mapper/\<luks pool name\> /dev/\<luks pool name\>
 * try grub-mkconfig again
+
+## connecting dirmngr at \`/root/.gnupg/S.dirmngr/\` failed: IPC connect call failed
+
+* create directory
+```
+mkdir -p /root/.gnupg/S.dirmngr
+```
+* retry
 
 # links
 
