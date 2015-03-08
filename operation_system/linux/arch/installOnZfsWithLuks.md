@@ -44,7 +44,7 @@ modprobe zfs
 ## setup cryptodisk
 
 * cryptsetup --cipher aes-xts-plain64 --key-size 512 --hash sha512 --iter-time 5000 --use-random --verify-passphrase luksFormat /dev/sdX3 --debug
-* cryptsetup open --type luks /dev/sdX3 <luks pool name>
+* cryptsetup open --type luks /dev/sdX3 \<luks pool name\>
 * find uuid of the crypto disk
 ```
 # fetch dm-X id
@@ -75,7 +75,7 @@ linux   /vmlinuz-linux zfs=<zpool name> rw cryptdevice=/dev/disk/by-uuid/<uuid o
 
 # help
 
-## pacstrap -i /mnt <packages> /mnt not mounted
+## pacstrap -i /mnt \<packages\> /mnt not mounted
 
 * check if your have set the right mount point
 
@@ -86,9 +86,9 @@ zfs export
 zfs import -R /mnt <pool name>
 ```
 
-## grub-mkconfig -o /boot/grub/grub.cfg - failed to get canonical path of `/dev/<luks pool name>`
+## grub-mkconfig -o /boot/grub/grub.cfg - failed to get canonical path of \`/dev/\<luks pool name\>\`
 
-* ln -s /dev/mapper/<luks pool name> /dev/<luks pool name>
+* ln -s /dev/mapper/\<luks pool name\> /dev/\<luks pool name\>
 * try grub-mkconfig again
 
 # links
