@@ -17,6 +17,10 @@
     #display pressure and movement in realtime
     evtest /dev/input/eventX
 
+## record events
+
+    evemu-record
+
 ## xinput
 
     #display available devices
