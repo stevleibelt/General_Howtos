@@ -44,7 +44,7 @@ modprobe zfs
 ## setup cryptodisk
 
 * cryptsetup --cipher aes-xts-plain64 --key-size 512 --hash sha512 --iter-time 5000 --use-random --verify-passphrase luksFormat /dev/sdX3 --debug
-* cryptsetup luksOpen luks /dev/sdX3 <luks pool name>
+* cryptsetup luksOpen luks /dev/sdX3 \<luks pool name\>
 * find uuid of the crypto disk
 ```
 # fetch dm-X id
@@ -68,6 +68,7 @@ zpool create <pool name> /dev/mapper/<luks pool name>
 ```
 zpool import -R /mnt <pool name>
 ```
+* i would not try to put "var" and more to a separate zfs since this leads to some errors while booting up right now (2015-03-03)
 * when it comes to the point of adapting the grub.cfg, the "linux" section should look like:
 ```
 linux   /vmlinuz-linux zfs=<zpool name> rw cryptdevice=/dev/disk/by-uuid/<uuid of raw device/parition>:<decrypted device name/identifier> quit
@@ -75,7 +76,7 @@ linux   /vmlinuz-linux zfs=<zpool name> rw cryptdevice=/dev/disk/by-uuid/<uuid o
 
 # help
 
-## pacstrap -i /mnt <packages> /mnt not mounted
+## pacstrap -i /mnt \<packages\> /mnt not mounted
 
 * check if your have set the right mount point
 
@@ -86,10 +87,18 @@ zfs export
 zfs import -R /mnt <pool name>
 ```
 
-## grub-mkconfig -o /boot/grub/grub.cfg - failed to get canonical path of `/dev/<luks pool name>`
+## grub-mkconfig -o /boot/grub/grub.cfg - failed to get canonical path of \`/dev/\<luks pool name\>\`
 
-* ln -s /dev/mapper/<luks pool name> /dev/<luks pool name>
+* ln -s /dev/mapper/\<luks pool name\> /dev/\<luks pool name\>
 * try grub-mkconfig again
+
+## connecting dirmngr at \`/root/.gnupg/S.dirmngr/\` failed: IPC connect call failed
+
+* create directory
+```
+mkdir -p /root/.gnupg/S.dirmngr
+```
+* retry
 
 # links
 
