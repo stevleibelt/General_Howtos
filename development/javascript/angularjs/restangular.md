@@ -33,6 +33,7 @@
  * 
  * @author stev leibelt <artodeto@bazzline.net>
  * @since 2015-03-12
+ * @see 2015/01/08/restangular-example.html
  */
 
 'use strict';
@@ -62,3 +63,34 @@
        ]);
 })(window, angular);
 ```
+
+* updating [self referencing resources](https://github.com/mgonto/restangular#using-self-reference-resources)
+
+```
+/**
+ * @author stev leibelt <artodeto@bazzline.net>
+ * @since 2015-03-12
+ */
+
+'use strict';
+
+(function (window, angular) {
+    angular.module('bazzline.angularDevelopment')
+        //some more configuration on your side
+        //...
+        //update self referencing link
+        //  now we are able to call <my object>.put() :-D
+        .config(['RestangularProvider',
+            function (RestangularProvider) {
+                RestangularProvider.setRestangularFields({
+                    selfLink: "self.href"
+                });
+            }
+       ]);
+})(window, angular);
+
+```
+
+# links
+
+* https://github.com/mgonto/restangular#starter-guide
