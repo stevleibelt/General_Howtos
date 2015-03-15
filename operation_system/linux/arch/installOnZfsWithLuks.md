@@ -44,7 +44,7 @@ modprobe zfs
 ## setup cryptodisk
 
 * cryptsetup --cipher aes-xts-plain64 --key-size 512 --hash sha512 --iter-time 5000 --use-random --verify-passphrase luksFormat /dev/sdX3 --debug
-* cryptsetup luksOpen luks /dev/sdX3 \<luks pool name\>
+* cryptsetup luksOpen /dev/sdX3 \<luks pool name\>
 * find uuid of the crypto disk
 ```
 # fetch dm-X id
