@@ -5,3 +5,6 @@
 # links
 
 * http://lukas.zapletalovi.com/2013/07/hidden-gems-of-xterm.html
+* http://www.astrobetter.com/xterm-color/
+* http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/
+* http://misc.flogisoft.com/bash/tip_colors_and_formatting
