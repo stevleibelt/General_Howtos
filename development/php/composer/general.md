@@ -4,7 +4,7 @@
 
 # install also development packages
 
-    composer update [--dev ]
+    composer update
 
 # update only one package
 
