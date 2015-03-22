@@ -24,9 +24,13 @@
 
     git checkout -b my_branch
 
+## create new remote branch from existing local branch
+
+    git push origin <local branch name>:<remote branch name>
+
 ## switch to a local branch
 
-    git checkout my_branch
+    git checkout <local branch name>
 
 ## switch to a remote branch
 
