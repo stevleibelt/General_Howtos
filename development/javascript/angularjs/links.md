@@ -8,3 +8,4 @@
 * http://toddmotto.com/
 * https://github.com/toddmotto/angularjs-styleguide
 * https://developers.google.com/closure/
+* http://en.wikipedia.org/wiki/Angularjs
