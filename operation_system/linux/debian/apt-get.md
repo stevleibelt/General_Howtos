@@ -1,18 +1,32 @@
 # update source list
 
+```
 apt-get update
+```
 
 # upgrade packages
 
+```
 apt-get upgrade
+```
 
 # install package
 
+```
 apt-get install <packagename>
+```
 
 # uninstall package
 
+```
 apt-get remove <packagename>
+```
+
+# clean package cache
+
+```
+apt-get clean
+```
 
 # usefull options and hints
 
