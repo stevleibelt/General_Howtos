@@ -9,3 +9,4 @@
 * https://github.com/toddmotto/angularjs-styleguide
 * https://developers.google.com/closure/
 * http://en.wikipedia.org/wiki/Angularjs
+* https://github.com/angularjs-de/dpunkt-buch-beispiele
