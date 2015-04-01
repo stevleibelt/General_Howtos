@@ -80,6 +80,7 @@ Can deal with regExp also.
 
     console.log(string.substr(12, 3));  // foo
     console.log(string.substring(12, 3));  // re is no
+    console.log(string.substring(string.length - 3));  // bar
 
 # links
 
