@@ -1,5 +1,9 @@
 # connect to sonicwall howto
 
+## general
+
+* search for "sonicwall linux ipsec" or "sonicwall linux l2tp" (depending on which you want to go with)
+
 ## links
 
 * https://wiki.archlinux.org/index.php/L2TP/IPsec_VPN_client_setup
