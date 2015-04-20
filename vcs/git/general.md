@@ -152,6 +152,7 @@
 # links
 
 * http://try.github.io/
+* http://ricardofilipe.com/projects/firstaidgit/
 * https://git.wiki.kernel.org/
 * https://www.kernel.org/pub/software/scm/git/docs/git-checkout.html
 * https://www.kernel.org/pub/software/scm/git/docs/everyday.html
