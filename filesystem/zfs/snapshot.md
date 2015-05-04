@@ -27,7 +27,7 @@
 
 * -d    -   defer snapshopt deletion
 * -r    -   recursively all children
-* -R    -   recursively all dependents (also cloned file system outdise the hierachy)
+* -R    -   recursively all dependents (also cloned file system outside the hierachy)
 * -f    -   force an unmount 
 * -n    -   dry run
 * -p    -   print machine parseable verbose information
