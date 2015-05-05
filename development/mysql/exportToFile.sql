@@ -28,8 +28,11 @@
     LINES TERMINATED BY '\n'
 
 -- ERROR 1045 (28000): Access denied for user 
--- http://mamchenkov.net/wordpress/2011/04/27/mysql-export-csv-into-outfile-triggers-access-denied-error/
 -- 
+-- http://mamchenkov.net/wordpress/2011/04/27/mysql-export-csv-into-outfile-triggers-access-denied-error/
 -- USE mysql;
 -- UPDATE user SET File_priv = 'Y' WHERE User = '<your user>';
 -- FLUSH PRIVILEGES;
+-- 
+-- http://lists.mysql.com/mysql/40110
+-- GRANT FILE ON *.* to person@"%";
