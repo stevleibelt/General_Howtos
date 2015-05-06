@@ -1,11 +1,23 @@
 # start new screen session
 
-    screen
+```
+screen
+```
 
 # reattach to existing screen session or list available sessions
 
-    screen -r
+```
+screen -r
+```
 
 # kill screen session without reattaching it
 
-    screen -S screen_session_id -X quit
+```
+screen -S screen_session_id -X quit
+```
+
+# detach 
+
+```
+"CRTL+A +d"
+```
