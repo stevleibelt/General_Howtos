@@ -16,7 +16,11 @@
 
     rsync --delete -a /source/ -e "ssh -i /home/<user>/.ssh/<key>" <user>@<host>:/destination/
 
-# examples and hints
+## limit speed
+
+    rsync --bwlimit=<kb/second> <source> <dest>
+
+# hints
 
 ## useful options
 
