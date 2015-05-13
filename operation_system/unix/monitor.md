@@ -21,6 +21,8 @@ xset q
 ```
 # change blank time to 1 minute
 xset s 60 60
+# change dpms power saving blank time to 1 minute
+xset dpms 60 60 60
 ```
 
 # links
