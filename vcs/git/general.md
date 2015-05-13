@@ -25,6 +25,14 @@
 
     git revert ...
 
+## checkout special commit
+
+    git checkout <sha1>
+
+## checkout master (resolving detached head issue)
+
+    git checkout master
+
 # commit
 
     git commit -a               #commit all changes
