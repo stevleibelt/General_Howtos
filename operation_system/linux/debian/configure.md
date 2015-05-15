@@ -9,3 +9,7 @@
 # localization
 
     dpkg-reconfigure locales
+
+# set or change default editor
+
+    update-alternatives --config editor
