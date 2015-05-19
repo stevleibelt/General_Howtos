@@ -22,3 +22,19 @@ SET
 WHERE 
     `my_column` <> 666
     AND NOT EXISTS (SELECT * FROM `my_other_table` WHERE `my_table`.`my_other_table_id` = `my_other_table`.`id`);
+
+-- 
+-- with limit
+-- @see: https://dev.mysql.com/doc/refman/5.0/en/update.html
+-- 
+
+UPDATE
+    `my_table` 
+SET 
+    `my_column` = 666 
+LIMIT
+    1000;
+
+-- 
+-- if you can not use limit, "id BETWEEN 0 AND 10000"
+-- 
