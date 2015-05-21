@@ -19,6 +19,8 @@
 ## update remote branches
 
     git remote prune origin
+    # same result
+    git fetch --prune
 
 ## create new local branch
 

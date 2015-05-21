@@ -1,9 +1,5 @@
 # free dns server
 
-## opendns
-208.67.222.222
-208.67.220.220
-
 ## ccc e.V.
 
 204.152.184.76 (f.6to4-servers.net, ISC, USA)
@@ -25,6 +21,20 @@
 
 85.214.73.63
 
+# other dns server
+
+## opendns
+
+208.67.222.222
+208.67.220.220
+
+## google
+
+8.8.8.8
+8.8.4.4
+
 # links
 
 * openresolve - http://roy.marples.name/projects/openresolv/wiki?name=config
+* http://www.fixmbr.de/opendns-und-andere-freie-dns-server/
+* http://www.dmoz.org/Computers/Internet/Protocols/DNS/Service_Providers/
