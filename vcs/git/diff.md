@@ -1,26 +1,26 @@
 # between tags
 
 ```
-git diff tag1 tag2
+git diff..tag1 tag2
 ```
 
 # only file names
 
 ```
-git diff tag1tag2 --name-only
+git diff tag1..tag2 --name-only
 
 ```
 
 # get file names and statistics
 
 ```
-git diff tag1 tag2 --stat
+git diff tag1..tag2 --stat
 ```
 
 # get changes for one file
 
 ```
-git diff tag1 tag2 -- path/to/file/name
+git diff tag1..tag2 -- path/to/file/name
 ```
 
 # links
