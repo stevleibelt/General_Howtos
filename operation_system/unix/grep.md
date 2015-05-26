@@ -10,6 +10,12 @@
     grep -n
     ´´´
 
+# print only line numbers
+
+    ´´´
+    grep -n | cut -f1 -d:
+    ´´´
+
 # print only filenames
 
     ´´´
