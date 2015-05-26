@@ -1,38 +1,44 @@
 # print all lines that are not matching
 
-    ´´´
-    grep -v
-    ´´´
+´´´
+grep -v
+´´´
 
 # print line numbers
 
-    ´´´
-    grep -n
-    ´´´
+´´´
+grep -n
+´´´
 
 # print only line numbers
 
-    ´´´
-    grep -n | cut -f1 -d:
-    ´´´
+´´´
+grep -n | cut -f1 -d:
+´´´
 
 # print only filenames
 
-    ´´´
-    grep -l
-    ´´´
+´´´
+grep -l
+´´´
 
 # print count of matching lines
 
-    ´´´
-    grep -c
-    ´´´
+´´´
+grep -c
+´´´
+
+# print non printable characters
+
+```
+grep '[^[:print:]]'
+```
 
 # grep caseinsensitive
 
-    ´´´
-    grep -i
-    ´´´
+´´´
+grep -i
+´´´
 
 # search recursively
 
