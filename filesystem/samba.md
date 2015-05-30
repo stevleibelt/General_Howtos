@@ -5,9 +5,9 @@
 ## add user
 
     if [smbd -V >= 3.4.0]
-        pdbedit -a -u <user>
+        pdbedit -a -u <user name>
     else
-        smbpasswd -a <user>
+        smbpasswd -a <user name>
     fi
 
 ## list users
