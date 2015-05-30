@@ -1,24 +1,24 @@
 # remove login ability
 
-    usermod -s /usr/sbin/nologin $username
+    usermod -s /usr/sbin/nologin <user name>
 
 # add user
 
-    useradd $username
+    useradd <user name>
 
 # add user with creating home directory (-m), initial group (-g) and additional groups
 
-    useradd -m -g myGroup -G myOtherGroup -s /bin/bash myUser
+    useradd -m -g <group one> -G <group two> -s /bin/bash <user name>
 
 # add groups
 
-    usermod -a -G myGroup[,myOtherGroup] User
+    usermod -a -G <group one>[<,group two>] <user name>
     #or
-    gpasswd -a myUser myGroup
+    gpasswd -a <user name> <group name>
 
 # remove group
 
-    gpasswd -d myUser myGroup
+    gpasswd -d <user name> <group name>
 
 # list users
 
@@ -29,8 +29,8 @@
 
 # run command as other user
 
-    runuser -u <user> <command> <argument...>
-    su - <user> -c "<command> <argument...>"
+    runuser -u <user name> <command> <argument...>
+    su - <user name> -c "<command> <argument...>"
     sudo <command>
 
 # change login shell
@@ -47,18 +47,18 @@
 
 # lock user
 
-    usermod -L <username>
+    usermod -L <user name>
 
 # unlock user
 
-    usermod -U <username>
+    usermod -U <user name>
 
 # get user id
 
     # all informations
-    id <username>
+    id <user name>
     # only user id
-    id -u <username>
+    id -u <user name>
 
 # links
 
