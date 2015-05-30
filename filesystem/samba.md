@@ -117,6 +117,10 @@
     #see: https://wiki.archlinux.org/index.php/Samba/Troubleshooting#protocol_negotiation_failed:_NT_STATUS_INVALID_NETWORK_RESPONSE
     comment out your "hosts allow"
 
+## mount error(13): Permission denied
+
+If you have tried it wot "mount -t cifs", try it with "mount.cifs".
+
 # links
 
 * https://www.samba.org/samba/docs/man/manpages-3/smb.conf.5.html

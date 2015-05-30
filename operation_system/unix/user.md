@@ -38,11 +38,15 @@
 ## fetch available shells
 
     less /etc/shells
+    #if not available you should add the "nologin" shell
+    # echo "/sbin/nologin" >> /etc/shells
 
 ## change shell
 
-    chsh -s /path/to/my/shell
-    # or
+    chsh -s <path to shell> <user name>
+    #or
+    usermod -s <path to shell> <user name>
+    #or
     chsh
 
 # lock user
