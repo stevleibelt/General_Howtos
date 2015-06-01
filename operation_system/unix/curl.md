@@ -5,10 +5,16 @@
     wget http://curl.haxx.se/ca/cacert.pem
 ```
 
-# forse usage of ssl version 3
+# force usage of ssl version 3
 
 ```
     curl -3 https://foo.bar
+```
+
+# allow insecure ssl
+
+```
+    curl [-k|--insecure] <url>
 ```
 
 # links
