@@ -63,6 +63,8 @@
     id <user name>
     # only user id
     id -u <user name>
+    # groups
+    id -a
 
 # links
 
