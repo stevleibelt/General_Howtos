@@ -43,8 +43,16 @@ First rule of all, enable mod_rewrite in your configuration.
 
 Take a look into the [directive](https://httpd.apache.org/docs/current/mod/core.html#errorlogformat) section.
 
-    #Simple example
-    ErrorLogFormat "[%t] [%l] [pid %P] %F: %E: [client %a] %M"
+```
+#Simple example
+ErrorLogFormat "[%t] [%l] [pid %P] %F: %E: [client %a] %M"
+```
+
+# envvars
+
+## want to [change the umask for apache](http://serverfault.com/questions/383734/how-do-i-set-default-umask-in-apache-on-debian)?
+
+add, for example, "umask 002" at the end of the file "/etc/apache2/envars".
 
 # links
 
