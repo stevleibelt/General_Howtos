@@ -20,6 +20,10 @@
 
 # help
 
+## debug
+
+    sshfs -d -f <source> <target>
+
 ## “invalid_argument”
 
     create local mount point
