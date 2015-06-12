@@ -37,7 +37,44 @@
 * @hourly - 0 * * * *
 * @reboot - at startup
 
+# good default to start in your crontab
+
+```
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+```
+
+# example
+
+## crontab entry
+
+```
+#<minute>   <hour>  <day_of_month>  <month>     <day_of_week>   <command>
+08           15      *               *           *               /home/<user>/<path/to/my_script.sh>
+```
+
+## my_script.sh
+
+```
+#!/bin/bash -l
+
+/home/<user>/<path/to/command> [<argument one>[<argument ...>]] 1>//home/<user>/data/log/crontab/<command>.log 2>/home/<user>/data/log/crontab/<command>-error.log
+```
+
+# debug
+
+## dump environemt
+
+``
+* * * * * env > env_dump.txt
+``
+
+compare with your local/session environment.
+
 # links
 
 * http://alvinalexander.com/linux/unix-linux-crontab-every-minute-hour-day-syntax
 * http://www.thegeekstuff.com/2009/06/15-practical-crontab-examples/
+* https://stackoverflow.com/questions/2388087/how-to-get-cron-to-call-in-the-correct-paths
+* http://unixhelp.ed.ac.uk/CGI/man-cgi?crontab+5
+* https://en.wikipedia.org/wiki/Env

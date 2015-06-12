@@ -49,3 +49,5 @@
 
 * http://www.thegeekstuff.com/2011/01/rsync-exclude-files-and-folders/
 * http://linux.about.com/library/cmd/blcmdl1_rsync.htm
+* https://www.digitalocean.com/community/tutorials/how-to-copy-files-with-rsync-over-ssh
+* http://troy.jdmz.net/rsync/index.html
