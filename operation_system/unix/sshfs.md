@@ -31,6 +31,7 @@
 ## “???” after mounting
 
     check user rights on destination
+    sshfs -o idmap=user <source> <target>
 
 ## slow on a mac osx host
 
