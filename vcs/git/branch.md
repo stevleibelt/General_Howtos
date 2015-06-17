@@ -47,6 +47,12 @@
     #switch to branch
     git checkout -b my_branch origin/my_branch
 
+# switch to a tag of master
+
+    git checkout master
+    git pull
+    git checkout -b my_branch refs/tags/<tag name>
+
 ## remove local branch
 
     git branch -d my_branch
