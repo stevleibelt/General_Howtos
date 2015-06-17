@@ -4,7 +4,7 @@
 --noconfirm
 ```
 
-# cleare old/unused packages
+# clear cache of old packages
 
 ```
 pacman -Sc
@@ -55,7 +55,9 @@ pacman -R $name
 # remove package and all dependencies
 
 ```
-pacman -Rs $name
+pacman -Rs <name>
+# remove unneeded
+pacman -Rsu <name>
 ```
 
 # reinstall with force
@@ -76,7 +78,7 @@ pacman -Qdt
 pacman -Rsn `pacman -Qqdt`
 ```
 
-# locate .pac* files
+# locate .pac\* files
 
 ```
 # in /etc
