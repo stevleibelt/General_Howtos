@@ -23,3 +23,4 @@
 
 * https://help.github.com/articles/fork-a-repo
 * https://help.github.com/articles/syncing-a-fork
+* https://stackoverflow.com/questions/8948803/what-does-git-remote-add-upstream-help-achieve
