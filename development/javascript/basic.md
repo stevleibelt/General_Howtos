@@ -5,7 +5,7 @@
 
 # if is a function
 
-    if (typeof callback === "function") {
+    if (typeof callback === "function") {   //returns 'undefined', 'object', 'boolean', 'number', 'string', 'function' and 'xml'
     }
 
 # default value

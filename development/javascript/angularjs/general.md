@@ -20,10 +20,11 @@
   * markers in html
   * includes templates and logic (view helper)
 
-# links
-
-* https://github.com/angularjs-de/dpunkt-buch-beispiele
-
 # books
 
 * AngularJS (dpunkt Verlag, ISBN 978-3-86490-154-6)
+* AngularJS (O'Reilly)
+
+# links
+
+* https://github.com/angularjs-de/dpunkt-buch-beispiele
