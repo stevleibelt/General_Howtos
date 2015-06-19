@@ -9,9 +9,9 @@
 # update only one package
 
     # see [composer update](https://getcomposer.org/doc/03-cli.md#update)
-    composer update <vendor>/<product>
+    composer update <vendor>/<product> [<vendor>/<product>]
     # with dependencies
-    composer update <vendor>/<product> --with-dependencies
+    composer update <vendor>/<product> --with-dependencies [--no-dev]
 
 # update composer.lock (after adding description/doing unimportant changes to composer.json)
 
