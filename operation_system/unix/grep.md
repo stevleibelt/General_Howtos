@@ -42,82 +42,82 @@ grep -i
 
 # search recursively
 
-    ´´´
-    grep -r 'pattern' *
-    ´´´
+´´´
+grep -r 'pattern' *
+´´´
 
 # pattern has a leading "-"
 
-    ´´´
-    grep -e '-pattern-' *
-    ´´´
+´´´
+grep -e '-pattern-' *
+´´´
 
 # search for a whole word, not a part
 
-    ´´´
-    grep -w 'word' *
-    ´´´
+´´´
+grep -w 'word' *
+´´´
 
 # search for words starting with 
 
-    ´´´
-    grep  '\<hello' *
-    ´´´
+´´´
+grep  '\<hello' *
+´´´
 
 # search for words ending with 
 
-    ´´´
-    grep  'hello\>' *
-    ´´´
+´´´
+grep  'hello\>' *
+´´´
 # and
 
-    ```
-    #with -E
-    grep 'foo.*bar'
-    #with |
-    grep -E 'foo' | grep -E 'bar'
-    ```
+```
+#with -E
+grep 'foo.*bar'
+#with |
+grep -E 'foo' | grep -E 'bar'
+```
 
 # or
 
-    ```
-    #with \|
-    grep 'foo\|bar'
-    #with -E
-    grep -E 'foo|bar'
-    #with -e
-    grep -e 'foo' -e 'bar'
-    #with egrep
-    egrep 'foo|bar'
-    ```
+```
+#with \|
+grep 'foo\|bar'
+#with -E
+grep -E 'foo|bar'
+#with -e
+grep -e 'foo' -e 'bar'
+#with egrep
+egrep 'foo|bar'
+```
 
 # not
 
-    ```
-    #with -v
-    grep -v 'foo'
-    ```
+```
+#with -v
+grep -v 'foo'
+```
 
 # do an or
 
-    ´´´
-    # find lines that contain 'paul' or 'frank'
-    grep 'paul|frank' *
-    ´´´
+´´´
+# find lines that contain 'paul' or 'frank'
+grep 'paul|frank' *
+´´´
 
 # do an and
 
-    ´´´
-    # find lines that contain 'paul' and 'frank'
-    grep 'paul' * | grep 'frank'
-    ´´´
+´´´
+# find lines that contain 'paul' and 'frank'
+grep 'paul' * | grep 'frank'
+´´´
 
 # include
 
-    ´´´
-    # search "foo" in files named "bar.foo"
-    grep -r 'foo' --include="bar.foo" *
-    ´´´
+´´´
+# search "foo" in files named "bar.foo"
+grep -r 'foo' --include="bar.foo" *
+´´´
 
 # character classes
 
@@ -136,43 +136,43 @@ grep -i
 # http://www.thegeekstuff.com/2011/10/grep-or-and-not-operators/
 # or
 
-    ´´´
-    grep 'pattern1\|pattern2'
-    ´´´
+´´´
+grep 'pattern1\|pattern2'
+´´´
 
 # and
 #  there is no real and so we have to use grep in extended mode
 # instead of grep -e you can also use egrep
 
-    ´´´
-    grep -e 'pattern1.*pattern2'
-    ´´´
+´´´
+grep -e 'pattern1.\*pattern2'
+´´´
 
 # output <number of> lines before match
 
-    ´´´
-    grep -B<number> 'pattern'
-    ´´´
+´´´
+grep -B<number> 'pattern'
+´´´
 
 # output <number of> lines after match
 
-    ´´´
-    grep -A<number> 'pattern'
-    ´´´
+´´´
+grep -A<number> 'pattern'
+´´´
 
 # output <number of> lines around match
 
-    ´´´
-    grep -C<number> 'pattern'
-    ´´´
+´´´
+grep -C<number> 'pattern'
+´´´
 
 # suppress errors
 
-    ´´´
-    grep -s <pattern>
-    #or
-    grep <pattern> 2>/dev/null
-    ´´´
+´´´
+grep -s <pattern>
+#or
+grep <pattern> 2>/dev/null
+´´´
 
 # links
 
