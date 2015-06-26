@@ -172,3 +172,5 @@
 * http://stevebennett.me/2012/02/24/10-things-i-hate-about-git/
 * http://www.pro-linux.de/artikel/2/1742/git-tutorium-teil-1.html
 * http://www.pro-linux.de/artikel/2/1746/git-tutorium-teil-2.html
+* http://www.pro-linux.de/artikel/2/1752/git-tutorium-teil-3.html
+* http://www.pro-linux.de/artikel/2/1777/git-tutorium-teil-4-github.html
