@@ -38,6 +38,13 @@ awk '{printf "%3.1f°C\n", $1/1000}' /sys/class/thermal/thermal_zone0/temp
 watch -n 0.5 gpio readall
 ```
 
+# arch linux
+
+## packages
+
+* fake-hwclock
+* nss-mdns
+
 # Links
 
 * https://wiki.gentoo.org/index.php?title=Raspberry_Pi&redirect=no:wq
