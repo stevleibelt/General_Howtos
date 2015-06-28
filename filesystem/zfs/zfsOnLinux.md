@@ -38,6 +38,7 @@
 
 
     echo "#!/bin/bash\n#https://bbs.archlinux.org/viewtopic.php?id=183851\nfor i in {1..10}; do\n  [[ -e /dev/zfs ]] && exit 0\n  sleep 1\ndone\n[[ -e /dev/zfs ]]" > /etc/zfs/waitforzfsdevice
+    chmod +x /etc/zfs/waitforzfsdevice
     mkdir -p /etc/systemd/system/zfs-import-cache.service.d
     echo "[Service]\nExecStartPre=/etc/zfs/waitforzfsdevice" > /etc/systemd/system/zfs-import-cache.service.d/waitforzfsdevice.conf
 
