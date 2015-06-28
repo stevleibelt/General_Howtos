@@ -64,6 +64,12 @@
 
     journalctl --unit=zfs
 
+# errors
+
+## list all problems on current boot
+
+    journalctl -b | grep -i 'fail\|erro\|warn'
+
 # links
 
 * http://0pointer.de/blog/projects/journalctl.html
