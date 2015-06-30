@@ -20,3 +20,7 @@
     git push --delete origin 1.2.3
     git push orgin :refs/tags/1.2.3
     git push --tags
+
+# create branch from a tag
+
+    git checkout -b <branch name> <tag name>

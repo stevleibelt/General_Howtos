@@ -30,7 +30,7 @@
 
     git checkout <your branch you want to branch from, e.g. master>
     # assuming you want to create a branch from tag "1.0"
-    git checkout -b my_branch 1.0
+    git checkout -b <branch name> <tag name>
 
 ## create new remote branch from existing local branch
 
