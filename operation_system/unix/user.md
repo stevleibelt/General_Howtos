@@ -90,6 +90,17 @@ id -u <user name>
 id -a
 ```
 
+# errorhandling
+
+## validate system integrity
+
+```
+#check groups
+grpck
+#checl password
+pwck
+```
+
 # links
 
 * https://wiki.archlinux.org/index.php/Users_and_Groups#User_management
