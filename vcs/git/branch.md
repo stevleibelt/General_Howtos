@@ -36,16 +36,16 @@
 
     git push origin <local branch name>:<remote branch name>
 
-## switch to a local branch
-
-    git checkout <local branch name>
-
-## switch to a remote branch
+## create from remote branch / switch to remote branch
 
     #update remote available branch references/list
     git fetch origin
     #switch to branch
     git checkout -b my_branch origin/my_branch
+
+## switch to a local branch
+
+    git checkout <local branch name>
 
 # switch to a tag of master
 
