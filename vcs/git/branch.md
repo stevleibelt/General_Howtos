@@ -38,7 +38,8 @@
 
 ## create from remote branch / switch to remote branch
 
-    #update remote available branch references/list
+    #update the remote-tracking branches
+    #@see https://www.kernel.org/pub/software/scm/git/docs/git-fetch.html
     git fetch origin
     #switch to branch
     git checkout -b my_branch origin/my_branch
