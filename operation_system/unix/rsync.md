@@ -15,6 +15,9 @@
 ## using ssh and key
 
     rsync --delete -a /source/ -e "ssh -i /home/<user>/.ssh/<key>" <user>@<host>:/destination/
+    #speed up
+    #@see: http://www.smork.info/blog/2013/04/24/entry130424-163842.html
+    rsync --delete -a /source/ -e "ssh -c arcfour -o Compression=no -i /home/<user>/.ssh/<key>" <user>@<host>:/destination/
 
 ## limit speed
 
