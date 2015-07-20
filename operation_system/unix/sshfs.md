@@ -38,7 +38,12 @@
     #[link](https://coderwall.com/p/dwvw_w/sshfs-mac-osx-mount-slow-improve-speed)
     sshfs user@host:remote_path local_path -oauto_cache,reconnect,defer_permissions,noappledouble
 
+## blazing fast setting
+
+    sshfs -o Ciphers=arcfour -o Compression=no <server://some/folder> </mnt/some_local_folder>
+
 # links
 
 * https://www.digitalocean.com/community/articles/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
 * https://wiki.archlinux.org/index.php/Sshfs
+* http://www.smork.info/blog/2013/04/24/entry130424-163842.html
