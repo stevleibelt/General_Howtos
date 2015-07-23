@@ -6,3 +6,4 @@
 # books and links
 
 * [ddd-in-php](https://gitub.com/dddinphp)
+* [ddd-example](http://blog.mirkosertic.de/architecturedesign/dddexample)
