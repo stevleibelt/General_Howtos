@@ -1,5 +1,10 @@
+# domain driven design
+
+# database
+
 # notes
 
+* focus on solving the customers problem and not focus on using the latest technologies
 * think of the behaviour first when modeling your domain
 * do not think about the tools (database, etc.)
 

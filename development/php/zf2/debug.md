@@ -1,11 +1,10 @@
-//taken from http://stackoverflow.com/questions/12179840/how-to-get-controller-and-action-name-in-zf2 - 130429
 
-Debug Action call
-================
+# Debug Action call
 
-- since zend framework 2 is using dependency injection, you can not debug in the constructor
+* since zend framework 2 is using dependency injection, you can not debug in the constructor
+* taken from http://stackoverflow.com/questions/12179840/how-to-get-controller-and-action-name-in-zf2 - 130429
 
-<code php>
+```php
 <?php
 namespace MyModule\Controller;
 
@@ -55,4 +54,4 @@ class MyController extends AbstractActionController
                );
     }
 }
-</code>
+```
