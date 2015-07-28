@@ -10,6 +10,7 @@
 
 # books and links
 
+* [state of union](https://github.com/PhpFriendsOfDdd/state-of-the-union)
 * [ddd-in-php](https://gitub.com/dddinphp)
 * [ddd-example](http://blog.mirkosertic.de/architecturedesign/dddexample)
 * [doman driven architecture](http://www.opentaps.org/docs/index.php/Domain_Driven_Architecture)
