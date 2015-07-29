@@ -1,5 +1,6 @@
-#first idea, use zf2 classmap_generator
-#by https://groups.google.com/forum/?fromgroups=#!topic/propel-users/lsHs-jjxp68
+# first idea, use zf2 classmap_generator
+
+# by https://groups.google.com/forum/?fromgroups=#!topic/propel-users/lsHs-jjxp68
 ##generate classmap for propel
 vim autoload_classmap.php
 <?php
