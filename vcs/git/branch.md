@@ -41,6 +41,8 @@
     #update the remote-tracking branches
     #@see https://www.kernel.org/pub/software/scm/git/docs/git-fetch.html
     git fetch origin
+    #remove remote deleted branches
+    git remote prune origin 
     #switch to branch
     git checkout -b my_branch origin/my_branch
 
