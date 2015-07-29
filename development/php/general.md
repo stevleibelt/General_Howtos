@@ -18,6 +18,26 @@ php -S localhost:8000 -t path/to/the/document/root
 php -S localhost:8000 -c php.ini
 ```
 
+## get environment informations
+
+### version
+
+```
+php -v
+```
+
+### modules / extensions
+
+```
+php -m
+```
+
+### information
+
+```
+php -i
+```
+
 # links
 
 * http://www.tuxradar.com/practicalphp
