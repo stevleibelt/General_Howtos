@@ -33,3 +33,4 @@ DDD tries to explain why the language, collaboration and context are the most im
 * [how to keep a complex value object immutable](http://stackoverflow.com/questions/7405278/ddd-how-to-keep-a-complex-value-object-immutable)
 * [ddd on wikipedia](https://en.wikipedia.org/wiki/Domain-driven_design)
 * [the ddd comunity](http://www.domaindrivendesign.org/)
+* [ddd on fincher.org](http://www.fincher.org/tips/General/SoftwareEngineering/DomainDrivenDesign.shtml)
