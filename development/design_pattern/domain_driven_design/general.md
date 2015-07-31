@@ -34,3 +34,4 @@ DDD tries to explain why the language, collaboration and context are the most im
 * [ddd on wikipedia](https://en.wikipedia.org/wiki/Domain-driven_design)
 * [the ddd comunity](http://www.domaindrivendesign.org/)
 * [ddd on fincher.org](http://www.fincher.org/tips/General/SoftwareEngineering/DomainDrivenDesign.shtml)
+* [directory structure](https://gist.github.com/satooshi/6396551)
