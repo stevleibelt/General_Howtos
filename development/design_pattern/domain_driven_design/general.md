@@ -1,5 +1,20 @@
 # domain driven design
 
+DDD is a set of philosophically concepts to build software for complex domains.
+Core questions are strategic patterns of integrating bounded contexts, covering tactical patterns for creating effective domain models and delves design patterns you can applay to utilize the domain model and build effective applications.
+
+DDD tries to explain why the language, collaboration and context are the most important facts in DDD.
+
+# steps
+
+* distiling the problem domain
+* focusing on the core domain
+* model-driven design
+* domain model implementation patterns
+* maintaining the integrity of domain models with bounded context
+* context mapping
+* application architecture
+
 # database
 
 # notes
@@ -16,3 +31,5 @@
 * [doman driven architecture](http://www.opentaps.org/docs/index.php/Domain_Driven_Architecture)
 * [difference entities and value objects](http://culttt.com/2014/04/30/difference-entities-value-objects/)
 * [how to keep a complex value object immutable](http://stackoverflow.com/questions/7405278/ddd-how-to-keep-a-complex-value-object-immutable)
+* [ddd on wikipedia](https://en.wikipedia.org/wiki/Domain-driven_design)
+* [the ddd comunity](http://www.domaindrivendesign.org/)
