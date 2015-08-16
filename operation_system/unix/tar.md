@@ -1,21 +1,36 @@
 # compress
 
-    tar -zcvf foo.tar.gz /path/to/foo
-    (z->gzip, c->create archive, v->verbose, f->archive file name)
+```
+#z - gzip
+#c - create archive
+#f - archive file name <- must be the last option
+#v - verbose
+
+tar -zcvf foo.tar.gz /path/to/foo
+```
 
 # uncompress
 
-    tar -zxvf foo.tar.gz
-    (x->extract)
+```
+#z - gzip
+#x - extract
+#f - archive file name <- must be the last option
+#v - verbose
+tar -zxvf foo.tar.gz
+```
 
 # list content
 
-    tar -tf foo.tar.gz
+```
+tar -tf foo.tar.gz
+```
 
 # include symbolic links
 
-    -h, --dereference
-        follow symlinks; archive and dump the files they point to
+```
+-h, --dereference
+    follow symlinks; archive and dump the files they point to
+```
 
 # options
 
@@ -25,7 +40,7 @@
 * -c    --create        create new tar archive
 * -C    --directory     change to directory before perfoming any operations
 * -d    --diff          calculates differences between archive and file system
-* -f    --file=         define archive name 
+* -f    --file=         define archive name
 * -r    --append        append files to the end of the archive
 * -t    --list          list contents of an archive
 * -u    --update        append files but only that are newer
