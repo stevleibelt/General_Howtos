@@ -81,7 +81,7 @@ PasswordAuthentication no
 ChallengeResponseAuthentication no
 ```
 
-# enable verbose mode
+# enable verbose/debug mode
 
 ```
 ssh <user>@<host> -vvv
