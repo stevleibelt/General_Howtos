@@ -68,8 +68,16 @@
 
 ## merge
 
+### branch into master
+
     git checkout master
-    git merge my_branch
+    git merge <branch name>
+
+### master tag into branch
+
+    #git fetch --tags origin
+    git fetch origin
+    git merge <tag name>
 
 # links
 
