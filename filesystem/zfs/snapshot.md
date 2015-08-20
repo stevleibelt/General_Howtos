@@ -82,6 +82,16 @@
     # same but short
     zfs rename <pool name>@<old snapshot name> <new snapshot name>
 
+# browse in the snapshot
+
+    #assuming your root is your pool
+    cd /.zfs/snapshot/<snapshot name>
+    ls -halt
+
+# backup to archive
+
+    zfs send -Rv <pool name>@<snapshot name> | gzip > <path to archive>.gz
+
 ## hints
 
 * install "pipe view" (pv) to monitor progress
