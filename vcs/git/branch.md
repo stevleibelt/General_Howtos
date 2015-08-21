@@ -1,5 +1,9 @@
 # branch
 
+## compare local with remote
+
+    git diff <my branch> origin/<my branch>
+
 ## prevent tracking upstream branches
 
     #instead of
