@@ -1,3 +1,7 @@
+# general
+
+timers are a way to create a cronjob via systemd.
+
 # example
 
 ## create a cron job that is executed each five minutes
