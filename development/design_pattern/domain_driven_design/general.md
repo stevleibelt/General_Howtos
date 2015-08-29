@@ -35,3 +35,7 @@ DDD tries to explain why the language, collaboration and context are the most im
 * [the ddd comunity](http://www.domaindrivendesign.org/)
 * [ddd on fincher.org](http://www.fincher.org/tips/General/SoftwareEngineering/DomainDrivenDesign.shtml)
 * [directory structure](https://gist.github.com/satooshi/6396551)
+* [clear your concepts](http://www.codeproject.com/Articles/339725/Domain-Driven-Design-Clear-Your-Concepts-Before-Yo)
+* [ddd by example](http://blog.mirkosertic.de/architecturedesign/dddexample)
+* [strategic ddd with context mapping](http://www.infoq.com/articles/ddd-contextmapping)
+* [bounded context](http://martinfowler.com/bliki/BoundedContext.html)
