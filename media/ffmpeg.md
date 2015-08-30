@@ -4,6 +4,15 @@
 ffmpeg -i i<file name>.flv -vcodec copy -acodec copy <file name>.mp4
 ```
 
+# convert mp4 to avi
+
+```
+#maybe this is working already
+ffmpeg -i i<file name>.mp4 -vcodec copy -acodec copy <file name>.avi
+#otherwise, take the long road
+ffmpeg -i i<file name>.mp4 -vcodec mpeg4 -acodec ac3 -ar 48000 -ab 192k <file name>.avi
+```
+
 # create slide show from images
 
 ## example
@@ -26,3 +35,4 @@ ffmpeg -framerate 5 [-start_number 123] -i image-%03d.png [-i music.mp3] -c:v li
 
 * https://www.ffmpeg.org/faq.html
 * https://trac.ffmpeg.org/wiki/
+* http://www.upubuntu.com/2012/02/how-to-convert-mp4-to-avi-under-ubuntu.html
