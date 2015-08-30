@@ -1,0 +1,3 @@
+# get hardware information
+
+* hardinfo
