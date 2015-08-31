@@ -1,3 +1,7 @@
+# needed packagist
+
+* bind-tools
+
 # get hostname of current system
 
     hostname
@@ -7,6 +11,7 @@
 # get ip by domain
 
     nslookup www.bazzline.net
+    dig bazzline.net
 
 # get other informations
 
