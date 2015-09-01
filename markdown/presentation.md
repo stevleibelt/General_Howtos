@@ -34,3 +34,5 @@ rackup
 
 * no "sliding" like in "[deck.js](http://imakewebthings.com/deck.js/)"
 * no stylish slides
+
+## using [phpdeck](https://github.com/jacroe/phpdeck)
