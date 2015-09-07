@@ -5,7 +5,7 @@
 * alphabetic (a .. z, A .. Z)
 * numeric (0 .. 9)
 * hyphen ("-")
-* underscore ("_")
+* underscore ("\_")
 
 ```
 $foo
@@ -133,15 +133,23 @@ ${data.Request.ServerName}
 ## debug
 
 ```
+## cast to string
+
 $foo.toString()
+
+## getting strange hash-values? maybe you a are working with an array
+
+StringUtils.join($foo, ", ")
 ```
 
 # links
 
 * [syntax](http://velocity.apache.org/engine/devel/vtl-reference-guide.html)
 * [syntax compared to jsp](http://www.caucho.com/resin-3.1/doc/jsp-velocity.xtp)
+* [start up velocity](http://www.javaworld.com/article/2075966/core-java/start-up-the-velocity-template-engine.html?page=2)
 * [wiki](http://wiki.apache.org/velocity/)
 * [wikipedia entry](https://en.wikipedia.org/wiki/Apache_Velocity)
 * [coding standards](http://wiki.apache.org/velocity/CodeStandards)
 * [stillness - Extraction template engine with the same syntax as Apache Velocity](https://github.com/cbrisson/stillness)
 * [user guid](https://velocity.apache.org/engine/releases/velocity-1.5/user-guide.html)
+* [blogpost about velocity on javaworld.com](http://www.javaworld.com/article/2075966/core-java/start-up-the-velocity-template-engine.html?page=3)
