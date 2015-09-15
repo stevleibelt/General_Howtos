@@ -40,3 +40,11 @@ See [howto](http://www.smarty.net/docsv2/en/language.function.foreach).
 # array_key_exists
 
     {if array_key_exists('foo', $myArray)}foo exists{else}no foo{/if}
+
+# instanceof
+
+    {if $foo instanceof \Foo}
+        yes, is instance of \Foo
+    {else}
+        no, it os not an instance of \Foo
+    {/if}
