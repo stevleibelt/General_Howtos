@@ -97,6 +97,18 @@
 
 slock
 
+* window manager
+
+* [dwm](https://wiki.archlinux.org/index.php/Dwm)
+* [twm](https://wiki.archlinux.org/index.php/twm)
+* [jwm](https://wiki.archlinux.org/index.php/JWM)
+* [i3wm](https://wiki.archlinux.org/index.php/I3)
+* [evilwm](https://wiki.archlinux.org/index.php/Evilwm)
+* [list of dynamic wms](https://wiki.archlinux.org/index.php/Category:Dynamic_WMs)
+* [list of stacking wms](https://wiki.archlinux.org/index.php/Category:Stacking_WMs)
+* [list of tilling wms](https://wiki.archlinux.org/index.php/Category:Tiling_WMs)
+* 
+
 # work
 
 * freemind
