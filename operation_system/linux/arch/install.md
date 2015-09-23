@@ -81,7 +81,10 @@ echo KEYMAP=de > /etc/vconsole.conf
 echo FONT=lat9w-16 >> /etc/vconsole.conf
 mkinitcpio -p linux
 passwd
-pacman -S grub sudo
+pacman -S grub sudo bash-completion
+echo '[archlinuxfr]' > /etc/pacman.conf
+echo 'SigLevel = Never' >> /etc/pacman.conf
+echo 'Server = http://repo.archlinux.fr/$arch' >> /etc/pacman.conf
 grub-install --recheck /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 exit
