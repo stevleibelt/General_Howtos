@@ -1,3 +1,13 @@
+# general
+
+* https://archlinux.org/
+* https://nixos.org/
+* http://www.slackware.com/
+* http://bedrocklinux.org/
+* https://www.gentoo.org/
+* http://www.pclinuxos.com/
+* http://zorinos.com/
+
 # tiny
 
 * http://www.damnsmalllinux.org/
