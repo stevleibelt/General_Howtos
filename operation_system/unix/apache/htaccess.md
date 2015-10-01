@@ -1,12 +1,21 @@
+# redirect
+
+    <IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteCond %{HTTP_HOST} ^<old domain> [OR]
+        RewriteCond %{HTTP_HOST} ^<www.old domain>
+        RewriteRule (.*)$ <new domain>$1 [R=301,L]
+    </IfModule>
+
 # redirect to https
 
 ## take from [stackoverflow](https://stackoverflow.com/questions/13666850/htaccess-http-to-https-redirect)
 
     <IfModule mod_rewrite.c>
-    RewriteEngine on
+        RewriteEngine on
 
-    RewriteCond %{SERVER_PORT} !443
-    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,L]
+        RewriteCond %{SERVER_PORT} !443
+        RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,L]
     </IfModule>
 
 # links
