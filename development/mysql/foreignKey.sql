@@ -32,3 +32,19 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- 
 
 SET FOREIGN_KEY_CHECKS = 1;
+
+-- 
+-- show all available foreign keys to one origin table
+-- @see: http://stackoverflow.com/questions/201621/how-do-i-see-all-foreign-keys-to-a-table-or-column
+-- 
+
+SELECT
+    `TABLE_NAME`, 
+    `COLUMN_NAME`,
+    `CONSTRAINT_NAME`,
+    `REFERENCED_TABLE_NAME`,
+    `REFERENCED_COLUMN_NAME`
+FROM 
+    `INFORMATION_SCHEMA`.`KEY_COLUMN_USAGE`
+WHERE
+    `REFERENCED_TABLE_NAME` = '<your origin table name>';

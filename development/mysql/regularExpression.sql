@@ -26,21 +26,37 @@
 -- |            separate alternatives
 -- 
 
+-- 
 -- simple example
+-- 
 
 SELECT * 
 FROM `my_table` 
 WHERE `my_column` REGEXP 'regexp';
 
+-- 
 -- select all columns starting with 'foo'
+-- 
 
 SELECT * 
 FROM `my_table` 
 WHERE `my_column` REGEXP '^foo';
 
+-- 
 -- select all columns containing the word 'foo'
+-- 
 
 SELECT * 
 FROM `my_table` 
 WHERE `my_column` REGEXP '[[:<:]]foo[[:>:]]';
 
+-- 
+-- simulate a "string LIKE IN()"
+-- @see
+--  http://stackoverflow.com/questions/1127088/mysql-like-in
+--  https://dev.mysql.com/doc/refman/5.0/en/pattern-matching.html
+-- 
+
+SELECT * 
+FROM `my_table` 
+WHERE `my_column` REGEXP 'foo|bar|foobar';
