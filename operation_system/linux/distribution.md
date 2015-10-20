@@ -13,6 +13,9 @@
 * http://www.damnsmalllinux.org/
 * http://puppylinux.org/
 * http://www.slitaz.org/
+* http://4mlinux.com/
+* http://salentos.it/
+* http://antix.mepis.org/
 * http://www.tinycorelinux.net/
 * http://lubuntu.net/
 * http://vectorlinux.com/
