@@ -83,7 +83,38 @@
     git fetch origin
     git merge <tag name>
 
+### mergetool
+
+#### general
+
+```
+#use a different merge tool
+git mergetool -t gvimdiff
+```
+
+#### vimdiff
+
+##### layout
+
++--------------------------------+
+| LOCAL  |     BASE     | REMOTE |
++--------------------------------+
+|             MERGED             |
++--------------------------------+
+
+LOCAL:  A temporary file containing the contents of the file on the current branch.
+BASE:   A temporary file containing the common base for the merge.
+REMOTE: A temporary file containing the contents of the file to be merged.
+MERGED: The file containing the conflict markers.
+
+#### [meld](http://meldmerge.org/)
+
 # links
 
 * http://www.git-scm.com/book/en/v2/Git-Branching-Remote-Branches
 * http://stackoverflow.com/questions/17546171/how-to-delete-a-remote-branch-using-git
+* http://vim.wikia.com/wiki/A_better_Vimdiff_Git_mergetool
+* https://matthew-brett.github.io/pydagogue/vim_mergetool.html
+* http://genomewiki.ucsc.edu/index.php/Resolving_merge_conflicts_in_Git
+* https://www.kernel.org/pub/software/scm/git/docs/git-merge.html
+* http://www.git-scm.com/docs/git-mergetool
