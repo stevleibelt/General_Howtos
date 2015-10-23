@@ -208,3 +208,6 @@ ctrl+d #shift to the right
 # links
 
 * http://www.swaroopch.com/notes/vim/
+* http://vimcasts.org/
+* http://vim.wikia.com/wiki/Vim_Tips_Wiki
+* http://www.rosipov.com/blog/using-vim-for-writing-code/
