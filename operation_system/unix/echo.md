@@ -12,3 +12,7 @@
     * \r    -   carriage return (jump to beginning of current line)
     * \t    -   horizontal tab
     * \v    -   vertical tab
+
+# links
+
+* http://www.tecmint.com/echo-command-in-linux/
