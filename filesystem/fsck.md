@@ -18,6 +18,12 @@
 
     fsck -cfkty <drive> #do a lot of magic
 
+# force fsck on reboot
+
+    sudo touch /forcefsck
+    #if you can not create this file
+    sudo mount -o remount,rw / #afterwards retry the touch
+
 # links
 
 * https://wiki.archlinux.org/index.php/fsck
