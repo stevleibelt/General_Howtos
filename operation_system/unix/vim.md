@@ -202,7 +202,10 @@ ctrl+d #shift to the right
     mkdir -p .vim/bundle/Vundle.vim
     cd .vim/bundle/Vundle.vim
     git clone https://github.com/gmarik/Vundle.vim.git .
+    # install all plugins
     vim +PluginInstall +qall
+    # install all bundle
+    vim +BundleInstall +qall
     ```
 
 # links
