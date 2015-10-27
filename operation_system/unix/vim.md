@@ -38,6 +38,10 @@ h #left
 l #right
 j #down
 k #up
+H #highest to the top in the file
+M #highest to the middle in the file
+L #highest to the bottom in the file
+<number>G # move to the <numbered> line in the file
 ctrl+f #one page forward
 ctrl+b #one page back
 
@@ -68,7 +72,9 @@ e/E #jump to the "end" of the next word
 n #jumps to next "foo"
 N #jumps to next "foo" the other direction
 ta #moves "to" "a"
-fa #"findes" "a"
+fa #"findes" "a" forward
+Fa #"findes" "a" backward
+% #jumps to the nearest (), [], {}
 :g/pattern/ #show every line matching the regexp
 
 # search and replace
@@ -128,6 +134,7 @@ r #replace character under the cursor
 R #replace characters under the cursor until you press ESC
 s #substitue the chacatter under the cursor and enter insert mode
 d #the "delete" command (can be combined with other or move commands)
+d/<word> #deletes all text between the cursor and the word <word>
 D #like "d" but for the whole line
 dd #delete current line
 c #the "change" command (can be combined with other or move commands)
@@ -198,15 +205,24 @@ ctrl+d #shift to the right
 
 ## vundle
 
-    ```
-    mkdir -p .vim/bundle/Vundle.vim
-    cd .vim/bundle/Vundle.vim
-    git clone https://github.com/gmarik/Vundle.vim.git .
-    # install all plugins
-    vim +PluginInstall +qall
-    # install all bundle
-    vim +BundleInstall +qall
-    ```
+```
+mkdir -p .vim/bundle/Vundle.vim
+cd .vim/bundle/Vundle.vim
+git clone https://github.com/gmarik/Vundle.vim.git .
+# install all plugins
+vim +PluginInstall +qall
+# install all bundle
+vim +BundleInstall +qall
+```
+
+# vi style key bindings in the bash
+
+```
+#per session
+set -o vi
+#always
+echo 'set -o vi' >> ~/.bashrc
+```
 
 # links
 
@@ -214,3 +230,4 @@ ctrl+d #shift to the right
 * http://vimcasts.org/
 * http://vim.wikia.com/wiki/Vim_Tips_Wiki
 * http://www.rosipov.com/blog/using-vim-for-writing-code/
+* http://www.howtogeek.com/115051/become-a-vi-master-by-learning-these-30-key-bindings/
