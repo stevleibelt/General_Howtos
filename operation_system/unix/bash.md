@@ -45,6 +45,18 @@
     alias cd="ls -halt"
     unalias cd
 
+## variables
+
+```
+$$ = current pid
+!$ = last command issued
+$? = error code of last command
+$0 = command
+$1 = argument #1, also $2,$3,$4, etc.
+@ = full command line
+$_ = current shell
+```
+
 # links
 
 * http://ss64.com/bash/
