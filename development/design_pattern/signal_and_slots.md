@@ -95,3 +95,4 @@ $buttonClick->emit();
 * https://de.wikipedia.org/wiki/Signal-Slot-Konzept
 * http://www.osebboy.com/blog/signals-and-slots-for-php/
 * https://flowframework.readthedocs.org/en/2.0/TheDefinitiveGuide/PartIII/SignalsAndSlots.html
+* https://github.com/neos/flow
