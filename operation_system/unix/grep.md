@@ -1,3 +1,7 @@
+# general
+
+grep [options] <pattern> [<path or files>]
+
 # print all lines that are not matching
 
 ´´´
