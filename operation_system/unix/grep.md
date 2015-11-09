@@ -1,6 +1,6 @@
 # general
 
-grep [options] <pattern> [<path or files>]
+grep [options] <pattern> <path or files>
 
 # print all lines that are not matching
 
