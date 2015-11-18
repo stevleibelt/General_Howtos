@@ -1,4 +1,8 @@
+# example
+
+```
 rsync -avz -e ssh user@host:/path/to/source /path/to/destination/
+```
 
 # Links
 

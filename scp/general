@@ -1,1 +1,0 @@
-scp -i dest/to/key user@hst:dest/to/file/you/want/to/copy dest/for/copied/file
