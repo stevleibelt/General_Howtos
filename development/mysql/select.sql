@@ -24,10 +24,10 @@ SELECT IF(`my_column` IS NULL, 'no', 'yes') AS `Status`;
 -- use \G to get extended view
 -- @see: https://dev.mysql.com/doc/refman/5.0/en/explain-extended.html
 -- 
-EXPLAIN SELECT
+EXPLAIN [EXTENDED] SELECT
     *
 FROM
     `my_table`
 -- WHERE 
 --     add your condition
-\G;
+[\G];
