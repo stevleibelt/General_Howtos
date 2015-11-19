@@ -48,3 +48,4 @@
 * [blog skeleton](https://github.com/sculpin/sculpin-blog-skeleton)
 * [docker image](https://github.com/clue/docker-sculpin)
 * [presentation](https://github.com/jesusgoku/sculpin-presentation)
+* [building static websites with sculpin](https://opdavies.github.io/slides-phpsw-sculpin/)
