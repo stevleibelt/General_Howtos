@@ -7,4 +7,8 @@
 
 # links
 
+* https://wiki.archlinux.org/index.php/Nmap
+* https://nmap.org/
+* https://en.wikipedia.org/wiki/Nmap
 * http://www.cyberciti.biz/tips/linux-scanning-network-for-open-ports.html
+* http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/
