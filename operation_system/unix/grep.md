@@ -2,6 +2,12 @@
 
 grep [options] <pattern> <path or files>
 
+# exit with code 0 if any match was found
+
+```
+grep -q
+```
+
 # print all lines that are not matching
 
 ´´´
