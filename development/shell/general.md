@@ -42,12 +42,6 @@ $1-9    -   free for use
 
 $SUM=`expr 1+1`
 
-# links
-
-* http://tldp.org/LDP/abs/html/internalvariables.html
-* http://mywiki.wooledge.org/BashGuide/CompoundCommands
-* http://bash.cyberciti.biz/shell/academic/
-
 ## examples
 
 * read a file line by line - http://bash.cyberciti.biz/file-management/read-a-file-line-by-line/
@@ -55,5 +49,9 @@ $SUM=`expr 1+1`
 
 # links
 
+* http://tldp.org/LDP/abs/html/internalvariables.html
+* http://mywiki.wooledge.org/BashGuide/CompoundCommands
+* http://wiki.bash-hackers.org/commands/classictest
+* http://bash.cyberciti.biz/shell/academic/
 * http://stackoverflow.com/questions/3767267/check-if-file-exists
 * http://www.catonmat.net/download/bash-history-cheat-sheet.pdf

@@ -1,3 +1,11 @@
+# [] vs [[]]
+
+```
+Contrary to [, [[ prevents word splitting of variable values. So, if VAR="var with spaces", you do not need to double quote $VAR in a test - eventhough using quotes remains a good habit. Also, [[ prevents pathname expansion, so literal strings with wildcards do not try to expand to filenames. Using [[, == and != interpret strings to the right as shell glob patterns to be matched against the value to the left, for instance: [[ "value" == val* ]].
+```
+
+[source](http://www.tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_02.html)
+
 # test
 
 * write a test in braces [ test ]

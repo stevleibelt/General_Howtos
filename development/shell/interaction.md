@@ -49,3 +49,9 @@
     echo stev{e,o}  # output: steve stev-o
 
     touch /tmp/foo/{bar{.baz,.foo},baz{.foo,.bar}}   # creates files: bar.baz, bar.foo, baz.foo, baz.bar
+
+# links
+
+* http://bencane.com/2014/09/02/understanding-exit-codes-and-how-to-use-them-in-bash-scripts/
+* http://steve-parker.org/sh/exitcodes.shtml
+* http://www.tldp.org/LDP/abs/html/exit-status.html
