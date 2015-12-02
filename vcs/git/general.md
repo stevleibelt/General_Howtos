@@ -25,6 +25,10 @@
 
     git revert ...
 
+## revert an already pushed commit
+
+    git revert <commit checksum>
+
 ## checkout special commit
 
     git checkout <sha1>
@@ -174,3 +178,4 @@
 * http://www.pro-linux.de/artikel/2/1746/git-tutorium-teil-2.html
 * http://www.pro-linux.de/artikel/2/1752/git-tutorium-teil-3.html
 * http://www.pro-linux.de/artikel/2/1777/git-tutorium-teil-4-github.html
+* http://christoph.ruegg.name/blog/git-howto-revert-a-commit-already-pushed-to-a-remote-reposit.html
