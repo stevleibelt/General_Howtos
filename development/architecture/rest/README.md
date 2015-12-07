@@ -43,3 +43,7 @@ Always return an error instead of try to response something "half done".
 # Books
 
 * [0] Ajax and REST recipes - apress
+
+# Links
+
+* http://williamdurand.fr/2015/06/02/video-nobody-understands-rest/
