@@ -117,6 +117,20 @@ vim /etc/samba/smb.conf
 ##    path = /path/to/the/files
 ##    read only = no
 ##    valid users = userone,usertwo
+
+# validate configuration
+#   testparm -s
+
+# add the user
+#   smbpasswd -a userone
+# list existing users
+#   pdbedit -w -L
+
+# restart the service
+#   /etc/init.d/samba restart
+
+# add samba to the autostart
+#   update-rc.d samba defaults
 ```
 
 # error handling
