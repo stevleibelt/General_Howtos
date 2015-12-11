@@ -97,6 +97,28 @@
 * username  -   username on the server
 * workgroup -   workgroup on the server
 
+# simple howto
+
+```
+# based for debian
+# https://wiki.debian.org/SambaServerSimple
+apt-get samba samba-client
+vim /etc/samba/smb.conf
+
+# adapt
+## workgroup = <YOUR WORKGROUP>
+# share special path
+## [yourname]
+##    comment = your comment
+##    create mask = 0700
+##    directory mask = 0700
+##    guest ok = no
+##    locking = no
+##    path = /path/to/the/files
+##    read only = no
+##    valid users = userone,usertwo
+```
+
 # error handling
 
 ##  Unable to open printcap file /etc/printcap for read!
