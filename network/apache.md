@@ -54,6 +54,17 @@ ErrorLogFormat "[%t] [%l] [pid %P] %F: %E: [client %a] %M"
 
 add, for example, "umask 002" at the end of the file "/etc/apache2/envars".
 
+## font files like woff, woff2, ttf or eot are not interpreted in the browser
+
+add following lines in your .htaccess or host configuration
+
+```
+AddType  application/font-woff  .woff
+AddType  application/font-woff2  .woff2
+AddType  application/font-ttf  .ttf
+AddType  application/font-eot  .eot
+```
+
 # links
 
 * http://whoopis.com/howtos/apache-rewrite.html
