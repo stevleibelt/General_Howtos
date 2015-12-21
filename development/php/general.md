@@ -1,4 +1,4 @@
-# start php [internal web server](http://php.net/manual/en/features.commandline.webserver.php]
+# start php [internal web server](http://php.net/manual/en/features.commandline.webserver.php)
 
 ## basic example
 
