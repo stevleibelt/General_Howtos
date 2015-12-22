@@ -39,3 +39,4 @@ DDD tries to explain why the language, collaboration and context are the most im
 * [ddd by example](http://blog.mirkosertic.de/architecturedesign/dddexample)
 * [strategic ddd with context mapping](http://www.infoq.com/articles/ddd-contextmapping)
 * [bounded context](http://martinfowler.com/bliki/BoundedContext.html)
+* [clean architecture with ddd layering in php](www.slideshare.net/_leopro_/clean-architecture-with-ddd-layering-in-php-35793127)
