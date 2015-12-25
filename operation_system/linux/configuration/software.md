@@ -62,6 +62,7 @@
 * vlc
 * ffmpeg
 * gnash
+* fswebcam (use your web cam as your camera)
 
 # other
 
