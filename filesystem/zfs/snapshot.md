@@ -102,6 +102,7 @@
 
 # links
 
+* https://docs.oracle.com/cd/E23824_01/html/821-1448/recover-3.html
 * https://wiki.archlinux.org/index.php/ZFS#Experimenting_with_ZFS
 * http://www.freebsd.org/doc/handbook/zfs-zfs.html
 * http://googlux.com/zfs-snapshot.html
