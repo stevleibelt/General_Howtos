@@ -2,13 +2,13 @@
 
 add following code to your .bash_profile
 
->>>
+```
 #
 # ~/.bash_profile
 #
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
-<<<
+```
 
 # links
 
