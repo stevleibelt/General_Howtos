@@ -133,6 +133,22 @@ vim /etc/samba/smb.conf
 #   update-rc.d samba defaults
 ```
 
+# umask
+
+## example
+
+```
+create mask = 0664
+directory mask = 0775
+force create mode = 0664
+force directory mode = 0775
+```
+
+## links
+
+* http://www.bodenzord.com/archives/53
+* https://askubuntu.com/questions/210808/set-umask-set-permissions-and-set-acl-but-samba-isnt-using-those
+
 # error handling
 
 ##  Unable to open printcap file /etc/printcap for read!
