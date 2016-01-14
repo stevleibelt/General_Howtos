@@ -36,3 +36,9 @@ rackup
 * no stylish slides
 
 ## using [phpdeck](https://github.com/jacroe/phpdeck)
+
+## using [reveal.js](https://github.com/hakimel/reveal.js)
+
+## links
+
+* https://dzone.com/articles/markdown-javascript-great-html
