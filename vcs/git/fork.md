@@ -4,23 +4,24 @@
 
     git remote -v
 
-## add source as upstream
+## add source as upstream or original
 
-    git remote add upstream https://git.my-domain.org/repository
+    git remote add original https://git.my-domain.org/repository
 
-## fetch from upstream
+## fetch from original
 
-    # update upstream branches
-    git fetch upstream
+    # update original branches
+    git fetch original
     # switch to local master branch
-    git checkout master
+    git checkout master #the branch you want to update
     # merge
-    git merge upstream/master
+    git merge original/master
     # or rebase if needed
-    git rebase upstream/master
+    git rebase original/master
 
 # links
 
 * https://help.github.com/articles/fork-a-repo
 * https://help.github.com/articles/syncing-a-fork
 * https://stackoverflow.com/questions/8948803/what-does-git-remote-add-upstream-help-achieve
+* http://stackoverflow.com/questions/21917459/git-set-upstream-to-origin#21917622
