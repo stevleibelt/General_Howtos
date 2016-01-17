@@ -45,11 +45,17 @@ Docker is server and client.
 
 ### install software
 
+    #example for an arch linux
     docker run <vendor>/<image> pacman -S <software>
 
 ## save image status
 
     docker commit [options] <container_id> [repository [tag]]
+
+## where is stuff stored (path)
+
+    #inside the path below, cat a file prefixed with repository
+    cd /var/lib/docker
 
 # links
 
