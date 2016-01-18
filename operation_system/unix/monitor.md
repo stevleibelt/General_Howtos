@@ -1,7 +1,8 @@
-# set options via xorg.conf
+# set options via xorg.conf - disable power management
 
 ```
 # vim /etc/X11/xorg.conf.d/10-monitor.conf
+# @see: https://wiki.archlinux.org/index.php/Display_Power_Management_Signaling
 "Section "ServerLayout"
     Identifier "ServerLayout0"
     Option "StandbyTime" "0"
