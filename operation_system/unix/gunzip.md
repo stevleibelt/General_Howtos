@@ -6,7 +6,7 @@
 
 ## do not remove the source file
 
-    gunzip -R <path/to/the/file.gz>
+    gunzip --keep <path/to/the/file.gz>
 
 # links
 
