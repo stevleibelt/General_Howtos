@@ -1,6 +1,6 @@
 -- 
 -- create my_table
--- https://dev.mysql.com/doc/refman/5.1/en/create-table.html
+-- @see: https://dev.mysql.com/doc/refman/5.1/en/create-table.html
 -- 
 
 CREATE TABLE [IF NOT EXISTS] `my_table`
@@ -21,3 +21,7 @@ LIKE `original_table`;
 
 CREATE TABLE `copy_of_original_table`
 SELECT * FROM `original_table`;
+
+-- autoincrement
+-- @see: https://dev.mysql.com/doc/refman/5.7/en/example-auto-increment.html
+-- "When the column reaches the upper limit of the data type, the next attempt to generate a sequence number fails."
