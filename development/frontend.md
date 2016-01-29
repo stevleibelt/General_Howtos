@@ -20,6 +20,14 @@
 * [What forces layout / reflow](https://gist.github.com/paulirish/5d52fb081b3570c81e3a)
 * [CSS Indexes](https://drafts.csswg.org/indexes/)
 * [What are the best JavaScript IDEs and editors?](http://www.slant.co/topics/1686/~javascript-ides-and-editors)
+* guides for frontend developers
+    * [7](http://www.sitepoint.com/20-docs-guides-front-end-developers-7/)
+    * [6](http://www.sitepoint.com/20-docs-guides-front-end-developers-6/)
+    * [5](http://www.sitepoint.com/20-docs-guides-front-end-developers-5/)
+    * [4](http://www.sitepoint.com/20-docs-guides-front-end-developers-4/)
+    * [3](http://www.sitepoint.com/20-docs-guides-front-end-developers-3/)
+    * [2](http://www.sitepoint.com/20-docs-guides-front-end-developers-2/)
+    * [1](http://www.sitepoint.com/20-docs-guides-front-end-developers-1/)
 
 # editors
 
