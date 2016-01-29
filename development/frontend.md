@@ -1,0 +1,27 @@
+# usefull links
+
+* [Meteor: The Official Guide](http://guide.meteor.com/)
+* [Gethtml](https://gethtml.at/)
+* [Learn ES2015](https://babeljs.io/docs/learn-es2015/)
+* [Flexbox Froggy](http://flexboxfroggy.com/)
+* [JavaScript Developer Survey Results](https://ponyfoo.com/articles/javascript-developer-survey-results)
+* [Flexbox.help](http://flexbox.help/)
+* [CDN Comparison](http://cdncomparison.com/)
+* [Angular Cheat Sheet](https://angular.io/docs/js/latest/guide/cheatsheet.html)
+* [Promisees](http://bevacqua.github.io/promisees/)
+* [Filter Blend](http://ilyashubin.github.io/FilterBlend/)
+* [Mix-Blend-Mode CSS property test](http://arthurgouveia.com/css-mix-blend-mode/)
+* [Regular Expressions 101](https://regex101.com/)
+* [ServiceWorker Cookbook](https://serviceworke.rs/)
+* [JavaScripting](https://www.javascripting.com/)
+* [HTTP Security Best Practice](https://httpsecurityreport.com/best_practice.html)
+* [Notes on Using ARIA in HTML](http://w3c.github.io/aria-in-html/)
+* [PostCSS.parts](http://postcss.parts/)
+* [What forces layout / reflow](https://gist.github.com/paulirish/5d52fb081b3570c81e3a)
+* [CSS Indexes](https://drafts.csswg.org/indexes/)
+* [What are the best JavaScript IDEs and editors?](http://www.slant.co/topics/1686/~javascript-ides-and-editors)
+
+# editors
+
+* [slap](https://github.com/slap-editor/slap)
+* [zed](http://zedapp.org/)
