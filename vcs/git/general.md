@@ -37,6 +37,10 @@
 
     git checkout master
 
+## switch back to previous branch
+
+    git checkout -
+
 # commit
 
     git commit -a               #commit all changes
