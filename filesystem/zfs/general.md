@@ -108,3 +108,5 @@
 * https://wiki.archlinux.org/index.php/Experimenting_with_ZFS#Simulate_a_Disk_Failure_and_Rebuild_the_Zpool
 * https://wiki.archlinux.org/index.php/ZFS#Embed_the_archzfs_packages_into_an_archiso
 * http://solarisinternals.com/wiki/index.php/ZFS_Best_Practices_Guide
+* https://fosdem.org/2016/schedule/event/zfs/attachments/slides/869/export/events/attachments/zfs/slides/869/FOSDEM_2016_ZFS.pdf
+* http://www.zfsbook.com
