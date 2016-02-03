@@ -64,7 +64,7 @@
 
 # import a pool under different name
 
-    zpool import <source pool name> <destination pool name>
+    zpool import <source pool name> [<destination pool name>]
 
 # try zpool import without mounting it
 
