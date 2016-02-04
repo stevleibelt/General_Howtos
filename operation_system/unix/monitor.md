@@ -27,6 +27,9 @@ xset dpms 60 60 60
 # force the screen to turn off
 # if you do this in a script, prefix this with >>sleep 1 &&<<
 xset dpms force off
+# disable dpms
+xset s off
+xset -dpms
 ```
 
 # use turn monitor off when using slock and reset values when turning back on
@@ -43,3 +46,4 @@ xset dpms force off
 * https://wiki.archlinux.org/index.php/Display_Power_Management_Signaling
 * http://www.computerhope.com/unix/uxset.htm
 * https://bbs.archlinux.org/viewtopic.php?id=114993
+* https://wiki.archlinux.org/index.php/XScreenSaver#DPMS_and_blanking_settings
