@@ -60,6 +60,11 @@ location / {
 header("Access-Control-Allow-Origin: *");
 ```
 
+# browser extensions (the key word is "disable web security")
+
+* [firefox](https://addons.mozilla.org/de/firefox/addon/cors-everywhere)
+* [chrome](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi)
+
 # links
 
 * http://enable-cors.org
