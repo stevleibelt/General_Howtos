@@ -50,3 +50,5 @@ for LOCAL_ENCODING in `cat $LOCAL_RESULT_FILE_PATH | grep ok | sed -e 's/^\(.*\)
     iconv -f CP850 -t UTF-8 $LOCAL_BROKEN_FILE_PATH > $LOCAL_CONVERTED_FILE_PATH
 done
 ```
+Open each file and check if your fitting special characters are looking good.
+"WINDOWS-1258" and "CP850" are good blind guesses here.
