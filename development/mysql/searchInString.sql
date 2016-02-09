@@ -51,3 +51,14 @@ JOIN `other_table` AS `o`
 -- 
 -- 5.5.35-0ubuntu0.12.10.2 
 -- SELECT @@version;
+
+-- 
+-- search for entries that starts or ends with at least one whitespace
+
+SELECT *
+FROM `my_table`
+WHERE CHAR_LENGTH(`my_column`) > CHAR_LENGTH(TRIM(`my_column`))
+
+SELECT *
+FROM `my_table`
+WHERE `my_column` != TRIM(`my_column`)

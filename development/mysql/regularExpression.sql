@@ -60,3 +60,11 @@ WHERE `my_column` REGEXP '[[:<:]]foo[[:>:]]';
 SELECT * 
 FROM `my_table` 
 WHERE `my_column` REGEXP 'foo|bar|foobar';
+
+-- 
+-- search for things ending with at least one tab
+-- 
+
+SELECT *
+FROM `my_table`
+WHERE `my_column` REGEXP '^.*\t$'
