@@ -79,6 +79,13 @@ grep  '\<hello' *
 ´´´
 grep  'hello\>' *
 ´´´
+
+# do not search in binary files
+
+```
+grep -I '<pattern>' '<path>'
+```
+
 # and
 
 ```
