@@ -86,6 +86,14 @@ grep  'hello\>' *
 grep -I '<pattern>' '<path>'
 ```
 
+# exlude directory
+
+```
+grep --exclude-dir=<path> '<pattern>' '<path>'
+#exclude multiple dirs
+grep --exclude-dir={<path>,<path>} '<pattern>' '<path>'
+```
+
 # and
 
 ```
