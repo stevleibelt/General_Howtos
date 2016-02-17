@@ -37,3 +37,16 @@
 -- http://alvinalexander.com/blog/post/mysql/add-user-mysql
 -- https://dev.mysql.com/doc/refman/5.1/en/create-user.html
 -- http://www.mysqltutorial.org/mysql-create-user.aspx
+
+-- whoami / show current user
+
+    SELECT USER();
+    SELECT CURRENT_USER();
+
+-- show user rights
+
+    SHOW GRANTS FOR USER();
+
+-- show general informations
+
+    \s
