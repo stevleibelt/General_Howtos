@@ -19,6 +19,7 @@
     git remote show origin          #list all remote branches - realtime information
     git ls-remote --heads origin    #list all remote branches - realtime information
     git branch -a                   #list all local and remote branches - cached information
+    git branch --merged origin/master | grep -v 'master'    #list all local branches that are merged into the master already
 
 ## update remote branches
 
@@ -63,6 +64,10 @@
 ## remove local branch
 
     git branch -d my_branch
+
+## remove all local branches that are merged into the master already
+
+    git branch --merged origin/master | grep -v 'master' | xargs -n 1 git branch -d
 
 ## remove remote branch after local deletion
 
