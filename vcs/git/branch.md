@@ -109,6 +109,20 @@ MERGED: The file containing the conflict markers.
 
 #### [meld](http://meldmerge.org/)
 
+## rename
+
+### renmame a not checked out branch
+
+```
+git branch -m <old name> <new name>
+```
+
+### rename current branch
+
+```
+git branch -m <new name>
+```
+
 # links
 
 * http://www.git-scm.com/book/en/v2/Git-Branching-Remote-Branches
