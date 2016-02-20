@@ -5,15 +5,16 @@
 ```
 #@see: https://hub.docker.com/_/php/
 application:
-  image: php:5.6-apache
+  command: php -S 0.0.0.0:5000 -t /var/www/html
+  image: php:5.6-cli
   links:
     - database
     - redis
   ports:
-    - "5000:5000"
+    - 5000:5000
   restart: always
   volumes:
-    - ./application:/srv/application
+    - ./application:/var/www/html
 #@see: https://hub.docker.com/_/mariadb/
 database:
   environment:
@@ -22,6 +23,8 @@ database:
     MYSQL_USER: user
     MYSQL_PASSWORD: resu
   image: mariadb:10.1.11
+  ports:
+    - 3306:3306
   restart: always
   volumes:
     - ./database:/var/lib/mysql
