@@ -36,3 +36,11 @@ WHERE `datetime_column` BETWEEN '2014-04-21 00:00:00' AND '2014-04-21 23:59:59';
 SELECT *
 FROM `table_one`
 WHERE `datetime_column` BETWEEN CURRENT_DATE AND (CURRENT_DATE + INTERVAL 1 DAY - INTERVAL 1 SECOND)
+
+-- calculate difference between two dates
+-- @see: http://dev.mysql.com/doc/refman/5.5/en/date-and-time-functions.html#function_period-diff
+SELECT DATEDIFF('1970-01-01 00:00:00', '1983-10-06 00:00:00');
+-- @see: http://dev.mysql.com/doc/refman/5.5/en/date-and-time-functions.html#function_timediff
+SELECT TIMEDIFF('1970-01-01 00:00:00', '1983-10-06 00:00:00');
+-- @see: http://dev.mysql.com/doc/refman/5.5/en/date-and-time-functions.html#function_timestampdiff
+SELECT TIMESTAMPDIFF(MONTH, '1970-01-01 00:00:00', '1983-10-06 00:00:00'); -- MONTH, YEAR, MINUTE
