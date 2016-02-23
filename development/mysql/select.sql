@@ -31,3 +31,14 @@ FROM
 -- WHERE 
 --     add your condition
 [\G];
+
+-- 
+-- explicit tell mysql to use this index
+-- @see: http://forums.mysql.com/read.php?10,99557
+-- 
+
+SELECT
+    <my column>
+FROM
+    <my table>
+    USE INDEX(<my index>);
