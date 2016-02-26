@@ -24,6 +24,8 @@ WHERE `column_one` > `column_two`
 
 ## simple inner join
 
+* only possible if you define the foreign key in your schema.xml
+
 ```php
 $query = TableOneQuery::create();
 $query->useTableTwo()
@@ -45,6 +47,7 @@ WHERE `table_two`.`foo` = 'Bar';
 ```php
 $query = TableOneQuery::create();
 $query->filterByFoo('foobar');
+//by using useQuery, you are in the scope where you are using an instance of the TableTwoQuery
 $query->useTableTwoQuery('table_two_columne_one')
     ->filterByColumnOne('bar')
 ->endUse();
