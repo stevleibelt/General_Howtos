@@ -33,11 +33,13 @@ tput is usefull to get and set terminal attributes.
 
 ## colors
 
-Get a list of all available colors.
+### get a list of all available colors
 
 ```
 echo $LS_COLORS 
 ```
+
+### list of default colors
 
 * 0 -   black
 * 1 -   red
@@ -47,6 +49,14 @@ echo $LS_COLORS
 * 5 -   lila
 * 6 -   light blue
 * 7 -   grey
+
+### example
+
+```
+tput setaf 2 #set foreground color to green
+echo 'this is a text'
+tput sgr0    #reset foreground color
+```
 
 ## here doc
 
