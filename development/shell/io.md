@@ -1,3 +1,7 @@
+# general
+
+Also take a look to '<repository root>/development/bash/colors.md'.
+
 # output
 
 ## echo
@@ -28,6 +32,12 @@ tput is usefull to get and set terminal attributes.
 * setab <i> -   sets background color
 
 ## colors
+
+Get a list of all available colors.
+
+```
+echo $LS_COLORS 
+```
 
 * 0 -   black
 * 1 -   red

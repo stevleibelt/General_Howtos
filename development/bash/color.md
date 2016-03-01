@@ -1,3 +1,7 @@
+# general
+
+Also take a look to '<repository root>/development/shell/io.md'.
+
 # links of colors
 
 * reset test    '\e[0m'
