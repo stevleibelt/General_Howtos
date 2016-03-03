@@ -14,6 +14,22 @@ mount | grep "^/dev"
 stat <path to file or directory>
 ```
 
+# basic check
+
+```
+#compare numbers
+wc -c /dev/<device>  #can we read all sectors?
+#with
+fdisk -l /dev/<device>
+```
+
+# check with smartctl
+
+```
+smartctl -a /dev/<device>       #list a lot of informations
+smartctl -t long /dev/<device>  #start a long test, check with "-a"
+```
+
 # error
 
 ## "too many open files"
