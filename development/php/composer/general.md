@@ -37,6 +37,11 @@
 
     composer create-project <vendor>/<product> path 0.0.1
 
+# usefull options
+
+* -- profile: profile the run
+* --prefer-source: force clone source instead of downloading an archie
+
 # links
 
 * https://getcomposer.org/
