@@ -47,4 +47,17 @@ SELECT
     SUBSTRING(`my_column`, LOCATE('my_search_string', `my_column`)) AS my_to_group_column
 FROM
     `my_table`
-GROUP BY my_to_group_column
+GROUP BY 
+    `my_to_group_column`;
+
+-- 
+-- easy substring when you want to get "from the beginning until" strings
+-- e.g. you want to have the local part from an email address
+-- @see:
+    https://dev.mysql.com/doc/refman/5.0/en/string-functions.html#function_substring-index
+-- 
+
+SELECT
+    SUBSTRING_INDEX(`email_address`, '@', 1)
+FROM
+    `my_table`;

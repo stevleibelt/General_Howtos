@@ -68,3 +68,15 @@ WHERE `my_column` REGEXP 'foo|bar|foobar';
 SELECT *
 FROM `my_table`
 WHERE `my_column` REGEXP '^.*\t$'
+
+-- 
+-- search for characters that are not included in the string
+-- 
+
+SELECT 
+    `my_column`
+FROM 
+    `my_table`
+WHERE 
+    -- REGEXP to get all local parts where the characters inside the [] are NOT 
+    `my_column` REGEXP '[^a-zA-Z0-9\\#\\}\\|\\{\\*\\~\\=\\/\\^\\!\\&\\?\'\\+\\._-]';
