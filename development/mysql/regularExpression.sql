@@ -71,6 +71,8 @@ WHERE `my_column` REGEXP '^.*\t$'
 
 -- 
 -- search for characters that are not included in the string
+-- @see
+--  https://dev.mysql.com/doc/refman/5.5/en/regexp.html#operator_not-regexp
 -- 
 
 SELECT 
