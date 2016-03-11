@@ -153,5 +153,5 @@ FooQuery::create()
 
 # links
 
-* http://propelorm.org/reference/model-criteria.html
+* http://propelorm.org/Propel/reference/model-criteria
 * http://propelorm.org/blog/2011/02/02/how-can-i-write-this-query-using-an-orm-.html
