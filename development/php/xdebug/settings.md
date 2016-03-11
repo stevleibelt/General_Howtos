@@ -32,6 +32,21 @@
 | xdebug.show_local_vars            | 0         | show all variables in top most scope |
 | xdebug.show_mem_delta             | 0         | show differences in memory usage between function calls |
 
+# increase var_dump nesting level
+
+```
+; with sane limis
+xdebug.var_display_max_depth = 5
+xdebug.var_display_max_children = 256
+xdebug.var_display_max_data = 1024 
+
+
+; with no limits
+; (maximum nesting is 1023)
+xdebug.var_display_max_depth = -1 
+xdebug.var_display_max_children = -1
+xdebug.var_display_max_data = -1 
+```
 
 # links
 
