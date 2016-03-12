@@ -62,6 +62,7 @@ systemctl stop <your name>.timer
 
 # links
 
+* http://jason.the-graham.com/2013/03/06/how-to-use-systemd-timers/
 * https://wiki.archlinux.org/index.php/Systemd/Timers
 * http://www.freedesktop.org/software/systemd/man/systemd.timer.html
 * http://northernlightlabs.se/drupal.cronjob.with.systemd
