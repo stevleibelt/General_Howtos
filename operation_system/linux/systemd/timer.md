@@ -11,7 +11,9 @@ timers are a way to create a cronjob via systemd.
 ```
 sudo su
 cd /etc/systemd/system
-echo "[Unit]
+vim <your-name>.service
+
+[Unit]
 Description=<add some description>
 After=network.target
 
@@ -20,7 +22,6 @@ Type=simple
 ExecStart=<path to your script>
 User=<user name>
 Group=<group name>
-" > <your-name>.service
 ```
 
 ### now, we need to create the timer file
@@ -28,16 +29,18 @@ Group=<group name>
 ```
 sudo su
 cd /etc/systemd/system
-echo "[Unit]
+vim <your-name>.timer
+
+[Unit]
 Description=<add some description>
 
 [Timer]
-OnBootSec=5min
-OnUnitActiveSec=5min
+#OnBootSec=5min
+#OnUnitActiveSec=5min
+#OnCalendar=weekly
 
 [Install]
 WantedBy=multi-user.target
-" > <your-name>.timer
 ```
 
 ### for testing
