@@ -12,3 +12,9 @@
     - cleanup_disk
   when: number_of_directories_in_the_root.stdout > 30
 ```
+
+# links
+
+* http://docs.ansible.com/ansible/shell_module.html
+* http://docs.ansible.com/ansible/playbooks_conditionals.html
+* http://docs.ansible.com/ansible/playbooks_variables.html#registered-variables
