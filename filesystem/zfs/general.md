@@ -93,6 +93,7 @@
 
 # links
 
+* http://stoneyforest.net/~chris/blog/freebsd/zfs/maint.html
 * https://pthree.org/2012/12/07/zfs-administration-part-iv-the-adjustable-replacement-cache/
 * https://wiki.archlinux.org/index.php/ZFS#Encryption_in_ZFS_on_linux
 * https://pthree.org/2013/01/03/zfs-administration-part-xvii-best-practices-and-caveats/
