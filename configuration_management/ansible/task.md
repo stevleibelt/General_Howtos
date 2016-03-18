@@ -32,6 +32,23 @@
   when: your_file_status.exists = False
 ```
 
+## execute shell script
+
+```yml
+# links:
+#   http://docs.ansible.com/ansible/script_module.html
+- name: Execute via shell
+  shell: my_script.sh #you can use "<", ">", ">>" etc
+
+#   http://docs.ansible.com/ansible/shell_module.html
+- name: Execute via command
+  command: my_script.sh
+
+#   http://docs.ansible.com/ansible/command_module.html
+- name: Execut via script
+  script: <path to>/my_script.sh an_argument another_argument
+```
+
 # links
 
 * http://docs.ansible.com/ansible/shell_module.html
