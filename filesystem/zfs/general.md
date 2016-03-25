@@ -1,19 +1,35 @@
 # prepare empty disk and add gpt/efi lable
 
-    gdisk /dev/<device>
+```
+gdisk /dev/<device>
+```
 
 # create pool "my pool"
 
-    ls -lah /dev/disk/by-id
-    zpool create -f -m </my/mount/point> [-o $propertyName] <my pool>  mirror|raidz id1[ id2[ id3]]
+```
+#use one of the following methods to determine you uniq id
+lsblk
+blkid /dev/sdX
+ls -lah /dev/disk/by-uuid
+#create your pool
+zpool create -f -m </my/mount/point> [-o $propertyName] <my pool>  mirror|raidz id1[ id2[ id3]]
+```
 
 # create data set
 
-    zfs create <pool name>/<data set name>
+```
+#for 512 byte sectors
+zpool create <pool name> <first device> [...]
+
+#for 4k sectors
+zpool create -o ashift=12 <pool name> mirror <first device> [...]
+```
  
 # delete data set
 
-    zfs destroy <pool name>/<data set name>
+```
+zfs destroy <pool name>/<data set name>
+```
 
 ## options
 
@@ -26,70 +42,110 @@
 
 # set mountpoint (if needed)
 
-    zfs set mountpoint=</path/to/mountpoint> <pool name>
-    zfs set mountpoint=</path/to/mountpoint/of/dataset> <pool name>/<data set name>
+```
+zfs set mountpoint=</path/to/mountpoint> <pool name>
+zfs set mountpoint=</path/to/mountpoint/of/dataset> <pool name>/<data set name>
+```
 
 # set quota
 
-    # set quota to 10 GB
-    zfs set quota=10G <pool name>[/<data set name>]
+```
+# set quota to 10 GB
+zfs set quota=10G <pool name>[/<data set name>]
 
-    # remove quota
-    zfs set quota=none <pool name>[/<data set name>]
+# remove quota
+zfs set quota=none <pool name>[/<data set name>]
+```
 
 # get all flags of data set
 
-    zfs get all <pool name>[/<data set name>]
+```
+zfs get all <pool name>[/<data set name>]
+```
 
 # add compression to data set
 
-    zfs set compression=on <pool name>[/<data set name>]
+```
+zfs set compression=on <pool name>[/<data set name>]
+```
 
 # list space per data set
 
-    zfs list -o space
+```
+zfs list -o space
+```
 
 * http://docs.oracle.com/cd/E19253-01/819-5461/gavwg/index.html
 
-    zpool events -v
-    zpool history $tank
-    zpool status -v
-    zpool status -x
-    zpool status $tank
-    zpool clear $tank
+```
+zpool events -v
+zpool history $tank
+zpool status -v
+zpool status -x
+zpool status $tank
+zpool clear $tank
+```
 
 # list available pools
 
-    zpool import
+```
+zpool import
+```
 
 # import a pool under different name
 
-    zpool import <source pool name> [<destination pool name>]
+```
+zpool import <source pool name> [<destination pool name>]
+```
 
 # try zpool import without mounting it
 
-    zpool import -N
+```
+zpool import -N
+```
 
 # import pool for current run (not permanently) with different root path
 
-    zpool import -R </path/to/mountpoint> <pool name>
+```
+zpool import -R </path/to/mountpoint> <pool name>
+```
 
 # replace unavailable disk
 
-    zpool status
-    zpool detach <pool name> <dead device>
+```
+zpool status
+zpool detach <pool name> <dead device>
+```
 
 # stop scrub
 
-    zpool scrub -s <pool name>
+```
+zpool scrub -s <pool name>
+```
 
 # limit the maximum arc size
 
-    touch /etc/modprobe.d/zfs.conf
-    # for a limit of 2 GiB
-    echo "options zfs zfs_arc_max=2147483648" > /etc/modprobe.d/zfs.conf
-    # for a limit of 4 GiB
-    echo "options zfs zfs_arc_max=4294967296" > /etc/modprobe.d/zfs.conf
+```
+touch /etc/modprobe.d/zfs.conf
+# for a limit of 2 GiB
+echo "options zfs zfs_arc_max=2147483648" > /etc/modprobe.d/zfs.conf
+# for a limit of 4 GiB
+echo "options zfs zfs_arc_max=4294967296" > /etc/modprobe.d/zfs.conf
+```
+
+# the 4k sector /advanced format performance issue
+
+* lot of common hard disk drives are listed in the [arch linux wiki](https://wiki.archlinux.org/index.php/Advanced_Format)
+
+## how to determine if the hdd has af/4k sectors?
+
+```
+cat /sys/class/block/sdX/queue/physical_block_size
+cat /sys/class/block/sdX/queue/logical_block_size
+
+hdparm -I /dev/sdX
+```
+
 
 # links
 
@@ -113,3 +169,4 @@
 * http://solarisinternals.com/wiki/index.php/ZFS_Best_Practices_Guide
 * https://fosdem.org/2016/schedule/event/zfs/attachments/slides/869/export/events/attachments/zfs/slides/869/FOSDEM_2016_ZFS.pdf
 * http://www.zfsbook.com
+* http://wiki.illumos.org/display/illumos/ZFS+and+Advanced+Format+disks
