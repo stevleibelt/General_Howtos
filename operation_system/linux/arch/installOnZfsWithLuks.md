@@ -105,3 +105,4 @@ mkdir -p /root/.gnupg/S.dirmngr
 * https://wiki.archlinux.org/index.php/Installing_Arch_Linux_on_ZFS
 * https://wiki.archlinux.org/index.php/ZFS#Swap_volume
 * http://www.jasonrm.net/articles/2013/10/08/arch-linux-zfs-root/
+* https://www.combustible.me/wordpress/2015/10/16/encrypted-zfs-l2arc-and-zil-on-ubuntu-14-04/
