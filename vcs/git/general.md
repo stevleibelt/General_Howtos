@@ -118,6 +118,9 @@
 
 ## push to repository
 
+    #current head
+    git push origin HEAD
+    #to another head
     git push origin 1.2.3
 
 # squashing
