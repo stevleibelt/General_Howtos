@@ -2,6 +2,12 @@
 
     groupadd <name>
 
+# delete group
+
+```
+groupdel <name>
+```
+
 # list groups
 
     cat /etc/group | sort | less
