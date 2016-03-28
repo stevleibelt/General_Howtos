@@ -92,10 +92,23 @@ zpool clear $tank
 zpool import
 ```
 
-# import a pool under different name
+# import a pool under different name/rename
 
 ```
 zpool import <source pool name> [<destination pool name>]
+```
+
+# rename a data set
+
+```
+#can also be used to reallocate/move a pool data set
+zfs rename <pool name/source data set name> <pool name/destination data set name>
+```
+
+# export a pool
+
+```
+zpool export <pool name>
 ```
 
 # try zpool import without mounting it
