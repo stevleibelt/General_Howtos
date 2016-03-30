@@ -2,6 +2,12 @@
 
     groupadd <name>
 
+# delete group
+
+```
+groupdel <name>
+```
+
 # list groups
 
     cat /etc/group | sort | less
@@ -13,6 +19,10 @@
 # add user to group
 
     usermod -a -G $group,$group $user
+    #or
+    gpasswd -a <user name> <group name>
+    #make current user session aware of this new group
+    newgrp <group name>
 
 # add groupid
 

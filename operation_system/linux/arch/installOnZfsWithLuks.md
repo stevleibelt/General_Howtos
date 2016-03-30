@@ -60,7 +60,11 @@ blkid
 ## create pool
 
 ```
+#for 512 byte sectors
 zpool create <pool name> /dev/mapper/<luks pool name>
+
+#for 4k sectors
+zpool create -o ashift=12 <pool name> mirror <first device> <second device>
 ```
 
 ## Continue with "Create necessary filesystems" from the official [arch linux wiki](https://wiki.archlinux.org/index.php/Installing_Arch_Linux_on_ZFS#Create_necessary_filesystems)
@@ -100,8 +104,22 @@ mkdir -p /root/.gnupg/S.dirmngr
 ```
 * retry
 
+# the 4k sector /advanced format performance issue
+
+* lot of common hard disk drives are listed in the [arch linux wiki](https://wiki.archlinux.org/index.php/Advanced_Format)
+
+## how to determine if the hdd has af/4k sectors?
+
+```
+cat /sys/class/block/sdX/queue/physical_block_size
+cat /sys/class/block/sdX/queue/logical_block_size
+
+hdparm -I /dev/sdX
+```
+
 # links
 
 * https://wiki.archlinux.org/index.php/Installing_Arch_Linux_on_ZFS
 * https://wiki.archlinux.org/index.php/ZFS#Swap_volume
 * http://www.jasonrm.net/articles/2013/10/08/arch-linux-zfs-root/
+* https://www.combustible.me/wordpress/2015/10/16/encrypted-zfs-l2arc-and-zil-on-ubuntu-14-04/
