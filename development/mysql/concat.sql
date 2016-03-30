@@ -23,3 +23,18 @@ SELECT
     GROUP_CONCAT(`my_table`.`id` SEPARATOR ', ')
 FROM
     `my_table`
+
+-- concat by using a subquery
+
+SELECT
+    `my_table`.`id`,
+    (
+        SELECT
+            GROUP_CONCAT(`my_column` SEPARATOR ', ')
+        FROM
+            `my_other_table`
+        WHERE
+            `my_other_table`.`my_table_id` = `my_table`.`id`
+    ) AS `my other table entries`
+FROM
+    `my_table`
