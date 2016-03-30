@@ -55,7 +55,7 @@
 
     git checkout <local branch name>
 
-# switch to a tag of master
+## switch to a tag of master
 
     git checkout master
     git pull
@@ -87,6 +87,11 @@
     #git fetch --tags origin
     git fetch origin
     git merge <tag name>
+
+### resolve a conflict
+
+To mark a conflict/file as resolved, simple add it to the staging with git add <directory or file name>.
+For solving it in a visual way, try to use git mergetool (see section below).
 
 ### mergetool
 
