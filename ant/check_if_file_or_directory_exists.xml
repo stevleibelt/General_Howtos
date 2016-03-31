@@ -1,0 +1,11 @@
+<!-- @see: http://stackoverflow.com/questions/6334939/how-to-check-if-directory-exists-before-deleting-it-using-ant -->
+<!-- @see: http://theoreticaltechstuff.blogspot.de/2010/10/ant-example-check-if-directory-is-empty.html -->
+<if>
+    <available file="path/to/your/file/or/directory" />
+    <then>
+        <echo message="your file or directory exists" />
+    </then>
+    <else>
+        <echo message="your file or directory does not exist" />
+    </else>
+</if>

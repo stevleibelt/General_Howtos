@@ -1,0 +1,12 @@
+<!-- @see: http://theoreticaltechstuff.blogspot.de/2010/10/ant-example-check-if-directory-is-empty.html -->
+<if>
+     <length length="0" when="greater">
+         <fileset dir="path/to/your/directory" followsymlinks="false"/>
+     </length>
+     <then>
+        <echo message="your directory is not empty" />
+     </then>
+     <else>
+        <echo message="your directory is empty" />
+     </else>
+</if>
