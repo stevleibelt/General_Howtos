@@ -22,6 +22,15 @@ find /my/path -user foo -and -size +1M -ls
 find . [-type d] [-type f] -empty [-maxdepth <integer>]
 ```
 
+# filter out hidden files or directories
+
+```
+#@see: http://www.linuxquestions.org/questions/linux-general-1/how-do-i-make-find-exclude-hidden-files-files-613793/
+find . [-type f] -not -name ".*"
+#or
+find . \( ! -regex '.*/\..*' }) [-type f]
+```
+
 # find by time
 
 * -amin     -   acces in last n minutes
