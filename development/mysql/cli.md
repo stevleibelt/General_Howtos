@@ -1,12 +1,16 @@
 # list process
 
-    SHOW PROCESSLIST;
-    #verbose
-    SHOW FULL PROCESSLIST;
+```
+SHOW PROCESSLIST;
+#verbose
+SHOW FULL PROCESSLIST;
+```
 
 # kill process
 
-    kill [connection|query] <id>
+```
+kill [connection|query] <id>
+```
 
 # links
 
