@@ -36,8 +36,12 @@ smartctl -t long /dev/<device>  #start a long test, check with "-a"
 
 ### current limits
 
+    #current number of open files
     cat /proc/sys/fs/file-nr
     <number of allocated file handlers> <number of allocated but unused file handlers> <maximum number of file handlers>
+
+    #current limit
+    cat cat /proc/sys/fs/file-max
 
 ### adapt
 
@@ -49,3 +53,4 @@ smartctl -t long /dev/<device>  #start a long test, check with "-a"
 
 * http://www.thegeekstuff.com/2011/04/identify-file-system-type/
 * http://www.rooot.net/en/geek-stuff/linux/15-too-many-open-files.html
+* http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/
