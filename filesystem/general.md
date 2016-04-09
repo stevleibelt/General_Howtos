@@ -30,6 +30,16 @@ smartctl -a /dev/<device>       #list a lot of informations
 smartctl -t long /dev/<device>  #start a long test, check with "-a"
 ```
 
+# globbing
+
+```
+#@see: https://askubuntu.com/a/483192
+#matches b and b[a-zA-Z0-9] and longer stuff
+b*
+#matches b[a-zA-Z0-9] and longer stuff
+b?*
+```
+
 # error
 
 ## "too many open files"
