@@ -33,7 +33,7 @@ find . \( ! -regex '.*/\..*' }) [-type f]
 
 # find by time
 
-* -amin     -   acces in last n minutes
+* -amin     -   access in last n minutes
 * -atime    -   access time last n*24 hours
 * -cmin     -   file status changed in n minutes
 * -ctime    -   change time last n\*24 hours
@@ -45,7 +45,8 @@ find . -mtime 0             # find files modified between now and 1 day ago
 find . -mtime -1            # find files modified less than 1 day ago
                             # (i.e., within the past 24 hours, as before)
 find . -mtime 1             # find files modified between 24 and 48 hours ago
-find . -mtime +1            # find files modified more than 48 hours ago
+find . -mtime +1            # find files modified more than 48 hours (two days) ago
+find . -mtime +3            # find files modified more than 72 hours (three days) ago
 
 find . -mmin +5 -mmin -10   # find files modified between
                             # 6 and 9 minutes ago
