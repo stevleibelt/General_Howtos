@@ -1,46 +1,75 @@
 # basic howto
 
-	wget http://www.my.file .
-	tar xzf my.file
-	makepkg
-	pacman -U *.tar.xz
+```
+wget http://www.my.file .
+tar xzf my.file
+makepkg -sri
+pacman -U *.tar.xz
+```
+
+# pacaur
+
+## installation
+
+```
+mkdir /tmp/pacaur
+cd /tmp/pacaur
+wget https://aur.archlinux.org/cgit/aur.git/snapshot/pacaur.tar.gz
+tar -xzf pacaur.tar.gz
+cd pacaur
+makepkg -sri
+pacman -U *.tar.xz
+```
 
 # yaourt
 
 ## search and install
 
-	yaourt <search pattern>
+```
+yaourt <search pattern>
+```
 
 ## update installed packages
 
-	yaourt -Syua
+```
+yaourt -Syua
+```
 
 ## build packages from source
 
-	yaourt -Sb <package>
+```
+yaourt -Sb <package>
+```
 
 ## backup database
 
-	yaourt -B 
+```
+yaourt -B 
+```
 
 ## query backup
 
-	yaourt -Q --backupfile <file>
+```
+yaourt -Q --backupfile <file>
+```
 
 ## add yaourt repository
 
-	[archlinuxfr]
-	SigLevel = Never
-	Server = http://repo.archlinux.fr/$arch
+```
+[archlinuxfr]
+SigLevel = Never
+Server = http://repo.archlinux.fr/$arch
+```
 
 # error
 
 ## FAILED (unknown public key <key>)
 
-    ```
-    pgp --recv-keys <key>
-    ```
-
+```
+pgp --recv-keys <key>
+```
 ## links
 
-http://archlinux.fr/man/yaourt.8.html
+* https://wiki.archlinux.org/index.php/AUR_helpers
+* http://archlinux.fr/man/yaourt.8.html
+* https://aur.archlinux.org/packages/pacaur/
