@@ -45,4 +45,5 @@ ffmpeg -framerate 5 [-start_number 123] -i image-%03d.png [-i music.mp3] -c:v li
 
 * https://www.ffmpeg.org/faq.html
 * https://trac.ffmpeg.org/wiki/
+* https://wiki.archlinux.org/index.php/FFmpeg#Two-pass_MPEG-4_.28very_high_quality.29
 * http://www.upubuntu.com/2012/02/how-to-convert-mp4-to-avi-under-ubuntu.html
