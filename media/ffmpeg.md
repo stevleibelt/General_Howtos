@@ -1,16 +1,22 @@
 # convert flv to mp4
 
 ```
-ffmpeg -i i<file name>.flv -vcodec copy -acodec copy <file name>.mp4
+ffmpeg -i <file name>.flv -vcodec copy -acodec copy <file name>.mp4
 ```
 
 # convert mp4 to avi
 
 ```
 #maybe this is working already
-ffmpeg -i i<file name>.mp4 -vcodec copy -acodec copy <file name>.avi
+ffmpeg -i <file name>.mp4 -vcodec copy -acodec copy <file name>.avi
 #otherwise, take the long road
-ffmpeg -i i<file name>.mp4 -vcodec mpeg4 -acodec ac3 -ar 48000 -ab 192k <file name>.avi
+ffmpeg -i <file name>.mp4 -vcodec mpeg4 -acodec ac3 -ar 48000 -ab 192k <file name>.avi
+```
+
+# convert a bunch of files
+
+```
+for ITERATOR in *.mp4; do ffmpeg -i "${ITERATOR}" <insert your ffmpeg options in here> "${ITERATOR%.mp4}.avi"; done
 ```
 
 # create slide show from images
@@ -22,6 +28,10 @@ ffmpeg -i i<file name>.mp4 -vcodec mpeg4 -acodec ac3 -ar 48000 -ab 192k <file na
 #-i = input picutre files (must share the same size and format)
 ffmpeg -framerate 5 [-start_number 123] -i image-%03d.png [-i music.mp3] -c:v libx264 -r 30 -pix_fmt yuv420p out.mp4
 ```
+
+# options
+
+* -an - disable audio output
 
 ## source
 
