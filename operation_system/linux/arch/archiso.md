@@ -2,19 +2,30 @@
 
 ## setup
 
-* sudo pacman -S archiso
-* sudo mkdir <path to the temporary iso directory>
-* cd <path to the temporary iso directory>
-* sudo cp -r /usr/share/archiso/configs/releng/ .
+```
+#this will install the releng iso since we want to customize the iso
+sudo pacman -S archiso
+sudo mkdir <path to the temporary iso directory>
+cd <path to the temporary iso directory>
+sudo cp -r /usr/share/archiso/configs/releng/ .
+```
 
 ## [configuration](https://wiki.archlinux.org/index.php/Archiso#Configure_our_live_medium)
 
-* cd releng
-* modify the fitting packages.* files and add needed packages
+```
+cd <path to the temporary iso directory>
+#we want to add the archzfs-linux" package
+echo "archzfs-linux" > packages.x86_64
+```
 
 ## build
 
-    sudo ./build.sh -v
+```
+#"out" is the default directory where
+# the iso will be created
+mkdir out
+sudo ./build.sh -v
+```
 
 # links
 
