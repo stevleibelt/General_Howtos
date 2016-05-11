@@ -29,9 +29,32 @@ for ITERATOR in *.mp4; do ffmpeg -i "${ITERATOR}" <insert your ffmpeg options in
 ffmpeg -framerate 5 [-start_number 123] -i image-%03d.png [-i music.mp3] -c:v libx264 -r 30 -pix_fmt yuv420p out.mp4
 ```
 
+# extract audio only
+
+```
+#hint, use mediainfo to find the right file suffix
+ffmpeg -i <file name>.mp4 -vn -acodec copy <output audio file name>.aac
+```
+
+# extract video only
+
+```
+#hint, use mediainfo to find the right file suffix
+ffmpeg -i <file name>.mp4 -an -vcodec copy <output video file name>.mp4
+```
+
+# combine audio and video
+
+```
+#hint, use -ss before your input file to seek to a position
+#e.g. you want to seek your video file nine seconds in the future, use "-ss 00:00:09" before the "-i"
+ffmpeg -i <video file name>.mp4 -i <audio file name>.acc  -c:v copy -c:a copy <output file name>.mp4
+```
+
 # options
 
 * -an - disable audio output
+* -vn - disable video output
 
 ## source
 
