@@ -40,6 +40,14 @@ b*
 b?*
 ```
 
+# statistic of inodes
+
+```
+df -i
+# human readable
+df -ih
+```
+
 # error
 
 ## "too many open files"
