@@ -48,6 +48,10 @@
 * --copy-unsafe-links   -   only "unsafe" symlinks are transformed
 * --safe-links          -   ignore symlinks that point outside the tree
 
+# clients
+
+* [zsync](http://zsync.moria.org.uk/)
+
 # links
 
 * http://www.thegeekstuff.com/2011/01/rsync-exclude-files-and-folders/
