@@ -1,7 +1,7 @@
 # fetch battery / akku status
 
-    ```
-    acpi -b
-    #or
-    acpi -i
-    ```
+```
+acpi -b
+#or
+acpi -i
+```
