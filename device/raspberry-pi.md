@@ -42,8 +42,18 @@ watch -n 0.5 gpio readall
 
 ## packages
 
-* fake-hwclock
-* nss-mdns
+```
+pacman -S fake-hwclock nss-mdns
+#nice to have
+pacman -S base-devel htop lsof git nmon vim
+```
+
+## speed improvment
+
+```
+#/etc/fstab
+#add "noatime" option to your disk
+```
 
 # Links
 
@@ -51,3 +61,6 @@ watch -n 0.5 gpio readall
 * http://blog.philippklaus.de/2013/03/fix-time-on-arch-linux-systems-run-ntpd-s-every-hour-using-systemd/
 * https://wiki.archlinux.org/index.php/Raspberry_Pi
 * http://archpi.dabase.com/
+* https://wiki.archlinux.org/index.php/Solid_State_Drives#Tips_for_minimizing_disk_reads.2Fwrites
+* https://wiki.archlinux.org/index.php/Benchmarking#Flash_media
+* https://wiki.archlinux.org/index.php/Fsck#Boot_time_checking
