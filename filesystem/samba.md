@@ -144,6 +144,22 @@ force create mode = 0664
 force directory mode = 0775
 ```
 
+# speed / make it fast
+
+```
+####
+#@see: https://www.samba.org/samba/docs/man/Samba3-HOWTO/speed.html
+#@see: https://wiki.amahi.org/index.php/Make_Samba_Go_Faster 
+####
+#add the following options
+#the options are orderd in a way of "what could bring you the most performance and less trouble" top down
+####
+#you can combine multiple options like
+#socket options = TCP_NODELAY IPTOS_LOWDELAY
+socket options = TCP_NODELAY    #default tryout ;-)
+socket options = IPTOS_LOWDELAY #if your are on a lan
+```
+
 ## links
 
 * http://www.bodenzord.com/archives/53
