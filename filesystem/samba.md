@@ -65,29 +65,35 @@
 
 # smbclient
 
-    #<server name> can be the host name or the ip address
-    #list available (public) shares
-    smbclient -L <server name>
+```
+#<server name> can be the host name or the ip address
+#list available (public) shares
+smbclient -L <server name>
 
-    #list available user based shares
-    smbclient -L <server name> -U <user name>
+#list available user based shares
+smbclient -L <server name> -U <user name>
 
-    #login to a share
-    smbclient \\\\<server name>\\<share>
+#login to a share
+smbclient \\\\<server name>\\<share>
+```
 
 # mount share 
 
-    #per session
-    mount –t cifs <server name>/<share name> <local mount point> –o username=<user name>,workgroup=<work group>
+```
+#per session
+mount –t cifs <server name>/<share name> <local mount point> –o username=<user name>,workgroup=<work group>
 
-    #/etc/fstab
+#/etc/fstab
+```
 
 ## mounting with write permissions
 
-    #get the <user id> from console command "id"
-    #share will be mounted with permissions 755
-    #see: http://microitblog.com/micro-it-blog/2011/04/21/mounting-cifs-shares-through-linux-with-write-permissions
-    mount -t cifs <server name>/<share name> <local mount point> -o username=<user name>,uid=<user id>
+```
+#get the <user id> from console command "id"
+#share will be mounted with permissions 755
+#see: http://microitblog.com/micro-it-blog/2011/04/21/mounting-cifs-shares-through-linux-with-write-permissions
+mount -t cifs <server name>/<share name> <local mount point> -o username=<user name>,uid=<user id>
+```
 
 ## options
 
@@ -169,21 +175,27 @@ socket options = IPTOS_LOWDELAY #if your are on a lan
 
 ##  Unable to open printcap file /etc/printcap for read!
 
-    #add to smb.conf
-    #see: http://cmorse.org/blog/archives/142
-    [global]
-       printcap name = /dev/null
-       load printers = no
-       printing = bsd
+```
+#add to smb.conf
+#see: http://cmorse.org/blog/archives/142
+[global]
+   printcap name = /dev/null
+   load printers = no
+   printing = bsd
+```
 
 ## Failed to delete pidfile /var/run/smbd.pid.
 
-    #see: https://bugs.archlinux.org/task/36338
+```
+#see: https://bugs.archlinux.org/task/36338
+```
 
 ## protocol negotiation failed: NT_STATUS_INVALID_NETWORK_RESPONSE
 
-    #see: https://wiki.archlinux.org/index.php/Samba/Troubleshooting#protocol_negotiation_failed:_NT_STATUS_INVALID_NETWORK_RESPONSE
-    comment out your "hosts allow"
+```
+#see: https://wiki.archlinux.org/index.php/Samba/Troubleshooting#protocol_negotiation_failed:_NT_STATUS_INVALID_NETWORK_RESPONSE
+comment out your "hosts allow"
+```
 
 ## mount error(13): Permission denied
 
