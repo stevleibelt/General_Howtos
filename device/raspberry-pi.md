@@ -55,6 +55,18 @@ pacman -S base-devel htop lsof git nmon vim
 #add "noatime" option to your disk
 ```
 
+# streaming
+
+## links
+
+* http://www.geforce.com/geforce-experience/system-requirements
+* https://shield.nvidia.com/game-stream
+* http://moonlight-stream.com/
+* https://github.com/moonlight-stream/moonlight-pc
+* https://github.com/irtimmer/moonlight-embedded/wiki
+* https://github.com/moonlight-stream/moonlight-docs/wiki
+* https://github.com/moonlight-stream
+
 # Links
 
 * https://wiki.gentoo.org/index.php?title=Raspberry_Pi&redirect=no:wq
