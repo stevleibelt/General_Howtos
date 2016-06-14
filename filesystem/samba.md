@@ -4,19 +4,25 @@
 
 ## add user
 
-    if [smbd -V >= 3.4.0]
-        pdbedit -a -u <user name>
-    else
-        smbpasswd -a <user name>
-    fi
+```
+if [smbd -V >= 3.4.0]
+    pdbedit -a -u <user name>
+else
+    smbpasswd -a <user name>
+fi
+```
 
 ## list users
 
-    pdbedit -L
+```
+pdbedit -L
+```
 
 ## set stickbit for ug
 
-    chmod -R ug+s <folder>
+```
+chmod -R ug+s <folder>
+```
 
 # smb.conf
 
