@@ -60,24 +60,42 @@ tput sgr0    #reset foreground color
 
 ## here doc
 
-    cat <<EOF
-    foo
-    bar
-    `pwd`
-    EOF
+```
+cat <<EOF
+foo
+bar
+`pwd`
+EOF
+```
 
 # input
 
 ## read
 
-    read 'input: ' USERINOUT
+```
+read 'input: ' USERINOUT
+```
 
 ## select
 
-    select WORD in 'foo bar foobar' ; do
-        $WORD
-    done
+```
+select WORD in 'foo bar foobar' ; do
+    $WORD
+done
+```
+
+# exit codes
+
+```
+#!/bin/sh
+#this will either output "Success" or "Failed"
+####
+# <command> && <command to execute on success> || <command to execute on failure>
+cp /foo /bar && echo Success || echo Failed
+```
 
 # links
 
 * http://www.tldp.org/LDP/abs/html/io-redirection.html
+* http://steve-parker.org/sh/exitcodes.shtml
+* http://unix.stackexchange.com/questions/76717/bash-launch-background-process-and-check-when-it-ends
