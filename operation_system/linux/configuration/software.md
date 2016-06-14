@@ -70,6 +70,12 @@
 * dos2unix
 * powertop
 * yaourt
+* pacaur
+
+# remote desktop tool
+
+* anydesk
+* teamviewer
 
 # security
 
