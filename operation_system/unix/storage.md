@@ -1,6 +1,7 @@
 # check smart values
 
 ```
+#smartctl is in the package smartmontools
 smartctl -A /dev/sda
 ```
 

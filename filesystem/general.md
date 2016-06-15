@@ -26,6 +26,7 @@ fdisk -l /dev/<device>
 # check with smartctl
 
 ```
+#smartctl is in the package smartmontools
 smartctl -a /dev/<device>       #list a lot of informations
 smartctl -t long /dev/<device>  #start a long test, check with "-a"
 ```
