@@ -54,18 +54,22 @@ df -ih
 
 ### current limits
 
-    #current number of open files
-    cat /proc/sys/fs/file-nr
-    <number of allocated file handlers> <number of allocated but unused file handlers> <maximum number of file handlers>
+```
+#current number of open files
+cat /proc/sys/fs/file-nr
+<number of allocated file handlers> <number of allocated but unused file handlers> <maximum number of file handlers>
 
-    #current limit
-    cat cat /proc/sys/fs/file-max
+#current limit
+cat cat /proc/sys/fs/file-max
+```
 
 ### adapt
 
-    #set custom limits per user in /etc/security/limits.conf
-    fs.file-max = <new limit>
-    sysctl -p
+```
+#set custom limits per user in /etc/security/limits.conf
+fs.file-max = <new limit>
+sysctl -p
+```
 
 # links
 
