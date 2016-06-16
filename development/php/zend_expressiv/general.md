@@ -10,7 +10,22 @@
 * if your action is a class
     * must implement the '[MiddlewareInterface](https://github.com/zendframework/zend-stratigility/blob/master/src/MiddlewareInterface.php)' interface
     * it should provide dependency injection for the template renderer and the needed services (either constructor or method dependency injection)
-```
+
+# pipe if
+
+* midleware should (potentially) run on every execute
+    * logging reqeust
+    * performing content negotiation
+    * handling cookies
+    * error handling
+    * application segregation
+
+* route if
+
+* middleware is reacting to a given path
+* you use dynamic routing
+* restrict middleware to specifig HTTP methods
+* generate uris to your middleware
 
 # factory
 
