@@ -25,8 +25,29 @@ fusermount -u <path to the mountpoint>
 #volumn down + power on + home button
 ```
 
+# file system hirachy
+
+```
+/boot       - initram
+/cache      - application cache
+/data       - user data
+/data/data  - application data
+/dev        - devices
+/mnt/asec   - encrypted applications (App2SD)
+/mnt/emmc   - internal sdcards
+/mnt/sdcard - external sdcards
+/proc       - process informations
+/recovery   - recovery system
+/system     - system rom (read only)
+```
+
+In general, applications can store their data where they want.
+
 # links
 
 * https://wiki.archlinux.org/index.php/MTP
 * http://www.xda-developers.com
 * http://opengapps.org
+* http://android.stackexchange.com/tags/file-system/info
+* http://android.stackexchange.com/tags/partition/info
+* http://android.stackexchange.com/questions/46926/android-folder-hierarchy/46934#46934
