@@ -168,6 +168,10 @@
 
 [source](http://stackoverflow.com/questions/16666089/whats-the-difference-between-git-merge-and-git-rebase/16666418#16666418)
 
+# maintenance
+
+    git gc --aggressive
+
 # links
 
 * http://try.github.io/
