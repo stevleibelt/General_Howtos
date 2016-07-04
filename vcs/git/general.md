@@ -1,131 +1,189 @@
 # edit configuration
 
-    git config -e           #project based
-    git config -e --global  #global ;-)
+```
+git config -e           #project based
+git config -e --global  #global ;-)
+```
 
 # log
 
-    git reflog
-    git log
+```
+git reflog
+git log
+```
 
 # remove local changes
 
-    git clean -f -d #will remove untracked files (-f) and directories (-d)
-    git reset --hard HEAD #will not remove untracked files
+```
+git clean -f -d #will remove untracked files (-f) and directories (-d)
+git reset --hard HEAD #will not remove untracked files
+```
 
 ## revert changes on local copy
 
-    git checkout .
+```
+git checkout .
+```
 
 ## revert changes on index
 
-    git reset
+```
+git reset
+```
 
 ## revert last commited change
 
-    git revert ...
+```
+git revert ...
+```
 
 ## revert an already pushed commit
 
-    git revert <commit checksum>
+```
+git revert <commit checksum>
+```
+
+## revert an already pushed merge commit
+
+```
+git revert -m1 <commit checksum>
+```
 
 ## checkout special commit
 
-    git checkout <sha1>
+```
+git checkout <sha1>
+```
 
 ## checkout master (resolving detached head issue)
 
-    git checkout master
+```
+git checkout master
+```
 
 ## switch back to previous branch
 
-    git checkout -
+```
+git checkout -
+```
 
 # commit
 
-    git commit -a               #commit all changes
-    git commit -v               #commit verbosely (includes diff)
-    git commit --amende         #edit message for the most recent commit
-    git commit --amende <file>  #redo previous commit including changes from files ...
+```
+git commit -a               #commit all changes
+git commit -v               #commit verbosely (includes diff)
+git commit --amende         #edit message for the most recent commit
+git commit --amende <file>  #redo previous commit including changes from files ...
+```
 
 ## undo commit
 
-    git reset --soft HEAD~1
-    #
-    git commit --amend
-    #http://stackoverflow.com/questions/5203535/practical-uses-of-git-reset-soft
-    #http://git-scm.com/2011/07/11/reset.html
+```
+git reset --soft HEAD~1
+#
+git commit --amend
+#http://stackoverflow.com/questions/5203535/practical-uses-of-git-reset-soft
+#http://git-scm.com/2011/07/11/reset.html
+```
 
 # diff
 
-    git diff --staged           #show diff using staged instead of commited
+```
+git diff --staged           #show diff using staged instead of commited
+```
 
 # rm
 
-    git rm --cached             #remove files in stage/repository (but not in the filesystem)
+```
+git rm --cached             #remove files in stage/repository (but not in the filesystem)
+```
                                 #good if you commited log files or something else you don't want to commit
 
 # blame
 
-    git blame <file> <revision>
-    git gui blame
-    git whatchanged <file>
+```
+git blame <file> <revision>
+git gui blame
+git whatchanged <file>
+```
 
 # add, unadd, delete
 
 ## add a file to the index/staging
 
-    git add <file>
-    git add -A  #all
-    git add -p  #interactively decide which changes to add
-    git add -i  #like patch but with no menu
+```
+git add <file>
+git add -A  #all
+git add -p  #interactively decide which changes to add
+git add -i  #like patch but with no menu
+```
 
 ## add changes to stage
 
-    git stage <file>
-    git stage --patch       #interactively decide which changes to add to stage
-    git stage --interactive #like patch but with no menu
+```
+git stage <file>
+git stage --patch       #interactively decide which changes to add to stage
+git stage --interactive #like patch but with no menu
+```
 
 ## remove from index/staging
 
-    git reset HEAD -- $file
+```
+git reset HEAD -- $file
+```
 
 ## remove files from project
 
-    git rm <file>
+```
+git rm <file>
+```
 
 ## remove deleted files
 
-    git rm $(git ls-files --deleted)
+```
+git rm $(git ls-files --deleted)
+```
 
 ## add alias
 
-    git config --global alias.unadd 'reset HEAD --'
+```
+git config --global alias.unadd 'reset HEAD --'
+```
 
 # Reset
 
 ## remove file or directory from stage
 
-    git reset <name>
+```
+git reset <name>
+```
 
 ## show information
 
-    git show 1.2.3
+```
+git show 1.2.3
+```
 
 ## sign with gpg
 
-    git tag -s 1.2.3 -m 'signed version 1.2.3'
+```
+git tag -s 1.2.3 -m 'signed version 1.2.3'
+```
 
 ## push to repository
 
-    #current head
-    git push origin HEAD
-    #to another head
-    git push origin 1.2.3
+```
+#current head
+git push origin HEAD
+#to another head
+git push origin 1.2.3
+```
 
 # squashing
 
-    git rebase --interactive HEAD~10    #squash last 10 commits to a big one
+```
+git rebase --interactive HEAD~10    #squash last 10 commits to a big one
+```
 
 # diamond shape in git log history
 
@@ -167,6 +225,12 @@
     which is a good description.
 
 [source](http://stackoverflow.com/questions/16666089/whats-the-difference-between-git-merge-and-git-rebase/16666418#16666418)
+
+# maintenance
+
+```
+git gc --aggressive
+```
 
 # links
 
