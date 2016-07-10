@@ -3,3 +3,8 @@
 * http://www.slideshare.net/MarkusWinand/indexes-neglectedperformanceallrounder
 * http://use-the-index-luke.com/3-minute-test
 * http://use-the-index-luke.com/blog/2014-02/results-three-minutes-sql-performance-quiz
+* http://mysql.rjweb.org/doc.php/memory
+* https://www.mars-solutions.de/knowledgebase/mysqloptimierung
+* http://stackoverflow.com/questions/3927690/howto-clean-a-mysql-innodb-storage-engine/4056261#4056261
+* https://www.percona.com/blog/2014/01/24/mysql-server-memory-usage-2/
+* https://www.percona.com/blog/2012/03/21/troubleshooting-mysql-memory-usage/
