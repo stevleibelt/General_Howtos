@@ -17,6 +17,8 @@
 * [link to google apps on basketbuild.com](https://s.basketbuild.com/gapps)
 * [how to root a i9050p](http://forum.xda-developers.com/showthread.php?t=2663834)
 * [twrp for i9050p](https://twrp.me/devices/samsunggalaxys2plus.html)
+* [cm13](https://s.basketbuild.com/devs/GHsR/CM-13/i9105p)
+* [opengapps](http://opengapps.org/?download=false&arch=arm&api=6.0)
 
 ### howto
 
