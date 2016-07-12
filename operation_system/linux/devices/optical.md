@@ -18,3 +18,4 @@ divxenc -2p -p vhq
 
 * https://wiki.archlinux.org/index.php/Optical_disc_drive
 * https://wiki.archlinux.org/index.php/MEncoder
+* http://www.cyberciti.biz/tips/linux-dvd-ripper-software.html
