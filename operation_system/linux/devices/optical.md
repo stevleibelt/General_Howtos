@@ -10,6 +10,9 @@ dd if=/dev/sr0 of=<file path name of your dvd>.iso
 
 ## ripping
 
+### with divxenc
+
+```
 #install mkvtoolnix to be able to encode to mp4
 #mkvtoolnix-cli
 #or
@@ -33,3 +36,4 @@ divxenc -2p -p vhq
 * https://wiki.archlinux.org/index.php/MEncoder
 * https://wiki.archlinux.org/index.php/FFmpeg
 * https://wiki.ubuntuusers.de/DVDs_rippen/
+* http://www.cyberciti.biz/tips/linux-dvd-ripper-software.html

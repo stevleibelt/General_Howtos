@@ -1,34 +1,33 @@
 # liste detected disks
 
-    ```
-    fdisk -l
-    #or
-    lsblk
-    ```
-    fdisk -l
+```
+fdisk -l
+#or
+lsblk
+```
 
 # get connected devices via usb
 
-    ```
-    lsusb
-    ```
+```
+lsusb
+```
 
 # check dmesg
 
-    ```
-    dmesg | grep sd
+```
+dmesg | grep sd
 #or
-    dmesg | grep usb
-    ```
+dmesg | grep usb
+```
 
 # check attached pci devices and grep hci
 
-    ```
-    lspci -v | grep HCI
-    ```
+```
+lspci -v | grep HCI
+```
 
 # get uuid
 
-    ```
-    blkid /dev/sdX
-    ```
+```
+blkid /dev/sdX
+```
