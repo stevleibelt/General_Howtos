@@ -26,6 +26,7 @@ git diff tag1..tag2 -- path/to/file/name
 # between local and origin
 
 ```
+#also good if you have staged changes already
 git diff origin/master
 ```
 
