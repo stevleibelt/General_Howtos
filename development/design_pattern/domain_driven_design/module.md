@@ -21,8 +21,8 @@
                     * Waybill
                 * Service
             * Infrastructure
-                * Logging
-                * Messaging
+                * Log
+                * Message
                 * Persistence
                     * CQRS
                         * BillRepository.php
