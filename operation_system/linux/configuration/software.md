@@ -1,6 +1,7 @@
 # administration
 
 * arandr / lxrandr / zarfy
+* ark (kde archiving tool)
 * dnsutils
 * dstat
 * htop
@@ -102,9 +103,9 @@
 
 # user
 
-slock
+* slock
 
-* window manager
+# window manager
 
 * [dwm](https://wiki.archlinux.org/index.php/Dwm)
 * [twm](https://wiki.archlinux.org/index.php/twm)
