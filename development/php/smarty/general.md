@@ -1,50 +1,80 @@
 # use/escape javascript/css code in templates
 
-    {literal} my content {/literal}
-    {ldelim} my content {rdelim} 
+```html
+{literal} my content {/literal}
+{ldelim} my content {rdelim} 
+```
 
 # switch between two css class
 
-    {cycle assign="tr_class" values="list_white,list_grey"}
+```html
+{cycle assign="tr_class" values="list_white,list_grey"}
+```
 
 # isset
 
-    {if isset($foo)}
+```html
+{if isset($foo)}
+```
 
 # var_dump
 
-    {$var|@var_dump}
+```html
+{$var|@var_dump}
+```
 
 # md5
 
-    {md5 var=$var}
+```html
+{md5 var=$var}
+```
 
 # assign var in script
 
-    {assign var='form_name' value='document_upload_select'}
+```html
+{assign var='form_name' value='document_upload_select'}
+```
 
 # if else if else
 
-    {if}{elseif}{else}{/if}
+```html
+{if}{elseif}{else}{/if}
+```
 
 # foreach
 
 See [howto](http://www.smarty.net/docsv2/en/language.function.foreach).
 
-    {foreach from=$myArray key=key item=value}
-      key: {$key} with value: {$value}
-    {foreachelse}
-      no items available
-    {/foreach}
+```html
+{foreach from=$myArray key=key item=value}
+  key: {$key} with value: {$value}
+{foreachelse}
+  no items available
+{/foreach}
+```
 
 # array_key_exists
 
-    {if array_key_exists('foo', $myArray)}foo exists{else}no foo{/if}
+```html
+{if array_key_exists('foo', $myArray)}foo exists{else}no foo{/if}
+```
 
 # instanceof
 
-    {if $foo instanceof \Foo}
-        yes, is instance of \Foo
-    {else}
-        no, it os not an instance of \Foo
-    {/if}
+```html
+{if $foo instanceof \Foo}
+    yes, is instance of \Foo
+{else}
+    no, it os not an instance of \Foo
+{/if}
+```
+
+# comments
+
+```html
+<!-- @see: http://www.smarty.net/docsv2/en/language.basic.syntax -->
+{* single line comment *}
+{* multi
+line
+comment *}
+```
