@@ -72,8 +72,8 @@ git checkout -
 ```
 git commit -a               #commit all changes
 git commit -v               #commit verbosely (includes diff)
-git commit --amende         #edit message for the most recent commit
-git commit --amende <file>  #redo previous commit including changes from files ...
+git commit --amend          #edit message for the most recent commit
+git commit --amend <file>   #redo previous commit including changes from files ...
 ```
 
 ## undo commit
