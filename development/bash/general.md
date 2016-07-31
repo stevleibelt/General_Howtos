@@ -7,6 +7,8 @@ echo "foo" #comment after a command
 
 # variables
 
+For bash variables take a look into the [reference](https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html) section.
+
 ```
 #assign
 foo=bar
