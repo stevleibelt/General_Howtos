@@ -1,6 +1,8 @@
 # usage
 
-    killall <process name>
+```
+killall <process name>
+```
 
 # links
 
