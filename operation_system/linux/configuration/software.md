@@ -105,6 +105,10 @@
 
 * slock
 
+# video
+
+* [pitivi](http://www.pitivi.org/)
+
 # window manager
 
 * [dwm](https://wiki.archlinux.org/index.php/Dwm)
@@ -115,7 +119,7 @@
 * [list of dynamic wms](https://wiki.archlinux.org/index.php/Category:Dynamic_WMs)
 * [list of stacking wms](https://wiki.archlinux.org/index.php/Category:Stacking_WMs)
 * [list of tilling wms](https://wiki.archlinux.org/index.php/Category:Tiling_WMs)
-* 
+* [lumina desktop](https://lumina-desktop.org/)
 
 # work
 
