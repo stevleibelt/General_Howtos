@@ -30,7 +30,7 @@
 * reboot into recovery
     * shutdown device
     * press "volume up" + "home" + "power"
-* wipe data (/factory reset) if coming from stock or another non-CM ROM (You may get a "staus 7" error if you fail to wipe.)
+* wipe data (/factory reset) if coming from stock or another non-CM ROM (You may get a "status 7" error if you fail to wipe.)
 * wipe cache 
 * install the ROM
 * optionally install the Google Apps Addon
