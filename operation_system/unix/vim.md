@@ -226,6 +226,7 @@ echo 'set -o vi' >> ~/.bashrc
 
 # links
 
+* http://hea-www.harvard.edu/~fine/Tech/vi.html
 * http://www.swaroopch.com/notes/vim/
 * http://vimcasts.org/
 * http://vim.wikia.com/wiki/Vim_Tips_Wiki
