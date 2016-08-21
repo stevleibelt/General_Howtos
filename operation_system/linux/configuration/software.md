@@ -14,6 +14,7 @@
 * net-tools
 * screen
 * strace
+* xarchiver
 
 # development
 
