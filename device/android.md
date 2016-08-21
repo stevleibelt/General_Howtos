@@ -21,9 +21,13 @@ fusermount -u <path to the mountpoint>
 #http://forum.xda-developers.com/sitesearch.php?q=galaxy%20s5%20mini
 #   https://aykevl.nl/android
 #   http://forum.xda-developers.com/galaxy-s5-mini/development/g800f-m-y-cyanogenmod-13-0-g800f-m-y-t3234909
-#   http://wiki.cyanogenmod.org/w/Install_CM_for_klte
 #press the following buttons when you are on a restart
-#volumn down + power on + home button
+#volumn uo + power on + home button
+#make a backup to your external storage (sd card)
+#install new version
+#clean the cache
+#   just an update: dalvik cache and cache
+#   new rom: dalvik cache, cache, system and data
 ```
 
 # file system hirachy
