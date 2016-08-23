@@ -1,6 +1,10 @@
-# between tags
+# between tags or branchens
 
-    git log tag1..tag2
+```
+git log tag1..tag2
+
+git log tag1..origin/branch
+```
 
 # links
 
