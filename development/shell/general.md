@@ -55,3 +55,4 @@ $SUM=`expr 1+1`
 * http://bash.cyberciti.biz/shell/academic/
 * http://stackoverflow.com/questions/3767267/check-if-file-exists
 * http://www.catonmat.net/download/bash-history-cheat-sheet.pdf
+* http://openbook.rheinwerk-verlag.de/shell_programmierung/
