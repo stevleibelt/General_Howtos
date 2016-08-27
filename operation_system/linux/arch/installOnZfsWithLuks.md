@@ -71,6 +71,8 @@ zpool create -o ashift=12 <pool name> mirror <first device> <second device>
 * when it comes to "Finally, re-import the pool", simple do
 ```
 zpool import -R /mnt <pool name>
+#if pool was not exported try
+zpool import -fR /mnt <pool name>
 ```
 * i would not try to put "var" and more to a separate zfs since this leads to some errors while booting up right now (2015-03-03)
 * when it comes to the point of adapting the grub.cfg, the "linux" section should look like:
