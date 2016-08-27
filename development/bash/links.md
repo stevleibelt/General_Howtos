@@ -9,3 +9,5 @@
 * http://www.tldp.org/LDP/abs/html/arrays.html
 * http://www.tldp.org/LDP/abs/html/localvar.html
 * https://wiki.ubuntuusers.de/Shell/Bash-Skripting-Guide_f%C3%BCr_Anf%C3%A4nger/
+* https://help.ubuntu.com/community/Beginners/BashScripting
+* https://wiki.ubuntuusers.de/Shell/Bash-Skripting-Guide_f%C3%BCr_Anf%C3%A4nger/
