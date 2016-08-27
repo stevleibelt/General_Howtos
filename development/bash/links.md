@@ -11,3 +11,4 @@
 * https://wiki.ubuntuusers.de/Shell/Bash-Skripting-Guide_f%C3%BCr_Anf%C3%A4nger/
 * https://help.ubuntu.com/community/Beginners/BashScripting
 * https://wiki.ubuntuusers.de/Shell/Bash-Skripting-Guide_f%C3%BCr_Anf%C3%A4nger/
+* http://programmingexamples.wikidot.com/bash-scripting
