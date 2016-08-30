@@ -73,5 +73,10 @@ ${<parameter>:<offset>[:<length>]}
 # getopts
 
 ```
+#@see:
+#   http://www.tldp.org/LDP/abs/html/internal.html#GETOPTSX
+#   http://wiki.bash-hackers.org/howto/getopts_tutorial
+#   http://www.tldp.org/LDP/abs/html/extmisc.html#GETOPTY
+#   http://www.tldp.org/LDP/abs/html/string-manipulation.html
 getopts <options_string> <variable_name> [<argument>]
 ```
