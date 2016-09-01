@@ -17,3 +17,4 @@ qemu-img convert -f raw <my image>.raw -O qcow2 <my image>.img
 * https://wiki.archlinux.org/index.php/QEMU
 * https://en.wikibooks.org/wiki/QEMU/Images
 * https://kuther.net/content/convert-virtualbox-kvmqemu
+* [resize disk image while vm is running (german)](http://www.pro-linux.de/kurztipps/2/1841/festplatten-in-qemu-online-vergr%C3%B6%C3%9Fern.html)
