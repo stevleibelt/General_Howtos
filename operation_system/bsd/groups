@@ -1,7 +1,0 @@
-pw group
-#need help?
-pw group [command] help
-#add group
-pw group add $group
-#add user to group
-pw group mod $group -m $user
