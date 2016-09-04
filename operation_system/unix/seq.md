@@ -2,6 +2,10 @@
 
 # usage / examples
 
+* seq <start>
+* seq <start> <end>
+* seq <start> <step size> <end>
+
 ## count up from 1 to x
 
 ```
