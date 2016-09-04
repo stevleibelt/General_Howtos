@@ -39,11 +39,18 @@ ${ARRAY[*]} or ${ARRAY[@]} - all elements done by globbing or word-splitting
 "${ARRAY[*]}" - no glubbing, elements separated by first character out of $IFS, at the and the whole content is one argument
 "${ARRAY[@]}" - no globbing, each elemen is an own argument
 
-for ELEMENT in "${MY_ARRAY[@]}"
+for ELEMENT in "${MY_ARRAY[@]}";
 do
-    :
     echo 'element: '$ELEMENT
 done
+```
+
+# sort
+
+```
+#@see: https://stackoverflow.com/a/11789688
+IFS=$'\n' SORTED_ARRAY=($(sort <<<"${ARRAY[*]}"))
+unset IFS
 ```
 
 # links
