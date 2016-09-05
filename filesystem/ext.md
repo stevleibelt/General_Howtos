@@ -13,3 +13,9 @@ mount -o remount,ro /
 fsck.ext4 -yfD /dev/sdX1
 #reboot
 ```
+
+# repair ext 4
+
+```
+fsck.ext4 -yfD /dev/
+```
