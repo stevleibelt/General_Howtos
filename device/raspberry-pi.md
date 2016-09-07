@@ -1,9 +1,8 @@
 # set gpu memory
 
 ```
-vim /boot/config.text
-
-search for "gpu" and set fitting entry
+#vim /boot/config.text
+#search for "gpu" and set fitting entry
 ```
 
 ## links
@@ -14,9 +13,8 @@ search for "gpu" and set fitting entry
 # set cpu frequencies
 
 ```
-vim /boot/config.text
-
-uncomment fitting "arm_freq" entries
+#vim /boot/config.text
+#uncomment fitting "arm_freq" entries
 ```
 
 # wifi
@@ -66,9 +64,6 @@ pacman -S base-devel htop lsof git nmon vim
 * https://github.com/irtimmer/moonlight-embedded/wiki
 * https://github.com/moonlight-stream/moonlight-docs/wiki
 * https://github.com/moonlight-stream
-
-# Links
-
 * https://wiki.gentoo.org/index.php?title=Raspberry_Pi&redirect=no:wq
 * http://blog.philippklaus.de/2013/03/fix-time-on-arch-linux-systems-run-ntpd-s-every-hour-using-systemd/
 * https://wiki.archlinux.org/index.php/Raspberry_Pi
@@ -76,3 +71,4 @@ pacman -S base-devel htop lsof git nmon vim
 * https://wiki.archlinux.org/index.php/Solid_State_Drives#Tips_for_minimizing_disk_reads.2Fwrites
 * https://wiki.archlinux.org/index.php/Benchmarking#Flash_media
 * https://wiki.archlinux.org/index.php/Fsck#Boot_time_checking
+* [create customized images with pibakery](http://www.pibakery.org/)
