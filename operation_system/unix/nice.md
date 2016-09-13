@@ -21,10 +21,10 @@
 
 ```
 renice <priority> -p <process id>
-# increase by one
-renice +1 -p <process id>
-# renice all by user
-renice -1 -u <user name>
+# set nice value to +1 for the fitting process
+renice -10 -p <process id>
+# set nice to value -10 for all processes running by the user
+renice -10 -u <user name>
 ```
 
 # Links
