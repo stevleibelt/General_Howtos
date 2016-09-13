@@ -97,3 +97,5 @@ sub vcl_recv {
 * http://book.varnish-software.com/4.0/chapters/VCL_Basics.html
 * https://www.varnish-cache.org/docs/4.0/reference/vmod_std.generated.html?#func-log
 * http://www.jeffgeerling.com/blogs/jeff-geerling/debugging-varnish-vcl
+* [varnish agent gui](https://github.com/varnish/vagent2)
+* https://ma.ttias.be/varnish-agent-html-frontend-manage-monitor-varnish-installation/
