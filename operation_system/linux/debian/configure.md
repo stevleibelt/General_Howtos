@@ -1,15 +1,23 @@
 # keyboard
 
-    dpkg-reconfigure keyboard-configuration
+```
+dpkg-reconfigure keyboard-configuration
+```
 
 # console
 
-    dpkg-reconfigure console-common
+```
+dpkg-reconfigure console-common
+```
 
 # localization
 
-    dpkg-reconfigure locales
+```
+dpkg-reconfigure locales
+```
 
 # set or change default editor
 
-    update-alternatives --config editor
+```
+update-alternatives --config editor
+```
