@@ -31,6 +31,8 @@ enter #opens file in current window
 :w #save content in current file
 :q #quit current file
 :q! #quit current file without asking for saving
+:tabNext    #go to the next opened file in the tab
+:tabprevious    #go to the previous opened file in the tab
 
 # movement
 
@@ -232,3 +234,5 @@ echo 'set -o vi' >> ~/.bashrc
 * http://vim.wikia.com/wiki/Vim_Tips_Wiki
 * http://www.rosipov.com/blog/using-vim-for-writing-code/
 * http://www.howtogeek.com/115051/become-a-vi-master-by-learning-these-30-key-bindings/
+* https://www.cs.swarthmore.edu/help/vim/windows.html
+* http://www.techrepublic.com/blog/linux-and-open-source/use-tabs-to-open-multiple-files-in-vim/
