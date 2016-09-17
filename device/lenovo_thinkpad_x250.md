@@ -32,6 +32,20 @@ echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
 * Broadwell
 * HD 5500
 
+# upgrade bios
+
+```
+#links
+#   https://wiki.archlinux.org/index.php/Remastering_the_Install_ISO
+#   https://wiki.archlinux.org/index.php/Flashing_BIOS_from_Linux
+#   https://workaround.org/article/updating-the-bios-on-lenovo-laptops-from-linux-using-a-usb-flash-stick/
+#download latest iso from http://support.lenovo.com/de/en/products/Laptops-and-netbooks/ThinkPad-X-Series-laptops/ThinkPad-X250/downloads/DS102289
+#install genisoimage or cdrkit or geteltorito (where genisoimage is part of)
+geteltorito -o bios.img <file name>.iso
+dd if=bios.img of=/dev/<your device> bs=1M
+
+```
+
 # links
 
 * https://wiki.archlinux.org/index.php/Intel_graphics
