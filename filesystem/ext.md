@@ -17,5 +17,12 @@ fsck.ext4 -yfD /dev/sdX1
 # repair ext 4
 
 ```
-fsck.ext4 -yfD /dev/
+fsck.ext4 -yfD /dev/<device>
+```
+
+# defragment ext 4
+
+```
+#available to e2fsprogs
+e4defrag -c <device>
 ```
