@@ -58,6 +58,37 @@ echo 'this is a text'
 tput sgr0    #reset foreground color
 ```
 
+## cursor movement
+
+```
+#@see: http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x361.html
+#store current cursor position
+printf "\033[s"
+
+#restore cursor position
+printf "\033[u"
+
+#erease to end of line
+printf "\033[k"
+
+#position cursor to line 4 and column 3
+printf "\033[4;3H"
+#or
+printf "\033[4;3f"
+
+#move the cursor up 2 lines
+printf "\033[2A"
+
+#move the cursor down 2 lines
+printf "\033[2B"
+
+#move the cursor forward 2 columns
+printf "\033[2C"
+
+#move the cursor backward 2 columns
+printf "\033[2D"
+```
+
 ## here doc
 
 ```
