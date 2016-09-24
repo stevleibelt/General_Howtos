@@ -1,6 +1,6 @@
 # Samsung Galaxy S2 Plus I9050p
 
-## Cyanogenmod (currently 12.1)
+## Cyanogenmod (currently 13)
 
 ### Links
 
