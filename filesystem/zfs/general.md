@@ -183,3 +183,4 @@ hdparm -I /dev/sdX
 * https://fosdem.org/2016/schedule/event/zfs/attachments/slides/869/export/events/attachments/zfs/slides/869/FOSDEM_2016_ZFS.pdf
 * http://www.zfsbook.com
 * http://wiki.illumos.org/display/illumos/ZFS+and+Advanced+Format+disks
+* https://github.com/archzfs/archzfs/issues/77

@@ -4,30 +4,43 @@
 
 # get hostname of current system
 
-    hostname
+```
+hostname
+```
 
 # package not available? try to install dnsutils
 
 # get ip by domain
 
-    nslookup www.bazzline.net
-    dig bazzline.net
+```
+nslookup www.bazzline.net
+dig bazzline.net
+```
 
 # get other informations
 
-    nslookup 123.45.678.9
+```
+nslookup 123.45.678.9
+```
 
 # gets server for domain
 
-    whois bazzline.net
+```
+#possible installation of whois is needed
+whois bazzline.net
+```
 
 # get a available rout
 
-    traceroute www.bazzline.net
+```
+traceroute www.bazzline.net
+```
 
 # check availability
 
-    pint www.bazzline.net
+```
+ping www.bazzline.net
+```
 
 # low level protocols
 
@@ -88,4 +101,6 @@ available commands:
 
 # communicate with other machines
 
-    telnet hostname|ip
+```
+telnet hostname|ip
+```

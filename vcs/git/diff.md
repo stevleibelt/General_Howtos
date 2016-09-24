@@ -1,7 +1,7 @@
 # between tags
 
 ```
-git diff..tag1 tag2
+git diff tag1..tag2
 ```
 
 # only file names
