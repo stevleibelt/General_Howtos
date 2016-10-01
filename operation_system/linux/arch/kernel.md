@@ -9,8 +9,13 @@ pacman -S linux-lts linux-lts-headers
 ls -halt /boot | grep lts
 #remove latest kernel
 pacman -R linux linux-headers
+#if archzfs installed
+pacman -S archzfs-linux-lts
 #update grube to boot from the right ramdisk
 grub-mkconfig -o /boot/grub/grub.cfg
+#if /usr/bin/grub-probe: Error: canonical path of >>/dev/foo<< ...
+#ln -s /dev/sdaX /dev/foo
+#@see https://github.com/archzfs/archzfs/issues/77
 #reboot
 ```
 
