@@ -69,6 +69,14 @@ zfs get all <pool name>[/<data set name>]
 zfs set compression=on <pool name>[/<data set name>]
 ```
 
+# update access time only when entity is modified
+
+```
+#@see https://wiki.archlinux.org/index.php/ZFS#General_2
+zfs set atime=on <pool name>[/<data set name>]
+zfs set relatime=on <pool name>[/<data set name>]
+```
+
 # list space per data set
 
 ```
