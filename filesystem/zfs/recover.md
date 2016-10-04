@@ -1,19 +1,35 @@
-#Check If A Pool Is Importable
+# check if a pool is importable by doing a dry run import
 
-zpool import -f -F -n $tank
+```
+zpool import -f -F -n <pool name>
+```
 
-#If Possible, Import It
-zpool import -f -F $tank
+# fixing an error
 
-zpool import -o readonly=on $tank
+```
+zpool scrub <pool name>
+zpool clear <pool name>
+```
 
-zdb -C $tank
-zdb -d $tank
-zdb -e $tank
+# force importing the pool
+
+```
+zpool import -f -F <pool name>
+```
+
+# if all is breaking, try to import the pool read only
+
+```
+zpool import -o readonly=on <pool name>
+# doing some magic
+zdb -C <pool name>
+zdb -d <pool name>
+zdb -e <pool name>
 zdb -l /dev/disk/by-id/$device
 
-zpool import -f $tank
-zpool import -Fn $tank
+zpool import -f <pool name>
+zpool import -Fn <pool name>
 
-zpool clear -F $tank
-zpool detach $tank $device
+zpool clear -F <pool name>
+zpool detach <pool name> <path to the device>
+```
