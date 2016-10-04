@@ -49,3 +49,4 @@ redis:
 * https://docs.docker.com/compose/reference/
 * https://docs.docker.com/compose/gettingstarted/
 * https://docs.docker.com/compose/wordpress/
+* https://www.safaribooksonline.com/library/view/mastering-docker/9781785287039/ch07s03.html
