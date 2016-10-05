@@ -15,7 +15,7 @@ ls -lah /dev/disk/by-uuid
 zpool create -f -m </my/mount/point> [-o $propertyName] <my pool>  mirror|raidz id1[ id2[ id3]]
 ```
 
-# create data set
+# create pool with special sectors
 
 ```
 #for 512 byte sectors
@@ -23,6 +23,12 @@ zpool create <pool name> <first device> [...]
 
 #for 4k sectors
 zpool create -o ashift=12 <pool name> mirror <first device> [...]
+```
+
+# create data set
+
+```
+zfs create <pool name>/<data set name>
 ```
  
 # delete data set
