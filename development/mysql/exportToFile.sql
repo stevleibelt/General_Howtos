@@ -1,15 +1,21 @@
 -- database dumps
 -- see: http://dev.mysql.com/doc/refman/5.1/en/mysqldump.html
 
-    mysqldump -u username -p database_name > dump.sql
+```
+mysqldump -u username -p database_name > dump.sql
+```
 
 -- with gzipg
 
-    mysqldump -u username -p database_name | gzip > dump.sql.gz
+```
+mysqldump -u username -p database_name | gzip > dump.sql.gz
+```
 
 -- a table
 
-    mysqldump -u username -p database_name table_name > dump.sql
+```
+mysqldump -u username -p database_name table_name > dump.sql
+```
 
 -- queries
 -- see:
