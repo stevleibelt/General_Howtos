@@ -12,6 +12,10 @@ about:config
 browser.privatebrowsingautostart true
 ```
 
+# add-ons
+
+* [quick locale switcher](https://addons.mozilla.org/en-US/firefox/addon/quick-locale-switcher/)
+
 # links
 
 * http://www.pro-linux.de/news/1/23178/mozilla-verschiebt-erneut-die-signaturpflicht-fuer-add-ons.html
