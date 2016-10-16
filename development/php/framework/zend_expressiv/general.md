@@ -54,3 +54,6 @@ return $response;
 
 * [build nasa photo gallery example](http://www.sitepoint.com/build-nasa-photo-gallery-zend-expressive/)
 * [cookbook](https://github.com/zendframework/zend-expressive/tree/master/doc/book/cookbook)
+* [one factory for all](https://xtreamwayz.com/blog/2015-12-29-zend-expressive-action-factory-one-for-all)
+* [one abstract factory for all](https://xtreamwayz.com/blog/2015-12-30-psr7-abstract-action-factory-one-for-all)
+* [custom dispatch middleware, default route middleware and route attributes](https://github.com/zendframework/zend-expressive/issues/312#issuecomment-180304758)
