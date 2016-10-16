@@ -100,6 +100,7 @@ egrep "pac(new|orig|save)" /var/log/pacman.log
 ```
 sudo su
 #set your country like "United States" or "Germany" etc.
+#fetch a list of available countries via "cat /etc/pacman.d/mirrorlist | grep '## ' | grep -v 'Arch\|Generated' | awk '{ print $2}'"
 COUNTRY_NAME="Germany"
 MAXIMUM_NUBERS_OF_SERVERS_TO_USE=200
 
