@@ -12,6 +12,12 @@ awk 'BEGIN { FS = ";" } ; { print $1 }'
 awk 'length > 100'
 ```
 
+# print all but the first element
+
+```
+awk '{$1="", $0}' <file path>
+```
+
 # links
 
 * http://www.grymoire.com/Unix/Awk.html

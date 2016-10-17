@@ -2,26 +2,36 @@
 
 ## connection via transport layer (ssh, rsh)
 
-    rsync source:foo/ destination/
+```
+rsync source:foo/ destination/
+```
 
 ## connection via network layer (deamon using tcp port)
 
-    rsync source::module /destination
+```
+rsync source::module /destination
+```
 
 ## requesting multiple files from host
 
-    rsync -av host:file1 :file2 host:file{3,4} /dest/
+```
+rsync -av host:file1 :file2 host:file{3,4} /dest/
+```
 
 ## using ssh and key
 
-    rsync --delete -a /source/ -e "ssh -i /home/<user>/.ssh/<key>" <user>@<host>:/destination/
-    #speed up
-    #@see: http://www.smork.info/blog/2013/04/24/entry130424-163842.html
-    rsync --delete -a /source/ -e "ssh -c arcfour -o Compression=no -i /home/<user>/.ssh/<key>" <user>@<host>:/destination/
+```
+rsync --delete -a /source/ -e "ssh -i /home/<user>/.ssh/<key>" <user>@<host>:/destination/
+#speed up
+#@see: http://www.smork.info/blog/2013/04/24/entry130424-163842.html
+rsync --delete -a /source/ -e "ssh -c arcfour -o Compression=no -i /home/<user>/.ssh/<key>" <user>@<host>:/destination/
+```
 
 ## limit speed
 
-    rsync --bwlimit=<kb/second> <source> <dest>
+```
+rsync --bwlimit=<kb/second> <source> <dest>
+```
 
 ## :
 
