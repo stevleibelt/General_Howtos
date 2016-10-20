@@ -147,7 +147,13 @@ git rm $(git ls-files --deleted)
 ## add alias
 
 ```
+#simple alias
 git config --global alias.unadd 'reset HEAD --'
+#complex alias with user input
+#   what do wie do?
+#   signale that this alias is a shell command by starting with "!"
+#   afterwards, we are creating a function with the name "f", add code into it and finally executing it"
+my-complex-alias = "!f() { echo \"this is your user input $@\"; }; f"
 ```
 
 # Reset
