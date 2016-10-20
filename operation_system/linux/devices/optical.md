@@ -30,6 +30,14 @@ cat $(ls /mnt/VIDEO_TS/*.VOB) | nice ffmpeg -i - -acodec libmp3lame -ac 2 -aq 4 
 ```
 divxenc -2p -p vhq
 ```
+
+# blu ray
+
+```
+#install
+makemkv-libaacs
+```
+
 # links
 
 * https://wiki.archlinux.org/index.php/Optical_disc_drive
