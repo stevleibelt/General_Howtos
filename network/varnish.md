@@ -99,3 +99,4 @@ sub vcl_recv {
 * http://www.jeffgeerling.com/blogs/jeff-geerling/debugging-varnish-vcl
 * [varnish agent gui](https://github.com/varnish/vagent2)
 * https://ma.ttias.be/varnish-agent-html-frontend-manage-monitor-varnish-installation/
+* https://speakerdeck.com/mattiasgeniar/varnish-for-php-developers-laraconeu-2016
