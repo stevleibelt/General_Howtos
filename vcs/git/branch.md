@@ -103,6 +103,8 @@ git checkout -b my_branch origin/my_branch
     #git fetch --tags origin
     git fetch origin
     git merge <tag name>
+    #if you run into issues and simple do not want to solve the conflict
+    git merge --abort
 
 ### resolve a conflict
 
