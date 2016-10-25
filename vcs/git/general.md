@@ -238,6 +238,12 @@ git rebase --interactive HEAD~10    #squash last 10 commits to a big one
 git gc --aggressive
 ```
 
+# list available hooks
+
+```
+git help hooks
+```
+
 # links
 
 * http://try.github.io/
