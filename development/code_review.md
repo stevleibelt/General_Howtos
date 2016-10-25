@@ -50,14 +50,15 @@
     * they are shared aagreements from the developer, everyone should say yes without any problems
     * they are not hammerd in stone
     * discuss why and if the found code should be in the coding standard or not
+* mark questions with "important" or "nice to have/to answer"
 
-### for the ones code which has been reviews
+### for the one which code has been reviews
 
 * you are not your code
     * try to prevent getting pissed or beeing defensive
     * ask questions if you do not understand
 * fix issues based on a checklist
-* ask to get a prioritized list to determine what is most imporant
+* ask to get a prioritized list to determine what is most important
 
 ## example notes templates for doing a code review
 
