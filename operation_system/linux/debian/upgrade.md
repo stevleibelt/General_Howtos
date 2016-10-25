@@ -11,7 +11,7 @@ sudo su
 #mount -o remount,rw /<mountpoint>
 
 #check your diskspace
-#apt-get -o APT::Get::Trivial-Only=true dist-upgrade
+apt-get -o APT::Get::Trivial-Only=true dist-upgrade
 ```
 
 ## check package status
@@ -31,7 +31,9 @@ apt-get install --reinstall <list of packages>
 ```
 #check unofficial sources and adapt them in /etc/apt/source.list when needed
 #open /etc/apt/source.list
-#change your version with the one you want to upgrade to, e.g. replace wheezy with jessie
+#   change your version with the one you want to upgrade to, e.g. replace wheezy with jessie
+#foreach file in /etc/apt/source.list.d/*
+#   change your version with the one you want to upgrade to, e.g. replace wheezy with jessie
 ```
 
 ## upgrade
