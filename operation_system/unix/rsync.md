@@ -18,13 +18,28 @@ rsync source::module /destination
 rsync -av host:file1 :file2 host:file{3,4} /dest/
 ```
 
-## using ssh and key
+## using ssh
+
+For each <user>@<host> combination you use, you have to create a section in your `.ssh/config` file.
 
 ```
-rsync --delete -a /source/ -e "ssh -i /home/<user>/.ssh/<key>" <user>@<host>:/destination/
+Host <identifier>
+    Hostname <host name>
+    User <user name>
+    IdentityFile ~./ssh/<file name>
+
+#or as example
+Host bazzline.net
+    Hostname bazzline.net
+    User artodeto
+    IdentityFile ~./ssh/net_bazzline_artodeto
+```
+
+```
+rsync --delete -a /source/ -e ssh <user>@<host>:/destination/
 #speed up
 #@see: http://www.smork.info/blog/2013/04/24/entry130424-163842.html
-rsync --delete -a /source/ -e "ssh -c arcfour -o Compression=no -i /home/<user>/.ssh/<key>" <user>@<host>:/destination/
+rsync --delete -a /source/ -e "ssh -c arcfour -o Compression=no" <user>@<host>:/destination/
 ```
 
 ## limit speed
@@ -64,7 +79,12 @@ rsync --bwlimit=<kb/second> <source> <dest>
 
 # links
 
+* http://www.cyberciti.biz/faq/create-ssh-config-file-on-linux-unix/
 * http://www.thegeekstuff.com/2011/01/rsync-exclude-files-and-folders/
 * http://linux.about.com/library/cmd/blcmdl1_rsync.htm
 * https://www.digitalocean.com/community/tutorials/how-to-copy-files-with-rsync-over-ssh
 * http://troy.jdmz.net/rsync/index.html
+* https://www.digitalocean.com/community/tutorials/how-to-copy-files-with-rsync-over-ssh
+* http://www.thegeekstuff.com/2011/07/rsync-over-ssh-without-password
+* https://calomel.org/rsync_tips.html
+* http://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/
