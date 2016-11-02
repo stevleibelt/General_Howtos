@@ -95,7 +95,7 @@ locate -e --regex "\.pac(new|orig|save)$"
 egrep "pac(new|orig|save)" /var/log/pacman.log
 ```
 
-# install and setup reflactor
+# install and setup reflector
 
 ```
 sudo su
