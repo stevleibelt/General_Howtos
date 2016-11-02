@@ -50,28 +50,7 @@ AllowUsers myUserOne[ myUserTwo]
 AllowGroups myGroupOne[ myGroupTwo]
 ```
 
-# generate key
-
-```
-cd ~
-cd .ssh/
-ssh-keygen -t rsa -b 4096
-```
-
-# copy key to destination
-
-```
-ssh-copy-id -i .ssh/my_key.pub user@host
-```
-
 # hints
-
-## secure file authorized_keys
-
-```
-chmod 400 ~/.ssh/authorized_keys
-chattr +i ~/.ssh
-```
 
 ## disable password login
 
@@ -79,12 +58,6 @@ chattr +i ~/.ssh
 /etc/ssh/sshd_config
 PasswordAuthentication no
 ChallengeResponseAuthentication no
-```
-
-# enable verbose/debug mode
-
-```
-ssh <user>@<host> -vvv
 ```
 
 # links
