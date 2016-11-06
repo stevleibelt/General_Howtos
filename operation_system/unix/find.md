@@ -22,6 +22,13 @@ find /my/path -user foo -and -size +1M -ls
 find . [-type d] [-type f] -empty [-maxdepth <integer>]
 ```
 
+# find and move (dealing with whitespaces)
+
+```
+@see: http://www.cyberciti.biz/tips/howto-linux-unix-find-move-all-mp3-file.html
+find . -name "*.*" -print0 | xargs -0 -I {} mv "{}" "<path>"
+```
+
 # filter out hidden files or directories
 
 ```
