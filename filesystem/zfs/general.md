@@ -2,6 +2,18 @@
 
 ```
 gdisk /dev/<device>
+# create new emtpy GUID parition table
+o
+Y
+# zfs pool
+n
+enter
+enter
+enter
+bf00
+## write changes to disk
+w
+Y
 ```
 
 # create pool "my pool"
