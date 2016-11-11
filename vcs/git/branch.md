@@ -67,6 +67,15 @@ git remote prune origin
 git checkout -b my_branch origin/my_branch
 ```
 
+## delete local branch
+
+```
+#only deletes if local changes are fully merged into its upstream branch
+git branch --delete <branch name>
+#deletes branch without checking its status against the upstream branch
+git branch --delete --force <branch name>
+```
+
 ## switch to a local branch
 
     git checkout <local branch name>
@@ -149,6 +158,14 @@ git branch -m <old name> <new name>
 
 ```
 git branch -m <new name>
+```
+
+### rename local and remote repository
+
+```
+git branch -m <old name> <new name>
+git push --set-upstream origin <new name>
+git push origin :<old name>
 ```
 
 # links
