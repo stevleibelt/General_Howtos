@@ -15,6 +15,8 @@
     GRANT ALL PRIVILEGES ON `my_database`.`mytable` TO 'user'@'localhost' WITH GRANT OPTION;
     GRANT ALL PRIVILEGES ON `my_database`.* TO 'user'@'localhost' WITH GRANT OPTION;
     GRANT ALL ON `my_database`.* TO 'user'@'localhost';
+    -- allow connections from outside
+    GRANT ALL PRIVILEGES ON `my_database`.* TO 'user'@* WITH GRANT OPTION;
 
 -- update password
 
