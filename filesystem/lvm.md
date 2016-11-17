@@ -27,7 +27,15 @@ vgdisplay
 #list available logical volumns
 lvdisplay
 
-mount /dev/mapper/<your volumne group> /mnt
+mount /dev/mapper/<your volume group> /mnt
+```
+
+## no entries in /dev/mapper/<your volume group>?
+
+```
+modprobe dm_mod
+vgscan
+vgchange -ay
 ```
 
 # fsck
