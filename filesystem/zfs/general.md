@@ -166,6 +166,8 @@ zpool scrub -s <pool name>
 
 ```
 touch /etc/modprobe.d/zfs.conf
+# for a limit of 1 GiB
+echo "options zfs zfs_arc_max=1073741824" > /etc/modprobe.d/zfs.conf
 # for a limit of 2 GiB
 echo "options zfs zfs_arc_max=2147483648" > /etc/modprobe.d/zfs.conf
 # for a limit of 4 GiB

@@ -1,6 +1,7 @@
 # detect file system
 
 ```
+blkid
 lsblk -fs
 df -T | awk '{print $1,$2,$NF}' | grep "^/dev"
 fsck -N
