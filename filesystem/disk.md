@@ -1,3 +1,9 @@
+# check a disk
+
+* smartctl
+* badblocks
+* vendor specific tools like [seatools](https://aur.archlinux.org/packages/seatools/) (with the superbe name "st") for seagate
+
 # open source disk cloning/imaging tools
 
 * dd
