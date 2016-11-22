@@ -5,7 +5,7 @@
 touch -d "1983-10-06 13:37" <my file>
 
 # or
-touch -t YYMMDDHHMM.SS <my file>
+touch -t [[CC]YY]MMDDhhmm[.ss] <my file>
 ```
 
 # change file access and modification time only
@@ -18,7 +18,7 @@ touch -a <my file>
 touch -m <my file>
 
 #set explicit access and modification time
-change -c -t YYDDHHMM
+change -c -t [[CC]YY]MMddhhmm[.ss]
 
 #use timestamp of another file
 touch -r <my file> <other file>
