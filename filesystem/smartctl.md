@@ -1,5 +1,7 @@
 # check smart values (results of last test)
 
+Smartctl on a disk attached via usb is not supported.
+
 ```
 #smartctl is in the package smartmontools
 smartctl -a /dev/<device>
@@ -14,12 +16,18 @@ smartctl -c /dev/<device>
 
 #test that have a high probability of detecting device problems
 smartctl -t short /dev/<device>
+#check current status
+smartctl -a /dev/<device> | grep -i short
 
 #short with complete disk surface examination)
 smartctl -t long /dev/<device>
+#check current status
+smartctl -a /dev/<device> | grep -i extended
 
 #identifies if damage incurred during transportation of the device
 smartctl -t conveyance /dev/<device>
+#check current status
+smartctl -a /dev/<device> | grep -i conveyance
 ```
 
 # get all availabale harddisk parameters
