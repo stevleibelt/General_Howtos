@@ -226,6 +226,14 @@ set -o vi
 echo 'set -o vi' >> ~/.bashrc
 ```
 
+# solving issues
+
+## remove unwanted whitespaces
+
+```
+:%/\s\+$//e
+```
+
 # links
 
 * http://hea-www.harvard.edu/~fine/Tech/vi.html
@@ -236,3 +244,5 @@ echo 'set -o vi' >> ~/.bashrc
 * http://www.howtogeek.com/115051/become-a-vi-master-by-learning-these-30-key-bindings/
 * https://www.cs.swarthmore.edu/help/vim/windows.html
 * http://www.techrepublic.com/blog/linux-and-open-source/use-tabs-to-open-multiple-files-in-vim/
+* http://vim.wikia.com/wiki/Remove_unwanted_spaces
+* https://www.cs.swarthmore.edu/help/vim/selection.html
