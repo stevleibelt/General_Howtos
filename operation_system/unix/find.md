@@ -19,7 +19,7 @@ find /my/path -user foo -and -size +1M -ls
 # find empty files or directories
 
 ```
-find . [-type d] [-type f] -empty [-maxdepth <integer>]
+find . [-maxdepth <integer>] [-type d] [-type f] -empty
 ```
 
 # find and move (dealing with whitespaces)
