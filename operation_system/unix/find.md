@@ -38,6 +38,17 @@ find . [-type f] -not -name ".*"
 find . \( ! -regex '.*/\..*' }) [-type f]
 ```
 
+# execute a command for each found filesystem item
+
+```
+#@see: http://stackoverflow.com/questions/5607542/why-does-find-exec-mv-target-not-work-on-cygwin
+#execute the command for each file
+find . -exec <command or script> {} \;
+
+#execute the command and append all the files as arguments
+find . -exec <command or script> {} +
+```
+
 # find by time
 
 * -amin     -   access in last n minutes
