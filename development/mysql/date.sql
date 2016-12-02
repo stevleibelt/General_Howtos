@@ -44,3 +44,15 @@ SELECT DATEDIFF('1970-01-01 00:00:00', '1983-10-06 00:00:00');
 SELECT TIMEDIFF('1970-01-01 00:00:00', '1983-10-06 00:00:00');
 -- @see: http://dev.mysql.com/doc/refman/5.5/en/date-and-time-functions.html#function_timestampdiff
 SELECT TIMESTAMPDIFF(MONTH, '1970-01-01 00:00:00', '1983-10-06 00:00:00'); -- MONTH, YEAR, MINUTE
+
+-- format an calculate average of difference between two dates
+SELECT
+    TIME_FORMAT(
+        AVG(
+            TIMEDIFF(
+                NOW(),
+                '1983-10-06 00:00:00'
+            )
+        ),
+        '%H:%i:%s'
+    ) AS `difference`;
