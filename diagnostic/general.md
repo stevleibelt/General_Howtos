@@ -36,6 +36,12 @@ cat /proc/cpuinfo
 lsblk -O
 ```
 
+## memory
+
+```
+decode --type memory
+```
+
 # tools
 
 * memtest86+
@@ -43,3 +49,4 @@ lsblk -O
 # links
 
 * https://wiki.archlinux.org/index.php/Stress_Test
+* https://www.cyberciti.biz/faq/linux-ram-info-command/
