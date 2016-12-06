@@ -1,18 +1,29 @@
 # basics
 
+## just watching
+
+```
+#didn't expect it would be that easy, right? ;-)
+powertop
+```
+
 ## calibrate
 
 * runs several powerstates for several devices to find the optimal settings for battery mode
 * do not touch the system while calibrating
 
-    powertop --calibrate
+```
+powertop --calibrate
+```
 
 ## auto tune
 
 * sets all values to "good"
 * "good" is good for battery mode but you will lose some power when you are in ac mode
 
-    powertop --auto-tune
+```
+powertop --auto-tune
+```
 
 ## general options
 
