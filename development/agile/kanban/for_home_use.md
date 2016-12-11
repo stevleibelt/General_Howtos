@@ -28,6 +28,14 @@
 
 ## from left to righ
 
+| Done | In Progress | Backlog |
+| --- | --- | --- |
+| Giving notice to the ISP (1 SP) | Made almond milk (1 SP) | Cleand the bathroom |
+| Cleaned the car (2 SP) | | Vacuum the livingroom |
+| | | Made a date to meet our friends |
+
+## from top to down
+
 | Done |
 | --- |
 | Giving notice to the ISP (1 SP) |
@@ -45,8 +53,6 @@
 | Cleand the bathroom |
 | Vacuum the livingroom |
 | Made a date to meet our friends |
-
-## from top to down
 
 ## advices
 
