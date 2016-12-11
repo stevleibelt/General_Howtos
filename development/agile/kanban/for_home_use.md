@@ -40,13 +40,10 @@
 | --- |
 | Giving notice to the ISP (1 SP) |
 | Cleaned the car (2 SP) |
-| |
 
 | In Progress |
 | --- |
 | Made almond milk (1 SP) |
-| |
-| |
 
 | Backlog |
 | --- |
