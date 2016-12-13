@@ -65,7 +65,13 @@ sudo lvcreate --size 1G -s -n my_volume_snapshot /dev/my_group/my_volume
 sudo mount /dev/my_group/my_volume_snapshot /mnt
 
 ##revert to the snapshot and deletes the snapshot
-lvconvert --merge /dev/my_group/my_volume_snapshot
+sudo lvconvert --merge /dev/my_group/my_volume_snapshot
+```
+
+## delete
+
+```
+sudo lvremove /dev/my_group/my_volume_snapshot
 ```
 
 # links
