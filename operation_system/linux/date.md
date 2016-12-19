@@ -18,6 +18,9 @@ timedatectl status
 
 # write
 timedatectl set-time "yyyy-MM-dd hh:mm:ss"
+
+#enable automatic time synchronization
+timedatectl set-ntp 1
 ```
 
 # errors
