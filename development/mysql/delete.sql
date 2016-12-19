@@ -3,4 +3,4 @@
 DELETE FROM 
   `my_table` 
 WHERE 
-  `my_table`.`id` = $value
+  `my_table`.`id` = <my value>
