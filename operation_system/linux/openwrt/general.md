@@ -1,31 +1,43 @@
-# TP-Link
-
-## TL-WR841N
-
-### Terminal Upgrade Process
+# commands
 
 ```
-scp *-factory.bin root@<ip of your router>:/tmp
-ssh root@<ip of your router>
-cd /tmp
-mv *-factory.bin tplink.bin
+#package manager
+opkg
 
-#if, and only if firmware contains the word "boot" (should be for original firmware only)
-    dd if=orig.bin of=tplink.bin skip=257 bs=512
-#else
-    mtd -r write /tmp/tplink.bin firmware
+#read logs
+logread
+
+#wireless settings
+/etc/config/wireless
+/etc/config/network
+
+#list available wireless devices
+##phy0 will be wlan0
+iw list
+
+#scan for wireless networks
+iw wlan0 scan
 ```
-[wiki page / source](http://wiki.openwrt.org/toh/tp-link/tl-wr741nd)
+
+# install gui
+
+```
+opkg install luci-ssl
+/etc/init.d/uhttpd restart
+```
 
 # links
 
 * [beginner](http://wiki.openwrt.nanl.de/doc/howto/user.beginner)
 * [how to openwrt](http://wireless.subsignal.org/index.php?title=Howto_OpenWRT)
+* [list of howtos](https://wiki.openwrt.org/doc/howto/start)
+* [list of recipes](https://wiki.openwrt.org/doc/recipes/index)
 * [firmware download](http://wiki.openwrt.org/doc/howto/obtain.firmware.download)
 * [system upgrade](http://wiki.openwrt.org/doc/howto/generic.sysupgrade)
 * [first login](http://wiki.openwrt.nanl.de/doc/howto/firstlogin)
 * [basic configuration](http://wiki.openwrt.nanl.de/doc/howto/basic.config)
 * [wireless overview](http://wiki.openwrt.nanl.de/doc/howto/wireless.overview)
+* [wireless faq](https://wiki.openwrt.org/doc/faq/faq.wireless)
 * [log](http://wiki.openwrt.org/doc/howto/log.essentials)
 * [packages](https://github.com/openwrt/packages)
 * [network overview](http://wiki.openwrt.org/doc/uci/network)
