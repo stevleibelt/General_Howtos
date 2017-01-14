@@ -66,11 +66,15 @@
 * gnash
 * fswebcam (use your web cam as your camera)
 
+# power saving
+
+* powertop
+* [laptop-mode-tools](https://wiki.archlinux.org/index.php/Laptop_Mode_Tools)
+
 # other
 
 * aurvote
 * dos2unix
-* powertop
 * yaourt
 * pacaur
 
