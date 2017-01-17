@@ -19,3 +19,9 @@ else
     echo "xml is not valid"
 fi
 ```
+
+# links
+
+* [bash script variables and xmllint](https://www.experts-exchange.com/questions/28121869/bash-script-variables-and-xmllint.html)
+* [xmllint in debian](https://packages.debian.org/sid/libxml2-utils)
+* [Tool to validate an XSD on ubuntu linux [closed]](https://stackoverflow.com/questions/4092812/tool-to-validate-an-xsd-on-ubuntu-linux)
