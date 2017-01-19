@@ -43,6 +43,7 @@ Y
 # format partitions
 
 ```
+#as en example with ext4
 mkfs.ext4 /dev/sda2
 mkfs.ext4 /dev/sda3
 ```
