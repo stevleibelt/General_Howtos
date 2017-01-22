@@ -262,3 +262,4 @@ git help hooks
 * http://www.pro-linux.de/artikel/2/1752/git-tutorium-teil-3.html
 * http://www.pro-linux.de/artikel/2/1777/git-tutorium-teil-4-github.html
 * http://christoph.ruegg.name/blog/git-howto-revert-a-commit-already-pushed-to-a-remote-reposit.html
+* [deutsche git anleitung](http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/de/)
