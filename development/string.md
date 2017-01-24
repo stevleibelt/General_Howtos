@@ -6,7 +6,7 @@ List of [control charachters](https://en.wikipedia.org/wiki/ASCII#Control_charac
 ##
 
 | Binary | DEC | HEX | character (code) | character (terminal) | character (c programming languages) | 
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | 
 | 000 0000 | 0 | 00 | NULL | ^@ | \0 |
 | 000 0001 | 1 | 01 | START OF HEADING (SOH) | ^A | |
 | 000 0010 | 2 | 02 | START OF TEXT (STX) | ^B | |
