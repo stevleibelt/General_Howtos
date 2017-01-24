@@ -23,20 +23,20 @@ List of [control charachters](https://en.wikipedia.org/wiki/ASCII#Control_charac
 | 000 1101 | 13 | 0D | CARRIAGE RETURN (CR) | ^M | \r |
 | 000 1110 | 14 | 0E | SHIFT OUT (SO) | ^N | |
 | 000 1111 | 15 | 0F | SHIFT IN (SI) | ^O | |
-| 001 0000 | 16 | 10 | DATA LINK ESCAPE (DC0 | DLE) | ^P | |
-| 001 0001 | 17 | 11 | DEVICE CONTROL 1 (XON | DC1) | ^Q | |
-| 001 0010 | 18 | 12 | DEVICE CONTROL 2 (DC 2) | ^R | |
-| 001 0011 | 19 | 13 | DEVICE CONTROL 3 (XOF | DC 3) | ^S | |
-| 001 0100 | 20 | 14 | DEVICE CONTROL 3 (DC 4) | ^T | |
-| 001 0101 | 21 | 15 | NEGTIVE ACKNOWLEDGEMENT (ERR | NAK) | ^U | |
+| 001 0000 | 16 | 10 | DATA LINK ESCAPE (DC0 \| DLE) | ^P | |
+| 001 0001 | 17 | 11 | DEVICE CONTROL 1 (XON \| DC1) | ^Q | |
+| 001 0010 | 18 | 12 | DEVICE CONTROL 2 (DC 2) \| ^R | |
+| 001 0011 | 19 | 13 | DEVICE CONTROL 3 (XOF \| DC 3) | ^S | |
+| 001 0100 | 20 | 14 | DEVICE CONTROL 3 (DC 4) \| ^T | |
+| 001 0101 | 21 | 15 | NEGTIVE ACKNOWLEDGEMENT (ERR \| NAK) | ^U | |
 | 001 0110 | 22 | 16 | SYNCHRONOUS IDLE (SYN) | ^V | |
-| 001 0111 | 23 | 17 | END OF TRANSMISSION BLOCK (LEM | ETB) | ^W | |
-| 001 1000 | 24 | 18 | CANCLE (CAN | S0) | ^X | |
-| 001 1001 | 25 | 19 | END OF MEDIUM (EM | S1) | ^Y | |
-| 001 1010 | 26 | 1A | SUBSTITUTE (SS | SUB | S2) | ^Z | |
-| 001 1011 | 27 | 1B | ESCAPE (ESC | S3) | ^[ | \e |
-| 001 1100 | 28 | 1C | FILE SEPARATOR (FS | S4) | ^] | |
-| 001 1101 | 29 | 1D | GROUP SEPARATOR (GS | S5) | ^^ | |
-| 001 1110 | 30 | 1E | RECORD SEPARATOR (RS | S6) | ^\_ | |
-| 001 1111 | 31 | 1F | UNIT SEPARATOR (US | S7) | | |
+| 001 0111 | 23 | 17 | END OF TRANSMISSION BLOCK (LEM \| ETB) | ^W | |
+| 001 1000 | 24 | 18 | CANCLE (CAN \| S0) | ^X | |
+| 001 1001 | 25 | 19 | END OF MEDIUM (EM \| S1) | ^Y | |
+| 001 1010 | 26 | 1A | SUBSTITUTE (SS \| SUB \| S2) | ^Z | |
+| 001 1011 | 27 | 1B | ESCAPE (ESC \| S3) | ^[ | \e |
+| 001 1100 | 28 | 1C | FILE SEPARATOR (FS \| S4) | ^] | |
+| 001 1101 | 29 | 1D | GROUP SEPARATOR (GS \| S5) | ^^ | |
+| 001 1110 | 30 | 1E | RECORD SEPARATOR (RS \| S6) | ^\_ | |
+| 001 1111 | 31 | 1F | UNIT SEPARATOR (US \| S7) | | |
 | 111 1111 | 127 | 7F | DELETE (DEL) | ^? | |
