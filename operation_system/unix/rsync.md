@@ -88,3 +88,4 @@ rsync --bwlimit=<kb/second> <source> <dest>
 * http://www.thegeekstuff.com/2011/07/rsync-over-ssh-without-password
 * https://calomel.org/rsync_tips.html
 * http://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/
+* https://opensource.com/article/17/1/rsync-backup-linux
