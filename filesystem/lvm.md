@@ -1,3 +1,10 @@
+# lvm terms
+
+* physical volume (pv)  is the partition on the device
+* volume group (vg) is a group of physical devices used as a virtual device
+* logical volume (lv) is a virtual partition inside a virtual device
+* physical extent (pe) smallest part of a physical volume that can be assigned to a logical volume (default 4MiB)
+
 # preparing disk
 
 ```

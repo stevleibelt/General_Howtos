@@ -2,6 +2,16 @@
 
 grep [options] <pattern> <path or files>
 
+# grep inside a shell script
+
+```
+#example, do something if ...
+if git status | grep -q 'both modified';
+then
+    #...
+fi
+```
+
 # exit with code 0 if any match was found
 
 ```
