@@ -29,3 +29,14 @@ FLUSHDB
 #all
 FLUSHALL
 ```
+
+## monitoring
+
+```
+#inside the redis cli
+#@see: https://redis.io/commands/info
+INFO
+
+#@see: https://redis.io/commands/monitor
+MONITOR
+```
