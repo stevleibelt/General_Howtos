@@ -31,7 +31,12 @@ w
 Y
 ```
 ## format boot partition 
+
 ```
+#ext2 is good enough
+mkfs.ext2 /dev/sdX2
+
+#but if you want to, ext4 is also working
 mkfs.ext4 /dev/sdX2
 ```
 
