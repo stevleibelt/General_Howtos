@@ -13,15 +13,19 @@
 * use -P to print machine-parsable verbose information
 * use -v to print verbose informations
 
-    # use "-r" for all descendent file systems (recursive)
-    zfs snapshot [-r] <pool name>@<snapshot name>
+```
+# use "-r" for all descendent file systems (recursive)
+zfs snapshot [-r] <pool name>@<snapshot name>
 
-    # use -i to create an incremental stream from the first snapshot
-    zfs snapshot -i <pool name>@<first snapshot name> <pool name>@<second snapshot name>
+# use -i to create an incremental stream from the first snapshot
+zfs snapshot -i <pool name>@<first snapshot name> <pool name>@<second snapshot name>
+```
 
 # delete
 
-    zfs destroy <pool name>@<snapshot name>
+```
+zfs destroy <pool name>@<snapshot name>
+```
 
 ## options
 
@@ -34,7 +38,9 @@
 
 # list
 
-    zfs list -t snapshot
+```
+zfs list -t snapshot
+```
 
 # diff
 
@@ -51,52 +57,72 @@
 * M     the path has been modified
 * R     the path has been renamed
 
-    zfs diff <source snapshot name> <destination snapshot name>|<file system>
+```
+zfs diff <source snapshot name> <destination snapshot name>|<file system>
+```
 
 # rollback / restore
 
-    zfs rollback <pool name>@<snapshot name>
+```
+zfs rollback <pool name>@<snapshot name>
+```
 
 # clone
 
-    zfs clone <pool name>@<snapshot name> <pool name>[/<path>]/<to clone>
+```
+zfs clone <pool name>@<snapshot name> <pool name>[/<path>]/<to clone>
+```
 
 # backup
 
 ## on same system
 
-    zfs send <source pool name>@<snapshot name> | zfs receive <destination pool name>
+```
+zfs send <source pool name>@<snapshot name> | zfs receive <destination pool name>
+```
 
 ## via ssh
 
-    zfs send <source pool name>@<snapshot name> | ssh backup.me.com zfs recv <destination pool name>[/path]
+```
+zfs send <source pool name>@<snapshot name> | ssh backup.me.com zfs recv <destination pool name>[/path]
+```
 
 ## entire pool
 
-    zfs snapshot -r <source pool>@<snapshot name>
-    zfs send -R <source pool name>@<snapshot name> | zfs receive -F <destination pool name>
+```
+zfs snapshot -r <source pool>@<snapshot name>
+zfs send -R <source pool name>@<snapshot name> | zfs receive -F <destination pool name>
+```
 
 # rename
 
-    zfs rename <pool name>@<old snapshot name> <pool name>@<new snapshot name>
-    # same but short
-    zfs rename <pool name>@<old snapshot name> <new snapshot name>
+```
+zfs rename <pool name>@<old snapshot name> <pool name>@<new snapshot name>
+# same but short
+zfs rename <pool name>@<old snapshot name> <new snapshot name>
+```
 
 # browse in the snapshot
 
-    #assuming your root is your pool
-    cd /.zfs/snapshot/<snapshot name>
-    ls -halt
+```
+#assuming your root is your pool
+cd /.zfs/snapshot/<snapshot name>
+ls -halt
+```
 
 # backup to archive
 
-    zfs send -Rv <pool name>@<snapshot name> | gzip > <path to archive>.gz
+```
+zfs send -Rv <pool name>@<snapshot name> | gzip > <path to archive>.gz
+```
 
 ## hints
 
 * install "pipe view" (pv) to monitor progress
 
-    zfs send <source pool name>[/path]@<snapshot name> | pv | zfs receive <destination pool name[/path]>
+```
+zfs send <source pool name>[/path]@<snapshot name> | pv | zfs receive <destination pool name[/path]>
+```
 
 * repeat snapshot send and receive at least twice (second run with disabled user access to source pool) to get all data in sync
 
