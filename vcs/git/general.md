@@ -15,8 +15,12 @@ git log
 # remove local changes
 
 ```
-git clean -f -d #will remove untracked files (-f) and directories (-d)
-git reset --hard HEAD #will not remove untracked files
+#will remove untracked files (-f) and directories (-d)
+git clean -f -d
+#will not remove untracked files
+git reset --hard HEAD
+#reset to latest remote repository
+git reset --hard origin/master
 ```
 
 ## revert changes on local copy
