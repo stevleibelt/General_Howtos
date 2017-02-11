@@ -36,6 +36,17 @@ awk '{printf "%3.1f°C\n", $1/1000}' /sys/class/thermal/thermal_zone0/temp
 watch -n 0.5 gpio readall
 ```
 
+# HDMI and DVI
+
+```
+#add following lines to the config.txt
+#enable hdmi even if no monitor is detected
+hdmi_force_hotplug=1
+#enable sound transmitted via hdmi, 1 is picture only
+hdmi_drive=2
+```
+
+
 # arch linux
 
 ## packages
@@ -72,3 +83,4 @@ pacman -S base-devel htop lsof git nmon vim
 * https://wiki.archlinux.org/index.php/Benchmarking#Flash_media
 * https://wiki.archlinux.org/index.php/Fsck#Boot_time_checking
 * [create customized images with pibakery](http://www.pibakery.org/)
+* [force to turn on HDMI](http://raspberrypi.stackexchange.com/questions/2169/how-do-i-force-the-raspberry-pi-to-turn-on-hdmi#2171)
