@@ -1,6 +1,8 @@
 # howto
 
 * install sane
+* echo “” >> /etc/sane.d/fujitsu.conf
+* echo “#ScanSnap s1300i” >> /etc/sane.d/fujitsu.conf
 * echo “usb 0x04c5 0x1155” >> /etc/sane.d/fujitsu.conf
 * cd /usr/share/sane/epjitsu/
 * wget https://github.com/ckunte/scansnap-firmware/raw/master/1300i_0D12.nal
