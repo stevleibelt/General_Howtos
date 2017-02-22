@@ -33,6 +33,10 @@ mysqldump -u username -p database_name table_name > dump.sql
     ENCLOSED BY '"'
     LINES TERMINATED BY '\n'
 
+-- or use a statement and pipe it into a file
+
+mysql -u <username> -p <database name> < my_statement.sql > my_result.txt
+
 -- ERROR 1045 (28000): Access denied for user 
 -- 
 -- http://mamchenkov.net/wordpress/2011/04/27/mysql-export-csv-into-outfile-triggers-access-denied-error/
