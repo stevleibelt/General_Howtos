@@ -1,9 +1,11 @@
 # display current umask
 
-    cd <my path>
-    umask
-    #display human readable / symbolically mode
-    umask -S
+```
+cd <my path>
+umask
+#display human readable / symbolically mode
+umask -S
+```
 
 # octal codes
 
