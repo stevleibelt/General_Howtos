@@ -84,3 +84,4 @@ pacman -S base-devel htop lsof git nmon vim
 * https://wiki.archlinux.org/index.php/Fsck#Boot_time_checking
 * [create customized images with pibakery](http://www.pibakery.org/)
 * [force to turn on HDMI](http://raspberrypi.stackexchange.com/questions/2169/how-do-i-force-the-raspberry-pi-to-turn-on-hdmi#2171)
+* [R-Pi Troughleshooting on elinux.org](http://elinux.org/R-Pi_Troubleshooting)
