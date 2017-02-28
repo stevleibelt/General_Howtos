@@ -1,3 +1,10 @@
+# list of power states
+
+* freeze - suspend to idle
+* standby - power on suspend
+* mem - suspend to ram
+* disk - suspend to disk
+
 # how does suspend to disk work work under linux?
 
 Linux is dumping the whole memoy into your swap file or swap partition.
@@ -39,6 +46,7 @@ Edit the file /etc/acpi/handler.sh (e.g. unmounting network drives etc.).
 # links
 
 * [suspend to disk/ram with linux.](http://karellen.blogspot.de/2013/07/suspend-to-diskram-with-linux.html)
+* [power management interface for system sleep](https://www.mjmwired.net/kernel/Documentation/power/interface.txt)
 * [suspend and hbernate](https://wiki.gentoo.org/wiki/Suspend_and_hibernate)
 * [power management](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate)
 * [grub and hibernation](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation)

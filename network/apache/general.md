@@ -1,22 +1,32 @@
-# .htacces
+# .htaccess
 
 First rule of all, enable mod_rewrite in your configuration.
 
+## test
+
+```
+echo 'Redirect 301 / https://www.bazzline.net' > .htaccess
+```
+
 ## .htpasswd
 
-    # add to .htaccess
-    # @see: http://weavervsworld.com/docs/other/passprotect.html
-    #       http://stackoverflow.com/questions/6111627/how-to-use-a-relative-path-with-authuserfile-in-htaccess
-    AuthUserFile <absolut path to >/.htpasswd
-    AuthType Basic
-    AuthName "<description>"
-    Require valid-user
+```
+# add to .htaccess
+# @see: http://weavervsworld.com/docs/other/passprotect.html
+#       http://stackoverflow.com/questions/6111627/how-to-use-a-relative-path-with-authuserfile-in-htaccess
+AuthUserFile <absolut path to >/.htpasswd
+AuthType Basic
+AuthName "<description>"
+Require valid-user
+```
 
 ## redirect http content to https
 
-    RewriteEngine On
-    RewriteCond   %{SERVER_PORT}  !^443$
-    RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+```
+RewriteEngine On
+RewriteCond   %{SERVER_PORT}  !^443$
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+```
 
 ## list of flas (whoot?)
 
@@ -38,6 +48,22 @@ First rule of all, enable mod_rewrite in your configuration.
 * QSA   -   query string append from reqest to subsituted url
 * S=x   -   skip next x rules
 * T=mime-type   -   force mime-type
+
+## regExp one o one
+
+* .     - any character
+* *     - zero or more of the preceding
+* +     - one or more of the preceding
+* {}    - minimum to maximum quantifier
+* ?     - ungreedy modifier
+* !     - at start of string means "negative pattern"/"not"
+* ^     - start of string or "negative" if at the start of a range
+* $     - end of string
+* []    - match any of contents
+* -     - range if used between square brackets
+* ()    - group, backreferenced group
+* |     - alternative, or
+* \     - the escape character
 
 ## error log format
 
@@ -67,6 +93,8 @@ AddType  application/font-eot  .eot
 
 # links
 
+* [how to debug .htaccess rewrite rules](http://stackoverflow.com/questions/9153262/tips-for-debugging-htaccess-rewrite-rules)
+* [url rewriting for beginners](https://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/)
 * http://whoopis.com/howtos/apache-rewrite.html
 * http://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/
 * http://www.askapache.com/htaccess/modrewrite-tips-tricks.html
