@@ -1,43 +1,65 @@
 # connect to ftp
 
-    ftp $hostname
+```
+ftp <ip address or host name>
+```
 
 # upload filename to server
 
-    put $filename
+```
+put <local file path>
+```
 
 # upload multiple files - use wildcards if needed
 
-    mput $filenames
+```
+mput <local file path>
+```
 
 # download file
 
-    get $filename [$localFilename]
+```
+get <file path> <local file path>
+```
 
 # download multiple files - use wildcards if needed
 
-    mget $filenames
+```
+mget <file path>
+```
 
 # change ftp directory
 
-    cd
+```
+cd
+```
 
 # change local directory
 
-    lcd
+```
+lcd
+```
 
 # list fto directories
 
-    dir
+```
+dir
+```
 
 # enable binary transferemode
 
-    binary
+```
+binary
+```
 
 # enable text transferemode
 
-    ascii
+```
+ascii
+```
 
 # quit
 
-    quit
+```
+quit
+```
