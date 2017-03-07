@@ -72,15 +72,21 @@ zpool create <pool name> /dev/mapper/<luks pool name>
 zpool create -o ashift=12 <pool name> mirror <first device> <second device>
 ```
 
-## Continue with "Create necessary filesystems" from the official [arch linux wiki](https://wiki.archlinux.org/index.php/Installing_Arch_Linux_on_ZFS#Create_necessary_filesystems)
+## continue with "Create necessary filesystems" from the official [arch linux wiki](https://wiki.archlinux.org/index.php/Installing_Arch_Linux_on_ZFS#Create_necessary_filesystems)
 * when it comes to "Finally, re-import the pool", simple do
 ```
 zpool import -R /mnt <pool name>
 #if pool was not exported try
 zpool import -fR /mnt <pool name>
 ```
-* i would not try to put "var" and more to a separate zfs since this leads to some errors while booting up right now (2015-03-03)
+
+## continue with "Install and configure Arch Linux" from the official [wiki](https://wiki.archlinux.org/index.php/Installing_Arch_Linux_on_ZFS#Install_and_configure_Arch_Linux)
+
+* do not forget to add the archzfs repository to your pacman.conf like explained [here](http://archzfs.com/)
+* if you have a dedicated boot partition, put that into the fstab (beside an optional swap, there is nothing more you need)
+* I would not try to put "var" and more to a separate zfs since this leads to some errors while booting up right now (2015-03-03)
 * when it comes to the point of adapting the grub.cfg, the "linux" section should look like:
+
 ```
 linux   /vmlinuz-linux zfs=<zpool name> rw cryptdevice=/dev/disk/by-uuid/<uuid of raw device/parition>:<decrypted device name/identifier> quit
 ```
