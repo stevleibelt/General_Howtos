@@ -70,3 +70,4 @@ quote SETENV linux_fs_start 0
     * [fb tools](https://github.com/f00f/FritzBoxTools)
     * [freetz-docker](https://github.com/mtneug/freetz-docker)
     * [Fritzbox.sh](https://github.com/Tscherno/Fritzbox.sh)
+* [list of fritzboxes for openwrt](https://wiki.openwrt.org/toh/avm/start)
