@@ -1,8 +1,19 @@
 # basic howto
 
+## by using PKGBUILD
+
 ```
-wget http://www.my.file .
-tar xzf my.file
+git clone https://aur.archlinux.org/<your package>
+cd <your package>
+makepkg -sri
+pacman -U *.tar.xz
+```
+
+## by building from source (if shipped with PKGBUILD)
+
+```
+wget <source path of your package>
+tar -xzf <source file>
 makepkg -sri
 pacman -U *.tar.xz
 ```
