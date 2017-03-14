@@ -212,3 +212,5 @@ hdparm -I /dev/sdX
 * http://www.zfsbook.com
 * http://wiki.illumos.org/display/illumos/ZFS+and+Advanced+Format+disks
 * https://github.com/archzfs/archzfs/issues/77
+* [youtube video systems part 1](https://www.youtube.com/watch?v=NRoUC9P1PmA)
+* [youtube video systems part 2](https://www.youtube.com/watch?v=TwCXVp_u86o)
