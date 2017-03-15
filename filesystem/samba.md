@@ -18,6 +18,14 @@ fi
 pdbedit -L
 ```
 
+## edit user
+
+```
+pdbedit -t -r -u <user name>
+#or
+smbpasswd -s <user name>
+```
+
 ## set stickbit for ug
 
 ```
