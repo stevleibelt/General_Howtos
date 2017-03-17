@@ -2,8 +2,10 @@
 
 ## do i have to restart x after adapting the configuration
 
-    #http://superuser.com/questions/612630/how-to-apply-reload-x-settings-after-changes-to-xorg-conf-d-configuration-files
-    Yes. X.Org's configuration files are only read when the server is started
+```
+#http://superuser.com/questions/612630/how-to-apply-reload-x-settings-after-changes-to-xorg-conf-d-configuration-files
+Yes. X.Org's configuration files are only read when the server is started
+```
 
 # links
 
