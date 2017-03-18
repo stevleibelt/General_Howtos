@@ -44,7 +44,13 @@ chattr +i ~/.ssh
 ## enable verbose/debug mode
 
 ```
-ssh <user>@<host> -vvv
+ssh -vvv <user>@<host>
+```
+
+## change to use ipv4 only
+
+```
+ssh -4 <user>@<host>
 ```
 
 # links
