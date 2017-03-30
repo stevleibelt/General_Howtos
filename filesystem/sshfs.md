@@ -1,6 +1,7 @@
-# enable fuse
+# installation
 
 ```
+#install package sshfs
 modprobe fuse
 ```
 
@@ -36,6 +37,12 @@ fusermount -u local/mount/point
 sshfs -d -f <source> <target>
 ```
 
+## "read: Connection reset by peer"
+
+* try calling it with -d -f
+* if you set the Ciphers option, the chance is high that the server does not support your cipher
+```
+
 ## “invalid_argument”
 
 ```
@@ -59,7 +66,7 @@ sshfs user@host:remote_path local_path -oauto_cache,reconnect,defer_permissions,
 ## blazing fast setting
 
 ```
-sshfs -o Ciphers=arcfour -o Compression=no <server://some/folder> </mnt/some_local_folder>
+sshfs <server://some/folder> </mnt/some_local_folder> -o Ciphers=arcfour -o Compression=no
 ```
 
 # links
