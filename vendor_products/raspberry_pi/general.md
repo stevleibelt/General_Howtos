@@ -85,3 +85,5 @@ pacman -S base-devel htop lsof git nmon vim
 * [create customized images with pibakery](http://www.pibakery.org/)
 * [force to turn on HDMI](http://raspberrypi.stackexchange.com/questions/2169/how-do-i-force-the-raspberry-pi-to-turn-on-hdmi#2171)
 * [R-Pi Troughleshooting on elinux.org](http://elinux.org/R-Pi_Troubleshooting)
+* [kubernets on a pi](https://opensource.com/article/17/3/kubernetes-raspberry-pi)
+* [how to secure your pi](https://opensource.com/article/17/3/iot-security-raspberry-pi)
