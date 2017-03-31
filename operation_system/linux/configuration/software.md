@@ -65,6 +65,7 @@
 * ffmpeg
 * gnash
 * fswebcam (use your web cam as your camera)
+* cheese (to make images and videos with your webcame)
 
 # power saving
 
