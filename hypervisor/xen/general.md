@@ -1,11 +1,15 @@
 # distributions with xen
 
+Based on the [offical list](https://wiki.xenproject.org/wiki/Xen_Project_Software_Overview)
+
+* Arch Linux
 * Alpine Linux
-* CentOS
+* CentOS (5 and above 6.3)
 * Debian GNU/Linux
+* Fedora (above 16)
+* Finnix
 * FreeBSD
 * Gentoo Linux
-* Arch Linux
 * Magia
 * netBSD
 * openSUSE
@@ -13,6 +17,7 @@
 
 # link
 
+* [getting started on xenproject.org](https://www.xenproject.org/users/getting-started.html)
 * [on archlinux](https://wiki.archlinux.org/index.php/Xen)
 * [on wikipedia](https://en.wikipedia.org/wiki/Xen)
 * [ipfire for xen](http://wiki.ipfire.org/en/virtualization/xen/start)
