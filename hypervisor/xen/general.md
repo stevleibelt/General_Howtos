@@ -1,6 +1,7 @@
 # distributions with xen
 
 * Alpine Linux
+* CentOS
 * Debian GNU/Linux
 * FreeBSD
 * Gentoo Linux
