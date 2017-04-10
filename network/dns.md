@@ -17,7 +17,7 @@ sudo echo "nameserver <ip address>" >> /etc/resolv.conf
 
 Unfinished list based on [this result](https://duckduckgo.com/?q=free+and+uncensored+dns+server&ia=answer&iax=1)
 
-|| provider name || ip v4 || ip v6 ||
+^ provider name ^ ip v4 ^ ip v6 ^
 | Alternate DNS | 198.101.242.72 | |
 | | 198.101.242.72 | |
 | BlockAid Public Dns | 205.204.88.60 | |
