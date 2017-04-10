@@ -1,3 +1,15 @@
+# distributions with xen
+
+* Alpine Linux
+* Debian GNU/Linux
+* FreeBSD
+* Gentoo Linux
+* Arch Linux
+* Magia
+* netBSD
+* openSUSE
+* Ubuntu
+
 # link
 
 * [on archlinux](https://wiki.archlinux.org/index.php/Xen)
