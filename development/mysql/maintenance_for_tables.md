@@ -2,18 +2,24 @@
 
 ```
 mysqlcheck --analyze [--user=<user_name>] [--password=<password>] [--all-databases]
+#or
+mysql -u${MYSQL_USER_NAME} -p${MYSQL_PASSWORD} -h${MYSQL_HOST} ${MYSQL_DATABASE} --execute="ANALYZE TABLE ${TABLE_NAME_TO_TAKE_CARE_OF};"
 ```
 
 # repair table
 
 ```
 mysqlcheck --repair [--user=<user_name>] [--password=<password>] [--all-databases]
+#or
+mysql -u${MYSQL_USER_NAME} -p${MYSQL_PASSWORD} -h${MYSQL_HOST} ${MYSQL_DATABASE} --execute="REPAIR TABLE ${TABLE_NAME_TO_TAKE_CARE_OF};"
 ```
 
 # optimize table
 
 ```
 mysqlcheck --optimize [--user=<user_name>] [--password=<password>] [--all-databases]
+#or
+mysql -u${MYSQL_USER_NAME} -p${MYSQL_PASSWORD} -h${MYSQL_HOST} ${MYSQL_DATABASE} --execute="OPTIMIZE TABLE ${TABLE_NAME_TO_TAKE_CARE_OF};"
 ```
 
 # more?
