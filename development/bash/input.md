@@ -35,3 +35,7 @@ done
 * http://wiki.bash-hackers.org/howto/getopts_tutorial
 * http://www.tldp.org/LDP/abs/html/internal.html#GETOPTSX
 * http://www.tldp.org/LDP/abs/html/extmisc.html#GETOPTY
+* http://bahmanm.com/blogs/command-line-options-how-to-parse-in-bash-using-getopt
+* http://tuxtweaks.com/2014/05/bash-getopts/
+* http://aplawrence.com/Unix/getopts.html
+* http://wiki.bash-hackers.org/howto/getopts_tutorial
