@@ -56,3 +56,11 @@ SELECT
         ),
         '%H:%i:%s'
     ) AS `difference`;
+
+-- get all entries starting 10 minutes in the past
+SELECT
+    *
+FROM
+    `my_table`
+WHERE
+    `my_date_time_column` < NOW() - INTERVAL 10 MINUTE;
