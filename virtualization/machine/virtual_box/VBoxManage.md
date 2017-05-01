@@ -7,10 +7,11 @@ VBoxManage | less
 
 ## Shotcuts
 
-|| Command || Description ||
-| VBoxManage list vm | List virtual machines |
-| VBoxManage start <uuid|vname> headless | Start a virtual machine in headless mode |
-| VBoxManage controlvm <uuid|vname> pause|poweroff | Pause or poweroff virtual machine |
+| Command | Description |
+| --- | --- |
+| VBoxManage list vms | List virtual machines |
+| VBoxManage startvm <uuid\|vname> headless | Start a virtual machine in headless mode |
+| VBoxManage controlvm <uuid\|vname> pause|poweroff | Pause or poweroff virtual machine |
 
 ## Whole list of command and options
 
