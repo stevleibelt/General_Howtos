@@ -1,3 +1,11 @@
+# preparation before usage
+
+Check if your kernel and cpu supports xen virtualization.
+
+```
+#no output indicates no support
+grep -E "(vmx|svm)" --color=always /proc/cpuinfo
+```
 # distributions with xen
 
 Based on the [offical list](https://wiki.xenproject.org/wiki/Xen_Project_Software_Overview)
