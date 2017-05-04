@@ -25,7 +25,7 @@ lp or lpr
 # use not the default printer
 
 ```
-lpr -d$printername
+lpr -P <printer or queue name> <path to the file to print>
 ```
 
 # print $n copies
@@ -39,6 +39,12 @@ lpr -<number of copies>
 
 ```
 lpinfo -v
+```
+
+# list drivers
+
+```
+lpinfo -m
 ```
 
 # list configured printers
