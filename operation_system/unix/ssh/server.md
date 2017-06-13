@@ -1,24 +1,26 @@
-# set ip address the demon is listen on
+# list of option
+
+## set ip address the demon is listen on
 
 ```
 ListenAddress <ip-address>
 ```
 
-# restrict to local ip pool
+## restrict to local ip pool
 
-## Block everything from everyone.
+### Block everything from everyone.
 
 ```
 echo 'ALL : ALL' > /etc/hosts.deny
 ```
 
-## Or block only all sshd conenctions
+### Or block only all sshd conenctions
 
 ```
 echo 'SSHD : ALL : DENY' > /etc/hosts.deny
 ```
 
-## Allow what we need
+### Allow what we need
 
 ```
 echo -e 'ALL : localhost\nsshd: <ip-address[with wildcards]>[\nanotherProgramm: <ip-address>]'
@@ -26,28 +28,37 @@ echo -e 'ALL : localhost\nsshd: <ip-address[with wildcards]>[\nanotherProgramm: 
 echo -e 'ALL : localhost\nsshd: 192.168.1.0'    #allow all from rane 192.168.1.x
 ```
 
-## or
+### or
 
 ```
 echo 'SSHD : <ipaddress> : ALLOW' > /etc/hosts.allow
 ```
 
-# root is not allowed to log in
+## root is not allowed to log in
 
 ```
 PermitRootLogin no
 ```
 
-# allow only following users to log in
+## allow only following users to log in
 
 ```
 AllowUsers myUserOne[ myUserTwo]
 ```
 
-# allow only following groups to log in
+## allow only following groups to log in
 
 ```
 AllowGroups myGroupOne[ myGroupTwo]
+```
+
+# security advice
+
+```
+PermitRootLogin no
+PasswordAuthentication no
+RSAAuthentication yes
+PubkeyAuthentication yes
 ```
 
 # hints
