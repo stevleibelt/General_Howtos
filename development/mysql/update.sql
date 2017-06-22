@@ -34,6 +34,9 @@ SET
     `my_column` = 666 
 LIMIT
     1000;
+-- if you want to use an update within a join, use a subselect
+-- @link: https://www.xaprb.com/blog/2006/08/10/how-to-use-order-by-and-limit-on-multi-table-updates-in-mysql/
+-- @link: https://www.xaprb.com/blog/2006/08/03/a-little-known-way-to-cause-a-database-deadlock/
 
 -- 
 -- if you can not use limit, "id BETWEEN 0 AND 10000"
