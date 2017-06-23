@@ -19,6 +19,12 @@ SELECT * FROM `information_schema`.`global_variables`;
 SELECT * FROM GLOBAL_VARIABLES WHERE `variable_name` LIKE 'innodb%';
 ```
 
+# from the shell
+
+```
+mysqladmin --user=<user name> --password=<password> processlist
+```
+
 # links
 
 * https://dev.mysql.com/doc/refman/5.0/en/kill.html

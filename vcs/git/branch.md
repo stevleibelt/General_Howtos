@@ -78,42 +78,56 @@ git branch --delete --force <branch name>
 
 ## switch to a local branch
 
-    git checkout <local branch name>
+```
+git checkout <local branch name>
+```
 
 ## switch to a tag of master
 
-    git checkout master
-    git pull
-    git checkout -b my_branch refs/tags/<tag name>
+```
+git checkout master
+git pull
+git checkout -b my_branch refs/tags/<tag name>
+```
 
 ## remove local branch
 
-    git branch -d my_branch
+```
+git branch -d my_branch
+```
 
 ## remove all local branches that are merged into the master already
 
-    git branch --merged origin/master | grep -v 'master' | xargs -n 1 git branch -d
+```
+git branch --merged origin/master | grep -v 'master' | xargs -n 1 git branch -d
+```
 
 ## remove remote branch after local deletion
 
-    git push origin --delete my_branch
-    #or
-    git push origin :my_branch
+```
+git push origin --delete my_branch
+#or
+git push origin :my_branch
+```
 
 ## merge
 
 ### branch into master
 
-    git checkout master
-    git merge <branch name>
+```
+git checkout master
+git merge <branch name>
+```
 
 ### master tag into branch
 
-    #git fetch --tags origin
-    git fetch origin
-    git merge <tag name>
-    #if you run into issues and simple do not want to solve the conflict
-    git merge --abort
+```
+#git fetch --tags origin
+git fetch origin
+git merge <tag name>
+#if you run into issues and simple do not want to solve the conflict
+git merge --abort
+```
 
 ### resolve a conflict
 
