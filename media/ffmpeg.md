@@ -70,3 +70,4 @@ ffmpeg -i <video file name>.mp4 -i <audio file name>.acc  -c:v copy -c:a copy <o
 * https://trac.ffmpeg.org/wiki/
 * https://wiki.archlinux.org/index.php/FFmpeg#Two-pass_MPEG-4_.28very_high_quality.29
 * http://www.upubuntu.com/2012/02/how-to-convert-mp4-to-avi-under-ubuntu.html
+* https://opensource.com/article/17/6/ffmpeg-convert-media-file-formats

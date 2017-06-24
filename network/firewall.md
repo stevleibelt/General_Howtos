@@ -6,3 +6,5 @@
 * [ipcop](https://en.wikipedia.org/wiki/IPCop)
 * [ipfire](https://en.wikipedia.org/wiki/IPFire)
     * [ipfire on an raspberry pi](http://wiki.ipfire.org/en/hardware/arm/rpi/one-b)
+* [endian](http://www.endian.com/)
+* [opensense](http://opnsense.org/)
