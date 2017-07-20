@@ -23,7 +23,8 @@ SHOW TABLE STATUS LIKE '<table name>'\G
 -- ANALYZE updates the mysql.innodb_index_stats for the given table
 -- ANALYZE can result in heavy load on your system
 -- "During the analysis, the table is locked with a read lock for InnoDB and MyISAM."
--- @link:https://dev.mysql.com/doc/refman/5.7/en/analyze-table.html
+-- @link https://dev.mysql.com/doc/refman/5.7/en/analyze-table.html
+-- @link https://dzone.com/articles/mysql-optimizer-analyze-table
 -- 
 
 ANALYZE table <table_name>;
@@ -42,6 +43,23 @@ GROUP BY
        index_name;
 ```
 
+# Show Statistics Size Of Index
+
+```mysql
+-- show statistics of primary index
+SELECT 
+    database_name, table_name, index_name, round(stat_value*@@innodb_page_size/1024/1024, 2) size_in_mb
+FROM 
+    mysql.innodb_index_stats
+WHERE 
+    stat_name = 'size' 
+    AND index_name = 'PRIMARY'
+ORDER BY 
+    4 DESC;
+```
+
 # link
 
 * http://aadant.com/blog/2014/02/04/how-to-calculate-a-specific-innodb-index-size/
+* http://oysteing.blogspot.de/2011/05/innodb-persistent-statistics-save-day.html
+* https://dzone.com/articles/mysql-optimizer-analyze-table
