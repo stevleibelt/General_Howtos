@@ -43,12 +43,32 @@ GROUP BY
        index_name;
 ```
 
-# Show Statistics Size Of Index
+# Show Size of all Index of one Table
+
+```mysql
+SELECT 
+    database_name, 
+    table_name, 
+    index_name, 
+    stat_name, round(stat_value*@@innodb_page_size/1024/1024, 2) size_in_mb
+FROM 
+    mysql.innodb_index_stats
+WHERE 
+    stat_name="size" 
+    AND table_name = '<table name>'
+ORDER BY 
+    4 DESC;
+```
+
+# Show Statistics Size of Index
 
 ```mysql
 -- show statistics of primary index
 SELECT 
-    database_name, table_name, index_name, round(stat_value*@@innodb_page_size/1024/1024, 2) size_in_mb
+    database_name, 
+    table_name, 
+    index_name, 
+    round(stat_value*@@innodb_page_size/1024/1024, 2) size_in_mb
 FROM 
     mysql.innodb_index_stats
 WHERE 
