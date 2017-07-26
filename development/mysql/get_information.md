@@ -78,6 +78,24 @@ ORDER BY
     4 DESC;
 ```
 
+# Show information about data fragmentation of the tables
+
+```mysql
+SELECT
+    ENGINE,
+    TABLE_NAME,
+    ROUND(DATA_LENGTH / 1024 / 1024) AS data_length,
+    ROUND(INDEX_LENGTH / 1024 / 1024) AS index_length,
+    -- data_free is the important one since this is the allocated space that is not used (because of deletion)
+    ROUND(DATA_FREE / 1024 / 1024) AS data_free
+FROM
+    information_schema.tables
+WHERE
+    DATA_FREE > 0
+ORDER BY 
+    data_free DESC;
+```
+
 # link
 
 * http://aadant.com/blog/2014/02/04/how-to-calculate-a-specific-innodb-index-size/
