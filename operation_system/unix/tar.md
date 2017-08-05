@@ -52,3 +52,4 @@ tar -tf foo.tar.gz
 * http://www.linuxquestions.org/questions/linux-general-1/list-tar-contents-only-first-level-then-subdirectory-and-extract-4175512405/
 * http://www.cyberciti.biz/faq/list-the-contents-of-a-tar-or-targz-file/
 * http://www.pendrivelinux.com/how-to-open-a-tar-file-in-unix-or-linux/
+* https://opensource.com/article/17/7/how-unzip-targz-file

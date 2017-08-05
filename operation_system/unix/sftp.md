@@ -24,7 +24,9 @@
 
 # on errors
 
-    tail -f /var/log/auth.log
+```
+tail -f /var/log/auth.log
+```
 
 # links
 

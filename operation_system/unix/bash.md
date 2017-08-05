@@ -1,49 +1,63 @@
 # reset .bashrc
 
-    cp /etc/skel/.bashrc /home/<your user>
+```
+cp /etc/skel/.bashrc /home/<your user>
+```
 
 # reload .bashrc
 
-    cd ~
-    source .bashrc
+```
+cd ~
+source .bashrc
 
-    source ~/.bashrc
+source ~/.bashrc
 
-    bash #opens a subshell
+bash #opens a subshell
+```
 
 # alias
 
 ## check if command is aliased
 
-    type -a emacs
-    #-bash: type: emacs: not found
-    alias emacs=vim
-    type -a emacs
-    #emacs is aliased to `vim'
+```
+type -a emacs
+#-bash: type: emacs: not found
+alias emacs=vim
+type -a emacs
+#emacs is aliased to `vim'
+```
 
 ## get original / not aliased command
 
-    type -P vim
-    which --skip-alias vim
+```
+type -P vim
+which --skip-alias vim
+```
 
 ## expand aliases
 
-    shopt -s expand_aliases
+```
+shopt -s expand_aliases
+```
 
 ## us original command / disable alias temporary
 
-    alias cd="ls -halt"
-    #use aliased version
-    cd
-    #use original version
-    \cd
-    #or if available
-    /usr/bin/ls
+```
+alias cd="ls -halt"
+#use aliased version
+cd
+#use original version
+\cd
+#or if available
+/usr/bin/ls
+```
 
 ## disable alias
 
-    alias cd="ls -halt"
-    unalias cd
+```
+alias cd="ls -halt"
+unalias cd
+```
 
 ## variables
 
@@ -76,6 +90,23 @@ $_ = current shell
 * tab       -   auto-complete files and folder names
 ```
 
+# history
+
+```
+#show full history
+history
+
+#show partial history
+history <number of last entries you want to see>
+
+#execute command from history
+!<number of the history entry>
+
+#execute a command relative to our position
+!-2 #executes the second last command executed
+!!  #executes the previous command
+```
+
 # links
 
 * http://ss64.com/bash/
@@ -83,3 +114,5 @@ $_ = current shell
 * https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions
 * http://www.howtogeek.com/howto/ubuntu/keyboard-shortcuts-for-bash-command-shell-for-ubuntu-debian-suse-redhat-linux-etc/
 * http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-3.html
+* https://opensource.com/article/17/7/bash-prompt-tips-and-tricks
+* https://www.digitalocean.com/community/tutorials/how-to-use-bash-history-commands-and-expansions-on-a-linux-vps
