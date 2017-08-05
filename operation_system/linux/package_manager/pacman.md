@@ -34,6 +34,12 @@ pacman -Syu
 pacman -Syuu
 ```
 
+# ignore package
+
+```
+pacman -Syuu --ignore=linux-lts[,linux-lts-headers]
+```
+
 # search for package
 
 ```

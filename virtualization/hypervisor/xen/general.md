@@ -30,3 +30,5 @@ Based on the [offical list](https://wiki.xenproject.org/wiki/Xen_Project_Softwar
 * [on wikipedia](https://en.wikipedia.org/wiki/Xen)
 * [ipfire for xen](http://wiki.ipfire.org/en/virtualization/xen/start)
     * [hvm installation](http://wiki.ipfire.org/en/virtualization/xen/ipfire_as_hvm_with_xen_4.0.1)
+* [xen on debian](https://wiki.debian.org/Xen)
+* [xen on gentoo](https://wiki.gentoo.org/wiki/Xen)
