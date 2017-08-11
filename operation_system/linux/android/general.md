@@ -1,3 +1,9 @@
+# take a screenshot
+
+```
+press Volume-Down + Power Button
+```
+
 # mounting
 
 * if you are using pcmanfm or gnome, "gvfs-mtp" is worth to have a look
