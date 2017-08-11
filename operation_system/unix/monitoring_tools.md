@@ -7,7 +7,9 @@
 
 # vmstat
 
-    vmstat reports information about processes, memory, paging, block IO, traps, disks and cpu activity.
+```
+vmstat reports information about processes, memory, paging, block IO, traps, disks and cpu activity.
+```
 
 ## description
 
@@ -67,11 +69,13 @@
 
 ## write data to a csv file
 
-    # run nmon for 120 cycles while one cycle takes 30 seconds (60 minutes in total)
-    # captures a snapshot each 30 seconds to file <hostname>_date_time.nmon
-    nmon -f -s 30 -c 120
-    # same as above but also capture the top processes
-    nmon -fT -s 30 -c 120
+```
+# run nmon for 120 cycles while one cycle takes 30 seconds (60 minutes in total)
+# captures a snapshot each 30 seconds to file <hostname>_date_time.nmon
+nmon -f -s 30 -c 120
+# same as above but also capture the top processes
+nmon -fT -s 30 -c 120
+```
 
 # netstat
 
@@ -89,8 +93,10 @@
 
 ## examples
 
-    # see i/o statistics for process 123
-    pidstat -d -p 123
+```
+# see i/o statistics for process 123
+pidstat -d -p 123
+```
 
 # sadf
 
@@ -100,23 +106,25 @@
 
 ## examples
 
-    # display information about all cpu cores
-    sar -P ALL
+```
+# display information about all cpu cores
+sar -P ALL
 
-    # memory (updated every second for three times)
-    sar -r 1 3
+# memory (updated every second for three times)
+sar -r 1 3
 
-    # used swapt space
-    sar -S 1 3
+# used swapt space
+sar -S 1 3
 
-    # general i/o
-    sar -b 1 3
+# general i/o
+sar -b 1 3
 
-    # device i/o
-    sar -d 1 3
+# device i/o
+sar -d 1 3
 
-    # context switches
-    sar -w 1 3
+# context switches
+sar -w 1 3
+```
 
 # links
 
@@ -132,3 +140,5 @@
 * http://linux.die.net/man/1/sadf
 * http://www.thegeekstuff.com/2011/03/sar-examples/
 * http://linux.die.net/man/1/sar
+* http://sebastien.godard.pagesperso-orange.fr/
+* https://wiki.archlinux.org/index.php/Category:Status_monitoring_and_notification
