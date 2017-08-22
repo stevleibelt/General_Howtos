@@ -17,6 +17,26 @@ iw list
 
 #scan for wireless networks
 iw wlan0 scan
+#or
+ifconfig wlan0 down
+iw phy phy0 interface add scan0 type station
+ifconfig scan0 up
+iwlist scan0 scan
+iw dev scan0 del
+ifconfig wlan0 up
+killall -HUP hostapd
+
+#reset wifi
+wifi down && sleep 5 && wifi
+```
+
+# minimal interface configuration
+
+```
+#/etc/config/network
+config 'interface' 'wan'
+    option 'protp' 'dhcp'
+    option 'ifname' 'eth0.1'
 ```
 
 # install gui
@@ -55,3 +75,4 @@ opkg install luci-ssl
     * [routed client](http://wiki.openwrt.nanl.de/doc/recipes/routedclient)
     * [relay client](http://wiki.openwrt.nanl.de/doc/recipes/relayclient)
 * [use a log server](https://kuther.net/blog/analyzing-openwrt-firewall-logs-splunk
+* [station mode](http://linuxwireless.org/en/users/Documentation/modes/)
