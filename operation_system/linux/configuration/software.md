@@ -31,6 +31,13 @@
 * regexxer
 * valgrind
 
+# filesystem
+
+* bleachbit
+* ncdu
+* tree
+* wipe
+
 # game
 
 * 0ad
@@ -50,8 +57,10 @@
 
 # network
 
+* dig
 * firefox
 * irssi
+* netactview
 * nethogs
 * netctl
 * thunderbird
@@ -66,6 +75,8 @@
 * gnash
 * fswebcam (use your web cam as your camera)
 * kamoso (to make images and videos with your webcame)
+* smplayer
+* guvcview
 
 # power saving
 
@@ -75,6 +86,7 @@
 # other
 
 * aurvote
+* ghex / okteta
 * dos2unix
 * yaourt
 * pacaur
