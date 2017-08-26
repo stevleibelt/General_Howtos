@@ -1,16 +1,16 @@
 # convert flv to mp4
 
 ```
-ffmpeg -i <file name>.flv -vcodec copy -acodec copy <file name>.mp4
+ffmpeg -i <input file name>.flv -vcodec copy -acodec copy <output file name>.mp4
 ```
 
 # convert mp4 to avi
 
 ```
 #maybe this is working already
-ffmpeg -i <file name>.mp4 -vcodec copy -acodec copy <file name>.avi
+ffmpeg -i <input file name>.mp4 -vcodec copy -acodec copy <output file name>.avi
 #otherwise, take the long road
-ffmpeg -i <file name>.mp4 -vcodec mpeg4 -acodec ac3 -ar 48000 -ab 192k <file name>.avi
+ffmpeg -i <input file name>.mp4 -vcodec mpeg4 -acodec ac3 -ar 48000 -ab 192k <output file name>.avi
 ```
 
 # convert a bunch of files
@@ -33,14 +33,14 @@ ffmpeg -framerate 5 [-start_number 123] -i image-%03d.png [-i music.mp3] -c:v li
 
 ```
 #hint, use mediainfo to find the right file suffix
-ffmpeg -i <file name>.mp4 -vn -acodec copy <output audio file name>.aac
+ffmpeg -i <input file name>.mp4 -vn -acodec copy <output audio file name>.aac
 ```
 
 # extract video only
 
 ```
 #hint, use mediainfo to find the right file suffix
-ffmpeg -i <file name>.mp4 -an -vcodec copy <output video file name>.mp4
+ffmpeg -i <input file name>.mp4 -an -vcodec copy <output video file name>.mp4
 ```
 
 # combine audio and video
@@ -48,7 +48,18 @@ ffmpeg -i <file name>.mp4 -an -vcodec copy <output video file name>.mp4
 ```
 #hint, use -ss before your input file to seek to a position
 #e.g. you want to seek your video file nine seconds in the future, use "-ss 00:00:09" before the "-i"
-ffmpeg -i <video file name>.mp4 -i <audio file name>.acc  -c:v copy -c:a copy <output file name>.mp4
+ffmpeg -i <video input file name>.mp4 -i <audio file name>.acc  -c:v copy -c:a copy <output file name>.mp4
+```
+# encodes all video streams with libx264 and copies all audio streams
+
+```
+#For each stream, the last matching "c" option is applied, so
+
+#encodes all video streams with libx264 and copies all audio streams.
+ffmpeg -i <input file name> -map 0 -c:v libx264 -c:a copy <output file name>
+
+#copy all the streams except the second video, which will be encoded with libx264, and the 138th audio, which will be encoded with libvorbis.
+ffmpeg -i <input file name> -map 0 -c copy -c:v:1 libx264 -c:a:137 libvorbis <output file name>
 ```
 
 # options
