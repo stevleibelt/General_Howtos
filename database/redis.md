@@ -40,3 +40,7 @@ INFO
 #@see: https://redis.io/commands/monitor
 MONITOR
 ```
+
+# link
+
+* [Dashboard for queues with x-ray.](https://horizon.laravel.com/)
