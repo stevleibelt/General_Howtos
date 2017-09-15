@@ -45,3 +45,4 @@ php -i
 * https://github.com/fzaninotto/Faker
 * https://github.com/nelmio/alice
 * http://www.tools4noobs.com/
+* https://laracasts.com/
