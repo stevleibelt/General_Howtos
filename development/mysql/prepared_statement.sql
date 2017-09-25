@@ -3,6 +3,7 @@
 -- @link: https://dev.mysql.com/doc/refman/5.7/en/sql-syntax-prepared-statements.html
 -- 
 -- hint: CREATE and ALTER statements cannot be executed with variables.
+--  What you can do is building an "on demand" statement by using something like >>CONCAT('ALTER TABLE `, @MY_TABLE_NAME, '`auto_increment=', @MY_NEW_VALUE);
 -- 
 
 -- preparing the statement
