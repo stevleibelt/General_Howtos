@@ -16,6 +16,7 @@ Sadly but true, for every error it is always a good tryout to remove the ".gnupg
 ```
 #e.g. pgp.mit.edu
 gpg --keyserver <key server name> --recv-keys <key>
+#e.g. gpg --recv-keys --keyserver hkp://pgp.mit.edu 865E6C87C65285EC
 ```
 
 # links
