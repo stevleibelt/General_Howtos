@@ -26,6 +26,7 @@ client-config-dir /etc/openvpn/ip/ # adds fixed ips per client
 
 # links
 
+* https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-14-04
 * http://n0where.net/openvpn-raspberry-pi/
 * http://raspberrypihelp.net/tutorials/1-openvpn-server-tutorial
 * http://raspberrypi-hacks.com/29/turn-your-raspberry-into-an-openvpn-vpn-server/
