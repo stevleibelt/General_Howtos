@@ -52,7 +52,7 @@ zfs destroy <pool name>/<data set name>
 ## options
 
 * -r    -   recursively all children
-* -R    -   recursively all dependents (also cloned file system outdise the hierachy)
+* -R    -   recursively all dependents (also cloned file system outside the hierachy)
 * -f    -   force an unmount 
 * -n    -   dry run
 * -p    -   print machine parseable verbose information
@@ -214,3 +214,16 @@ hdparm -I /dev/sdX
 * https://github.com/archzfs/archzfs/issues/77
 * [youtube video systems part 1](https://www.youtube.com/watch?v=NRoUC9P1PmA)
 * [youtube video systems part 2](https://www.youtube.com/watch?v=TwCXVp_u86o)
+* https://docs.oracle.com/cd/E24841_01/html/820-2313/docinfo.html
+* https://www.freebsd.org/doc/de_DE.ISO8859-1/books/handbook/zfs.html
+* https://pthree.org/2012/12/04/zfs-administration-part-i-vdevs/
+* http://open-zfs.org/wiki/Main_Page
+* http://zfsonlinux.org/
+* http://www.rodsbooks.com/gdisk/sgdisk-walkthrough.html
+* https://www.freebsd.org/cgi/man.cgi?query=zpool&sektion=8&apropos=0&manpath=FreeBSD+11.0-RELEASE+and+Ports
+* https://www.freebsd.org/cgi/man.cgi?query=zfs&sektion=8&apropos=0&manpath=FreeBSD+11.0-RELEASE+and+Ports
+* https://wiki.ubuntu.com/ZFS
+* https://wiki.ubuntu.com/Kernel/Reference/ZFS
+* https://www.freebsd.org/cgi/man.cgi?query=zdb&sektion=&n=1
+* http://louwrentius.com/zfs-performance-and-capacity-impact-of-ashift9-on-4k-sector-drives.html
+* https://www.joyent.com/blog/zfs-forensics-recovering-files-from-a-destroyed-zpool
