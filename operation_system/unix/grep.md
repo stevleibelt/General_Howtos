@@ -219,3 +219,4 @@ grep <pattern> 2>/dev/null
 * https://www.gnu.org/software/findutils/manual/html_node/find_html/grep-regular-expression-syntax.html
 * http://www.robelle.com/smugbook/regexpr.html
 * http://www.shellhacks.com/en/Using-BASH-Grep-OR-Grep-AND-Grep-NOT-Operators
+* https://www.cyberciti.biz/faq/grep-regular-expressions/
