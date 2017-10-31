@@ -1,6 +1,7 @@
 # check smart values (results of last test)
 
 Smartctl on a disk attached via usb is not supported.
+Installable via smartmontools.
 
 ```
 #smartctl is in the package smartmontools
