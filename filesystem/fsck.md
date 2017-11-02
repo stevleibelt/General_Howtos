@@ -30,7 +30,17 @@ fsck -cfkty <drive> #do a lot of magic
 
 # force fsck on reboot
 
+## on systemd
+
 ```
+#add the following to the kernel command line while booting
+fsck.mode=force
+```
+
+## on systemV
+
+```
+#not working with systemd
 sudo touch /forcefsck
 #if you can not create this file
 sudo mount -o remount,rw / #afterwards retry the touch
@@ -41,3 +51,4 @@ sudo mount -o remount,rw / #afterwards retry the touch
 * https://wiki.archlinux.org/index.php/fsck
 * http://www.thegeekstuff.com/2012/08/fsck-command-examples/
 * http://www.cyberciti.biz/faq/linux-force-fsck-on-the-next-reboot-or-boot-sequence/
+* https://wiki.debian.org/Ext4

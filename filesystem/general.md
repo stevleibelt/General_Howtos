@@ -1,12 +1,15 @@
 # detect file system
 
 ```
+df -T
+#or cooler
+df -T | awk '{print $1,$2,$NF}' | grep "^/dev"
+mount | grep "^/dev"
+#not working in all environemnts
 blkid
 lsblk -fs
-df -T | awk '{print $1,$2,$NF}' | grep "^/dev"
 fsck -N
 file -sl /dev/sdX1
-mount | grep "^/dev"
 ```
 
 # permissions
@@ -78,3 +81,4 @@ sysctl -p
 * http://www.thegeekstuff.com/2011/04/identify-file-system-type/
 * http://www.rooot.net/en/geek-stuff/linux/15-too-many-open-files.html
 * http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/
+* https://linuxconfig.org/how-to-force-fsck-to-check-filesystem-after-system-reboot-on-linux
