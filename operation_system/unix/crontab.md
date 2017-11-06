@@ -94,3 +94,4 @@ compare with your local/session environment.
 * https://stackoverflow.com/questions/2388087/how-to-get-cron-to-call-in-the-correct-paths
 * http://unixhelp.ed.ac.uk/CGI/man-cgi?crontab+5
 * https://en.wikipedia.org/wiki/Env
+* https://opensource.com/article/17/11/how-use-cron-linux
