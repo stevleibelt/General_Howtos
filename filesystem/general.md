@@ -12,7 +12,7 @@ fsck -N
 file -sl /dev/sdX1
 ```
 
-# permissions
+# permissions, date of creation etc.
 
 ```
 stat <path to file or directory>
