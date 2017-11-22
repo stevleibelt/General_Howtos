@@ -20,6 +20,10 @@ rsync -av host:file1 :file2 host:file{3,4} /dest/
 
 ## using ssh
 
+```
+rsync -avz -e ssh source/file <user>@<host>:/destination
+```
+
 For each <user>@<host> combination you use, you have to create a section in your `.ssh/config` file.
 
 ```
