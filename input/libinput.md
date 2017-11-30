@@ -19,6 +19,13 @@ xinput list-props <device number>
 xinput set-prop <device number> <option number> <setting>
 ```
 
+# disable or enable input
+
+```
+xinput enable <id>
+xinput disable <id>
+```
+
 # disable "natural scrolling"
 
 ```
@@ -36,3 +43,4 @@ EndSection
 
 * https://wiki.archlinux.org/index.php/Libinput
 * https://www.mankier.com/4/libinput
+* https://askubuntu.com/questions/65951/how-to-disable-the-touchpad
