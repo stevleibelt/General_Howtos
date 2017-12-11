@@ -19,3 +19,5 @@ VBoxManage unregistervm <hash id> --delete
 * [VBoxManage](https://www.virtualbox.org/manual/ch08.html)
 * http://nakkaya.com/2012/08/30/create-manage-virtualBox-vms-from-the-command-line/
 * https://www.loggn.de/ubuntu-debian-virtualbox-3-1-vm-ohne-gui-auf-der-shell-erstellen-und-einrichten/
+* https://www.virtualbox.org/manual/ch06.html#networkingmodes
+* https://www.virtualbox.org/manual/ch08.html#vboxmanage-controlvm

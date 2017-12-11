@@ -217,6 +217,7 @@ If you have tried it wot "mount -t cifs", try it with "mount.cifs".
 
 # links
 
+* https://wiki.samba.org/
 * https://www.samba.org/samba/docs/man/manpages-3/smb.conf.5.html
 * https://www.samba.org/samba/docs/using_samba/ch08.html
 * https://wiki.archlinux.org/index.php/Samba

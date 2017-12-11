@@ -11,7 +11,19 @@ VBoxManage | less
 | --- | --- |
 | VBoxManage list vms | List virtual machines |
 | VBoxManage startvm <uuid\|vname> --type headless | Start a virtual machine in headless mode |
-| VBoxManage controlvm <uuid\|vname> pause|poweroff | Pause or poweroff virtual machine |
+| VBoxManage controlvm <uuid\|vname> pause|poweroff|... | Pause or poweroff virtual machine |
+
+## Gain overview of vms
+
+```
+VBoxManager list vms
+```
+
+## Gain overview of current vm
+
+```
+VBoxManage showvminfo <uuid>
+```
 
 ## Whole list of command and options
 
