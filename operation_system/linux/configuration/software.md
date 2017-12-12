@@ -75,6 +75,8 @@
 * gnash
 * fswebcam (use your web cam as your camera)
 * kamoso (to make images and videos with your webcame)
+* wxcam (webcam easy check)
+* guvcview (configure webcam)
 * smplayer
 * guvcview
 
