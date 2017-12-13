@@ -1,6 +1,6 @@
 # step by step howto
 
-* fdisk /dev/sda
+* fdisk <device>
     * g
     * n
     * <enter>
@@ -8,11 +8,23 @@
     * <enter>
 * modprobe dm_mod
 * fill your partition with random data
-    * shred -v /dev/sda
+    * shred -v <device>
 * format drive / initialize your partition
-    * cryptsetup --cipher aes-xts-plain64|serpent-xts-plain64 --key-size 512 --hash sha512 --iter-time 5000 --use-random --verify-passphrase luksFormat /dev/sda
+    * cryptsetup --cipher aes-xts-plain64|serpent-xts-plain64 --key-size 512 --hash sha512 --iter-time 5000 --use-random --verify-passphrase luksFormat <device>
 * open partition
-    * cryptsetup luksOpen /dev/sda cryptDisk01
+    * cryptsetup luksOpen <device> <luks pool name>
+
+# get informations
+
+```
+cryptsetup -v status <luks pool name>
+```
+
+# backup headers
+
+```
+cryptsetup luksDump <device> > backup_file
+```
 
 # links
 
@@ -22,3 +34,4 @@
 * https://wiki.archlinux.org/index.php/System_Encryption_with_LUKS_for_dm-crypt
 * https://systemausfall.org/wikis/howto/CryptoPartitionHowTo
 * http://wiki.ubuntuusers.de/LUKS (german)
+* https://www.cyberciti.biz/hardware/howto-linux-hard-disk-encryption-with-luks-cryptsetup-command/
