@@ -52,3 +52,4 @@ All you have to do is go to the CUPS printer administration page and click "Resu
 * [what is cups server and how to share a printer](https://askubuntu.com/questions/73367/what-is-cups-server-and-how-to-share-a-printer-locally-or-over-a-network)
 * [network printing with ubuntu](https://help.ubuntu.com/community/NetworkPrintingWithUbuntu)
 * [CUPS Command-Line Utilities on oracle.com](https://docs.oracle.com/cd/E23824_01/html/821-1451/gllgm.html)
+* [How to resume CUPS printer from command line?](https://superuser.com/questions/280396/how-to-resume-cups-printer-from-command-line)
