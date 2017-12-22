@@ -137,6 +137,12 @@ zfs rename <pool name/source data set name> <pool name/destination data set name
 zpool export <pool name>
 ```
 
+# search for pools
+
+```
+zpool import -S
+```
+
 # try zpool import without mounting it
 
 ```
