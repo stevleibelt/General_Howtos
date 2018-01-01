@@ -39,6 +39,16 @@ cryptsetup -v --header <backup file path>.img open <device> my_test_mapper_name
 cryptsetup luksHeaderRestore <device> --header-backup-file <backup file path>.img
 ```
 
+# configuration
+
+```
+#kernel parameters
+root=<device>   #like root=/dev/mapper/dm-name
+resume=<device> #like resume=/dev/mapper/dm-swap
+cryptdevice=<device>:<dm-name>  #prompt for the passphrase and map device to dm-name
+#more parameters are available
+```
+
 # links
 
 * https://wiki.archlinux.org/index.php/System_Encryption_with_LUKS_for_dm-crypt#LVM_on_LUKS
@@ -50,3 +60,9 @@ cryptsetup luksHeaderRestore <device> --header-backup-file <backup file path>.im
 * https://www.cyberciti.biz/hardware/howto-linux-hard-disk-encryption-with-luks-cryptsetup-command/
 * http://tomb.dyne.org/Luks_on_disk_format.pdf
 * https://wiki.archlinux.org/index.php/Dm-crypt/Device_encryption
+* https://www.lisenet.com/2013/luks-add-keys-backup-and-restore-volume-header/
+* [system configuration for dm-crypt](https://wiki.archlinux.org/index.php/Dm-crypt/System_configuration)
+* [enable TRIM for dm-crypt devices](https://wiki.archlinux.org/index.php/Dm-crypt/Specialties#Discard.2FTRIM_support_for_solid_state_drives_.28SSD.29)
+* [how to use encrypted key-files](https://wiki.archlinux.org/index.php/Dm-crypt/Specialties#Using_GPG_or_OpenSSL_Encrypted_Keyfiles)
+* [secure the unencrypted boot partition](https://wiki.archlinux.org/index.php/Dm-crypt/Specialties#Securing_the_unencrypted_boot_partition)
+* [boot encryption with GRUB](https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#Encrypted_boot_partition_.28GRUB.29)
