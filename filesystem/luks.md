@@ -20,10 +20,23 @@
 cryptsetup -v status <luks pool name>
 ```
 
-# backup headers
+# backup and restore headers
 
 ```
+#check your device
 cryptsetup luksDump <device> > backup_file
+
+#dump the header
+cryptsetup luksHeaderBackup <device> --header-backup-file <backup file path>.img
+
+#tryout that the backup is working
+cryptsetup -v --header <backup file path>.img open <device> my_test_mapper_name
+#something like this should be shown as the output
+#   Key slot 0 unlocked.
+#   Command successful.
+
+#restore
+cryptsetup luksHeaderRestore <device> --header-backup-file <backup file path>.img
 ```
 
 # links
@@ -35,3 +48,5 @@ cryptsetup luksDump <device> > backup_file
 * https://systemausfall.org/wikis/howto/CryptoPartitionHowTo
 * http://wiki.ubuntuusers.de/LUKS (german)
 * https://www.cyberciti.biz/hardware/howto-linux-hard-disk-encryption-with-luks-cryptsetup-command/
+* http://tomb.dyne.org/Luks_on_disk_format.pdf
+* https://wiki.archlinux.org/index.php/Dm-crypt/Device_encryption
