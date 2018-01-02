@@ -4,16 +4,30 @@
 screen
 ```
 
+# list available screen sessions
+
+```
+screen -ls
+```
+
+# detache a running screen session
+
+```
+screen -d [<session identifier>]
+```
+
 # reattach to existing screen session or list available sessions
 
 ```
-screen -r
+screen -r [<session identifier>]
+#if your screen session is locked, or still marked as attached, detach it first
+screen -d -r [<session identifier>]
 ```
 
 # kill screen session without reattaching it
 
 ```
-screen -S screen_session_id -X quit
+screen -S <session identifier> -X quit
 ```
 
 # detach 
