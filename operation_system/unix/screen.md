@@ -7,7 +7,7 @@ screen
 # list available screen sessions
 
 ```
-screen -ls
+screen -ls [<match>]
 ```
 
 # detache a running screen session
