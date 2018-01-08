@@ -4,12 +4,35 @@ SET @TODAY = DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%s');
 SET @TODAY = CURRENT_DATE;
 
 
--- source: http://w3resource.com/mysql/date-and-time-functions/mysql-adddate-function.php
+-- @see:
+--  http://w3resource.com/mysql/date-and-time-functions/mysql-adddate-function.php
+--  https://dev.mysql.com/doc/refman/5.7/en/date-and-time-functions.html#function_date-add
+-- valid units          with expected expression format
+--  MICROSECONDS        <float>
+--  SECOND              <int>
+--  MINUTE              <int>
+--  HOUR                <int>
+--  DAY                 <int>
+--  WEEK                <int>
+--  MONTH               <int>       [1-12]
+--  QUARTER             <int>       [1-4]
+--  YEAR                <int>
+--  SECOND_MICROSECOND  <float>     'SECONDS.MICROSENCODS'
+--  MINUTE_MICROSECOND  <string>    'MINUTES:SECONDS.MICROSENCODS'
+--  MINUTE_SECOND       <string>    'MINUTES_SECONDS'
+--  HOUR_MICROSECOND    <string>    'HOURS:MINUTES:SECONDS.MICROSECONDS'
+--  HOUR_SECOND         <string>    'HOURS:MINUTES_SECONDS'
+--  HOUR_MINUTE         <string>    'HOURS:MINUTES'
+--  DAY_MICROSECOND     <string>    'DAYS HOURS:MINUTES:SECONDS.MICROSECONDS'
+--  DAY_SECOND          <string>    'DAYS HOURS:MINUTES:SECONDS'
+--  DAY_MINUTE          <string>    'DAYS HOURS:MINUTES'
+--  DAY_HOUR            <string>    'DAYS HOURS'
+--  YEAR_MONTH          <string>    'YEARS-MONTHS'
 -- substract days
-SELECT SUBDATE('2012-12-21', INTERVAL 10 DAY);
+SELECT DATE_SUB('2012-12-21', INTERVAL 10 DAY);
 
 -- add days
-SELECT ADDDATE('2012-12-21', INTERVAL 10 DAY);
+SELECT DATE_ADD('2012-12-21', INTERVAL 10 DAY);
 
 -- add NOW() to a DATETIME (YYYY-MM-DD HH:MM:SS)
 INSERT INTO datetime_column = DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%s');
