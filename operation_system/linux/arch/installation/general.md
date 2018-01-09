@@ -4,6 +4,16 @@
 loadkeys i368/qwertz/de-latin1-nodeadkeys.map.gz
 ```
 
+# start ssh server
+
+```
+#logged in into archiso as root
+#set a root password
+passwd
+
+systemctl start sshd.service
+```
+
 # parition disk
 
 * gdisk /dev/sdX
