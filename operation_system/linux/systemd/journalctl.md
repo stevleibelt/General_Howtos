@@ -58,10 +58,12 @@ journalctl -f
 journalctl -xn
 ```
 
-# list journal of previous boot
+# list journal of last boot
 
 ```
-journalctl -b +1 
+#positive offset will display boot from the beginning of the journal
+#negative offset will display boot from the end of the journal
+journalctl -b -1
 ```
 
 # list journal of current boot with debug priority error and worse

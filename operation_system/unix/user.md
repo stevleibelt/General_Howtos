@@ -44,7 +44,7 @@ getent passwd | grep '/home' | awk -F ':' '{ print $1 }'
 ```
 runuser -u <user name> <command> <argument...>
 su - <user name> -c "<command> <argument...>"
-sudo <command>
+sudo -u <command>
 ```
 
 # change login shell

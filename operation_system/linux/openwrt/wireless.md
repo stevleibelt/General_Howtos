@@ -1,14 +1,20 @@
 # restart wireles
 
-    wifi
+```
+wifi
+```
 
 # list available interfaces
 
-    uci show wireless 
+```
+uci show wireless
+```
 
 ## list disabled
 
-    uci show wireless | grep disabled
+```
+uci show wireless | grep disabled
+```
 
 # links
 

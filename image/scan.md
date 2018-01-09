@@ -12,6 +12,13 @@
 scanimage -L
 ```
 
+# scan on the commandline
+
+```
+scanimage -d [device name] format=tiff mode Lineart resolution
+300 > [filename]
+```
+
 # using gimp
 
 * File -> create -> XSANE:<your device>
@@ -19,3 +26,4 @@ scanimage -L
 # links
 
 * https://wiki.archlinux.org/index.php/Scan
+* https://www.gadgetdaily.xyz/how-to-get-started-with-the-google-maps-api/
