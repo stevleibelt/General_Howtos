@@ -12,6 +12,7 @@ tesseract file.tiff file
 
 # link
 
+* [papierloses büro](https://www.pro-linux.de/artikel/2/1892/4,ocr-einsetzen.html)
 * [pypdfocr](https://github.com/virantha/pypdfocr) - Python script to do PDF OCR conversion using Tesseract 
 * [ocrmypdf](https://github.com/jbarlow83/OCRmyPDF) - OCRmyPDF adds an OCR text layer to scanned PDF files, allowing them to be searched 
 * [ocrpdf](https://github.com/bdheath/OCRPDF) -  Python wrapper for quickly OCR'ing multipage PDF files
