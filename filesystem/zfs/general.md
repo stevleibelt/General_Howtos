@@ -140,7 +140,7 @@ zpool export <pool name>
 # search for pools
 
 ```
-zpool import -S
+zpool import -s
 ```
 
 # try zpool import without mounting it
