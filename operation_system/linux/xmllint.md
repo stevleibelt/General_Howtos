@@ -5,7 +5,13 @@ Useful to validate an xml against an xsd.
 # how to validate
 
 ```
-mllint --schema foo.xsd foo.xml
+xmllint --schema foo.xsd foo.xml
+```
+
+# how to reduce memory footprint
+
+```
+xmllint --schema --stream foo.xsd foo.xml
 ```
 
 # how to validate inside a bash script
