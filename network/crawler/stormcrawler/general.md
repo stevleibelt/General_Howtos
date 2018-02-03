@@ -20,5 +20,7 @@ You can use "-conf" multiple times to use a "general" and a "environment specifi
 # link
 
 * http://stormcrawler.net/
+* https://storm.apache.org/releases/current/Tutorial.html
+* https://storm.apache.org/releases/current/Concepts.html
 * https://github.com/DigitalPebble/storm-crawler/wiki/Configuration
 * https://github.com/DigitalPebble/storm-crawler/releases/tag/1.7
