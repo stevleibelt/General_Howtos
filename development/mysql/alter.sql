@@ -51,4 +51,13 @@ RENAME TABLE `my_old_table_name` TO `my_new_table_name`;
 -- rename table column
 -- @see: http://dev.mysql.com/doc/refman/5.1/en/alter-table.html
 
-ALTER TABLE `my_table` CHANGE `my_old_column_name` `my_new_column_name` <DATATYPE(<LENGTH>)> [<additonal column specifications>] [<constrains>]
+ALTER TABLE 
+    `my_table` 
+CHANGE 
+    `my_old_column_name` `my_new_column_name` <DATATYPE(<LENGTH>)> [<additonal column specifications>] [<constrains>];
+
+-- reset or alter autoincrement value
+
+ALTER TABLE 
+    `my_table`
+AUTO_INCREMENT = 1;
