@@ -22,4 +22,35 @@ dtparam=spi=on
 #create your hyperion config
 cp /usr/share/hyperion/config/hyperion.config.json.example /etc/hyperion/
 vi /etc/hyperion/hyperion.config.json
+
+cat > /etc/systemd/system/hyperion.service <<DELIM
+[Unit]
+Description=Hyperion
+[Service]
+Type=simple
+#for kodi
+#User=kodi
+User=osmc
+#for kodi
+#Group=kodi
+Group=osmc
+UMask=007
+#for kodi
+#ExecStart=/usr/bin/hyperiond /etc/hyperion/hyperion.config.json
+ExecStart=/opt/hyperion/bin/hyperiond /etc/hyperion.config.json
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+TimeoutStopSec=10
+ 
+[Install]
+WantedBy=multi-user.target
+DELIM
+
+systemctl daemon-reload
+systemctl enable hyperion.service
+systemctl start hyperion.service
 ```
+
+# link
+
+* https://github.com/hyperion-project/hyperion
