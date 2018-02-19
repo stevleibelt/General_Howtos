@@ -95,7 +95,7 @@ smbclient \\\\<server name>\\<share>
 
 ```
 #per session
-mount –t cifs <server name>/<share name> <local mount point> –o username=<user name>,workgroup=<work group>
+mount –t cifs <server name>/<share name> <local mount point> -o username=<user name>,domain=<work group>
 
 #/etc/fstab
 ```
