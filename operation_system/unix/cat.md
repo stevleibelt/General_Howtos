@@ -8,6 +8,8 @@ cat `find <path> -name <name>` | grep <foo>
 
 # write multiple line content into a file
 
+## as normal user
+
 ```
 cat > <path to the file> <<DELIM
 this
@@ -17,4 +19,22 @@ multiple
 line
 content
 DELIM
+```
+
+## as root
+
+```
+sudo bash -c "cat >> <path to the file> <<DELIM
+this
+is
+a
+multiple
+line
+content
+you
+have
+to
+escape \"
+now
+DELIM"
 ```
