@@ -1,3 +1,25 @@
+# using redis
+
+* install redis-server redis-tools redis-sentinel
+* sudo pecl install redis
+* start redis server
+
+## setup inside the application
+
+```php
+ini_set('session.save_handler', 'redis');
+//if you have only one redis server
+ini_set('session.save_path', 'tcp://127.0.0.1:6379');
+//if you have multiple redis servers
+ini_set('session.save_path', 'tcp://1.2.3.4:6379?timeout=0.5,tcp://1.2.3.5:6379?timeout=0.5');
+//optional
+ini_set('session.name', 'my_application_session_id.<environment>');
+
+session_start();
+```
+
+* use "redis-cli" with the command "monitor" to see what is going on
+
 # links
 
 * http://www.sitepoint.com/saving-php-sessions-in-redis/
