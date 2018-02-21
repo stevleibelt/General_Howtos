@@ -1,3 +1,10 @@
+# using filesystem
+
+```
+PHP will lock session files for each request and maintain that lock until you do a session_write_close() or the script terminates/exits. The side effect of this is that all requests become serial, since they're all contending for the same single resource (the session file).
+```
+[source](https://stackoverflow.com/questions/3623484/why-does-apache-not-process-multiple-requests-from-the-same-browser-simultaneous)
+
 # using redis
 
 * install redis-server redis-tools redis-sentinel
