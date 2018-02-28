@@ -12,6 +12,15 @@ pacman -Ss ttf | grep 'community\|extra'
 * [archbang](http://wiki.archbang.org/index.php?title=Download)
 * [obarun](http://www.obarun.org/download.html)
 * [antergos](https://antergos.com/)
+* [bluestar](https://sourceforge.net/projects/bluestarlinux/files/distro/)
+* [blackarch](https://blackarch.org/)
+* [chakra](https://www.chakralinux.org/)
+* [artix](https://artixlinux.org/)
+* [swagarch](https://swagarch.github.io/)
+* [archman](http://archman.org/)
+* [archstrike](https://archstrike.org/)
+* [morpheusarch](http://www.morpheusarch.co.uk/)
+* [archmerge](https://archmerge.com/)
 
 # links
 
