@@ -8,3 +8,5 @@ curl -o /dev/null http://speedtest.sea01.softlayer.com/downloads/test100.zip
 # link
 
 * [speedof.me - HTML 5 internet connection speedtest](https://speedof.me/)
+* [avn speed test](https://duckduckgo.com/?q=avm+geschwindigkeitsmessung&t=ffab&ia=web)
+* [german breitbandmessung](https://breitbandmessung.de/)
