@@ -1,14 +1,39 @@
 # default option
 
-    xrandr --auto
+```
+xrandr --auto
+```
 
 ## change resolution of one
 
-    xrandr --output VGA1 --mode 1024x768
+```
+xrandr --output VGA1 --mode 1024x768
+```
 
 ## list current modes
 
-    xrandr --current
+```
+xrandr --current
+#or
+xrandr -q
+```
+
+## list providers
+
+```
+xrandr --listproviders
+```
+
+## adjust brightness
+
+```
+xrandr --brightness <float>
+```
+
+```
+Multiply  the  gamma  values on the crtc currently attached to the output to specified floating value.
+Useful for overly bright or overly dim outputs.  However, this is a software only modification, if your hardware has support to actually change the brightness, you will probably prefer to use xbacklight.
+```
 
 # links
 
