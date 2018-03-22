@@ -78,3 +78,4 @@ Docker is server and client.
 * [cheat sheet](https://ma.ttias.be/docker-cheat-sheet/)
 * [nginx with http2](https://ma.ttias.be/run-nginx-proxy-docker-container-http2/)
 * [docker on FreeBSD](https://wiki.freebsd.org/Docker)
+* [portainer - open source management ui](https://portainer.io/install.html)
