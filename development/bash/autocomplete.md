@@ -69,3 +69,4 @@
 * https://wiki.archlinux.org/index.php/Bash#Tab_completion
 * https://en.wikipedia.org/wiki/Command-line_completion
 * http://akrabat.com/php/autocomplete-phing-targets-on-the-command-line/
+* https://opensource.com/article/18/3/creating-bash-completion-script
