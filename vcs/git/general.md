@@ -251,6 +251,7 @@ git help hooks
 # links
 
 * http://try.github.io/
+* [12 tips for git](https://opensource.com/article/18/4/12-git-tips-gits-12th-birthday)
 * http://ricardofilipe.com/projects/firstaidgit/
 * https://git.wiki.kernel.org/
 * https://www.kernel.org/pub/software/scm/git/docs/git-checkout.html
