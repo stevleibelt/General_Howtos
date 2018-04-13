@@ -7,6 +7,9 @@ zpool import -f -F -n <pool name>
 # fixing an error
 
 ```
+#http://zfsonlinux.org/msg/ZFS-8000-8A
+zpool status -xv    #run as root
+#remove or replace files that are marked as corrupt.
 zpool scrub <pool name>
 zpool clear <pool name>
 ```
