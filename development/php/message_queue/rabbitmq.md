@@ -5,6 +5,7 @@
 rabbitmqctl status
 rabbitmqctl list_queues
 rabbitmqctl list_queues name messages_ready messages_unacknowledged
+rabbitmqctl delete_queue
 rabbitmqctl set_cluster_name
 rabbitmqctl join_cluster
 rabbitmqctl report
