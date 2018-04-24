@@ -44,6 +44,9 @@ find . \( ! -regex '.*/\..*' }) [-type f]
 #@see: http://stackoverflow.com/questions/5607542/why-does-find-exec-mv-target-not-work-on-cygwin
 #execute the command for each file
 find . -exec <command or script> {} \;
+#e.g.
+#   find each *.epub file and copy each found file to /mnt/
+find . -iname *.epub -type -f -exec cp -v /mnt/ {} \;
 
 #execute the command and append all the files as arguments
 find . -exec <command or script> {} +

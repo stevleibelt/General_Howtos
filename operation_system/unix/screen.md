@@ -45,3 +45,4 @@ screen -S <session identifier> -X quit
 # links
 
 * http://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/
+* http://www.dayid.org/comp/tm.html
