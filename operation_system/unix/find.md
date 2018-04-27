@@ -93,6 +93,24 @@ find . ! -newermt '2 hours ago'   # find files modified more than two hours
 find . ! -newerct '4 hours ago' | wc | awk '{print $1}'
 ```
 
+# find by permission
+
+```
+find . -perm -o=r
+```
+
+# find by size
+
+```
+find . -size +1G
+```
+
+# find by owner
+
+```
+find . -owner myusername
+```
+
 # delete all files
 
 ```
@@ -111,3 +129,4 @@ find /var/log -type -f -regex ".*\.[0-9]$"
 * [finduntils](http://www.gnu.org/software/findutils/findutils.html)
 * [findcmd](http://content.hccfl.edu/pollock/unix/findcmd.htm)
 * [ubuntuusers.de](http://wiki.ubuntuusers.de/find)
+* [how to use find](https://opensource.com/article/18/4/how-use-find-linux) - 2018- 04-27
