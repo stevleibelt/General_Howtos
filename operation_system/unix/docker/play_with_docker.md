@@ -1,6 +1,6 @@
 # stage 1
 
-* [base](https://training.play-with-docker.com/ops-stage1/)
+* [stage 1](https://training.play-with-docker.com/ops-stage1/)
 * [hello](https://training.play-with-docker.com/ops-s1-hello)
 * [customize](https://training.play-with-docker.com/ops-s1-images/)
 * [deploy and manage](https://training.play-with-docker.com/ops-stage1/)
@@ -171,4 +171,43 @@ docker stack deploy --compose-file=<path to the file> <name_of_the_stack>
 docker stack ls
 #get details for the services
 docker stack services <stack_name>
+#list tasks of the service
+docker service ps <stack_name>
+#on the fly scale - has to be done on node one
+docker service scale <stack_name>=<int: number of tasks>
+#scale the number of containers
+docker servive update --replicas 7 <stack_name>
+#remove a service
+docker service rm <stack_name>
+#and kill container if needed on node one
+docker kill <id>
+#leave swarm, repeat it on all nodes
+docker swarm leave --force
 ```
+
+# stage 2
+
+[stage 2](https://training.play-with-docker.com/ops-stage2/)
+[seccomp](https://training.play-with-docker.com/security-seccomp/)
+[capabilities](https://training.play-with-docker.com/security-capabilities/)
+[networking](https://training.play-with-docker.com/docker-networking-hol/)
+[orchestration](https://training.play-with-docker.com/orchestration-hol/)
+[compose to swarm part 1](https://training.play-with-docker.com/orchestration-workshop-part1/)
+[compose to swarm part 2](https://training.play-with-docker.com/orchestration-workshop-part2/)
+
+## 2.1 Networking basics
+
+```
+#list available network commands
+docker network
+#list network
+docker network ls
+#inspect a network
+docker network inspect
+#list network driver
+docker info
+```
+
+# stage 3
+
+[stage 3](https://training.play-with-docker.com/ops-stage3/)
