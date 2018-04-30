@@ -31,3 +31,9 @@ while(!$link->query("lock table goods write")) {sleep(1);}
 $link->query("flush table goods");
 $link->query("unlock tables");'
 ```
+
+-- 
+-- show open*-status
+---
+SHOW 
+    GLOBAL STATUS LIKE 'Open_%'
