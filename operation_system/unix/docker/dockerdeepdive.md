@@ -221,9 +221,13 @@ docker swarm unlock
 docker service create
     --name <service_name>
     -p 8080:8080
-    --replicas 5
     [--mode global]
-    <image name>
+    [--networkt <network_name>]
+    [--publish published=80,target=80,mode=host]    #mode=[host|ingress], host = publish ports only on nodes running this service, ingress = publish port on all nodes (default)
+    [--replicas 5]
+    [--log-driver journald|syslog|splunk|gelf]
+    [--log-opts ?]
+    <image_name>/<tag_name>
 #check
 docker service ls
 #check more
@@ -234,6 +238,17 @@ docker service inspect --pretty <service_name>
 docker service scale <service_name>=10
 #remove a service
 docker service rm <service_name>
+#update an image within the swarm
+docker service update
+    --image <image_name>/<tag_name>
+    --update-parallelism 4  #update four nodes in parallel
+    --update-delay 30s  #wait 30 seconds before updating the next nodes
+    <network_name>
+#check the logs
+docker serivce logs
+    [--follow]
+    [--tail]
+    [--details]
 ```
 
 ```
@@ -241,6 +256,10 @@ docker service rm <service_name>
 #just create an overlay network because we can
 docker network create -d overlay <network_name>
 ```
+
+# docker networking
+
+
 
 # notes
 
@@ -250,6 +269,7 @@ docker network create -d overlay <network_name>
 #/etc/docker/daemon.json
 #see /var/lib/docker/<storage driver>
 {
+    "log-driver": "journald",   //syslog, splunk, gelf
     "storage-driver": "overlay2"
 }
 ```
@@ -257,7 +277,7 @@ docker network create -d overlay <network_name>
 ## others
 
 * killing the main process inside a container will stop/kill the container
-* page 200
+* page 208
 
 # link
 
