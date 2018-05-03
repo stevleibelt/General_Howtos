@@ -259,7 +259,7 @@ docker network create -d overlay <network_name>
 
 # docker networking
 
-
+libnetwork is dockers implementation of the Container [Network model (CNM)](https://github.com/docker/libnetwork/blob/master/docs/design.md).
 
 # notes
 
@@ -277,7 +277,7 @@ docker network create -d overlay <network_name>
 ## others
 
 * killing the main process inside a container will stop/kill the container
-* page 208
+* page 210
 
 # link
 
