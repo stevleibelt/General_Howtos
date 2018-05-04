@@ -24,3 +24,4 @@ rabbitmqctl node_health_check
 * [list of development tools](https://www.rabbitmq.com/devtools.html)
 * [guide how to create a cluster](https://www.rabbitmq.com/clustering.html)
 * [redis vs. rabbitmq as message broker](https://www.minvolai.com/rabbitmq-vs-redis-as-message-brokers/) - 16.10.2013
+* [rabbitmq for beginners](https://www.cloudamqp.com/blog/2015-05-18-part1-rabbitmq-for-beginners-what-is-rabbitmq.html)
