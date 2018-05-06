@@ -5,6 +5,14 @@ about:config
 xpinstall.signatures.required false
 ```
 
+# htop/nmon/vmstat for firefox
+
+```
+about:performance
+about:memory
+about:debugging#addons
+```
+
 # always start in private mode
 
 ```
