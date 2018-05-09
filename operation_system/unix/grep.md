@@ -5,8 +5,14 @@ grep [options] <pattern> <path or files>
 # grep inside a shell script
 
 ```
-#example, do something if ...
-if git status | grep -q 'both modified';
+#example, do something if 'both modified' was found
+if (git status | grep -q 'both modified')
+then
+    #...
+fi
+
+#or if you want to do things if 'both modified' was not found
+if ! (git status | grep -q 'both modified')
 then
     #...
 fi
