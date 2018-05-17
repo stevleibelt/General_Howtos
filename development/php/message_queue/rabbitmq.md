@@ -21,6 +21,8 @@ rabbitmqctl node_health_check
 * [rabbitmq official tutorial part two](https://www.rabbitmq.com/tutorials/tutorial-two-php.html)
 * [official page](https://www.rabbitmq.com/)
 * [management plugin](https://www.rabbitmq.com/management.html)
+* [queueviewer](https://www.queueviewer.com/)
+* [monitoring plugin](https://www.rabbitmq.com/monitoring.html)
 * [list of development tools](https://www.rabbitmq.com/devtools.html)
 * [guide how to create a cluster](https://www.rabbitmq.com/clustering.html)
 * [redis vs. rabbitmq as message broker](https://www.minvolai.com/rabbitmq-vs-redis-as-message-brokers/) - 16.10.2013
