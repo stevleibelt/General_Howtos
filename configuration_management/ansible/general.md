@@ -22,6 +22,8 @@ ansible-playbook playbook.yml --syntax-check
 ansible-playbook playbook.yml --list-hosts
 #increase verbosity
 ansible-playbook playbook.yml --verbose
+#provision a different host
+ansible-playboot [-i <path to the ini>] -l <hostname> <playbook> [-vvvv]
 ```
 
 ## import vs include
