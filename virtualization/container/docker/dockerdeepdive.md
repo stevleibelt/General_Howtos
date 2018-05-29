@@ -326,11 +326,22 @@ docker port <conainer name or id>
 * containers from multiple hosts can communication with each other
 * is a layer 2 network
 * scale well
+* works good starting with linux kernel 4.4
+* is, by default, only shared and used by the swarm managers
+* will be extended to the workers when a container is started
+* uses [VXLANE](https://en.wikipedia.org/wiki/Virtual_Extensible_LAN) (UDP Port 4789, Virtual Bridge like Br0)
 
 ```
 #create one
 docker network create
     -d overlay <name of the network>
+    -o encrypted [adds usage of TLS to the data)
+#create one with two subnets
+##results in two virtual bridges/switches Br0 and Br1 (for e.g.)
+docker network create
+    -d overlay <name of the network>
+    --subnet=10.1.1.0/24
+    --subnet=11.1.1.0/24
 ```
 
 ## macvlan
@@ -378,10 +389,186 @@ docker network create
 }
 ```
 
+# docker volumes and persistent data
+
+* non persistent data is deleted when the container is deleted
+* persistent data is managed by volumes
+* default workflow, create a volume, create a container, mount the volume into the container
+* when used with --mount for dealing with docker containers, docker either creates a new or uses an existing volume (identified by the name)
+
+```
+#create one
+docker volume create <name of the volume>
+    #block storage: high performance for small block random access
+    #file storage: high performance for regular work load
+    #object storage: good for long term storage of large data that do not change frequently
+    [-d <one of the 25 volume drivers available as plugins or local as default]
+#list
+docker volume ls
+#inspect
+docker volume inspect <name of the volume>
+#delete all currently not mounted volumes
+docker volume prune
+#delete one volume
+docker volume rm <name of the volume>
+```
+
+# docker and deploying applications with docker stacks
+
+* provides:
+    * desired state
+    * rolling updates
+    * simple
+    * scalling operations
+    * health checks
+    * rollbacks
+* whole infrastructure is written in one docker-stack.yml file includes
+    * images/services
+    * volumes
+    * networks
+    * secrets
+* build on top of docker swarm
+* stacks are grouped and managed services
+* services are grouped and managed containers
+* example stack file can be found [here](https://github.com/dockersamples/atsea-sample-shop-app)
+* can only be deployed in docker swarm mode
+
+```
+#example file
+##has to be higher than "3.0"
+##@see: https://docs.docker.com/compose/compose-file/
+version: "3.x"
+
+services:
+    web_server:
+        #all builds have to be pre build
+        ##you can not link to a docker file
+        image: my_vendor/my_web_server_container_image
+        ports:
+            #short form for using ingress mode
+            - "80:80"
+            - "443:443"
+            #long form for host mode
+            #long form is preferred but needs at least version 3.2
+            - target: 12345
+              published: 12345
+              mode: host
+        secrets:
+            - source: web_server_key
+              target: web_server_key
+            - source: web_server_cert
+              target: web_server_cert
+    database_server:
+        image: my_vendor/my_database_server_container_image
+        environment:
+            #environemnt/shell variables set
+            ##way better -> pass them into a secrets and use this
+            DATABASE_USER: toor
+            DATABASE_PASSWORD_FILE: /run/secrets/database_password
+            DATABASE_DATABASE: my_database
+        networks:
+            - backend_network
+        secrets:
+            - database_password
+        deploy:
+            placement:
+                constraints:
+                    #ensures that replicas of this service will
+                    ##always and only run on workers and not on managers
+                    #also available
+                    #node labels
+                    ##node.id ==
+                    ##node.hostname ==
+                    ##node.role != manager
+                    #engine labels
+                    ##engine.lables.operatingsystem=ubunto 17.04
+                    #custom node lables
+                    ##node.labels.zone == prod1
+                    - "node.role == worker"
+    application_server:
+        image: my_vendor/my_application_server_container_image
+        networks:
+            - frontend_network
+            - backend_network
+            - payment_gateway
+        deploy:
+            replicas: 4
+            update_config:
+                parallelism: 2  #update two replicas at once
+                failure_action: rollback #other options: pause, continue
+            placement:
+                constraints:
+                    - "node.role == worker"
+            restart_policy:
+                condition: on-failure
+                delay: 5s   #wait five seconds before next try
+                max_attemps: 3  #try three times
+                window: 120s    #wait 120 seconds before checking if restart was successful
+        secrets:
+            - database_password
+    log_server
+        image: my_vendor/my_log_server_container_image
+        ports:
+            - "8008:8000"
+        stop_grace_periode: 2m45s   #wait 165 seconds after sending SIGTERM before sending SIGKILL
+        volumes:
+            - "/srv/mounted/nfs_share:/data"    #mounts /srv/mounted/nfs_share as /data
+    payment_gateway:
+        image: my_vendor/my_payment_gateway_server_container_image
+        placement:
+            constraints:
+                - "node.labels.mylable == yes"
+
+networks:
+    frontend_network:
+    backend_network:
+    payment_network:
+        driver: overlay
+        driver_opts:
+            encrypted: "yes"    #encrypt also data
+
+#needs to be created on the swarm manager node
+##docker secret create ...
+##docker secret ls
+#gets mounted into the containers as regular file
+##under /run/secrets
+secrets:
+    #short form for same name
+    database_password:
+        external: true  #must exist before the stack can be deployed
+    web_server_key:
+    web_server_cert:
+    #long form different name
+    - source: application_token
+      target: my_cool_name_token
+```
+
+```
+#setup infrastructure and deploy this stack
+##create n hosts
+docker swarm init
+##repeat following step until you have reached
+## your number of hosts
+docker swarm join --token ....
+##check all is working
+docker node ls
+#add a custom lable
+docker node update
+    --label-add mylable=yes <host name>
+##check
+docker node inspect <host name>
+
+#copy/paste the stack with all mandatory files
+# on the docker swarm manager
+docker stack deploy
+    -c <docker stack configuration file>
+    <name of the stack>
+```
+
 ## others
 
 * killing the main process inside a container will stop/kill the container
-* page 239
+* page 287 (120 dpi)
 
 # link
 

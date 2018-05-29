@@ -80,3 +80,4 @@ Docker is server and client.
 * [nginx with http2](https://ma.ttias.be/run-nginx-proxy-docker-container-http2/)
 * [docker on FreeBSD](https://wiki.freebsd.org/Docker)
 * [portainer - open source management ui](https://portainer.io/install.html)
+* [create your own docker image hub/registry](https://docs.docker.com/registry/#basic-commands)
