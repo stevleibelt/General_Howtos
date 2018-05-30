@@ -204,16 +204,21 @@ docker swarm init
     [--advertise-addr 10.0.0.1:2377]    #can even be an address of an load balancer
     [--listen-addr 10.0.0.1:2377]   #maybe different if advertise addr is a load balancer
     [--autolock]    #prevents that a restarted node can join automatically
+    [--external-ca] #configure external ca, check out >>docker swarm ca --help<<
 #check status
 docker node ls
 #fetch join token
 #   depending on the token, the node either joins as worker or as manager
-docker swarm join-token
+docker swarm join-token [manager|worker]
 #add as many workers as you want to
 docker swarm join [...]
 #add as many managers as you want to, odd numbers is important, 3 to 5 is recommended
 #   managers should be connected via reliable networks (don't mix aws with azure)
 docker swarm join [...]
+#rotate token
+docker swarm join-token --rotate [manager|worker]
+#set certificate rotation to 30 days
+docker swarm update --cert-expiry 720h
 #check status
 docker node ls
 #update stuff like enabling autolock
@@ -432,6 +437,7 @@ docker volume rm <name of the volume>
 * services are grouped and managed containers
 * example stack file can be found [here](https://github.com/dockersamples/atsea-sample-shop-app)
 * can only be deployed in docker swarm mode
+* to have different environments (development, test, stage and production), you have to maintain one stack file per environment
 
 ```
 #example file
@@ -560,15 +566,48 @@ docker node inspect <host name>
 
 #copy/paste the stack with all mandatory files
 # on the docker swarm manager
+# this command is also used to redeploy a stack
 docker stack deploy
     -c <docker stack configuration file>
     <name of the stack>
+
+#list stacks on the system
+docker stack ls
+
+#detailed information
+docker stack ps <stack name>
+
+#need more information?
+docker service logs <service name/service id or replica id>
+    [--follow]
+    [--tail]
+    [--details]
+
+#remove a stack
+# secrets and volumes won't be deleted
+docker stack rm <stack name>
 ```
+
+# docker security
+
+* available security layers from docker
+    * secrets management
+    * docker content trust
+    * security scanning
+    * swamr mode
+* available security layers from linux os
+    * seccomp
+    * mandatory access control (MAC) (SELinux, AppArmor)
+    * capailities
+    * control groups (cgroups)
+    * kernel namespaces
+* a docker container is an organized collection of namespaces
+* docker is using availabable linux security mechanism with moderate but secure default settings
 
 ## others
 
 * killing the main process inside a container will stop/kill the container
-* page 287 (120 dpi)
+* page 313 (120 dpi)
 
 # link
 
