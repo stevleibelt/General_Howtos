@@ -7,3 +7,4 @@
 * [getting started with the skeleton application](https://docs.zendframework.com/tutorials/getting-started/skeleton-application/)
 * [release note](https://framework.zend.com/blog/2016-06-28-zend-framework-3.html)
 * [configuring the service manager](http://zendframework.github.io/zend-servicemanager/configuring-the-service-manager/#abstract-factories)
+* [zend component installer](https://zendframework.github.io/zend-component-installer/)
