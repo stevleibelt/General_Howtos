@@ -81,3 +81,8 @@ Docker is server and client.
 * [docker on FreeBSD](https://wiki.freebsd.org/Docker)
 * [portainer - open source management ui](https://portainer.io/install.html)
 * [create your own docker image hub/registry](https://docs.docker.com/registry/#basic-commands)
+* cool images
+    * [ampache](https://hub.docker.com/r/ampache/ampache/)
+    * [readymedia-transcode](https://hub.docker.com/r/mdouchement/readymedia-transcode/)
+    * [rygel](https://hub.docker.com/r/tomsotte/rygel/)
+    * [subsonic](https://hub.docker.com/r/hurricane/subsonic/)
