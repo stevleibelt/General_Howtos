@@ -15,6 +15,7 @@ rabbitmqctl node_health_check
 # link
 
 * [rabbitmq tutorials based on amqp interop](https://blog.forma-pro.com/rabbitmq-tutorials-based-on-amqp-interop-cf325d3b4912) - 2018-08-10
+* [setup a cluster](https://thoughtsimproved.wordpress.com/2015/01/03/tech-recipe-setup-a-rabbitmq-cluster-on-ubuntu/)
 * [how to use rabbitmq in php](https://www.sitepoint.com/use-rabbitmq-php/) - 16.10.2014
 * [getting started with rabbitmq in php](https://www.binpress.com/tutorial/getting-started-with-rabbitmq-in-php/164) - 28.10.2014
 * [rabbitmq official tutorial part one](https://www.rabbitmq.com/tutorials/tutorial-one-php.html)
