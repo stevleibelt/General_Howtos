@@ -7,6 +7,12 @@ history
 CTRL + r
 #execute last command as root
 sudo !!
+#rerun last command
+!!
+#reuse arguments from last command
+!*
+#reuse last argument from last command
+!$
 ```
 
 # link

@@ -4,6 +4,8 @@
 | CTRL + _ | undo |
 | CTRL + y | pastes from the buffer |
 | CTRL + l | clears the screen |
+| CTRL + SHIFT + c | copies highlighted text |
+| CTRL + SHIFT + v | pasts highlighted text |
 | ALT + f | move a word forward |
 | ALT + b | move a word backward |
 | CTRL + e | move cursor to the end |
