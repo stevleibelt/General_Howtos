@@ -51,3 +51,7 @@ without
 a
 bar"
 ```
+
+# link
+
+* [tips for everyday use](https://opensource.com/article/18/5/bash-tricks)
