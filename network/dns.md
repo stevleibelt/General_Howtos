@@ -174,9 +174,16 @@ Unfinished list based on [this result](https://duckduckgo.com/?q=free+and+uncens
 8.8.4.4
 ```
 
+## local dns caches
+
+* [dnsmasq](https://wiki.archlinux.org/index.php/Dnsmasq#Caching_DNS_server)
+* [unbound](https://wiki.archlinux.org/index.php/Unbound)
+
 # links
 
-* openresolve - http://roy.marples.name/projects/openresolv/wiki?name=config
+* [openresolve](http://roy.marples.name/projects/openresolv/wiki?name=config)
+* [dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html)
+* [unbound](https://unbound.net/)
 * http://www.fixmbr.de/opendns-und-andere-freie-dns-server/
 * http://www.dmoz.org/Computers/Internet/Protocols/DNS/Service_Providers/
 * https://www.opennicproject.org/
