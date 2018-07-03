@@ -1,5 +1,6 @@
 # links
 
+* [Linux OS Tuning for MySQL Database Performance - 2018-07-03](https://www.percona.com/blog/2018/07/03/linux-os-tuning-for-mysql-database-performance/)
 * http://www.slideshare.net/MarkusWinand/indexes-neglectedperformanceallrounder
 * http://use-the-index-luke.com/3-minute-test
 * http://use-the-index-luke.com/blog/2014-02/results-three-minutes-sql-performance-quiz
