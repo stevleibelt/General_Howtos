@@ -28,6 +28,7 @@ WORKDIR /application
 #   https://stackoverflow.com/questions/40894385/how-can-i-install-the-php-memcached-extension-on-dockers-php7-alpine-image#41575677
 #   https://developer.couchbase.com/documentation/server/current/sdk/php/start-using-sdk.html
 #   https://gist.github.com/meridius/d91781e1eaf1f23b0643314d073d7c53
+#   https://hub.docker.com/_/php/
 #
 #check installed modules
 #   php -m
@@ -40,6 +41,7 @@ WORKDIR /application
 #begin of couchbase client building
 RUN apk update \ 
     && apk upgrade \ 
+    && docker-php-source extract \ 
     && apk add autoconf g++ re2c lz4 gawk make libcouchbase-dev \ 
     && apk add g++ \ 
     && apk add re2c \ 
@@ -47,9 +49,11 @@ RUN apk update \
     && apk add gawk \ 
     && apk add make \ 
     && apk add libcouchbase-dev \ 
+    && pecl install igbinary-2.0.7 \ 
     && pecl install couchbase-2.4.2 \ 
+    && docker-php-ext-enable igbinary \ 
     && docker-php-ext-enable couchbase \ 
     && docker-php-source delete \ 
-    && apk del make gawk lz4 re2c g++ autoconf \ 
+    #&& apk del make gawk lz4 re2c g++ autoconf \   #add this line if I want to remove stuff
     && rm -fr /tmp/*
 #end of couchbase client building
