@@ -1,3 +1,11 @@
+# changes from one commit id
+
+```
+git diff <commit_id>^!
+#or
+git show <commit_id>
+```
+
 # between tags
 
 ```

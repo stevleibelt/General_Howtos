@@ -184,6 +184,7 @@ git push origin :<old name>
 
 # links
 
+* [rebase, reset and revert.](https://opensource.com/article/18/6/git-reset-revert-rebase-commands)
 * http://www.git-scm.com/book/en/v2/Git-Branching-Remote-Branches
 * http://stackoverflow.com/questions/17546171/how-to-delete-a-remote-branch-using-git
 * http://vim.wikia.com/wiki/A_better_Vimdiff_Git_mergetool
