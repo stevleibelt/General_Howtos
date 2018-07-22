@@ -83,4 +83,7 @@ pgp --recv-keys <key>
 
 * https://wiki.archlinux.org/index.php/AUR_helpers
 * http://archlinux.fr/man/yaourt.8.html
-* https://aur.archlinux.org/packages/pacaur/
+* https://github.com/Jguer/yay
+* https://github.com/polygamma/aurman
+* https://github.com/trizen/trizen
+* https://xyne.archlinux.ca/projects/bauerbill/
