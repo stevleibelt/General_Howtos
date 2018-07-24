@@ -7,3 +7,15 @@
 -- 
 
 SHOW SLAVE STATUS;
+
+-- or more verbose
+
+SHOW SLAVE STATUS\G;
+
+-- 
+-- start a slave
+-- @see
+--  https://www.digitalocean.com/community/tutorials/how-to-set-up-master-slave-replication-in-mysql
+-- 
+
+START SLAVE;
