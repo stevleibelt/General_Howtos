@@ -2,6 +2,13 @@
 
 * advance launcher - launches any configured 
 
+# packages
+
+* libaacs
+* libbdplus
+* libdvdcss
+* libbluray
+
 # link
 
 * https://wiki.archlinux.org/index.php/Kodi
