@@ -41,3 +41,4 @@ echo "supersede domain-name-servers <name server ip one>, <name server ip two>;"
 * [static ips in debian](http://www.techiecorner.com/486/how-to-setup-static-ip-in-debian/)
 * [static ip address tutorial](http://www.cyberciti.biz/faq/linux-configure-a-static-ip-address-tutorial/)
 * [network configuration](https://wiki.debian.org/NetworkConfiguration)
+* [static ip and network configuration on debian linux ](https://www.howtoforge.com/debian-static-ip-address)
