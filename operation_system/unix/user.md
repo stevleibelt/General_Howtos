@@ -67,6 +67,13 @@ usermod -s <path to shell> <user name>
 chsh
 ```
 
+# rename user
+
+```
+usermod -l <old user name> <new user name>
+#you should rename the fitting homefolder also
+```
+
 # lock user
 
 ```
