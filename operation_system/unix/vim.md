@@ -1,5 +1,6 @@
 # open files
 
+```
 vim -o #open files in horizontally tiled
 vim -O #open files in vertically tiled
 vim -p #open files in tabs
@@ -12,9 +13,11 @@ ctrl+w j #window down - move to down window
 ctrl+w c #close current window
 ctrl+w o #close all windows except current
 ctrl+w v #duplicate current window
+```
 
 # open directories
 
+```
 o #opens file below cursor horizontally
 v #opens file below cursor vertically
 i #show more information
@@ -23,9 +26,11 @@ r #reverse sort by column under the cursor
 D #deletes file
 d #creates directory
 enter #opens file in current window
+```
 
 # file operation
 
+```
 :e #open/reload a file
 :e! #open/reload a file without asking for saving current one
 :w #save content in current file
@@ -33,9 +38,11 @@ enter #opens file in current window
 :q! #quit current file without asking for saving
 :tabNext    #go to the next opened file in the tab
 :tabprevious    #go to the previous opened file in the tab
+```
 
 # movement
 
+```
 h #left
 l #right
 j #down
@@ -46,9 +53,11 @@ L #highest to the bottom in the file
 <number>G # move to the <numbered> line in the file
 ctrl+f #one page forward
 ctrl+b #one page back
+```
 
 ## jumping
 
+```
 gg #jump to the beginning of the file
 G #jump to the end/"ground" of the file
 0 #jump to the start of the line
@@ -56,9 +65,11 @@ $ #jump to the end of the line
 w/W #jump to the beginning of the next "word"
 b/B #jump "back" to the beginning of the last word
 e/E #jump to the "end" of the next word
+```
 
 ### code jumping
 
+```
 % #jump to matching brace
 ] #jump to the end of the paragraph
 [ #jump to the start of the paragraph
@@ -66,9 +77,11 @@ e/E #jump to the "end" of the next word
 ) #jump to the end of the sentence
 '' #jump to you last edit
 ]] #move to the next function
+```
 
 # search
 
+```
 /foo #searches for "foo" forward
 ?foo #searches for "foo" backward
 n #jumps to next "foo"
@@ -78,56 +91,76 @@ fa #"findes" "a" forward
 Fa #"findes" "a" backward
 % #jumps to the nearest (), [], {}
 :g/pattern/ #show every line matching the regexp
+```
 
 # search and replace
 
 ## all occurrences of <search> with <replace> in file
 
-    #%s -   search in all lines
-    #/g -   replace all in current line
-    :%s/<search>/<replace>/g
+```
+#%s -   search in all lines
+#/g -   replace all in current line
+:%s/<search>/<replace>/g
+```
 
 ## all occurences of <search> with <replace> in current line (case insensitive)
 
-    #/i -   search <search> in case insensitive mode
-    :s/<search>/<replace>/gi
+```
+#/i -   search <search> in case insensitive mode
+:s/<search>/<replace>/gi
+```
 
 ## all occurences of <search> with <replace> in line 13 up to 23
 
-    :13,23s/<search>/<replace>/g
+```
+:13,23s/<search>/<replace>/g
+```
 
 ## all occurences of <search> with <replace> by visual selected line limit
 
-    :'<,'>s/<search>/<replace>/g
+```
+:'<,'>s/<search>/<replace>/g
+```
 
 ## all occurences of <search> with <replace> for the next 7 lines
 
-    :s/<search>/<replace>/g 7
+```
+:s/<search>/<replace>/g 7
+```
 
 ## all occurences of whole world of <search> with <replace>
 
-    #disables partial matches
-    :s/\<<search>\>/replace
+```
+#disables partial matches
+:s/\<<search>\>/replace
+```
 
 ## replace multiple <search> terms with <replace>
 
-    #replaces "foo" and "bar" with "foobar"
-    :s/\(foo|bar\)/foobar/g
+```
+#replaces "foo" and "bar" with "foobar"
+:s/\(foo|bar\)/foobar/g
+```
 
 ## interactive replacement of <search> with <replace>
 
-    #y  -   replace current and goes to next
-    #n  -   will not replace current and goes to next
-    #a  -   replace all highlighted words
-    #l  -   replace current and terminate
-    :%s/<search>/<replace>/gc
+```
+#y  -   replace current and goes to next
+#n  -   will not replace current and goes to next
+#a  -   replace all highlighted words
+#l  -   replace current and terminate
+:%s/<search>/<replace>/gc
+```
 
 # help
 
+```
 :help / #shows help for "/"
+```
 
 # content manipulation
 
+```
 i #insert before current cursor position
 I #insert at beginning of current line
 a #append/insert after current cursor position
@@ -152,9 +185,11 @@ O #"open" a new line above current cursor
 . #repeat previous command
 * #move to the next use of the word under your cursor
 # #move to the previous use of the word under your cursor
+```
 
 # registers - use :help registers
 
+```
 :registers #presents you all used registers with content inside
 "0-"9 #yanked text to numbered register
 "a-"z #yanked text replaces current content of register
@@ -163,24 +198,31 @@ O #"open" a new line above current cursor
 "+ #system default register
 "\* #select/drop register
 "\_ #/dev/null
+```
 
 # marking
 
+```
 v #mark character wise
 V #mark line wise
 ctrl+v #column wise marking
 gv #remark last marked area
+```
 
 # completion - available in insert mode
 
+```
 ctrl+n #complete a word (forward through choice list)
 ctrl+p #complete a word (backward through choice list)
 ctrl+x #counts up number below current cursor
+```
 
 # configuration
 
+```
 :options+enter #shows available options
 :browse set #shows all setable options
+```
 
 # advanced help
 
@@ -194,14 +236,18 @@ ctrl+x #counts up number below current cursor
 
 ## command mode
 
+```
 < #shift to the left
 > #shift to the right
 3>> #shift three lines right
+```
 
 ## insert mode
 
+```
 ctrl+t #shift to the left
 ctrl+d #shift to the right
+```
 
 # plugins
 
