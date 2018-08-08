@@ -54,13 +54,13 @@ CONTAINER_ID=$(sudo docker run -d bcbcarl/archlinux /bin/sh -c "while true; do e
 ### check logs manually
 
 ```
-sudo docker logs $CONTAINER_ID
+sudo docker logs <container id>
 ```
 
 ### attach to container
 
 ```
-sudo docker attach --sig-proxy=false $CONTAINER_ID
+sudo docker attach --sig-proxy=false <container id>
 ```
 
 * --sig-proxy=false -   do not forward signals to container (you can use CTRL-C to exit attachement without stopping the container)
@@ -74,7 +74,7 @@ docker ps
 ### stop daemon
 
 ```
-docker stop $CONTAINER_ID
+docker stop <container id>
 ```
 
 # remove image
@@ -99,13 +99,28 @@ sudo docker ps -a -q | xargs docker rm
 
 ```
 #!/bin/bash
-$CONTAINER_ONE = (docker run <container_name>)
-$CONTAINER_TWO = (docker run <container_name>)
+${CONTAINER_ONE} = $(docker run <container_name>)
+${CONTAINER_TWO} = $(docker run <container_name>)
 
-echo "id of container one: "$CONTAINER_ONE  #use names like "mysql, apache, etc"
-echo "id of container two: "$CONTAINER_TWO
+echo "id of container one: "${CONTAINER_ONE}  #use names like "mysql, apache, etc"
+echo "id of container two: "${CONTAINER_TWO}
+```
+
+# share an image
+
+```
+#export a image.tar
+docker save --output <file path>.tar <image name>
+##or
+docker save <image name> <file path>.tar
+#import a image.tar
+docker load --input <file path>.tar
+##or
+docker load <file path>.tar
 ```
 
 # link
 
 * [Building tiny container images - 2018-07-19](https://opensource.com/article/18/7/building-container-images)
+* [Share an image](https://stackoverflow.com/a/48856787)
+* [Docker: Transferring Docker Images Without Registry - 2017-11-17](https://medium.com/@sanketmeghani/docker-transferring-docker-images-without-registry-2ed50726495f)
