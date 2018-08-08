@@ -5,57 +5,83 @@ Docker is server and client.
 
 ## start docker server
 
-    systemctl start docker
+```
+systemctl start docker
+```
 
 ## get list of images running on your local host
 
-    docker images
+```
+docker images
+```
 
 ## search for an image
 
-    docker search <string>
+```
+docker search <string>
+```
 
 ## get image
 
-    docker pull <vendor>/<image>
+```
+docker pull <vendor>/<image>
+```
 
 ## push image
 
-    docker push <vendor>/<image>
+```
+docker push <vendor>/<image>
+```
 
 ## get running containers
 
-    docker ps
+```
+docker ps
+```
 
 ## get informations about container
 
-    docker inspect <container_id>
+```
+docker inspect <container_id>
+```
 
 ## get container id
 
-    docker ps -l
+```
+docker ps -l
+```
 
 ## run command
 
-    docker run <vendor>/<image> <command> [<argument_one> [<argument_...> [<argument_n>]]]
+```
+docker run <vendor>/<image> <command> [<argument_one> [<argument_...> [<argument_n>]]]
+```
 
 ### run shell (sh as example)
 
-    docker run -i -t <vendor> /bin/sh
+```
+docker run -i -t <vendor> /bin/sh
+```
 
 ### install software
 
-    #example for an arch linux
-    docker run <vendor>/<image> pacman -S <software>
+```
+#example for an arch linux
+docker run <vendor>/<image> pacman -S <software>
+```
 
 ## save image status
 
-    docker commit [options] <container_id> [repository [tag]]
+```
+docker commit [options] <container_id> [repository [tag]]
+```
 
 ## where is stuff stored (path)
 
-    #inside the path below, cat a file prefixed with repository
-    cd /var/lib/docker
+```
+#inside the path below, cat a file prefixed with repository
+cd /var/lib/docker
+```
 
 # links
 
