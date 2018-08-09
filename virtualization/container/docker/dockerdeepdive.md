@@ -603,11 +603,33 @@ docker stack rm <stack name>
     * kernel namespaces
 * a docker container is an organized collection of namespaces
 * docker is using availabable linux security mechanism with moderate but secure default settings
+* docker swarm cluster stored is using etcd (encrypted and replicated to all managers) -> make regular backups of it!
+* buzzwords
+    * docker trusted registry
+    * docker content trust
+    * docker control plane (UCP)
+* secrets are encrypted, mounted in-memory and available to the depended service only (use >>docker secret<< if you want to know more)
+
+# docker enterprise
+
+* enterprises
+    * have much stricter set of requirements
+    * on-premises consuming solution owned and managed by themself
+    * role and security features
+    * a support contract
+* which results in docker enterprise edition which is
+    * a hardened docker engine
+    * operation ui
+    * secure private registry
+    * with a support contract
 
 ## others
 
 * killing the main process inside a container will stop/kill the container
-* page 313 (120 dpi)
+* sizing (for UCP docker)
+    * managers, 8 gb ram, 1-4 cores, 3-100 GB diskspace
+    * workers, 4 gb ram, 3-100 GB diskspace (plus check out your images and applications you want to deploy)
+* page 330 (120 dpi)
 
 # link
 
