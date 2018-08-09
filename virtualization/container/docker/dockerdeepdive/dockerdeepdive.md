@@ -5,7 +5,7 @@
 * [docker-compose](docker_compose.md)
 * [docker-swarm](docker_swarm.md)
 * [network](network.md)
-* [deploying applications with docker stack](deployment.md)
+* [docker-stack](docker_stack.md)
 * [security](security.md)
 * [note](note.md)
 * [link](link.md)
