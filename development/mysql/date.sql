@@ -7,6 +7,7 @@ SET @TODAY = CURRENT_DATE;
 -- @see:
 --  http://w3resource.com/mysql/date-and-time-functions/mysql-adddate-function.php
 --  https://dev.mysql.com/doc/refman/5.7/en/date-and-time-functions.html#function_date-add
+-- also working for datetime columns
 -- valid units          with expected expression format
 --  MICROSECONDS        <float>
 --  SECOND              <int>

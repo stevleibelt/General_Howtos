@@ -92,7 +92,18 @@ journalctl --unit=zfs
 journalctl -b | grep -i 'fail\|erro\|warn'
 ```
 
+# clean journal
+
+```
+#clear older 14 days
+journalctl --vacuum-time=14d
+
+#clear logs greater size of 2 GiB
+journalctl --vacuum-size=2G
+```
+
 # links
 
 * http://0pointer.de/blog/projects/journalctl.html
 * http://www.freedesktop.org/software/systemd/man/journald.conf.html
+* https://ma.ttias.be/clear-systemd-journal/

@@ -113,7 +113,7 @@ MAXIMUM_NUBERS_OF_SERVERS_TO_USE=200
 pacman -S reflector
 mkdir -p /etc/pacman.d/hooks
 
-cat > /etc/pacman.d/hooks/trigger_reflector_on_mirrorlist_update.hook < DELIM
+cat > /etc/pacman.d/hooks/trigger_reflector_on_mirrorlist_update.hook <<DELIM
 [Trigger]
 Operation = Upgrade
 Type = Package

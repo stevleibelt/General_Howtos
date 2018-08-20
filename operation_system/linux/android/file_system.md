@@ -30,5 +30,6 @@
 
 # links
 
+* [Andoriud File System Structure.](http://computerjunkies.com/android-file-system-structure-architecture-layout-details/) - 2018-04-08
 * http://techblogon.com/android-file-system-structure-architecture-layout-details/
 * http://androidforums.com/threads/definitive-androids-folder-structure.5930/

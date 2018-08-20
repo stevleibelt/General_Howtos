@@ -108,7 +108,12 @@ zfs export
 zfs import -R /mnt <pool name>
 ```
 
-## grub-mkconfig -o /boot/grub/grub.cfg - failed to get canonical path of \`/dev/\<luks pool name\>\`
+## grub-probe /<zpool name> - error: failed to get canonical path of `/dev/<device string`.
+
+* export ZPOOL_VDEV_NAME_PATH=YES
+* retry
+
+## grub-mkconfig -o /boot/grub/grub.cfg - error: failed to get canonical path of \`/dev/\<luks pool name\>\`
 
 * ln -s /dev/mapper/\<luks pool name\> /dev/\<luks pool name\>
 * try grub-mkconfig again

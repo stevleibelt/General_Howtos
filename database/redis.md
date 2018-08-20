@@ -15,10 +15,26 @@ redis-cli -s ~/.redis/sock
 CONFIG GET databases
 ```
 
+## select database
+
+```
+#you get the index from CONFIG GET databases
+#there is a hidden index 0
+select <index>
+#get the size
+dbsize
+```
+
 ## list keys per database
 
 ```
 INFO keyspace
+```
+
+## search for keys
+
+```
+redis-cli --scan --pattern "my_pattern_*"
 ```
 
 ## truncate or flush database
@@ -33,6 +49,10 @@ FLUSHALL
 ## monitoring
 
 ```
+redis-cli --stat
+```
+
+```
 #inside the redis cli
 #@see: https://redis.io/commands/info
 INFO
@@ -44,3 +64,4 @@ MONITOR
 # link
 
 * [Dashboard for queues with x-ray.](https://horizon.laravel.com/)
+* [Rediscli](https://redis.io/topics/rediscli)
