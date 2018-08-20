@@ -39,6 +39,12 @@ docker push <vendor>/<image>
 docker ps
 ```
 
+## get top/statistics
+
+```
+docker stats
+```
+
 ## get informations about container
 
 ```
