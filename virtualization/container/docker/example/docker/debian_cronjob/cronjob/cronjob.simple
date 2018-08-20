@@ -1,0 +1,4 @@
+#<minute> <hour> <day_of_month> <month> <day_of_week> <command>
+
+* * * * * root echo "hello world foo" >> /var/log/cronjob.log 2>&1
+# remember to end this file with an empty new line

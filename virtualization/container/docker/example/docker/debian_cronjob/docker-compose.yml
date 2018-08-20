@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+    debian_cronjob:
+        hostname: debian_cronjob
+        image: debian_cronjob:latest
+        volumes:
+            - ./cronjob/cronjob:/etc/cron.d/cronjob
+            - ./log/cronjob.log:/var/log/cronjob.log

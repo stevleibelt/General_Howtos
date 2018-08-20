@@ -1,0 +1,6 @@
+#!/bin/bash
+#<minute> <hour> <day_of_month> <month> <day_of_week> <command>
+CURRENT_DATE_TIME=$(date +'%Y-%m-%d %H:%M:%S')
+
+* * * * * root echo "[ ${CURRENT_DATE_TIME} ] hello world bitch" >> /var/log/cronjob.log 2>&1
+# remember to end this file with an empty new line
