@@ -29,6 +29,8 @@ systemctl restart docker
 # link
 
 * [create your own docker image hub/registry](https://docs.docker.com/registry/#basic-commands)
+* [Secure a Docker Registry Using SSL (with Let's Encrypt) - 2018-06-04](https://dzone.com/articles/secure-a-docker-registry-using-ssl)
+* [Docker in Production - Launch Private Registry with SSL](https://www.katacoda.com/courses/docker-production/launch-private-registry)
 * [docker hub vs creating docker registry - 2018-05-21](https://code-maze.com/docker-hub-vs-creating-docker-registry/)
 * [Fix >>http: server gave HTTP response to HTTPS client<<](https://stackoverflow.com/questions/38695515/can-not-pull-push-images-after-update-docker-to-1-12#38716311)
 * [Test an insecure registry.](https://docs.docker.com/registry/insecure/)
