@@ -106,3 +106,7 @@ docker network create
 * can be manipulated with
     * --dns=<ip of an alternative dns server>
     * --dns-search=<name of an alternative dns resolver>
+
+# link
+
+* [10 Examples of how to get Docker Container IP Address - 2015-05-10](http://networkstatic.net/10-examples-of-how-to-get-docker-container-ip-address/)
