@@ -28,6 +28,12 @@ ntpdc -p
 hwclock --systohc
 ```
 
+# check current time
+
+```
+nc fish.mirbsd.org daytime
+```
+
 # links
 
 * http://www.debianadmin.com/ntp-server-and-client-configuration-in-debian.html
