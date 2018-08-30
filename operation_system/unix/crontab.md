@@ -80,7 +80,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 ## simple php check
 
 ```
-*/1 * * * * /usr/local/bin/php -r 'echo "ping";' >> /var/log/cronjob.log 2>&1
+*/1 * * * * /usr/local/bin/php -r 'echo "ping" . PHP_EOL;' >> /var/log/cronjob.log 2>&1
 ```
 
 # debug
