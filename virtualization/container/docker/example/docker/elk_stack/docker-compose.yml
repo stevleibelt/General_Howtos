@@ -1,0 +1,34 @@
+version: '3.6'
+
+#@see
+#   https://elk-docker.readthedocs.io/
+#@contuine
+#   https://www.katacoda.com/courses/docker-production/launch-elk-aggregate-container-logs
+#   step 3/7
+services:
+    elasticsearch_application:
+        hostname: elasticsearch.application
+        image: elasticsearch
+        ports:
+            - "9200:9200"
+            - "9300:9300"
+        volumes:
+            - ./cronjob/cronjob:/etc/cron.d/cronjob
+            - ./log/cronjob.log:/var/log/cronjob.log
+    kibana_application:
+        environment: 
+            - LOGSPOUT=ignore
+        hostname: kibana.application
+        image: kibana
+        ports:
+            - "5601:5601"
+    logstash_application:
+        environment: 
+            - LOGSPOUT=ignore
+        hostname: logstash.application
+        image: logstash
+        ports:
+            - "5000:5000"
+            - "5000:5000/udp"
+        volume:
+            - ./logstash.conf:/etc/logstash/logstash.conf   #@todo - just guessing!
