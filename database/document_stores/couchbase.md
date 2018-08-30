@@ -1,3 +1,11 @@
+# commands
+
+```
+#gain general overview
+#@see: https://developer.couchbase.com/documentation/server/current/rest-api/rest-endpoints-all.html
+curl -v -X GET http://<ip address>:8091/pools/nodes -u <username>:<password>
+```
+
 # links
 
 * [10 things developers should know.](https://blog.couchbase.com/10-things-developers-should-know-about-couchbase/)
