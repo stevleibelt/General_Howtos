@@ -15,6 +15,23 @@ SHOW TABLE STATUS
 SHOW TABLE STATUS LIKE '<table name>'\G
 ```
 
+# Calculate the size and the free space for OPTIMIZE
+
+```mysql
+-- 
+-- @see: https://ma.ttias.be/mysql-calculate-free-space-ibd-files/
+--
+SELECT round((data_length+index_length)/1024/1024,2)
+FROM information_schema.tables
+WHERE
+  table_schema='<database_name>'
+  AND table_name='<table_name>';
+-- return value of 1000 is 1GB
+```
+
+Next is to go to your directory and search for the <table_name>.ibd file.
+Compare this size with the size of the query and you can calculate how much space you can gain by an "OPTIMIZE TABLE <table_name>".
+
 # Show more information since MySQL 5.6
 
 ```mysql
