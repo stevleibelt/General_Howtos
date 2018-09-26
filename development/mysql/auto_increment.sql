@@ -14,5 +14,5 @@ WHERE
 -- 
 
 ALTER TABLE 
-    `table_name`
+    `<table_name>`
     AUTO_INCREMENT=<value>;
