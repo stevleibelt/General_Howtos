@@ -30,6 +30,27 @@ grep -q
 grep -v
 ´´´
 
+# print only but all matchings (even if they are on the same line)
+
+* @see: https://unix.stackexchange.com/questions/6979/count-total-number-of-occurrences-using-grep
+
+```
+#you can copy past/run the following example
+#creating the file
+cat > foo.xml <<DELIM
+<xml>
+    <job>
+    </job>
+    <job></job><job></job>
+</xml>
+DELIM
+#doing the test
+cat foo.xml | grep -o '<job>' | wc -l
+#the result is >>3<<
+#and removing the file
+rm foo.xml
+```
+
 # print line numbers
 
 ´´´
