@@ -14,10 +14,15 @@ echo 'Redirect 301 / https://www.bazzline.net' > .htaccess
 # add to .htaccess
 # @see: http://weavervsworld.com/docs/other/passprotect.html
 #       http://stackoverflow.com/questions/6111627/how-to-use-a-relative-path-with-authuserfile-in-htaccess
-AuthUserFile <absolut path to >/.htpasswd
+AuthUserFile <absolut path to passwd file>
 AuthType Basic
 AuthName "<description>"
 Require valid-user
+```
+
+```
+#create your htpasswd file
+htpasswd -c <absolut path to the passwd file> <username>
 ```
 
 ## redirect http content to https
