@@ -10,6 +10,49 @@
 * second partition is the rest
 * mkfs.vfat -F 32 /dev/<path to the sd card>1
 * mkfs.ext4 /dev/<path to the sd card>2
+* mount /dev/<path to the sd card>1 /mnt
+* cat >> /mnt/usercfg.txt <<DELIM
+enable_uart=1
+DELIM
+* umount /mnt
+* sync
+* plug sd card in raspberry pi
+* login as "root" without password
+* setup-alpine
+* lbu commit -d
+* reboot
+* apk update
+* apk upgrade
+* apk add chrony
+* service chronyd restart
+* apk add e2fsprogs
+* mount /dev/mmcblk0p2 /mnt
+* setup-disk -m sys /mnt
+* mount -o remount,rw /dev/mmcblk0p1
+* rm -f /media/mmcblk0p1/boot/*  
+* cd /mnt
+* rm boot/boot
+* mv boot/* /media/mmcblk0p1/boot/ 
+* rm -Rf boot
+* mkdir media/mmcblk0p1
+* ln -s media/mmcblk0p1/boot boot
+* echo "/dev/mmcblk0p1 /media/mmcblk0p1 vfat defaults 0 0" >> etc/fstab
+* sed -i '/cdrom/d' etc/fstab   # Of course, you don't have any cdrom or floppy on the Raspberry Pi
+* sed -i '/floppy/d' etc/fstab
+* cd /media/mmcblk0p1
+* sed -i '/edge/s/^#//' etc/apk/repositories
+* sed -i 's/^/root=\/dev\/mmcblk0p2 /' cmdline.txt  
+* lbu commit -d
+* reboot #be patient
+* rc-update del hwclock boot
+* rc-update add swclock boot
+* service hwclock stop
+* service swclock start
+* apk add vim htop sudo
+* htop
+* adduser <user name> wheel
+* visudo
+* rc-update
 
 ### example fdisk output from a 4 GB card
 
@@ -27,3 +70,9 @@ Device         Boot   Start     End Sectors  Size Id Type
 
 Command (m for help):
 ```
+
+## links 
+
+* [Traditional disk-based (sys) installation](https://wiki.alpinelinux.org/wiki/Raspberry_Pi#Traditional_disk-based_.28sys.29_installation)
+* [Raspberry Alpine Linux 3.5 Docker Host](https://codegazers.wordpress.com/2017/01/01/raspberry-alpine-docker/) - 2017-01-01
+* [Classic install or sys mode on Raspberry Pi](https://wiki.alpinelinux.org/wiki/Classic_install_or_sys_mode_on_Raspberry_Pi)
