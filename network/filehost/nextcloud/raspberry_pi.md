@@ -4,30 +4,6 @@
 
 * [download](https://wiki.alpinelinux.org/wiki/Raspberry_Pi)
 * fdisk /dev/<path to the sd card>
-* d - until all partitions are gone
-* o
-* n
-* p
-* enter
-* enter
-* enter
-* l
-* c
-* w
-* (if needed, install dosfstools and ntfsprogs)
-* mkfs.vfat -F 32 /dev/<path to the sd card>
-* mount /dev/<path to the sd card> /mnt
-* tar -xzf alpine-rpi-\*.tar.gz -C /mnt
-* vim /mnt/config.txt
-* [adapt](https://www.raspberrypi.org/documentation/configuration/config-txt/) if needed
-* sync
-* umount /mnt
-* put it into your pi
-* loing as "root" without password
-* setup-alpine
-* lbu commit -d
-
-* fdisk /dev/<path to the sd card>
 * create two partitions
 * first with a size of 512 mb (which is way to much for alpine but we a prepared for anything that comes)
 * first paritition type is c (W95 FAT32)
@@ -36,9 +12,12 @@
 * mkfs.vfat -F 32 /dev/<path to the sd card>1
 * mkfs.ext4 /dev/<path to the sd card>2
 * mount /dev/<path to the sd card>1 /mnt
+* tar -xzf alpine-rpi-\*.tar.gz -C /mnt
 * cat >> /mnt/usercfg.txt <<DELIM
 enable_uart=1
 DELIM
+* vim /mnt/config.txt
+* [adapt](https://www.raspberrypi.org/documentation/configuration/config-txt/) if needed
 * umount /mnt
 * sync
 * plug sd card in raspberry pi
@@ -50,6 +29,7 @@ DELIM
 * apk upgrade
 * apk add chrony
 * service chronyd restart
+* rc-update add chronyd
 * apk add e2fsprogs
 * mount /dev/mmcblk0p2 /mnt
 * setup-disk -m sys /mnt
