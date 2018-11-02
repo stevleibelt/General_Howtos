@@ -106,3 +106,10 @@ Command (m for help):
 * [Traditional disk-based (sys) installation](https://wiki.alpinelinux.org/wiki/Raspberry_Pi#Traditional_disk-based_.28sys.29_installation)
 * [Raspberry Alpine Linux 3.5 Docker Host](https://codegazers.wordpress.com/2017/01/01/raspberry-alpine-docker/) - 2017-01-01
 * [Classic install or sys mode on Raspberry Pi](https://wiki.alpinelinux.org/wiki/Classic_install_or_sys_mode_on_Raspberry_Pi)
+
+# and install/run docker
+
+```
+#@see: https://ownyourbits.com/nextcloudpi/
+docker run -d -p 4443:4443 -p 443:443 -p 80:80 -v ncdata:/data --name nextcloudpi ownyourbits/nextcloudpi-armhf $DOMAIN
+```
