@@ -1,3 +1,11 @@
+# set speed / reduce noize
+
+```
+#12 is good
+#4 is super silent
+eject -x 12 /dev/sr0
+```
+
 # dvd
 
 ## on the command line
