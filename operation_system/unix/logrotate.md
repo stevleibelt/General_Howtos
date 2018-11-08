@@ -9,9 +9,11 @@ compress
 #truncates the original file to zero - good if there is an open filehandler *but* you might loose some messages
 copytruncate
 #creates the log file with this settings
-create 0644 root root
+create 0644 www-data www-data
 #rotate on a daily basis
 daily
+#add suffix like 20181108
+dateformate -%Y%m%d
 #good if there are open filehandlers, compression is done on the next rotation cycle
 delaycompress
 #no error if the logfile is missing
@@ -22,6 +24,8 @@ notifempty
 rotate 7
 #rotate if the file size has reached 100 megabyte
 size 100M
+#change user and group
+su www-data www-data
 
 /path/to/my/log/*.log {
 #all general options are used in here
@@ -33,6 +37,8 @@ DELIM
 
 ```
 logrotate /etc/logrotate.d/my_example -d
+#with verbosity
+logrotate /etc/logrotate.d/my_example -dv
 ```
 
 # link
