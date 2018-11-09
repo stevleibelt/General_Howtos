@@ -26,6 +26,8 @@ client-config-dir /etc/openvpn/ip/ # adds fixed ips per client
 
 # links
 
+* [docker image: kylemanna/openvpn](https://hub.docker.com/r/kylemanna/openvpn/) - 2018-11-09
+* [docker image: linuxserver/openvpn-as](https://hub.docker.com/r/linuxserver/openvpn-as/) - 2018-11-09
 * https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-14-04
 * http://n0where.net/openvpn-raspberry-pi/
 * http://raspberrypihelp.net/tutorials/1-openvpn-server-tutorial
@@ -39,7 +41,7 @@ client-config-dir /etc/openvpn/ip/ # adds fixed ips per client
 * https://wiki.archlinux.org/index.php/Openvpn
 * http://archlinuxarm.org/forum/viewtopic.php?f=30&t=5170
 * http://www.pro-linux.de/artikel/2/1650/2,konfiguration-des-servers.html
-* https://wiki.archlinux.de/title/OpenVPN
+* [arch linux wiki](https://wiki.archlinux.de/title/OpenVPN)
 
 # books
 
