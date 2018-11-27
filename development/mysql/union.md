@@ -7,7 +7,7 @@
 )
 UNION
 (
-    SELECT columnOne AS id, columnTwo as name
+    SELECT column_one AS id, columnTwo AS name
     FROM table_two
 )
 ```
