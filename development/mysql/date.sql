@@ -34,6 +34,8 @@ SELECT DATE_SUB('2012-12-21', INTERVAL 10 DAY);
 
 -- add days
 SELECT DATE_ADD('2012-12-21', INTERVAL 10 DAY);
+--  if you add a negative value, it will get substracted
+SELECT DATE_ADD('2012-12-21', INTERVAL -10 DAY);
 
 -- add NOW() to a DATETIME (YYYY-MM-DD HH:MM:SS)
 INSERT INTO datetime_column = DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%s');
