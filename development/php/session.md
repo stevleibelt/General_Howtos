@@ -19,6 +19,8 @@ ini_set('session.save_handler', 'redis');
 ini_set('session.save_path', 'tcp://127.0.0.1:6379');
 //if you have multiple redis servers
 ini_set('session.save_path', 'tcp://1.2.3.4:6379?timeout=0.5,tcp://1.2.3.5:6379?timeout=0.5');
+//if you want to use a different database
+ini_set('session.save_path', 'tcp://127.0.0.1:6379?database=7');    //sets database to 7
 //optional
 ini_set('session.name', 'my_application_session_id.<environment>');
 
@@ -29,6 +31,7 @@ session_start();
 
 # links
 
+* [Sessions in PHP 7.1 and Redis](https://www.dragonbe.com/2016/12/sessions-in-php-71-and-redis.html) - 2016-12-17
 * http://www.sitepoint.com/saving-php-sessions-in-redis/
 * http://joshtronic.com/2013/06/20/redis-as-a-php-session-handler/
 * https://github.com/TheDeveloper/redis-session-php
