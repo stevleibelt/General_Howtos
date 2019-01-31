@@ -21,19 +21,32 @@
 ```
 #run as a different user
 sudo -u <user name> <command>
+
 #run as a different primary user group
 sudo -g <group name> <command>
+
 #or if you want to go crazy and use ids
 sudo -g #<group id> <command>
+
+#preserve environment
+#good if you have a lot of bash alias you want to keep
+sudo -E <command>
+
+#set the default shell
+sudo -s <shell> <command>
 ```
 
 ## Basic usage of the policy configuration file
 
 ```
+#first, have a look what you are allowed to do
+sudo -l
+
 #the most generic example
 #<user name>    <hostname>=<command>
 #allow any user on any host run any command
 ALL ALL=ALL
+
 #allow "bernd" on any host run any command
 bernd ALL=ALL
 ```
