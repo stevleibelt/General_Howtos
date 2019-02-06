@@ -141,7 +141,9 @@ hdparm -I /dev/sdX
 
 # links
 
-* https://wiki.archlinux.org/index.php/Installing_Arch_Linux_on_ZFS
+* [Installing Arch Linux on ZFS](https://wiki.archlinux.org/index.php/Installing_Arch_Linux_on_ZFS) - 2019-02-05
+* [Arch Linux on ZFS Root With Separate Boot](https://www.shaunpc.com/arch_zfs_root) - 2016-12-29
+* [Arch Linux on an encrypted ZFS root system](https://aaronlauterer.com/blog/2017/04/arch-linux-on-an-encrypted-zfs-root-system/) - 2017-08-18
 * https://wiki.archlinux.org/index.php/ZFS#Swap_volume
 * http://www.jasonrm.net/articles/2013/10/08/arch-linux-zfs-root/
 * https://www.combustible.me/wordpress/2015/10/16/encrypted-zfs-l2arc-and-zil-on-ubuntu-14-04/

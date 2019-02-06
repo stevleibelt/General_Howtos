@@ -12,6 +12,8 @@ zpool status -xv    #run as root
 #remove or replace files that are marked as corrupt.
 zpool scrub <pool name>
 zpool clear <pool name>
+#if needed
+zpool clear -F <pool name>
 ```
 
 # force importing the pool
@@ -36,3 +38,7 @@ zpool import -Fn <pool name>
 zpool clear -F <pool name>
 zpool detach <pool name> <path to the device>
 ```
+
+# links
+
+* [Repairing Damaged Data](https://docs.oracle.com/cd/E19253-01/819-5461/gbbwl/index.html)
