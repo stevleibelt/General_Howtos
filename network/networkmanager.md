@@ -18,3 +18,10 @@ netctl disable <service>
 systemctl enable NetworkManager.service 
 systemctl start NetworkManager.service 
 ```
+
+# links
+
+* [arch linux wiki - NetworkManager](https://wiki.archlinux.org/index.php/NetworkManager)
+* [arch linux wiki - Wireless network configuration](https://wiki.archlinux.org/index.php/Wireless_network_configuration)
+* [arch linux wiki - Network configuration](https://wiki.archlinux.org/index.php/Network_configuration)
+* [How to Configure and Manage Network Connections Using nmcli Tool](https://www.tecmint.com/configure-network-connections-using-nmcli-tool-in-linux/) - 2016-03-03
