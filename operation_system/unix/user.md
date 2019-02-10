@@ -39,6 +39,16 @@ cat /etc/passwd
 getent passwd | grep '/home' | awk -F ':' '{ print $1 }'
 ```
 
+# set password for a user via a shell script
+
+```
+#executed as root
+passwd <username> <<DELIM
+<new password>
+<new password>
+DELIM
+```
+
 # run command as other user
 
 ```
