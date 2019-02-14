@@ -23,7 +23,7 @@ EXPLAIN ANALYZE VERBOSE BUFFERS TIMING <statement>;
 
 ## scan methods
 
-|| method name || short name || description ||
+| method name | short name | description |
 +--------------+-------------+---------------+
 | Sequential Scan | Sec Scan | Full table scan, data fetched from table. |
 | Index Scan | Index Scan | Suitable index found, data fetched from table. |
@@ -32,7 +32,7 @@ EXPLAIN ANALYZE VERBOSE BUFFERS TIMING <statement>;
 
 ## join methods
 
-|| name || description ||
+| name | description |
 +-------+--------------+
 | Nested Loop Sec Scan | Does a full table scan for every row |
 | Nested Loop Index Scan | Uses index for every row |
