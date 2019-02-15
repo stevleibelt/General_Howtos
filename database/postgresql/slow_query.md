@@ -50,6 +50,16 @@ CREATE INDEX CONCURRENTLY ...;
 CREATE INDEX ...;
 ```
 
+# get sizes
+
+```
+-- fetch table size
+SELECT pg_size_pretty (pg_relation_size('<table name>'));
+
+-- fetch index size
+SELECT pg_size_pretty (pg_indexes_size('<table name>'));
+```
+
 # link
 
 * [PostgreSQL Documentation - EXPLAIN](https://www.postgresql.org/docs/current/sql-explain.html) - 2019-02-14
@@ -59,3 +69,5 @@ CREATE INDEX ...;
 * [PostgreSQL Documentation - REINDEX](https://www.postgresql.org/docs/current/sql-reindex.html) - 2019-02-14
 * [Efficient Use of PostgreSQL Indexes](Efficient Use of PostgreSQL Indexes) - 2019-02-08
 * [pgtune](https://pgtune.leopard.in.ua/) - 2019-02-14
+* [How to Get Table, Database, Indexes, Tablespace, and Value Size in PostgreSQL](http://www.postgresqltutorial.com/postgresql-database-indexes-table-size/) - 2019-02-15
+* [Postgres DISK IO very high. What can I do to reduce it immediately?](https://serverfault.com/questions/284799/postgres-disk-io-very-high-what-can-i-do-to-reduce-it-immediately) - 2011-05-xx
