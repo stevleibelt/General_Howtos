@@ -1,3 +1,12 @@
+# example
+
+```
+#run every even minute
+*/2 * * * * <even cronjob>
+#run every odd minute
+1-59/2 * * * * <odd cronjob>
+```
+
 # list crontab
 
 ```
