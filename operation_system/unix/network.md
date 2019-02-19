@@ -36,6 +36,12 @@ whois bazzline.net
 traceroute www.bazzline.net
 ```
 
+# get entries from name service switch library
+
+```
+getent hosts bazzline.net
+```
+
 # check availability
 
 ```
