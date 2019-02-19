@@ -5,6 +5,8 @@
 */2 * * * * <even cronjob>
 #run every odd minute
 1-59/2 * * * * <odd cronjob>
+#run betwee 00:00 to 13:59 and 15:00 to 23:59
+* 0-13,15-23 * * * <cronjob>
 ```
 
 # list crontab
