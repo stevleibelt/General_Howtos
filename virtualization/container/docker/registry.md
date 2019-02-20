@@ -15,6 +15,23 @@ curl -s -I -X HEAD -H 'Accept: application/vnd.docker.distribution.manifest.v2+j
 #this is not really possible
 #check: https://github.com/docker/distribution
 curl -v -X DELETE http://<hostname>:<port>/v2/<repository name>/manifests/<digest>
+##or
+curl -v -X DELETE http://<hostname>:<port>/v2/<repository name>/manifests/sha256:<digest>
+```
+
+# file system kickstart
+
+```
+cd /var/lib/docker/volumes/<volume name>/_data/docker/registry/v2/repositories
+#delete tag
+rm -r <repository name>/_manifests/tags/<tag name>/index/sha256/<digest>
+rm -r <repository name>/_manifests/revisions/<tag name>/index/sha256/<digest>
+
+/bin/registry garbage-collect /etc/docker/registry/config.yml
+#delete image
+rm -r <repository name>
+
+/bin/registry garbage-collect /etc/docker/registry/config.yml
 ```
 
 # clean up registry
@@ -57,6 +74,7 @@ systemctl restart docker
 
 # link
 
+* [Cleanup Your Docker Registry](https://medium.com/@mcvidanagama/cleanup-your-docker-registry-ef0527673e3a) - 2018-06-28
 * [docker registry API v2](https://docs.docker.com/registry/spec/api/#listing-repositories)
 * [create your own docker image hub/registry](https://docs.docker.com/registry/#basic-commands)
 * [Secure a Docker Registry Using SSL (with Let's Encrypt) - 2018-06-04](https://dzone.com/articles/secure-a-docker-registry-using-ssl)
