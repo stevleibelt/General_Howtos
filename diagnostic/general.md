@@ -19,6 +19,7 @@ journalctl | grep -i ' error '
 ```
 lscpu
 lshw
+parted -l   #disk space information
 #graphical
 hardinfo
 ```
