@@ -1,5 +1,25 @@
 # connect to sonicwall howto
 
+## using netextender
+
+```
+#install mandatory dependency
+sudo pacman -S ppp
+sudo chmod u+s /usr/sbin/pppd
+#install netextender
+## either use aur package or from the webside
+#connect to your server
+#sudo netExtender --username='<domain>\<user>' --password='<password>' --domain=LocalDomain "<ip address>[:<port>]" --auto-reconnect --dns-prefer-remote
+route -n | grep ppp0
+#some routes must be there
+```
+
+### link
+
+* [netextender official download](https://www.sonicwall.com/en-us/support/knowledge-base/180105195559153)
+* [netextender aur](https://aur.archlinux.org/packages/netextender/)
+* [support page about ssl vpn](http://help.sonicwall.com/help/sw/eng/published/26.2.0_141009_0947/content/SSL_VPN/SSL_VPN.htm)
+
 ## general
 
 * search for "sonicwall linux ipsec" or "sonicwall linux l2tp" (depending on which you want to go with)
