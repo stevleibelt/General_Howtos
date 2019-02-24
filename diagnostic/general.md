@@ -19,6 +19,7 @@ journalctl | grep -i ' error '
 ```
 lscpu
 lshw
+parted -l   #disk space information
 #graphical
 hardinfo
 ```
@@ -48,5 +49,6 @@ decode --type memory
 
 # links
 
+* [system information viewer - wiki.archlinux.org](https://wiki.archlinux.org/index.php/List_of_applications/Utilities#System_information_viewers) - 2019-02-22
 * https://wiki.archlinux.org/index.php/Stress_Test
 * https://www.cyberciti.biz/faq/linux-ram-info-command/

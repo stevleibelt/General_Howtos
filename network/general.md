@@ -1,3 +1,17 @@
+# arp
+
+```
+arp
+#or with ips
+arp -n
+```
+
+# net stat
+
+```
+netstat -i
+```
+
 # retriev network device
 
 ```
@@ -112,5 +126,7 @@ Common is to have a CNAME for "bazzline.net" which is linking to "www.bazzline.n
 
 # links
 
+* [Network configuration](https://wiki.archlinux.org/index.php/Network_configuration)
+    * [systemd-networkd](https://wiki.archlinux.org/index.php/Systemd-networkd)
 * https://de.wikipedia.org/wiki/Kategorie:Resource_Record
 * https://en.wikipedia.org/wiki/CNAME_record
