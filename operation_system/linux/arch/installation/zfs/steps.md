@@ -1,5 +1,6 @@
 # steps
 
+* [create an arch iso and put it on an usb stick with zfs inside](https://github.com/stevleibelt/arch-linux-live-cd-iso-with-zfs)
 * wifi-menu #connect to the internet
 * pacman-key -r F75D9D76
 * pacman-key --lsign-key F75D9D76
@@ -71,6 +72,7 @@
 
 # links
 
+* [create you own bootable arch iso usb stick with zfs inside](https://github.com/stevleibelt/arch-linux-live-cd-iso-with-zfs)
 * [arch linux installation guide](https://wiki.archlinux.org/index.php/Installation_guide)
 * [arch linux zfs](https://wiki.archlinux.org/index.php/ZFS)
 * [arch linux grub](https://wiki.archlinux.org/index.php/GRUB)
