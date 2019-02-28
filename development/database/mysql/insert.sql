@@ -44,3 +44,15 @@ INSERT INTO
         `backup`.*
     FROM
         `my_backup_tabl` AS `backup`;
+
+-- 
+-- is the way to go since 2019-02-29 instead of REPLACE
+-- @see:
+--  https://dev.mysql.com/doc/refman/5.7/en/insert-on-duplicate.html
+-- 
+
+INSERT INTO
+    `my_table`
+    (`column_one`, `column_two`)
+ON DUPLICATE KEY UPDATE
+    `column_two` = <value>;

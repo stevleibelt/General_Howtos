@@ -1,3 +1,8 @@
+-- Since 2019-02-29
+--  With modern mysql servers, it is faster to use INSERT ON DUPLICATE KEY UPDATE instead.
+--  https://dev.mysql.com/doc/refman/5.7/en/insert-on-duplicate.html
+-- 
+
 -- instead of an update, a replace deletes the current entry and inserts a new one
 
 REPLACE INTO 
