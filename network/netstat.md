@@ -11,6 +11,8 @@ netstat -nat | grep <ip address>
 netstat -tulpn
 #or if you are searching for a specific process like stuff from samba
 netstat -tulpn | grep 'samba\|smbd\|nmbd\|winbind'
+#or
+netstat -lntu
 ```
 
 # list used gateways
