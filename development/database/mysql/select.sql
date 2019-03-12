@@ -42,3 +42,18 @@ SELECT
 FROM
     <my table>
     USE INDEX(<my index>);
+
+-- 
+-- Detect duplicated entries
+-- 
+SELECT 
+    *
+FROM 
+    `my_table`
+GROUP BY 
+    `column_one`
+HAVING 
+    COUNT(*) > 1 
+-- this is optional
+ORDER BY 
+    `column_one` DESC;
