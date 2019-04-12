@@ -31,11 +31,11 @@ SELECT
   LOCATE('myVar":[', `s`.`json`) AS `position_start`,
   LOCATE(']', `s`.`json`, LOCATE('myVar":[', `s`.`json`)) AS `position_stop`,
   (LOCATE(']', `s`.`json`, LOCATE('myVar":[', `s`.`json`)) -  LOCATE('myVar":[', `s`.`json`) + 1 ) AS `string_length`,
-  substring(`s`.`json`, LOCATE('myVar":[', `s`.`json`), (LOCATE(']', `s`.`json`, LOCATE('myVar":[', `s`.`json`)) -  LOCATE('myVar":[', `s`.`json`) + 1)) AS `parameters`
+  SUBSTRING(`s`.`json`, LOCATE('myVar":[', `s`.`json`), (LOCATE(']', `s`.`json`, LOCATE('myVar":[', `s`.`json`)) -  LOCATE('myVar":[', `s`.`json`) + 1)) AS `parameters`
 FROM
   `my_table_to_search_in` AS `s` 
 WHERE 
-  substring(`s`.`json`, LOCATE('myVar":[', `s`.`json`), (LOCATE(']', `s`.`json`, LOCATE('myVar":[', `s`.`json`)) -  LOCATE('myVar":[', `s`.`json`) + 1)) LIKE '%parameter value to search for%';
+  SUBSTRING(`s`.`json`, LOCATE('myVar":[', `s`.`json`), (LOCATE(']', `s`.`json`, LOCATE('myVar":[', `s`.`json`)) -  LOCATE('myVar":[', `s`.`json`) + 1)) LIKE '%parameter value to search for%';
 
 -- 
 -- group by substring
@@ -61,3 +61,12 @@ SELECT
     SUBSTRING_INDEX(`email_address`, '@', 1)
 FROM
     `my_table`;
+
+-- 
+-- sub string until needle is found for the first time
+--
+
+SELECT
+    SUBSTRING_INDEX('there is no foo without a bar!', ' without a bar!', 1);
+-- will return
+--  there is no foo
