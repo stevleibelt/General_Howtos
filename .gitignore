@@ -1,4 +1,5 @@
 .gitignore
+.idea
 # -- local directories
 work
 local
