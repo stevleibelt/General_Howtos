@@ -6,6 +6,8 @@
 git clone https://aur.archlinux.org/<your package>
 cd <your package>
 makepkg -sri
+#for archlinuxarm
+makepkg -Acs    #A stands for ignore architecture
 pacman -U *.tar.xz
 ```
 
