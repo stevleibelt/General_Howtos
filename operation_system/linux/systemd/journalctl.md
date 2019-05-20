@@ -92,7 +92,7 @@ journalctl --unit=zfs
 journalctl -b | grep -i 'fail\|erro\|warn'
 ```
 
-# clean journal
+# clean journal (delete/remove)
 
 ```
 #clear older 14 days
