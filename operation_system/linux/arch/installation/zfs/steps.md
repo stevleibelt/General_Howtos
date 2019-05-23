@@ -151,3 +151,4 @@
 * [arch linux grub](https://wiki.archlinux.org/index.php/GRUB)
 * [arch zfs](https://github.com/archzfs/archzfs/wiki)
 * [Archlinux install in less than 10 minutes on a UEFI system](https://www.youtube.com/watch?v=DfC5hgdtbWY) - 2017-02-04
+* [arch linux on zfs - part 2](https://ramsdenj.com/2016/06/23/arch-linux-on-zfs-part-2-installation.html) - 2016-06-23
