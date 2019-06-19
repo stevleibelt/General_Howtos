@@ -130,7 +130,12 @@
     * w
     * Y
 * exit
-* cp /etc/zfs/zpool.cache /mnt/etc/zfs/zpool.cache
+* zpool set cachefile=/etc/zfs/zpool.cache \<pool name>
+* systemctl enable zfs.target
+* systemctl start zfs.target
+* systemctl enable zfs-import-cache
+* systemctl enable zfs-mount
+* systemctl enable zfs-import.target
 * umount /mnt/boot
 * zfs umount -a
 * zpool export \<pool name>
