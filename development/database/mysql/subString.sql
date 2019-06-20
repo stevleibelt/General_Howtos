@@ -25,6 +25,9 @@ SELECT * FROM `my_table` WHERE SUBSTRING(`my_column`, -1) = '.';
 --
 -- you have a table "my_table_to_search_in" with a text column called "json" where you store a json encoded object/array of parameters
 -- you are searching for the key "myVar" that has the parameter "parameter value to search for" inside
+-- 
+-- LOCATE: https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_locate
+-- SUBSTRING: https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_substr
 --
 
 SELECT
