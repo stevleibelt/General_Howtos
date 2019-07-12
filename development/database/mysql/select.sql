@@ -44,7 +44,26 @@ FROM
     USE INDEX(<my index>);
 
 -- 
+-- Detect duplicate entries by multiple columns
+-- 
+WSELECT
+    mt1.`column_one`,
+    mt1.`column_two`,
+    mt1.`column_three`,
+    mt1.`column_four`
+FROM
+    `my_table` AS mt1
+    JOIN `my_table` AS mt2
+        ON (
+            mt1.`column_one` != mt2.`column_one`
+            AND mt1.`column_two` = mt2.`column_two`
+            AND mt1.`column_three`= mt2.`column_three`
+            AND mt1.`column_four` = mt2.`column_four`
+        );
+
+-- 
 -- Detect duplicated entries
+-- Not working good with multiple columns
 -- 
 SELECT 
     *

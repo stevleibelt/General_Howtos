@@ -1,4 +1,18 @@
+-- my way
+DELETE
+    mt1
+FROM
+    `my_table` AS mt1
+    JOIN `my_table` AS mt2
+        ON (
+            mt1.`column_one` != mt2.`column_one`
+            AND mt1.`column_two` = mt2.`column_two`
+            AND mt1.`column_three`= mt2.`column_three`
+            AND mt1.`column_four` = mt2.`column_four`
+        );
+
 -- @link: https://stackoverflow.com/a/2630509
+-- boy is this complicated
 DELETE FROM 
     `my_table` 
 WHERE 
