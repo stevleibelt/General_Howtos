@@ -22,7 +22,10 @@ SELECT * FROM GLOBAL_VARIABLES WHERE `variable_name` LIKE 'innodb%';
 # from the shell
 
 ```
+#SHOW PROCESSLIST
 mysqladmin --user=<user name> --password=<password> processlist
+#SHOW FULL PROCESSLIST
+mysqladmin --user=<user name> --password=<password> processlist --verbose
 ```
 
 # links
