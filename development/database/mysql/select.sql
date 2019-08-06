@@ -46,7 +46,7 @@ FROM
 -- 
 -- Detect duplicate entries by multiple columns
 -- 
-WSELECT
+SELECT
     mt1.`column_one`,
     mt1.`column_two`,
     mt1.`column_three`,
@@ -76,3 +76,16 @@ HAVING
 -- this is optional
 ORDER BY 
     `column_one` DESC;
+
+-- 
+-- Sum things up.
+-- Create "left" to do
+-- @see: https://dev.mysql.com/doc/refman/5.7/en/group-by-functions.html#function_sum
+-- 
+
+SELECT
+    COUNT(*) AS 'total',
+    SUM(`column_one` = 1 OR `column_two` = 1) AS `done`
+    COUNT(*) - SUM(`column_one` = 1 OR `column_two` = 1) AS `left_to_do`
+FROM
+    `my_table`
