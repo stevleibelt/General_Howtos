@@ -15,3 +15,13 @@
 ## [hovercraft](https://github.com/regebro/hovercraft)
 
 * python based
+
+## more
+
+* mpd
+* [tpp](https://synflood.at/tpp.html)
+* [sent](https://tools.suckless.org/sent/)
+
+# links
+
+* https://opensource.com/article/19/8/command-line-presentation-tools - 2019-08-06
