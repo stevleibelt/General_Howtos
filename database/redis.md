@@ -20,9 +20,9 @@ CONFIG GET databases
 ```
 #you get the index from CONFIG GET databases
 #there is a hidden index 0
-select <index>
+SELECT <index>
 #get the size
-dbsize
+DBSIZE
 ```
 
 ## list keys per database
