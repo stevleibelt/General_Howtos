@@ -3,10 +3,10 @@
 ## general 
 
 * [create an arch iso and put it on an usb stick with zfs inside](https://github.com/stevleibelt/arch-linux-live-cd-iso-with-zfs)
+* loadkeys /usr/share/kbd/keymaps/i386/qwertz/de.map.gz
 * wifi-menu #connect to the internet
 * pacman-key -r F75D9D76
 * pacman-key --lsign-key F75D9D76
-* loadkeys /usr/share/kbd/keymaps/i386/qwertz/de.map.gz
 * timedatectl set-ntp true
 * modprobe zfs
 * if bios
