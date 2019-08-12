@@ -31,20 +31,6 @@
     * w
     * Y
     * mkfs.ext2 /dev/sdX2
-    * cryptsetup --cipher aes-xts-plain64 --key-size 512 --hash sha512 --iter-time 5000 --use-random --verify-passphrase luksFormat /dev/sdX3 --debug
-    * cryptsetup luksOpen /dev/sdX3 \<luks pool name\>
-    * find uuid of the crypto disk
-    * zpool create \<pool name> /dev/disk/by-uuid/\<uuid\>
-```
-# fetch dm-X id
-ls -halt /dev/sdX3
-# find uuid by seeing softlink endpoint
-ls -halt /dev/disk/by-uuid/
-# verifiy
-lsblk -fs
-# or
-blkid
-```
 * if uefi
     * check if uefi exists
         * ls /sys/firmware/efi
@@ -71,8 +57,37 @@ blkid
     * verify all is fine
         * gdisk -l /dev/sdX
     * mkfs.vfat /dev/sdX1
-    * zpool create \<pool name> /dev/sdX2
+* if bios
+    * cryptsetup --cipher aes-xts-plain64 --key-size 512 --hash sha512 --iter-time 5000 --use-random --verify-passphrase luksFormat /dev/sdX3 --debug
+    * cryptsetup luksOpen /dev/sdX3 \<luks pool name\>
+```
+# fetch dm-X id
+ls -halt /dev/sdX3
+# find uuid by seeing softlink endpoint
+ls -halt /dev/disk/by-uuid/
+# verifiy
+lsblk -fs
+```
+# or
+blkid
+```
+* if uefi
+    * cryptsetup --cipher aes-xts-plain64 --key-size 512 --hash sha512 --iter-time 5000 --use-random --verify-passphrase luksFormat /dev/sdX2 --debug
+    * cryptsetup luksOpen /dev/sdX2 \<luks pool name\>
+* find uuid of the crypto disk
+* zpool create \<pool name> /dev/disk/by-uuid/\<uuid\>
+```
+# fetch dm-X id
+ls -halt /dev/sdX2
+# find uuid by seeing softlink endpoint
+ls -halt /dev/disk/by-uuid/
+# verifiy
+lsblk -fs
+# or
+blkid
+```
 * zfs set mountpoint=/ \<pool name>
+* zpool export \<pool name>
 * zpool import -R /mnt \<pool name>
 * mkdir /mnt/boot
 * if bios
@@ -96,7 +111,7 @@ blkid
 * pacman-key -r F75D9D76
 * pacman-key --lsign-key F75D9D76
 * pacman -S archzfs-linux #or >>archzfs-linux-lts<< if needed
-* pacman -S vim bash-completion nmon htop grub git sudo
+* pacman -S vim bash-completion nmon htop git sudo gdisk
 * useradd -m -g users -G wheel -s /bin/bash \<user name>
 * passwd \<user name>
 * visudo # comment out %wheel
@@ -142,16 +157,15 @@ blkid
     * enter
     * w
     * Y
-* exit
 * zpool set cachefile=/etc/zfs/zpool.cache \<pool name>
 * systemctl enable zfs.target
-* systemctl start zfs.target
 * systemctl enable zfs-import-cache
 * systemctl enable zfs-mount
 * systemctl enable zfs-import.target
 * umount /mnt/boot
 * zfs umount -a
 * zpool export \<pool name>
+* reboot
 
 # misc
 
