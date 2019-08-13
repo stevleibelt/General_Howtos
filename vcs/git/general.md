@@ -15,7 +15,11 @@ git log
 # remove local changes
 
 ```
+#list possible cleaned objects
+git clean -n
 #will remove untracked files (-f) and directories (-d)
+#   -x: remove also ignored files
+#   -X: remove only ignored files
 git clean -f -d
 #will not remove untracked files
 git reset --hard HEAD
