@@ -11,6 +11,19 @@ FROM
             AND mt1.`column_four` = mt2.`column_four`
         );
 
+-- or
+--  delete duplicate entries based on column_one.
+--  keeps the one with the highest id
+-- @see: http://www.mysqltutorial.org/mysql-delete-duplicate-rows/
+DELETE
+    t1
+FROM
+    `my_table` AS t1
+    INNER JOIN `my_table` AS t2
+WHERE
+    t1.id < t2.id
+    AND t1.column_one = t2.column_one;
+
 -- @link: https://stackoverflow.com/a/2630509
 -- boy is this complicated
 DELETE FROM 
