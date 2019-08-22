@@ -182,6 +182,20 @@ git push --set-upstream origin <new name>
 git push origin :<old name>
 ```
 
+## remove a pushed and merged branch
+
+[source](https://stackoverflow.com/a/50150652)
+
+```
+#this is dangerous
+git checkout <branch>   #e.g. master
+git log #find the commit id before you've merged the branch
+git reset --hard <commit-id-before-the-merge>
+git push -f origin <remote-branch>
+#maybe needed
+git push --f origin HEAD:<remove-branch>
+```
+
 # links
 
 * [rebase, reset and revert.](https://opensource.com/article/18/6/git-reset-revert-rebase-commands)
