@@ -127,6 +127,8 @@ git fetch origin
 git merge <tag name>
 #if you run into issues and simple do not want to solve the conflict
 git merge --abort
+#dry run
+
 ```
 
 ### resolve a conflict
@@ -177,8 +179,11 @@ git branch -m <new name>
 ### rename local and remote repository
 
 ```
+#change name
 git branch -m <old name> <new name>
+#create new remote repository with new name
 git push --set-upstream origin <new name>
+#delete old remote repository
 git push origin :<old name>
 ```
 
