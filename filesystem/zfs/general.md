@@ -41,6 +41,8 @@ zpool create -o ashift=12 <pool name> mirror <first device> [...]
 
 ```
 zfs create <pool name>/<data set name>
+#with different mountpoint
+zfs create -o mountpoint=<mount point> <pool name>/<data set name>
 ```
  
 # delete data set
