@@ -97,10 +97,14 @@ zfs set atime=on <pool name>[/<data set name>]
 zfs set relatime=on <pool name>[/<data set name>]
 ```
 
-# list space per data set
+# list data sets
 
 ```
+#list with space
 zfs list -o space
+
+#list by only one zpool and only name (to easy up piping this result into a command)
+zfs list -r <pool name> -o name
 ```
 
 * http://docs.oracle.com/cd/E19253-01/819-5461/gavwg/index.html
