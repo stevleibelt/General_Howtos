@@ -2,6 +2,10 @@
 -- set a scalar value
 SET @MY_VARIABLE = 'foo';
 
+-- store select result in a variable
+
+SELECT `id` INTO @MY_VARIABLE FROM `table_name` WHERE `my_column` = 'foo';
+
 -- set a result
 SET @MY_VARIABLE = (SELECT 
     GROUP_CONCAT(DISTINCT `t`.`id`) 
