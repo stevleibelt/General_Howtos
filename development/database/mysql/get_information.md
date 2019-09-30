@@ -113,6 +113,18 @@ ORDER BY
     data_free DESC;
 ```
 
+# Show long running queries
+
+```mysql
+SELECT
+    *
+FROM
+    INFORMATION_SCHEMA.PROCESSLIST
+WHERE
+    TIME > ?    -- enter your time in seconds
+    AND INFO IS NOT NULL;
+```
+
 # link
 
 * http://aadant.com/blog/2014/02/04/how-to-calculate-a-specific-innodb-index-size/
