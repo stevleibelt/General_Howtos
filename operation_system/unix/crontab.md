@@ -76,6 +76,15 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 ## crontab entry
 
 ```
+#day_of_week
+#   0 - Sunday
+#   1 - Monday
+#   2 - Tuesday
+#   3 - Wednesday
+#   4 - Thursday
+#   5 - Friday
+#   6 - Saturday
+#   7 - Sunday
 #<minute>   <hour>  <day_of_month>  <month>     <day_of_week>   <command>
 08           15      *               *           *               /home/<user>/<path/to/my_script.sh>
 ```
