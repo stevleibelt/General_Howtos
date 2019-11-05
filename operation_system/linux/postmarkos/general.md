@@ -13,3 +13,6 @@
 # link
 
 * [install postmarkos on lg hammerhead (google nexus 5)](https://wiki.postmarketos.org/wiki/Google_Nexus_5_(lg-hammerhead)#Installation)
+* [official page](https://www.postmarketos.org)
+* [official postmark installation guide](https://wiki.postmarketos.org/wiki/Installation_guide)
+* [pmbootstrap arch linux wiki page](https://aur.archlinux.org/packages/pmbootstrap/)
