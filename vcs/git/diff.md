@@ -56,6 +56,14 @@ git whatchanged --since="2 weeks ago"
 git diff [git hash] "master~3"
 ```
 
+# create a patch with newly added files
+
+```
+#you have to add all files you want to have in the patch
+#git add <path to your files>
+git diff --staged > your.patch
+```
+
 # links
 
 * http://stackoverflow.com/questions/3211809/git-diff-between-given-two-tags
