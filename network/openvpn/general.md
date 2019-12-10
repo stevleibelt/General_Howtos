@@ -44,6 +44,7 @@ client-config-dir /etc/openvpn/ip/ # adds fixed ips per client
 * http://archlinuxarm.org/forum/viewtopic.php?f=30&t=5170
 * http://www.pro-linux.de/artikel/2/1650/2,konfiguration-des-servers.html
 * [arch linux wiki](https://wiki.archlinux.de/title/OpenVPN)
+* [angristan/openvpn-install](https://github.com/Angristan/OpenVPN-install)
 
 # books
 
