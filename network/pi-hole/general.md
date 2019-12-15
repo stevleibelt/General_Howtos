@@ -67,6 +67,7 @@ cd pi-hole-server
 makepkg -sri
 sudo pacman -U *.tar.xz
 cd ../
+#if you want to have webserver to
 git clone https://aur.archlinux.org/pi-hole-server.git
 cd pi-hole-server
 makepkg -sri
