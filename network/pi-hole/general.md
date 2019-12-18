@@ -125,3 +125,4 @@ Should they not both be running:
 * [Install Pi hole on arch](https://blog.jenningsga.com/install-pi-hole-on-arch/) - 2017-02-19
 * [Official Pi-Hole documentation](https://docs.pi-hole.net/)
 * [Official Pi-Hole Configuration](https://docs.pi-hole.net/ftldns/configfile/)
+* [Raspberry Pi 3 with Pi-Hole, OpenVpn and DNSCrypt](https://itchy.nl/raspberry-pi-3-with-openvpn-pihole-dnscrypt) - 2018-04-07

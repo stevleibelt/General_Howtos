@@ -8,3 +8,9 @@
     * [ipfire on an raspberry pi](http://wiki.ipfire.org/en/hardware/arm/rpi/one-b)
 * [endian](http://www.endian.com/)
 * [opensense](http://opnsense.org/)
+
+# link
+
+* [Linux firewalls - What you need to know about iptables and firewalld](https://opensource.com/article/18/9/linux-iptables-firewalld) - 2018-09-18
+* [16 iptables tips and tricks for sysadmins](https://opensource.com/article/18/10/iptables-tips-and-tricks)
+* [Make linux stronger with firewalls](https://opensource.com/article/19/7/make-linux-stronger-firewalls) - 2019-07-02
