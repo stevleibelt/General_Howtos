@@ -7,13 +7,14 @@ usermod -s /usr/sbin/nologin <user name>
 # add user
 
 ```
+## with system defaults
 useradd <user name>
-```
 
-# add user with creating home directory (-m), initial group (-g) and additional groups
-
-```
+## with creating home directory (-m), initial group (-g) and additional groups
 useradd -m -g <group one> -G <group two> -s /bin/bash <user name>
+
+## as a system user (no home directory no option to log in)
+useradd -r -s /usr/bin/nologin <user_name>
 ```
 
 # add groups
