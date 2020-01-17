@@ -3,6 +3,9 @@
 ```
 git config -e           #project based
 git config -e --global  #global ;-)
+
+#configure a proxy
+git config --global http.proxy [http://][proxyuser@]proxy.server[:port]
 ```
 
 # log
