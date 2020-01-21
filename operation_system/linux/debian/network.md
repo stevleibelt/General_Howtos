@@ -36,9 +36,40 @@ iface eth0 inet static
 echo "supersede domain-name-servers <name server ip one>, <name server ip two>;" >> /etc/dhcp/dhclient.conf
 ```
 
+# setup proxy
+
+Add and adapt the following lines to `/etc/profile.d/proxy.sh`.
+
+```
+#system wide defaults
+export http_proxy="http://10.10.1.10:8080/"
+export https_proxy="http://10.10.1.10:8080/"
+export ftp_proxy="http://10.10.1.10:8080/"
+export no_proxy="127.0.0.1,localhost"
+
+#special handling for curl
+export HTTP_PROXY="http://10.10.1.10:8080/"
+export HTTPS_PROXY="http://10.10.1.10:8080/"
+export FTP_PROXY="http://10.10.1.10:8080/"
+export NO_PROXY="127.0.0.1,localhost"
+```
+
+```
+#make it executable
+sudo chmod +x /etc/profile.d/proxy.sh
+```
+
+```
+#check that all is working from your current session
+source /etc/profile.d/proxy.sh
+
+env | grep -i proxy
+```
+
 # links
 
 * [static ips in debian](http://www.techiecorner.com/486/how-to-setup-static-ip-in-debian/)
 * [static ip address tutorial](http://www.cyberciti.biz/faq/linux-configure-a-static-ip-address-tutorial/)
 * [network configuration](https://wiki.debian.org/NetworkConfiguration)
 * [static ip and network configuration on debian linux ](https://www.howtoforge.com/debian-static-ip-address)
+* [How To Set System Wide Proxy on Ubuntu 18.04 / Debian 10](https://computingforgeeks.com/how-to-set-system-wide-proxy-on-ubuntu-debian/) - 2019-07-19
