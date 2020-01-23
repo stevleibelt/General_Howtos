@@ -2,10 +2,11 @@
 
 ```
 Win+S
-enter "Control Panel" and open it
-select "Programs"
-select "Turn Windows features on or off"
-
+enter "Settings" and open it
+Select "Apps"
+Select "Optional features"
+Select "Add a feature"
+Install each feature prefixed with RSAT
 ```
 
 # Links
