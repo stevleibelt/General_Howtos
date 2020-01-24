@@ -1,10 +1,10 @@
-# versions
+# Versions
 
 * N - for europe
 * KN - for south korea
 * SLP - only one language is installed
 
-## what is not inside the N or KN edition?
+## What is not inside the N or KN edition?
 
 As you well see, the N or KN version simple comes with less spy-/bloatware.
 You will use an free as in freedom [webbrowser](https://www.mozilla.org/firefox) or [video player](https://www.vlc.org) anyway.
@@ -30,11 +30,15 @@ You will use an free as in freedom [webbrowser](https://www.mozilla.org/firefox)
 slmgr /dlv
 ```
 
-# clean up tools
+# Clean Up Tools
 
 * [performance maintainer](http://www.pcstarters.net/performance-maintainer)
 
-# links 
+# Keyboard Shortcuts
+
+* CTRL+SHIFT+ESC - Opens Task Manager
+
+# Links 
 
 * http://www.heise.de/newsticker/meldung/Windows-10-via-MSDN-und-Media-Creation-Tool-verfuegbar-2764593.html
 * http://winsupersite.com/windows-10/what-are-windows-10-n-and-kn-editions
