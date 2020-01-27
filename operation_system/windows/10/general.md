@@ -38,6 +38,23 @@ slmgr /dlv
 
 * CTRL+SHIFT+ESC - Opens Task Manager
 
+# Usefull tools
+
+## Things you could start with Win+R+
+
+| File to start | Description
+| --- | --- |
+| Win+R+services.msc | windows service manager |
+| Win+R+msconfig.exe | old configuration dialog for sytem boot up |
+| rstrui.exe | restore manager |
+| regedt32.exe | registry manager |
+| resmon.exe | resource monitor (advanced task manager) |
+| perfmon.exe | performence monitor |
+| appwiz.cpl | software center (to remove software) |
+| eventvwr.exe | event viewer, kind of syslog for windows |
+| msinfo32.exe | system information for hardware, drivers etc. |
+| compmgmt.msc | computer management (includes task scheduler, event viewer, performance etc. |
+
 # Links 
 
 * http://www.heise.de/newsticker/meldung/Windows-10-via-MSDN-und-Media-Creation-Tool-verfuegbar-2764593.html
