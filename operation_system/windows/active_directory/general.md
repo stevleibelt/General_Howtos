@@ -30,11 +30,40 @@
 * CN = Common Name
 * OU = Organizational Unit
 * DC = Domain Component (can be multiple)
+* SAM = Security Account Manager
+* SID = Security IDentifyer
 
 ## Example
 
 Give is a printer with the name "cobraLazer" in the unit "IT" for the domain "compu.global.hyper.meganet.
 The fully qualified name is "CN=cobraLazer,OU=IT,DC=compu,DC=global,DC=hyper,DC=meganet".
+
+# PowerShell
+
+## Get all properties for a user
+
+```
+#if you know the samUserName
+Get-ADUser -Identity <samUserName> -Properties *
+
+#if you have to search for name
+Get-ADUser -Filter "Name -like 'bo*'" -Properties *
+```
+
+## Get all users in the group admin
+
+```
+Get-ADGroupMember -Identity admin | SELECT SamAccountName, Name, ObjectClass
+```
+
+## Get current active domain controller
+
+```
+#by using pure powershell
+([ADSI]”LDAP://RootDSE”).dnshostname
+#by using the ActiveDirectory powershell module
+Get-ADDomainController -Discover
+```
 
 
 # Links

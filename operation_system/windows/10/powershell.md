@@ -26,9 +26,12 @@
 | Push-Location | pushd | pushd | |
 | Remove-Item | rm | rm, rmdir | |
 | Rename-Item | mv | mv | |
+| Restart-Service | | | Restart-Service -InputObject $(Get-Service -Computer <computer name> -Name <service name>) |
 | Select-String | sls | find, grep | |
 | Set-Location | cd | cd | |
 | Set-Variable | set | export, env, set, setenv | |
+| Start-Service | | | Start-Service -InputObject $(Get-Service -Computer <computer name> -Name <service name>) |
+| Stop-Service | | | Stop-Service -InputObject $(Get-Service -Computer <computer name> -Name <service name>) |
 | Stop-Process | kill | kill | |
 | Tee-Object | tee | tee | |
 | Test-Connection | ping | ping | |
@@ -127,12 +130,50 @@ $array.remove("foo")
 $array.removerange(1,1)
 ```
 
-## Paths
+## Filesystem
 
 ```
 #check if path is a root path or not
 #does not check if path exists!
 [System.IO.Path]::IsPathRooted($path)
+```
+
+```
+#create temporary file name
+$temporaryFilePath = [System.IO.Path]::GetTempFileName()
+
+#create time
+(Get-Item c:file.foo).creationtime
+#modification time
+(Get-Item c:file.foo).lastwritetime
+#size
+"{0:N2}" -f ((Get-Item c:file.foo).length/1mb) + " MB"
+#extension
+(Get-Item c:file.foo) | SELECT extension
+#basedir
+c:file.foo | SELECT directory
+#security permissions
+(Get-Item c:file.foo).getaccesscontrol.invoke() | SELECT owner -ExpandProperty access
+
+#cat foo >> bar
+add-content "bar" (Get-Content "foo")
+
+#list empty files
+Get-Childitem -Recurse | foreach-object {
+    if(!$_.PSIsContainer -and $_.Length -eq 0) { #!$_.PSIsContainer = is not a directory
+        Write-Host ("File {0} has a size of {1}" -f $_.FullName, $_.Length)
+    }
+}
+```
+
+## Network
+
+```
+#get ip by name
+[System.Net.DNS]::GetHostAddresses("bazzline.net")
+
+#get name by ip
+[System.Net.DNS]::GetHostByAddress("127.0.0.1")
 ```
 
 # Links
