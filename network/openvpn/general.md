@@ -17,12 +17,26 @@ openvpn --config /etc/openvpn/server.conf --tls-server --daemon
 
 # simple server config (for point to multipoint modus)
 
+```
 port 1194
 proto udp
 dev tun0
 mode server
 server 10.8.0.0 255.255.255.0
 client-config-dir /etc/openvpn/ip/ # adds fixed ips per client
+```
+
+# Examples
+
+## Connect to an openvpn server via HTTP Proxy
+
+```
+#server
+protp tcp
+
+#client
+http-proxy <ip address> <port>
+```
 
 # links
 
