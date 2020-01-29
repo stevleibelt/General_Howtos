@@ -15,6 +15,7 @@
 | msinfo32.exe | system information for hardware, drivers etc. |
 | compmgmt.msc | computer management (includes task scheduler, event viewer, performance etc. |
 | systeminfo.exe | command line system information |
+| gpedit.msc | dialog to edit group policys |
 
 # List of useful software
 
