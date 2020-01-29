@@ -9,28 +9,31 @@
 
 | Power Shell Command | Power Shell Alias | Unix Command | Comment |
 | --- | --- | --- | --- |
-| Get-Children | ls | ls | |
-| Test-Connection | ping | ping | |
-| Get-Content | cat | cat | |
-| Get-Command | gcm | type, which | |
-| Get-Help | help, man | apropos, man | |
 | Clear-Host | clear | clear | |
 | Copy-Item | cp | cp | |
-| Move-Item | mv | mv | |
-| Remove-Item | rm | rm, rmdir | |
-| Rename-Item | mv | mv | |
+| Get-Children | ls | ls | |
+| Get-Content | cat | cat | |
+| Get-Command | gcm | type, which | |
+| Get-Service | | systemctl list-units | |
+| Get-Date | | |
+| Get-Help | help, man | apropos, man | |
 | Get-Location | pwd | pwd | |
+| Get-Process | ps | ps | |
+| Invoke-WebRequest | iwr | wget, curl | |
+| Measure-Performance | | | Measure-Performance {#your command call here} |
+| Move-Item | mv | mv | |
 | Pop-Location | popd | popd | |
 | Push-Location | pushd | pushd | |
-| Set-Location | cd | cd | |
-| Tee-Object | tee | tee | |
-| Write-Output | echo | echo | use it if you want to pipe it |
-| Write-Host | | | use it if you want to output something directly |
-| Get-Process | ps | ps | |
-| Stop-Process | kill | kill | |
+| Remove-Item | rm | rm, rmdir | |
+| Rename-Item | mv | mv | |
 | Select-String | sls | find, grep | |
+| Set-Location | cd | cd | |
 | Set-Variable | set | export, env, set, setenv | |
-| Invoke-WebRequest | iwr | wget, curl | |
+| Stop-Process | kill | kill | |
+| Tee-Object | tee | tee | |
+| Test-Connection | ping | ping | |
+| Write-Host | | | use it if you want to output directly to the console |
+| Write-Output | echo | echo | use it if you want to pipe it |
 
 ## Set execution policy
 
@@ -58,6 +61,84 @@ my_function valueOne valueTwo
 my_function -ParameterOne valueOne -ParameterTwo valueTwo
 ```
 
+# Modules
+
+* Only the administrator can install a module
+* Online repository is available at [powershellgallery.com](https://www.powershellgallery.com/)
+
+## How to install
+
+```
+#use online repository
+Install-Module -Name PSScriptAnalyzer
+
+#use local file
+Import-Module path\to\the\PSScriptAnalyzer.psd1
+
+#list functions per module
+Get-Command -Module PSScriptAnalyzer
+```
+
+## Useful modules
+
+* [PSScriptAnalyzer](https://www.powershellgallery.com/packages/PSScriptAnalyzer/)
+* [PSWindowsUpdate](https://www.powershellgallery.com/packages/PSWindowsUpdate/)
+* [PSLogging](https://www.powershellgallery.com/packages/PSLogging/)
+* [Pester (BDD Test framework)](https://www.powershellgallery.com/packages/Pester/)
+* [VMware.Vim](https://www.powershellgallery.com/packages/VMware.Vim/)
+
+# Usage Examples
+
+## Output
+
+
+```
+#if you experience the "..." (three dots) when dumping an object (e.g. Get-Acl)
+#  pipe the output through SELECT and expand the property you want to display
+<your command> | SELECT -expandproperty <property name>
+```
+
+## Variable type detection
+
+```
+#prints "System.String" etc.
+<variable>.GetType().FullName
+```
+
+## Strings
+
+```
+"My String".toupper()
+"My String".tolower()
+```
+
+## Arrays
+
+```
+#create
+$array = New-Object System.Collections.ArrayList
+
+#add one
+$array.add("foo")
+
+#remove one by name
+$array.remove("foo")
+#remove by index number and amount
+$array.removerange(1,1)
+```
+
+## Paths
+
+```
+#check if path is a root path or not
+#does not check if path exists!
+[System.IO.Path]::IsPathRooted($path)
+```
+
 # Links
 
 * [PowerShell - wikipedia.org](https://en.wikipedia.org/wiki/PowerShell) - 2020-01-27
+* [PowerShll Examples - technibee.com](https://techibee.com/category/powershell) - 2020-01-29
+* [Scripting blog - microsoft.com](https://devblogs.microsoft.com/scripting/feed/) - 2020-01-29
+* [Powershellbrows.com](https://www.powershellbros.com/) - 2020-01-29
+* [ActiveDirectory Module - microsoft.com](https://docs.microsoft.com/en-us/powershell/module/addsadministration/?view=win10-ps) - 2020-01-29
