@@ -7,29 +7,30 @@
 
 # Usefull commands
 
-| Power Shell Command | Power Shell Alias | Unix Command |
-| --- | --- | --- |
-| Get-Children | ls | ls |
-| Test-Connection | ping | ping |
-| Get-Content | cat | cat |
-| Get-Command | gcm | type, which |
-| Get-Help | help, man | apropos, man |
-| Clear-Host | clear | clear |
-| Copy-Item | cp | cp |
-| Move-Item | mv | mv |
-| Remove-Item | rm | rm, rmdir |
-| Rename-Item | mv | mv |
-| Get-Location | pwd | pwd |
-| Pop-Location | popd | popd |
-| Push-Location | pushd | pushd |
-| Set-Location | cd | cd |
-| Tee-Object | tee | tee |
-| Write-Output | echo | echo |
-| Get-Process | ps | ps |
-| Stop-Process | kill | kill |
-| Select-String | sls | find, grep |
-| Set-Variable | set | export, env, set, setenv |
-| Invoke-WebRequest | iwr | wget, curl |
+| Power Shell Command | Power Shell Alias | Unix Command | Comment |
+| --- | --- | --- | --- |
+| Get-Children | ls | ls | |
+| Test-Connection | ping | ping | |
+| Get-Content | cat | cat | |
+| Get-Command | gcm | type, which | |
+| Get-Help | help, man | apropos, man | |
+| Clear-Host | clear | clear | |
+| Copy-Item | cp | cp | |
+| Move-Item | mv | mv | |
+| Remove-Item | rm | rm, rmdir | |
+| Rename-Item | mv | mv | |
+| Get-Location | pwd | pwd | |
+| Pop-Location | popd | popd | |
+| Push-Location | pushd | pushd | |
+| Set-Location | cd | cd | |
+| Tee-Object | tee | tee | |
+| Write-Output | echo | echo | use it if you want to pipe it |
+| Write-Host | | | use it if you want to output something directly |
+| Get-Process | ps | ps | |
+| Stop-Process | kill | kill | |
+| Select-String | sls | find, grep | |
+| Set-Variable | set | export, env, set, setenv | |
+| Invoke-WebRequest | iwr | wget, curl | |
 
 ## Set execution policy
 
