@@ -65,6 +65,16 @@ Get-ADGroupMember -Identity admin | SELECT SamAccountName, Name, ObjectClass
 Get-ADDomainController -Discover
 ```
 
+## Set user property
+
+```
+#works mostly
+Set-ADUser -Identity johndoe -EmailAddress "john_doe@company.com"
+
+#for some special properties like pager, you have to use replace
+Set-ADUser -Identity johndoe -Replace @{pager = 123-456 789}
+```
+
 
 # Links
 
