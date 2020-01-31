@@ -19,6 +19,8 @@ smartctl -c /dev/<device>
 smartctl -t short /dev/<device>
 #check current status
 smartctl -a /dev/<device> | grep -i short
+#for usb devices
+smartctl -A -d sat /dev/<device>
 
 #short with complete disk surface examination)
 smartctl -t long /dev/<device>
