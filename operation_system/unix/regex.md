@@ -75,6 +75,7 @@ grep "^[abc]" <file>
 
 # links
 
+* [IHateRegex.io](https://ihateregex.io/) - 2020-02-04
 * https://regex101.com/
 * http://www.regexr.com/
 * https://en.wikipedia.org/wiki/Regular_expression
