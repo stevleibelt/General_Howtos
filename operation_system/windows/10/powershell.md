@@ -176,6 +176,19 @@ Get-Childitem -Recurse | foreach-object {
 [System.Net.DNS]::GetHostByAddress("127.0.0.1")
 ```
 
+## Active Directory
+
+```
+#get ad user
+Get-ADUser -Identity <samUserName> -Properties *
+
+#move ad object to a different OU
+Move-ADObject -Identity "CN=DC01,OU=TestServers,OU=Administration,DC=bazzline,DC=net" -TargetPath "OU=ProductionServers,OU=Administration,DC=bazzline,DC=net"
+
+#set ad user property
+Set-ADUser -Identity <samUserName> -EmailAddress "john_doe@company.com"
+```
+
 # Links
 
 * [PowerShell - wikipedia.org](https://en.wikipedia.org/wiki/PowerShell) - 2020-01-27
@@ -183,3 +196,4 @@ Get-Childitem -Recurse | foreach-object {
 * [Scripting blog - microsoft.com](https://devblogs.microsoft.com/scripting/feed/) - 2020-01-29
 * [Powershellbrows.com](https://www.powershellbros.com/) - 2020-01-29
 * [ActiveDirectory Module - microsoft.com](https://docs.microsoft.com/en-us/powershell/module/addsadministration/?view=win10-ps) - 2020-01-29
+* [PowerShell Tip of the Week: Move computer objects to OU](https://www.powershellbros.com/powershell-move-computer-objects-to-ou/) - 2020-02-05
