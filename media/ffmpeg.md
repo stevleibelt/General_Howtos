@@ -19,6 +19,12 @@ ffmpeg -i <input file name>.mp4 -vcodec mpeg4 -acodec ac3 -ar 48000 -ab 192k <ou
 for ITERATOR in *.mp4; do ffmpeg -i "${ITERATOR}" <insert your ffmpeg options in here> "${ITERATOR%.mp4}.avi"; done
 ```
 
+# cut out first ten minutes
+
+```
+ffmpeg -i source-file.foo -ss 0 -t 600 first-10-min.m4v
+```
+
 # create slide show from images
 
 ## example
