@@ -33,8 +33,9 @@ ansible-playboot [-i <path to the ini>] -l <hostname> <playbook> [-vvvv]
 
 # links
 
-* http://www.ansible.com
-* http://docs.ansible.com
-* http://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html#foreword
-* https://en.wikipedia.org/wiki/Configuration_management
-* http://fabian-affolter.ch/blog/the-lineinfile-module-of-ansible/#comment-4707
+* [official site - ansible.com](https://www.ansible.com) - 2020-02-11
+* [official documentation](https://docs.ansible.com) - 2020-02-11
+    * [install ansible](https://docs.ansible.com/ansible/latest/index.html) - 2020-02-11
+    * [configure ansible](https://docs.ansible.com/ansible/latest/user_guide/index.html) - 2020-02-11
+* [configuration management - wikipedia.org](https://en.wikipedia.org/wiki/Configuration_management)
+* [lineinfile module - fabian-affolter.ch](http://fabian-affolter.ch/blog/the-lineinfile-module-of-ansible/#comment-4707)

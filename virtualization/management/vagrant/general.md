@@ -79,10 +79,6 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-## Networking
-
-
-
 # Use ansible as provisioner
 
 ```
@@ -91,6 +87,14 @@ config.vm.provision "ansible" do |ansible|
     ansible.playbook = "my_playbook.yml"
 end
 ```
+
+# List of possible useful plugins
+
+| plugin | description |
+| --- | --- |
+| vagrant-vsphere | [source](https://github.com/nsidc/vagrant-vsphere/) and [howto](https://dor.ky/using-vmware-vsphereesxi-as-a-provider-for-vagrant/) (from 2014-10-11) |
+| vagrant-proxyconf | [source](https://tmatilai.github.io/vagrant-proxyconf/)
+| vagrant-guest_ansible | [source](https://github.com/vovimayhem/vagrant-guest_ansible) |
 
 # links
 
