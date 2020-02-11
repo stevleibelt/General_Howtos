@@ -20,6 +20,11 @@
 
 # List of useful software
 
+* [Alacritty](https://github.com/alacritty/alacritty) - Fastest terminal emulator
+* [Chocolatey](https://chocolatey.org/) - Command line packagemanager for windows
 * [CleanmrgPlus](https://github.com/mirinsoft/CleanmgrPlus) - Cleanmgr+ is a portable app that builds upon the Microsoft Disk Clean-up Tool (Cleanmgr.exe) by adding additional features and deleting more junk than the Disk Clean-up Tool. (2020-01-27)
 * [CloneApp](https://github.com/mirinsoft/CloneApp) - CloneApp is a free portable and simple backup tool which could save you a lot of time when migrating your software or reinstalling Windows. (2020-01-27)
+* [ConEmu](https://conemu.github.io/) - Like LXTerminal for windows (low memory footprint, and low cpu usage)
 * [Debotnet](https://github.com/mirinsoft/debotnet) - A free and portable tool for controlling Windows 10's many privacy-related settings and keep your personal data private. (2020-01-27)
+* [Extraterm](https://extraterm.org/) - Swiss army chainsaow of terminal emulators
+* [Terminus](https://eugeny.github.io/terminus/) - Highly configurable terminal emulator
