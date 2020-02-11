@@ -189,6 +189,13 @@ Move-ADObject -Identity "CN=DC01,OU=TestServers,OU=Administration,DC=bazzline,DC
 Set-ADUser -Identity <samUserName> -EmailAddress "john_doe@company.com"
 ```
 
+## Users
+
+```
+#get users on a (terminal) server
+Query User /server:terminalserver01
+```
+
 # Links
 
 * [PowerShell - wikipedia.org](https://en.wikipedia.org/wiki/PowerShell) - 2020-01-27
