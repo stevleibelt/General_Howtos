@@ -85,6 +85,10 @@ end
 #add the following lines to the Vagrantfile
 config.vm.provision "ansible" do |ansible|
     ansible.playbook = "my_playbook.yml"
+    #optional but useful if you ware working with debian for example.
+    ansible.extra_vars = {
+        "ansible_python_interpreter" => "/usr/bin/python3"
+    }
 end
 ```
 

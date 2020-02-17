@@ -72,6 +72,13 @@ my_function -ParameterOne valueOne -ParameterTwo valueTwo
 ## How to install
 
 ```
+#list installed modules
+Get-Module
+#list available modules including commandlets
+Get-Module -ListAvailable
+#list installed
+Get-Module -All
+
 #use online repository
 Install-Module -Name PSScriptAnalyzer
 
@@ -130,6 +137,17 @@ $array.remove("foo")
 $array.removerange(1,1)
 ```
 
+## Environment
+
+```
+#List all environment variables
+# @see: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables
+# Same as "Set-Location Env:" and "Get-ChildItem" or "Get-ChildItem Env:"
+Get-Item -Path Env:*
+
+
+```
+
 ## Filesystem
 
 ```
@@ -174,6 +192,29 @@ Get-Childitem -Recurse | foreach-object {
 
 #get name by ip
 [System.Net.DNS]::GetHostByAddress("127.0.0.1")
+
+#login to remote pc
+Enter-PSSession -ComputerName <hostname|ip address> -Credentials <username>
+#run command on remote pc
+Invoke-Command -Computer <hostname|ip address> -ScriptBlock {Get-Service}
+#restart remote pc
+Restart-Computer -ComputerName <hostname|ip address> [-Force]
+#power off remote pc
+Stop-Computer -ComputerName <hostname|ip address> [-Force]
+#Ping remote pc
+Test-Connection -ComputerName <hostname|ip address> -Source <host name|ip address>
+#rename a pc
+Rename-Computer -ComputerName <hostname|ip address> -LocalCredential Domain\User -Restart
+#add a pc to the domain
+Add-Computer -ComputerName <hostname[,hostname[,...]]> -DomainName <domain name> -Credential Domain\User -Restart
+#get services on remote pc
+Get-Service -ComputerName <hostname> [-Name <servicename>] [-Status <Running|Stopped>]
+#filter by name
+Get-Service -ComputerName <hostname> | Where-Object {$_.name -Like 'Win*'}
+#modifie a service
+Set-Service -ComputerName <hostname> -Name <servicename> -Status <Running|Stopped>
+#start a task
+Start-Job -FilePath <path to the powershell script>
 ```
 
 ## Active Directory
