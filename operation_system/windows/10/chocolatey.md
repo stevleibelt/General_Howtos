@@ -25,6 +25,7 @@ choco list - lo -r -y
 
 # Links
 
+* [win_chocolatey_module - ansible.com](https://docs.ansible.com/ansible/latest/modules/win_chocolatey_module.html) - 2020-02-18
 * [Configuration - chocolatey.org](https://chocolatey.org/docs/chocolatey-configuration) - 2020-02-18
 * [Package list - chocolatey.org](https://chocolatey.org/packages) - 2020-02-18
 * [Setup your local server - chocolatey.org](https://chocolatey.org/docs/how-to-host-feed) - 2020-02-18
