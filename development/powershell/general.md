@@ -50,6 +50,12 @@ Set-ExecutionPolicy -ExecutionPolicy Default
 
 # Function
 
+## Run a script file
+
+```
+powershell -ExecutionPolicy Bypass -File my_script.ps1
+```
+
 ## Basic example
 
 ```
