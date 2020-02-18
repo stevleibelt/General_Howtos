@@ -1,11 +1,12 @@
 # Useful commands
 
+## On the command line interface
+
 ```
 #start new screen session
 screen
-
-#leave/detach screen session
-CTRL+A +d
+#with window name
+screen -S <my name>
 
 #list available screen sessions
 screen -ls [<match>]
@@ -20,10 +21,31 @@ screen -d -r [<session identifier>]
 
 # kill screen session without reattaching it
 screen -S <session identifier> -X quit
-
-# kill 
-"CRTL+A +K"
 ```
+
+## In a screen session
+
+Window and shell are more or less the same.
+
+| Command | Description |
+| --- | --- |
+| CTRL+a +? | List session parameters |
+| CTRL+a +c | Create new window |
+| CTRL+a +w | List all opened windows |
+| CTRL+a +A | Rename current window |
+| CTRL+a +n | Go to next window |
+| CTRL+a +p | Go to previous window |
+| CTRL+a +CTRL+a | Back to last used window |
+| CTRL+a +<int> | Got to window number x |
+| CTRL+a +" | Choose the window to go to |
+| CTRL+a +k | Kills current window |
+| CTRL+a +S | Splits current windows horizontal |
+| CTRL+a +TAB | Switch between splitted windows |
+| CTRL+a +| | Splits current windows vertically |
+| CTRL+a +d | Detache from session |
+| CTRL+a +r | Reattach to detached session |
+| CTRL+a +[ | Start copy mode |
+| CTRL+a +] | Paste copied text |
 
 # links
 

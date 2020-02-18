@@ -44,6 +44,8 @@ All you have to do is go to the CUPS printer administration page and click "Resu
 
 # link
 
+* [Diy quick and easy samba print server setup](https://www.techrepublic.com/blog/diy-it-guy/diy-quick-and-easy-samba-print-server-setup/) - 2020-02-18
+* [ipp based print server cups](https://www.howtoforge.com/ipp_based_print_server_cups) - 2020-02-18
 * [cups printer sharing](https://www.cups.org/doc/sharing.html)
 * [cupsd.conf](https://www.cups.org/doc/man-cupsd.conf.html)
 * [lpadmin](https://www.cups.org/doc/man-lpadmin.html)
