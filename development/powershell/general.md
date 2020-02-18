@@ -235,11 +235,13 @@ Move-ADObject -Identity "CN=DC01,OU=TestServers,OU=Administration,DC=bazzline,DC
 #set ad user property
 Set-ADUser -Identity <samUserName> -EmailAddress "john_doe@company.com"
 
-#list all users containing 'zub'
-Get-AdUser -Filter 'Name -like "*zub*"' | Select -Property Name,GivenName,SamAccountName,Surname,Enabled | Format-Table
+#list all users with the name containing 'zub'
+Get-AdUser -Filter {(Name -like "*zub*")} | Select -Property Name,GivenName,SamAccountName,Surname,Enabled | Format-Table
+#list all users with the name containing 'zub' or 'buz'
+Get-AdUser -Filter {(Name -like "*zub*") -o (Name -lile "*buz*")} | Select -Property Name,GivenName,SamAccountName,Surname,Enabled | Format-Table
 
 #list all pc names starting with 'nb-'
-Get-ADComputer -Filter 'Name -like "nb-*"' | Select -Property Name,DNSHostName,Enabled,LastLogonDate | Format-Table
+Get-ADComputer -Filter {(Name -like "nb-*")} | Select -Property Name,DNSHostName,Enabled,LastLogonDate | Format-Table
 ```
 
 ## Users
