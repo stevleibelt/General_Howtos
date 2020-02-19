@@ -4,6 +4,7 @@
 * full access to [COM](https://en.wikipedia.org/wiki/Component_Object_Model), [WMI](https://en.wikipedia.org/wiki/Windows_Management_Instrumentation), [WS-Management](https://en.wikipedia.org/wiki/WS-Management) and [CIM](https://en.wikipedia.org/wiki/Common_Information_Model_(computing))
 * has build in commands plus Cmdlets (following a Verb-Noun naming pattern)
 * use the "Windows PowerShell ISE" to have a more gui friendly autocomplete
+* the shebang for powershell is `#!/usr/bin/env pwsh`
 
 # Usefull commands
 
