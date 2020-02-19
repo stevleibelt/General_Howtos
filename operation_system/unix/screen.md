@@ -19,8 +19,13 @@ screen -r [<session identifier>]
 #if your screen session is locked, or still marked as attached, detach it first
 screen -d -r [<session identifier>]
 
-# kill screen session without reattaching it
+#kill screen session without reattaching it
 screen -S <session identifier> -X quit
+```
+
+```
+#start a programm like irssi in a screen session
+/usr/bin/screen -DmS "irssi" /usr/bin/irssi &
 ```
 
 ## In a screen session
