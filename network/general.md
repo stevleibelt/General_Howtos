@@ -126,6 +126,7 @@ Common is to have a CNAME for "bazzline.net" which is linking to "www.bazzline.n
 
 # links
 
+* [A free open-source network computer cloning and management solution](https://fogproject.org/) - 2020-02-20
 * [Network configuration](https://wiki.archlinux.org/index.php/Network_configuration)
     * [systemd-networkd](https://wiki.archlinux.org/index.php/Systemd-networkd)
 * https://de.wikipedia.org/wiki/Kategorie:Resource_Record
