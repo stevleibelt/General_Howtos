@@ -27,4 +27,9 @@
 * [ConEmu](https://conemu.github.io/) - Like LXTerminal for windows (low memory footprint, and low cpu usage)
 * [Debotnet](https://github.com/mirinsoft/debotnet) - A free and portable tool for controlling Windows 10's many privacy-related settings and keep your personal data private. (2020-01-27)
 * [Extraterm](https://extraterm.org/) - Swiss army chainsaow of terminal emulators
+* File synchronisation/management software
+    * [Bart: Backup files and folders by synchronising just changes - portable application](https://www.zhornsoftware.co.uk/bart/) - 2020-02-26
+    * [Create Synchronicity - Backup & Sync](https://sourceforge.net/projects/synchronicity/) - 2020-02-26
+    * [SyncFolders](http://www.syncfolders.elementfx.com/) - 2020-02-26
+    * [Synkron](https://sourceforge.net/projects/synkron/) - 2020-02-26
 * [Terminus](https://eugeny.github.io/terminus/) - Highly configurable terminal emulator
