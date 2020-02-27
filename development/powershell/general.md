@@ -243,6 +243,9 @@ Get-AdUser -Filter {(Name -like "*zub*") -o (Name -lile "*buz*")} | Select -Prop
 
 #list all pc names starting with 'nb-'
 Get-ADComputer -Filter {(Name -like "nb-*")} | Select -Property Name,DNSHostName,Enabled,LastLogonDate | Format-Table
+
+#get last login/logon timestamp
+Get-ADUser $username | Get-ADObject -Properties lastLogon
 ```
 
 ## Users
