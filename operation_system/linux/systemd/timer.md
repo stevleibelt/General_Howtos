@@ -65,6 +65,7 @@ systemctl stop <your name>.timer
 
 # links
 
+* [Systemd Timer Units für zeitgesteuerte Aufgaben verwenden - pro-linux.de](https://www.pro-linux.de/artikel/2/1992/systemd-timer-units-f%C3%BCr-zeitgesteuerte-aufgaben-verwenden.html) - 2020-02-28
 * http://jason.the-graham.com/2013/03/06/how-to-use-systemd-timers/
 * https://wiki.archlinux.org/index.php/Systemd/Timers
 * http://www.freedesktop.org/software/systemd/man/systemd.timer.html
