@@ -62,7 +62,8 @@ The fully qualified name is "CN=cobraLazer,OU=IT,DC=compu,DC=global,DC=hyper,DC=
 * policy settings are inherited
 * applying a policy can be controlled by using the [Windows Management Instrumention](https://en.wikipedia.org/wiki/Windows_Management_Instrumentation) for filtering (only apply this policy for pcs with that amount of memory or cpu ...)
 * with windows 8, following enhacements where released
-    * gpupdate - forces a group policy update every 10 minutes with an random offset
+    * [gpupdate](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/gpupdate) - typically called as `gpupdate /force` - forces a group policy update every 10 minutes with an random offset
+    * [gpresult](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/gpresult) - typically called as `gpresult /R`, displays result set of policy (RSoP) for [remote] user and computer
     * group policy infrastructure status - reports if a GPO is not replicated correctly over all DC's
     * group policy results report - now times the execution of individual compontens when doing an group policy update
 
