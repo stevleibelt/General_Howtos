@@ -43,6 +43,7 @@ slmgr /dlv
 
 # Links 
 
+* [How to create a WinPE ISO for Windows 10.](https://www.windowspro.de/wolfgang-sommergut/winpe-fuer-windows-10-iso-usb-stick-speichern)
 * http://www.heise.de/newsticker/meldung/Windows-10-via-MSDN-und-Media-Creation-Tool-verfuegbar-2764593.html
 * http://winsupersite.com/windows-10/what-are-windows-10-n-and-kn-editions
 * https://www.quora.com/What-is-the-difference-between-Windows-10-Windows-10-KN-Windows-10-N-and-Windows-10-Single-Language?share=1
