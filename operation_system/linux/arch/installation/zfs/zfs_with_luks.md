@@ -72,6 +72,14 @@ zpool create <pool name> /dev/mapper/<luks pool name>
 zpool create -o ashift=12 <pool name> mirror <first device> <second device>
 ```
 
+## tune the pool
+
+```
+zfs set atime=on <pool name>
+zfs set relatime=on <pool name>
+zfs set compression=on <pool name>
+```
+
 ## continue with "Create necessary filesystems" from the official [arch linux wiki](https://wiki.archlinux.org/index.php/Installing_Arch_Linux_on_ZFS)
 * when it comes to "Finally, re-import the pool", simple do
 ```
