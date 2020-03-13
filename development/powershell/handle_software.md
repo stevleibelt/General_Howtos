@@ -1,3 +1,26 @@
+# How to install software
+
+## General
+
+```
+#check if software is installed
+#@see: https://keestalkstech.com/2017/10/powershell-snippet-check-if-software-is-installed/
+
+$software = "firefox"
+#most stuff is listed here
+$isInstalled = (Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | Where { $_.DisplayName -eq $software  }) -ne $null
+#but we also have to check a legacy place
+if (-Not $isInstalled) {
+    $isInstalled = (Get-WmiObject -Class Win32_Product | WHERE { $_.Name -like "*$name*"  })
+}
+
+if (-Not $isInstalled) {
+    Write-Host $(">>" + $software + "<< is not installed.")
+} Else {
+    Write-Host $(">>" + $software + "<< is installed.")
+}
+```
+
 # How to uninstall software
 
 ## General
