@@ -54,3 +54,31 @@ dism.exe /online /cleanup-image /startcomponentcleanup
 #recheck disc space
 dism.exe /online /cleanup-image /analyzecompontentstore
 ```
+
+# Get windows key
+
+```
+wmic path SoftwareLicensingService get OA3xOriginalProductKey
+```
+
+# windows activation not working 0x800704CF
+
+```
+#WIN+R (as administrator)
+#check if there is a (legacy but again introduced system proxy configured)
+netsh winhttp show proxy
+#if there is one configured
+netsh winhttp reset proxy
+#after that, try again activate your key
+```
+
+# Fix 0x8024401c
+
+```
+#WIN+R (as administrator)
+`regedit` and press OK
+Go to `HKEY_LOCAL_MACHINE` > `Software` > `Policies` > `Microsoft` > `Windows` > `WindowsUpdate` -> `AU`
+Change value of `UseWUServer` from whatever to `0`
+```
+
+[source](https://www.drivereasy.com/knowledge/windows-update-error-0x8024401c-fixed/) - 2020-03-04
