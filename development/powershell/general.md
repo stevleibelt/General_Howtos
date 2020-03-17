@@ -85,6 +85,8 @@ Get-Module
 Get-Module -ListAvailable
 #list installed
 Get-Module -All
+#list modules having update in their name
+Get-Module -Name "*update*"
 
 #use online repository
 Install-Module -Name PSScriptAnalyzer
@@ -94,6 +96,8 @@ Import-Module path\to\the\PSScriptAnalyzer.psd1
 
 #list functions per module
 Get-Command -Module PSScriptAnalyzer
+#list synopsis/help for a module function name
+Get-Help -Name Start-WUScan
 ```
 
 ## Useful modules
@@ -110,6 +114,9 @@ Get-Command -Module PSScriptAnalyzer
 
 
 ```
+#dump function body of Start-WUScan
+Get-Content Function:\Start-WUScan
+
 #if you experience the "..." (three dots) when dumping an object (e.g. Get-Acl)
 #  pipe the output through SELECT and expand the property you want to display
 <your command> | SELECT -expandproperty <property name>
@@ -181,7 +188,7 @@ c:file.foo | SELECT directory
 (Get-Item c:file.foo).getaccesscontrol.invoke() | SELECT owner -ExpandProperty access
 
 #cat foo >> bar
-add-content "bar" (Get-Content "foo")
+Add-Content "bar" (Get-Content "foo")
 
 #list empty files
 Get-Childitem -Recurse | foreach-object {
@@ -203,6 +210,7 @@ Get-Childitem -Recurse | foreach-object {
 #login to remote pc
 Enter-PSSession -ComputerName <hostname|ip address> -Credentials <username>
 #run command on remote pc
+#@see: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/invoke-command?view=powershell-7
 Invoke-Command -Computer <hostname|ip address> -ScriptBlock {Get-Service}
 #restart remote pc
 Restart-Computer -ComputerName <hostname|ip address> [-Force]
