@@ -82,3 +82,18 @@ Change value of `UseWUServer` from whatever to `0`
 ```
 
 [source](https://www.drivereasy.com/knowledge/windows-update-error-0x8024401c-fixed/) - 2020-03-04
+
+# Log in to a locked user session
+
+* given is
+    * the user is logged in
+    * the user has locked its session
+* steps
+* login as administrator
+* download [PsExec.exe](https://docs.microsoft.com/en-us/sysinternals/downloads/psexec) or the full [sysinternals-suite](https://live.sysinternals.com/)
+* open a powershell as administrator
+* check that no taskmgr.exe is running
+* enter `PSEXEC -SID taskmgr.exe`
+* go to `Users`, right click on the user session you want to connect and select `Connect`
+
+[source](https://www.windowspro.de/sami-laiho/gesperrten-windows-desktop-eines-users-zugreifen-ohne-passwort-zu-kennen) - 2020-03-19
