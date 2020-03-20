@@ -30,7 +30,7 @@
 
 | Done | In Progress | Backlog |
 | --- | --- | --- |
-| Giving notice to the ISP (1 SP) | Made almond milk (1 SP) | Cleand the bathroom |
+| Giving notice to the ISP (1 SP) | Made almond milk (1 SP) | Cleaned the bathroom |
 | Cleaned the car (2 SP) | | Vacuum the livingroom |
 | | | Made a date to meet our friends |
 
@@ -47,7 +47,7 @@
 
 | Backlog |
 | --- |
-| Cleand the bathroom |
+| Cleaned the bathroom |
 | Vacuum the livingroom |
 | Made a date to meet our friends |
 

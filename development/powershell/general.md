@@ -207,6 +207,9 @@ Get-Childitem -Recurse | foreach-object {
 #get name by ip
 [System.Net.DNS]::GetHostByAddress("127.0.0.1")
 
+#get neighbor ip addresses
+Get-NetNeighbor -AddressFamily IPv4 | WHERE {$_.state -eq "stale" -or $_.state -eq "reachable"}
+
 #login to remote pc
 Enter-PSSession -ComputerName <hostname|ip address> -Credentials <username>
 #run command on remote pc
