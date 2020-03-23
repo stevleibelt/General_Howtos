@@ -60,6 +60,9 @@ powershell -ExecutionPolicy Bypass -File my_script.ps1
 ## Basic example
 
 ```
+#Want to know how to write a function in Powershell?
+Get-Help About_Functions
+
 #function definition
 function my_function ($ParameterOne, $ParameterTwo)
 {
