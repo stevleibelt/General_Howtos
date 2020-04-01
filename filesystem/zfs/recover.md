@@ -14,6 +14,14 @@ zpool scrub <pool name>
 zpool clear <pool name>
 #if needed
 zpool clear -F <pool name>
+
+#https://zfsonlinux.org/msg/ZFS-8000-9P/
+zpool status -xv
+#initially, give it a try to clear the error if it is not
+#   looking to serious
+zpool clear <pool name> <device>
+#if thins happen to often, you have to replace the disk
+zpool replace <pool name> <faulty device> <new device>
 ```
 
 # force importing the pool
