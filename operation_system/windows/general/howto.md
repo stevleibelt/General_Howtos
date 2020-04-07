@@ -83,6 +83,17 @@ Change value of `UseWUServer` from whatever to `0`
 
 [source](https://www.drivereasy.com/knowledge/windows-update-error-0x8024401c-fixed/) - 2020-03-04
 
+# Fix "Windows updates stuck at x %"
+
+```
+#WIN+R (as administrator)
+cmd
+net stop wuauserv
+#Open explorer at "C:\Windows\SoftwareDistribution"
+#Delete all the content inside this path
+net start wuauserv
+```
+
 # Log in to a locked user session
 
 * given is
