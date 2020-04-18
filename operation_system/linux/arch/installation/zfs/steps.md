@@ -107,9 +107,9 @@ blkid
 * echo "127.0.1.1 \<hostname>.localdomain \<hostname>" >> /etc/hosts
 * echo "" >> /etc/pacman.conf
 * echo "[archzfs]" >> /etc/pacman.conf
-* echo "Server = http://archzfs.com/$repo/x86_64" >> /etc/pacman.conf
-* echo "Server = http://mirror.sum7.eu/archlinux/archzfs/$repo/$arch" >> /etc/pacman.conf
-* echo "Server = https://mirror.biocrafting.net/archlinux/archzfs/$repo/$arch" >> /etc/pacman.conf
+* echo "Server = http://archzfs.com/\$repo/\$arch" >> /etc/pacman.conf
+* echo "Server = http://mirror.sum7.eu/archlinux/archzfs/\$repo/\$arch" >> /etc/pacman.conf
+* echo "Server = https://mirror.biocrafting.net/archlinux/archzfs/\$repo/\$arch" >> /etc/pacman.conf
 * pacman-key -r F75D9D76
 * pacman-key --lsign-key F75D9D76
 * pacman -S archzfs-linux #or >>archzfs-linux-lts<< if needed

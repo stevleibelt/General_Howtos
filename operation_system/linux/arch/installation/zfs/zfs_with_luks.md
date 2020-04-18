@@ -91,9 +91,9 @@ zpool import -fR /mnt <pool name>
 ## continue with "Install and configure Arch Linux" from the official [wiki](https://wiki.archlinux.org/index.php/Installing_Arch_Linux_on_ZFS#Install_and_configure_Arch_Linux)
 
 * do not forget to add the archzfs repository to your pacman.conf like explained [here](http://archzfs.com/)
-    * echo "\n[archzfs]\nServer = http://archzfs.com/$repo/$arch" >> /etc/pacman.conf
-    * echo "Server = http://mirror.sum7.eu/archlinux/archzfs/$repo/$arch" >> /etc/pacman.conf
-    * echo "Server = https://mirror.biocrafting.net/archlinux/archzfs/$repo/$arch" >> /etc/pacman.conf
+    * echo "\n[archzfs]\nServer = http://archzfs.com/\$repo/\$arch" >> /etc/pacman.conf
+    * echo "Server = http://mirror.sum7.eu/archlinux/archzfs/\$repo/\$arch" >> /etc/pacman.conf
+    * echo "Server = https://mirror.biocrafting.net/archlinux/archzfs/\$repo/\$arch" >> /etc/pacman.conf
     * pacman-key -r 5E1ABF240EE7A126
     * pacman-key --lsign-key 5E1ABF240EE7A126
     * pacman -Syy
