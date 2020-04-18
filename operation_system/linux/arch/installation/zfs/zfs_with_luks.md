@@ -92,6 +92,8 @@ zpool import -fR /mnt <pool name>
 
 * do not forget to add the archzfs repository to your pacman.conf like explained [here](http://archzfs.com/)
     * echo "\n[archzfs]\nServer = http://archzfs.com/$repo/$arch" >> /etc/pacman.conf
+    * echo "Server = http://mirror.sum7.eu/archlinux/archzfs/$repo/$arch" >> /etc/pacman.conf
+    * echo "Server = https://mirror.biocrafting.net/archlinux/archzfs/$repo/$arch" >> /etc/pacman.conf
     * pacman-key -r 5E1ABF240EE7A126
     * pacman-key --lsign-key 5E1ABF240EE7A126
     * pacman -Syy
