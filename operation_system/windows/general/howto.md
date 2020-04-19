@@ -12,6 +12,27 @@ wi32tm /resync
 SFC /Scannow
 ```
 
+# try to fix errors detected by sfc (restore to last know working version)
+
+```
+#WIN+R (as administrator)
+#make a dry run to check the image for the corruption flag
+#   should not take longer than a few seconds
+dism.exe /online /cleanup-image /checkhealth
+#do a dry run of the windows repair mechanism
+#   this will take long
+dism.exe /online /cleanup-image /scanhealth
+#run a corruption check and tries to repair it
+dism.exe /online /cleanup-image /restorehealth
+```
+
+# check memory
+
+```
+#WIN+R (as administrator)
+mdsched
+```
+
 # set windows key per command line
 
 ```
