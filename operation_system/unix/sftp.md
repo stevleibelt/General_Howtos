@@ -15,11 +15,11 @@
     # or
     usermod -s /sbin/nologin sftp
     # add "/sbin/nologin" to your "/etc/shells"
-* chown -R root:sftp /srv/sftp
-* chmod -R 755 /srv/sftp
+* chown -hR root:sftp /srv/sftp
+* chmod -hR 755 /srv/sftp
 * mkdir /srv/sftp/upload
-* chown -R sftp:sftp /srv/sftp/upload
-* chmod -R 755 /srv/sftp
+* chown -hR sftp:sftp /srv/sftp/upload
+* chmod -hR 755 /srv/sftp
 * restart ssh
 
 # on errors

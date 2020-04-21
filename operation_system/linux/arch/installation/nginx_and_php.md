@@ -8,9 +8,9 @@ useradd http
 groupadd http
 
 mkdir -p /srv/http/demo
-chown -R http:http /srv/http
-chmod -R 750 /srv/http
-chmod -R g+s /srv/http
+chown -hR http:http /srv/http
+chmod -hR 750 /srv/http
+chmod -hR g+s /srv/http
 mkdir /etc/nginx/sites-available
 mkdir /etc/nginx/sites-enabled
 
