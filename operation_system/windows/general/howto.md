@@ -145,3 +145,22 @@ net start wuauserv
 * go to `Users`, right click on the user session you want to connect and select `Connect`
 
 [source](https://www.windowspro.de/sami-laiho/gesperrten-windows-desktop-eines-users-zugreifen-ohne-passwort-zu-kennen) - 2020-03-19
+
+# Disable or Enable Hibernation in windows
+
+```
+#WIN+R (as administrator)
+#disable it
+powercfg.exe /hibernate off
+#enable it
+powercfg.exe /hibernate one
+```
+
+# Set power plan to high performance
+
+```
+#WIN+R (as administrator)
+#if you want to list all available power plans use the following
+#   powercfg.exe /list
+powercfg.exe /setactive a1841308-3541-4fab-bc81-f71556f20b4a
+```
