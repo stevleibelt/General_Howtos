@@ -160,7 +160,9 @@ powercfg.exe /hibernate one
 
 ```
 #WIN+R (as administrator)
-#if you want to list all available power plans use the following
+#if you want to list all available power plans, use the following
 #   powercfg.exe /list
+#if you want to get the current active power plan, use the following
+#   powercfg.exe /getactivescheme
 powercfg.exe /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
 ```
