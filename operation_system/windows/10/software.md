@@ -32,4 +32,5 @@
     * [Create Synchronicity - Backup & Sync](https://sourceforge.net/projects/synchronicity/) - 2020-02-26
     * [SyncFolders](http://www.syncfolders.elementfx.com/) - 2020-02-26
     * [Synkron](https://sourceforge.net/projects/synkron/) - 2020-02-26
+* [Snappy Driver Installer Origin](https://www.snappy-driver-installer.org/download) - Open source windows driver updater utility - 20202-04-25
 * [Terminus](https://eugeny.github.io/terminus/) - Highly configurable terminal emulator

@@ -166,3 +166,20 @@ powercfg.exe /hibernate one
 #   powercfg.exe /getactivescheme
 powercfg.exe /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
 ```
+
+# fix mbr
+
+[source](https://www.thewindowsclub.com/repair-master-boot-record-mbr-windows) - 2020-04-24
+[bootrec.exe on support.microsoft.com](https://support.microsoft.com/en-us/help/927392/use-bootrec-exe-in-the-windows-re-to-troubleshoot-startup-issues) - 2020-04-24
+
+* press F8 during boot
+* go to troubleshoot -> advanved options -> console
+
+```
+#scan for your windbows partition
+bootrec /RebuildBcd
+#fix mbr
+bootrec /fixMbr
+#maybe needed too
+bootrec /fixboot
+```
