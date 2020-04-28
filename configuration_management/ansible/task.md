@@ -49,6 +49,18 @@
   script: <path to>/my_script.sh an_argument another_argument
 ```
 
+## write an os dependend task
+
+```yml
+- name: import task for redhat
+  import_tasks: redhat.yml
+  when: ansible_os_family == 'RedHat'
+
+- name: import task for debian
+  import_tasks: debian.yml
+  when: ansible_os_family == 'Debian'
+```
+
 # links
 
 * http://docs.ansible.com/ansible/shell_module.html

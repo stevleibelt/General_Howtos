@@ -12,6 +12,22 @@
 * [introduction into playbooks](http://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html)
 * [create reusable playbooks](http://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse.html)
 
+## useful command line calls to understand an existing playbook
+
+```
+#list all available tags
+ansible-playbook playbook.ymk --list-tags
+
+#list all available tasks
+ansible-playbook playbook.ymk --list-tasks
+
+#list all available tasks filtered by a tag
+ansible-playbook playbook.ymk --list-tasks --tags=install
+
+#list all available tasks excluded by a tag
+ansible-playbook playbook.ymk --list-tasks --skip-tags=install
+```
+
 ## execute a playbook with a parallelism level of 13
 
 ```
@@ -28,8 +44,8 @@ ansible-playboot [-i <path to the ini>] -l <hostname> <playbook> [-vvvv]
 
 ## import vs include
 
-* import - static
-* include - dynamic
+* import - static (inheritance is working fine for tags)
+* include - dynamic (you have to explicitly apply the tags)
 
 # links
 
