@@ -39,3 +39,4 @@ ansible-playboot [-i <path to the ini>] -l <hostname> <playbook> [-vvvv]
     * [configure ansible](https://docs.ansible.com/ansible/latest/user_guide/index.html) - 2020-02-11
 * [configuration management - wikipedia.org](https://en.wikipedia.org/wiki/Configuration_management)
 * [lineinfile module - fabian-affolter.ch](http://fabian-affolter.ch/blog/the-lineinfile-module-of-ansible/#comment-4707)
+* [How do ansible tags work? - percona.com](https://www.percona.com/blog/2020/04/27/how-do-ansible-tags-work/) - 2020-04-28
