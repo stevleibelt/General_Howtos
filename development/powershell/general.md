@@ -57,6 +57,17 @@ Set-ExecutionPolicy -ExecutionPolicy Default
 powershell -ExecutionPolicy Bypass -File my_script.ps1
 ```
 
+## Execute a ps1 script from inside a ps1 script
+
+```pwsh
+#both versions are working
+Invoke-Expression -Command "\\path\to\the\script.ps1"
+#this too
+"\\path\to\the\script.ps1" | Invoke-Expression
+```
+
+# link
+
 ## Basic example
 
 ```
