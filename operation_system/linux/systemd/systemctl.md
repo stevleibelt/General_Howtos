@@ -70,6 +70,7 @@ systemctl edit --full <service unit file>
 
 # links
 
+* [using the systemctl command to manage systemd units - opensource.com](https://opensource.com/article/20/5/systemd-units) - 2020-05-07
 * https://fedoraproject.org/wiki/How_to_debug_Systemd_problems
 * https://wiki.archlinux.org/index.php/Systemd#Journal
 * http://en.gentoo-wiki.com/wiki/Systemd
