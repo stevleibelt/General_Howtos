@@ -46,6 +46,8 @@ slmgr /dlv
 * [Windows 10 official iso download page](https://www.microsoft.com/en-us/software-download/windows10ISO) - 2020-04-19
     * [Create usb stick under linux for a windows iso with WoeUSB](https://github.com/slacka/WoeUSB) - 2020-04-24
 * [How to create a WinPE ISO for Windows 10.](https://www.windowspro.de/wolfgang-sommergut/winpe-fuer-windows-10-iso-usb-stick-speichern)
+* [Windows environment variables - en.wikipedia.org.](https://en.wikipedia.org/wiki/Environment_variable#Windows) - 2020-05-08
+* [Recognized Environment Variables - docs.microsoft.com](https://docs.microsoft.com/en-us/windows/deployment/usmt/usmt-recognized-environment-variables) - 2020-05-08
 * http://www.heise.de/newsticker/meldung/Windows-10-via-MSDN-und-Media-Creation-Tool-verfuegbar-2764593.html
 * http://winsupersite.com/windows-10/what-are-windows-10-n-and-kn-editions
 * https://www.quora.com/What-is-the-difference-between-Windows-10-Windows-10-KN-Windows-10-N-and-Windows-10-Single-Language?share=1
