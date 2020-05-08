@@ -5,13 +5,24 @@
 ```
 #check if software is installed
 #@see: https://keestalkstech.com/2017/10/powershell-snippet-check-if-software-is-installed/
+#@see: https://morgantechspace.com/2018/02/check-if-software-program-is-installed-powershell.html
 
 $software = "firefox"
-#most stuff is listed here
+#modern installation routines are listed here
 $isInstalled = (Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | Where { $_.DisplayName -eq $software  }) -ne $null
+
+#we have to handle a windows 64bit a bit differently
+##this is the node where x86 32 bit software is stored
+if (-Not $isInstalled) {
+    if (Test-Path "HKLM:Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall") {
+        $isInstalled = (Get-ItemProperty HKLM:Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Where { $_.DisplayName -eq $software }) -ne $null
+    }
+}
+
 #but we also have to check a legacy place
 if (-Not $isInstalled) {
-    $isInstalled = (Get-WmiObject -Class Win32_Product | WHERE { $_.Name -like "*$name*"  })
+    #this is used for older installation routines
+    $isInstalled = (Get-WmiObject -Class Win32_Product | WHERE { $_.Name -like "*$name*" })
 }
 
 if (-Not $isInstalled) {
