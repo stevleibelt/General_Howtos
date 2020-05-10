@@ -23,8 +23,15 @@ nmcli connection down <connection> [ifname <interface>]
 
 #reconnect an interface
 nmcli connection up <connection> [ifname <interface>]
+
+#import one openvpn connection
+nmcli connection import type openvpn file foo.ovpn 
+
+#import a lot openvpn connections
+for ITERATOR in $(ls *.ovpn); do nmcli connection import type openvpn file ${ITERATOR}; done
 ```
 
 # link
 
 * [network manager - wiki.archlinux.org.](https://wiki.archlinux.org/index.php/NetworkManager)
+* [Using nmcli to Import Openvpn Files From the Command Line](https://www.putorius.net/mcli-import-openvpn.html) - 2020-05-10
