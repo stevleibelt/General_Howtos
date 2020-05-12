@@ -280,6 +280,30 @@ Get-ADUser $username | Get-ADObject -Properties lastLogon
 Query User /server:terminalserver01
 ```
 
+# Write verbose script
+
+
+```
+#store existing value to reset it at the end of your script
+$oldVerbosePreference = $VerbosePreference
+#Enables verbose
+$VerbosePreference = "continue"
+
+#bind all built in flags etc in your function
+
+Function My-Function
+{
+    [cmdletbinding()]
+    Param()
+
+    Write-Verbose "Test Verbose"
+}
+
+#...
+#restore old value at the end of your script
+$VerbosePreference = $oldVerbosePreference
+```
+
 # Links
 
 * [PowerShell - wikipedia.org](https://en.wikipedia.org/wiki/PowerShell) - 2020-01-27
@@ -288,3 +312,4 @@ Query User /server:terminalserver01
 * [Powershellbrows.com](https://www.powershellbros.com/) - 2020-01-29
 * [ActiveDirectory Module - microsoft.com](https://docs.microsoft.com/en-us/powershell/module/addsadministration/?view=win10-ps) - 2020-01-29
 * [PowerShell Tip of the Week: Move computer objects to OU](https://www.powershellbros.com/powershell-move-computer-objects-to-ou/) - 2020-02-05
+* [Use PowerShell to Write Verbose Output](https://devblogs.microsoft.com/scripting/use-powershell-to-write-verbose-output/) - 2020-07-30
