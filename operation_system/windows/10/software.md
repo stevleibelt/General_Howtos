@@ -16,6 +16,7 @@
 | compmgmt.msc | computer management (includes task scheduler, event viewer, performance etc. |
 | systeminfo.exe | command line system information |
 | gpedit.msc | dialog to edit group policys |
+| dxdiag | directx diagnostic tool - great to identify the graphic card |
 | Snip & Scatch | Screen-capture tool (slice out a part from your desktop |
 
 # List of useful software
