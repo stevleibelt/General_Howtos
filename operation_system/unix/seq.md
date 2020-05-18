@@ -26,3 +26,35 @@ seq 3 5
 #will output 1 4 7
 seq 1 3 9
 ```
+
+## print numbers with same width (leading zero)
+
+```
+seq -w 100
+```
+
+## print numbers in one line with seperator
+
+```
+seq -s"," 5
+#simple calculations by passing it into calc
+seq -s+ 2 2 10
+```
+
+## use printf specific format
+
+```
+seq -f "Version Number %.2f" 5
+```
+
+## create files with seq
+
+```
+touch $(seq -f "file_name%g" 3)
+#also works for removing files
+rm $(seq -f "file_name%g" 3)
+```
+
+# link
+
+* [Seq Command - Print a Sequence of Numbers](https://www.putorius.net/seq-command-linux.html) - 2020-05-18
