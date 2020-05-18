@@ -44,6 +44,7 @@ slmgr /dlv
 # Links 
 
 * [Windows 10 official iso download page](https://www.microsoft.com/en-us/software-download/windows10ISO) - 2020-04-19
+    * You need to have a non windows based user agent to get the "Select Edition" page
     * [Create usb stick under linux for a windows iso with WoeUSB](https://github.com/slacka/WoeUSB) - 2020-04-24
 * [How to create a WinPE ISO for Windows 10.](https://www.windowspro.de/wolfgang-sommergut/winpe-fuer-windows-10-iso-usb-stick-speichern)
 * [Windows environment variables - en.wikipedia.org.](https://en.wikipedia.org/wiki/Environment_variable#Windows) - 2020-05-08
