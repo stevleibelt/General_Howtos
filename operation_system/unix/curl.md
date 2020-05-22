@@ -39,3 +39,4 @@ curl -sw '\nhttp status code: %{http_code}' <url>
 # Links
 
 * http://curl.haxx.se/docs/httpscripting.html
+* [Use the internet from the command line with curl](https://opensource.com/article/20/5/curl-cheat-sheet) - 2020-05-22
