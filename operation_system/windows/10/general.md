@@ -34,6 +34,16 @@ slmgr /dlv
 
 * [performance maintainer](http://www.pcstarters.net/performance-maintainer)
 
+# Autostart
+
+```
+#current user
+%appdata%\Microsoft\Windows\Start Menu\Programs\Startup
+
+#generall 
+%programdata%\Microsoft\Windows\Start Menu\Programs\Startup
+```
+
 # Keyboard Shortcuts
 
 | Shortcut | Description |
