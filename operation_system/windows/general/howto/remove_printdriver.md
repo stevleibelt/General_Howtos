@@ -19,6 +19,7 @@
     * `\\<print server>\print$\x64\PCC`
 * Last but not least, there are multiple ways
 * Drivers are located in `C:\Windows\System32\DriverStore\FileRepository`
+* Not finished print jobs are stored in `C:\Windows\System32\spool\PRINTERS`. It can be that you have to stop the spooler and empty this directory to remove driver lock
 
 ## techjourney solution
 
