@@ -51,6 +51,14 @@ slmgr /dlv
 | CTRL+SHIFT+ESC | Opens Task Manager |
 | CTRL+SHIFT+ENTER | Runs your application as administrator |
 
+# AppData
+
+| Path | Variable | Description |
+| --- | --- | --- |
+| `Local` | `%localappdata%` | Contains folders related to user specific installed programms and is specific to a pc (can not be moved) |
+| `LocalLow` | - | Contains pc specific data (can not be moved) and is used for programms running in `private` mode |
+| `Roaming` | - | Contains programm specific data that can be moved/copied or synchronized like browser profiles |
+
 # Links 
 
 * [Windows 10 official iso download page](https://www.microsoft.com/en-us/software-download/windows10ISO) - 2020-04-19
