@@ -28,6 +28,14 @@ You will use an free as in freedom [webbrowser](https://www.mozilla.org/firefox)
 ```
 #start cmd.exe as administrator
 slmgr /dlv
+#or
+winver
+```
+
+# force real/full shutdown
+
+```
+shutdown /s /f /t 0
 ```
 
 # Clean Up Tools
