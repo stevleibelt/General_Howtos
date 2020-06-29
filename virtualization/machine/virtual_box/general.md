@@ -12,8 +12,25 @@ VBoxManage list vms
 VBoxManage unregistervm <hash id> --delete
 ```
 
+# handle box/images
+
+```
+#list available boxes
+vagrant box list
+
+#upgrade boxes
+vagrant box upgrade
+
+#list outdated
+vagrant box outdated
+
+#remove outdated boxes
+vagrant box prune
+```
+
 # links
 
+* [`Vagrant box` command line options.](https://www.vagrantup.com/docs/cli/box.html)
 * https://wiki.archlinux.org/index.php/VirtualBox/Tips_and_tricks
 * https://en.wikipedia.org/wiki/VirtualBox
 * [VBoxManage](https://www.virtualbox.org/manual/ch08.html)
