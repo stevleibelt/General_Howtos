@@ -181,6 +181,7 @@ Unfinished list based on [this result](https://duckduckgo.com/?q=free+and+uncens
 
 # links
 
+* [free and not logging dns servers - kuketz-blog.de](https://www.kuketz-blog.de/empfehlungsecke/#dns)
 * [openresolve](http://roy.marples.name/projects/openresolv/wiki?name=config)
 * [dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html)
 * [unbound](https://unbound.net/)
