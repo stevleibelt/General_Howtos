@@ -6,6 +6,74 @@
 * use the "Windows PowerShell ISE" to have a more gui friendly autocomplete
 * the shebang for powershell is `#!/usr/bin/env pwsh`
 
+# Manage local profile (similar to .bashrc)
+
+## Create local profile
+
+Default path for your profile is `C:\Users\<username>\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`.
+
+```
+#check if a profile exists
+#you don't have a profile if the returned value is `False`
+Test-Path $profile
+
+#create new profile
+New-Item -Path $profile -type file -force
+```
+
+## Example configuration stuff
+
+```
+#set default start location
+Set-Location c:
+
+#change title
+$Shell.WindowTitle="My Default Window Title"
+
+#change window size and scrollback
+$Shell = $Host.UI.RawUI
+$size = $Shell.WindowSize
+$size.width=70
+$size.height=25
+$Shell.WindowSize = $size
+$size = $Shell.BufferSize
+$size.width=70
+$size.height=5000
+$Shell.BufferSize = $size
+
+#change background and foreground color
+$shell.BackgroundColor = “Gray”
+$shell.ForegroundColor = “Black”
+
+#create alias
+new-item alias:np -value C:WindowsSystem32notepad.exe
+
+#if you want to start with a fresh and clean cli, put this as last entry in your file
+Clear-Host
+```
+
+# Alias
+
+```
+#list all available alias
+get-alias
+
+#write alias to a file
+Export-Alias
+
+#load alias from a file
+Import-Alias
+
+#create alias
+New-Alias #promts an error if alias already exists
+Set-Alias #overwrites alias if exists
+
+#example
+#create a function and an alias to edit your profile
+Function Edit-PowerShellProfile { notepad++ $profile }
+New-Alias editPowerShellProfile Edit-PowerShellProfile
+```
+
 # Usefull commands
 
 | Power Shell Command | Power Shell Alias | Unix Command | Comment |
@@ -313,3 +381,5 @@ $VerbosePreference = $oldVerbosePreference
 * [ActiveDirectory Module - microsoft.com](https://docs.microsoft.com/en-us/powershell/module/addsadministration/?view=win10-ps) - 2020-01-29
 * [PowerShell Tip of the Week: Move computer objects to OU](https://www.powershellbros.com/powershell-move-computer-objects-to-ou/) - 2020-02-05
 * [Use PowerShell to Write Verbose Output](https://devblogs.microsoft.com/scripting/use-powershell-to-write-verbose-output/) - 2020-07-30
+* [Customizing your PowerShell Profile](https://www.howtogeek.com/50236/customizing-your-powershell-profile/) - 2020-01-20
+* [How to create PowerShell alias](https://4sysops.com/archives/how-to-create-a-powershell-alias/) - 2014-07-29
