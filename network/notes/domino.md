@@ -75,7 +75,29 @@ Each command supports a call with "/?" to output help/man page for that command.
 | sucache refresh | forces dynamic reloading of the smart upgrade configuration system and displays status |
 | sucache show | lists current status of servers smart upgrade cache |
 
+
+# busytime
+
+* named `busytime.nsf` on a single and `clubusy.nsf` on a clustered server
+* the free time database
+* connected users scheduling information holded by a single database file
+* provides information about free time of users or ressources
+* used to arrainge meetings and claim ressources
+* typically located in `C:\Program Files IBM\Notes\Data`
+* used by `calconn`, `sched` and `rnrmgr` tasks
+
+## how to rebuild
+
+* stop `calconn`, `sched` and `rnrmgr` tasks
+* delete all documents from within the file or the whole file
+* execute `dbcache flush`
+* start `calconn`, `sched` and `rnrmgr` tasks
+    * `tell sched validate`
+    * `tell rnrmgr validate`
+
 # Links
 
-* [HCL Domino 11.0 documentation - hcltechsw.com](https://help.hcltechsw.com/domino/11.0.0/index.html) - 2020-02-03
-* [List of server commands and syntax (domino 9.0.1) - ibm.com](https://www.ibm.com/support/knowledgecenter/en/SSKTMJ_9.0.1/admin/admn_servercommandsyntax_c.html) - 2020-02-03
+* [HCL Domino 11.0 documentation - hcltechsw.com](https://help.hcltechsw.com/domino/11.0.0/index.html) - 20200203
+* [IBM Lotus Notes Busytime.nsf - Location, Create, Rebuild](https://www.nsftopst.com/articles/lotus-notes-busytime.nsf.html) - 20200703
+* [List of server commands and syntax (domino 9.0.1) - ibm.com](https://www.ibm.com/support/knowledgecenter/en/SSKTMJ_9.0.1/admin/admn_servercommandsyntax_c.html) - 20200203
+* [Understand the Various Queries & Concept of IBM Notes & Domino](https://www.nsftopst.com/articles/) - 20200703
