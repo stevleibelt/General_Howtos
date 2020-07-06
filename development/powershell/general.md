@@ -117,6 +117,22 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 Set-ExecutionPolicy -ExecutionPolicy Default
 ```
 
+# Useful variables
+
+```
+#Path of the current *.ps1 file
+#   if directory structure is as following
+#       <project root>/
+#           bin/this_script.ps1
+#           configuration/first_configuration_file.cfg
+$relativeProjectRootPath = $($PSScriptRoot + "\..")
+
+#@see: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/resolve-path?view=powershell-7
+$absolutProjectRootPath = Resolve-Path -Path $relativeProjectRootPath
+$myRelativePathToTheConfigurationFile = $($myRelativePathToTheConfigurationFile + "\configuration\first_configuration_file.cfg")
+Write-Host $PSScriptRoot
+```
+
 # Function
 
 ## Run a script file
