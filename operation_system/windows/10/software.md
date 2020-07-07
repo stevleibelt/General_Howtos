@@ -4,8 +4,9 @@
 
 | File to start | Description
 | --- | --- |
-| Win+R+services.msc | windows service manager |
-| Win+R+msconfig.exe | old configuration dialog for sytem boot up |
+| WIN+R+control | control panel |
+| WIN+R+services.msc | windows service manager |
+| WIN+R+msconfig.exe | old configuration dialog for sytem boot up |
 | rstrui.exe | restore manager |
 | regedt32.exe | registry manager |
 | resmon.exe | resource monitor (advanced task manager) |
