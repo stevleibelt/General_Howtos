@@ -1,0 +1,9 @@
+# how to
+
+## where data and logs are stored
+
+* log file with a name like `dcntrlr<date time like number>.log` can be found in `<path>\Lotus\Domino\data`
+* smtp message dump can be found in `c:\windows\temp\notes<suffix>\st<number>.TMP`
+* how to decode base64? `cat <base64 encoded part> | base64 --decode > <original file name>.<original extension>`
+
+# links
