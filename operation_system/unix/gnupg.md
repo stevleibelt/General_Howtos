@@ -11,6 +11,14 @@ cp -r --preserve=timestamp,mode <source>/.gnupg <target>/.gnupg
 Most important, retry your command with verbositiy by adding "-vvv --debug-all".
 Sadly but true, for every error it is always a good tryout to remove the ".gnupg" directory in your home path.
 
+## gpg: WARNING: Tor is not running
+
+Read [this](https://dev.gnupg.org/T4465) if you want to know more.
+
+```
+echo "no-use-tor" >> ~/.gnupg/dirmngr.conf
+```
+
 ## gpg: keyserver receive failed: No keyserver available
 
 ```
