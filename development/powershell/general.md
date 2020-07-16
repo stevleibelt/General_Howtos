@@ -120,6 +120,10 @@ Set-ExecutionPolicy -ExecutionPolicy Default
 # Useful variables
 
 ```
+#Plattform independent directory seperator
+
+$myLogPath = ($PSScriptRoot + [IO.Path]::DirectorySeparatorChar + "log")
+
 #Path of the current *.ps1 file
 #   if directory structure is as following
 #       <project root>/

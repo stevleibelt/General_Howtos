@@ -20,6 +20,104 @@
 | dxdiag | directx diagnostic tool - great to identify the graphic card |
 | Snip & Scatch | Screen-capture tool (slice out a part from your desktop |
 
+## Remove bloatware
+
+```
+#/usr/bin/env pwsh
+####
+# Remove bloatware from windows 10
+####
+# @since 2020-07-15
+# @author artodeto@bazzline.net
+####
+
+#bo: setup
+$oldVerbosePrefence         = $VerbosePreference
+
+#access all installed apps with `shell:appsfolder`
+#you have to maintain this list on your self
+lphatetically order
+$arrayOfPackageNamePattern = @(
+    "3dbuilder",
+    "alarms",
+    "amazon",
+    #"appconnector",
+    #"appinstaller",
+    "bing", #bingweather, news, sports and money
+    "booking",
+    "communicationsapps",   #skype and messaging
+    "connectivitystore",
+    "dropbox",
+    "feedbackhub",
+    "hpaudio",
+    "hpinc",
+    "hpjumpstarts",
+    "hpprintcontrol",
+    "hpprivacysettings",
+    "hpsupportassistant",
+    "hpsystemeventutility",
+    "holographic",
+    "linkedin",
+    "mcafee",
+    "messaging",
+    "Microsoft.Bingweather",
+    "Microsoft.Getstarted",
+    "Microsoft.Office.OneNote",
+    "Microsoft.OneConnect",
+    "Microsoft.People",
+    "Microsoft.Print3D",
+    "Microsoft.Microsoft3DViewer",
+    "Microsoft.MicrosoftOfficeHub",
+    "Microsoft.MicrosoftStickyNotes",
+    "Microsoft.ScreenSketch",
+    "Microsoft.SkypeApp",
+    "Microsoft.windowscommunicationapps",
+    "Microsoft.WindowsMaps",
+    "Microsoft.Xbox.TCUI",
+    "Microsoft.XboxApp",
+    "Microsoft.XboxGameOverlay",
+    "Microsoft.XboxGameCallableUi",
+    "Microsoft.XboxIdentityProvider",
+    "Microsoft.Yourphone",
+    "Microsoft.ZuneMusic",
+    "netflix"
+)
+#eo: setup
+
+#bo: main
+$VerbosePreference = "Continue"
+
+Write-Verbose ":: Working with AppxPackage"
+ForEach ($packageName IN $arrayOfPackageNamePattern) {
+    $packageNameWithWildcards = ("*" + $packageName + "*")
+
+    Write-Verbose ("   Trying to search and remove following package >>" + $packageNameWithWildcards + "<<.")
+    Get-AppxPackage -AllUsers -Name $packageNameWithWildcards | Foreach-Object {
+        If ($_.NonRemovable -eq $false) {
+            Remove-AppxPackage -AllUsers $_.PackageFullName
+            If ($?) {
+                Write-Host ("   Couldt not remove package >>" + $_.Name + "<< Package Full Name >>" + $_.PackageFullName + "<<.") -ForegroundColor Red
+            }
+        }
+    }
+}
+
+Write-Verbose ":: Working with AppxProvisionedPackage"
+ForEach ($packageName IN $arrayOfPackageNamePattern) {
+    $packageNameWithWildcards = ("*" + $packageName + "*")
+
+    Write-Verbose ("   Trying to search and remove following package >>" + $packageNameWithWildcards + "<<.")
+    Get-AppxProvisionedPackage -Online | Where-Object { $_.PackageName -like $packageNameWithWildcards  } | ForEach-Object {
+        Remove-AppxProvisionedPackage -Online -AllUsers $_.PackageName
+        If ($?) {
+            Write-Host ("   Couldt not remove package >>" + $_.Name + "<< Package Full Name >>" + $_.PackageFullName + "<<.") -ForegroundColor Red
+        }
+    }
+}
+
+$VerbosePreference = $oldVerbosePrefence
+```
+
 # List of useful software
 
 * [Alacritty](https://github.com/alacritty/alacritty) - Fastest terminal emulator
