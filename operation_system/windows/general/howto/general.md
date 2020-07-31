@@ -1,3 +1,18 @@
+# Translating error numbers
+
+[Source](https://www.windowspro.de/tool/fehlermeldungen-windows-10-auswerten-microsoft-error-lookup-tool)
+
+```
+#<error code> can be decimal or hexadecimal
+#old codes
+net helpmsg <error code>
+
+#new codes
+winrm helpmsg <error code>
+#_or
+certutil.exe -error <error code>
+```
+
 # forcing a time synchronisation
 
 ```
