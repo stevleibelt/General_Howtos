@@ -25,6 +25,10 @@ systemctl list-units -t service --all
 # list failed units
 
 ```
+#all failed unites
+systemctl list-units --failed
+
+#of type service
 systemctl list-units -t service --failed
 ```
 
