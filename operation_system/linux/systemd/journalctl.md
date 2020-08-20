@@ -14,10 +14,30 @@ RuntimeMaxFileSize=50M
 MaxFileSec=1week
 ```
 
-# view messages from journal
+# add messages
 
 ```
-strings /var/log/journal<your id>/<journal file name>.journal | grep -i message
+#p = priority (emerg, alert, crit, err, warning, notice, info, debug | 0 - 7)
+#t = task/identifier
+echo "Foo Bar" | systemd-cat -p info -t myapplication
+```
+
+# view messages from journal
+
+All your logs are located in `/var/log/journal` or `/run/log/journal`
+Choose the right directory.
+
+```
+#cd <journal path>
+
+#also cool to know
+dd if=<journal file> | cat
+
+#way better to read - string displays all ASCII text in this file
+strings <journal file>
+
+##and now just grep four your message or pattern
+strings <journal file> | grep -i <message or pattern>
 ```
 
 # options
@@ -45,6 +65,7 @@ strings /var/log/journal<your id>/<journal file name>.journal | grep -i message
 * --verify      - verifies journal
 * --system      - show systemlog
 * --user        - show userlog
+* --dmesg       - outputs the entries in dmesg format
 
 # tail
 
@@ -69,7 +90,12 @@ journalctl -b -1
 # list journal of current boot with debug priority error and worse
 
 ```
-jounralctl -b -p err
+#show errors and more
+journalctl -b -p err
+
+#show only error, critial and alert
+
+journalctl -b -p err..alert
 ```
 
 # filter against device or binaries
@@ -97,9 +123,14 @@ journalctl -b | grep -i 'fail\|erro\|warn'
 ```
 #clear older 14 days
 journalctl --vacuum-time=14d
+#clear older one month
+journalctl --vacuum-time=1month
 
 #clear logs greater size of 2 GiB
 journalctl --vacuum-size=2G
+
+#only keep the last four log files
+journalctl --vaccum-files=4
 ```
 
 # links
@@ -107,3 +138,4 @@ journalctl --vacuum-size=2G
 * http://0pointer.de/blog/projects/journalctl.html
 * http://www.freedesktop.org/software/systemd/man/journald.conf.html
 * https://ma.ttias.be/clear-systemd-journal/
+* [Using systemd journals to troubleshoot transient problems - opensource.com](https://opensource.com/article/20/8/journals-systemd) - 20200820
