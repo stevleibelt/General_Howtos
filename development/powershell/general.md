@@ -142,7 +142,10 @@ Write-Host $PSScriptRoot
 ## Run a script file
 
 ```
-powershell -ExecutionPolicy Bypass -File my_script.ps1
+#assuming you want to start the my_script from a bat script in the same path
+#@see:
+#   https://stackoverflow.com/questions/5034076/what-does-dp0-mean-and-how-does-it-work
+powershell -ExecutionPolicy Bypass -File "%~dp0my_script.ps1"
 ```
 
 ## Execute a ps1 script from inside a ps1 script
