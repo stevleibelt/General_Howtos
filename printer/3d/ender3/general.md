@@ -1,6 +1,7 @@
 # Creality Ender 3
 
 This guide is using octoprint and klipper.
+Each 3d printing model file needs to be calculated per printer into the gcode.
 
 ## Install Klipper
 
@@ -49,3 +50,7 @@ This guide is using octoprint and klipper.
 * [Klipper homepage](https://www.klipper3d.org/Features.html) - 20200823
 * [Ender 3 Level Test](https://www.thingiverse.com/thing:2987803) - 20180703
 * [25 Best Creality Ender 3 Upgrades you can buy and print](https://makershop.co/creality-ender-3-upgrades/) - 20200730
+* Slicer Software - used to calculate project files to gcode
+    * [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura) - 20208323
+    * [Slic3r - Open source 3D printing toolbox](https://slic3r.org/] - 20200823
+    * [Prusa Slicer](https://www.prusa3d.com/prusaslicer/) - 20200823
