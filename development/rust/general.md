@@ -18,6 +18,16 @@ cargo --version
 rustc --version
 ```
 
+## Hello World
+
+```
+echo 'fn main() {println!("Hello World"); }' > hello_world.rs
+
+rustc hello_world.rs
+
+./hello_world
+```
+
 ## Basic commands
 
 ```
