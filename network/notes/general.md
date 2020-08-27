@@ -12,5 +12,4 @@ The client-server naming for the notes family is domino for the server and notes
 
 # Links
 
-* [IBM Notes - wikipedia.org](https://en.wikipedia.org/wiki/IBM_Notes) - 20200203
-* [Notes Documentation - hcltechsw.com](https://help.hcltechsw.com/notes/notes_welcome.html) - 20200818
+* [HCL Product ideas portal](https://domino-ideas.hcltechsw.com/?sort=recent)

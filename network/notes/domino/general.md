@@ -8,6 +8,12 @@
 * can run as a cluster
 * runs on multiple plattforms (windows, linux, aix, solars, as/400, z/os and zlinux)
 
+# console commands
+
+```
+#run all maintenance tasks
+tell adminp process all
+```
 # List of server commands
 
 Each command supports a call with "/?" to output help/man page for that command.
@@ -97,7 +103,13 @@ Each command supports a call with "/?" to output help/man page for that command.
 
 # Links
 
-* [HCL Domino 11.0 documentation - hcltechsw.com](https://help.hcltechsw.com/domino/11.0.0/index.html) - 20200203
+* [Domino Documentation - hcltechsw.com](https://help.hcltechsw.com/domino/domino_welcome.html) - 20200731
+    * [HCL Domino 11.0 documentation - hcltechsw.com](https://help.hcltechsw.com/domino/11.0.0/index.html) - 20200203
+* [List of useful links](http://collaboration.rocks/useful-links/) - 20200827
+    * [dominoforum.de](https://www.dominoforum.de/) - 20200827
+    * [planetlotus.org](https://planetlotus.org/) - 20200827
+* [Knowledge Search base - hcltechsw.com](https://support.hcltechsw.com/csm?id=kb_search) - 20200731
 * [IBM Lotus Notes Busytime.nsf - Location, Create, Rebuild](https://www.nsftopst.com/articles/lotus-notes-busytime.nsf.html) - 20200703
 * [List of server commands and syntax (domino 9.0.1) - ibm.com](https://www.ibm.com/support/knowledgecenter/en/SSKTMJ_9.0.1/admin/admn_servercommandsyntax_c.html) - 20200203
+* [Nash!Com - Domino and Notes Consulting from Hilden/Germany](http://www.nashcom.de/nshweb/pages/workspace.htm) - 20200827
 * [Understand the Various Queries & Concept of IBM Notes & Domino](https://www.nsftopst.com/articles/) - 20200703
