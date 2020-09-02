@@ -8,9 +8,10 @@ To not loose all the important informations of the old profile, you can copy a f
 ## Table of files with description
 
 | What it contains | Filename |
+| --- | --- |
 | autocomplete history | formhistory.sqlite |
 | bookmarks | places.sqlite |
-| | favicons.sqlite |
+| bookmarks | favicons.sqlite |
 | cookies | cookies.sqlite |
 | file type handling and download actions | handlers.json |
 | personal directory | persdict.dat |
