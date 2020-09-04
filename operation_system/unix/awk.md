@@ -82,7 +82,8 @@ BEGIN { # Can be modified by the user
 
 # links
 
-* [awk in 20 minutes](https://ferd.ca/awk-in-20-minutes.html) - 2020-05-08
+* [A practical guide to learning awk](https://opensource.com/article/20/9/awk-ebook) - 20200904
+* [awk in 20 minutes](https://ferd.ca/awk-in-20-minutes.html) - 20200508
 * http://www.grymoire.com/Unix/Awk.html
 * https://www.gnu.org/software/gawk/manual/gawk.html#Printf-Examples
 * https://www.gnu.org/software/gawk/manual/gawk.html#Print
