@@ -17,6 +17,19 @@ vim /etc/cups/cupsd.conf
 Listen <hostname>:631
 ```
 
+# error handling
+
+Set the `LogLevel` to `Debug` in `/etc/cups/cupsd.conf`.
+
+## printer is disabled
+
+```
+#check current state
+lptstate -p
+
+cupsenable <printer name>
+```
+
 # cupsctl
 
 ```
