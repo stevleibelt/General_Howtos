@@ -24,6 +24,10 @@ zfs snapshot -i <pool name>@<first snapshot name> <pool name>@<second snapshot n
 # delete
 
 ```
+#do a dry run (-n) to calculate estimated reclaimed space from the disk
+zfs destroy -nv <pool name>@<first snapshot name>%<last snapshot name>
+
+#delete one snapshot
 zfs destroy <pool name>@<snapshot name>
 ```
 
