@@ -63,6 +63,7 @@ Modules are located in `c:\Python`.
 * [official python documentation](https://docs.python.org/) - 20200923
     * [setup and usage](https://docs.python.org/3/using/index.html) - 20200923
     * [the python tutorial](https://docs.python.org/3/tutorial/index.html) - 20200923
+        * [simple variables](https://docs.python.org/3/tutorial/introduction.html) - 20200924
     * [official python howto's](https://docs.python.org/3/howto/index.html) - 20200923
     * [porting python 2 code to python 3](https://docs.python.org/3/howto/pyporting.html) - 20200923
         * [automatic conversion to Py2/3 with future](http://python-future.org/automatic_conversion.html) - 20200924
