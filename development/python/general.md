@@ -4,10 +4,15 @@
 
 ```
 #install pip if not available
+#run a python module as a script: `python -m <module>`
 python -m ensurepip --default-pip
+#or install pipenv
+pip install --user pipenv
 
 #ensure pip, setuptools and wheel are up to date
 python -m pip install --upgrade pip setuptools wheel
+#_or
+pip install --upgrade pip setuptools wheel
 
 #create a virtual environment
 python -v venv <path>
@@ -19,6 +24,8 @@ virtualenv <path>
 ```
 
 ## pip
+
+`pipenv` is pip but on a per project based environment (most times what you want).
 
 ```
 #install package
@@ -58,7 +65,21 @@ Modules are located in `c:\Python`.
     * [the python tutorial](https://docs.python.org/3/tutorial/index.html) - 20200923
     * [official python howto's](https://docs.python.org/3/howto/index.html) - 20200923
     * [porting python 2 code to python 3](https://docs.python.org/3/howto/pyporting.html) - 20200923
+        * [automatic conversion to Py2/3 with future](http://python-future.org/automatic_conversion.html) - 20200924
     * [unit testing framework](https://docs.python.org/3/library/unittest.html) - 20200923
+    * [manage dependencies](https://packaging.python.org/tutorials/managing-dependencies/#managing-dependencies) - 20200924
+    * [project summeries](https://packaging.python.org/key_projects/) - 20200924
+    * virtual environement
+        * [nox](https://nox.thea.codes/) - 20200924
+        * [pew](https://github.com/berdario/pew) - 20200924
+        * [pipenv](https://pipenv.pypa.io/) - 20200924
+        * [tox](https://tox.readthedocs.io/) - 20200924
+        * [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/) - 20200924
+* [officie python package index - pypi.org](https://pypi.org/) - 20200924
+    * [pip reference guide](https://pip.pypa.io/en/latest/reference/) - 20200924
+    * useful packages
+        * [coverage](https://pypi.org/project/coverage/) - 20200924
+        * [future](http://python-future.org/automatic_conversion.html) - 20200924
 * [installing packages with pip](https://packaging.python.org/tutorials/installing-packages/) - 20200923
 * [programming tutorial](https://www.programiz.com/python-programming/tutorial) - 20190111
 * [python build in methods](https://www.programiz.com/python-programming/methods/built-in) - 20190111

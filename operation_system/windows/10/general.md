@@ -32,6 +32,13 @@ slmgr /dlv
 winver
 ```
 
+# set PATH variable
+
+* rightclick on the very bottom-left corner to open `[Power User Task Menu](https://www.computerhope.com/jargon/p/putm.htm)`
+* Go to `System` and input in the search form `PATH`
+* Click on the button `Environment Variables`
+* Select the `PATH` variable and click on `Edit`
+
 # force real/full shutdown
 
 ```
