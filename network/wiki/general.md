@@ -1,5 +1,9 @@
 # Links
 
+* [bluespice](https://bluespice.com/) - 20200924
+    * [docker image](https://hub.docker.com/r/bluespice/bluespice-free) - 20200924
+    * [feature overview on mediawiki.org](https://www.mediawiki.org/wiki/BlueSpice) - 20200924
+    * [german demo page](https://de.wiki.bluespice.com/wiki/Hauptseite) - 20200924
 * [bookstackapp (PHP)](https://www.bookstackapp.com/) - 20200728
 * [DokuWiki (PHP)](https://www.dokuwiki.org/) - 20200207
 * [FOSWIKI (Perl)](https://foswiki.org/) - 20200207
