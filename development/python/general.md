@@ -75,7 +75,8 @@ Modules are located in `c:\Python`.
         * [pipenv](https://pipenv.pypa.io/) - 20200924
         * [tox](https://tox.readthedocs.io/) - 20200924
         * [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/) - 20200924
-* [officie python package index - pypi.org](https://pypi.org/) - 20200924
+    * [what is new - change log](https://docs.python.org/3/whatsnew/index.html#whatsnew-index) - 20200924
+* [official python package index - pypi.org](https://pypi.org/) - 20200924
     * [pip reference guide](https://pip.pypa.io/en/latest/reference/) - 20200924
     * useful packages
         * [coverage](https://pypi.org/project/coverage/) - 20200924
