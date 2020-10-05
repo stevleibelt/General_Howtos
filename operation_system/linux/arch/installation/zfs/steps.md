@@ -5,10 +5,12 @@
 * [create an arch iso and put it on an usb stick with zfs inside](https://github.com/stevleibelt/arch-linux-live-cd-iso-with-zfs)
 * loadkeys /usr/share/kbd/keymaps/i386/qwertz/de.map.gz
 * wifi-menu #connect to the internet
-* pacman-key -r F75D9D76
-* pacman-key --lsign-key F75D9D76
+* optional
+    * pacman-key -r F75D9D76
+    * pacman-key --lsign-key F75D9D76
+    * modprobe zfs
 * timedatectl set-ntp true
-* modprobe zfs
+  * if needed: timedatectl set-timezone Europe/Berlin
 * if bios
     * gdisk /dev/sdX
     * o
@@ -100,6 +102,7 @@ blkid
 * ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 * hwclock --systohc
 * echo "KEYMAP=de-latin1" > /etc/vconsole.conf
+* pacman -S vim bash-completion nmon htop git sudo gdisk
 * vim /etc/locale.gen #comment out your locale
 * locale-gen
 * echo "LANG=en_US.UTF-8" > /etc/locale.conf
@@ -110,10 +113,12 @@ blkid
 * echo "Server = http://archzfs.com/\$repo/\$arch" >> /etc/pacman.conf
 * echo "Server = http://mirror.sum7.eu/archlinux/archzfs/\$repo/\$arch" >> /etc/pacman.conf
 * echo "Server = https://mirror.biocrafting.net/archlinux/archzfs/\$repo/\$arch" >> /etc/pacman.conf
-* pacman-key -r F75D9D76
+* `pacman-key -r F75D9D76`
+  * if there is an error: `pacman-key -r F75D9D76 --keyserver hkp://keyserver.ubuntu.com`
 * pacman-key --lsign-key F75D9D76
+  * if you run into time warp issues, remove /etc/pacman.d/gnupgp and retry again (pacman-key init) *after* fixing your timedatectl issue
+* pacman -Syu
 * pacman -S archzfs-linux #or >>archzfs-linux-lts<< if needed
-* pacman -S vim bash-completion nmon htop git sudo gdisk
 * useradd -m -g users -G wheel -s /bin/bash \<user name>
 * passwd \<user name>
 * visudo # comment out %wheel
