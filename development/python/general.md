@@ -82,6 +82,9 @@ Modules are located in `c:\Python`.
     * useful packages
         * [coverage](https://pypi.org/project/coverage/) - 20200924
         * [future](http://python-future.org/automatic_conversion.html) - 20200924
+* [Get started using Python on Windows for beginners](https://docs.microsoft.com/en-us/windows/python/beginners) - 20190719
+    * [Get started using Python on Windows for scripting and automation](https://docs.microsoft.com/en-us/windows/python/scripting) - 20190719
+    * [Get started using Python for web development on Windows](https://docs.microsoft.com/en-us/windows/python/web-frameworks) - 20190719
 * [installing packages with pip](https://packaging.python.org/tutorials/installing-packages/) - 20200923
 * [programming tutorial](https://www.programiz.com/python-programming/tutorial) - 20190111
 * [python build in methods](https://www.programiz.com/python-programming/methods/built-in) - 20190111
