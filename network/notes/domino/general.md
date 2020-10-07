@@ -25,7 +25,7 @@ Each command supports a call with "/?" to output help/man page for that command.
 | dbcache flush | closes all databases that are currently handled by the cache |
 | dbcache show | lists all databasese currently handled by the cache |
 | drop <"username"|ALL> [<"username"> ...] | closes session for provided user names or for all if ALL is uses |
-| exit | shutdown the server (use broadcast to informe the users upfront) |
+| exit | shutdown the server (use broadcast to inform the users upfront) |
 | help | lists commands and brief description |
 | keymgmt create <nek|credstore> <"nekname"> | creates a credential store |
 | keymgmt export crestore <"filename"> <"servername"> | exports a copy of the current credstore.nsf |
@@ -100,6 +100,14 @@ Each command supports a call with "/?" to output help/man page for that command.
 * start `calconn`, `sched` and `rnrmgr` tasks
     * `tell sched validate`
     * `tell rnrmgr validate`
+
+# Install FeaturePack (FP)
+
+* open console
+* enter `exit`
+* start feature pack installation
+* if you run into an error
+    * try to uninstall previous installed feature pack by running the installation routine of this feature pack again and select `uninstall`
 
 # Links
 
