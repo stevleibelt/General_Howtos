@@ -1,3 +1,18 @@
+# dig
+
+```
+#list final ip address
+dig +noall +answer bazzline.net
+```
+
+# host
+
+
+```
+#list ip address and mail/mx information
+host bazzline.net
+```
+
 # arp
 
 ```
