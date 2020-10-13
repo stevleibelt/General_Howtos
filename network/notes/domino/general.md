@@ -14,6 +14,7 @@
 #run all maintenance tasks
 tell adminp process all
 ```
+
 # List of server commands
 
 Each command supports a call with "/?" to output help/man page for that command.
@@ -81,8 +82,18 @@ Each command supports a call with "/?" to output help/man page for that command.
 | sucache refresh | forces dynamic reloading of the smart upgrade configuration system and displays status |
 | sucache show | lists current status of servers smart upgrade cache |
 
+## Longer list of commands
 
-# busytime
+Thanks to [mariusj cheatsheets](https://github.com/mariusj/cheatsheets/blob/2628232cff3d3fe794a21b15cbfaef3ef56a17f9/domino_admin.txt).
+
+| Command | Description |
+| --- | --- |
+| restart task http | Restart http server with java |
+| tell http quit | terminat http server |
+| tell http | load http server |
+| tell http show thread state | show web requests |
+
+# Busytime
 
 * named `busytime.nsf` on a single and `clubusy.nsf` on a clustered server
 * the free time database
@@ -95,7 +106,7 @@ Each command supports a call with "/?" to output help/man page for that command.
 ## how to rebuild
 
 * stop `calconn`, `sched` and `rnrmgr` tasks
-* delete all documents from within the file or the whole file
+* delete all documents from within the file or the whole file `busytime.nsf`
 * execute `dbcache flush`
 * start `calconn`, `sched` and `rnrmgr` tasks
     * `tell sched validate`

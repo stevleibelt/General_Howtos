@@ -5,7 +5,7 @@ Following fixes are tested only on a IBM Domino 10.x.
 ## Try to let domino do the work
 
 ```
-tell rnrmgr check <name of the ressource>
+tell rnrmgr check
 tell rnrmgr validate <name of the ressource>
 ```
 
@@ -34,7 +34,7 @@ Go to the place where the `busytime.nsf` is located and mark it. You have to be 
 dbcache flush
 ```
 
-Now rename your existing `busytime.nsf` to something else like `busytime.nsf.<yymmdd_hhiiss>`
+Now rename your existing `busytime.nsf` to something else like `busytime.nsf.<yymmdd_hhiiss>` (or input `rm busytime.nsf` in the console).
 
 ```
 #starts schedule manager task on this server
