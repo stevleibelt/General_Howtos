@@ -105,9 +105,10 @@ end
 * [Vagrantfile Tips and Tricks](https://www.vagrantup.com/docs/vagrantfile/tips.html) - 2020-02-11
 * [Vagrantfile machine config settings](https://www.vagrantup.com/docs/vagrantfile/machine_settings.html) - 2020-02-11
 * [docs](https://docs.vagrantup.com/v2/getting-started)
-* [official boxes archive](https://vagrantcloud.com/)
-* [list of base boxes](http://vagrantbox.es/)
-* [list of base boxes](https://github.com/opscode/bento)
+* [official boxes archive](https://app.vagrantup.com/boxes/search)
+    * [list of bento boxes](https://app.vagrantup.com/bento)
+    * [list of base boxes](http://vagrantbox.es/)
+    * [list of base boxes](https://github.com/opscode/bento)
 * [arch linux wiki page](https://wiki.archlinux.org/index.php/Vagrant)
 * [more boxes](https://www.vagrantup.com/docs/virtualbox/boxes.html)
 * [search for boxes](https://app.vagrantup.com/boxes/search)
