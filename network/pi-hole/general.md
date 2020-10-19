@@ -1,5 +1,7 @@
 # Usage
 
+If you install it on a debian or fedora system use `curl -sSL https://install.pi-hole.net | bash` [source](https://github.com/pi-hole/pi-hole/#one-step-automated-install).
+
 ## Usefull commands
 
 ```
