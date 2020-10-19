@@ -66,6 +66,12 @@ source /etc/profile.d/proxy.sh
 env | grep -i proxy
 ```
 
+If needed, bypass the proxy variables in your calls made with sudo by adding following line to `/etc/sudoers` (Thanks [arch wiki](https://wiki.archlinux.org/index.php/Sudo#Environment_variables)).
+
+```
+Defaults env_keep += "ftp_proxy http_proxy https_proxy no_proxy"
+```
+
 # links
 
 * [static ips in debian](http://www.techiecorner.com/486/how-to-setup-static-ip-in-debian/)

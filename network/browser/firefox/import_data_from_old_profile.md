@@ -22,6 +22,7 @@ To not loose all the important informations of the old profile, you can copy a f
 ## List of all important files in alphabetically order
 
 ```
+#under windows located in %appdata%
 cert9.db
 cookies.sqlite
 favicons.sqlite
