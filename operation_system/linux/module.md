@@ -27,6 +27,16 @@ ls /lib/modules/`uname -r`/kernel
 modprobe -c
 ```
 
+# disable module
+
+## disable pcspeaker
+
+@see: https://wiki.archlinux.org/index.php/PC_speaker
+
+```
+echo "blacklist pcspkr" > /etc/modprobe.d/disable-pcsprk.conf
+```
+
 # link
 
 * [how to load or unload linux kernel modules.](https://opensource.com/article/18/5/how-load-or-unload-linux-kernel-module)

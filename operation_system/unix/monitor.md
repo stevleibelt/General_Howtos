@@ -3,7 +3,7 @@
 ```
 # vim /etc/X11/xorg.conf.d/10-monitor.conf
 # @see: https://wiki.archlinux.org/index.php/Display_Power_Management_Signaling
-"Section "ServerLayout"
+Section "ServerLayout"
     Identifier "ServerLayout0"
     Option "StandbyTime" "0"
     Option "SuspendTime" "0"
