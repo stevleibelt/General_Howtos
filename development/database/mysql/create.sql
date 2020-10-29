@@ -1,4 +1,11 @@
 -- 
+-- create user
+-- @see: https://opensource.com/article/20/10/mariadb-mysql-cheat-sheet
+-- 
+
+CREATE USER `myusername`@`localhost` IDENTIFIED BY 'super c0Ol pAzzw0Rd!';
+
+-- 
 -- create my_table
 -- @see: https://dev.mysql.com/doc/refman/5.1/en/create-table.html
 -- 
