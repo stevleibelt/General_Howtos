@@ -66,13 +66,13 @@ mkdir -p software/source/org/archlinux/aur
 cd software/source/org/archlinux/aur
 git clone https://aur.archlinux.org/pi-hole-ftl.git
 cd pi-hole-server
-makepkg -sri
+makepkg -Csri
 sudo pacman -U *.tar.xz
 cd ../
 #if you want to have webserver to
 git clone https://aur.archlinux.org/pi-hole-server.git
 cd pi-hole-server
-makepkg -sri
+makepkg -Csri
 sudo pacman -U *.tar.xz
 ```
 
