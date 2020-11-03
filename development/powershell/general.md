@@ -155,6 +155,9 @@ powershell -ExecutionPolicy Bypass -File "%~dp0my_script.ps1"
 Invoke-Expression -Command "\\path\to\the\script.ps1"
 #this too
 "\\path\to\the\script.ps1" | Invoke-Expression
+#or
+$script = ".\my_script_in_the_same_path.ps1"
+.$script
 ```
 
 # link
