@@ -13,6 +13,13 @@
 (Get-ADGroupMember -Identit "My-Group").count
 ```
 
+## Create user
+
+```
+# @see: https://sid-500.com/2020/11/03/powershell-import-active-directory-users-from-csv/
+ForEach-Object { New-ADUser -Name $_.Name ` -GivenName $_.givenname ` -Surname $_.sn ` -Path $_."ParentOU" ` -SamAccountName $_.samAccountName ` -UserPrincipalName ($_.samAccountName + '@' + $env:userdnsdomain) ` -AccountPassword (ConvertTo-SecureString "123user!!!!!" -AsPlainText -Force) ` -EmailAddress $_."E-Mail Address" ` -Enabled $true ` -ChangePasswordAtLogon $true } ` }
+```
+
 ## Rename pc
 
 ```
