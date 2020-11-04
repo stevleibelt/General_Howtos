@@ -123,7 +123,10 @@ Thanks to [mariusj cheatsheets](https://github.com/mariusj/cheatsheets/blob/2628
 # Links
 
 * [Domino Documentation - hcltechsw.com](https://help.hcltechsw.com/domino/domino_welcome.html) - 20200731
+    * [HCL Domino 10.0.1 documentation - hcltechsw.com](https://help.hcltechsw.com/domino/10.0.1/index.html) - 20201028
     * [HCL Domino 11.0 documentation - hcltechsw.com](https://help.hcltechsw.com/domino/11.0.0/index.html) - 20200203
+        * [Configuring](https://help.hcltechsw.com/domino/11.0.0/admin/conf_configuring_t.html) - 20201028
+* [Domino search results on redbooks.ibm.com](https://www.redbooks.ibm.com/redbooks.nsf/searchsite?SearchView=&query=domino&SearchWV=true) - 20201028
 * [List of useful links](http://collaboration.rocks/useful-links/) - 20200827
     * [dominoforum.de](https://www.dominoforum.de/) - 20200827
     * [planetlotus.org](https://planetlotus.org/) - 20200827
