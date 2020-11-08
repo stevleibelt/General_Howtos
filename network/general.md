@@ -146,3 +146,6 @@ Common is to have a CNAME for "bazzline.net" which is linking to "www.bazzline.n
     * [systemd-networkd](https://wiki.archlinux.org/index.php/Systemd-networkd)
 * https://de.wikipedia.org/wiki/Kategorie:Resource_Record
 * https://en.wikipedia.org/wiki/CNAME_record
+* [uberspace.de](https://www.uberspace.de/) - 20201108
+    * [uberspace 7 manual](https://manual.uberspace.de/en/index.html) - 20201108
+    * [uberlab](https://lab.uberspace.de/index.html) - 20201108
