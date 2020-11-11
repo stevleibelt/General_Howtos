@@ -9,7 +9,7 @@
 * abricotine
 * cmarked
 * eme
-* cutemarked
+* [cutemarked](https://cloose.github.io/CuteMarkEd/) - 20201110
 * markmywords
 * uberwriter
 * mark text

@@ -23,6 +23,11 @@ snmpwalk -t 20 -v 1 -O fn -c public <ip address of a switch or network device>
 snmpwalk -t 20 -v 2c -c public <ip address of a switch or network device>
 ```
 
+# Switch specific
+
+* Cisco
+    * `Admin interface` -> `Security` -> `TCP/UDP Services` -> `SNMP Service` Enable -> `Apply`
+
 # Links
 
 * [snmpd configuration](http://www.net-snmp.org/wiki/index.php/TUT:snmpd_configuration)

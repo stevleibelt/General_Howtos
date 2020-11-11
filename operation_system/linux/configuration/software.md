@@ -57,7 +57,7 @@
 
 # network
 
-* dig
+* dig (could be in the `bind` package, e.g. arch linux)
 * firefox
 * irssi
 * netactview
