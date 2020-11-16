@@ -107,7 +107,8 @@ Set-ADUser -Identity johndoe -Replace @{pager = 123-456 789}
 
 # Links
 
-* [Active Directory - wikipedia.org](https://en.wikipedia.org/wiki/Active_Directory) - 2020-01-27
-* [Administrative Template - wikipedia.org](https://en.wikipedia.org/wiki/Administrative_Template) - 2020-01-27
-* [AGDLP - wikipedia.org](https://en.wikipedia.org/wiki/AGDLP) - 2020-01-27
-* [Group Policy - wikipedia.org](https://en.wikipedia.org/wiki/Group_Policy) - 2020-01-28
+* [Active Directory - wikipedia.org](https://en.wikipedia.org/wiki/Active_Directory) - 20200127
+* [Administrative Template - wikipedia.org](https://en.wikipedia.org/wiki/Administrative_Template) - 20200127
+* [AGDLP - wikipedia.org](https://en.wikipedia.org/wiki/AGDLP) - 20200127
+* [Best NTFS Permissions Reporting Tools 2020](https://www.dnsstuff.com/ntfs-folder-permissions-reporting-tools) - 20201116
+* [Group Policy - wikipedia.org](https://en.wikipedia.org/wiki/Group_Policy) - 20200128

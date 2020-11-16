@@ -10,6 +10,7 @@
 * [MoasdaWiki (Java)](https://moasdawiki.net/) - 20200721
 * [Oddmuse (Perl)](https://oddmuse.org/) - 20200728
 * [PmWiki (PHP)](https://www.pmwiki.org/) - 20200728
+* [Raneto (Node)](http://raneto.com/) - 20201112
 * [Smeagol (Clojure)](https://github.com/journeyman-cc/smeagol) - 20200728
 * [TiddlyWiki (JavaScript)](https://tiddlywiki.com/) - 20200728
 * [Tiki-Wiki (PHP)](https://info.tiki.org/) - 20200721

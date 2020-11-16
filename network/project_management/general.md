@@ -4,6 +4,7 @@
 * [Caravela](https://caravelahq.com/) - ?
 * [Flyspray](https://www.flyspray.org/) - PHP
 * [Fossil](https://www.fossil-scm.org/)
+* [Goodwork](https://www.usegood.work/) - PHP - 20201112
 * [Kolab](https://kolab.org/) - C++, PHP, Python
 * [MantisBT](https://mantisbt.org/) - PHP
 * [MyCollab](https://mycollab.com/) - PHP
