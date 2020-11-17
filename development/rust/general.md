@@ -63,5 +63,6 @@ cargo test
 
 # Links
 
-* [The Cargo Book](https://doc.rust-lang.org/stable/cargo/) - 2020-03-03
-* [Getting started with the Rust pacage manager, Cargo](https://opensource.com/article/20/3/rust-cargo) - 2020-03-03
+* [creates.io - Rusts community create registry.](https://crates.io/) - 20201117
+* [Getting started with the Rust pacage manager, Cargo](https://opensource.com/article/20/3/rust-cargo) - 20200303
+* [The Cargo Book](https://doc.rust-lang.org/stable/cargo/) - 20200303
