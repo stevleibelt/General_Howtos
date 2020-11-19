@@ -49,10 +49,11 @@ ansible-playboot [-i <path to the ini>] -l <hostname> <playbook> [-vvvv]
 
 # links
 
-* [official site - ansible.com](https://www.ansible.com) - 2020-02-11
-* [official documentation](https://docs.ansible.com) - 2020-02-11
-    * [install ansible](https://docs.ansible.com/ansible/latest/index.html) - 2020-02-11
-    * [configure ansible](https://docs.ansible.com/ansible/latest/user_guide/index.html) - 2020-02-11
+* [ansible cheat sheet](https://opensource.com/article/20/11/ansible-cheat-sheet) - 20201119
+* [official site - ansible.com](https://www.ansible.com) - 20200211
+* [official documentation](https://docs.ansible.com) - 20200211
+    * [install ansible](https://docs.ansible.com/ansible/latest/index.html) - 20200211
+    * [configure ansible](https://docs.ansible.com/ansible/latest/user_guide/index.html) - 20200211
 * [configuration management - wikipedia.org](https://en.wikipedia.org/wiki/Configuration_management)
 * [lineinfile module - fabian-affolter.ch](http://fabian-affolter.ch/blog/the-lineinfile-module-of-ansible/#comment-4707)
-* [How do ansible tags work? - percona.com](https://www.percona.com/blog/2020/04/27/how-do-ansible-tags-work/) - 2020-04-28
+* [How do ansible tags work? - percona.com](https://www.percona.com/blog/2020/04/27/how-do-ansible-tags-work/) - 20200428
