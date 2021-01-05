@@ -52,8 +52,9 @@ ldd /usr/bin/bash
 
 # links
 
-* [secure login](http://www.farinspace.com/secure-login-linux-server/)
 * [display failed login attempt](http://www.cyberciti.biz/tips/linux-how-do-i-display-failed-login-attempt.html)
+* [linux-audit.com - helpfull page to get started.](https://linux-audit.com/) - 20210105
 * [failed ssh login attemps](https://www.linuxquestions.org/questions/linux-security-4/failed-ssh-login-attempts-340366/)
-* [xinitrc](https://wiki.archlinux.org/index.php/Xinitrc)
+* [secure login](http://www.farinspace.com/secure-login-linux-server/)
 * [suricata howto - german](http://www.pro-linux.de/artikel/2/1751/suricata-einbruchserkennung-mit-dem-erdmaennchen.html)
+* [xinitrc](https://wiki.archlinux.org/index.php/Xinitrc)
