@@ -85,16 +85,48 @@ usermod -l <old user name> <new user name>
 #you should rename the fitting homefolder also
 ```
 
+# expire user
+
+Benefit of expire a user is a clear message "your account as expired ...".
+
+```
+#expire now
+chage --expiredate 0 <user name>
+
+#expire in 14 days
+chage --expiredate 14 <user name>
+
+#reset expire
+chage --expiredate -1 <user name>
+```
+
 # lock user
 
 ```
-usermod -L <user name>
+#quickest way
+usermod --lock <user name>
+
+#the right way
+usermod --lock -expiredate 1 --shell /bin/nologin <user name>
+
+#unlock
+usermod --unlock -expiredate 99999 --shell /bin/bash <user name>
 ```
 
-# unlock user
+# delete user
 
 ```
-usermod -U <user name>
+#check if user exists on the machine
+getent passwd <user name>
+
+#check if processes are running
+ps aux | grep "^<user name>"
+
+#check files owned by the user
+find / -xdev -user <user name>
+
+#delete user
+deluser <user name>
 ```
 
 # get user id
