@@ -1,5 +1,7 @@
 # sysctl - configure kernel parameters at runtime
 
+Use a tool like `lynis` to check if live system and `/etc/sysctl.conf` are aligned or not.
+
 ## sidplay all values
 
 ```
