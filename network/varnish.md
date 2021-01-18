@@ -91,6 +91,7 @@ sub vcl_recv {
 # links 
 
 * [how to install varnish](https://packagecloud.io/varnishcache/varnish41/install)
+* [Object lifetime: TTL, Grace, Keep Tutorial](https://docs.varnish-software.com/tutorials/object-lifetime/) - 20210118
 * https://www.varnish-cache.org/docs/4.0/
 * https://www.varnish-cache.org/docs/4.0/glossary/index.html
 * https://www.varnish-cache.org/docs/4.0/reference/vcl.html
