@@ -40,6 +40,7 @@ php -i
 
 # links
 
+* [Best Practices from TheCodingMachine](http://bestpractices.thecodingmachine.com/) - 20210202
 * http://www.tuxradar.com/practicalphp
 * http://appserver.io/
 * https://github.com/fzaninotto/Faker
