@@ -17,8 +17,10 @@
 * ctrl + w  w   - switch to other window
 * :diffupdate   - updates diff
 * :syntax off   - no syntax highlighting
-* zo            - open folded text
-* zc            - close folded text
+* zo            - open folded lines
+* zc            - close folded lines
+* zr            - unfold both files completelly
+* zm            - fold both files completelly
 
 # links
 

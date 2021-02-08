@@ -1,3 +1,9 @@
+# Commands
+
+| Command on the mariadb shell | Description |
+| --- | --- |
+| SELECT VERSION(); | Outputs current maria db version |
+
 # Link
 
 * [MySQLTuner](https://github.com/major/MySQLTuner-perl) - 20210114
