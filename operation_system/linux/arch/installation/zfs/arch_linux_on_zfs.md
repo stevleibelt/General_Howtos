@@ -1,12 +1,14 @@
 # Disk layout
 
-|| UEFI/GPT || BIOS/MS-Dos || Mountpoint ||
+| UEFI/GPT | BIOS/MS-Dos | Mountpoint |
+| --- | --- | --- |
 | /dev/sdx1 Fat32 BOOT_A ESP | /dev/sdx1 EXT3 BOOT_A | /boot |
 | /dev/sdx2 ZFS [MIRROR] | /dev/sdx2 ZFS [MIRROR] | |
 
 # Zpool layout
 
-|| Zpool || Mountpoint ||
+| Zpool | Mountpoint |
+| --- | --- | --- |
 | <zpool>/ROOT | none |
 | <zpool>/ROOT/arch | / |
 | <zpool>/home | /home |
