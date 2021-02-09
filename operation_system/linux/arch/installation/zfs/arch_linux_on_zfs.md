@@ -8,7 +8,7 @@
 # Zpool layout
 
 | Zpool | Mountpoint |
-| --- | --- | --- |
+| --- | --- |
 | <zpool>/ROOT | none |
 | <zpool>/ROOT/arch | / |
 | <zpool>/home | /home |
