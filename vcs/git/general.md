@@ -261,6 +261,7 @@ git help hooks
 
 * http://try.github.io/
 * [12 tips for git](https://opensource.com/article/18/4/12-git-tips-gits-12th-birthday)
+* [bitbucket git howto](https://www.atlassian.com/git/tutorials/setting-up-a-repository) - 20210209
 * http://ricardofilipe.com/projects/firstaidgit/
 * https://git.wiki.kernel.org/
 * https://www.kernel.org/pub/software/scm/git/docs/git-checkout.html
