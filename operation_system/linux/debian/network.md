@@ -66,6 +66,17 @@ source /etc/profile.d/proxy.sh
 env | grep -i proxy
 ```
 
+## For apt
+
+```
+cat >/etc/apt/apt.conf.d/proxyConf<DELIM
+Acquire::http
+{
+    Proxy "http://<username>:<password>@<proxy>:<port>";
+}
+DELIM
+```
+
 If needed, bypass the proxy variables in your calls made with sudo by adding following line to `/etc/sudoers` (Thanks [arch wiki](https://wiki.archlinux.org/index.php/Sudo#Environment_variables)).
 
 ```
