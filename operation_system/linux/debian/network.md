@@ -68,7 +68,7 @@ env | grep -i proxy
 ## For apt
 
 ```
-cat >/etc/apt/apt.conf.d/proxyConf<DELIM
+cat >/etc/apt/apt.conf.d/proxyConf<<DELIM
 Acquire::http
 {
     Proxy "http://<username>:<password>@<proxy>:<port>";
