@@ -1,3 +1,14 @@
+# microcode
+
+Enable `contrib` and `non-free` in `/etc/apt/sources.list`.
+
+```
+apt-get update
+apt-get install amd64-microcode
+#or
+apt-get install intel-microcode
+```
+
 # error solving
 
 ## debbootstrap stops with "Error executing gpgv to check Release signature"

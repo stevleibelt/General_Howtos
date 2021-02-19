@@ -12,21 +12,20 @@ nameserver <an other ip address>
 # static ip
 
 ```
-vim /etc/network/interfaces
+vim /etc/network/interfaces.d/enp0s25
 
 #loopback
 auto lo #auto up on start
 iface lo inet loopback
 
 #first interface
-auto eth0
-
-iface eth0 inet static
-    address 192.168.1.118  
-    gateway 192.168.1.1
-    netmask 255.255.255.0
-    network 192.168.1.0
-    broadcast 192.168.1.255
+auto enp0s25
+    iface enp0s25 inet static
+        address 192.168.1.118  
+        gateway 192.168.1.1
+        netmask 255.255.255.0
+        network 192.168.1.0
+        broadcast 192.168.1.255
 ```
 
 # dhcp client configuration
