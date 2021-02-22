@@ -126,7 +126,11 @@ ps aux | grep "^<user name>"
 find / -xdev -user <user name>
 
 #delete user
-deluser <user name>
+##on debian systems
+deluser --remove-home <user name>
+
+##on non debian systems
+userdel --remove <user name>
 ```
 
 # get user id
