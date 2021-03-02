@@ -40,10 +40,11 @@ http-proxy <ip address> <port>
 
 # links
 
-* [docker image: kylemanna/openvpn](https://hub.docker.com/r/kylemanna/openvpn/) - 2018-11-09
-* [docker image: linuxserver/openvpn-as](https://hub.docker.com/r/linuxserver/openvpn-as/) - 2018-11-09
-* [PiVPN](http://www.pivpn.io/) - 2019-03-24
-* [Building A Raspberry Pi VPN Part One: How And Why To Build A Server](https://readwrite.com/2014/04/10/raspberry-pi-vpn-tutorial-server-secure-web-browsing/) - 2014-04-14
+* [Building A Raspberry Pi VPN Part One: How And Why To Build A Server](https://readwrite.com/2014/04/10/raspberry-pi-vpn-tutorial-server-secure-web-browsing/) - 20140414
+* [docker image: kylemanna/openvpn](https://hub.docker.com/r/kylemanna/openvpn/) - 20181109
+* [docker image: linuxserver/openvpn-as](https://hub.docker.com/r/linuxserver/openvpn-as/) - 20181109
+* [OpenVPN IPv6 minimal configuration](https://4sysops.com/archives/openvpn-ipv6-minimal-configuration/) - 20210302
+* [PiVPN](http://www.pivpn.io/) - 20190324
 * https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-14-04
 * http://n0where.net/openvpn-raspberry-pi/
 * http://raspberrypihelp.net/tutorials/1-openvpn-server-tutorial
