@@ -282,6 +282,7 @@ echo 'set -o vi' >> ~/.bashrc
 
 # links
 
+* [A Vim Guide for Advanced Users](https://thevaluable.dev/vim-advanced/) - 20210227
 * http://hea-www.harvard.edu/~fine/Tech/vi.html
 * http://www.swaroopch.com/notes/vim/
 * http://vimcasts.org/
