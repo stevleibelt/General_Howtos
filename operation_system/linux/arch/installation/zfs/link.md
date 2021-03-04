@@ -1,5 +1,7 @@
 # link
 
+* [Arch Iso ZFS build script.](https://github.com/stevleibelt/arch-linux-live-cd-iso-with-zfs) - Build your own arch.iso with this build script - 20210224
+* [Arch Iso ZFS "installer".](https://github.com/eoli3n/archiso-zfs) - 20210224
 * [Arch Linux Root on ZFS - openzfs](https://openzfs.github.io/openzfs-docs/Getting%20Started/Arch%20Linux/Arch%20Linux%20Root%20on%20ZFS.html) - 20210211
 * [How to create a ZFS zpool that GRUB can read](https://unix.stackexchange.com/questions/447960/how-to-create-a-zfs-zpool-that-grub-can-read) - 20180605
 * [Arch Linux on an encrypted ZFS root system](https://aaronlauterer.com/blog/2017/04/arch-linux-on-an-encrypted-zfs-root-system/) - 20170418
