@@ -34,6 +34,7 @@ Well, there is no silver bullet/the cake is a lie.
 
 * [Lösung für "Die Vertrauensstellung zwischen dieser Arbeitsstation und der primären Domäne konnte nicht hergestellt werden"](https://www.windowspro.de/wolfgang-sommergut/loesung-fuer-vertrauensstellung-zwischen-dieser-arbeitsstation-primaeren-domaene) - 20171206
 * [Lösung - Die Vertrauensstellung zwischen dieser Arbeitsstation und der primären Domäne konnte nicht hergestellt werden](https://itrig.de/index.php?/archives/1840-Loesung-Die-Vertrauensstellung-zwischen-dieser-Arbeitsstation-und-der-primaeren-Domaene-konnte-nicht-hergestellt-werden.html) - 20140326
+* [Repairing Broken Trust Relationship Between Workstation and AD Domain](http://woshub.com/repair-trust-relationship-workstation-with-ad-domain/) - 20210309
 * [Reset-ComputerMachinePassword](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/reset-computermachinepassword) - 20201104
 * [Test-ComputerSecureChannel](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/test-computersecurechannel) - 20201104
 * [Use Netdom.exe to reset machine account passwords of a Windows Server domain controller](https://docs.microsoft.com/en-us/troubleshoot/windows-server/windows-security/use-netdom-reset-domain-controller-password) - 20200908
