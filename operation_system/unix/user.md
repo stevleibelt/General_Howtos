@@ -58,6 +58,17 @@ su - <user name> -c "<command> <argument...>"
 sudo -u <command>
 ```
 
+# change username
+
+```
+#enable root login via ssh
+#   sudo passwd root
+#   vim /etc/ssh/sshd_config #PermitRootLogin yes
+#   restart sshd.service
+#   login as root
+usermod -l <new_name> -d /home/<new_name> -m <old_name>
+```
+
 # change login shell
 
 ## fetch available shells
