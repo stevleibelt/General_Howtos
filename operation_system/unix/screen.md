@@ -21,6 +21,9 @@ screen -d -r [<session identifier>]
 
 #kill screen session without reattaching it
 screen -S <session identifier> -X quit
+
+#start a screen session by doing something and keep the session alive by starting a shell
+session -dmS my_session_name bash -c 'echo "this is a test" >> bazzline.log; exec bash'
 ```
 
 ```
