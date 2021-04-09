@@ -1,3 +1,18 @@
+# special parameters
+
+| Parameter | Definition |
+| $* | List of arguments (as a string) |
+| $@ | List of arguments (as an array) |
+| $# | Number of positional parameters |
+| $$ | PID of the current shell |
+| $! | PID of the last command executed in the background |
+| $? | Exit code of the last-executed command |
+| $0 | Path to the currently running script |
+| $- | Current shell option flags |
+| $_ | Gives the last argument to the previous command |
+
+[Source](https://blog.victormendonca.com/2017/09/26/bash-special-parameters/) - 20170926
+
 # comment
 
 ```
