@@ -1,26 +1,27 @@
-# special parameters
+# Special Parameters
 
 | Parameter | Definition |
-| $* | List of arguments (as a string) |
-| $@ | List of arguments (as an array) |
-| $# | Number of positional parameters |
-| $$ | PID of the current shell |
-| $! | PID of the last command executed in the background |
-| $? | Exit code of the last-executed command |
-| $0 | Path to the currently running script |
-| $- | Current shell option flags |
-| $_ | Gives the last argument to the previous command |
+| --- | --- |
+| `$*` | List of arguments (as a string) |
+| `$@` | List of arguments (as an array) |
+| `$#` | Number of positional parameters |
+| `$$` | PID of the current shell |
+| `$!` | PID of the last command executed in the background |
+| `$?` | Exit code of the last-executed command |
+| `$0` | Path to the currently running script |
+| `$-` | Current shell option flags |
+| `$_` | Gives the last argument to the previous command |
 
 [Source](https://blog.victormendonca.com/2017/09/26/bash-special-parameters/) - 20170926
 
-# comment
+# Comment
 
 ```
 #this is a comment
 echo "foo" #comment after a command
 ```
 
-# variables
+# Variables
 
 For bash variables take a look into the [reference](https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html) section.
 
@@ -51,7 +52,7 @@ echo "$foo"
 echo "${foo}bar"
 ```
 
-# output
+# Output
 
 ```
 #simple line
@@ -67,6 +68,6 @@ a
 bar"
 ```
 
-# link
+# Link
 
 * [tips for everyday use](https://opensource.com/article/18/5/bash-tricks)
