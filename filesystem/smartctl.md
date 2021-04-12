@@ -9,6 +9,16 @@ smartctl -a /dev/<device>
 smartctl -H /dev/<device>
 ```
 
+```
+#check if smart is supported on your device
+smartctl -a /dev/<device>
+#enable smartmon
+#@see
+#   man smartd
+#   man smartd.conf
+smartctl -s on /dev/<device>
+```
+
 # run a test
 
 ```
