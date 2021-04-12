@@ -2,6 +2,8 @@
 
 ```
 hwclock -r
+#if you want to know more
+hwclock --verbose
 ```
 
 # write hardware clock to current system clock
