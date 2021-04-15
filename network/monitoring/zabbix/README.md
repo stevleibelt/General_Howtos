@@ -1,7 +1,10 @@
 # zabbix
 
+## Sections
+
 * [Installation](install.md)
 * [Problem solving](problem.md)
+* [Windows](windows.md)
 
 # Links
 
