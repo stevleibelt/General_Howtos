@@ -3,7 +3,8 @@
 ## Read windows eventlog (german: Ereignisprotokoll)
 
 !This is a work in progress!
-Either I did something wrong or I an not patient enough to wait for data.
+
+Either I did something wrong or I am not patient enough to wait for data.
 
 ### Precondition
 
