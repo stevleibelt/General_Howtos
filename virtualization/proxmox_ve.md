@@ -5,4 +5,6 @@
 
 # links
 
-* [Prepare Installation Media](https://pve.proxmox.com/wiki/Prepare_Installation_Media) - 20210215
+* [Prepare installation media](https://pve.proxmox.com/wiki/Prepare_Installation_Media) - 20210215
+* [Official admin guide](https://pve.proxmox.com/pve-docs/pve-admin-guide.html) - 20210412
+* [Official wiki](https://pve.proxmox.com/wiki/Main_Page) - 20210412

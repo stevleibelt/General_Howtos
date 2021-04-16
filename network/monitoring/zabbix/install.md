@@ -1,6 +1,4 @@
-# zabbix
-
-## Installation
+# Installation
 
 ```
 wget https://repo.zabbix.com/zabbix/5.0/debian/pool/main/z/zabbix-release/zabbix-release_5.0-1+buster_all.deb
@@ -27,7 +25,4 @@ systemctl enable zabbix-server zabbix-agent apache2
 #continue with: https://www.zabbix.com/documentation/current/manual/installation/install#installing_frontend
 ```
 
-# Links
 
-* [Configuring High Availability (HA) Zabbix Server on CentOS 7](https://ericsysmin.com/2016/02/18/configuring-high-availability-ha-zabbix-server-on-centos-7/) - 20160218
-* [Zabbix Homepage](https://www.zabbix.com/) - 20210121
