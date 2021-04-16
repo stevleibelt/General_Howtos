@@ -12,6 +12,19 @@ VBoxManage clonehd --format RAW <my image>.vmdk <my image>.raw
 qemu-img convert -f raw <my image>.raw -O qcow2 <my image>.img
 ```
 
+# examples
+
+## arch linux arm
+
+```
+#create virtual harddisk
+qemu-img create -f qcow2 archlinuxarm.img 4G
+#first boot from cdrom
+qemu--arm archlinuxarm.img -m 512 -cdrom arch-0.7.2-ftp.iso -boot d
+#regular boot
+qemu--arm archlinuxarm.img -m 512
+```
+
 # links
 
 * https://wiki.archlinux.org/index.php/QEMU

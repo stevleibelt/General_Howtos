@@ -21,6 +21,17 @@
 * reboot device
 * reenable usb debugging
 
+# erase cache via fastboot
+
+```
+#list options
+sudo fastboot help
+#erase cache
+sudo fastboot erase cache
+#reboot into bootloader
+sudo fastboot reboot-bootloader
+```
+
 # install custom rom
 
 * download something like twrp
