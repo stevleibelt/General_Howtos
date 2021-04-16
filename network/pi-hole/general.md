@@ -59,6 +59,12 @@ Options:
 
 # Installation
 
+## Via Podman
+
+```
+
+```
+
 ## On Archlinuxarm
 
 ```
