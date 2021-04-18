@@ -25,4 +25,6 @@ systemctl enable zabbix-server zabbix-agent apache2
 #continue with: https://www.zabbix.com/documentation/current/manual/installation/install#installing_frontend
 ```
 
+# Link
 
+* [MySQL performance tuning 101 for Zabbix](https://blog.zabbix.com/mysql-performance-tuning-101-for-zabbix/13899/) - 20210416
