@@ -29,7 +29,7 @@ function cleanup_and_optimize_syslog_systemevents ()
     local DAYS_TO_KEEP_IN_THE_PAST="${3:-90}"
 
     #bo: cleanup
-    mysql -u ${DATABASE_USER} -p${DATABASE_PASSWORD} -e "DELETE FROM `${DATABASE_NAME}` WHERE `${DATABASE_TABLE}`.`ReceivedAt` < date_add(current_date, interval - ${DAYS_TO_KEEP_IN_THE_PAST} day)" ${DATABASE_NAME}
+    mysql -u ${DATABASE_USER} -p${DATABASE_PASSWORD} -e "DELETE FROM `${DATABASE_TABLE}` WHERE `${DATABASE_TABLE}`.`DeviceReportedTime` < date_add(current_date, interval - ${DAYS_TO_KEEP_IN_THE_PAST} day)" ${DATABASE_NAME}
     #eo: cleanup
 
     #bo: maintenance
