@@ -4,6 +4,7 @@
 
 * [Installation](install.md)
 * [Problem solving](problem.md)
+* [Setup](setup.md)
 * [Windows](windows.md)
 
 # Links
