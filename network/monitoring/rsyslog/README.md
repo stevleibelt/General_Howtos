@@ -3,9 +3,10 @@
 ## Automatically cleanup syslog table
 
 Insert content from below in a cronjob file, adapt the dynamic part and run it once per day.
+Or use the [rsyslog mysql housekeeping](https://github.com/bazzline/rsyslog_mysql_housekeeping) script.
 
 ```
-#/bin/bash
+#!/bin/bash
 ####
 # Deletes entries older than x days
 # Optimize table afterwards.
@@ -14,7 +15,6 @@ Insert content from below in a cronjob file, adapt the dynamic part and run it o
 # @author stev leibelt <artodeto@bazzline.net>
 ####
 
-####
 ####
 # @param: string <database user name>
 # @param: string <database user password>
