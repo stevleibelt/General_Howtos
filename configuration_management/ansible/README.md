@@ -1,18 +1,20 @@
-# terms
+# Ansible
+
+# Terms
 
 * playbook
-* task
+* [task](task.md)
 * handler
-* inventory -  matching list of servers to groups
+* [inventory](inventory.md) -  matching list of servers to groups
 * roles - package of taks, variable,s handlers, modules and other plugins
 * groups
 
-# playbook
+# Playbook
 
 * [introduction into playbooks](http://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html)
 * [create reusable playbooks](http://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse.html)
 
-## useful command line calls to understand an existing playbook
+## Useful command line calls to understand an existing playbook
 
 ```
 #list all available tags
@@ -42,12 +44,25 @@ ansible-playbook playbook.yml --verbose
 ansible-playboot [-i <path to the ini>] -l <hostname> <playbook> [-vvvv]
 ```
 
-## import vs include
+## Import vs include
 
 * import - static (inheritance is working fine for tags)
 * include - dynamic (you have to explicitly apply the tags)
 
-# links
+## Make output more human readable
+
+```
+#@see: https://www.shellhacks.com/ansible-human-readable-output-format/
+##on the command line to test
+ANSIBLE_STDOUT_CALLBACK=yaml ansible-playbook playbook.yml
+
+##in the ansible.cfg
+[defaults]
+# Human-readable output
+stdout_callback = yaml
+```
+
+# Links
 
 * [ansible cheat sheet](https://opensource.com/article/20/11/ansible-cheat-sheet) - 20201119
 * [official site - ansible.com](https://www.ansible.com) - 20200211

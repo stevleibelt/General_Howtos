@@ -32,5 +32,6 @@ Either I did something wrong or I am not patient enough to wait for data.
 
 ### Links
 
+* [Reading Windows Event Logs in Zabbix](https://medium.com/zabbix-tutorials/reading-windows-event-logs-in-zabbix-736d87af8a1e) - 20210423
 * [Zabbix - Überwachen Sie das Ereignisprotokoll unter Windows](https://techexpert.tips/de/zabbix-de/zabbix-ueberwachen-sie-das-ereignisprotokoll-unter-windows/) - 20210415
 * [Zabbix:Template Windows Eventlog](https://znil.net/index.php?title=Zabbix:Template_Windows_Eventlog) - 20150224
