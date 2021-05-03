@@ -74,6 +74,28 @@ shutdown /s /f /t 0
 | `LocalLow` | - | Contains pc specific data (can not be moved) and is used for programms running in `private` mode |
 | `Roaming` | - | Contains programm specific data that can be moved/copied or synchronized like browser profiles |
 
+# Upgrade Home to Pro
+
+[source](http://woshub.com/upgrade-windows-10-edition-without-reinstalling/) - 20210503
+
+```
+#fetch information about current version
+Dism.exe /Online /Get-CurrentEdition
+#expected output
+#   Current Edition : Home
+
+#fetch list of upgrade paths
+Dism.exe /Online /Get-TargetEditions
+#expected output
+#   Target Edition : Professional
+
+#change product key
+#   use `NPPR9-FWDCX-D2C8J-H872K-2YT43` for upgrade
+Changepk.exe
+#expected result
+#   you get a dialog window with `Start`
+```
+
 # Links 
 
 * [Windows 10 official iso download page](https://www.microsoft.com/en-us/software-download/windows10ISO) - 2020-04-19
