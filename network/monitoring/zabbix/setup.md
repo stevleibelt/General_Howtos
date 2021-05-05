@@ -38,3 +38,4 @@ UPDATE `items` SET `delay` = '5m' WHERE `delay` = '1m';
 
 * [database size](https://www.zabbix.com/documentation/current/manual/installation/requirements#database_size) - 20210423
 * [history and trends](https://www.zabbix.com/documentation/current/manual/config/items/history_and_trends) - 20210423
+* [Zabbix proxy performance tuning and troubleshooting](https://blog.zabbix.com/zabbix-proxy-performance-tuning-and-troubleshooting/14013/) - 20210505
