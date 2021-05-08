@@ -1,10 +1,14 @@
 # check smart values (results of last test)
 
-Smartctl on a disk attached via usb is not supported.
+Smartctl on a disk attached via usb is not fully supported.
 Installable via smartmontools.
 
 ```
 #smartctl is in the package smartmontools
+## for usb
+smartctl -a -d sat /dev/<device>
+
+## for normal devices
 smartctl -a /dev/<device>
 smartctl -H /dev/<device>
 ```
@@ -21,6 +25,23 @@ smartctl -s on /dev/<device>
 
 # run a test
 
+## for usb devices
+
+```
+#short test
+smartctl -t short -d sat /dev/<device>
+smartctl -l selftest -d sat /dev/<device>
+
+#long test
+##start
+smartctl -t long -d sat /dev/<device> -T permissive
+
+##check result
+smartctl -l selftest -d sat /dev/<device> -T permissive
+```
+
+## for installed devices
+
 ```
 #list what kind of tests is the devices able to do
 smartctl -c /dev/<device>
@@ -29,8 +50,6 @@ smartctl -c /dev/<device>
 smartctl -t short /dev/<device>
 #check current status
 smartctl -a /dev/<device> | grep -i short
-#for usb devices
-smartctl -A -d sat /dev/<device>
 
 #short with complete disk surface examination)
 smartctl -t long /dev/<device>
@@ -60,3 +79,4 @@ smartctl -a -d ata -s on /dev/<device>
 # links
 
 * https://wiki.archlinux.org/index.php/S.M.A.R.T.
+* [for testing external hdd with smartctl,](https://gist.github.com/meinside/0538087cc60a2f0654bb) - 20201228
