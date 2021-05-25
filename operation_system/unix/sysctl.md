@@ -5,7 +5,9 @@ Each kernel value can also be read or written via the "/proc/sys" path, just rep
 
 You can persist changes by putting it into the file "/etc/sysctl.d/99-my-conf.conf".
 
-## example
+# Example
+
+## General
 
 ```
 #list all available commands
@@ -13,6 +15,19 @@ sysctl -a
 #list all matching your "search term"
 #sysctl <search term>
 sysctl vm
+```
+
+## Swappiness
+
+```
+#list current value
+cat /proc/sys/vm/swappiness
+
+#set temporary
+sudo sysctl vm.swappiness=<int: 0-100>
+
+#set permanent
+sudo echo "vm.swappiness=<int: 0-100>" | sudo tee -a /etc/sysctl.d/99-swappiness.conf
 ```
 
 # links
