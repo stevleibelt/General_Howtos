@@ -36,7 +36,7 @@ podman run --detach \
     --appendonly yes \
     --restart on-failure \
     --name nextcloud-redis \
-    docker.io/library/redis:alpine
+    docker.io/library/redis:alpine \
     redis-server --requirepass REDIS_PASSWORD
 
 #setup nextcloud
