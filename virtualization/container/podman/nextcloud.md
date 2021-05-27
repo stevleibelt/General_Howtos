@@ -34,15 +34,14 @@ podman run --detach \
 podman run --detach \
     --network nextcloud-network \
     --appendonly yes \
-    --restart on-failure \
     --name nextcloud-redis \
     docker.io/library/redis:alpine \
-    redis-server --requirepass REDIS_PASSWORD
+    redis-server --restart on-failure --requirepass REDIS_PASSWORD
 
 #setup nextcloud
 podman run --detach \
-    --env REDIS_HOST="localhost"
-    --env REDIS_HOST_PASSWORD="REDIS_PASSWORD"
+    --env REDIS_HOST="localhost" \
+    --env REDIS_HOST_PASSWORD="REDIS_PASSWORD" \
     --env MYSQL_HOST=nextcloud-database.dns.podman \
     --env MYSQL_DATABASE=nextcloud \
     --env MYSQL_USER=nextcloud \
