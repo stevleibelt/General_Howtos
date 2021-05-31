@@ -71,6 +71,15 @@ PasswordAuthentication no
 ChallengeResponseAuthentication no
 ```
 
+## enable logging
+
+```
+SyslogFacility AUTH
+LogLevel DEBUG
+#systemctl restart sshd.service
+#journal -xfn | grep sshd
+```
+
 # links
 
 * [ssh keys](https://wiki.archlinux.org/index.php/SSH_Keys)
