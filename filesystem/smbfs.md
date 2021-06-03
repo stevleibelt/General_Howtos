@@ -5,7 +5,7 @@ cifs should be the preferred way.
 ## smbclient
 
 ```
-smbclient \\\\<hostname|ip address>\foldername -U <username>
+smbclient \\\\<hostname|ip address>\\foldername -U <username>
 ```
 
 ## smbfs
