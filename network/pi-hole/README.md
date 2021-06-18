@@ -84,12 +84,27 @@ sudo pacman -U *.tar.xz
 
 # Testing
 
+You should run the tests once with providing the ip address of your pi-hole and a second time without providing the ip address of your pi-hole.   
+If both tests are generating the right results, you have verified that all clients using the pi-hole as dns server.
+
+## Linux
+
 ```
 # should work
 dig @<ip of pi-hole> google.com
 
 # should be blocked
 dig @<ip of pi-hole> s.amazon-adsystem.com
+```
+
+## Windows
+
+```
+# should work
+Resolve-DnsName -Server <ip of pi-hole> -Name google.com 
+
+# should be blocked
+Resolve-DnsName -Server <ip of pi-hole> -Name s.amazon-adsystem.com
 ```
 
 # Error fixing
