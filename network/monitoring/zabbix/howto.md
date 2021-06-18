@@ -24,8 +24,18 @@
         * `curl -k <url> | grep <string>`
 * Check it: `Monitoring` -> `Hosts` -> `<foo.bar.local>` -> `Web` -> `<your web scenarion>`
     * Check the date
+* Setup trigger/alert
+    * `Configuration` -> `Hosts` -> `<foo.bar.local>` -> `Triggers` -> `Create Trigger`
+    * Name `<foo.bar.local webpage>`
+    * Serverity: `Warning`
+    * Problem expression: `avg/<foo.bar.local>/web.test.fail[<foo.bar.local>],3)>=1`
+    * OK event generation: `Recovery expression`
+    * Recovery expression: `last/<foo.bar.local>/web.test.fail[<foo.bar.local>])=0`
+    * Allow manual close: `check`
+    * `Add`
 
 ### Links
 
 * [Web Monitoring With ZABBIX Explained](https://www.youtube.com/watch?v=L_J56StHHbg) - 20210617
 * [9. Web monitoring](https://www.zabbix.com/documentation/current/manual/web_monitoring) - 20210617
+* [Monitoring WebSite with Zabbix](https://sysadminwork.com/monitoring-website-with-zabbix/) - 20200612
