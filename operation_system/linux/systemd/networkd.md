@@ -1,6 +1,22 @@
 # systemd-networkd
 
+# Configuration
+
+## Static IP Address
+
 # Error solving
+
+```
+#/etc/systemd/network/you-nic.network
+[Match]
+Name=<device identifier>
+
+[Network]
+Address=<ip address>/<network>  #e.g. 172.16.12.32/16
+Gateway=<ip address>
+DNS=<ip address>
+[DNS=<ip address>]
+```
 
 ## "failed to save lldp data" permission denied
 
