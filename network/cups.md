@@ -8,20 +8,23 @@ vim /etc/cups/cupsd.conf
 <Location />
     Order allow,deny
     Allow localhost
+    Allow @LOCAL
     #allow for dedicated subnet
-    Allow from 192.168.0.
+    #Allow from 192.168.0.
     #allow all
-    Allow all
+    #Allow all
 </Location>
 #check if the server is listen on the right ip address
 Listen <hostname>:631
+#allow for all in the supnet
+Listen <host ip address>:631
 ```
 
 # error handling
 
 Set the `LogLevel` to `Debug` in `/etc/cups/cupsd.conf`.
 
-## printer is disabled
+## printer is disabled / Unable to send data to printer. / The printer may not exist or is unavailable at this time
 
 ```
 #check current state
@@ -29,6 +32,10 @@ lptstate -p
 
 cupsenable <printer name>
 ```
+_or_
+
+* open `https://<cups server ip address or host name>:631`
+* go to `Printers` -> `<printer>` -> `Maintenance` -> `Recume Printer`
 
 # cupsctl
 
