@@ -2,6 +2,8 @@
 
 * [download](https://www.proxmox.com/en/downloads/category/iso-images-pve) iso
 * `sudo dd if=proxmox-ve_*.dmg of=/dev/rdiskX bs=1m` (if you use rufus, use `dd mode`)
+* `echo "deb [trusted=yes] http://www.deb-multimedia.org buster main" > /etc/apt/sources.list.d/pve-no-subscription`
+    * [see](https://www.svennd.be/proxmox-ve-5-0-fix-updates-upgrades/)
 
 # links
 
