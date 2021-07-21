@@ -13,3 +13,7 @@ There are multiple [punycode convertes](https://www.punycoder.com/) online avail
 
 Hint! If you need to write an email to a domain with special characters, do only insert the domainname in a punycode converter.
 For example `info@überspace.de` would become `info@xn--berspace-55a.de` and not `xn--info@berspace-0ob.de`.
+
+# links
+
+* [RFC-3492](https://datatracker.ietf.org/doc/html/rfc3492)
