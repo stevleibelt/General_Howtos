@@ -34,6 +34,23 @@
     * Allow manual close: `check`
     * `Add`
 
+## Remove `OneSyncSvc_` not running from windows auto discovery
+
+* login to zabbix as administrator
+* `Configuration` -> `Templates`
+* Insert `Windows service` in the name section and click on `Apply`
+* Choose your fitting servce (e.g. `Template Module Windows services by Zabbix agent active`)
+* Click on `Discovery rules`
+* Select `Windows service discovery`
+* Select `Filters`
+* Click on `Add`
+* Insert into `Macro` -> `{#SERVICE.NAME}`
+* Select `does not match`
+* Insert into `Regular expression` -> `OneSyncSvc_`
+* Clock on `Update`
+
+[source](https://www.zabbix.com/forum/zabbix-help/49798-how-to-automatically-disable-special-triggers-from-discovery) - 20210803
+
 ### Links
 
 * [Web Monitoring With ZABBIX Explained](https://www.youtube.com/watch?v=L_J56StHHbg) - 20210617
