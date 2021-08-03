@@ -15,15 +15,15 @@ Well, there is no silver bullet/the cake is a lie.
     * restart computer
     * login as <domain>\<user>
     * if this does not work, you can do the same in the command environment
-    * `NETDOM RESETPWD /Server:<domain controller> /UserD:<domain>\<administrator> /PasswordD:*`
+    * `NETDOM RESETPWD /Server:<domain controller> /UserD:<domain>\<administrator> /PasswordD:*` (works only on old windows versions)
 * try to fix things internally
     * login as local admin
     * start powershell as administrator
     * `Test-ComputerSecureChannel -Verbose`
-    * if it retunrs `$false`
+    * if it returns `$false`
     * `Test-ComputerSecureChannel -Repair -Server <domain controller> -Credential <domain>\<administrator>`
     * if this does not work, you can do the same in the command environment
-    * `NETDOM RESETPWD /Server:<domain controller> /UserD:<domain>\<administrator> /PasswordD:*`    #if you write `*` in the password, a prompt will be displayed to enter your password
+    * `NETDOM RESETPWD /Server:<domain controller> /UserD:<domain>\<administrator> /PasswordD:*`    #if you write `*` in the password, a prompt will be displayed to enter your password (works only on old windows versions)
 * if all is not working
     * login as local admin
     * remove pc from domain by switching into workgroup
