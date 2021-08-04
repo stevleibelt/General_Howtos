@@ -47,7 +47,8 @@
 * Insert into `Macro` -> `{#SERVICE.NAME}`
 * Select `does not match`
 * Insert into `Regular expression` -> `OneSyncSvc_`
-* Clock on `Update`
+* Click on `Update`
+* You need to delete the host and create it again to let the discovery process do its job
 
 [source](https://www.zabbix.com/forum/zabbix-help/49798-how-to-automatically-disable-special-triggers-from-discovery) - 20210803
 
