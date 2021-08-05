@@ -52,10 +52,10 @@
 * Clock on `Administration` -> `General` -> `Regular expressions` -> `Windows service names for discovery`
 * insert `|OneSyncSvc`
 
-[source](https://www.zabbix.com/forum/zabbix-help/49798-how-to-automatically-disable-special-triggers-from-discovery) - 20210803
-
 ### Links
 
-* [Web Monitoring With ZABBIX Explained](https://www.youtube.com/watch?v=L_J56StHHbg) - 20210617
 * [9. Web monitoring](https://www.zabbix.com/documentation/current/manual/web_monitoring) - 20210617
+* [How to automatically disable special triggers from discovery](https://www.zabbix.com/forum/zabbix-help/49798-how-to-automatically-disable-special-triggers-from-discovery) - 20210803
 * [Monitoring WebSite with Zabbix](https://sysadminwork.com/monitoring-website-with-zabbix/) - 20200612
+* [Web Monitoring With ZABBIX Explained](https://www.youtube.com/watch?v=L_J56StHHbg) - 20210617
+* [Zabbix Monitoring – Simple Check, Agent, SNMP](https://www.itnotes.it/linux/zabbix-monitoring/) - 20190827
