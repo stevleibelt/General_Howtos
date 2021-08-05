@@ -49,6 +49,8 @@
 * Insert into `Regular expression` -> `OneSyncSvc_`
 * Click on `Update`
 * You need to delete the host and create it again to let the discovery process do its job
+* Clock on `Administration` -> `General` -> `Regular expressions` -> `Windows service names for discovery`
+* insert `|OneSyncSvc`
 
 [source](https://www.zabbix.com/forum/zabbix-help/49798-how-to-automatically-disable-special-triggers-from-discovery) - 20210803
 
