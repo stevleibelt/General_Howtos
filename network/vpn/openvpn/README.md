@@ -40,6 +40,9 @@ http-proxy <ip address> <port>
 
 # links
 
+* [Step 1 - Install OpenVPN on your Linux PC](https://opensource.com/article/21/7/openvpn-router) - 20210804
+* [Step 2 - Configure your OpenVPN server on Linux](https://opensource.com/article/21/7/openvpn-firewall) - 20210805
+* [Step 3 - Access OpenVPN from a client computer](https://opensource.com/article/21/7/openvpn-client) - 20210806
 * [Building A Raspberry Pi VPN Part One: How And Why To Build A Server](https://readwrite.com/2014/04/10/raspberry-pi-vpn-tutorial-server-secure-web-browsing/) - 20140414
 * [docker image: kylemanna/openvpn](https://hub.docker.com/r/kylemanna/openvpn/) - 20181109
 * [docker image: linuxserver/openvpn-as](https://hub.docker.com/r/linuxserver/openvpn-as/) - 20181109
