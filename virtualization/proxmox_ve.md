@@ -5,6 +5,10 @@
 * `echo "deb [trusted=yes] http://www.deb-multimedia.org buster main" > /etc/apt/sources.list.d/pve-no-subscription`
     * [see](https://www.svennd.be/proxmox-ve-5-0-fix-updates-upgrades/)
 
+# upgrade
+
+* [upgrade from proxmoxve 6 to proxmoxve 7](https://pve.proxmox.com/wiki/Upgrade_from_6.x_to_7.0)
+
 # links
 
 * [Prepare installation media](https://pve.proxmox.com/wiki/Prepare_Installation_Media) - 20210215
