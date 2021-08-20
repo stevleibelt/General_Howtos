@@ -60,6 +60,34 @@ apt-get remove --purge <package name>
 apt-get install <package name>
 ```
 
+# upgrade paths
+
+## from 10 (buster) to 11 (bullseye)
+
+```
+#update current system
+sudo apt update && sudo apt upgrade
+sudo apt install gcc-8-base
+
+#adapt source list
+sudo cp /etc/apt/source.list /etc/apt/source.list.20210819
+sudo sed -i -e 's/buster/bulseye/g' /etc/apt/source.list
+#optional, repeat the two steps above with every file in /etc/apt/source.list.d
+
+#do the upgrade
+sudo apt update
+#apt full-upgrade is working too
+sudo apt dist-upgrade
+
+#after upgrade
+sudo systemctl reboot
+sudo apt --purge autoremove
+
+#if you want to
+#cat /etc/issue would work too
+cat /etc/os-release
+```
+
 # links
 
 * https://www.debian.org/releases/stable/i386/release-notes/ch-upgrading.html
