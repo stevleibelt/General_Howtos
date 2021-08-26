@@ -81,15 +81,33 @@
 
 ### via cmd
 
-* `WIN`+`R` -> `cmd` -> SHIFT+ENTER (run as administrator)
-* `wmic printer get name` (list all available printers)
-* `printui.exe /dl /n "<full qualified printer name>"`
+```
+#`WIN`+`R` -> `cmd` -> SHIFT+ENTER (run as administrator)
+#list all available printers
+wmic printer get name
+
+printui.exe /dl /n "<full qualified printer name>"
+```
 
 ### via powershell
 
-* `WIN`+`S` -> `PowerShell` -> SHIFT+ENTER (run as administrator)
-* `Get-Printer | Format-List Name` (list all available printers)
-* `remove-printer -name "<full qualified printer name>"`
+```
+#`WIN`+`S` -> `PowerShell` -> SHIFT+ENTER (run as administrator)
+#list available printers
+Get-Printer
+
+#remove printer
+Remove-Printer -name "<full qualified printer name>"
+
+#remove printer driver
+Get-PrinterDriver
+
+Remove-PrinterDriver -Name "<full qualified printer name>"
+#if you get the error message that the driver is still in use
+#   but there is no printer available anymore
+Restart-Service Spooler
+Remove-PrinterDriver -Name "<full qualified printer name>"
+```
 
 # links
 
