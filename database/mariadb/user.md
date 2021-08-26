@@ -16,6 +16,34 @@ GRANT ALL PRIVILEGES ON *.* TO '<username>'@'localhost';
 
 #reload privileges
 FLUSH PRIVILEGES;
+
+#exit
+\q
+```
+
+# create a superuser
+
+```
+#login as root
+mysql -u root -p
+
+#create account
+CREATE USER 'superuser'@'%' IDENTIFIED BY '<password>';
+
+#grant privileges
+GRANT ALL PRIVILEGES ON *.* TO 'superuser'@'%' WITH GRAND OPTION;
+
+#reload privileges
+FLUSH PRIVILEGES;
+
+#exit
+\q
+
+#login as superuser
+mysql -u superuser -p
+
+#check privileges
+SHOW GRANTS FOR 'superuser';
 ```
 
 # link
