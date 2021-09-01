@@ -19,6 +19,9 @@ New-PSSession -HostName user@hostname -KeyFilePath c:\\private_key
 #list established ps sessions
 Get-PSSession [-ComputerName <hostname>]
 
+#use a session
+Enter-PSSession <int: id>
+
 #exit a session
 Exit-PSSession
 #_or
