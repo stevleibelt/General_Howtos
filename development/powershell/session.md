@@ -11,8 +11,10 @@ Get-Help *-PSSession
 #Create new persistent session
 #You can put them all in a varabile by doing "$myListOfPSSession = New-PSSession ..."
 New-PSSession -ComputerName <hostname>[, <hostname>[, ...]] [-Credetial mydomain\administrator]
+
 #Create multiple sessions by using a text file with computer names
 $listOfSessions = Get-Content c:\my_servers.txt | New-PSSession -ThrottleLimit 20
+
 #Create a ssh session
 New-PSSession -HostName user@hostname -KeyFilePath c:\\private_key
 
