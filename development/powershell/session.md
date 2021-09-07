@@ -42,13 +42,17 @@ Disconnect-PSSession
 $listOfSessions = New-PSSession -ComputerName ServerOne, ServerTwo -Name ITTaskUpdate
 #   Run script
 Invoke-Command $listOfSessions -FilePath \\NetworkShare\IT\Scripts\Update.ps1
+
 #Disconnect from the session to give someone else the option to open this session
 Get-PSSession -Name ITTaskUpdate | Disconnect-PSSession
+
 #Check session status
 Get-PSSession -Name ITTaskUpdate
+
 #Now someone else could hook into the session
 $session = Connect-PSSession -ComputerName ServerOne -Name ITTaskUpdate [-Credential mydomain\administrator]
 Invoke-Command -Session $session {<some command executed on the server>}
+
 #And Disconnect again so the other person can finish its task
 Disconnect-PSSession -Session $session
 ```
