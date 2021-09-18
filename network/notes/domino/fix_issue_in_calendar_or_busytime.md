@@ -5,8 +5,9 @@ Following fixes are tested only on a IBM Domino 10.x.
 ## Try to let domino do the work
 
 ```
-tell rnrmgr check
-tell rnrmgr validate <name of the ressource>
+#tell rnrmgr check
+#tell rnrmgr validate <name of the ressource>
+tell shed validate <name of the ressource>
 ```
 
 ## Get your hands dirty - the hard way
