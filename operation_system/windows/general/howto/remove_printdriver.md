@@ -14,7 +14,7 @@
     * `WIN`+`s` -> `printermanagement.msc` -> `SHIFT`+`ENTER` (to start it as administrator)
 * Open the printui command
     * `WIN`+`R` -> `cmd` -> `SHIFT`+`ENTER` (to start it as administrator)
-    * `printui.exe`
+    * `printui.exe /s /t2`
 * Where are the drivers stored on your printserver (if needed)
     * `\\<print server>\print$\x64\PCC`
 * Last but not least, there are multiple ways
