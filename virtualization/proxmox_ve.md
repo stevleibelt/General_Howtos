@@ -9,6 +9,17 @@
 
 * [upgrade from proxmoxve 6 to proxmoxve 7](https://pve.proxmox.com/wiki/Upgrade_from_6.x_to_7.0)
 
+# ntp
+
+```
+timedatectl set-timezone Europe/Berlin
+apt install systemd-timesyncd
+vim /etc/systemd/timesyncd.conf #set your ntp servers
+systemctl start systemd-timesyncd
+systemctl status systemd-timesyncd
+systemctl enable systemd-timesyncd
+```
+
 # links
 
 * [Prepare installation media](https://pve.proxmox.com/wiki/Prepare_Installation_Media) - 20210215
