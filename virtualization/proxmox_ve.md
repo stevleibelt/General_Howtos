@@ -18,6 +18,9 @@ vim /etc/systemd/timesyncd.conf #set your ntp servers
 systemctl start systemd-timesyncd
 systemctl status systemd-timesyncd
 systemctl enable systemd-timesyncd
+
+#check
+timedatectl
 ```
 
 # links
