@@ -5,6 +5,14 @@
 * has build in commands plus Cmdlets (following a Verb-Noun naming pattern)
 * use the "Windows PowerShell ISE" to have a more gui friendly autocomplete
 * the shebang for powershell is `#!/usr/bin/env pwsh`
+* there are four areas where a profile is stored
+
+# Fetch locations of profiles
+
+```
+#@see: https://devblogs.microsoft.com/powershell-community/how-to-make-use-of-powershell-profile-files/
+$PROFILE | Get-Member -MemberType NoteProperty
+```
 
 # Manage local profile (similar to .bashrc)
 
