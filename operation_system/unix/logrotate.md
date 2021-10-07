@@ -39,11 +39,13 @@ DELIM
 logrotate /etc/logrotate.d/my_example -d
 #with verbosity
 logrotate /etc/logrotate.d/my_example -dv
+#
 ```
 
 # link
 
-* [How To Setup Logrotate To Manage Log Files In Linux - seen at 2018-08-22.](https://www.looklinux.com/how-to-setup-logrotate-to-manage-log-files-in-linux/)
-* [How To Manage Log Files With Logrotate On Ubuntu 12.10 - 2013-04-18.](https://www.digitalocean.com/community/tutorials/how-to-manage-log-files-with-logrotate-on-ubuntu-12-10)
-* [How To Manage Logfiles with Logrotate on Ubuntu 16.04 - 2017-11-09.](https://www.digitalocean.com/community/tutorials/how-to-manage-logfiles-with-logrotate-on-ubuntu-16-04)
-* [magic of "logrotate -d" - 2013-04-09](https://ihazem.wordpress.com/2013/04/09/logrotate-olddir-directive-and-executing-logrotate-for-first-time/)
+* [How To Setup Logrotate To Manage Log Files In Linux](https://www.looklinux.com/how-to-setup-logrotate-to-manage-log-files-in-linux/) - 20180822
+* [How To Manage Log Files With Logrotate On Ubuntu 12.10](https://www.digitalocean.com/community/tutorials/how-to-manage-log-files-with-logrotate-on-ubuntu-12-10) - 20130418
+* [How To Manage Logfiles with Logrotate on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-manage-logfiles-with-logrotate-on-ubuntu-16-04) - 20171110
+* [magic of "logrotate -d"](https://ihazem.wordpress.com/2013/04/09/logrotate-olddir-directive-and-executing-logrotate-for-first-time/) - 20130409
+* [Rotate and archive logs with the Linux logrotate command](https://opensource.com/article/21/10/linux-logrotate) - 20211007
