@@ -70,8 +70,8 @@ sudo apt update && sudo apt upgrade
 sudo apt install gcc-8-base
 
 #adapt source list
-sudo cp /etc/apt/source.list /etc/apt/source.list.20210819
-sudo sed -i -e 's/buster/bulseye/g' /etc/apt/source.list
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.20210819
+sudo sed -i -e 's/buster/bullseye/g' /etc/apt/sources.list
 #optional, repeat the two steps above with every file in /etc/apt/source.list.d
 
 #do the upgrade
