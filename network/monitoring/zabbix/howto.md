@@ -34,6 +34,27 @@
     * Allow manual close: `check`
     * `Add`
 
+## Setup apc/ups/usv
+
+* Use [this](https://share.zabbix.com/power-ups/network-ups-generic) generic template
+* or do it manually by following the next stemps
+* login to zabbix as administrator
+* `Configuration` -> `Hosts` -> `Create Host`
+* [No template available](https://www.zabbix.com/de/integrations/apc_ups_snmp)
+* Add the following Macros
+
+| Name | Default Value | Description |
+| --- | --- | --- |
+| {$BATTERY.CAPACITY.MIN.WARN} | 50 | Minimum battery capacity percentage for trigger expression. |
+| {$BATTERY.TEMP.MAX.WARN} | 55 | Maximum battery temperature for trigger expression. |
+| {$SNMP.TIMEOUT} | 5m | The time interval for SNMP agent availability trigger expression. |
+| {$TIME.PERIOD} | 15m | Time period for trigger expression. |
+| {$UPS.INPUT_FREQ.MAX.WARN} | 50.3 | Maximum input frequency for trigger expression. |
+| {$UPS.INPUT_FREQ.MIN.WARN} | 49.7 | Minimum input frequency for trigger expression. |
+| {$UPS.INPUT_VOLT.MAX.WARN} | 243 | Maximum input voltage for trigger expression. |
+| {$UPS.INPUT_VOLT.MIN.WARN} | 197 | Minimum input voltage for trigger expression. |
+| {$UPS.OUTPUT.MAX.WARN} | 80 | Maximum output load in % for trigger expression. |
+
 ## Remove `OneSyncSvc_` not running from windows auto discovery
 
 * login to zabbix as administrator
