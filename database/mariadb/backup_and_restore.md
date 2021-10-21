@@ -33,7 +33,7 @@ mysql -u root -p -e "CREATE DATABASE <database_name>"
 mysql -u root -p <database_name> < <database_name>.sql
 
 #restore one database from one gzip'ed file
-gunzip < <database_file>.sql | mysql -u root -p <database_name>
+gunzip < <database_file>.sql.gz | mysql -u root -p <database_name>
 
 #restore one database from file with multiple databases
 mysql -u root -p --one-database <database_name> < all_databases.sql

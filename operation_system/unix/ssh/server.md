@@ -1,3 +1,12 @@
+# recreate host ssh key
+
+```
+sudo rm /etc/ssh/ssh_host_*
+#for debian
+sudo dpkg-reconfigure openssh-server
+sudo systemctl restart sshd.service
+```
+
 # list of option
 
 ## set ip address the demon is listen on

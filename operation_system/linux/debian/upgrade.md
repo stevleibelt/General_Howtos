@@ -68,6 +68,8 @@ apt-get install <package name>
 #update current system
 sudo apt update && sudo apt upgrade
 sudo apt install gcc-8-base
+sudo apt autoremove
+sudo apt autoclean
 
 #adapt source list
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.20210819
