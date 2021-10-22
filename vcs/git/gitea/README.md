@@ -67,6 +67,7 @@ mysqldump -u root -p gitea | gzip > gitea.sql.gz
 
 sudo rsync -a /var/lib/gitea <username>@<hostname>:/var/lib/gitea
 sudo scp /etc/gitea/app.ini <username>@<hostname>:/etc/gitea/
+sudo rsync -a /home/git/.ssh <username>@<hostname>:/home/git/.ssh
 
 #new host
 sudo gunzip < gitea.sql.gz | mysql -u root -p gitea
