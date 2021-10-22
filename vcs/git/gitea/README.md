@@ -29,6 +29,10 @@ sudo mkdir -p /etc/gitea
 sudo chown -R git:git /etc/gitea/
 sudo chmod -R 750 /etc/gitea/
 
+sudo mkdir -p /var/log/gitea
+sudo chown -R git:git /var/log/gitea/
+sudo chmod -R 750 /var/log/gitea/
+
 #install gitea
 curl -s https://api.github.com/repos/go-gitea/gitea/releases/latest | grep browser_download_url | cut -d '"' -f 4 | grep '\linux-amd64$' | wget -i -
 wget "https://raw.githubusercontent.com/go-gitea/gitea/main/contrib/systemd/gitea.service"
@@ -69,8 +73,12 @@ sudo gunzip < gitea.sql.gz | mysql -u root -p gitea
 
 sudo chown -R git:git /var/lib/gitea
 sudo chmod -R 750 /var/lib/gitea
+
 sudo chown -R git:git /etc/lgitea
 sudo chmod -R 750 /etc/gitea
+
+sudo chown -R git:git /var/log/gitea/
+sudo chmod -R 750 /var/log/gitea/
 
 sudo systemctl start gitea.service
 ```
