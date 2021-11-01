@@ -4,7 +4,7 @@
 
 # Setup
 
-## Setup Telekom FTTH/Glasfaser
+## Setup Telekom FTTH/Glasfaser via PPPoE
 
 * `Interfaces` -> `other types` -> `VLAN` (`https://<your opensense ip>/interfaces_vlan.php`)
     * Create new VLAN-Interface:
