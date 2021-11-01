@@ -16,8 +16,8 @@
     * Choose device pppoe
     * IPv4 Configuration: PPPoE
     * PPPoE Configuration:
-        * Username|Benutzername: <connection identifier|anschlusskennung><access number|zugangsnummer>0001@t-online.de
-        * Password|Passwort: <personalized password|persöhnliches kenntwort>
+        * Username|Benutzername: <connection identifier|Anschlusskennung><access number|Zugangsnummer>0001@t-online.de
+        * Password|Passwort: <personalized password|Persöhnliches Kennwort>
         * Servicename|Dienstname: `telekom`
 * Check:
     * `System` -> `Gateways` (`https://<your opensense ip>/system_gateways.php`)
