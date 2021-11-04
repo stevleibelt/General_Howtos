@@ -85,3 +85,15 @@ sudo chmod -R 750 /var/log/gitea/
 
 sudo systemctl start gitea.service
 ```
+
+## Errors and how to solve them
+
+### git@<gitea host>: Permission denied (publickey).
+
+```
+#check if home of user git is correct
+getnet passwd | grep git
+
+chown -R git:git /home/git
+chmod -R 755 /home/git
+```
