@@ -67,8 +67,22 @@ zfs diff <source snapshot name> <destination snapshot name>|<file system>
 
 # rollback / restore
 
+## full pool
+
 ```
 zfs rollback <pool name>@<snapshot name>
+```
+
+## working with openzfs under linux or restore single file
+
+```
+#@see: nvb/document/work/application/2021/20210919_landratsamt_infrastruktur-architekt_projektmanager
+mount -t zfs <zfs pool>@<snapshot> </path/to/mount>
+
+#figuring out where is a different
+diff -R <path> </path/to/mount/path>
+
+#unmount pool after restore was done
 ```
 
 # clone
