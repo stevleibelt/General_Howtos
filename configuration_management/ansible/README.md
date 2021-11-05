@@ -30,7 +30,7 @@ ansible-playbook playbook.ymk --list-tasks --tags=install
 ansible-playbook playbook.ymk --list-tasks --skip-tags=install
 ```
 
-## execute a playbook with a parallelism level of 13
+## Execute a playbook with a parallelism level of 13
 
 ```
 ansible-playbook playbook.yml -f 13
@@ -43,6 +43,30 @@ ansible-playbook playbook.yml --verbose
 #provision a different host
 ansible-playboot [-i <path to the ini>] -l <hostname> <playbook> [-vvvv]
 ```
+
+## Sudo password with ansible vault
+
+```
+#create a file for the password
+#   this file will be secured by a password
+ansible-vault edit my_password_vault.yml
+#add the following line
+#ansible_become_password: <my_P@33w0rD>
+
+#create a file that contains the vault password
+echo "<vault password>" > vault_password.txt
+
+#set correct rights and add this to the .gitignore
+chmod 600 vault_password.txt
+echo "vault_password.txt" >> .gitignore
+
+#now run all
+ansible-playbook playbook.yml -i inventory.ini \
+    -e '@my_password_vault.yml' \
+    --vault-password-file=vault_password.txt
+```
+
+[source](https://www.shellhacks.com/ansible-sudo-a-password-is-required/) - 20211105
 
 ## Import vs include
 
