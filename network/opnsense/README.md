@@ -6,13 +6,13 @@
 
 ## Setup Telekom FTTH/Glasfaser via PPPoE
 
-* `Interfaces` -> `other types` -> `VLAN` (`https://<your opensense ip>/interfaces_vlan.php`)
+* `Interfaces` -> `other types` -> `VLAN` (`https://<your opnsense ip>/interfaces_vlan.php`)
     * Create new VLAN-Interface:
         * Parent Interface: <wan interface>
         * VLAN-Tag: `7`
         * VLAN Priority: 0
         * Description: `telekom vlan`
-* WAN-Interface (`https://<your opensense ip>/interfaces.php?if=wan`):
+* WAN-Interface (`https://<your opnsense ip>/interfaces.php?if=wan`):
     * Choose device pppoe
     * IPv4 Configuration: PPPoE
     * PPPoE Configuration:
@@ -20,12 +20,12 @@
         * Password|Passwort: <personalized password|Persöhnliches Kennwort>
         * Servicename|Dienstname: `telekom`
 * Check:
-    * `System` -> `Gateways` (`https://<your opensense ip>/system_gateways.php`)
+    * `System` -> `Gateways` (`https://<your opnsense ip>/system_gateways.php`)
     * Remove all the gateways not named like `WAN_PPPOE`
 
 ## Setup DNS Servers
 
-* `System` -> `Settings` -> `General` (`https://<your opensense ip>/system_general.php`)
+* `System` -> `Settings` -> `General` (`https://<your opnsense ip>/system_general.php`)
     * `General` -> `DNS Server`
     * Add the one you want like:
         * `80.241.218.68`, Gateway: <your WAN>
@@ -35,7 +35,7 @@
 
 ## Setup DynDNS nsupdate.info
 
-* `Services` -> `Dynamic DNS` (`https://<your opensense ip>/services_dyndns_edit.php`)
+* `Services` -> `Dynamic DNS` (`https://<your opnsense ip>/services_dyndns_edit.php`)
     * `Add`
     * activate: yes
     * Type of service: custom
@@ -51,4 +51,4 @@
 
 # link
 
-* [opensense](http://opnsense.org/) - 20211028
+* [opnsense](http://opnsense.org/) - 20211028
