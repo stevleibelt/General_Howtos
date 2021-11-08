@@ -64,6 +64,7 @@ The fully qualified name is "CN=cobraLazer,OU=IT,DC=compu,DC=global,DC=hyper,DC=
 * with windows 8, following enhacements where released
     * [gpupdate](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/gpupdate) - typically called as `gpupdate /force` - forces a group policy update every 10 minutes with an random offset
     * [gpresult](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/gpresult) - typically called as `gpresult /R`, displays result set of policy (RSoP) for [remote] user and computer
+        * `gpresult /f /h current_gpresult.html`, exports the used gpo's, its state (failed or not) and the time it took
     * group policy infrastructure status - reports if a GPO is not replicated correctly over all DC's
     * group policy results report - now times the execution of individual compontens when doing an group policy update
 
