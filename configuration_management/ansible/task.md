@@ -18,6 +18,7 @@
 ```yml
 # links:
 #   https://raymii.org/s/tutorials/Ansible_-_Only_if_a_file_exists_or_does_not_exist.html
+#   https://www.shellhacks.com/ansible-check-if-file-exists/
 
 - name: Get status of <your file>
   stat: <path to your file>
@@ -30,6 +31,8 @@
     owner=<owner>
     group=<group>
   when: your_file_status.exists = False
+#when: your_file_status.isdir = False
+#when: your_file_status.islnk = False
 ```
 
 ## execute shell script
