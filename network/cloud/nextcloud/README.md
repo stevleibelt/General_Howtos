@@ -1,4 +1,25 @@
-# link
+# Howto
+
+## Setup redis as memory cacheing
+
+```
+cd <path of your nextcloud instance>/config
+cp config.php config.php.<yyyymmdd>
+#add the following lines to your config.php
+
+    'memcache.distributed' => '\\OC\\Memcache\\Redis',
+    'memcache.locking' => '\\OC\\Memcache\\Redis',
+    'memcache.local' => '\\OC\\Memcache\\APCu',
+    'redis' =>
+    [
+        'host' => '/sockets/redis.socket',
+        'port' => 0,
+        'password' => '[PASSWORD]', //if needed
+        'timeout' => 1.5
+    ]
+```
+
+# Link
 
 * [nextcloud](https://nextcloud.com/)
 * [nextcloudpi](https://ownyourbits.com/nextcloudpi/)
