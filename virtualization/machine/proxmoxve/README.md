@@ -12,6 +12,51 @@
 
 # HowTos
 
+## Backup node configuration
+
+* configure local mounted remove backup storage
+* ssh into the node
+* replace `your-local-mounted-remote-backup-storage` with a valid path
+
+```
+cat > /etc/pve/sync_to_backup.sh <<DELIM
+#!/bin/bash
+####
+# Synchronize all important configuration files to target
+####
+# @see
+#       https://forum.proxmox.com/threads/how-to-backup-proxmox-configuration-files.67789/page-2
+#       https://github.com/DerDanilo/proxmox-stuff
+# @author stev leibelt <artodeto@bazzline.net>
+# @since 2021-11-09
+####
+
+function _local_sync_configuration_to_target ()
+{
+        local SOURCE_PATH="/etc/pve"
+        local TARGET_PATH="/mnt/pve/your-local-mounted-remote-backup-storage/nodes/${HOSTNAME}"
+
+        if [[ ! -d ${TARGET_PATH} ]];
+        then
+            mkdir -p ${TARGET_PATH}
+        fi
+
+        rsync --delete -avz ${SOURCE_PATH} ${TARGET_PATH}
+}
+
+_local_sync_configuration_to_target
+DELIM
+
+cat > /etc/cron.d/synctobackup <<DELIM
+# cluster wide nodes backup cron schedule
+# Manually generated file - do not edit
+
+PATH="/usr/sbin:/usr/bin:/sbin:/bin"
+
+0 2 * * *           root /etc/pve/sync_to_backup.sh
+DELIM
+```
+
 ## NTP
 
 ```
