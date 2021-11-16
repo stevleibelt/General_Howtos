@@ -64,6 +64,24 @@
   when: ansible_os_family == 'Debian'
 ```
 
+## comment in or out a line in a file
+
+```yml
+#@see: https://www.shellhacks.com/ansible-comment-out-uncomment-lines-in-a-file/
+#   the line with >>replace<< says "put a >>#<< in front of the matched content"
+- name: "comment out the line containting something like >>foo=<int><<"
+  replace:
+    path: /path/to/the/file
+    regexp: '^\s*(foo=.*)'
+    replace '#\1'
+
+- name: "comment in the line containting something like >>#foo=<int><<"
+  replace:
+    path: /path/to/the/file
+    regexp: '^\s*#*\s(foo=.*)'
+    replace '#\1'
+```
+
 # links
 
 * http://docs.ansible.com/ansible/shell_module.html
