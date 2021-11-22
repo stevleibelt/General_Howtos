@@ -2,7 +2,7 @@
 
 # HowTo
 
-## ERS360
+## ERS3600
 
 ### How to enable SNMP community
 
@@ -14,3 +14,7 @@
     * `Type`: `inform`
     * `Version`: `SNMPv2c`
     * `SecurityName`: `public`
+
+# Link
+
+* [ERS 3600 Series - Product Documentation](https://www.extremenetworks.com/support/documentation/ers-3600-series-6-3-x/) - 20211122
