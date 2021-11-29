@@ -1,90 +1,68 @@
-# do not ask for confirmation (no good idea except you run pacman from a script)
+# Basic knowledge
 
 ```
+#do not ask for confirmation (no good idea except you run pacman from a script)
 --noconfirm
-```
 
-# clear cache of old packages
-
-```
+#clear cache of old packages
 pacman -Sc
-```
 
-# update local database
-
-```
+#update local database
 pacman -Sy
-```
 
-# update installed packages
-
-```
+#update installed packages
 pacman -Su
-```
 
-# update list and upgrade packages
-
-```
+#update list and upgrade packages
 pacman -Syu
-```
 
-# build up local database
-
-```
+#build up local database
 pacman -Syuu
-```
 
-# ignore package
-
-```
+#ignore package
 pacman -Syuu --ignore=linux-lts[,linux-lts-headers]
-```
 
-# search for package
-
-```
+#search for package
 pacman -Ss $name
-```
 
-# show installed packages
-
-```
+#show installed packages
 pacman -Q
-```
 
-# remove package
-
-```
+#remove package
 pacman -R $name
-```
 
-# remove package and all dependencies
-
-```
+#remove package and all dependencies
 pacman -Rs <name>
 # remove unneeded
 pacman -Rsu <name>
-```
 
-# reinstall with force
-
-```
+#reinstall with force
 pacman -Syy --force <package>
-```
 
-# list unneeded packages
-
-```
+#list unneeded packages
 pacman -Qdt
-```
 
-# remove unneeded packages
-
-```
+#remove unneeded packages
 pacman -Rsn `pacman -Qqdt`
 ```
 
-# locate .pac\* files
+# Error solving
+
+```
+#warning <...> is newer than <...>
+#update all packages
+sudo pacman -Syu
+
+#if upper step did not do the trick
+#update all packages, then downgrade all affected packages to the current
+#   and latest available version
+sudo pacman -Suu
+
+#full upgrade
+sudo pacman -Syyu
+```
+
+# Locate .pac\* files
 
 ```
 # in /etc
