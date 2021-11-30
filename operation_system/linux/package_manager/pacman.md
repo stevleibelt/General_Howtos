@@ -62,6 +62,16 @@ sudo pacman -Suu
 sudo pacman -Syyu
 ```
 
+# Date back packman repository status
+
+[see](https://github.com/archzfs/archzfs/issues/419#issuecomment-978018918)
+
+```
+[core]
+SigLevel = PackageRequired
+Server=https://archive.archlinux.org/repos/1983/10/06/$repo/os/$arch
+```
+
 # Locate .pac\* files
 
 ```
