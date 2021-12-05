@@ -22,6 +22,9 @@
 #run as a different user
 sudo -u <user name> <command>
 
+#run as different user with his environment
+sudo -i -u <user name> <command>
+
 #run as a different primary user group
 sudo -g <group name> <command>
 
