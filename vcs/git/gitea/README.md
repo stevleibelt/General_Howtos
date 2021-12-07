@@ -57,7 +57,6 @@ sudo systemctl start gitea.service
 
 # Migrate from host to host
 
-
 ```
 #old host
 sudo systemctl disable gitea.service
@@ -86,7 +85,33 @@ sudo chmod -R 750 /var/log/gitea/
 sudo systemctl start gitea.service
 ```
 
-## Errors and how to solve them
+# Customizing Gitea
+
+[Official](https://docs.gitea.io/en-us/customizing-gitea/) page - 20211207
+
+## Lables
+
+```
+cd /var/lib/gitea/custom
+mkdir options
+cat > options/label <<DELIM
+#e11d21 1 urgent and important ; prio 0
+#fbca04 2 urgent but not important ; prio 1
+#f6c6c7 3 not urgent but important ; prio 2
+#bfe5bf 4 not urgent and not important ; prio 3
+#c7def8 by email
+#bfd4f2 by phone
+#ee0701 bug ; Something is not working
+#cccccc duplicate ; This issue or pull request already exists
+#84b6eb enhancement ; New feature
+#128a0c help wanted ; Need some help
+#e6e6e6 invalid ; Something is wrong
+#cc317c question ; More information is needed
+#ffffff wontfix ; This won't be fixed
+DELIM
+```
+
+# Errors and how to solve them
 
 ### git@<gitea host>: Permission denied (publickey).
 
