@@ -16,7 +16,7 @@ New-PSSession -ComputerName <hostname>[, <hostname>[, ...]] [-Credential mydomai
 $listOfSessions = Get-Content c:\my_servers.txt | New-PSSession -ThrottleLimit 20
 
 #Create a ssh session
-New-PSSession -HostName user@hostname -KeyFilePath c:\\private_key
+New-PSSession -ComputerName user@hostname -KeyFilePath c:\\private_key
 
 #list established ps sessions
 Get-PSSession [-ComputerName <hostname>]
@@ -31,7 +31,10 @@ exit
 
 #Disconnect from within a session
 #current process is still running until it is blocked or output buffer is full
-Disconnect-PSSession
+Disconnect-PSSession [<int: id>]
+
+#kill session
+Remove-PSSession [<int: id>]
 ```
 
 # Usages Commands
