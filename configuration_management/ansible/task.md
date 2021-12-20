@@ -43,6 +43,13 @@
 - name: Execute via shell
   shell: my_script.sh #you can use "<", ">", ">>" etc
 
+#   https://www.shellhacks.com/ansible-run-shell-command-on-remote-host/
+- name: "Execute multiple commands"
+  shell: |
+    whoami
+    uptime & uname -a
+    echo "Test" > /dev/null
+
 #   http://docs.ansible.com/ansible/shell_module.html
 - name: Execute via command
   command: my_script.sh
