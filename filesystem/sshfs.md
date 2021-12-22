@@ -71,6 +71,7 @@ sshfs <server://some/folder> </mnt/some_local_folder> -o Ciphers=arcfour -o Comp
 
 # links
 
+* [mount and unmount sshfs with NetworkManager events](https://odoepner.wordpress.com/2021/12/21/mount-unmount-sshfs-as-network-goes-up-down/) - 20211222
 * https://www.digitalocean.com/community/articles/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
 * https://wiki.archlinux.org/index.php/Sshfs
 * http://www.smork.info/blog/2013/04/24/entry130424-163842.html
