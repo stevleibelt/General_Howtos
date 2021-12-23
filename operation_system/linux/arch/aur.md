@@ -79,6 +79,8 @@ Server = http://repo.archlinux.fr/$arch
 ## FAILED (unknown public key <key>)
 
 ```
+gpg --receive-keys <key>
+#or
 pgp --recv-keys <key>
 ```
 ## links

@@ -24,6 +24,8 @@ echo "no-use-tor" >> ~/.gnupg/dirmngr.conf
 ```
 #e.g. pgp.mit.edu
 gpg --keyserver <key server name> --recv-keys <key>
+#behind a proxy
+gpg --keyserver <key server name> --keyserver-options http-proxy=http://<ip of the proxy>[:<port>] --recv-keys <key>
 #e.g. gpg --recv-keys --keyserver hkp://pgp.mit.edu 865E6C87C65285EC
 ```
 
