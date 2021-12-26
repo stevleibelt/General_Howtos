@@ -101,6 +101,9 @@ usermod -l <old user name> <new user name>
 Benefit of expire a user is a clear message "your account as expired ...".
 
 ```
+#check user password expiration date
+chage -l <user name>
+
 #expire now
 chage --expiredate 0 <user name>
 
