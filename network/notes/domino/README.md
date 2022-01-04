@@ -122,6 +122,7 @@ Thanks to [mariusj cheatsheets](https://github.com/mariusj/cheatsheets/blob/2628
 
 # Links
 
+* [HCL Domino Designer Basic User Guide and Reference](https://help.hcltechsw.com/dom_designer/12.0.0/basic/domino_designer_basic_user_guide_and_reference.html) - 20220104
 * [Domino Documentation - hcltechsw.com](https://help.hcltechsw.com/domino/domino_welcome.html) - 20200731
     * [HCL Domino 10.0.1 documentation - hcltechsw.com](https://help.hcltechsw.com/domino/10.0.1/index.html) - 20201028
     * [HCL Domino 11.0 documentation - hcltechsw.com](https://help.hcltechsw.com/domino/11.0.0/index.html) - 20200203
@@ -135,3 +136,4 @@ Thanks to [mariusj cheatsheets](https://github.com/mariusj/cheatsheets/blob/2628
 * [List of server commands and syntax (domino 9.0.1) - ibm.com](https://www.ibm.com/support/knowledgecenter/en/SSKTMJ_9.0.1/admin/admn_servercommandsyntax_c.html) - 20200203
 * [Nash!Com - Domino and Notes Consulting from Hilden/Germany](http://www.nashcom.de/nshweb/pages/workspace.htm) - 20200827
 * [Understand the Various Queries & Concept of IBM Notes & Domino](https://www.nsftopst.com/articles/) - 20200703
+* [Domino Server performance troubleshooting best practices](https://ds_infolib.hcltechsw.com/ldd/dominowiki.nsf/dx/Domino_Server_performance_troubleshooting_best_practices) - 20151025
