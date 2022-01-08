@@ -46,6 +46,37 @@ ansible-playboot [-i <path to the ini>] -l <hostname> <playbook> [-vvvv]
 
 ## Sudo password with ansible vault
 
+## By using your playbook
+
+```
+#@see: https://www.shellhacks.com/ansible-vault-encrypt-decrypt-string/
+#will output your encrypted string
+ansible-vault encrypt_string '<string: password>' --name '<string: variable_name>'
+
+#now insert your stuff into your playbook
+- name: "Set variables"
+  set_fact:
+    user_name: "admin"
+    user_password: !vault |
+      $ANSIBLE_VAULT;1.1:AES256
+      <string: lots of funny characters>
+- debug:
+    msg "The user '{{ user_name }}' has the password '{{ user_password }}'"
+
+#how to decrypt the run
+#either by cli call
+ansible-playboot playbook-yml -i investory.ini --ask-vault-pass
+
+#or by storing the password in a text file
+#REMEMBER, put the file name in your .gitignore!
+echo "<string: vault password>" >> vault.txt
+echo "vault.txt" >> .gitignore
+chmod 500 vault.tyt
+ansible-playboot playbook-yml -i investory.ini --vault-password-file=vault.txt
+```
+
+## By using a dedicated file
+
 ```
 #create a file for the password
 #   this file will be secured by a password
