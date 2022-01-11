@@ -113,7 +113,9 @@ DELIM
 
 # Errors and how to solve them
 
-### git@<gitea host>: Permission denied (publickey).
+### git...: Permission denied (publickey).
+
+`git@<gitea host>: Permission denied (publickey).`
 
 ```
 #check if home of user git is correct
@@ -122,3 +124,7 @@ getnet passwd | grep git
 chown -R git:git /home/git
 chmod -R 755 /home/git
 ```
+
+# Links
+
+* [Outdated but good for understanding - Gitea Debian/Ubuntu Packages](https://gitlab.com/packaging/gitea) - 20220111
