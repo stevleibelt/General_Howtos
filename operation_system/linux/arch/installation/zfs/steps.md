@@ -6,8 +6,8 @@
 * loadkeys /usr/share/kbd/keymaps/i386/qwertz/de.map.gz
 * wifi-menu #connect to the internet
 * optional
-    * pacman-key -r F75D9D76
-    * pacman-key --lsign-key F75D9D76
+    * pacman-key -r DDF7DB817396A49B2A2723F7403BD972F75D9D76
+    * pacman-key --lsign-key DDF7DB817396A49B2A2723F7403BD972F75D9D76
     * modprobe zfs
 * timedatectl set-ntp true
   * if needed: timedatectl set-timezone Europe/Berlin
@@ -113,9 +113,9 @@ blkid
 * echo "Server = http://archzfs.com/\$repo/\$arch" >> /etc/pacman.conf
 * echo "Server = http://mirror.sum7.eu/archlinux/archzfs/\$repo/\$arch" >> /etc/pacman.conf
 * echo "Server = https://mirror.biocrafting.net/archlinux/archzfs/\$repo/\$arch" >> /etc/pacman.conf
-* `pacman-key -r F75D9D76`
+* `pacman-key -r DDF7DB817396A49B2A2723F7403BD972F75D9D76`
   * if there is an error: `pacman-key -r F75D9D76 --keyserver hkp://keyserver.ubuntu.com`
-* pacman-key --lsign-key F75D9D76
+* pacman-key --lsign-key DDF7DB817396A49B2A2723F7403BD972F75D9D76
   * if you run into time warp issues, remove /etc/pacman.d/gnupgp and retry again (pacman-key init) *after* fixing your timedatectl issue
 * pacman -Syu
 * pacman -S archzfs-linux #or >>archzfs-linux-lts<< if needed
