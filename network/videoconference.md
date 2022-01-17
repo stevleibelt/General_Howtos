@@ -8,6 +8,7 @@
 | [matrix](https://matrix.org/) | Yes | Yes (via Jitsi) | Yes (via Jitsi) | 20220117 |
 | [nextcloud talk](https://nextcloud.com/talk/) | Yes | Yes | Yes | 20220117 |
 | [qtox](https://qtox.github.io/) | Yes | Yes | No | 20220117 |
+| [revolt](https://revolt.chat/) | Yes (still beta) | Yes (still beta) | Yes (still beta) | 20220117 |
 | [Rocket.chat](https://rocket.chat/) | Yes | Yes (via Jitsi) | Yes (via Jitsi) | 20220117 |
 
 # link
