@@ -1,6 +1,14 @@
 # available open source systems
 
-* jitsii (used by matrix and rocket.chat)
+| Software | Chat | Videocall | Screen Sharing | Updated At |
+| --- | --- | --- | --- | --- |
+| [element](https://element.io/) | Yes (via matrix) | Yes (via matrix) | Yes (via matrix) | 20220117 |
+| [jami](https://jami.net/) | Yes | Yes | Yes | 20220117 |
+| [jitsi](https://jitsi.org/) | Yes | Yes | Yes | 20220117 |
+| [matrix](https://matrix.org/) | Yes | Yes (via Jitsi) | Yes (via Jitsi) | 20220117 |
+| [nextcloud talk](https://nextcloud.com/talk/) | Yes | Yes | Yes | 20220117 |
+| [qtox](https://qtox.github.io/) | Yes | Yes | No | 20220117 |
+| [Rocket.chat](https://rocket.chat/) | Yes | Yes (via Jitsi) | Yes (via Jitsi) | 20220117 |
 
 # link
 
