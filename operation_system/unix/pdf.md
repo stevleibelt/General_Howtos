@@ -5,6 +5,8 @@
 * evince
 * impressive
 * mupdf
+    * mutools (under arch linux, this is uncluded in `mupdf-tools`)
+* okular
 * qpdf
 
 # tools
