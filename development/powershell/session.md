@@ -2,6 +2,10 @@
 
 PSSession is a kind of ssh+screen.
 
+`Enter-PSSession` is a PowerShell cmdlet for working on remote computers.
+
+`PSRemoting` is based on Web Service for Management (WS-Management) and `WinRM service` (Windows Remote Management).
+
 # General Commands
 
 ```
@@ -24,6 +28,10 @@ Get-PSSession [-ComputerName <hostname>]
 #use a session
 Enter-PSSession <int: id>
 
+#create a session with credentials
+$Credentials = Get-Credential
+Enter-PSSession -ComputerName <hostname> -Credential $Credentials
+
 #exit a session
 Exit-PSSession
 #_or
@@ -35,6 +43,26 @@ Disconnect-PSSession [<int: id>]
 
 #kill session
 Remove-PSSession [<int: id>]
+```
+
+# Check Configuration
+
+```
+#show list of users and groups to conect over WinRM
+Get-PSSessionConfiguration
+
+#check if connection is possible
+Test-WSMan -ComputerName <hostname>
+
+#enable powershell remoting
+#run this on the host that does not work
+#this works only for hosts in a domain or a private windows network
+Enable-PSRemoting -Force
+#use this if you want to enable it for a public computer
+Enable-PSRemoting -SkipNetworkProfileCheck -Force
+
+#check if winrm service is running
+Get-Service WinRM | Select MachineName, Name, Status, StartType
 ```
 
 # Usages Commands
@@ -62,4 +90,5 @@ Disconnect-PSSession -Session $session
 
 # Links
 
-* [About PSSessions](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pssessions?view=powershell-7)
+* [About PSSessions](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pssessions?view=powershell-7) - 20200411
+* [Enter-PSSession](http://woshub.com/enter-pssession-remote-command-shell/) - 20220119
