@@ -18,6 +18,22 @@ Bind Password: Il0v30pen50urc3!
 
 # Error soliving
 
+## truenas rsync: failed to set permissions on
+
+### Description
+
+After configuring an rsync backup like [this](../synology/README.md), you get an error `truenas rsync: failed to set permissions on`.
+You can find the error in `/var/log/messages.log`. On your client device, there is an unclear message like "not enough rights".
+
+### Error solving
+
+* Remove the `ACL` from the storage you have configured in your rsync module
+* Reset the rights to the user you have configured in your rsync module
+
+### Note
+
+* Just another reset of the rights is not working
+
 ## NT_STATUS_ACCESS_DENIED
 
 ### Description
