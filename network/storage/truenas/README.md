@@ -28,6 +28,11 @@ You can find the error in `/var/log/messages.log`. On your client device, there 
 ### Error solving
 
 * Remove the `ACL` from the storage you have configured in your rsync module
+    * `Storage` -> `Pools`
+    * Click on the three dots and select `Edit Permissions`
+    * Scroll to the bottom of the page
+    * Click on `STRIP ACLS`
+    * Set the Permissions for the rsync user and group again
 * Reset the rights to the user you have configured in your rsync module
 
 ### Note
