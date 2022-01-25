@@ -73,3 +73,87 @@ If possible, ssh into the truenas and run `sudo tail -f /var/log/*.log` in a ter
     * Click on `Next`
     * Click on `Apply`
     * Click on `Yes`
+
+## Backup TrueNAS to Synology NAS
+
+[This](https://blog.filegarden.net/2021/02/24/backup-truenas-to-synology-via-rsync/) is the source of my howto
+
+* We are creating a user on the synology and on the truenas, both need to have the same name!
+* Login to your `synology`
+    * Open `control center`
+        * Click on `shared folders`
+        * Click on `Create` and select `create shared folder`
+            * Name: `<string: something useful containing the source host name like >>backup_for_myhost<<>`
+            * Trashbin: `uncheck`
+            * Click on `Next`
+    * Open `control center`
+        * Click on `user and groups`
+        * Click `Create`
+            * Name: `rsynctruenassynology`
+            * Click on `Next`
+            * Add the user to the group `administrators` (only with this group, he can ssh into the synology)
+            * Click on `Next`
+            * Set the right "read and write" for the directory you want to use as backup (the one you have created a few moments ago)
+            * Click on `Next`
+            * Allow usage of rsync
+            * Click on `Next`
+            * Click on `Next`
+            * Click on `Finish`
+    * Open `control center`
+        * Click on `File Service`
+        * Click on `rsync`
+            * Check `enable rsync service`
+            * Check `enable rsync account`
+            * Click on `Edit rsync Account`
+                * Click on `Add`
+                * Select the user `rsynctruenassynology`
+                    * Password can be a different one than the previously created user password
+    * Open `control center`
+        * Click on `user and groups`
+        * Select `Advance`
+        * Check `Enable user home service`
+        * Click on `Apply`
+* Open a terminal
+    * `ssh rsynctruenassynology@<ip of the synology>`
+    * `sudo vim /etc/ssh/sshd_config`
+    * Enable `PubkeyAuthentication yes` by removing first character `#`
+    * Enable `AuthorizedKeyfile .ssh/authorized_keys` by removing the first character `#`
+    * `:wq`
+* Login to your `synology`
+    * Open `control center`
+        * Open `Terminal & SNMP`
+        * Stop and start `ssh service`
+* Login to your truenas
+    * Click on `Account` -> `User`
+    * Click on `Add`
+        * Username: `rsynctruenassynology`
+        * The user needs to have the permission to read the data you want to backup
+            * I am creating a dedicated home directory for the user
+            * I am creating a dedicated "rsync" group that is used as group on the files I want to backup
+* `ssh rsynctruenassynology@<ip address of your truenas>`
+    * `mkdir .ssh`
+    * `chmod 700 .ssh`
+    * `cd .ssh`
+    * `ssh-keygen -t rsa -b 4096`
+        * Use default name
+        * No Password
+    * `chmod 400 id_rsa`
+    * `chmod 400 id_rsa.pub`
+    * `ssh-copy-id -i id_rsa.pub rsynctruenassynology@<ip of the synology>`
+    * Test if ssh is working by `ssh -i .ssh/id_rsa rsynctruenassynology@<ip of the synology>`
+        * You should not be asked for a password
+* Login to your truenas
+    * Click on `Tasks` -> `Rsync Tasks`
+    * Click on `Add`
+        * Select your source path
+        * User `rsynctruenassynology`
+        * Direction: `Push`
+        * Set your schedule
+        * Remote Host: `<ip of the synology>`
+        * Rsync Mode: `SSH`
+        * Remote SSH Port: `22`
+        * Remote Path: `/volume1/<your_path>`
+        * Check `Validate Remote Path`
+        * Check `Times`
+        * Uncheck `Compress`
+        * `Send`
