@@ -20,6 +20,27 @@
 | dxdiag | directx diagnostic tool - great to identify the graphic card |
 | Snip & Scatch | Screen-capture tool (slice out a part from your desktop |
 
+## List all available provisioned packages
+
+```
+#@see: https://docs.microsoft.com/en-us/windows/application-management/provisioned-apps-windows-client-os
+Get-AppxProvisionedPackage -Online | Format-Table DisplayName, PackageName
+```
+
+## Install a package for all users
+
+```
+cd "C:\Program Files\WindowsApps"
+cd <Package Name>
+Add-AppxPackage -register .\apxmanifest.xml -DisableDevelopmentMode
+```
+
+## Install all packages for all users
+
+```
+Get-AppxPackage -allusers | foreach {Add-AppxPackage -register “$($_.InstallLocation)\appxmanifest.xml” -DisableDevelopmentMode}
+```
+
 ## Remove bloatware
 
 ```
