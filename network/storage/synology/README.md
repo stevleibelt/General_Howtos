@@ -4,6 +4,70 @@
 
 ## Backup Synology NAS to TrueNAS
 
+### This is what you want
+
+#### In words
+
+* We are creating the same user (name and password) on the truenas and the synology
+* We are using rsync
+* We are creating a truenas rsync task to pull from the synology to the truenas
+
+#### In steps
+
+* Login to your synology
+* Open the `Control Center`
+    * Click on `User and Groups`
+        * Click on `Add`
+        * Give him a fitting name and a password
+    * Click on `Fileservices`
+        * Click on `rsync`
+        * Check that the rsync service is activated (checked)
+        * Check that the rsync-accounts are activated (checked)
+        * Click on `edit rsync accounts`
+            * Click on `Add`
+            * Add your created user with the same password
+     * Note the path to your data
+        * E.g. my system has a volume called `volume 1` and a shared directory called `data`
+        * The path to this directory is `/volume1/data`
+* Login to your truenas
+* Click on `Storage` -> `Pools`
+    * Select the three dots of your prevered pool and click on `add dataset`
+        * Name it as you want it. This will be the place where your data is synced into
+* Click on `Accounts` -> `User`
+    * Click on `Add`
+        * Give him a fitting name and a password
+        * Select the previously created directory as home path
+        * Set user rights to `rwx`
+* Click on `Tasks` -> `Rsync tasks`
+    * Click on `Add`
+    * Give the task a great name like `data_from_myhostname`
+    * Select the previously created directory
+    * Insert the user name
+    * Select `pull` as direction
+    * Chooese a schedule
+    * Insert the IP-Address of your synology host
+    * Select the module `SSH`
+    * Input the remote path like `/volume1/data`
+    * Check the option `validate remote path`
+    * Check the option `times`
+    * Uncheck the option `compress`
+    * Check the option `archive`
+    * Check the option `delete`
+    * Uncheck the option `silent`
+    * Check the option `keep rights`
+    * Uncheck the option `keep extended attributes`
+    * Check the option `move updates`
+    * Check the option `activate`
+    * Click on `SAVE`
+
+### This is not what you want
+
+```
+REMARK!
+
+The howto below is not what you want. At least on my machines, the synology has created a path with bucket files in it. I wanted to have a full file sync with files I can read.
+```
+
 I've used [this](https://www.youtube.com/watch?v=WBH4L3My8NI) video from 15.11.2022 as source.
 
 I've used a truenas 12.0-u7 and a synlogy `DS1815+` with `SDM 7.0.1-42218`.
