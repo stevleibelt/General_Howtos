@@ -1,11 +1,11 @@
-# grep useful information about one ip address
+# Grep useful information about one ip address
 
 ```
 netstat -nat | grep <ip address>
 #netstat -nat |grep {IP-address} | awk '{print $6}' | sort | uniq -c | sort -n
 ``` 
 
-# find listening network ports
+# Find listening network ports
 
 ```
 netstat -tulpn
@@ -15,10 +15,27 @@ netstat -tulpn | grep 'samba\|smbd\|nmbd\|winbind'
 netstat -lntu
 ```
 
-# list used gateways
+# List used gateways
 
 ```
 netstat -rn
+```
+
+# More examples
+
+```
+#show tcp ports
+netstat --all --tcp
+#_or
+netstat -at
+
+#show udp ports
+netstat --all --udp
+#_or
+netstat -au
+
+#show all listening tcp and udp ports with process id and ip address
+netstat --tcp --udp --listening --programs --numeric
 ```
 
 # links
