@@ -4,6 +4,8 @@
 cd ~
 cd .ssh/
 ssh-keygen -t rsa -b 4096
+#or, if you trust curves
+ssh-keygen -t ed25519
 ```
 
 # copy key to destination

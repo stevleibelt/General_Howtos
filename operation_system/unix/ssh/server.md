@@ -63,6 +63,8 @@ AllowGroups myGroupOne[ myGroupTwo]
 
 # security advice
 
+`fail2ban` could be an option but it adds complexitiy and `yet another lines of code`.
+
 ```
 PermitRootLogin no
 PasswordAuthentication no
