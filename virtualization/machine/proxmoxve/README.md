@@ -61,14 +61,24 @@ DELIM
 
 ```
 timedatectl set-timezone Europe/Berlin
+
 apt install systemd-timesyncd
-vim /etc/systemd/timesyncd.conf #set your ntp servers
-systemctl start systemd-timesyncd
+
+cat > /etc/systemd/timesyncd.conf <<DELIM
+[Time]
+#set your ntp servers
+NTP=europe.pool.ntp.org de.pool.ntp.org
+DELIM
+
+systemctl restart systemd-timesyncd
 systemctl status systemd-timesyncd
 systemctl enable systemd-timesyncd
 
 #check
 timedatectl
+
+#verbose output
+timedatectl show-timesync --all
 ```
 
 ## Remove Node from Cluster
