@@ -1,7 +1,8 @@
 # nmcli
 
 ```
-#list available devices and their state
+#reload configuration
+nmcli connection reload
 
 #list available wireless lans
 nmcli device wifi list
