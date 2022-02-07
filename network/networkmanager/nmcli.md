@@ -4,6 +4,13 @@
 #reload configuration
 nmcli connection reload
 
+#add static ethernet connection
+nmcli connection add con-name <string: connection_name> ifname <string: interface name> type ethernet
+nmcli connection modify <string: connection_name> ipv4.addresses <ip address>/<network mask>
+nmcli connection modify <string: connection_name> ipv4.method manual
+nmcli connection modify <string: connection_name> ipv4.gateway <string: ip address>
+nmcli connection modify <string: connection_name> ipv4.dns "<string: ip address>[ <string: ip address>]"
+
 #list available wireless lans
 nmcli device wifi list
 
