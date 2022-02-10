@@ -84,6 +84,9 @@ chmod -R ug+s <folder>
 #list available (public) shares
 smbclient -L <server name>
 
+#add verbository, you have a debug level from 0 to 10
+smbclient -d 5 -L <server name>
+
 #list available user based shares
 smbclient -L <server name> -U <user name>
 
