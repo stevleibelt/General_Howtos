@@ -28,7 +28,7 @@ tell calconn quit
 #stops the rooms and resource manager task on this server
 tell rnrmgr quit
 ```
-Go to the place where the `busytime.nsf` is located and mark it. You have to be ready to rename ist quickly.
+Go to the place where the `busytime.nsf` is located and mark it. You have to be ready to rename is quickly.
 
 ```
 #write all cashed entries to all open nsf files and close the file handler
