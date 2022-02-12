@@ -15,7 +15,7 @@ The goal is, that we are connecting the pi to the untrested wifi. Our devices ar
 * `sync`
 * `gzip openwrt*.img` #optional step
 
-## Finish installation
+## Finish basic installation
 
 Caution, you need to connect a computer to the ethernet port of the openwrt. It is acting as a dhcp server on the `192.168.1.0/24` network.
 
@@ -24,14 +24,27 @@ Caution, you need to connect a computer to the ethernet port of the openwrt. It 
 * we need to adjust datetime, this is crucial since all crypto related stuff needs a correct time
 ```
 #get current datetime
-date -s "yyyy-mm-dd hh:mm:ss"
+date
 
 #set real datetime
+date -s "yyyy-mm-dd hh:mm:ss"
 ```
+
+## Backup configuration files for the SHTF case
+
 * `cd /etc/config`
 * `cp firewall firewall.original`
 * `cp network network.original`
 * `cp wireless wireless.original`
+
+# Setup the two build in interfaces
+
+The ethernet port will be configured with a static ip.
+
+The build in wireless will be configured as dynamic.
+
+We will use the build in wireless to connect to the public wifi.
+
 * `vim network`
     * go to `config interface 'lan'`
     * change ip address in `option ipaddr` to a [reserved ip address](https://en.wikipedia.org/wiki/Reserved_IP_addresses) space like `10.11.12.1`
@@ -46,7 +59,6 @@ config interface 'wwan'
 config interface 'vpnclient'
     option ifname 'tun0'
     option proto 'none'
-
 ```
 * `vim firewall`
     * change line `option input` from configuration section `config zone\n option name wan` from `REJECT` to `ACCEPT`
@@ -61,6 +73,9 @@ config interface 'vpnclient'
     * add line `option short_gi_40 '0'`
 * `uci commit wireless`
 * `wifi`
+
+## Join the public wifi
+
 * you can check with a wifi device if wifi `openwrt` is there
 * Open `http://<ip address of your openwrt system>` in your webbrowser
 * `Network` -> `Wireless`
@@ -69,16 +84,22 @@ config interface 'vpnclient'
         * Check the selectbox `Replace wireless configuration`
         * Enter your passphrase
     * Click on `Save & Apply`
-* @todo
 
 ## Update system
 
-* `opkg update`
-* `opkg list-upgradeable`
+* ```echo > upgrade_all.sh <<DELIM
+#!/bin/sh
+opkg update
+opkg list-upgradeable | cut -f 1 -d '' | xargs opkg upgrade
+DELIM```
+* `chmod +x upgrade_all.sh`
+* `./upgrade_all.sh`
 * `opkg install kmod-rt2800-lib kmod-rt2800-usb kmod-rt2x00-lib kmod-rt2x00-usb`
 * `opkg install openvpn-openssl`
 * `opkg install luci-app-openssl`
 * `sync; sync; reboot`
+
+## Setup the USB WiFi
 
 Now you can plugin your raspberry pi
 
