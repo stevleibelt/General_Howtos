@@ -49,6 +49,10 @@ pacman -Rsn `pacman -Qqdt`
 # Error solving
 
 ```
+#list the current used server for <section>
+#example done by <section> core
+pacman-conf --repo core Server
+
 #warning <...> is newer than <...>
 #update all packages
 sudo pacman -Syu
