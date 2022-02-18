@@ -21,13 +21,21 @@ Caution, you need to connect a computer to the ethernet port of the openwrt. It 
 
 * `ssh root@192.168.1.1`
 * `passwd`
+* `system.@system[0].hostname='MyHostName'`
+* 
 * we need to adjust datetime, this is crucial since all crypto related stuff needs a correct time
+* for more information see [openwrt ntp](https://openwrt.org/docs/guide-user/services/ntp/client-server) - 20220218
 ```
 #get current datetime
 date
 
 #set real datetime
 date -s "yyyy-mm-dd hh:mm:ss"
+#set right timezone
+system.@system[0].timezone='Europe/Berlin'
+#use ntp
+ntpd -q -p ptbtime1.ptb.de
+
 ```
 
 ## Backup configuration files for the SHTF case
@@ -97,6 +105,7 @@ DELIM```
 * `opkg install kmod-rt2800-lib kmod-rt2800-usb kmod-rt2x00-lib kmod-rt2x00-usb`
 * `opkg install openvpn-openssl`
 * `opkg install luci-app-openssl`
+* `opkg install luci-app-openvpn`
 * `sync; sync; reboot`
 
 ## Setup the USB WiFi

@@ -1,11 +1,17 @@
 # commands
 
 ```
+#get information about basic board
+ubus call system board
+
 #package manager
 opkg
 
 #read logs
 logread
+
+#system
+/etc/config/system
 
 #wireless settings
 /etc/config/wireless
@@ -49,6 +55,7 @@ opkg install luci-ssl
 # links
 
 * [beginner](http://wiki.openwrt.nanl.de/doc/howto/user.beginner)
+    * [uci base system](https://openwrt.org/docs/guide-user/base-system/uci) - 20220218
 * [how to openwrt](http://wireless.subsignal.org/index.php?title=Howto_OpenWRT)
 * [list of howtos](https://wiki.openwrt.org/doc/howto/start)
 * [list of recipes](https://wiki.openwrt.org/doc/recipes/index)
@@ -74,5 +81,6 @@ opkg install luci-ssl
     * [route access point](http://wiki.openwrt.nanl.de/doc/recipes/routedap)
     * [routed client](http://wiki.openwrt.nanl.de/doc/recipes/routedclient)
     * [relay client](http://wiki.openwrt.nanl.de/doc/recipes/relayclient)
-* [use a log server](https://kuther.net/blog/analyzing-openwrt-firewall-logs-splunk
+* [use a log server](https://kuther.net/blog/analyzing-openwrt-firewall-logs-splunk)
 * [station mode](http://linuxwireless.org/en/users/Documentation/modes/)
+* [openvpn client](https://openwrt.org/docs/guide-user/services/vpn/openvpn/client-luci) - 20220218

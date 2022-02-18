@@ -1,6 +1,9 @@
 # nmcli
 
 ```
+#show current dns
+nmcli device show | grep -i dns
+
 #check current status
 nmcli device status
 
