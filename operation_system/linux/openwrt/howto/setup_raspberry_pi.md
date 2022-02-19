@@ -107,6 +107,8 @@ DELIM```
 * `opkg install luci-app-openssl`
 * `opkg install luci-app-openvpn`
 * `sync; sync; reboot`
+* `LuCI` -> `VPN` -> `OpenVPN` -> `OVPN configuration file upload`
+* Add [kill switch](https://openwrt.org/docs/guide-user/services/vpn/openvpn/extras#kill_switch)
 
 ## Setup the USB WiFi
 
