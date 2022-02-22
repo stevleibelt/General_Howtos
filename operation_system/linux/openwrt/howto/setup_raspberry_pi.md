@@ -109,6 +109,7 @@ DELIM```
 * `sync; sync; reboot`
 * `LuCI` -> `VPN` -> `OpenVPN` -> `OVPN configuration file upload`
 * Add [kill switch](https://openwrt.org/docs/guide-user/services/vpn/openvpn/extras#kill_switch)
+* Add [adblock](https://github.com/openwrt/packages/blob/master/net/adblock/files/README.md)
 
 ## Setup the USB WiFi
 
