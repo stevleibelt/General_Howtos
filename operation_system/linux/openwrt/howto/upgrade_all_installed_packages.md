@@ -13,8 +13,13 @@ echo ":: Updating list of available packages."
 opkg update
 echo ""
 
-echo ":: Upgrading upgradeable packages."
-opkg list-upgradable | cut -f 1 -d ' ' | xargs -r opkg upgrade
+if [ \$(opkg list-upgradable | wc -l) -gt 0 ];
+then
+    echo ":: Upgrading upgradeable packages."
+    opkg list-upgradable | cut -f 1 -d ' ' | xargs -r opkg upgrade
+else
+    echo ":: No packages to upgrade available."
+fi
 echo ""
 
 echo ":: Checking if configuration files where changed."
