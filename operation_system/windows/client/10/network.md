@@ -10,7 +10,9 @@ netsh /?
 ```
 #all have to be done in the cmd.exe environment
 
-#set system proxy
+#Set system proxy
+#This needs to be done especially for Windows 10 1809. You should not need to do it for later windows 10 versions
+# if your have a good gpo
 netsh winhttp set proxy "<proxy ip>[:<proxy port>]>" "localhost;127.0.0.1;*.your.domain;<your subnet ip.*>"
 
 #show system proxy
