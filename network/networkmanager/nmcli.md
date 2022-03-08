@@ -1,6 +1,12 @@
 # nmcli
 
 ```
+#show current dns
+nmcli device show | grep -i dns
+
+#check current status
+nmcli device status
+
 #reload configuration
 nmcli connection reload
 
@@ -10,6 +16,13 @@ nmcli connection modify <string: connection_name> ipv4.addresses <ip address>/<n
 nmcli connection modify <string: connection_name> ipv4.method manual
 nmcli connection modify <string: connection_name> ipv4.gateway <string: ip address>
 nmcli connection modify <string: connection_name> ipv4.dns "<string: ip address>[ <string: ip address>]"
+nmcli connection up <string: connection_name>
+
+#add a dhcp ethernet connection
+nmcli connection add con-name <string: connection_name> ifname <string: interface name> type ethernet
+nmcli connection modify <string: connection_name> ipv4.dhcp-timeout 30
+nmcli connection modify <string: connection_name> ipv4.may-fail no
+nmcli connection up <string: connection_name>
 
 #list available wireless lans
 nmcli device wifi list
@@ -41,5 +54,6 @@ for ITERATOR in $(ls *.ovpn); do nmcli connection import type openvpn file ${ITE
 
 # link
 
+* [Configure an ethernet connection configuration and managing networking](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/configuring-an-ethernet-connection_configuring-and-managing-networking) - 20220207
 * [network manager - wiki.archlinux.org.](https://wiki.archlinux.org/index.php/NetworkManager)
 * [Using nmcli to Import Openvpn Files From the Command Line](https://www.putorius.net/mcli-import-openvpn.html) - 2020-05-10

@@ -11,6 +11,13 @@ echo 1 2 3 4 | xargs -n 2
 xargs -0
 ```
 
+# deal with empty strings
+
+```
+#<my command that returns arguments | xargs -r <my command that works with that piped argument>
+opkg list-upgradable | cut -f 1 -d ' ' | xargs -r opkg upgrade
+```
+
 # buffer each line from the input internally
 
 ```
