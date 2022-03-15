@@ -122,6 +122,7 @@ Now you can plugin your raspberry pi
 
 # Links
 
+* [Build a router with mobile connectivity using Raspberry Pi](https://opensource.com/article/21/3/router-raspberry-pi) - 20220315
 * [Raspberry Pi - openwrt.org](https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi) - 20220205
 * [OpenWRT on Raspberry Pi 3B/3B+](https://www.aspyct.org/openwrt/raspberry-pi.html) - 20220205
 * [my SUPER secure Raspberry Pi Router (wifi VPN travel router) - youtube](https://www.youtube.com/watch?v=jlHWnKVpygw) - 20220205
