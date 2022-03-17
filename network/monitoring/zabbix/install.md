@@ -1,11 +1,15 @@
 # Installation
 
-```
-wget https://repo.zabbix.com/zabbix/5.0/debian/pool/main/z/zabbix-release/zabbix-release_5.0-1+buster_all.deb
-dpkg -i zabbix-release_5.0-1+buster_all.deb
-apt update 
+* see [here](https://www.zabbix.com/download?zabbix=6.0&os_distribution=debian&os_version=11_bullseye&db=mysql&ws=apache)
 
-apt install zabbix-server-pgsql zabbix-frontend-php php7.3-pgsql zabbix-apache-conf zabbix-agent 
+```
+wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-1+debian11_all.deb
+dpkg -i zabbix-release_6.0-1+debian11_all.deb
+apt update
+rm zabbix-release_6.0-1+debian11_all.deb
+
+#if you need to install mariadb, you have to adapt the following line
+apt install zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql zabbix-apache-conf zabbix-agent
 
 sudo -u postgres createuser --pwprompt zabbix
 sudo -u postgres createdb -O zabbix zabbix 
