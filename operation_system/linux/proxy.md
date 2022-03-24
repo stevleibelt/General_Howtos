@@ -60,6 +60,8 @@ Or written in an other way, you have to add each ip address in the no proxy sect
 
 Linux can also not handle something line `172.16.0.0/24`.
 
+**DANGER** - you can not add to much ip's our you will get a `Argument list too long` error because EACH user (also root!) will source this file and will run out of memory.
+
 ```
 #this definition works for windows
 "localhost;127.0.0.1;foobar.local;*.bar.foo.ru;172.16.*"
