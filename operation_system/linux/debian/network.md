@@ -39,6 +39,8 @@ echo "supersede domain-name-servers <name server ip one>, <name server ip two>;"
 
 Add and adapt the following lines to `/etc/profile.d/proxy.sh`.
 
+Read [this](../proxy.md) for all the traps you can have in your `no_proxy` section.
+
 ```
 #system wide defaults
 export http_proxy="http://10.10.1.10:8080/"

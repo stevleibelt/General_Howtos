@@ -1,5 +1,14 @@
 # How To
 
+## Use a proxy
+
+```
+curl --proxy "http://<ip>[:<port>]" "https://foo.bar"
+
+#a proxy but with a no_proxy definition
+curl --proxy "http://<ip>[:<port>]" --noproxy "localhost,127.0.0,foo.bar" "https://baz.foo.bar"
+```
+
 ## Add proxy
 
 ```

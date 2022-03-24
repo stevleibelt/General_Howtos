@@ -99,6 +99,22 @@ pvecm nodes
 #   remove folder of /etc/pve/nodes/<NodeName>
 ```
 
+# HowTo
+
+## Stop hanging machine
+
+See [here](https://bobcares.com/blog/proxmox-cant-stop-vm/) (20220317) if you want to know more.
+
+Mostly this can happen because a backup is running.
+
+```
+#try to unlock it first
+qm unlock <int: vm_id>
+
+#cat /etc/pce/.vmlist
+qm stop <int: vm_id>
+```
+
 # Links
 
 * [HA Proxmox Cluster with Shared Storage](https://networkingdream.com/server/ha-proxmox-cluster-with-shared-storage/) - 20210930
