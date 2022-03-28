@@ -2,21 +2,7 @@
 
 ## Setup updateable packages available
 
-* The [zabbix-apt](https://github.com/theranger/zabbix-apt) package explains all
-* Instead of apt, you could write your own configuration to fill up the parameters
-* My improvement/change would be to move the logic a bit
-    * The cronjob would become a systemd-timer
-    * The systemd-service would execute a shell script
-    * This shell script would generate up to two files
-        * This is the script that contains the code for all supported package managers
-            * On arch linux, for example, the code would be `sudo pacman -Syy && sudo pacman -Qu`
-        * `/var/local/packagemanager-list_of_updateable_security_packages.txt` (e.g. via `apt-get -s upgrade | grep -ci ^inst.*security`)
-        * `/var/local/packagemanager-list_of_updateable_packages.txt` (e.g. via `apt-get -s upgrade | grep -iPc '^Inst((?!security).)*$'`)
-    * The zabbix agent conf file could be generalized
-        * Rename `apt.conf` to `packagemanager.conf`
-        * Rename `UserParameter=apt.security` to `UserParameter=packagemanager.security`
-        * Rename `UserParameter=apt.updates` to `UserParameter=packagemanager.updates`
-        * Change the way the `UserParameter` where filled by changing the command to something like `cat /var/local/packagemanager-list_of_updateable_packages.txt | wc -l`
+* Use the [bazzline/zabbix_agent_update_notifiyer](https://github.com/bazzline/zabbix_agent_update_notifyer) package to monitor if package updates are available
 
 ## Setup web monitoring
 
