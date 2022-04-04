@@ -32,3 +32,4 @@ snmpwalk -t 20 -v 2c -c public <ip address of a switch or network device>
 
 * [snmpd configuration](http://www.net-snmp.org/wiki/index.php/TUT:snmpd_configuration)
 * [Netdata snmp data collector.](https://learn.netdata.cloud/docs/agent/collectors/node.d.plugin/snmp/#data-collection-speed)
+* [Snmpwalk Notes](https://utcc.utoronto.ca/~cks/space/blog/sysadmin/SnmpwalkNotes) - 20220404
