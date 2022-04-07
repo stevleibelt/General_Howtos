@@ -68,6 +68,12 @@ The fully qualified name is "CN=cobraLazer,OU=IT,DC=compu,DC=global,DC=hyper,DC=
     * group policy infrastructure status - reports if a GPO is not replicated correctly over all DC's
     * group policy results report - now times the execution of individual compontens when doing an group policy update
 
+# How To
+
+* List all AD-groups of current user
+	* `gpresult /r`
+	* `whoami /groups`
+
 # PowerShell
 
 ## Get all properties for a user
