@@ -16,7 +16,7 @@ ssh-copy-id -i .ssh/my_key.pub user@host
 
 # configuration file
 
-If you want to know more, man ssh_config is your friend.
+If you want to know more, `man ssh_config` is your friend.
 
 ```
 #vim ~/.ssh/config
