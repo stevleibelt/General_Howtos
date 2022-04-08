@@ -62,6 +62,42 @@ apt-get install <package name>
 
 # upgrade paths
 
+## from 9 (stretch) to 10 (buster)
+
+```
+#update current system
+sudo apt update && sudo apt upgrade
+sudo apt autoremove
+sudo apt autoclean
+
+#adapt source list
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.20210819
+sudo bash -c "cat > /etc/apt/source.list <<DELIMG
+deb http://deb.debian.org/debian buster main
+deb-src http://deb.debian.org/debian buster main
+
+deb http://deb.debian.org/debian buster-updates main
+deb-src http://deb.debian.org/debian buster-updates main
+
+deb http://deb.debian.org/debian buster-security main
+deb-src http://deb.debian.org/debian buster-security main
+DELIM"
+#optional, check every file in /etc/apt/source.list.d
+
+#do the upgrade
+sudo apt update
+#apt full-upgrade is working too
+sudo apt full-upgrade
+
+#after upgrade
+sudo systemctl reboot
+sudo apt --purge autoremove
+
+#if you want to
+#cat /etc/issue would work too
+cat /etc/os-release
+```
+
 ## from 10 (buster) to 11 (bullseye)
 
 ```
@@ -79,7 +115,7 @@ sudo sed -i -e 's/buster/bullseye/g' /etc/apt/sources.list
 #do the upgrade
 sudo apt update
 #apt full-upgrade is working too
-sudo apt dist-upgrade
+sudo apt full-upgrade
 
 #after upgrade
 sudo systemctl reboot
