@@ -24,6 +24,10 @@ screen -S <session identifier> -X quit
 
 #start a screen session by doing something and keep the session alive by starting a shell
 session -dmS my_session_name bash -c 'echo "this is a test" >> bazzline.log; exec bash'
+
+#rename a screen session
+#@see: https://www.shellhacks.com/screen-rename-session/ - 20220412T164400
+screen -S <pid>.<current screen session name> -X sessionname <new session name>
 ```
 
 ```
