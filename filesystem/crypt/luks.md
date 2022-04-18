@@ -1,4 +1,4 @@
-# create
+# Create
 
 ```
 # create luks container
@@ -9,4 +9,23 @@ lsblk -fs
 blkid
 # open your luks container
 cryptsetup luksOpen /dev/disk/by-uuid/<uuid> <luks conainter name> 
+```
+
+# Work with it
+
+```
+#list keys
+cryptsetup luksDump /dev/sdX | grep -i key
+
+#change key
+sudo cryptsetup luksChangeKey /dev/sdX
+
+#add key
+sudo cryptsetup luksAddKey /dev/sdX
+
+#remove key
+##by entering the passphrase
+sudo cryptsetup luksRemoveKey /dev/sdX
+##by defining the key slot
+sudo cryptsetup luksKillSlot /dev/sdX 2
 ```
