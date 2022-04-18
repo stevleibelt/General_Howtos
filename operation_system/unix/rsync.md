@@ -9,7 +9,11 @@ rsync source:foo/ destination/
 ## connection via network layer (deamon using tcp port)
 
 ```
+#sync from module to local path
 rsync source::module /destination
+
+#sync from local path to module
+rsync /source/ [<user>@]host::module
 ```
 
 ## requesting multiple files from host
