@@ -10,6 +10,7 @@ smartctl -a -d sat /dev/<device>
 
 ## for normal devices
 smartctl -a /dev/<device>
+#view test results
 smartctl -H /dev/<device>
 ```
 
