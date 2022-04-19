@@ -1,4 +1,6 @@
-# robocopy
+# Robocopy
+
+## Usage
 
 ```
 #my default simple usage
@@ -32,6 +34,38 @@ robocopy.exe <source> <destination> /MIR /FFT /COPY:DATSOU /DCOPY:DAT /W:5 /R:5 
 #/ZB - copies files in restart mod if an error has happend, uses "savemode" if copy is still not possible
 ```
 
-# links
+# Create Scheduled Task
+
+* Create your robocopy command line call and save it to a file located on your local drive (name it like `sync_<source>_to_<destination>.bat`)
+* Open search `Win+S`
+* Enter `schedule task`
+* `Task Scheduler (Local)` -> `Task Scheduler Library`
+* Rightclick -> `new directory`
+* Give it a good name like `<user_name>`
+* Rightlick on the new directory -> `Create Basic Task...`
+* Enter a good name like `sync <source> to <destination>`
+* Enter a good description, if needed
+* Click on `Next`
+* Select a fitting trigger (`daily` at `12:30:00` is a good schedule)
+* Click on `Next`
+* Select action `start a program`
+* Click on `Next`
+* Enter the path to your initial created `*.bat` file
+* Click on `Next`
+* Add a check to `Open the Properties dialog ...`
+* Click on `Finish`
+* Depending on your task, you maybe need to:
+    * Configure `Change User or Group...`
+    * Select `run wheter user is logged on or not`
+    * Check `Run with highest privileges`
+* Select the tab `Settings`
+    * Configure `Stop the task if it runs longer than:` to `1 day`
+* Click on `OK`
+
+You can now test the task by rightclicking on the task and select `Run`
+
+You can now test the task by rightclicking on the task and select `Run`.
+
+# Links
 
 * [official microsoft documentation](https://docs.microsoft.com/en-US/windows-server/administration/windows-commands/robocopy)
