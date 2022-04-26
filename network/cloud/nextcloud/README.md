@@ -19,6 +19,29 @@ cp config.php config.php.<yyyymmdd>
     ]
 ```
 
+## Update from 20.x to 22.x
+
+"The old server-side-encryption format is enabled. We recommend disabling this. For more details see the documentation."
+
+```
+#@see: https://github.com/nextcloud/server/issues/24240
+#@see: https://docs.nextcloud.com/server/latest/admin_manual/issues/general_troubleshooting.html#problems-when-downloading-or-decrypting-files
+#login to your nextcloud path via shell
+#check current state
+php occ encryption:scan:legacy-format
+
+#do the update
+php occ encryption:migrate-key-storage-format
+
+#fix things
+php occ files:cleanup
+php occ files:repair-tree
+php occ files:scan --all
+
+#check
+php occ encryption:status
+```
+
 # Link
 
 * [nextcloud](https://nextcloud.com/)
