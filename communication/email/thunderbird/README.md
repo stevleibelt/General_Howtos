@@ -19,7 +19,7 @@
 | `B` | Go to previous message |
 | `C` | Mark all read by date |
 | `F` | Go to next message |
-| `J` | Mark as jung |
+| `J` | Mark as junk |
 | `M` | Mark message as read/undread |
 | `N` | Go to next unread message |
 | `P` | Go to previous unread message |
