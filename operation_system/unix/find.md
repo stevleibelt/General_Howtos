@@ -48,6 +48,10 @@ find . -exec <command or script> {} \;
 #   find each *.epub file and copy each found file to /mnt/
 find . -iname *.epub -type -f -exec cp -v /mnt/ {} \;
 
+#   find each *.md file and search in the content for the pattern foo bar
+#@see: https://www.shellhacks.com/linux-find-files-by-name-grep-contents/
+find . -iname *.md -type f -exec grep -H "foo bar" {} \;
+
 #execute the command and append all the files as arguments
 find . -exec <command or script> {} +
 ```
