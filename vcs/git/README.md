@@ -1,4 +1,32 @@
-# edit configuration
+# Git
+
+## gitconfig
+
+### List all used configuration files
+
+
+```
+git config --list --show-origin
+```
+
+#### Git configuration files on linux
+
+| Scope | Path |
+| System Global | `/etc/gitconfig` |
+| User Global | `{/home/<username>|/root}/.gitconfig` |
+| User Local | `<path to the current repository>.git/config` |
+| Worktree Local | `<path to the current repository>.git/config.worktree` |
+
+#### Git configuration files on windows
+
+| Scope | Path |
+| System Global | `<path to the git installation>\mingw64\etc\gitconig` |
+| System Portable | `c:\ProgramData\Git\config` |
+| User Global | `c:\users\<user name>.gitconfig` |
+| User Local | `<path to the current repository>.git\config` |
+| Worktree Local | `<path to the current repository>.git\config.worktree` |
+
+### Edit configuration
 
 ```
 git config -e           #project based
@@ -8,14 +36,16 @@ git config -e --global  #global ;-)
 git config --global http.proxy [http://][proxyuser@]proxy.server[:port]
 ```
 
-# log
+## Show log
 
 ```
 git reflog
 git log
 ```
 
-# remove local changes
+## Howto's
+
+### Remove local changes
 
 ```
 #list possible cleaned objects
@@ -30,55 +60,55 @@ git reset --hard HEAD
 git reset --hard origin/master
 ```
 
-## revert changes on local copy
+### Revert changes on local copy
 
 ```
 git checkout .
 ```
 
-## revert changes on index
+### Revert changes on index
 
 ```
 git reset
 ```
 
-## revert last commited change
+### Revert last commited change
 
 ```
 git revert ...
 ```
 
-## revert an already pushed commit
+### Revert an already pushed commit
 
 ```
 git revert <commit checksum>
 ```
 
-## revert an already pushed merge commit
+### Revert an already pushed merge commit
 
 ```
 git revert -m1 <commit checksum>
 ```
 
-## checkout special commit
+### Checkout special commit
 
 ```
 git checkout <sha1>
 ```
 
-## checkout master (resolving detached head issue)
+### Checkout master (resolving detached head issue)
 
 ```
 git checkout master
 ```
 
-## switch back to previous branch
+### Switch back to previous branch
 
 ```
 git checkout -
 ```
 
-# commit
+### Commit
 
 ```
 git commit -a               #commit all changes
@@ -87,7 +117,7 @@ git commit --amend          #edit message for the most recent commit, tags: rena
 git commit --amend <file>   #redo previous commit including changes from files ...
 ```
 
-## undo commit
+### Undo commit
 
 ```
 git reset --soft HEAD~1
@@ -97,20 +127,20 @@ git commit --amend
 #http://git-scm.com/2011/07/11/reset.html
 ```
 
-# diff
+## Show differences
 
 ```
 git diff --staged           #show diff using staged instead of commited
 ```
 
-# rm
+## Remove
 
 ```
 git rm --cached             #remove files in stage/repository (but not in the filesystem)
 ```
                                 #good if you commited log files or something else you don't want to commit
 
-# blame
+## Blame
 
 ```
 git blame <file> <revision>
@@ -118,9 +148,9 @@ git gui blame
 git whatchanged <file>
 ```
 
-# add, unadd, delete
+## Add, unadd, delete
 
-## add a file to the index/staging
+### Add a file to the index/staging
 
 ```
 git add <file>
@@ -129,7 +159,7 @@ git add -p  #interactively decide which changes to add
 git add -i  #like patch but with no menu
 ```
 
-## add changes to stage
+### Add changes to stage
 
 ```
 git stage <file>
@@ -137,25 +167,25 @@ git stage --patch       #interactively decide which changes to add to stage
 git stage --interactive #like patch but with no menu
 ```
 
-## remove from index/staging
+### Remove from index/staging
 
 ```
 git reset HEAD -- $file
 ```
 
-## remove files from project
+### Remove files from project
 
 ```
 git rm <file>
 ```
 
-## remove deleted files
+### Remove deleted files
 
 ```
 git rm $(git ls-files --deleted)
 ```
 
-## add alias
+### Add alias
 
 ```
 #simple alias
@@ -167,27 +197,27 @@ git config --global alias.unadd 'reset HEAD --'
 my-complex-alias = "!f() { echo \"this is your user input $@\"; }; f"
 ```
 
-# Reset
+## Reset
 
-## remove file or directory from stage
+### Remove file or directory from stage
 
 ```
 git reset <name>
 ```
 
-## show information
+### Show information
 
 ```
 git show 1.2.3
 ```
 
-## sign with gpg
+### Sign with gpg
 
 ```
 git tag -s 1.2.3 -m 'signed version 1.2.3'
 ```
 
-## push to repository
+### Push to repository
 
 ```
 #current head
@@ -196,13 +226,17 @@ git push origin HEAD
 git push origin 1.2.3
 ```
 
-# squashing
+## Squashing
 
 ```
-git rebase --interactive HEAD~10    #squash last 10 commits to a big one
+#squash last 10 commits to a big one
+git rebase --interactive HEAD~10
+
+#merge branch by squashing all commits to one
+git merge --squash <branch to merge>
 ```
 
-# diamond shape in git log history
+## Diamond shape in git log history
 
 ```
 Suppose originally there were 3 commits, A,B,C:
@@ -245,19 +279,19 @@ which is a good description.
 
 [source](http://stackoverflow.com/questions/16666089/whats-the-difference-between-git-merge-and-git-rebase/16666418#16666418)
 
-# maintenance
+## Maintenance
 
 ```
 git gc --aggressive
 ```
 
-# list available hooks
+## List available hooks
 
 ```
 git help hooks
 ```
 
-# links
+## Links
 
 * http://try.github.io/
 * [12 tips for git](https://opensource.com/article/18/4/12-git-tips-gits-12th-birthday)
