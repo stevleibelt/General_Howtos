@@ -1,5 +1,6 @@
-# following is a list of basic, common or important ones
+# yum package manager
 
+```bash
 # list all packages in all repositories
 yum list [all]
 
@@ -41,9 +42,11 @@ yum localinstall [package name]
 set in: /etc/yum/pluginconf.d/installonlyn.conf 
 installonlyn = 3
 to install only 3 kernel versions
+```
 
-# Links
+## Links
 
 * http://www.fedorasolved.org/Members/zcat/yum-rpm-faq
 * http://yum.baseurl.org/wiki/YumCommands
 * http://yum.baseurl.org/wiki/Guides
+

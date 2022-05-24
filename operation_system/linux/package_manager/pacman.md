@@ -1,6 +1,6 @@
-# Basic knowledge
+# Pacman package manager
 
-```
+```bash
 #do not ask for confirmation (no good idea except you run pacman from a script)
 --noconfirm
 
@@ -46,9 +46,9 @@ pacman -Qdt
 pacman -Rsn `pacman -Qqdt`
 ```
 
-# Error solving
+## Error solving
 
-```
+```bash
 #list the current used server for <section>
 #example done by <section> core
 pacman-conf --repo core Server
@@ -66,19 +66,19 @@ sudo pacman -Suu
 sudo pacman -Syyu
 ```
 
-# Date back packman repository status
+## Date back packman repository status
 
 [see](https://github.com/archzfs/archzfs/issues/419#issuecomment-978018918)
 
-```
+```bash
 [core]
 SigLevel = PackageRequired
 Server=https://archive.archlinux.org/repos/1983/10/06/$repo/os/$arch
 ```
 
-# Locate .pac\* files
+## Locate .pac\* files
 
-```
+```bash
 # in /etc
 find /etc -regextype posix-extended -regex ".+\.pac(new|save|orig)" 2> /dev/null
 
@@ -93,9 +93,9 @@ locate -e --regex "\.pac(new|orig|save)$"
 egrep "pac(new|orig|save)" /var/log/pacman.log
 ```
 
-# install and setup reflector
+## install and setup reflector
 
-```
+```bash
 sudo su
 #set your country like "United States" or "Germany" etc.
 #fetch a list of available countries via "cat /etc/pacman.d/mirrorlist | grep '## ' | grep -v 'Arch\|Generated' | awk '{ print $2}'"
@@ -119,7 +119,7 @@ Exec = /usr/bin/bash -c "reflector --country '$(echo ${COUNTRY_NAME})' -l $(echo
 DELIM
 ```
 
-# links
+## Links
 
 * https://wiki.archlinux.org/index.php/Pacman_tips#Custom_local_repository
 * https://wiki.archlinux.de/title/Pacman
@@ -128,3 +128,4 @@ DELIM
 * https://wiki.archlinux.org/index.php/DeveloperWiki:Pacman_Hooks
 * https://wiki.archlinux.org/index.php/Reflector
 * https://wiki.archlinux.org/index.php/Mirrors
+
