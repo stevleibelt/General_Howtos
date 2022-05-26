@@ -12,7 +12,7 @@
 * has layouts
 * you can syncron run the same command on many screens at the same time
 
-# configuration
+## Configuration
 
 ```
 #example
@@ -42,7 +42,7 @@ set-option -g pane-active-border-style "bg=black"
 set-option -ag pane-active-border-style "fg=black"
 ```
 
-# demo
+## Commands
 
 ```
 #start new session
@@ -59,6 +59,9 @@ CTRL+d
 #list session
 tmux list-sessions
 
+#attach to session 0
+tmux attach -t 0
+
 #change to other session
 :switch ?
 
@@ -69,7 +72,7 @@ tmux list-sessions
 :swap-pane -s <source id> -t <target id>
 ```
 
-# link
+## Link
 
 * [video - tmux warum ein schwarzes fenster reicht](https://media.ccc.de/v/DCJGKA)
 * [tmux crash course](https://robots.thoughtbot.com/a-tmux-crash-course)
