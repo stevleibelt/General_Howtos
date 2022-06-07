@@ -1,7 +1,10 @@
-# needed packages
+# fat
+
+## Needed packages
 
 if you need to create fat16/32 filesystems, install "dosfstools"
 
-# check filesystem
+## Check filesystem
 
 fsck.fat -atvV /dev/sdX0
+

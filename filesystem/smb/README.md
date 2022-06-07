@@ -1,8 +1,8 @@
 # SMB
 
-# Help
+## Help
 
-## User [] from [] failed to log in via [SMB] doe to [NTLMv1 not permitted]
+### User [] from [] failed to log in via [SMB] doe to [NTLMv1 not permitted]
 
 So I had the joy to discover this issue under the following circumstances.
 
@@ -22,3 +22,4 @@ With that information, it was easy to ask the web and find a working solution.
 * Latest after a restart, your smb connection should work again
 
 Reminder, remove this Windows XP machines and try to upgrade to SMBv3 as soon as possible.
+

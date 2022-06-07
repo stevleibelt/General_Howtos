@@ -1,8 +1,10 @@
-# quick start
+# Samba
+
+## Quick start
 
 * cp /etc/samba/smb.conf.default /etc/samba/smb.conf
 
-## add user
+### Add user
 
 ```
 if [smbd -V >= 3.4.0]
@@ -12,13 +14,13 @@ else
 fi
 ```
 
-## list users
+### List users
 
 ```
 pdbedit -L
 ```
 
-## edit user
+### Edit user
 
 ```
 pdbedit -t -r -u <user name>
@@ -26,15 +28,15 @@ pdbedit -t -r -u <user name>
 smbpasswd -s <user name>
 ```
 
-## set stickbit for ug
+### Set stickbit for ug
 
 ```
 chmod -R ug+s <folder>
 ```
 
-# smb.conf
+## smb.conf
 
-## options
+### options
 
 * browseable = no           -   service is seen or not
 * create mask = 0765        -   file create mask
@@ -56,7 +58,7 @@ chmod -R ug+s <folder>
 * write list = foo,bar      -   list of users that have write access
 * writeable = no            -   service is writeable
 
-## macros
+### macros
 
 * %U    -   the username (the client wanted, not the same as they got on the system)
 * %G    -   primary group of %U
@@ -77,7 +79,7 @@ chmod -R ug+s <folder>
 * %g    -   primary group of %u
 * %H    -   home directory of %u
 
-# smbclient
+## Smbclient
 
 ```
 #<server name> can be the host name or the ip address
@@ -94,7 +96,7 @@ smbclient -L <server name> -U <user name>
 smbclient \\\\<server name>\\<share>
 ```
 
-# mount share 
+## Mount share 
 
 ```
 #per session
@@ -103,7 +105,7 @@ mount –t cifs <server name>/<share name> <local mount point> -o username=<user
 #/etc/fstab
 ```
 
-## mounting with write permissions
+### Mounting with write permissions
 
 ```
 #get the <user id> from console command "id"
@@ -112,7 +114,7 @@ mount –t cifs <server name>/<share name> <local mount point> -o username=<user
 mount -t cifs <server name>/<share name> <local mount point> -o username=<user name>,uid=<user id>
 ```
 
-## options
+### Options
 
 * gid       -   group id on your client
 * iocharset -   chaset (likeuicharset=utf8)
@@ -120,7 +122,7 @@ mount -t cifs <server name>/<share name> <local mount point> -o username=<user n
 * username  -   username on the server
 * workgroup -   workgroup on the server
 
-# simple howto
+## Simple howto
 
 ```
 # based for debian
@@ -156,9 +158,9 @@ vim /etc/samba/smb.conf
 #   update-rc.d samba defaults
 ```
 
-# umask
+## Umask
 
-## example
+### Example
 
 ```
 create mask = 0664
@@ -167,7 +169,7 @@ force create mode = 0664
 force directory mode = 0775
 ```
 
-# speed / make it fast
+## Speed / make it fast
 
 ```
 ####
@@ -183,14 +185,14 @@ socket options = TCP_NODELAY    #default tryout ;-)
 socket options = IPTOS_LOWDELAY #if your are on a lan
 ```
 
-## links
+### Links
 
 * http://www.bodenzord.com/archives/53
 * https://askubuntu.com/questions/210808/set-umask-set-permissions-and-set-acl-but-samba-isnt-using-those
 
-# error handling
+## Error handling
 
-##  Unable to open printcap file /etc/printcap for read!
+###  Unable to open printcap file /etc/printcap for read!
 
 ```
 #add to smb.conf
@@ -201,24 +203,24 @@ socket options = IPTOS_LOWDELAY #if your are on a lan
    printing = bsd
 ```
 
-## Failed to delete pidfile /var/run/smbd.pid.
+### Failed to delete pidfile /var/run/smbd.pid.
 
 ```
 #see: https://bugs.archlinux.org/task/36338
 ```
 
-## protocol negotiation failed: NT_STATUS_INVALID_NETWORK_RESPONSE
+### protocol negotiation failed: NT_STATUS_INVALID_NETWORK_RESPONSE
 
 ```
 #see: https://wiki.archlinux.org/index.php/Samba/Troubleshooting#protocol_negotiation_failed:_NT_STATUS_INVALID_NETWORK_RESPONSE
 comment out your "hosts allow"
 ```
 
-## mount error(13): Permission denied
+### mount error(13): Permission denied
 
 If you have tried it wot "mount -t cifs", try it with "mount.cifs".
 
-# links
+## Links
 
 * https://wiki.samba.org/
 * https://www.samba.org/samba/docs/man/manpages-3/smb.conf.5.html
@@ -226,3 +228,4 @@ If you have tried it wot "mount -t cifs", try it with "mount.cifs".
 * https://wiki.archlinux.org/index.php/Samba
 * https://help.ubuntu.com/community/Samba/SambaServerGuide?highlight=%28%5CbCategoryNetworking%5Cb%29
 * http://www.linuxhomenetworking.com/wiki/index.php/Quick_HOWTO_:_Ch10_:_Windows,_Linux,_and_Samba
+

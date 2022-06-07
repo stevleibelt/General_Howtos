@@ -1,21 +1,24 @@
-# mount
+# smbfs
+
+## mount
 
 cifs should be the preferred way.
 
-## smbclient
+### smbclient
 
 ```
 smbclient \\\\<hostname|ip address>\\foldername -U <username>
 ```
 
-## smbfs
+### smbfs
 
 ```
 mount -t smbfs //<hostname|ip address>/foldername mountpoint -o username=<username>
 ```
 
-## cifs
+### cifs
 
 ```
 mount -t cifs //<hostname|ip address>/foldername mountpoint -o username=<username>
 ```
+

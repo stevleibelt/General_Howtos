@@ -1,4 +1,6 @@
-# check smart values (results of last test)
+# smartctl
+
+## Check smart values (results of last test)
 
 Smartctl on a disk attached via usb is not fully supported.
 Installable via smartmontools.
@@ -24,9 +26,9 @@ smartctl -a /dev/<device>
 smartctl -s on /dev/<device>
 ```
 
-# run a test
+## Run a test
 
-## for usb devices
+### For usb devices
 
 ```
 #short test
@@ -41,7 +43,7 @@ smartctl -t long -d sat /dev/<device> -T permissive
 smartctl -l selftest -d sat /dev/<device> -T permissive
 ```
 
-## for installed devices
+### For installed devices
 
 ```
 #list what kind of tests is the devices able to do
@@ -63,13 +65,13 @@ smartctl -t conveyance /dev/<device>
 smartctl -a /dev/<device> | grep -i conveyance
 ```
 
-# get all availabale harddisk parameters
+## Get all availabale harddisk parameters
 
 ```
 hdparm -I /dev/<device> | less
 ```
 
-# check if ncq (natural command queue) is enabled (>1)
+## Check if ncq (natural command queue) is enabled (>1)
 
 ```
 cat /sys/block/sdx/device/queue_depth
@@ -77,7 +79,8 @@ dmesg | grep -i ncq
 smartctl -a -d ata -s on /dev/<device>
 ```
 
-# links
+## Links
 
 * https://wiki.archlinux.org/index.php/S.M.A.R.T.
 * [for testing external hdd with smartctl,](https://gist.github.com/meinside/0538087cc60a2f0654bb) - 20201228
+

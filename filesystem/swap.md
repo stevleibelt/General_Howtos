@@ -1,4 +1,6 @@
-# gain overview
+# Swap
+
+## Gain overview
 
 ```
 #show basic information
@@ -16,3 +18,4 @@ free -h
 #so = memory wapped to disk
 vmstat
 ```
+

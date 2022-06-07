@@ -1,4 +1,6 @@
-# configure samba share
+# Autofs
+
+## Configure samba share
 
 ```
 #/media is the root path where we want to link the share into it
@@ -7,6 +9,7 @@ sudo echo "/media /etc/autofs/auto.<server name> --timeout=60 --ghost\n" >> /etc
 sudo echo "<local mount name> -fstype=cifs[,<other options>] ://<server name>/<server share>\n" > /etc/autofs/auto.<server name>
 ```
 
-# links
+## Links
 
 * [arch linux wiki](https://wiki.archlinux.org/index.php/Autofs)
+

@@ -1,6 +1,6 @@
-# example smb.conf file
+# Example smb.conf file
 
-## basic example 
+## Basic example
 
 Assuming you want so share something like the following directory structure, you should use the ownerships and permissions like the following.
 
@@ -58,3 +58,4 @@ smbpasswd -a <user_name_one>
         valid users = <user_name_one>[,<user_name_two>[,...]]
         writeable = yes
 ```
+

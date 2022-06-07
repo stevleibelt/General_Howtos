@@ -1,17 +1,16 @@
-# install
+# Badblocks
 
-```
-pacman -S e2fsprogs
-```
+The command badblocks ins included in the `e2fsprogs`, at least in arch linux.
 
-# check
+## Usage
 
 ```
 badblocks -v /dev/<device>
 ```
 
-# links
+## Links
 
 * https://wiki.archlinux.org/index.php/Badblocks
 * https://en.wikipedia.org/wiki/Badblocks
 * https://en.wikipedia.org/wiki/E2fsprogs
+

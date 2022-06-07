@@ -1,10 +1,12 @@
-# check if a pool is importable by doing a dry run import
+# ZFS recover
+
+## Check if a pool is importable by doing a dry run import
 
 ```
 zpool import -f -F -n <pool name>
 ```
 
-# fixing an error
+## Fixing an error
 
 ```
 #http://zfsonlinux.org/msg/ZFS-8000-8A
@@ -24,13 +26,13 @@ zpool clear <pool name> <device>
 zpool replace <pool name> <faulty device> <new device>
 ```
 
-# force importing the pool
+## Force importing the pool
 
 ```
 zpool import -f -F <pool name>
 ```
 
-# if all is breaking, try to import the pool read only
+## If all is breaking, try to import the pool read only
 
 ```
 zpool import -o readonly=on <pool name>
@@ -47,6 +49,7 @@ zpool clear -F <pool name>
 zpool detach <pool name> <path to the device>
 ```
 
-# links
+## Links
 
 * [Repairing Damaged Data](https://docs.oracle.com/cd/E19253-01/819-5461/gbbwl/index.html)
+

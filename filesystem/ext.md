@@ -1,4 +1,6 @@
-# migrate from ext3 to ext4
+# Ext file systems
+
+## Migrate from ext3 to ext4
 
 ```
 #example is based on the fact that you are migrating "/"
@@ -14,15 +16,16 @@ fsck.ext4 -yfD /dev/sdX1
 #reboot
 ```
 
-# repair ext 4
+## Repair ext 4
 
 ```
 fsck.ext4 -yfD /dev/<device>
 ```
 
-# defragment ext 4
+## Defragment ext 4
 
 ```
 #available to e2fsprogs
 e4defrag -c <device>
 ```
+

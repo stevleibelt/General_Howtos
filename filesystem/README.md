@@ -1,4 +1,6 @@
-# detect file system
+# Filesystem
+
+## Detect file system
 
 ```
 df -T
@@ -12,13 +14,13 @@ fsck -N
 file -sl /dev/sdX1
 ```
 
-# permissions, date of creation etc.
+## Permissions, date of creation etc.
 
 ```
 stat <path to file or directory>
 ```
 
-# basic check
+## Basic check
 
 ```
 #compare numbers
@@ -27,7 +29,7 @@ wc -c /dev/<device>  #can we read all sectors?
 fdisk -l /dev/<device>
 ```
 
-# check with smartctl
+## Check with smartctl
 
 ```
 #smartctl is in the package smartmontools
@@ -35,7 +37,7 @@ smartctl -a /dev/<device>       #list a lot of informations
 smartctl -t long /dev/<device>  #start a long test, check with "-a"
 ```
 
-# globbing
+## Globbing
 
 ```
 #@see: https://askubuntu.com/a/483192
@@ -45,7 +47,7 @@ b*
 b?*
 ```
 
-# statistic of inodes
+## Statistic of inodes
 
 ```
 df -i
@@ -53,11 +55,11 @@ df -i
 df -ih
 ```
 
-# error
+## Error
 
-## "too many open files"
+### "too many open files"
 
-### current limits
+#### Current limits
 
 ```
 #current number of open files
@@ -68,7 +70,7 @@ cat /proc/sys/fs/file-nr
 cat cat /proc/sys/fs/file-max
 ```
 
-### adapt
+#### Adapt
 
 ```
 #set custom limits per user in /etc/security/limits.conf
@@ -76,9 +78,10 @@ fs.file-max = <new limit>
 sysctl -p
 ```
 
-# links
+## Links
 
 * http://www.thegeekstuff.com/2011/04/identify-file-system-type/
 * http://www.rooot.net/en/geek-stuff/linux/15-too-many-open-files.html
 * http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/
 * https://linuxconfig.org/how-to-force-fsck-to-check-filesystem-after-system-reboot-on-linux
+

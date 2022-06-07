@@ -1,9 +1,11 @@
-# enable
+# ACL
+
+## Enable
 
 * enable it in your zpool (if you are using zfs)
 * enable it via "tune2fs -o acl /dev/sdXY"
 
-# get acl
+## Get acl
 
 ```
 #get help page
@@ -14,7 +16,7 @@ getfacl <path>
 getfacl --omit-header <path>
 ```
 
-# set acl
+## Set acl
 
 ```
 setfacl --help
@@ -44,8 +46,9 @@ find <path> -type d | parallel --max-args=6 setfacl --default --modify u:500:rwx
 find <path> -type f | parallel --max-args=6 setfacl --default --modify u:500:rw,u:1000:rw
 ```
 
-# links
+## Links
 
-* [Access Control List - archlinux.org](https://wiki.archlinux.org/index.php/Access_Control_Lists) - 2020-03-30
-* [Access Control List - wikipedia.org](https://en.wikipedia.org/wiki/Access_control_list) - 2020-03-30
-* [Access control lists and external drives on Linux: What you need to know - opensource.com](https://opensource.com/article/20/3/external-drives-linux) - 2020-03-30
+* [Access Control List - archlinux.org](https://wiki.archlinux.org/index.php/Access_Control_Lists) - 20200330
+* [Access Control List - wikipedia.org](https://en.wikipedia.org/wiki/Access_control_list) - 20200330
+* [Access control lists and external drives on Linux: What you need to know - opensource.com](https://opensource.com/article/20/3/external-drives-linux) - 20200330
+

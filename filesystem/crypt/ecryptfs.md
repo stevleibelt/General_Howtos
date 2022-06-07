@@ -1,4 +1,6 @@
-# simple
+# ecryptfs
+
+## Simple
 
 ```
 pacman -S ecryptfs-utils
@@ -12,8 +14,9 @@ chmod -R 550 private
 mount -t ecryptfs /path/to/.private /path/to/private
 ```
 
-# advanced
+## Advanced
 
 ```
 pacman -S keyutils
 ```
+

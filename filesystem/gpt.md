@@ -17,6 +17,7 @@ sgdisk -L
 sgdisk -a 4096 -n 1:4096:-10000 -c 1:"<you lable>" -t 1:bf00 /dev/<device>
 ```
 
-# link
+## Link
 
 * http://www.rodsbooks.com/gdisk/sgdisk-walkthrough.html
+

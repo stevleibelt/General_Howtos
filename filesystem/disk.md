@@ -4,18 +4,18 @@
 * badblocks
 * vendor specific tools like [seatools](https://aur.archlinux.org/packages/seatools/) (with the superbe name "st") for seagate
 
-# Collection of Disk/Image Cloning Tools
+## Collection of Disk/Image Cloning Tools
 
-## With examples
+### With examples
 
-### dd
+#### dd
 
 ```
 dd if=/dev/sdb3 of=/dev/sdc3 bs=4096 conv=noerror
 dd if=/nfs/backup/images/backup.sda1.07.28.12.img of=/dev/sda1 bs=1M conv=noerror
 ```
 
-### ddrescue (does not break if data of device is broken)
+#### ddrescue (does not break if data of device is broken)
 
 ```
 #to another disk
@@ -24,14 +24,14 @@ ddrescue /dev/sda /dev/sdb
 ddrescue /dev/sda /mnt/my_sda_image_from.img
 ```
 
-### partimage (backup and restore disk partitions into image files)
+#### partimage (backup and restore disk partitions into image files)
 
 ```
 partimage -z1 -o -d save /dev/sda2 /nfs/backup/laptop.wks01.sda1.home_07_08_2012.gz
 partimage restore /dev/sda2 /nfs/backup/laptop.wks01.sda1.home_07_08_2012.gz.000
 ```
 
-## Without examples
+### Without examples
 
 | Name with Link | Description |
 | --- | --- |
@@ -44,7 +44,7 @@ partimage restore /dev/sda2 /nfs/backup/laptop.wks01.sda1.home_07_08_2012.gz.000
 | [ultimate boot cd - ubcd.sourceforge.net](http://ubcd.sourceforge.net/) | free and open source |
 | [hdclone - miray.de](http://www.miray.de/download/sat.hdclone.html) | |
 
-## List of Open Source Backup and Restore Utilites
+### List of Open Source Backup and Restore Utilites
 
 | Name with Link | Description |
 | --- | --- |
@@ -56,8 +56,9 @@ partimage restore /dev/sda2 /nfs/backup/laptop.wks01.sda1.home_07_08_2012.gz.000
 | [duplicati.com](https://www.duplicati.com/) | free and open source |
 | [freebyte.com](http://www.freebyte.com/fbbackup/) | |
 
-# links
+## Links
 
 * http://www.cyberciti.biz/open-source/linux-based-disk-cloning-imaging-software/
 * [hddguru - free software collection](https://hddguru.com/software/) - 2020-03-13
 * http://www.thefreecountry.com/utilities/backupandimage.shtml
+

@@ -1,6 +1,8 @@
-# ranger is a vi like file manager for the command line
+# Ranger
 
-# commands
+Ranger is a vi like file manager for the command line.
+
+## Commands
 
 * k         - up
 * j         - down
@@ -16,16 +18,17 @@
 * :filter   - limit item matchings
 * :delete   - delete selected items
 
-# good to know
+## Good to know
 
-## generate configuration files
+### Generate configuration files
 
 ```
 #generate files in ~/.config/ranger
 ranger --copy-config=all
 ```
 
-# links
+## Links
 
 * http://www.rosipov.com/blog/ranger-the-cli-file-manager/
 * https://wiki.archlinux.org/index.php/ranger
+

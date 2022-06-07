@@ -1,4 +1,6 @@
-# installation
+# zrepl
+
+## Installation
 
 ```
 #build it from source
@@ -8,6 +10,7 @@ yay -S zrepl
 yay -S zrepl-bin
 ```
 
-# link
+## Link
 
 * [zrepl - official homepage](https://zrepl.github.io)
+

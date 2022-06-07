@@ -1,10 +1,12 @@
-# general
+# ZFS snapshot
+
+## General
 
 * a snapshot is a read only copy of the filesystem
 * when taken, it consumes nearly now additional disk space
 * a snapshot grows when data of the filesystem changes
 
-# create
+## Create
 
 * use -R to create a replication stream package (contains all properties, snapshots, descendent filesystems, clones ...
 * use -D to create a deduplicated stream
@@ -21,7 +23,7 @@ zfs snapshot [-r] <pool name>@<snapshot name>
 zfs snapshot -i <pool name>@<first snapshot name> <pool name>@<second snapshot name>
 ```
 
-# delete
+## Delete
 
 ```
 #do a dry run (-n) to calculate estimated reclaimed space from the disk
@@ -31,7 +33,7 @@ zfs destroy -nv <pool name>@<first snapshot name>%<last snapshot name>
 zfs destroy <pool name>@<snapshot name>
 ```
 
-## options
+### Options
 
 * -d    -   defer snapshopt deletion
 * -r    -   recursively all children
@@ -40,21 +42,21 @@ zfs destroy <pool name>@<snapshot name>
 * -n    -   dry run
 * -p    -   print machine parseable verbose information
 
-# list
+## List
 
 ```
 zfs list -t snapshot
 ```
 
-# diff
+## Diff
 
-## options
+### Options
 
 * -F    display type of file
 * -H    give more (human readable) parsable informations
 * -t    display paths inode change time
 
-## output
+### Output
 
 * -     the path has been removed
 * +     the path has been added
@@ -65,15 +67,15 @@ zfs list -t snapshot
 zfs diff <source snapshot name> <destination snapshot name>|<file system>
 ```
 
-# rollback / restore
+## Rollback / restore
 
-## full pool
+### Full pool
 
 ```
 zfs rollback <pool name>@<snapshot name>
 ```
 
-## working with openzfs under linux or restore single file
+### Working with openzfs under linux or restore single file
 
 ```
 #@see: nvb/document/work/application/2021/20210919_landratsamt_infrastruktur-architekt_projektmanager
@@ -85,34 +87,34 @@ diff -R <path> </path/to/mount/path>
 #unmount pool after restore was done
 ```
 
-# clone
+## Clone
 
 ```
 zfs clone <pool name>@<snapshot name> <pool name>[/<path>]/<to clone>
 ```
 
-# backup
+## Backup
 
-## on same system
+### On same system
 
 ```
 zfs send <source pool name>@<snapshot name> | zfs receive <destination pool name>
 ```
 
-## via ssh
+### Via ssh
 
 ```
 zfs send <source pool name>@<snapshot name> | ssh backup.me.com zfs recv <destination pool name>[/path]
 ```
 
-## entire pool
+### Entire pool
 
 ```
 zfs snapshot -r <source pool>@<snapshot name>
 zfs send -R <source pool name>@<snapshot name> | zfs receive -F <destination pool name>
 ```
 
-# rename
+## Rename
 
 ```
 zfs rename <pool name>@<old snapshot name> <pool name>@<new snapshot name>
@@ -120,31 +122,24 @@ zfs rename <pool name>@<old snapshot name> <pool name>@<new snapshot name>
 zfs rename <pool name>@<old snapshot name> <new snapshot name>
 ```
 
-# browse in the snapshot
-
-```
-#assuming your root is your pool
-cd /.zfs/snapshot/<snapshot name>
-ls -halt
-```
-
-# backup to archive
+## Backup to archive
 
 ```
 zfs send -Rv <pool name>@<snapshot name> | gzip > <path to archive>.gz
 ```
 
-## hints
+### Hints
 
-* install "pipe view" (pv) to monitor progress
+* Browsing in a snapshot by `ls -halt .zfs/snapshots/<snapshot name>` is not working when openzfs is used
+* Install "pipe view" (pv) to monitor progress
 
 ```
 zfs send <source pool name>[/path]@<snapshot name> | pv | zfs receive <destination pool name[/path]>
 ```
 
-* repeat snapshot send and receive at least twice (second run with disabled user access to source pool) to get all data in sync
+* Repeat snapshot send and receive at least twice (second run with disabled user access to source pool) to get all data in sync
 
-# links
+## Links
 
 * https://docs.oracle.com/cd/E23824_01/html/821-1448/recover-3.html
 * https://wiki.archlinux.org/index.php/ZFS#Experimenting_with_ZFS
@@ -152,3 +147,4 @@ zfs send <source pool name>[/path]@<snapshot name> | pv | zfs receive <destinati
 * http://googlux.com/zfs-snapshot.html
 * http://docs.huihoo.com/opensolaris/solaris-zfs-administration-guide/html/ch06.html
 * http://docs.oracle.com/cd/E19253-01/819-5461/gbcya/index.html
+
