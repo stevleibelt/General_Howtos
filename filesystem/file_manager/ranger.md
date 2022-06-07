@@ -18,6 +18,12 @@ Ranger is a vi like file manager for the command line.
 * :filter   - limit item matchings
 * :delete   - delete selected items
 
+## Image preview
+
+* Install `ueberzug`
+* `echo 'set preview_images true' > ${HOME}/.config/ranger/rc.conf`
+* `echo 'set preview_images_method ueberzug' > ${HOME}/.config/ranger/rc.conf`
+
 ## Good to know
 
 ### Generate configuration files
