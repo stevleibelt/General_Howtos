@@ -12,6 +12,7 @@ git config --list --show-origin
 #### Git configuration files on linux
 
 | Scope | Path |
+| --- | --- |
 | System Global | `/etc/gitconfig` |
 | User Global | `{/home/<username>|/root}/.gitconfig` |
 | User Local | `<path to the current repository>.git/config` |
@@ -20,6 +21,7 @@ git config --list --show-origin
 #### Git configuration files on windows
 
 | Scope | Path |
+| --- | --- |
 | System Global | `<path to the git installation>\mingw64\etc\gitconig` |
 | System Portable | `c:\ProgramData\Git\config` |
 | User Global | `c:\users\<user name>.gitconfig` |
