@@ -31,7 +31,7 @@ robocopy.exe <source> <destination> /MIR /FFT /COPY:DATSOU /DCOPY:DAT /W:5 /R:5 
 #/XF [files] - exclude files
 #/XJ - eXclude Junction points and symbolic links
 #/Z - restart current copy if something went wrong
-#/ZB - copies files in restart mod if an error has happend, uses "savemode" if copy is still not possible
+#/ZB - copies files in restart mode if an error has happend, uses "savemode" if copy is still not possible
 ```
 
 # Create Scheduled Task
