@@ -2,7 +2,7 @@
 
 ## with live preview and syntax highlighting
 
-* [vscodium](https://vscodium.com/) with following extensions
+* [vscodium](https://vscodium.com/) with following extensions - 20220615T10:53:50
   * Data Preview
   * Excel to Markdown table
   * German Language Pack for
