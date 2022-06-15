@@ -2,6 +2,24 @@
 
 ## with live preview and syntax highlighting
 
+* [vscodium](https://vscodium.com/) with following extensions
+  * Data Preview
+  * Excel to Markdown table
+  * German Language Pack for
+  * German Support for Language
+  * LanguageTool for Vis...
+  * Learn Vim
+  * Markdown All in One
+  * Markdown PDF
+  * markdownlint
+  * PHP Debug
+  * PHP Intelephense
+  * PowerShell
+  * SpellChecker
+  * Vim
+  * vscode-pdf
+  * Zenburn
+  * Zenburn Monolith Theme
 * retext
 * haroopad
 * remarkable
