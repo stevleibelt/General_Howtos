@@ -2,9 +2,13 @@
 # Image
 
 ## With No References
-![alt text](/path/to/img.jpg "Title")
+
+![alt text](https://archzfs.leibelt.de/media/image/favicon.ico "Title")
 
 ## With References
+
 ![alt text][id]
 
-[id]: /path/to/img.jpg "Title"
+Some text between image and the reference section.
+
+[id]: https://archzfs.leibelt.de/media/image/favicon.ico "Title"
