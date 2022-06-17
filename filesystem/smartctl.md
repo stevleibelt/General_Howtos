@@ -14,6 +14,8 @@ smartctl -a -d sat /dev/<device>
 smartctl -a /dev/<device>
 #view test results
 smartctl -H /dev/<device>
+#_or
+smartctl -a /dev/<device> | grep -i health
 ```
 
 ```
@@ -82,5 +84,6 @@ smartctl -a -d ata -s on /dev/<device>
 ## Links
 
 * https://wiki.archlinux.org/index.php/S.M.A.R.T.
-* [for testing external hdd with smartctl,](https://gist.github.com/meinside/0538087cc60a2f0654bb) - 20201228
+* [For testing external hdd with smartctl,](https://gist.github.com/meinside/0538087cc60a2f0654bb) - 20201228
+* [Understanding SMART Reports](https://wiki.unraid.net/Understanding_SMART_Reports) - 20220717T10:36:40
 
