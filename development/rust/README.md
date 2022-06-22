@@ -2,8 +2,10 @@
 
 ## Install it
 
-Preferred way is to use your distribution packagemanager.
+Preferred way is to use your distribution packagemanager.  
 But if you have to do it on your own, follow this guide.
+
+See also [this](rustup.md) rustup readme file.
 
 ```
 #fetch rustup.rs from https://sh.rustup.rs/
