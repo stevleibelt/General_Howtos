@@ -1,5 +1,14 @@
 # Microsoft Terminal
 
+## Installation without Microsoft Store
+
+* [This](https://www.windowspro.de/tipp/windows-terminal-ohne-store-windows-server-installieren?utm_source=WindowsPro&utm_medium=rss&utm_campaign=Feed) is the source (20220622T07:44:10)
+
+* Download the latest VCLibs from [microsoft](https://docs.microsoft.com/en-us/troubleshoot/developer/visualstudio/cpp/libraries/c-runtime-packages-desktop-bridge?msclkid=3e1dd82aac8b11ec8f9dbd86d5979ca8#how-to-install-and-update-desktop-framework-packages)
+* Download the latest Windows Terminal msi from [github](https://github.com/microsoft/terminal/releases)
+* Install the VCLibs package by executing the following powershell command `Add-AppxPackage -Path .\Microsoft.VCLibs.x64.<Version>.Desktop.appx`
+* Install the Windows Terminal msi by executing the following powershell command `Add-AppxPackage -Path .\Microsoft.WindowsTerminal_Win10_<Version>_8wekyb3d8bbwe.msixbundle`
+
 ## Setup
 
 The `settings.json` is located in the following path: `%userprofile%\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState`.
