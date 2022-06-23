@@ -1,6 +1,6 @@
 # How to connect to eduroam with nmcli and nmtui
 
-## Prephrase
+## Preamble
 
 Connecting to the eduroam wifi with `WPA2-Enterprise` is not easy doable right now.
 
