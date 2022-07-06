@@ -74,6 +74,14 @@ SELECT version();
 \q
 ```
 
+## Datatype
+
+### Serial
+
+* `SERIAL` is a shorthand for `BIGINT NOT NULL AUTO_INCREMENT UNIQUE`
+
 ## Link
 
-* [Getting started postgresql](https://opensource.com/article/19/11/getting-started-postgresql) - 2019-11-12
+* [Getting started postgresql](https://opensource.com/article/19/11/getting-started-postgresql) - 20191112
+* [PostgreSQL Sequences – Episode 5 of PostgreSQL for MySQL DBAs](https://www.percona.com/blog/postgresql-sequences-episode-5-of-postgresql-for-mysql-dbas/) - 20220706T14:51:20
+
