@@ -71,6 +71,7 @@ opkg install luci-ssl
     * [users](http://wiki.openwrt.org/doc/uci/users)
     * [netfilter](http://wiki.openwrt.org/doc/howto/netfilter
 * [firewall](http://wiki.openwrt.org/doc/uci/firewall)
+* [dhcp configuration](https://openwrt.org/docs/guide-user/base-system/dhcp_configuration) - 20220712T12:05:10
 * [ddns](http://wiki.openwrt.org/doc/howto/ddns.client)
 * [ssh / dropbear](http://wiki.openwrt.org/doc/uci/dropbear)
 * [secure](http://wiki.openwrt.org/doc/howto/secure.access)
