@@ -72,3 +72,5 @@ bar"
 
 * [tips for everyday use](https://opensource.com/article/18/5/bash-tricks) - 20190614
 * [Bash: Parameter Expansion (Substitution)](https://blog.victormendonca.com/2017/09/19/bash-parameter-expansion/) - 20170919
+* [Dump stack trace in a bash script with Trap](https://opensource.com/article/22/7/print-stack-trace-bash-scripts) - 20220731
+
