@@ -29,14 +29,10 @@ SFC /Scannow
 
 # check hard drive status (c:)
 
+See the separate [nfts](../../../../filesystem/ntfs.md) file if you want to know more about chkdsk.
+
 ```
-#WIN+R (as administrator)
-#run check disk
-#   /f  - force a check
-#   /r  - locate bad sectors and try to mark them
-#   c:  - the drive you want to check
-chkdsk /f /r c:
-CHKDSK
+chkdsk /f /r /x c:
 #or use wmic (windows instrumention commandline)
 #   this uses the reported S.M.A.R.T. values
 wmic
