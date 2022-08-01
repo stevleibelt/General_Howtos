@@ -3,6 +3,9 @@
 ## Detect file system
 
 ```
+#works also for fuseblk
+lsblk -no name,fstype
+#or
 df -T
 #or cooler
 df -T | awk '{print $1,$2,$NF}' | grep "^/dev"
