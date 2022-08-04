@@ -127,3 +127,4 @@ stdout_callback = yaml
 * [configuration management - wikipedia.org](https://en.wikipedia.org/wiki/Configuration_management)
 * [lineinfile module - fabian-affolter.ch](http://fabian-affolter.ch/blog/the-lineinfile-module-of-ansible/#comment-4707)
 * [How do ansible tags work? - percona.com](https://www.percona.com/blog/2020/04/27/how-do-ansible-tags-work/) - 20200428
+

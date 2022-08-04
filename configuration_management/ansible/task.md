@@ -89,8 +89,20 @@
     replace '#\1'
 ```
 
+## skip parameter if variable is not defined
+
+```yml
+#@see: https://www.shellhacks.com/ansible-skip-parameter-if-variable-not-defined/
+#@since: 20220804
+- name: "Count files and change into it if it is not empty"
+  shell: ls | wc -l
+  args:
+    chdir: "{{ directory | default(omit) }}"
+```
+
 # links
 
 * http://docs.ansible.com/ansible/shell_module.html
 * http://docs.ansible.com/ansible/playbooks_conditionals.html
 * http://docs.ansible.com/ansible/playbooks_variables.html#registered-variables
+
