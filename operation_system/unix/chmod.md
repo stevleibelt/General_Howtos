@@ -1,4 +1,6 @@
-# octal notation
+# chown and chmod
+
+## Octal notation
 
 ```
 4	read
@@ -6,7 +8,7 @@
 1	execute/list
 ```
 
-# alphabetic notation
+## Alphabetic notation
 
 ```
 r	read
@@ -14,25 +16,41 @@ w	write
 x	execute/list
 ```
 
-# permit others reading
+## Permit others reading
 
 ```
 chmod -R o+r *
 ```
 
-# do all in one call
+## Do all in one call
 
 ```
 # user can do all, group can read an execute, others can do nothing
 chmod u=rwxs,g=rx,o=
 ```
 
-# setuid
+## Setuid
 
 * setuid sets the user id the programm/script will run when executed
 * setuid is marked/set on the first three (user) area
 
-## user web executes myprogramm
+## Fix file permissions errors on linux
+
+```
+#fetch user id
+id --user
+
+#list current path owner
+sudo ls --numeric-uid-gid
+
+#change ownership
+sudo chown <user id> <path>
+
+#change access
+sudo chmod 755 <path>
+```
+
+### user web executes myprogramm
 
 ```
 chmod u+s web /usr/bin/myprogramm
@@ -40,7 +58,7 @@ chmod u+s web /usr/bin/myprogramm
 1 web web 42312 Oct 06 1983 /usr/bin/myprogramm
 ```
 
-# setgid
+## Setgid
 
 * acts like the setuid but this time the group is used
 
@@ -48,7 +66,7 @@ chmod u+s web /usr/bin/myprogramm
 chmod g+s web /usr/bin/myprogramm
 ```
 
-# stickybit
+## Stickybit
 
 * by setting the stickybit, only the user who creates a file is allowed to delete it
 * very usefull for temporary directories or general shared space
@@ -57,7 +75,7 @@ chmod g+s web /usr/bin/myprogramm
 chmod +t
 ```
 
-# do not change target of symbolic links
+## Do not change target of symbolic links
 
 
 ```
@@ -65,9 +83,11 @@ chmod +t
 chmod -h
 ```
 
-# links
+## Links
 
+* [Fix file permission errors on linux](https://opensource.com/article/22/8/fix-file-permission-errors-linux) - 20220808
 * [do a >>chown -hR<< instead of a >>chown -R<<.](https://utcc.utoronto.ca/~cks/space/blog/sysadmin/ChownSymlinkSafety)
 * http://www.computerhope.com/unix/uchmod.htm
 * https://en.wikipedia.org/wiki/Chmod
 * http://catcode.com/teachmod/
+
