@@ -1,4 +1,27 @@
-# prepare empty disk and add gpt/efi lable
+# ZFS - the last filesystem you need to know ;-)
+
+So, ZFS stepped into my life somewhen around 2006. Since than, I felt in love with it. I did it all, using userland implementation to mount a zfs pool painfully slow, switched to dkms and finally landed on [archzfs](https://github.com/archzfs/archzfs) and bulding my [own archzfs iso](https://archzfs.leibelt.de/).
+
+With [openzfs](https://openzfs.org/), the future is great!
+
+## In a Nutshell
+
+* VDEV stands for virtual device
+* One or more Storagedevices are bundled into VDEV's
+* One or more VDEV's are bundled into a zpool
+* List of VDEV configurations
+  * Mirror which is a mirror in the RAID world (one drive resilience, two drives needed)
+  * Raidz 1 which is a raid 5 in the RAID world (one drive resilience, three drives needed)
+  * Raidz 2 which is a raid 6 in the RAID world (double drive resilience, four drives needed)
+  * Raidz 3 which is does not exists in the RAID world (tripple drive resilience, five drives needed)
+* In [this](https://www.youtube.com/watch?v=nlBXXdz0JKA) video (20220816) you get told how Copy-On-Write works
+  * Furthermore, you get an idea why zfs can become painfull slow if you use more than 80 or 90 percent of the available storage
+  * It also shows you how snapshots are working
+  * The video link is using [this](https://arstechnica.com/information-technology/2020/05/zfs-101-understanding-zfs-storage-and-performance/) arstechnica article
+
+## Regular tasks
+
+### Prepare empty disk and add gpt/efi label
 
 ```
 gdisk /dev/<device>
@@ -16,7 +39,7 @@ w
 Y
 ```
 
-# create pool "my pool"
+### Create pool "my pool"
 
 ```
 #use one of the following methods to determine you uniq id
@@ -27,7 +50,7 @@ ls -lah /dev/disk/by-uuid
 zpool create -f -m </my/mount/point> [-o $propertyName] <my pool>  mirror|raidz id1[ id2[ id3]]
 ```
 
-# create pool with special sectors
+### Create pool with special sectors
 
 ```
 #for 512 byte sectors
@@ -37,7 +60,7 @@ zpool create <pool name> <first device> [...]
 zpool create -o ashift=12 <pool name> mirror <first device> [...]
 ```
 
-# create data set
+### Create data set
 
 ```
 zfs create <pool name>/<data set name>
@@ -45,7 +68,7 @@ zfs create <pool name>/<data set name>
 zfs create -o mountpoint=<mount point> <pool name>/<data set name>
 ```
  
-# delete data set
+### Delete data set
 
 ```
 zfs destroy <pool name>/<data set name>
@@ -60,14 +83,14 @@ zfs destroy <pool name>/<data set name>
 * -p    -   print machine parseable verbose information
 * -v    -   verbose information
 
-# set mountpoint (if needed)
+### Set mountpoint (if needed)
 
 ```
 zfs set mountpoint=</path/to/mountpoint> <pool name>
 zfs set mountpoint=</path/to/mountpoint/of/dataset> <pool name>/<data set name>
 ```
 
-# set quota
+### Set quota
 
 ```
 # set quota to 10 GB
@@ -77,19 +100,19 @@ zfs set quota=10G <pool name>[/<data set name>]
 zfs set quota=none <pool name>[/<data set name>]
 ```
 
-# get all flags of data set
+### Get all flags of data set
 
 ```
 zfs get all <pool name>[/<data set name>]
 ```
 
-# add compression to data set
+### Add compression to data set
 
 ```
 zfs set compression=on <pool name>[/<data set name>]
 ```
 
-# update access time only when entity is modified
+### Update access time only when entity is modified
 
 ```
 #@see https://wiki.archlinux.org/index.php/ZFS#General_2
@@ -97,7 +120,7 @@ zfs set atime=on <pool name>[/<data set name>]
 zfs set relatime=on <pool name>[/<data set name>]
 ```
 
-# list data sets
+### List data sets
 
 ```
 #list with space
@@ -118,63 +141,63 @@ zpool status $tank
 zpool clear $tank
 ```
 
-# list available pools
+### List available pools
 
 ```
 zpool import
 ```
 
-# import a pool under different name/rename
+### Import a pool under different name/rename
 
 ```
 zpool import <source pool name> [<destination pool name>]
 ```
 
-# rename a data set
+### Rename a data set
 
 ```
 #can also be used to reallocate/move a pool data set
 zfs rename <pool name/source data set name> <pool name/destination data set name>
 ```
 
-# export a pool
+### Export a pool
 
 ```
 zpool export <pool name>
 ```
 
-# search for pools
+### Search for pools
 
 ```
 zpool import -s
 ```
 
-# try zpool import without mounting it
+### Try zpool import without mounting it
 
 ```
 zpool import -N
 ```
 
-# import pool for current run (not permanently) with different root path
+### Import pool for current run (not permanently) with different root path
 
 ```
 zpool import -R </path/to/mountpoint> <pool name>
 ```
 
-# replace unavailable disk
+### Replace unavailable disk
 
 ```
 zpool status
 zpool detach <pool name> <dead device>
 ```
 
-# stop scrub
+### Stop scrub
 
 ```
 zpool scrub -s <pool name>
 ```
 
-# limit the maximum arc size
+### Limit the maximum arc size
 
 ```
 touch /etc/modprobe.d/zfs.conf
@@ -186,11 +209,11 @@ echo "options zfs zfs_arc_max=2147483648" > /etc/modprobe.d/zfs.conf
 echo "options zfs zfs_arc_max=4294967296" > /etc/modprobe.d/zfs.conf
 ```
 
-# the 4k sector /advanced format performance issue
+### The 4k sector /advanced format performance issue
 
 * lot of common hard disk drives are listed in the [arch linux wiki](https://wiki.archlinux.org/index.php/Advanced_Format)
 
-## how to determine if the hdd has af/4k sectors?
+#### How to determine if the hdd has af/4k sectors?
 
 ```
 cat /sys/class/block/sdX/queue/physical_block_size
@@ -200,9 +223,10 @@ hdparm -I /dev/sdX
 ```
 
 
-# links
+## Links
 
 * [Getting started with openZFs](https://openzfs.github.io/openzfs-docs/Getting Started) - 20210211
+* [ZFS - Pools and VDEVs - Testing, Configuration, and Expansion] - 20220813
 * http://stoneyforest.net/~chris/blog/freebsd/zfs/maint.html
 * https://pthree.org/2012/12/07/zfs-administration-part-iv-the-adjustable-replacement-cache/
 * https://wiki.archlinux.org/index.php/ZFS#Encryption_in_ZFS_on_linux
