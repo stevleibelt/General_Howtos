@@ -1,21 +1,23 @@
-# examples
+# Redis
+
+## examples
 
 If nothing else is told, I assume you are logged in with your redis client.
 
-## log in with to your redis
+### Log in with to your redis
 
 ```
 #via socket
 redis-cli -s ~/.redis/sock
 ```
 
-## list available databases
+### List available databases
 
 ```
 CONFIG GET databases
 ```
 
-## select database
+### Select database
 
 ```
 #you get the index from CONFIG GET databases
@@ -25,19 +27,19 @@ SELECT <index>
 DBSIZE
 ```
 
-## list keys per database
+### List keys per database
 
 ```
 INFO keyspace
 ```
 
-## search for keys
+### Search for keys
 
 ```
 redis-cli --scan --pattern "my_pattern_*"
 ```
 
-## truncate or flush database
+### Truncate or flush database
 
 ```
 #current one
@@ -46,7 +48,7 @@ FLUSHDB
 FLUSHALL
 ```
 
-## monitoring
+### Monitoring
 
 ```
 redis-cli --stat
@@ -61,7 +63,8 @@ INFO
 MONITOR
 ```
 
-# link
+## Link
 
 * [Dashboard for queues with x-ray.](https://horizon.laravel.com/)
 * [Rediscli](https://redis.io/topics/rediscli)
+
