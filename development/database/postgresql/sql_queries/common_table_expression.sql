@@ -21,8 +21,9 @@ FROM foobar
         AND fozbaz.bar = my_selected_data.bar
     );
 
--- Example with multiple cte's
+-- BO: Example with multiple cte's
 
+--  List common data
 WITH table_one (column_one, column_two) AS (
     VALUES
         ('foo', 'bar'),
@@ -39,4 +40,27 @@ FROM table_one
             table_one.column_one = table_two.column_one
             AND table_one.column_two = table_two.column_two
         );
+
+--  List different data
+WITH table_one (column_one, column_two) AS (
+    VALUES
+        ('foo', 'bar'),
+        ('foobar', 'baz')
+), table_two (column_one, column_two) AS (
+    VALUES
+        ('foobar', 'baz'),
+        ('foo', 'baz')
+)
+SELECT *
+FROM table_one
+    FULL OUTER JOIN table_two
+        ON (
+            table_one.column_one = table_two.column_one
+            AND table_one.column_two = table_two.column_two
+        )
+WHERE
+    table_one.column_one IS NULL
+    OR table_two.column_one IS NULL;
+
+-- EO: Example with multiple cte's
 
