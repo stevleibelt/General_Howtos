@@ -14,10 +14,29 @@ WITH my_selected_data AS (
     WHERE comment = 'there is no foo without a bar'
 )[, other_selected_data AS (...)]
 SELECT * 
-FROM fozbaz
+FROM foobar
     JOIN my_selected_data
     ON (
         fozbaz.foo = my_selected_data.foo
         AND fozbaz.bar = my_selected_data.bar
     );
+
+-- Example with multiple cte's
+
+WITH table_one (column_one, column_two) AS (
+    VALUES
+        ('foo', 'bar'),
+        ('foobar', 'baz')
+), table_two (column_one, column_two) AS (
+    VALUES
+        ('foobar', 'baz'),
+        ('foo', 'baz')
+)
+SELECT *
+FROM table_one
+    JOIN table_two
+        ON (
+            table_one.column_one = table_two.column_one
+            AND table_one.column_two = table_two.column_two
+        );
 
