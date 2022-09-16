@@ -2,7 +2,14 @@
 
 ## Daily Usage
 
-```
+```sql
+#stop or kill a query
+##find fitting process
+SELECT * FROM pg_stat_activity WHERE state = 'active';
+
+##kill pid
+SELECT pg_cancel_backend(<int: pid_of_the_process>)
+
 #create a dump / export
 pg_dump <database_name> > <database_name>_<yyyymmddTHHMMss>.sql
 
