@@ -3,7 +3,21 @@
 --  https://www.postgresql.org/docs/current/datatype.html
 -- 
 
--- Integer to string
+-- 
+-- BO: DATE
+-- 
+SELECT
+    CURRENT_DATE,
+    DATE_PART('year', CURRENT_DATE) AS CURRENT_YEAR,
+    CURRENT_DATE - '14 days'::interval AS 14_DAYS_IN_THE_PAST;
+-- 
+-- EO: DATE
+-- 
+
+-- 
+-- BO: INTEGER
+-- 
+-- Cast int to string
 
 WITH my_values (data) AS (
     VALUES
@@ -18,4 +32,7 @@ SELECT
     CONCAT(my_values.data, '') AS expected_casting
 FROM
     my_values;
+-- 
+-- EO: INTEGER
+-- 
 
