@@ -7,5 +7,6 @@
 -- In psql, you can use `\d`
 SELECT table_name, column_name, data_type
 FROM information_schema.columns
-WHERE table_name = '<string: table name>' ORDER BY column_name ASC;
+WHERE table_name = '<string: table name>'
+ORDER BY column_name ASC;
 
