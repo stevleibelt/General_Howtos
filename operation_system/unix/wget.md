@@ -1,7 +1,27 @@
-# skip certificate validation
+# wget
 
-    --no-check-certificate
+## Examples
 
-# download whole page
+### Download with different file name
 
-    wget -np -r -k 'https://your.domain.org'
+```bash
+#if using -O, it is important to put it at the beginnen
+#  else, it is not working
+wget -O file.name "https://www.bazzline.net"
+
+#or, long name
+wget "https://www.bazzline.net" --output-document=bazzline_net.html
+```
+
+### Skip certificate validation
+
+```bash
+--no-check-certificate
+```
+
+### Download whole page
+
+```bash
+wget -np -r -k 'https://your.domain.org'
+```
+
