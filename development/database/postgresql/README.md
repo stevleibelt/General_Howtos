@@ -90,6 +90,7 @@ SELECT version();
 ## Link
 
 * [Getting started postgresql](https://opensource.com/article/19/11/getting-started-postgresql) - 20191112
+* [Don't use chat](https://wiki.postgresql.org/wiki/Don't_Do_This#Don.27t_use_char.28n.29) - 20220926
 * [Drop your database for PostgreSQ](https://opensource.com/article/22/9/drop-your-database-for-postgresql) - 20220925
 * [PostgreSQL Sequences – Episode 5 of PostgreSQL for MySQL DBAs](https://www.percona.com/blog/postgresql-sequences-episode-5-of-postgresql-for-mysql-dbas/) - 20220706T14:51:20
 

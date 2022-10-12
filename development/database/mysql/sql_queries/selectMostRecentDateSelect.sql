@@ -25,5 +25,6 @@ FROM
     ) AS login_data
         ON (
             highest_login.user_id = login_data.user_id
-            AND highest_login.last_login = login_data. last_login
+            AND highest_login.last_login = login_data.last_login
         );
+
