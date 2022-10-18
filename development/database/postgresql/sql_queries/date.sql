@@ -10,6 +10,17 @@ SELECT
     current_date + time '23:59:59' AS end_timestamp
 ;
 
+-- current year, current month, current semester as integer for calculation
+
+SELECT
+  -- fetch year from current date and convert it to smallint
+  ((DATE_PART('year', CURRENT_DATE)::smallint)) AS current_year,
+  -- fetch month from current date and convert it to small int
+  ((DATE_PART('month', CURRENT_DATE)::smallint)) AS current_month,
+  -- fetch month from current date, convert it to small int and compare the value
+  --    if month is greater 6, we are in the second semester, else first semester
+  (CASE WHEN ((DATE_PART('month', CURRENT_DATE)::smallint) > 6) THEN 2 ELSE 1 END) AS current_semester;
+
 -- calculate interval
 
 WITH my_values (my_date) AS (
