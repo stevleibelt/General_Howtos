@@ -32,3 +32,4 @@
 * Login
 * `System` -> `Settings` -> `Administration`
 * In section `Authentication`, change `Server` from `nothing selected` to `TOTP Server`
+
