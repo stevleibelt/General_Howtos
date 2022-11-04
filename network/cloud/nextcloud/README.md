@@ -1,8 +1,16 @@
-# Howto
+# Nextcloud generale notes
+
+## Update from command line
+
+Nextcloud has come a long way for the following one liner.
+
+```bash
+php updater/updater.phar
+```
 
 ## Setup redis as memory cacheing
 
-```
+```bash
 cd <path of your nextcloud instance>/config
 cp config.php config.php.<yyyymmdd>
 #add the following lines to your config.php
@@ -42,10 +50,11 @@ php occ files:scan --all
 php occ encryption:status
 ```
 
-# Link
+## Link
 
 * [nextcloud](https://nextcloud.com/)
 * [nextcloudpi](https://ownyourbits.com/nextcloudpi/)
     * [how to install NextCloudPi](https://github.com/nextcloud/nextcloudpi/wiki/How-to-install-NextCloudPi)
     * [How to setup a raspberry pi nextcloud server - 2017-06-25.](https://pimylifeup.com/raspberry-pi-nextcloud-server/)
 * [German: Nextcloud Installationsanleitung](https://www.c-rieger.de/nextcloud-installationsanleitung/) - 2020-06-22
+
