@@ -1,6 +1,6 @@
-# tesseract
+# OCR
 
-## examples
+## Example using convert with tesseract
 
 ```
 #convert pdf to an image
@@ -10,7 +10,7 @@ convert -density 300 file.pdf -depth 8 file.tiff
 tesseract file.tiff file
 ```
 
-# link
+## Links
 
 * [papierloses büro](https://www.pro-linux.de/artikel/2/1892/4,ocr-einsetzen.html)
 * [pypdfocr](https://github.com/virantha/pypdfocr) - Python script to do PDF OCR conversion using Tesseract 
@@ -21,3 +21,4 @@ tesseract file.tiff file
     * https://www.gadgetdaily.xyz/how-to-get-started-with-the-google-maps-api/
     * http://www.tristancollins.me/computing/ocr-using-tesseract-on-multipage-pdfs/
     * https://www.gaggl.com/2015/03/paperless-office-using-the-raspberry-pi/
+
