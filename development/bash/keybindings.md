@@ -1,6 +1,9 @@
-# list of key bindings
+# BASH / Terminal keybindings (navigate faster)
 
-|| key bindings || action ||
+## list of key bindings
+
+| key bindings | action |
+| --- | --- |
 | CTRL + _ | undo |
 | CTRL + y | pastes from the buffer |
 | CTRL + l | clears the screen |
@@ -20,6 +23,8 @@
 | ALT + t | swap two words |
 | CTRL + t | swap two characters |
 
-# link
+## Links
 
-* [bash tips for everyday at the command line](https://opensource.com/article/18/5/bash-tricks) - 2018-06-14
+* [bash tips for everyday at the command line](https://opensource.com/article/18/5/bash-tricks) - 20180614
+* [My favorit tricks for navigating the Linux terminal faster](https://opensource.com/article/22/11/navigate-linux-terminal-faster) - 20221115
+
