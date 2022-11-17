@@ -4,8 +4,7 @@
 
 ### List all used configuration files
 
-
-```
+```bash
 git config --list --show-origin
 ```
 
@@ -30,7 +29,7 @@ git config --list --show-origin
 
 ### Edit configuration
 
-```
+```bash
 git config -e           #project based
 git config -e --global  #global ;-)
 
@@ -40,7 +39,7 @@ git config --global http.proxy [http://][proxyuser@]proxy.server[:port]
 
 ## Show log
 
-```
+```bash
 git reflog
 git log
 ```
@@ -49,7 +48,7 @@ git log
 
 ### Remove local changes
 
-```
+```bash
 #list possible cleaned objects
 git clean -n
 #will remove untracked files (-f) and directories (-d)
@@ -64,55 +63,55 @@ git reset --hard origin/master
 
 ### Revert changes on local copy
 
-```
+```bash
 git checkout .
 ```
 
 ### Revert changes on index
 
-```
+```bash
 git reset
 ```
 
 ### Revert last commited change
 
-```
+```bash
 git revert ...
 ```
 
 ### Revert an already pushed commit
 
-```
-git revert <commit checksum>
+```bash
+git revert <string: commit checksum>
 ```
 
 ### Revert an already pushed merge commit
 
-```
-git revert -m1 <commit checksum>
+```bash
+git revert -m1 <string: commit checksum>
 ```
 
 ### Checkout special commit
 
-```
-git checkout <sha1>
+```bash
+git checkout <string: sha1>
 ```
 
 ### Checkout master (resolving detached head issue)
 
-```
+```bash
 git checkout master
 ```
 
 ### Switch back to previous branch
 
-```
+```bash
 git checkout -
 ```
 
 ### Commit
 
-```
+```bash
 git commit -a               #commit all changes
 git commit -v               #commit verbosely (includes diff)
 git commit --amend          #edit message for the most recent commit, tags: rename, revert
@@ -121,7 +120,7 @@ git commit --amend <file>   #redo previous commit including changes from files .
 
 ### Undo commit
 
-```
+```bash
 git reset --soft HEAD~1
 #
 git commit --amend
@@ -131,20 +130,20 @@ git commit --amend
 
 ## Show differences
 
-```
+```bash
 git diff --staged           #show diff using staged instead of commited
 ```
 
 ## Remove
 
-```
+```bash
 git rm --cached             #remove files in stage/repository (but not in the filesystem)
 ```
                                 #good if you commited log files or something else you don't want to commit
 
 ## Blame
 
-```
+```bash
 git blame <file> <revision>
 git gui blame
 git whatchanged <file>
@@ -154,8 +153,8 @@ git whatchanged <file>
 
 ### Add a file to the index/staging
 
-```
-git add <file>
+```bash
+git add <string: file>
 git add -A  #all
 git add -p  #interactively decide which changes to add
 git add -i  #like patch but with no menu
@@ -163,33 +162,33 @@ git add -i  #like patch but with no menu
 
 ### Add changes to stage
 
-```
-git stage <file>
+```bash
+git stage <string: file>
 git stage --patch       #interactively decide which changes to add to stage
 git stage --interactive #like patch but with no menu
 ```
 
 ### Remove from index/staging
 
-```
-git reset HEAD -- $file
+```bash
+git reset HEAD -- <string: file>
 ```
 
 ### Remove files from project
 
-```
-git rm <file>
+```bash
+git rm <string: file>
 ```
 
 ### Remove deleted files
 
-```
+```bash
 git rm $(git ls-files --deleted)
 ```
 
 ### Add alias
 
-```
+```bash
 #simple alias
 git config --global alias.unadd 'reset HEAD --'
 #complex alias with user input
@@ -203,25 +202,25 @@ my-complex-alias = "!f() { echo \"this is your user input $@\"; }; f"
 
 ### Remove file or directory from stage
 
-```
-git reset <name>
+```bash
+git reset <string: name>
 ```
 
 ### Show information
 
-```
+```bash
 git show 1.2.3
 ```
 
 ### Sign with gpg
 
-```
+```bash
 git tag -s 1.2.3 -m 'signed version 1.2.3'
 ```
 
 ### Push to repository
 
-```
+```bash
 #current head
 git push origin HEAD
 #to another head
@@ -230,7 +229,7 @@ git push origin 1.2.3
 
 ## Squashing
 
-```
+```bash
 #squash last 10 commits to a big one
 git rebase --interactive HEAD~10
 
@@ -283,13 +282,14 @@ which is a good description.
 
 ## Maintenance
 
-```
+```bash
 git gc --aggressive
 ```
 
 ## List available hooks
 
-```
+```bash
+#@see: https://githooks.com/
 git help hooks
 ```
 
@@ -298,6 +298,8 @@ git help hooks
 * http://try.github.io/
 * [12 tips for git](https://opensource.com/article/18/4/12-git-tips-gits-12th-birthday)
 * [bitbucket git howto](https://www.atlassian.com/git/tutorials/setting-up-a-repository) - 20210209
+* [git concepts](https://opensource.com/article/22/11/git-concepts) - 20221117
+* [git hooks](https://githooks.com/) - 20221117
 * http://ricardofilipe.com/projects/firstaidgit/
 * https://git.wiki.kernel.org/
 * https://www.kernel.org/pub/software/scm/git/docs/git-checkout.html
@@ -320,3 +322,4 @@ git help hooks
     * [gitlab](https://www.gitlab.com/)
     * [bitbucket](https://bitbucket.org/)
     * [github](https://github.com/)
+
