@@ -1,9 +1,11 @@
 # tmux
 
+## General
+
 * is a terminal multiplexer (opens multiple terminal sessions in one window)
 * you can share a session
 
-# tmux vs screen
+## Tmux vs screen
 
 * tmux is way younger
 * needs less ressources
@@ -42,7 +44,7 @@ set-option -g pane-active-border-style "bg=black"
 set-option -ag pane-active-border-style "fg=black"
 ```
 
-## Commands
+### Commands
 
 ```
 #start new session
@@ -79,3 +81,4 @@ tmux attach -t 0
 * [tmux on archlinux](https://wiki.archlinux.org/index.php/Tmux)
 * [source code](https://github.com/tmux/tmux/wiki)
 * [tmux on wikipedia](https://en.wikipedia.org/wiki/Tmux)
+
