@@ -1,4 +1,6 @@
-# Special Parameters
+# BASH Notes
+
+## Special Parameters
 
 | Parameter | Definition |
 | --- | --- |
@@ -14,14 +16,14 @@
 
 [Source](https://blog.victormendonca.com/2017/09/26/bash-special-parameters/) - 20170926
 
-# Comment
+## Comment
 
 ```
 #this is a comment
 echo "foo" #comment after a command
 ```
 
-# Variables
+## Variables
 
 For bash variables take a look into the [reference](https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html) section.
 
@@ -52,7 +54,7 @@ echo "$foo"
 echo "${foo}bar"
 ```
 
-# Output
+## Output
 
 ```
 #simple line
@@ -68,7 +70,7 @@ a
 bar"
 ```
 
-# Link
+## Link
 
 * [tips for everyday use](https://opensource.com/article/18/5/bash-tricks) - 20190614
 * [Bash: Parameter Expansion (Substitution)](https://blog.victormendonca.com/2017/09/19/bash-parameter-expansion/) - 20170919

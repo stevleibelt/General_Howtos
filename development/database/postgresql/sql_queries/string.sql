@@ -23,6 +23,7 @@ SELECT CONCAT_WS('-', 'There', 'is', 'no', NULL, 'foo', 'without', 'a', 'bar');
 SELECT '----' || TRIM(' there is no foo without a bar    ') || '----';
 
 -- Check that string only contains numbers and format then
+--  Tag: is_numeric
 WITH my_values (my_string) AS (
     VALUES
         ('01'),
