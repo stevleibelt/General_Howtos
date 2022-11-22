@@ -1,5 +1,19 @@
 # How To
 
+## Use resolve
+
+```bash
+# @see: https://utcc.utoronto.ca/~cks/space/blog/web/CurlTestingAlternateServer
+# @since: 20221122
+
+#if you need to test production settings on an testingserver
+curl [-L] --resolve example.org:443:<string: ip_of_the_server> https://www.example.org
+
+#more powerfull which helps to test backends without using the proxy
+# @see: https://daniel.haxx.se/blog/2018/04/05/curl-another-host/
+curl [-L] --connect-to :443:<string: test server url like test.internal> http://www.example.org
+```
+
 ## Use a proxy
 
 ```
