@@ -1,4 +1,6 @@
-# generate key
+# SSH as client
+
+## Generate key
 
 ```
 cd ~
@@ -8,54 +10,63 @@ ssh-keygen -t rsa -b 4096
 ssh-keygen -t ed25519
 ```
 
-# copy key to destination
+### Copy key to destination
 
 ```
 ssh-copy-id -i .ssh/my_key.pub user@host
 ```
 
-# configuration file
+## Client configuration file
 
 If you want to know more, `man ssh_config` is your friend.
 
 ```
 #vim ~/.ssh/config
-#structure is Host <name> with options
-#configure something for all hosts
+# Structure is Host <string: name> with options
+# Configure something for all hosts
 Host *
     ServerAliveInterval 120
-#configure something for a dedicated host
-Host bazzline.net
-    #if this hostname is matching
+
+# Configure something for a dedicated host
+# Best naming schema is for Host is <string: remote.host-user>
+Host bazzline.net-artodeto
+    # If this hostname is matching
     Hostname bazzline.net
-    #with this user
+    # With this user
     User artodeto
-    #use this identity file
-    IdentityFile ~/.ssh/net_bazzline_artodeto
+    # Use this identity file
+    IdentityFile ~/.ssh/net_bazzline_artodeto_19700101
+    # If you need to use a jumphost
+    #  Of course, you should create a dedicated configuration
+    #   section for jump.host-user
+    ProxyJump jump.host-user
+
 ```
 
-# hints
+## Hints
 
-## secure file authorized_keys
+### Secure file authorized_keys
 
 ```
 chmod 400 ~/.ssh/authorized_keys
 chattr +i ~/.ssh
 ```
 
-## enable verbose/debug mode
+### Enable verbose/debug mode
 
 ```
 ssh -vvv <user>@<host>
 ```
 
-## change to use ipv4 only
+### Change to use ipv4 only
 
 ```
 ssh -4 <user>@<host>
 ```
 
-# links
+## Links
 
-* [ssh keys](https://wiki.archlinux.org/index.php/SSH_Keys)
 * [limit ssh acces by ip address](http://blog.serverbuddies.com/limit-ssh-access-by-ip-address/)
+* [ssh keys](https://wiki.archlinux.org/index.php/SSH_Keys)
+* [ssh proxy bastion proxyjump](https://www.redhat.com/sysadmin/ssh-proxy-bastion-proxyjump) - 20221122
+
