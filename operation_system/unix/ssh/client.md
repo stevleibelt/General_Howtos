@@ -2,7 +2,7 @@
 
 ## Generate key
 
-```
+```bash
 cd ~
 cd .ssh/
 ssh-keygen -t rsa -b 4096
@@ -12,7 +12,7 @@ ssh-keygen -t ed25519
 
 ### Copy key to destination
 
-```
+```bash
 ssh-copy-id -i .ssh/my_key.pub user@host
 ```
 
@@ -20,7 +20,7 @@ ssh-copy-id -i .ssh/my_key.pub user@host
 
 If you want to know more, `man ssh_config` is your friend.
 
-```
+```bash
 #vim ~/.ssh/config
 # Structure is Host <string: name> with options
 # Configure something for all hosts
@@ -47,21 +47,29 @@ Host bazzline.net-artodeto
 
 ### Secure file authorized_keys
 
-```
+```bash
 chmod 400 ~/.ssh/authorized_keys
 chattr +i ~/.ssh
 ```
 
 ### Enable verbose/debug mode
 
-```
+```bash
 ssh -vvv <user>@<host>
 ```
 
 ### Change to use ipv4 only
 
-```
+```bash
 ssh -4 <user>@<host>
+```
+
+### Export user environment
+
+Add the following line to `~/.ssh/config`. This is the fitting client configuration part to [this](server.md#allow-local-user-export-variable) part.
+
+```bash
+SendEnv BAZZLINE_ENVIRONMENT
 ```
 
 ## Links

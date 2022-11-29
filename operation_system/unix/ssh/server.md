@@ -1,97 +1,111 @@
-# recreate host ssh key
+# SSH Server section
 
-```
+## Recreate host ssh key on debian
+
+```bash
 sudo rm /etc/ssh/ssh_host_*
-#for debian
 sudo dpkg-reconfigure openssh-server
 sudo systemctl restart sshd.service
 ```
 
-# list of option
+## List of option
 
-## set ip address the demon is listen on
+All is done in `/etc/ssh/sshd_config` if not mentioned otherwise.
 
+### Allow local user export variable
+
+This can be useful if you have to share one account on a remote host.
+
+As example, we are exporting a variable `MYCOMPANY_USER`. With this information on the remote host, each user can configure it's shell by adding a check in `~/.bashrc`.
+
+```bash
+AcceptEnv BAZZLINE_ENVIRONMENT
 ```
+
+### Set ip address the demon is listen on
+
+```bash
 ListenAddress <ip-address>
 ```
 
-## restrict to local ip pool
+### Restrict to local ip pool
 
-### Block everything from everyone.
+#### Block everything from everyone.
 
-```
+```bash
 echo 'ALL : ALL' > /etc/hosts.deny
 ```
 
-### Or block only all sshd conenctions
+#### Or block only all sshd conenctions
 
-```
+```bash
 echo 'SSHD : ALL : DENY' > /etc/hosts.deny
 ```
 
-### Allow what we need
+#### Allow what we need
 
-```
+```bash
 echo -e 'ALL : localhost\nsshd: <ip-address[with wildcards]>[\nanotherProgramm: <ip-address>]'
 
 echo -e 'ALL : localhost\nsshd: 192.168.1.0'    #allow all from rane 192.168.1.x
 ```
 
-### or
+#### Or
 
-```
+```bash
 echo 'SSHD : <ipaddress> : ALLOW' > /etc/hosts.allow
 ```
 
-## root is not allowed to log in
+### Root is not allowed to log in
 
-```
+```bash
 PermitRootLogin no
 ```
 
-## allow only following users to log in
+### Allow only following users to log in
 
-```
+```bash
 AllowUsers myUserOne[ myUserTwo]
 ```
 
-## allow only following groups to log in
+### Allow only following groups to log in
 
-```
+```bash
 AllowGroups myGroupOne[ myGroupTwo]
 ```
 
-# security advice
+## Security advice
 
 `fail2ban` could be an option but it adds complexitiy and `yet another lines of code`.
 
-```
+```bash
 PermitRootLogin no
 PasswordAuthentication no
 RSAAuthentication yes
 PubkeyAuthentication yes
 ```
 
-# hints
+## Hints
 
-## disable password login
+### Disable password login
 
-```
+```bash
 /etc/ssh/sshd_config
 PasswordAuthentication no
 ChallengeResponseAuthentication no
 ```
 
-## enable logging
+### Enable logging
 
-```
+```bash
 SyslogFacility AUTH
 LogLevel DEBUG
 #systemctl restart sshd.service
 #journal -xfn | grep sshd
 ```
 
-# links
+## Links
 
 * [ssh keys](https://wiki.archlinux.org/index.php/SSH_Keys)
 * [limit ssh acces by ip address](http://blog.serverbuddies.com/limit-ssh-access-by-ip-address/)
+
