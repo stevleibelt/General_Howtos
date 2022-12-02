@@ -3,6 +3,13 @@
 ## Daily Usage
 
 ```sql
+#bo: general remarks
+####
+#+  - show additional details
+#S  - show system objects
+####
+#eo: general remarks
+
 #stop or kill a query
 ##find fitting process
 SELECT * FROM pg_stat_activity WHERE state = 'active';
@@ -26,25 +33,42 @@ CREATE DATABASE <database_name>
 \c <database_name>
 
 #list available database
-\l
+\l[+] [<string: pattern>]
 
 #list available tables
-\dt
+\dt[S+] [<string: pattern>]
 
 #describe table
-\d <table_name>
+#S+                         - list tables, views and sequences
+#S+ <string: table_name>    - list tables, views, sequences or indexes
+\d[S+] <string: table_name>
+
+#list available functions (only agg, normal, trigger or windows) of current database
+\df[S+] [<string: pattern>]
+
+#list rolls
+\dg[S+] [<string: pattern>]
+
+#list available indexes of current database
+\di[S+] [<string: pattern>]
 
 #list all schemes of current database
-\dn
+\dn[S+] [<string: name>]
 
-#list available functions of current database
-\df
+#list privilegtes for tables, vewis and sequences
+\dp [<string: pattern>]
+
+#list available sequences of current database
+\ds[S+] [<string: pattern>]
 
 #list available views of current database
-\dv
+\dv[S+] [<string: pattern>]
 
 #list all users and their assigned roles
 \du
+
+#show last error message with all details
+\errverbose
 
 #list current postgresql server version
 SELECT version();
@@ -52,21 +76,30 @@ SELECT version();
 #execute the last command again
 \g
 
+#import and execute sql commands from file
+\i <string: file_name>
+
+#output results in the file
+\o <string: file_name>
+
 #display command history
 \s
 
 #save command history to a file
-\s <file_name>
+\s <string: file_name>
 
-#execute sql commands from file
-\i <file_name>
+#show function definition
+\sf[+] <string: function_name>
+
+#show view definition
+\sv[+] <string: function_name>
 
 #list all available commands
 \?
 
 #get help
-\h Get help
-\h ALTER TABLE
+#e.g.: \h ALTER TABLE
+\h [<string: comman_or_section>]
 
 #edit commandn in your editor
 \e
