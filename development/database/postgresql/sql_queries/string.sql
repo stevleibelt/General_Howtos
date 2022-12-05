@@ -37,3 +37,15 @@ SELECT
         CASE WHEN my_values.my_string ~'^[0-9]+$' THEN TO_NUMBER(my_values.my_string, 'FM999') ELSE 'NaN' END AS optional_formatted_number
 FROM my_values;
 
+-- LPAD
+--  Add leading zeros to strings with less than seven characters
+WITH my_values (my_string) AS (
+    VALUES
+    ('7654321'),
+    ('654321'),
+    ('bazzline')    --here you see that the usage uf lpad acts as a delimiter too
+) 
+SELECT
+    my_values.my_string AS original_string,
+    lpad(my_values.my_string, 7, '0') FROM my_values;
+
