@@ -2,12 +2,23 @@
 
 ## Usage
 
-```
-#my default simple usage
-robocopy.exe <source> <destination> /Z /ZB /MIR  /R:5 /W:5 /TBD /NP
+```bat
 
-#my default call to make an exact copy
-robocopy.exe <source> <destination> /MIR /FFT /COPY:DATSOU /DCOPY:DAT /W:5 /R:5 /XF "*.TMP" "*.log" /XD "TEMP" "CACHE" /XJ /SL /NS /NC /NFL /NDL /NJH /NP /TBD /Z /ZB
+#My default simple usage
+robocopy.exe "<source>" "<destination>" /Z /ZB /MIR  /R:5 /W:5 /TBD /NP
+
+#You can split long commands over multiple lines by ending the line with >> ^<<
+##Split this up over multiple lines would result in
+robocopy.exe ^
+    "<source>" ^
+    "<destination>" ^
+    /Z /ZB /MIR  /R:5 /W:5 /TBD /NP
+
+#My default call to make an exact copy
+robocopy.exe ^
+    "<source>" ^
+    "<destination>" ^
+    /MIR /FFT /COPY:DATSOU /DCOPY:DAT /W:5 /R:5 /XF "*.TMP" "*.log" /XD "TEMP" "CACHE" /XJ /SL /NS /NC /NFL /NDL /NJH /NP /TBD /Z /ZB
 
 #/B - can be used to copy files without having the rights if you are an administrator on source and destination side
 #/COPY:DATSOU - copy Data, Attributes, Timestamps, Security (ntfs acls), Owner and aUditing
