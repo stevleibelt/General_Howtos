@@ -1,10 +1,43 @@
-# what is it
+# XDG
+
+## What is it
 
 ```
 User directories are a set of common user directories located within the $HOME directory, including Documents, Downloads, Music, and Desktop. Identified by unique icons within a file manager, they will commonly be automatically sourced by numerous programs and applications.
 ```
 
-# how to define your own rules
+## Available tools
+
+### xdg-mime
+
+Script for directly querying and modifying default MIME applications.
+
+```
+#Usage
+##Find a mime type by query the file type of an existing file
+##  e.g. a pdf file
+xdg-mime query filetype my/path/to/the/file.pdf
+##  results in >>application/pdf<<
+
+##Find the default application for that MIME type
+xdg-mime query default application/pdf
+
+##Set the default application for that MIME type
+xdg-mime default mupdf.desktop application/pdf
+
+##If you want to run the query in debug mode
+env XDG_UTILS_DEBUG_LEVEL=10 xdg-mime query default application/pdf
+```
+
+### xdg-open
+
+Resource opener used by many applications.
+
+### xdg-settings
+
+Ease up configuring all your MIME types for a single application.
+
+## How to define your own rules
 
 ```
 cat > ~/.config/user-dirs.dirs <<DELIM
@@ -26,8 +59,9 @@ XDG_VIDEOS_DIR="$HOME/"
 DELIM
 ```
 
-# links
+## Links
 
+* [xdg-utils: wiki.archlinux.org](https://wiki.archlinux.org/title/Xdg-utils) - 20221229
 * https://wiki.archlinux.org/index.php/Xdg_user_directories
 * http://pastebin.com/0fmRWPZA
 * http://unix.stackexchange.com/questions/37922/how-to-prevent-the-auto-creation-of-the-desktop-folder
