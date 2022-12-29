@@ -1,4 +1,4 @@
-# General
+# Opnsense
 
 * default password for `root` and `installer` is `opnsense`
 
