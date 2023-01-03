@@ -4,6 +4,8 @@
 
 ```bash
 xrandr --auto
+#for debugging reasons use
+xrandr --auto --verbose
 ```
 
 ## Change resolution of one
