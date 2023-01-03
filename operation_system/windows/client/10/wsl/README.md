@@ -10,7 +10,8 @@ Given is that you have installed a pure debian.
 
 `C:\Users\$user\AppData\Local\Packages\TheDebianProject.DebianGNULinux_$unique-id`
 
-You can access all files for all wsl managed virtual machines by entering `\\wsl$` in your Microsoft Windows Explorer.
+You can access all files for all wsl managed virtual machines by entering `\\wsl$` in your Microsoft Windows Explorer.   
+If you use something like `git bash` on windows, you can gain access by using the path `//wsl$`.
 
 ## Error solving
 
