@@ -6,6 +6,7 @@
 xrandr --auto
 #for debugging reasons use
 xrandr --auto --verbose
+#also have a look to ~/.local/share/xorg/Xorg.0.log
 ```
 
 ## Change resolution of one
