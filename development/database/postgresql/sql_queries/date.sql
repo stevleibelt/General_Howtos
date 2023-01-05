@@ -10,6 +10,13 @@ SELECT
     current_date + time '23:59:59' AS end_timestamp
 ;
 
+-- adapt year component in date type
+
+SELECT
+  DATE_PART('year', current_date) AS current_year,
+  (DATE_PART('year', current_date) + interval '1000' year) AS the_future
+;
+
 -- current year, current month, current semester as integer for calculation
 
 SELECT
@@ -21,20 +28,23 @@ SELECT
   --    if month is greater 6, we are in the second semester, else first semester
   (CASE WHEN ((DATE_PART('month', CURRENT_DATE)::smallint) > 6) THEN 2 ELSE 1 END) AS current_semester;
 
--- calculate interval
+-- calculate interval and filter by year component in date type
 
 WITH my_values (my_date) AS (
     VALUES
         ('2014-06-12'::date),
         ('2014-06-13'::date),
         ('2014-06-25'::date),
-        ('2014-06-26'::date)
+        ('2014-06-26'::date),
+        ('2015-06-26'::date)
 )
 SELECT
     my_values.my_date,
     my_values.my_date - '14 days'::interval AS minus_14_days
 FROM
-    my_values;
+    my_values
+WHERE
+    DATE_PART('year', my_values.my_date) = 2014;
 
 -- comparing dates
 
