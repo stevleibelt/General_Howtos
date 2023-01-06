@@ -1,11 +1,21 @@
 # git diff
 
+* You can make a diff between tags and commit ids
+* For tags, use `tag1..tag2`
+* For commit ids, use `commit_id_1 commit_id_2`
+
 ## Changes from one commit id
 
 ```bash
 git diff <commit_id>^!
 #or
 git show <commit_id>
+```
+
+## Between commit ids
+
+```bash
+git diff commit_id_1 commid_id_2
 ```
 
 ## Between tags
