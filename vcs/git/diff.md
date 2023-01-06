@@ -1,47 +1,48 @@
-# changes from one commit id
+# git diff
 
-```
+## Changes from one commit id
+
+```bash
 git diff <commit_id>^!
 #or
 git show <commit_id>
 ```
 
-# between tags
+## Between tags
 
-```
+```bash
 git diff tag1..tag2
 ```
 
-# only file names
+## Only file names
 
-```
+```bash
 git diff tag1..tag2 --name-only
 
 ```
 
-# get file names and statistics
+## Get file names and statistics
 
-```
+```bash
 git diff tag1..tag2 --stat
 ```
 
-# get changes for one file
+## Get changes for one file
 
-```
+```bash
 git diff tag1..tag2 -- path/to/file/name
 ```
 
-# between local and origin
+## Between local and origin
 
-```
+```bash
 #also good if you have staged changes already
 git diff origin/master
 ```
 
-# between dates
+## Between dates
 
-
-```
+```bash
 #since yesterday
 git diff "@{yesterday}"
 
@@ -49,21 +50,22 @@ git diff "@{yesterday}"
 git whatchanged --since="2 weeks ago"
 ```
 
-# between versions
+## Between versions
 
-```
+```bash
 #based on the pre-pre-previous master commit
 git diff [git hash] "master~3"
 ```
 
-# create a patch with newly added files
+## Create a patch with newly added files
 
-```
+```bash
 #you have to add all files you want to have in the patch
 #git add <path to your files>
 git diff --staged > your.patch
 ```
 
-# links
+## Links
 
 * http://stackoverflow.com/questions/3211809/git-diff-between-given-two-tags
+
