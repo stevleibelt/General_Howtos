@@ -15,8 +15,8 @@ yay -S zrepl-bin
 ```bash
 #cat /etc/zrepl/zrepl.yml
 jobs:
--type: snap
-  name: <string: job name>
+- name: <string: job name>
+  type: snap
   filesystems: {
     "<string: zpool[/dataset]<": true,
     "<string: zpool[/dataset2]<": true,
