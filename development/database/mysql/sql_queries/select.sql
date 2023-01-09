@@ -20,6 +20,11 @@ SELECT md5(UNIX_TIMESTAMP());
 SELECT IF(`my_column` IS NULL, 'no', 'yes') AS `Status`;
 
 -- 
+-- Count(*) vs Count(<string: column_name>)
+-- @see: https://www.percona.com/blog/count-vs-countcol-in-mysql/
+-- 
+
+-- 
 -- useing explain to get detail informations
 -- use \G to get extended view
 -- @see: https://dev.mysql.com/doc/refman/5.0/en/explain-extended.html
