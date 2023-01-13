@@ -1,12 +1,14 @@
-# reset .bashrc
+# Bash
 
-```
+## Reset .bashrc
+
+```bash
 cp /etc/skel/.bashrc /home/<your user>
 ```
 
-# reload .bashrc
+## Reload .bashrc
 
-```
+```bash
 cd ~
 source .bashrc
 
@@ -15,11 +17,11 @@ source ~/.bashrc
 bash #opens a subshell
 ```
 
-# alias
+## Alias
 
-## check if command is aliased
+### Check if command is aliased
 
-```
+```bash
 type -a emacs
 #-bash: type: emacs: not found
 alias emacs=vim
@@ -27,22 +29,22 @@ type -a emacs
 #emacs is aliased to `vim'
 ```
 
-## get original / not aliased command
+### Get original / not aliased command
 
-```
+```bash
 type -P vim
 which --skip-alias vim
 ```
 
-## expand aliases
+### Expand aliases
 
-```
+```bash
 shopt -s expand_aliases
 ```
 
-## us original command / disable alias temporary
+### Use original command / disable alias temporary
 
-```
+```bash
 alias cd="ls -halt"
 #use aliased version
 cd
@@ -52,16 +54,16 @@ cd
 /usr/bin/ls
 ```
 
-## disable alias
+### Disable alias
 
-```
+```bash
 alias cd="ls -halt"
 unalias cd
 ```
 
-## variables
+## Variables
 
-```
+```bash
 $$ = current pid
 !$ = last command issued
 $? = error code of last command
@@ -70,29 +72,30 @@ $1 = argument #1, also $2,$3,$4, etc.
 @ = full command line
 $_ = current shell
 
-# keyboard shortcuts
+## Keyboard shortcuts
 
-* ctrl + a  -   go to the beginning of the line you are currently typing on
-* ctrl + e  -   go to the end of the line you are currently typing on
-* ctrl + l  -   clears the Screen, similar to the clear command
-* ctrl + u  -   clears the line before the cursor position. If you are at the end of the line, clears the entire line.
-* ctrl + h  -   same as backspace
-* ctrl + r  -   let’s you search through previously used commands
-* ctrl + c  -   kill whatever you are running
-* ctrl + d  -   exit the current shell
-* ctrl + z  -   puts whatever you are running into a suspended background process. fg restores it.
-* ctrl + w  -   delete the word before the cursor
-* ctrl + k  -   clear the line after the cursor
-* ctrl + t  -   swap the last two characters before the cursor
-* esc + t   -   swap the last two words before the cursor
-* alt + f   -   move cursor forward one word on the current line
-* alt + b   -   move cursor backward one word on the current line
-* tab       -   auto-complete files and folder names
-```
+| Shortcut | Description |
+| --- | --- |
+| ctrl+a | go to the beginning of the line you are currently typing on |
+| ctrl+e | go to the end of the line you are currently typing on |
+| ctrl+l | clears the Screen, similar to the clear command |
+| ctrl+u | clears the line before the cursor position. If you are at the end of the line, clears the entire line. |
+| ctrl+h | same as backspace |
+| ctrl+r | let’s you search through previously used commands |
+| ctrl+c | kill whatever you are running |
+| ctrl+d | exit the current shell |
+| ctrl+z | puts whatever you are running into a suspended background process. fg restores it. |
+| ctrl+w | delete the word before the cursor |
+| ctrl+k | clear the line after the cursor |
+| ctrl+t | swap the last two characters before the cursor |
+| esc+t | swap the last two words before the cursor |
+| alt+f | move cursor forward one word on the current line |
+| alt+b | move cursor backward one word on the current line |
+| tab | auto-complete files and folder names |
 
-# history
+## history
 
-```
+```bash
 #show full history
 history
 
@@ -107,7 +110,7 @@ history <number of last entries you want to see>
 !!  #executes the previous command
 ```
 
-# links
+## Links
 
 * http://ss64.com/bash/
 * http://www.cyberciti.biz/faq/bash-shell-temporarily-disable-an-alias/
@@ -116,3 +119,4 @@ history <number of last entries you want to see>
 * http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-3.html
 * https://opensource.com/article/17/7/bash-prompt-tips-and-tricks
 * https://www.digitalocean.com/community/tutorials/how-to-use-bash-history-commands-and-expansions-on-a-linux-vps
+
