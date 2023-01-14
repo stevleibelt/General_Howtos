@@ -88,3 +88,4 @@ sgdisk -af "${DISK}"
 
 * [archiso-zfs by eoli3n](https://github.com/eoli3n/archiso-zfs) - 20220624T22:21:40
 * [arch-config by eoli3n](https://github.com/eoli3n/archiso-config) - 20220624T22:22:10
+

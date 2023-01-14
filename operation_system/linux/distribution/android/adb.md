@@ -48,8 +48,8 @@ sudo fastboot reboot-bootloader
 * download something like twrp
 * connect device with pc
 * check that device is listed by "adb devices"
-* "adb reboot bootloader
-* verify with "fastboot devices"
+L!
+
 * `fastboot flash recovery twrp-*.img`
 * `fastboot boot twrp-*.img`
 * test that all went well by reboot and press "volume-down"+"power"
