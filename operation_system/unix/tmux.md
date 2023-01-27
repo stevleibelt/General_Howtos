@@ -16,7 +16,7 @@
 
 ## Configuration
 
-```
+```bash
 #example
 # move status line to top
 set -g status on
@@ -46,7 +46,7 @@ set-option -ag pane-active-border-style "fg=black"
 
 ### Commands
 
-```
+```bash
 #start new session
 tmux new -s <session name>
 
