@@ -1,35 +1,52 @@
-# list of power states
+# Linux power management
+
+## How is a suspend mode triggered and which parts are used
+
+* You have a acpi event list located in `/etc/acpi/handler.sh`
+  * This file is used from `/etc/acpi/events/anything`
+* Depending on the acpi events, there is a high chance that `systemd-logind` is called
+  * You can configure `logind` via `/etc/systemd/logind.conf`
+
+### Check if acpi event for lid closed has has reached logind
+
+* Close your lid
+* Type in `sudo journalctl -b | grep -i 'lid\|suspend'`
+* Expected lines are
+  * `[...] Lid closed.`
+  * `[...] Suspending [...]`
+
+## List of power states
 
 * freeze - suspend to idle
 * standby - power on suspend
 * mem - suspend to ram
 * disk - suspend to disk
 
-# how does suspend to disk work work under linux?
+## How does suspend to disk work work under linux?
 
-Linux is dumping the whole memoy into your swap file or swap partition.
+Linux is dumping the whole memory into your swap file or swap partition.
 On the reboot, the kernel is searching for a "suspend-to-disk" image and loads them.
 
-# suspend to ram or disk
+## Manually suspend to ram or disk
 
-## fetch supported power states
+### Fetch supported power states
 
-```
+```bash
 #all listed modes are the on your system support
 cat /sys/power/state
 ```
 
-## suspend to your favorit mode
+### Suspend to your favorit mode
 
-```
+```bash
 echo <mode> > /sys/power/state
 ```
 
-## suspend to disk
+### Suspend to disk
 
 First of all, your swap has to have at least the size of your memory.
 
-```
+```bash
 #raw method
 echo /dev/<identifier of your swap partition> > /sys/power/resume
 ####
@@ -39,16 +56,18 @@ echo /dev/<identifier of your swap partition> > /sys/power/resume
 #and rebuild your grub config with: grub2-mkconfig -o /boot/grub/grub.cfg
 ```
 
-# change the way how your pc reacts on acpi events (like pushing a button)
+## Change the way how your pc reacts on acpi events (like pushing a button)
 
 Edit the file /etc/acpi/handler.sh (e.g. unmounting network drives etc.).
 
-# links
+## Links
 
-* [suspend to disk/ram with linux.](http://karellen.blogspot.de/2013/07/suspend-to-diskram-with-linux.html)
-* [power management interface for system sleep](https://www.mjmwired.net/kernel/Documentation/power/interface.txt)
-* [suspend and hbernate](https://wiki.gentoo.org/wiki/Suspend_and_hibernate)
-* [power management](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate)
-* [grub and hibernation](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation)
-* [sleep hooks](https://wiki.archlinux.org/index.php/Power_management#Sleep_hooks)
-* [power states](https://www.kernel.org/doc/Documentation/power/states.txt)
+* [Grub and hibernation](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation)
+* [Power management interface for system sleep](https://www.mjmwired.net/kernel/Documentation/power/interface.txt)
+* [Power management with systemd](https://wiki.archlinux.org/title/Power_management#Power_management_with_systemd) - 20230130
+* [Power management - suspend and hibernate](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate)
+* [Power states](https://www.kernel.org/doc/Documentation/power/states.txt)
+* [Sleep hooks](https://wiki.archlinux.org/index.php/Power_management#Sleep_hooks)
+* [Suspend and hbernate](https://wiki.gentoo.org/wiki/Suspend_and_hibernate)
+* [Suspend to disk/ram with linux.](http://karellen.blogspot.de/2013/07/suspend-to-diskram-with-linux.html)
+
