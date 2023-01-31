@@ -10,6 +10,12 @@ ssh-keygen -t rsa -b 4096
 ssh-keygen -t ed25519
 ```
 
+### Test passphrase
+
+```bash
+ssh-keygen -y -f <string: path_to_the_private_key>
+```
+
 ### Copy key to destination
 
 ```bash
