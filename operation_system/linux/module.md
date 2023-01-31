@@ -1,6 +1,8 @@
-# load, reload or unload module
+# Linux and modprob
 
-```
+## Load, reload or unload module
+
+```bash
 #load module
 modprobe <module name>
 
@@ -11,9 +13,9 @@ modprobe -r <module name>
 rmmod <module name>
 ```
 
-# list modules
+## List modules
 
-```
+```bash
 lsmod
 less /proc/modules
 
@@ -27,16 +29,23 @@ ls /lib/modules/`uname -r`/kernel
 modprobe -c
 ```
 
-# disable module
+## Disable module
 
-## disable pcspeaker
+### Disable usb ports
+
+```bash
+echo 'install usb-storage /bin/true' > /etc/modprobe.d/disable_usb_storage.conf
+```
+
+### Disable pcspeaker
 
 @see: https://wiki.archlinux.org/index.php/PC_speaker
 
-```
-echo "blacklist pcspkr" > /etc/modprobe.d/disable-pcsprk.conf
+```bash
+echo 'blacklist pcspkr' > /etc/modprobe.d/disable_pcsprk.conf
 ```
 
-# link
+## Links
 
 * [how to load or unload linux kernel modules.](https://opensource.com/article/18/5/how-load-or-unload-linux-kernel-module)
+
