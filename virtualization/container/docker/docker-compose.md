@@ -1,8 +1,10 @@
-# examples
+# Docker compose
 
-## php with redis and maria db
+## Examples
 
-```
+### PHP with redis and maria db
+
+```bash
 #@see: https://hub.docker.com/_/php/
 application:
   command: php -S 0.0.0.0:5000 -t /var/www/html
@@ -36,12 +38,14 @@ redis:
 #open http://0.0.0.0:5000 in your webbrowser
 ```
 
-## set number of conrainters for a service
+### Set number of conrainters for a service
 
-    #docker-compose <service name>=<number of instances>
-    docker-compose scale web=4
+```bash
+#docker-compose <service name>=<number of instances>
+docker-compose scale web=4
+```
 
-# links
+## Links
 
 * https://docs.docker.com/compose/
 * https://github.com/docker/compose
@@ -50,3 +54,4 @@ redis:
 * https://docs.docker.com/compose/gettingstarted/
 * https://docs.docker.com/compose/wordpress/
 * https://www.safaribooksonline.com/library/view/mastering-docker/9781785287039/ch07s03.html
+
