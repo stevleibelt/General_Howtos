@@ -1,28 +1,43 @@
-# get ip address of container
+# Docker container administration
 
-    docker inspect --format '{{ .NetworkSettings.IPAddress }}' ${CID}
+## Get ip address of container
 
-# create data container
+```bash
+docker inspect --format '{{ .NetworkSettings.IPAddress }}' ${CID}
+```
 
-    docker run -v /var/volumeOne -v /var/volumneTwo busybox true
+## Create data container
 
-# remove container
+```bash
+docker run -v /var/volumeOne -v /var/volumneTwo busybox true
+```
 
-    docker rm <container_id>
+## Remove container
 
-# list all available containers
+```bash
+docker rm <container_id>
+```
 
-    docker ps -a
+## List all available containers
 
-# link container
+```bash
+docker ps -a
+```
 
-    docker run -link container:alias <vendor>/<name>
+## Link container
+
+```bash
+docker run -link container:alias <vendor>/<name>
+```
 
 The alias is needed since [environment variables](http://docs.docker.io/en/latest/use/working_with_links_names/) are prefixed with that alias.
 
-# establish access to data
+## Establish access to data
 
-    docker run -v /container/path -name my_path <vendor>/<name>
-    docker run -volumens-from my_path <vendor>/<name>
+```bash
+docker run -v /container/path -name my_path <vendor>/<name>
+docker run -volumens-from my_path <vendor>/<name>
 
-    docker run -v /your/local/path:/container/path <vendor>/<name>
+docker run -v /your/local/path:/container/path <vendor>/<name>
+```
+

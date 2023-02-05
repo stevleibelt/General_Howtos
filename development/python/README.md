@@ -1,6 +1,6 @@
-# general
+# Python
 
-## good to know
+## Good to know
 
 ```
 #install pip if not available
@@ -23,7 +23,7 @@ virtualenv <path>
 #@see: https://packaging.python.org/guides/installing-stand-alone-command-line-tools/
 ```
 
-## pip
+## Pip
 
 `pipenv` is pip but on a per project based environment (most times what you want).
 
@@ -45,20 +45,20 @@ pip install -r requirements.txt
 pip install --upgrade "project" [--user]
 ```
 
-## virtualenv
+## Virtualenv
 
 ```
 #install it
 python -m pip install --user virtualenv
 ```
 
-## windows
+## Windows
 
 Try to use the python launcher for windows `py`.
 The `py.ini` is searched in the currents user `application data` (`%appdata%)` path.
 Modules are located in `c:\Python`.
 
-# link
+## Link
 
 * [official python documentation](https://docs.python.org/) - 20200923
     * [setup and usage](https://docs.python.org/3/using/index.html) - 20200923
@@ -86,7 +86,9 @@ Modules are located in `c:\Python`.
     * [Get started using Python on Windows for scripting and automation](https://docs.microsoft.com/en-us/windows/python/scripting) - 20190719
     * [Get started using Python for web development on Windows](https://docs.microsoft.com/en-us/windows/python/web-frameworks) - 20190719
 * [installing packages with pip](https://packaging.python.org/tutorials/installing-packages/) - 20200923
+* [packagin python modules with wheels](https://opensource.com/article/23/1/packaging-python-modules-wheels) - 20230127
 * [programming tutorial](https://www.programiz.com/python-programming/tutorial) - 20190111
 * [python build in methods](https://www.programiz.com/python-programming/methods/built-in) - 20190111
 * [python list methods](https://www.programiz.com/python-programming/methods/list) - 20190111
 * [>>A dozen ways to learn Python<<](https://opensource.com/article/19/8/dozen-ways-learn-python) - 20190827
+

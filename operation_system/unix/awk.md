@@ -1,26 +1,28 @@
-# change default separator
+# AWK
 
-```
+## Change default separator
+
+```bash
 #use ";" as separator instead of default " "
 awk 'BEGIN { FS = ";" } ; { print $1 }'
 ```
 
-# show lines longer than X characters
+## Show lines longer than X characters
 
-```
+```bash
 #show lines longer than 100 characters
 awk 'length > 100'
 ```
 
-# print all but the first element
+## Print all but the first element
 
-```
+```bash
 awk '{$1="", $0}' <file path>
 ```
 
-# awk in a nutshell
+## Awk in a nutshell
 
-```
+```bash
 #fields
 # According to the following line
 #
@@ -80,7 +82,7 @@ BEGIN { # Can be modified by the user
 }
 ```
 
-# links
+## Links
 
 * [A practical guide to learning awk](https://opensource.com/article/20/9/awk-ebook) - 20200904
 * [awk in 20 minutes](https://ferd.ca/awk-in-20-minutes.html) - 20200508
@@ -90,3 +92,4 @@ BEGIN { # Can be modified by the user
 * http://www.staff.science.uu.nl/~oostr102/docs/nawk/nawk_23.html
 * https://en.wikipedia.org/wiki/AWK
 * https://ma.ttias.be/awk-trick-show-lines-longer-x-characters/
+

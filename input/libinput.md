@@ -1,34 +1,36 @@
-# output the devices on the system and their respective supported features
+# Libinput
 
-```
-libinput-list-devices
+## Output the devices on the system and their respective supported features
+
+```bash
+libinput list-devices
 #same
 xinput
 ```
 
-# get option per device
+## Get option per device
 
-```
+```bash
 xinput list-props <device number>
 ```
 
-# set option per device
+## Set option per device
 
-```
+```bash
 #create a .conf file for a general solution
 xinput set-prop <device number> <option number> <setting>
 ```
 
-# disable or enable input
+## Disable or enable input
 
-```
+```bash
 xinput enable <id>
 xinput disable <id>
 ```
 
-# disable "natural scrolling"
+## Disable "natural scrolling"
 
-```
+```bash
 #sudo vim /etc/X11/xorg.conf.d/30-touchpad.conf
 Section "InputClass"
         Identifier "MyTouchpad"
@@ -39,8 +41,9 @@ Section "InputClass"
 EndSection
 ```
 
-# links
+## Links
 
 * https://wiki.archlinux.org/index.php/Libinput
 * https://www.mankier.com/4/libinput
 * https://askubuntu.com/questions/65951/how-to-disable-the-touchpad
+

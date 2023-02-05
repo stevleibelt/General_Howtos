@@ -1,6 +1,8 @@
-# create a patch
+# Git and patching
 
-```
+## Create a patch
+
+```bash
 #use the last commit
 git format-patch -1
 
@@ -11,12 +13,13 @@ git format-patch -3
 git format-patch R1..R2
 ```
 
-# apply a patch
+## Apply a patch
 
-```
+```bash
 git apply my_patch_file_name.patch
 ```
 
-# link
+## Links
 
-* [git - patch operation](https://www.tutorialspoint.com/git/git_patch_operation.htm) - 2018-01-07
+* [git - patch operation](https://www.tutorialspoint.com/git/git_patch_operation.htm) - 20180107
+

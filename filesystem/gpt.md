@@ -2,7 +2,7 @@
 
 ## With sgdisk
 
-```
+```bash
 #delete all available parittions
 sgdisk --zap-all /dev/<device>
 

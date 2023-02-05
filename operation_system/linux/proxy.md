@@ -6,7 +6,7 @@ This is the general section how to configure a proxy in your linux.
 
 We are going to define the variables in a central place that is loaded in each user environment.
 
-```
+```bash
 MY_PROXY='http://10.0.80.1:9010'
 
 cat > /etc/profile.d/proxy.sh <<DELIM
@@ -32,7 +32,7 @@ First of all, your definition differs between windows and linux.
 
 While windows uses the `;`, linux uses the `,` to define multiple no proxy areas.
 
-```
+```bash
 #this definition works for windows
 "localhost;127.0.0.1;foobar.local"
 
@@ -44,7 +44,7 @@ While windows uses the `;`, linux uses the `,` to define multiple no proxy areas
 
 While windows needs an asterix `*.` with a dot to define a sub domain wildcard, linux does not need it AND can not deal with it.
 
-```
+```bash
 #this definition works for windows
 "localhost;127.0.0.1;foobar.local;*.bar.foo.ru"
 
@@ -62,7 +62,7 @@ Linux can also not handle something line `172.16.0.0/24`.
 
 **DANGER** - you can not add to much ip's our you will get a `Argument list too long` error because EACH user (also root!) will source this file and will run out of memory.
 
-```
+```bash
 #this definition works for windows
 "localhost;127.0.0.1;foobar.local;*.bar.foo.ru;172.16.*"
 
@@ -77,3 +77,4 @@ no_proxy="localhost,127.0.0.1,foobar.local,bar.foo.ru",
 printf -v no_proxy '%s,' 172.16.{1..255}.{1..255};
 export no_proxy="${no_proxy%,}";
 ```
+

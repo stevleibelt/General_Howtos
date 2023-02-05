@@ -1,10 +1,15 @@
-# enable debug mode
+# How to debug docker
+
+## Enable debug mode
 
 Start docker server process with -D.
 
-    /usr/bin/docker -d -D
+```bash
+/usr/bin/docker -d -D
+```
 
-# links
+## Links
 
 * https://github.com/dotcloud/docker/issues/936
 * http://docs.docker.io/en/latest/reference/commandline/cli/
+
