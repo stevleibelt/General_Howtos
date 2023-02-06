@@ -1,109 +1,156 @@
-# general
+# Dockerfile
 
-    INSTRUCTION <arguments>
+## General
 
-# define base image
+```bash
+INSTRUCTION <arguments>
+```
 
-    FROM <vendor>/<imagename>
+# Define base image
 
-# execute commands
+```bash
+FROM <vendor>/<imagename>
+```
 
-    RUN <command>
+## Execute commands
+
+```bash
+RUN <command>
+```
 
 Same as 'docker run image command' + 'docker commit <container_id>'.
 
-# build image
+## Build image
 
 use "-t <name>" to tag it while building.
 
-## dockerfile is in same directory
+### Dockerfile is in same directory
 
-    docker build .
+```bash
+docker build .
+```
 
-## from standard in
+### From standard in
 
-    docker build - < Dockerfile
+```bash
+docker build - < Dockerfile
+```
 
-## from github
+### From github
 
-    docker build github.com/foo/bar
+```bash
+docker build github.com/foo/bar
+```
 
-# name image
+## Name image
 
-    docker tag <container_id> <name>
+```bash
+docker tag <container_id> <name>
+```
 
-# commenting
+## Commenting
 
-    # my comment
-    # VERSION 1.0.0 # version of your dockfile
+```bash
+# my comment
+# VERSION 1.0.0 # version of your dockfile
+```
 
-# name maintainer
+## Name maintainer
 
-    MAINTAINER Stev Leibelt <artodeto@bazzline.net>
+```bash
+MAINTAINER Stev Leibelt <artodeto@bazzline.net>
+```
 
-# define intended command for the image when started
+## Define intended command for the image when started
 
 There can only by one "CMD" in the dockerfile. If there are multiple, the last CMD will be used.
 By default, everything is executed in "/bin/sh -c".
 
-    CMD command parameter_one parameter_n
+```bash
+CMD command parameter_one parameter_n
+```
 
 Run your command without a shell.
 
-    CMD ["/full/qualified/path/to/command", "parameter_one", "parameter_n"]
+```bash
+CMD ["/full/qualified/path/to/command", "parameter_one", "parameter_n"]
+```
 
-# trigger command when container starts
+## Trigger command when container starts
 
 There can only be one "ENTRYPOINT" in the dockerfile. If there are multiple, the last ENTRYPOINT will be used.
 
-    # just say hello
-    ENTRYPOINT echo "there is no foo without a bar"
-    ENTRYPOINT ["echo", "there is no foo without a bar"]
+```bash
+# just say hello
+ENTRYPOINT echo "there is no foo without a bar"
+ENTRYPOINT ["echo", "there is no foo without a bar"]
 
-    # start service
-    ENTRYPOINT ["systemctl", "start", "httpd"]
+# start service
+ENTRYPOINT ["systemctl", "start", "httpd"]
+```
 
-# set user id
+## Set user id
 
-    USER <user>
+```bash
+USER <user>
+```
 
-# set working directory
+## Set working directory
 
 Sets the working directory for RUN, CMD and ENTRYPOINT and can be used multiple times.
 
-    WORKDIR /path/to/work/dir
+```bash
+WORKDIR /path/to/work/dir
+```
 
-# run commands as different user
+## Run commands as different user
 
-    ENTRYPOINT ["/bin/bash", "my_script.sh"]
-    USER <user>
+```bash
+ENTRYPOINT ["/bin/bash", "my_script.sh"]
+USER <user>
+```
 
-# expose ports (listen on them)
+## Expose ports (listen on them)
 
-    EXPOSE 8080
+```bash
+EXPOSE 8080
+```
 
-# add directories and content to image
+## Add directories and content to image
 
-    ADD realtive/path/from/build/context /absolute/path/to/image
+```bash
+ADD realtive/path/from/build/context /absolute/path/to/image
+```
 
-# adapt environment
+## Adapt environment
 
 This instruction sets the environment variable to the given value.
 
-    ENV PATH $PATH:/add/your/directory
+```bash
+ENV PATH $PATH:/add/your/directory
+```
 
-# provide volume
+## Provide volume
 
-    VOLUME ["/root/path", "/second/volume"]
+```bash
+VOLUME ["/root/path", "/second/volume"]
+```
 
 Create a named datacontainer with volumes shares (true is the smallest program you can run).
 
-    docker run -v /var/volume/1 -v /var/volume/2 -name DATA busybox true
+```bash
+docker run -v /var/volume/1 -v /var/volume/2 -name DATA busybox true
+```
 
 Then you can mount that volumne in your application container.
 
-    docker run -t -i -rm -volumes-from DATA -name application ubuntu bash
+```bash
+docker run -t -i -rm -volumes-from DATA -name application ubuntu bash
+```
 
-## mount a host directory as a container volumne
+## Mount a host directory as a container volumne
 
-    docker run -t -i -v /host/dir:/container/dir:[rw|ro]    #rw read/write, ro read only
+```bash
+docker run -t -i -v /host/dir:/container/dir:[rw|ro]    #rw read/write, ro read only
+```
+
