@@ -21,6 +21,12 @@ With [openzfs](https://openzfs.org/), the future is great!
 
 ## Regular tasks
 
+### Mount a native encrypted zpool
+
+```bash
+zpool import -l [-R /my/mountpoint] <string: zpool_id_or_name>
+```
+
 ### Prepare empty disk and add gpt/efi label
 
 ```bash
