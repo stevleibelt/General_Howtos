@@ -1,4 +1,6 @@
-# settings (incomplete list)
+# Xdebug Settings Section
+
+## Settings (incomplete list)
 
 | name                              | default   | description               |
 | --------------------------------- | --------- | ------------------------- |
@@ -32,9 +34,9 @@
 | xdebug.show_local_vars            | 0         | show all variables in top most scope |
 | xdebug.show_mem_delta             | 0         | show differences in memory usage between function calls |
 
-# increase var_dump nesting level
+## Increase var_dump nesting level
 
-```
+```bash
 ; with sane limis
 xdebug.var_display_max_depth = 5
 xdebug.var_display_max_children = 256
@@ -48,8 +50,9 @@ xdebug.var_display_max_children = -1
 xdebug.var_display_max_data = -1 
 ```
 
-# links
+## Links
 
 * http://xdebug.org/wizard.php
 * http://www.xdebug.org/docs/all_settings
 * http://gggeek.altervista.org/2007/11/26/the-completely-unofficial-xdebugini/
+
