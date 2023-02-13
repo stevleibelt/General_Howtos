@@ -1,90 +1,90 @@
-# general
+# Docker
 
 Get all commands by calling "docker" or "docker info".
 Docker is server and client.
 
 ## start docker server
 
-```
+```bash
 systemctl start docker
 ```
 
 ## get list of images running on your local host
 
-```
+```bash
 docker images
 ```
 
 ## search for an image
 
-```
+```bash
 docker search <string>
 ```
 
 ## get image
 
-```
+```bash
 docker pull <vendor>/<image>
 ```
 
 ## push image
 
-```
+```bash
 docker push <vendor>/<image>
 ```
 
 ## get running containers
 
-```
+```bash
 docker ps
 ```
 
 ## get top/statistics
 
-```
+```bash
 docker stats
 ```
 
 ## get informations about container
 
-```
+```bash
 docker inspect <container_id>
 ```
 
 ## get container id
 
-```
+```bash
 docker ps -l
 ```
 
 ## run command
 
-```
+```bash
 docker run <vendor>/<image> <command> [<argument_one> [<argument_...> [<argument_n>]]]
 ```
 
 ### run shell (sh as example)
 
-```
+```bash
 docker run -i -t <vendor> /bin/sh
 ```
 
 ### install software
 
-```
+```bash
 #example for an arch linux
 docker run <vendor>/<image> pacman -S <software>
 ```
 
 ## save image status
 
-```
+```bash
 docker commit [options] <container_id> [repository [tag]]
 ```
 
 ## where is stuff stored (path)
 
-```
+```bash
 #inside the path below, cat a file prefixed with repository
 cd /var/lib/docker
 ```
