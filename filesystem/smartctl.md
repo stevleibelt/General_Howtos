@@ -5,7 +5,7 @@
 Smartctl on a disk attached via usb is not fully supported.
 Installable via smartmontools.
 
-```
+```bash
 #smartctl is in the package smartmontools
 ## for usb
 smartctl -a -d sat /dev/<device>
@@ -18,7 +18,7 @@ smartctl -H /dev/<device>
 smartctl -a /dev/<device> | grep -i health
 ```
 
-```
+```bash
 #check if smart is supported on your device
 smartctl -a /dev/<device>
 #enable smartmon
