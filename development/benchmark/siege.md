@@ -1,6 +1,8 @@
-# example
+# Siege
 
-```
+## Example
+
+```bash
 # -t = lifetime
 # -c = number of concurrent users
 # -d = highest possible and randomized delay between users
@@ -9,6 +11,7 @@
 siege -t 1m -c 25 -d10 -i -f url.txt 
 ```
 
-# links
+## Links
 
 * https://www.joedog.org/siege-home/
+
