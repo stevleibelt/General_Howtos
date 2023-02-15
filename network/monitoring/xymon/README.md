@@ -9,7 +9,8 @@ Xymon is a client/server based monitoring system for monitoring networks and ser
   * Extension `*.cfg` are enabled if they contain an `#DISABLED`
   * Extension `*.cfg` are disabled if they contain a `DISABLED`
 * Plugins are located in `/usr/lib/xymon/client/ext/`
-  * The plugin `entropy` is a good one if you want to create your own plugin
+  * The plugins `entropy` or `ntqp` are good templates if you want to create your own plugin
+* Plugins can have a central configuration file `/etc/xymon/plugins.yml`
 
 ## Links
 
