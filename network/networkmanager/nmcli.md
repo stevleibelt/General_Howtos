@@ -1,6 +1,6 @@
 # nmcli
 
-```
+```bash
 #show general status
 nmcli g
 
@@ -61,8 +61,9 @@ nmcli connection import type openvpn file foo.ovpn
 for ITERATOR in $(ls *.ovpn); do nmcli connection import type openvpn file ${ITERATOR}; done
 ```
 
-# link
+## Links
 
 * [Configure an ethernet connection configuration and managing networking](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/configuring-an-ethernet-connection_configuring-and-managing-networking) - 20220207
 * [network manager - wiki.archlinux.org.](https://wiki.archlinux.org/index.php/NetworkManager)
-* [Using nmcli to Import Openvpn Files From the Command Line](https://www.putorius.net/mcli-import-openvpn.html) - 2020-05-10
+* [Using nmcli to Import Openvpn Files From the Command Line](https://www.putorius.net/mcli-import-openvpn.html) - 20200510
+
