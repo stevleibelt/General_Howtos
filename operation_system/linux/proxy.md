@@ -22,7 +22,17 @@ export NO_PROXY="127.0.0.1,localhost"
 DELIM
 
 chmod +x /etc/profile.d/proxy.sh
+
+#check that all is working from your current session
+source /etc/profile.d/proxy.sh
+
+env | grep -i proxy
 ```
+
+Distribution specific tasks are listed below:
+
+* [arch](distribution/arch/installation/proxy.md#set-a-proxy-so-your-pacman-will-work)
+* [debian](distribution/debian/network.md#setup-proxy)
 
 ## Traps and possible problems for no_proxy
 
