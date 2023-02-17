@@ -18,6 +18,12 @@ echo '{"user_a": [1,2,3], "user_b": [1,2], "user_c": [3,4,5,6,4,2]}' | jq -r 'ke
 6, user_c
 ```
 
+### Dump result to string -> use join
+
+```bash
+cat my_json | jq -r '[.foo, .bar.baz] | join(" | ")'
+```
+
 ### Select or
 
 ```bash
