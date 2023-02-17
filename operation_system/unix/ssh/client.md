@@ -16,6 +16,12 @@ ssh-keygen -t ed25519
 ssh-keygen -y -f <string: path_to_the_private_key>
 ```
 
+### Update passphrase
+
+```bash
+ssh-keygen -p -f <string: path_to_the_private_key>
+```
+
 ### Copy key to destination
 
 ```bash

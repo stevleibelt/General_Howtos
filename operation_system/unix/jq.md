@@ -23,6 +23,9 @@ echo '{"user_a": [1,2,3], "user_b": [1,2], "user_c": [3,4,5,6,4,2]}' | jq -r 'ke
 ```bash
 #filter out null: >>!= null<<
 jq 'select((.my_key != "foo") and (.my_key != "bar"))'
+
+#search for like
+jq 'with_entries(select(.key(contains("<string: string>"))))'
 ```
 
 ## Links
