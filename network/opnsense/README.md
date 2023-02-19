@@ -2,57 +2,16 @@
 
 * default password for `root` and `installer` is `opnsense`
 
-## Setup
+## List of HowTo's
 
-### Setup Telekom FTTH/Glasfaser via PPPoE
+* [Enable 3FA Authentication](howto/enable_2fa_authentication.md)
+* [Setup DNS](howto/setup_dns.md)
+* [Setup Dynamic DNS - nsupdate](howto/setup_dynamic_dns.md)
+* [Setup OpenVPN](howto/setup_openvpn.md)
+* [Setup Telekom FTTH](howto/setup_telekom_ftth.md)
+* [Setup Wireguard](howto/setup_wireguard.md)
 
-* `Interfaces` -> `other types` -> `VLAN` (`https://<opnsense ip>/interfaces_vlan.php`)
-    * Create new VLAN-Interface:
-        * Parent Interface: <wan interface>
-        * VLAN-Tag: `7`
-        * VLAN Priority: 0
-        * Description: `telekom vlan`
-* WAN-Interface (`https://<opnsense ip>/interfaces.php?if=wan`):
-    * Choose device pppoe
-    * IPv4 Configuration: PPPoE
-    * PPPoE Configuration:
-        * Username|Benutzername: <connection identifier|Anschlusskennung><access number|Zugangsnummer>0001@t-online.de
-        * Password|Passwort: <personalized password|Persöhnliches Kennwort>
-        * Servicename|Dienstname: `telekom`
-* Check:
-    * `System` -> `Gateways` (`https://<opnsense ip>/system_gateways.php`)
-    * Remove all the gateways not named like `WAN_PPPOE`
-
-### Setup DNS Servers
-
-* `System` -> `Settings` -> `General` (`https://<opnsense ip>/system_general.php`)
-    * `General` -> `DNS Server`
-    * Add the one you want like:
-        * `80.241.218.68`, Gateway: <your WAN>
-        * `159.69.114.157`, Gateway: <your WAN>
-        * `176.9.93.198`, Gateway: <your WAN>
-        * `176.9.1.117`, Gateway: <your WAN>
-
-### Setup DynDNS nsupdate.info
-
-* `System` -> `Firmware` -> `Plugins`
-  * Search fpr `os-dyndns` and install it
-* Reload GUI
-* `Services` -> `Dynamic DNS (legacy)` (`https://<opnsense ip>/services_dyndns_edit.php`)
-  * `Add`
-  * Enabled: yes
-  * Type of service: custom
-  * Used interface: WAN
-  * Interface where updates are sent from: WAN
-  * Hostname: `<your name>.nsupdate.info`
-  * CURL options: force ipv4 name resolution
-  * Username: `<your name>.nsupdate.info`
-  * Password: `<password>`
-  * Update URL: `https://ipv4.nsupdate.info/nic/update`
-  * Result Check: `good %IP%|nochg %IP%`
-  * Description: `update DDNS host with IP v4 address`
-
-### Possible usefull plugins
+## Possible usefull plugins
 
 * [clamav](https://docs.opnsense.org/manual/how-tos/clamav.html) - 20230213
 * [git-backup](https://docs.opnsense.org/manual/git-backup.html) - 20230213

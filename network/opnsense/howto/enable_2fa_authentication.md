@@ -1,6 +1,8 @@
 # Enable Two-Factor Authentication for OPNsense
 
-## Create 2FA Server
+## HowTo
+
+### Create 2FA Server
 
 * Login
 * `System` -> `Access` -> `Servers`
@@ -10,7 +12,7 @@
 * Reverse token order: `checked`
 * Click on `Save`
 
-## Update user
+### Update user
 
 * Login
 * `System` -> `Access` -> `Users`
@@ -19,7 +21,7 @@
 * Copy the `OTP seed` or click on `Click to unhide` if you want to use the QR Code
 * Click on `Save`
 
-## Test all is working
+### Test all is working
 
 * Login
 * `System` -> `Access` -> `Tester`
@@ -27,7 +29,7 @@
 * Enter username
 * In Password, enter password+token (or token+password)
 
-## Enable 2FA
+### Enable 2FA
 
 * Login
 * `System` -> `Settings` -> `Administration`

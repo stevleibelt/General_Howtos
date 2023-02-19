@@ -1,6 +1,6 @@
 # Setup OpenVPN
 
-## Steps
+## HowTo
 
 ### Configure TOTP server
 
