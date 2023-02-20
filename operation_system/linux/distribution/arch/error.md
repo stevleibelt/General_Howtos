@@ -1,6 +1,10 @@
-# signatur from ... is unknown trust
+# Arch linux installation error secton
 
-```
+## Signatur from ... is unknown trust
+
+This solution solves also an "zst corrupt" issue.
+
+```bash
 ####
 #1.) try - refresh key store
 ####
@@ -16,5 +20,7 @@ sudo mv /etc/pacman.d/gnupg /etc/pacman.d/gnupg.<currentdate>
 
 sudo pacman-key --init
 sudo pacman-key --populate archlinux
+
 sudo pacman -Syyu
 ```
+
