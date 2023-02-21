@@ -432,6 +432,57 @@ volumes:
 DELIM
 ```
 
+## Perform load test
+
+```bash
+pip install locust
+
+cat > locusttest.py <<DELIM
+from locust import HttpUser, task, between
+
+class Quickstart(HttpUser):
+    host = "http://127.0.0.1:5000"
+    wait_time = between(3, 10)  #time in seconds
+
+    @task(1)    #this test weights 1
+    def test_get_root(self):
+        self.client("/")
+
+    @task(5)    #this test weights 5
+    def test_get_hello(self):
+        self.client("/hello")
+
+DELIM
+
+#if you want to play around
+locust -f locusttest.py #open the provided url
+#edit the test settings
+#click on >>start swarming<<
+
+#if you want to do it by command line
+pip install invokust
+
+cat > load_test.py <<DELIM
+import invokust
+
+settings = invokust.create_settings(
+    locustfile="locusttest.py"
+    host="http://127.0.0.1:5000"
+    num_users=1000,
+    spawn_rate=50,
+    run_time="1m"
+)
+
+loadtest = invokust.LocustLoadTest(settings=settings)
+loadtest.run()
+loadtest.stats()    #optional
+DELIM
+
+#execute it
+python .\load_test.py
+
+```
+
 ## Links
 
 * [Pypi.org: FastAPI](https://pypi.org/project/fastapi/) - 20230220
