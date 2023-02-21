@@ -44,4 +44,5 @@
 * [openLDAP.org](https://www.openldap.org/) - 20200123
 * [RFC 4514 - LDAP](http://www.faqs.org/rfcs/rfc4515.html) - 20230215
 * [Searching the directory with LDAP C SDK](https://wiki.mozilla.org/Mozilla_LDAP_SDK_Programmer%27s_Guide/Searching_the_Directory_With_LDAP_C_SDK) - 20230215
+* [What LDAP is not - a brief history of ldap by the python-ldap3 package](https://ldap3.readthedocs.io/en/latest/tutorial_intro.html) - 20230221
 

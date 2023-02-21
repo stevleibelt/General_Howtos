@@ -42,6 +42,7 @@ cd source
 uvicorn main::application --reload
 #open http://127.0.0.1:8000 for your application
 #open http://127.0.0.1:8000/docs for the api documentation
+#open http://127.0.0.1:8000/redoc for another api documentation
 ```
 
 ## Example shop application
@@ -484,7 +485,8 @@ python .\load_test.py
 
 ## Links
 
-* [Youtube: FastAPI Crashkurs 2022 | REST-API mit dem beliebsten Python Framework](https://www.youtube.com/watch?v=KXCvIV3yr7c&list=PL-lCrD3QqynX2a2sgXZlvxEGssGg9ZTCa) - 20230218
-  * [Github page](https://github.com/Coding-Crashkurse/FastAPI-Auth) - 20230220
+* [Pypi.org: FastAPI](https://pypi.org/project/fastapi/) - 20230220
+* [Youtube.de: FastAPI Crashkurs 2022 | REST-API mit dem beliebsten Python Framework](https://www.youtube.com/watch?v=KXCvIV3yr7c&list=PL-lCrD3QqynX2a2sgXZlvxEGssGg9ZTCa) - 20230218
+  * [Github.com: Project page](https://github.com/Coding-Crashkurse/FastAPI-Auth) - 20230219
 
 
