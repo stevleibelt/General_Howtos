@@ -35,4 +35,5 @@ If `eduroam` is not available in the connection list, call `systemctl restart Ne
 ## Links
 
 * Dot-Files of [GallaFrancesco](https://github.com/GallaFrancesco/dotfiles/blob/7ed94659f96ff69a288f8bd48adeca9d43ea5b7c/_scripts/_scripts/add_eduroam.sh) - 20220623T10:26:10
+* [Official Configuration Assistant Tool for eduroam](https://cat.eduroam.org/) - 20230221
 
