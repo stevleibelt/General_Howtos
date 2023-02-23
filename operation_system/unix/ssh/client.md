@@ -28,6 +28,15 @@ ssh-keygen -p -f <string: path_to_the_private_key>
 ssh-copy-id -i .ssh/my_key.pub user@host
 ```
 
+## Bind local port to remote port
+
+```bash
+#useful if you develop something on the remote machine and want to have access on it
+#   e.g. develop a web application listening on port 1080 on the remote machine but you
+#   want to call it with the local webbrowser
+ssh -L 1080:127.0.0.1:1080 [user@hostname_or_ip | ssh-config-name]
+```
+
 ## Client configuration file
 
 If you want to know more, `man ssh_config` is your friend.
