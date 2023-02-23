@@ -8,9 +8,9 @@ netstat -nat | grep <ip address>
 # Find listening network ports
 
 ```
-netstat -tulpn
+netstat -tulpen
 #or if you are searching for a specific process like stuff from samba
-netstat -tulpn | grep 'samba\|smbd\|nmbd\|winbind'
+netstat -tulpen | grep 'samba\|smbd\|nmbd\|winbind'
 #or
 netstat -lntu
 ```

@@ -17,7 +17,7 @@ ip link show
 
 ```bash
 lsof -i :80
-netstat -tulpn | grep 80
+netstat -tulpen | grep 80
 ```
 
 ## Scan All Open Ports On Your Local Machine
