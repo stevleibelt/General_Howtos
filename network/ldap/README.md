@@ -37,6 +37,7 @@
 ## Link
 
 * [Apache Directory Studio](https://directory.apache.org/studio/) - 20201028
+  * [Apache Directory Studio User Guide](https://nightlies.apache.org/directory/studio/2.0.0.v20200411-M15/userguide/Apache_Directory_Studio_LDAP_Browser_User_Guide.pdf) - 20230303
 * [Arch Linux Wiki Entry](https://wiki.archlinux.org/title/OpenLDAP) - 20230215
 * [JXplorer (Windows Java Ldap Browser)](http://www.jxplorer.org/) - 20200123
 * [LDAP Admin (Windows)](http://www.ldapadmin.org/) - 20200123
