@@ -76,13 +76,20 @@ AllowGroups myGroupOne[ myGroupTwo]
 
 ## Security advice
 
+**Always** run `sshd -t` in test mode before restarting the service
+
 `fail2ban` could be an option but it adds complexitiy and `yet another lines of code`.
 
 ```bash
+# ref: https://wiki.archlinux.org/title/Google_Authenticator
+# Has to be below the line UsePAM yes
 PermitRootLogin no
-PasswordAuthentication no
-RSAAuthentication yes
-PubkeyAuthentication yes
+AuthenticationMethods publickey,keyboard-interactive    #keyboard-interactive:pam only when you've setup google-authentication
+KbdInteractiveAuthentication yes    #make your this line is commented out above
+# deprecated since OpenSSH 6.2
+#RSAAuthentication yes
+#PasswordAuthentication no
+#PubkeyAuthentication yes
 ```
 
 ## Hints

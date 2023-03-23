@@ -1,5 +1,7 @@
 # General how to and knowledge base of artodeto
 
+The current change log can be found [here](CHANGELOG.md).
+
 This repository is free as in freedom, not as in beer.
 
 This repository is mostly just for [me](https://stev.leibelt.de). I am adding, structuring, removing or updating content to expand my knowledge.

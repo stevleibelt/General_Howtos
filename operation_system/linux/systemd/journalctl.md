@@ -1,10 +1,12 @@
-# configuration file
+# Journalctl
 
-```
+## Configuration file
+
+```bash
 /etc/systemd/journald.conf
 ```
 
-## some configurations
+## Come configurations
 
 ```
 Compress=yes
@@ -14,20 +16,20 @@ RuntimeMaxFileSize=50M
 MaxFileSec=1week
 ```
 
-# add messages
+## Add messages
 
-```
+```bash
 #p = priority (emerg, alert, crit, err, warning, notice, info, debug | 0 - 7)
 #t = task/identifier
 echo "Foo Bar" | systemd-cat -p info -t myapplication
 ```
 
-# view messages from journal
+## View messages from journal
 
 All your logs are located in `/var/log/journal` or `/run/log/journal`
 Choose the right directory.
 
-```
+```bash
 #cd <journal path>
 
 #also cool to know
@@ -40,16 +42,19 @@ strings <journal file>
 strings <journal file> | grep -i <message or pattern>
 ```
 
-# options
+## Options
 
 * -h    - show help
+* -g    - grep
 * -l    - show full line view (not truncated)
 * -a    - show all fields
 * -f    - follow most recent entries
+* -F    - List all available values of a particular field in unsorted order (e.g. `journalctl -r _TRANSPORT=syslog`)
 * -e    - jump to the end
 * -n    - number of lines to display
+* -N    - List all available names of fields in unsorted order
 * -r    - reverse output (newest first)
-* -o    - controls format of output (json, json-pretty, cat, export, short, verbose, ...)
+* -o    - controls format of output (json, json-pretty, cat, export, short, verbose, ..., e.g. `journalctl -o json -r | jq '[._CMDLINE, .MESSAGE]' | less`)
 * -x    - extended output with explanation text from catalog
 * -q    - quiet output (without any warnings)
 * -m    - merged output from all available journals
@@ -67,29 +72,29 @@ strings <journal file> | grep -i <message or pattern>
 * --user        - show userlog
 * --dmesg       - outputs the entries in dmesg format
 
-# tail
+## Tail
 
-```
+```bash
 journalctl -f
 ```
 
-# general error
+## General error
 
-```
+```bash
 journalctl -xn
 ```
 
-# list journal of last boot
+## List journal of last boot
 
-```
+```bash
 #positive offset will display boot from the beginning of the journal
 #negative offset will display boot from the end of the journal
 journalctl -b -1
 ```
 
-# list journal of current boot with debug priority error and worse
+## List journal of current boot with debug priority error and worse
 
-```
+```bash
 #show errors and more
 journalctl -b -p err
 
@@ -98,29 +103,39 @@ journalctl -b -p err
 journalctl -b -p err..alert
 ```
 
-# filter against device or binaries
+## Filter against device or binaries
 
-```
+```bash
 jounrlactl /dev/sdc /usr/sbin/pacman
 ```
 
-# filter against one unit
+## Filter against one unit
 
-```
+```bash
 journalctl --unit=zfs
 ```
 
-# errors
+## Examples
 
-## list all problems on current boot
+```bash
+#What executables are recorded within 31 days for a service
+journalctl -u <string: name>.service --since -31d -o json | jq -r '._EXE' | sort -u
 
+#Get journal for a binary
+journalctl /usr/bin/foo
 ```
+
+## Errors
+
+### List all problems on current boot
+
+```bash
 journalctl -b | grep -i 'fail\|erro\|warn'
 ```
 
-# clean journal (delete/remove)
+## Clean journal (delete/remove)
 
-```
+```bash
 #clear older 14 days
 journalctl --vacuum-time=14d
 #clear older one month
@@ -133,9 +148,11 @@ journalctl --vacuum-size=2G
 journalctl --vaccum-files=4
 ```
 
-# links
+## Links
 
 * http://0pointer.de/blog/projects/journalctl.html
 * http://www.freedesktop.org/software/systemd/man/journald.conf.html
 * https://ma.ttias.be/clear-systemd-journal/
 * [Using systemd journals to troubleshoot transient problems - opensource.com](https://opensource.com/article/20/8/journals-systemd) - 20200820
+* [Some notes on searching the systemd journal with journalctl](https://utcc.utoronto.ca/~cks/space/blog/linux/SystemdJournalctlSearching) - 20230315
+

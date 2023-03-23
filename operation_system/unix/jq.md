@@ -34,9 +34,17 @@ jq 'select((.my_key != "foo") and (.my_key != "bar"))'
 jq 'with_entries(select(.key(contains("<string: string>"))))'
 ```
 
+### Format strings and escaping
+
+```bash
+#@tsv just puts a tab between things
+jq -r '.[] | [.value[1], .metric.ruser, .metric.rhost] | @tsv'
+```
+
 ## Links
 
 * [Official page](https://stedolan.github.io/jq/) - 20230213
 * [JQ cheat sheet](https://lzone.de/cheat-sheet/jq) - 20230213
 * [JQ select explained](https://earthly.dev/blog/jq-select/) - 20230213
+* [Some notes (to myself) about formatting text in jq](https://utcc.utoronto.ca/~cks/space/blog/sysadmin/JqFormattingTextNotes) - 20230315
 
