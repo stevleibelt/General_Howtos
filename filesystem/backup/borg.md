@@ -20,6 +20,13 @@ borg create --exclude-caches --exclude-from "${HOME}/.config/borg/borgexcluded.t
 
 ## prune
 borg prune --keep-daily=7 --keep-weekly=4 /path/to/the/backup
+
+## compact
+borg compact /path/to/the/backup
+
+# good to know
+borg mount /path/to/the/backup /tmp/my_temporary_mountpoint
+borg info /path/to/the/backup
 ```
 
 ## Links
