@@ -16,7 +16,7 @@ vim ~/.config/borg/borgexcluded.txt
 
 # use it
 ## create backup
-borg create --exclude-caches --exclude-from "${HOME}/.config/borg/borgexcluded.txt" /path/to/the/backup ${HOME}
+borg create --exclude-caches --exclude-from "${HOME}/.config/borg/borgexcluded.txt" /path/to/the/backup::{hostname}-{now:%Y-%m-%d_%H:%M:%S} ${HOME}
 
 ## prune
 borg prune --keep-daily=7 --keep-weekly=4 /path/to/the/backup
