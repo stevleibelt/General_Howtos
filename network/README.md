@@ -121,13 +121,13 @@ nmcli connection up id $NAME
 dhcpcd wlan0
 ```
 
-## test connection
+## Test connection
 
 ```bash
 ping -c 3 www.google.de
 ```
 
-## measure network connection speed
+## Measure network connection speed
 
 ```bash
 #on server:

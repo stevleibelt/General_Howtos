@@ -8,6 +8,20 @@
 git config --list --show-origin
 ```
 
+### Signe commits with ssh keys
+
+```bash
+# ref: https://docs.gitlab.com/ee/user/project/repository/ssh_signed_commits/
+# Change git to ssh signing
+git config --global gpg.format ssh
+# Automatically sign each commit / let git add >>-S<< to each commit
+git config --global commit.gpgsign true
+
+# Specify the ssh key
+#   If you have to use a different one, skip --gobal
+git config --global user.signingkey ~/.ssh/my_key
+```
+
 #### Git configuration files on linux
 
 | Scope | Path |

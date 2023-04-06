@@ -15,7 +15,7 @@
 * use -P to print machine-parsable verbose information
 * use -v to print verbose informations
 
-```
+```bash
 # use "-r" for all descendent file systems (recursive)
 zfs snapshot [-r] <pool name>@<snapshot name>
 
@@ -25,7 +25,7 @@ zfs snapshot -i <pool name>@<first snapshot name> <pool name>@<second snapshot n
 
 ## Delete
 
-```
+```bash
 #do a dry run (-n) to calculate estimated reclaimed space from the disk
 zfs destroy -nv <pool name>@<first snapshot name>%<last snapshot name>
 
@@ -63,7 +63,7 @@ zfs list -t snapshot
 * M     the path has been modified
 * R     the path has been renamed
 
-```
+```bash
 zfs diff <source snapshot name> <destination snapshot name>|<file system>
 ```
 
@@ -71,14 +71,13 @@ zfs diff <source snapshot name> <destination snapshot name>|<file system>
 
 ### Full pool
 
-```
+```bash
 zfs rollback <pool name>@<snapshot name>
 ```
 
 ### Working with openzfs under linux or restore single file
 
-```
-#@see: nvb/document/work/application/2021/20210919_landratsamt_infrastruktur-architekt_projektmanager
+```bash
 mount -t zfs <zfs pool>@<snapshot> </path/to/mount>
 
 #figuring out where is a different
@@ -89,7 +88,7 @@ diff -R <path> </path/to/mount/path>
 
 ## Clone
 
-```
+```bash
 zfs clone <pool name>@<snapshot name> <pool name>[/<path>]/<to clone>
 ```
 
@@ -97,26 +96,26 @@ zfs clone <pool name>@<snapshot name> <pool name>[/<path>]/<to clone>
 
 ### On same system
 
-```
+```bash
 zfs send <source pool name>@<snapshot name> | zfs receive <destination pool name>
 ```
 
 ### Via ssh
 
-```
+```bash
 zfs send <source pool name>@<snapshot name> | ssh backup.me.com zfs recv <destination pool name>[/path]
 ```
 
 ### Entire pool
 
-```
+```bash
 zfs snapshot -r <source pool>@<snapshot name>
 zfs send -R <source pool name>@<snapshot name> | zfs receive -F <destination pool name>
 ```
 
 ## Rename
 
-```
+```bash
 zfs rename <pool name>@<old snapshot name> <pool name>@<new snapshot name>
 # same but short
 zfs rename <pool name>@<old snapshot name> <new snapshot name>
@@ -124,7 +123,7 @@ zfs rename <pool name>@<old snapshot name> <new snapshot name>
 
 ## Backup to archive
 
-```
+```bash
 zfs send -Rv <pool name>@<snapshot name> | gzip > <path to archive>.gz
 ```
 
@@ -133,7 +132,7 @@ zfs send -Rv <pool name>@<snapshot name> | gzip > <path to archive>.gz
 * Browsing in a snapshot by `ls -halt .zfs/snapshots/<snapshot name>` is not working when openzfs is used
 * Install "pipe view" (pv) to monitor progress
 
-```
+```bash
 zfs send <source pool name>[/path]@<snapshot name> | pv | zfs receive <destination pool name[/path]>
 ```
 
