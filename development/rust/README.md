@@ -1,13 +1,15 @@
-# The Package Manager Cargo
+# Rust
 
-## Install it
+## The Package Manager Cargo
+
+### Install it
 
 Preferred way is to use your distribution packagemanager.  
 But if you have to do it on your own, follow this guide.
 
 See also [this](rustup.md) rustup readme file.
 
-```
+```bash
 #fetch rustup.rs from https://sh.rustup.rs/
 #@see https://www.rust-lang.org/tools/install
 sh ./rustup.rs
@@ -20,9 +22,9 @@ cargo --version
 rustc --version
 ```
 
-## Hello World
+### Hello World
 
-```
+```bash
 echo 'fn main() {println!("Hello World"); }' > hello_world.rs
 
 rustc hello_world.rs
@@ -30,9 +32,9 @@ rustc hello_world.rs
 ./hello_world
 ```
 
-## Basic commands
+### Basic commands
 
-```
+```bash
 #create new package
 #   this will create a directory and file structure inside your current working directory
 #   use `tree` inspect the result
@@ -63,7 +65,7 @@ cargo update -p <package_name>
 cargo test
 ```
 
-# Links
+## Links
 
 * [creates.io - Rusts community create registry.](https://crates.io/) - 20201117
 * [Getting started with the Rust pacage manager, Cargo](https://opensource.com/article/20/3/rust-cargo) - 20200303
