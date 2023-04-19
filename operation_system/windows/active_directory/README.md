@@ -1,11 +1,13 @@
-# General
+# Active Directory
+
+## General
 
 * Active directory is an umbrella containting multiple services
 * AGDLP is an abbreviation for "account, global, domain local, permission"
 * AD is role bassed access controll (RBAC) system (user rights are defined by an amount of group rights and not individual rights)
 * A active directory domain service (AD DS) is called a domain controller (DC)
 
-# Services
+## Services
 
 | Name | Description |
 | --- | --- |
@@ -14,7 +16,7 @@
 | Federation Services (AD FS) | Single sign-on service |
 | Rights Management Services (AD RMS) | Service to limit access to an object based on rights |
 
-# Logical Structure
+## Logical Structure
 
 | Name | Description |
 | --- | --- |
@@ -25,7 +27,7 @@
 | Forest | Collection of trees (full structure, e.g. foo.bar) |
 | Organizational units (OU) | Group of domain objects (no additional namespace!) |
 
-# Naming
+## Naming
 
 | Abkürzung | Bezeichnung |
 | --- | --- |
@@ -38,12 +40,12 @@
 | SAM | Security Account Manager |
 | SID | Security IDentifyer |
 
-## Example
+### Example
 
 Give is a printer with the name "cobraLazer" in the unit "IT" for the domain "compu.global.hyper.meganet.
 The fully qualified name is "CN=cobraLazer,OU=IT,DC=compu,DC=global,DC=hyper,DC=meganet".
 
-# Group Policy
+## Group Policy
 
 * centralized managemend and configuration of operation systems, applications and user settings in an active directory
 * a set of group policies is alled a group policy object
@@ -65,20 +67,21 @@ The fully qualified name is "CN=cobraLazer,OU=IT,DC=compu,DC=global,DC=hyper,DC=
     * [gpupdate](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/gpupdate) - typically called as `gpupdate /force` - forces a group policy update every 10 minutes with an random offset
     * [gpresult](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/gpresult) - typically called as `gpresult /R`, displays result set of policy (RSoP) for [remote] user and computer
         * `gpresult /f /h current_gpresult.html`, exports the used gpo's, its state (failed or not) and the time it took
+        * Or `rsop.msc`
     * group policy infrastructure status - reports if a GPO is not replicated correctly over all DC's
     * group policy results report - now times the execution of individual compontens when doing an group policy update
 
-# How To
+## How To
 
 * List all AD-groups of current user
 	* `gpresult /r`
 	* `whoami /groups`
 
-# PowerShell
+## PowerShell
 
-## Get all properties for a user
+### Get all properties for a user
 
-```
+```bash
 #if you know the samUserName
 Get-ADUser -Identity <samUserName> -Properties *
 
@@ -86,24 +89,24 @@ Get-ADUser -Identity <samUserName> -Properties *
 Get-ADUser -Filter "Name -like 'bo*'" -Properties *
 ```
 
-## Get all users in the group admin
+### Get all users in the group admin
 
-```
+```bash
 Get-ADGroupMember -Identity admin | SELECT SamAccountName, Name, ObjectClass
 ```
 
-## Get current active domain controller
+### Get current active domain controller
 
-```
+```bash
 #by using pure powershell
 ([ADSI]”LDAP://RootDSE”).dnshostname
 #by using the ActiveDirectory powershell module
 Get-ADDomainController -Discover
 ```
 
-## Set user property
+### Set user property
 
-```
+```bash
 #works mostly
 Set-ADUser -Identity johndoe -EmailAddress "john_doe@company.com"
 
@@ -112,7 +115,7 @@ Set-ADUser -Identity johndoe -Replace @{pager = 123-456 789}
 ```
 
 
-# Links
+## Links
 
 * [Active Directory - wikipedia.org](https://en.wikipedia.org/wiki/Active_Directory) - 20200127
 * [Administrative Template - wikipedia.org](https://en.wikipedia.org/wiki/Administrative_Template) - 20200127
