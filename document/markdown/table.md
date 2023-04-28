@@ -12,7 +12,9 @@ entry 1 0 | entry 1 1
 
 ### Github flavored tables
 
-| header one | header two |
+| left aligned header | central aligned header | right aligned header
+| :--- | :----: | ---: |
 | --- | --- |
-| entry 0 0 | entry 0 1 |
-| entry 1 0 | entry 1 1 |
+| entry 0 0 0 | entry 0 1 0 | entry 0 1 1 |
+| entry 1 0 0 | entry 1 1 0 | entry 1 1 1 |
+
