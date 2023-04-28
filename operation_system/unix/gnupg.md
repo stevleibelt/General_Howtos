@@ -27,9 +27,13 @@ gpg --list-secret-keys
 gpg --edit-key <string: key_fingerprint>
 ```
 
-### Export key
+### Export public key
 
 ```bash
+# show
+gpg --armor --export <string: key_fingerprint>
+
+# to file
 gpg --armor --export <string: key_fingerprint> > pubkey.asc
 ```
 
@@ -45,6 +49,13 @@ cp -r --preserve=timestamp,mode <source>/.gnupg <target>/.gnupg
 
 Most important, retry your command with verbositiy by adding "-vvv --debug-all".
 Sadly but true, for every error it is always a good tryout to remove the ".gnupg" directory in your home path.
+
+### git key not found
+
+* Check your git config (global `~/.gitconfig` or per respository `.git/config`)
+* Search for line `[gpg]`
+* Remove line `format = ssh`
+* Retry
 
 ### gpg: WARNING: Tor is not running
 
@@ -66,8 +77,9 @@ gpg --keyserver <key server name> --keyserver-options http-proxy=http://<ip of t
 
 ## Links
 
-* https://wiki.archlinux.org/index.php/Gnupg
-* http://www.phildev.net/pgp/gpg_moving_keys.html
 * [6 steps to get verified on Mastodon with encrypted keys](https://opensource.com/article/22/12/verified-mastodon-pgp-keyoxide) - 20221205
-* [keys.openpgp.org](https://keys.openpgp.org/)
+* [Arch linux wiki page](https://wiki.archlinux.org/index.php/Gnupg)
+* [Keys.openpgp.org](https://keys.openpgp.org/)
+* [Moving gpg keys](http://www.phildev.net/pgp/gpg_moving_keys.html)
+* [Sign git commits with gpg](https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/) - 20230428
 
