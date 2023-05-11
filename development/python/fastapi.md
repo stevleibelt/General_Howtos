@@ -485,6 +485,7 @@ python .\load_test.py
 
 ## Links
 
+* [Build apis with fastapi in python all essentials you need to get started: gitconnected.com](https://levelup.gitconnected.com/build-apis-with-fastapi-in-python-all-essentials-you-need-to-get-started-6bf9fa90c6b8) - 20230511
 * [List of FastAPI packages](https://libraries.io/search?q=fastapi) - 20230327
 * [Pypi.org: FastAPI](https://pypi.org/project/fastapi/) - 20230220
 * [Tag-youre-it-backend: Example project using fastapi](https://github.com/nickatnight/tag-youre-it-backend) - 20230227
