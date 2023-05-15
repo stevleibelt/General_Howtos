@@ -2,15 +2,15 @@
 
 ## Install
 
-```
-pacman -S libcanberra-pulse pavucontrol pulseaudio pulseaudio-equalizer pulseaudio-alsa lib32-libpulse  lib32-alsa-plugins
+```bash
+pacman -S libcanberra pavucontrol pulseaudio pulseaudio-equalizer pulseaudio-alsa
 ```
 
 ## Equalizer
 
 * pulseeffects
 
-## Enable lookback
+## Enable loopback
 
 Usefull if you want to hear your own voice through your microphone and with a latency of 1 seconds.
 
