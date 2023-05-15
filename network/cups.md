@@ -28,7 +28,7 @@ Set the `LogLevel` to `Debug` in `/etc/cups/cupsd.conf`.
 
 ```
 #check current state
-lptstate -p
+lptstat -p
 
 cupsenable <printer name>
 ```
@@ -75,3 +75,4 @@ All you have to do is go to the CUPS printer administration page and click "Resu
 * [network printing with ubuntu](https://help.ubuntu.com/community/NetworkPrintingWithUbuntu)
 * [CUPS Command-Line Utilities on oracle.com](https://docs.oracle.com/cd/E23824_01/html/821-1451/gllgm.html)
 * [How to resume CUPS printer from command line?](https://superuser.com/questions/280396/how-to-resume-cups-printer-from-command-line)
+
