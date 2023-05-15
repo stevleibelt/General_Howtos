@@ -25,6 +25,13 @@ pactl load-module module-loopback latency_msec=1000
 #   maybe mute other input sources
 ```
 
+## Troubleshooting
+
+* Stop running pulseaudio `systemctl --user stop pulseaudio.{socket|service}`
+* Start pulseaudio from the command line in verbose mode `pulseaudio -v`
+* Use `pactl` to get information from running pulseaido
+* Use `pacmd` to make changes for current session
+
 ## Link
 
 * https://wiki.archlinux.org/index.php/PulseAudio
