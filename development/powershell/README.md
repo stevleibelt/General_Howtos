@@ -1,4 +1,6 @@
-# General
+# PowerShell ReadMe
+
+## General
 
 * PowerShell is a task automation and configuration management framework
 * full access to [COM](https://en.wikipedia.org/wiki/Component_Object_Model), [WMI](https://en.wikipedia.org/wiki/Windows_Management_Instrumentation), [WS-Management](https://en.wikipedia.org/wiki/WS-Management) and [CIM](https://en.wikipedia.org/wiki/Common_Information_Model_(computing))
@@ -7,20 +9,20 @@
 * the shebang for powershell is `#!/usr/bin/env pwsh`
 * there are four areas where a profile is stored
 
-# Fetch locations of profiles
+## Fetch locations of profiles
 
-```
+```pwsh
 #@see: https://devblogs.microsoft.com/powershell-community/how-to-make-use-of-powershell-profile-files/
 $PROFILE | Get-Member -MemberType NoteProperty
 ```
 
-# Manage local profile (similar to .bashrc)
+## Manage local profile (similar to .bashrc)
 
-## Create local profile
+### Create local profile
 
 Default path for your profile is `C:\Users\<username>\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`.
 
-```
+```pwsh
 #check if a profile exists
 #you don't have a profile if the returned value is `False`
 Test-Path $profile
@@ -29,9 +31,9 @@ Test-Path $profile
 New-Item -Path $profile -type file -force
 ```
 
-## Example configuration stuff
+### Example configuration stuff
 
-```
+```pwsh
 #set default start location
 Set-Location c:
 
@@ -60,9 +62,9 @@ new-item alias:np -value C:WindowsSystem32notepad.exe
 Clear-Host
 ```
 
-# Alias
+## Alias
 
-```
+```pwsh
 #list all available alias
 get-alias
 
@@ -82,7 +84,7 @@ Function Edit-PowerShellProfile { notepad++ $profile }
 New-Alias editPowerShellProfile Edit-PowerShellProfile
 ```
 
-# Usefull commands
+## Usefull commands
 
 | Power Shell Command | Power Shell Alias | Unix Command | Comment |
 | --- | --- | --- | --- |
@@ -115,9 +117,9 @@ New-Alias editPowerShellProfile Edit-PowerShellProfile
 | Write-Host | | | use it if you want to output directly to the console |
 | Write-Output | echo | echo | use it if you want to pipe it |
 
-## Set execution policy
+### Set execution policy
 
-```
+```pwsh
 #Allow all
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
@@ -125,9 +127,9 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 Set-ExecutionPolicy -ExecutionPolicy Default
 ```
 
-# Useful variables
+## Useful variables
 
-```
+```pwsh
 #Plattform independent directory seperator
 
 $myLogPath = ($PSScriptRoot + [IO.Path]::DirectorySeparatorChar + "log")
@@ -145,18 +147,18 @@ $myRelativePathToTheConfigurationFile = $($myRelativePathToTheConfigurationFile 
 Write-Host $PSScriptRoot
 ```
 
-# Function
+## Function
 
-## Run a script file
+### Run a script file
 
-```
+```pwsh
 #assuming you want to start the my_script from a bat script in the same path
 #@see:
 #   https://stackoverflow.com/questions/5034076/what-does-dp0-mean-and-how-does-it-work
 powershell -ExecutionPolicy Bypass -File "%~dp0my_script.ps1"
 ```
 
-## Execute a ps1 script from inside a ps1 script
+### Execute a ps1 script from inside a ps1 script
 
 ```pwsh
 #both versions are working
@@ -168,11 +170,11 @@ $script = ".\my_script_in_the_same_path.ps1"
 .$script
 ```
 
-# link
+## link
 
-## Basic example
+### Basic example
 
-```
+```pwsh
 #Want to know how to write a function in Powershell?
 Get-Help About_Functions
 
@@ -187,14 +189,14 @@ my_function valueOne valueTwo
 my_function -ParameterOne valueOne -ParameterTwo valueTwo
 ```
 
-# Modules
+## Modules
 
 * Only the administrator can install a module
 * Online repository is available at [powershellgallery.com](https://www.powershellgallery.com/)
 
-## How to install
+### How to install
 
-```
+```pwsh
 #list installed modules
 Get-Module
 #list available modules including commandlets
@@ -216,7 +218,7 @@ Get-Command -Module PSScriptAnalyzer
 Get-Help -Name Start-WUScan
 ```
 
-## Useful modules
+### Useful modules
 
 * [PSScriptAnalyzer](https://www.powershellgallery.com/packages/PSScriptAnalyzer/)
 * [PSWindowsUpdate](https://www.powershellgallery.com/packages/PSWindowsUpdate/)
@@ -224,12 +226,12 @@ Get-Help -Name Start-WUScan
 * [Pester (BDD Test framework)](https://www.powershellgallery.com/packages/Pester/)
 * [VMware.Vim](https://www.powershellgallery.com/packages/VMware.Vim/)
 
-# Usage Examples
+## Usage Examples
 
-## Output
+### Output
 
 
-```
+```pwsh
 #dump function body of Start-WUScan
 Get-Content Function:\Start-WUScan
 
@@ -238,23 +240,23 @@ Get-Content Function:\Start-WUScan
 <your command> | SELECT -expandproperty <property name>
 ```
 
-## Variable type detection
+### Variable type detection
 
-```
+```pwsh
 #prints "System.String" etc.
 <variable>.GetType().FullName
 ```
 
-## Strings
+### Strings
 
-```
+```pwsh
 "My String".toupper()
 "My String".tolower()
 ```
 
-## Arrays
+### Arrays
 
-```
+```pwsh
 #create
 $array = New-Object System.Collections.ArrayList
 
@@ -267,26 +269,24 @@ $array.remove("foo")
 $array.removerange(1,1)
 ```
 
-## Environment
+### Environment
 
-```
+```pwsh
 #List all environment variables
 # @see: https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables
 # Same as "Set-Location Env:" and "Get-ChildItem" or "Get-ChildItem Env:"
 Get-Item -Path Env:*
-
-
 ```
 
-## Filesystem
+### Filesystem
 
-```
+```pwsh
 #check if path is a root path or not
 #does not check if path exists!
 [System.IO.Path]::IsPathRooted($path)
 ```
 
-```
+```pwsh
 #create temporary file name
 $temporaryFilePath = [System.IO.Path]::GetTempFileName()
 
@@ -314,9 +314,9 @@ Get-Childitem -Recurse | foreach-object {
 }
 ```
 
-## Network
+### Network
 
-```
+```pwsh
 #get ip by name
 [System.Net.DNS]::GetHostAddresses("bazzline.net")
 
@@ -351,9 +351,9 @@ Set-Service -ComputerName <hostname> -Name <servicename> -Status <Running|Stoppe
 Start-Job -FilePath <path to the powershell script>
 ```
 
-## Active Directory
+### Active Directory
 
-```
+```pwsh
 #get ad user
 Get-ADUser -Identity <samUserName> -Properties *
 
@@ -375,17 +375,36 @@ Get-ADComputer -Filter {(Name -like "nb-*")} | Select -Property Name,DNSHostName
 Get-ADUser $username | Get-ADObject -Properties lastLogon
 ```
 
-## Users
+### Users
 
-```
+```pwsh
+#get ad user
+Get-ADUser -Identity <samUserName> -Properties *
+
+#move ad object to a different OU
+Move-ADObject -Identity "CN=DC01,OU=TestServers,OU=Administration,DC=bazzline,DC=net" -TargetPath "OU=ProductionServers,OU=Administration,DC=bazzline,DC=net"
+
+#set ad user property
+Set-ADUser -Identity <samUserName> -EmailAddress "john_doe@company.com"
+
+#list all users with the name containing 'zub'
+Get-AdUser -Filter {(Name -like "*zub*")} | Select -Property Name,GivenName,SamAccountName,Surname,Enabled | Format-Table
+#list all users with the name containing 'zub' or 'buz'
+Get-AdUser -Filter {(Name -like "*zub*") -o (Name -lile "*buz*")} | Select -Property Name,GivenName,SamAccountName,Surname,Enabled | Format-Table
+
+#list all pc names starting with 'nb-'
+Get-ADComputer -Filter {(Name -like "nb-*")} | Select -Property Name,DNSHostName,Enabled,LastLogonDate | Format-Table
+
+#get last login/logon timestamp
+Get-ADUser $username | Get-ADObject -Properties lastLogon
 #get users on a (terminal) server
 Query User /server:terminalserver01
 ```
 
-# Write verbose script
+## Write verbose script
 
 
-```
+```pwsh
 #store existing value to reset it at the end of your script
 $oldVerbosePreference = $VerbosePreference
 #Enables verbose
@@ -406,15 +425,18 @@ Function My-Function
 $VerbosePreference = $oldVerbosePreference
 ```
 
-# Links
+## Links
 
-* [PowerShell - wikipedia.org](https://en.wikipedia.org/wiki/PowerShell) - 20200127
-* [PowerShll Examples - technibee.com](https://techibee.com/category/powershell) - 20200129
-* [Scripting blog - microsoft.com](https://devblogs.microsoft.com/scripting/feed/) - 20200129
+* [ActiveDirectory Module: microsoft.com](https://docs.microsoft.com/en-us/powershell/module/addsadministration/?view=win10-ps) - 20200129
+* [Analyze DHCP server with Powershell: 4sysops.com](https://4sysops.com/archives/analyze-dhcp-server-with-powershell/) - 20200811
+* [Customizing your PowerShell Profile: howtogeek.com](https://www.howtogeek.com/50236/customizing-your-powershell-profile/) - 20200120
+* [How to create PowerShell alias: 4sysops.com](https://4sysops.com/archives/how-to-create-a-powershell-alias/) - 20140729
 * [Powershellbrows.com](https://www.powershellbros.com/) - 20200129
-* [ActiveDirectory Module - microsoft.com](https://docs.microsoft.com/en-us/powershell/module/addsadministration/?view=win10-ps) - 20200129
-* [PowerShell Tip of the Week: Move computer objects to OU](https://www.powershellbros.com/powershell-move-computer-objects-to-ou/) - 20200205
-* [Use PowerShell to Write Verbose Output](https://devblogs.microsoft.com/scripting/use-powershell-to-write-verbose-output/) - 20200730
-* [Customizing your PowerShell Profile](https://www.howtogeek.com/50236/customizing-your-powershell-profile/) - 20200120
-* [How to create PowerShell alias](https://4sysops.com/archives/how-to-create-a-powershell-alias/) - 20140729
-* [Analyze DHCP server with Powershell](https://4sysops.com/archives/analyze-dhcp-server-with-powershell/) - 20200811
+* [PowerShell: wikipedia.org](https://en.wikipedia.org/wiki/PowerShell) - 20200127
+* [PowerShell Examples: technibee.com](https://techibee.com/category/powershell) - 20200129
+* [PowerShell Tip of the Week: Move computer objects to OU: powershellbros.com](https://www.powershellbros.com/powershell-move-computer-objects-to-ou/) - 20200205
+* [Scripting blog: microsoft.com](https://devblogs.microsoft.com/scripting/feed/) - 20200129
+* [Sign powershell script: microsoft.com](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_signing?view=powershell-7.3) - 20230524
+* [Use PowerShell to Write Verbose Output: microsoft.com](https://devblogs.microsoft.com/scripting/use-powershell-to-write-verbose-output/) - 20200730
+
+
