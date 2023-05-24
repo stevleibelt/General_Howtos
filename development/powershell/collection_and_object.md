@@ -1,6 +1,6 @@
 # Examples
 
-```
+```pwsh
 #create collection as array
 $myCollection = New-Object System.Collections.ArrayList
 
@@ -16,3 +16,4 @@ $myCollection.add($myObject) | Out-Null
 # Link
 
 * [PowerShell – Create collections of custom objects](https://www.andreasbijl.com/powershell-create-collections-of-custom-objects/) - 2013-11-25
+

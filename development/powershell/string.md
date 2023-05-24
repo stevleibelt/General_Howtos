@@ -2,7 +2,7 @@
 
 ## Here or multiline strings
 
-```
+```pwsh
 $Foo = @"
 There is
 no
@@ -36,7 +36,7 @@ FROM
 
 Only works with double quotes.
 
-```
+```pwsh
 $bar = "foo"
 $foo = "bar"
 
@@ -45,7 +45,7 @@ $foo = "bar"
 
 ## Formatting
 
-```
+```pwsh
 #strings
 [string]::Format("There is no {0} without a {1}.", "foo", "bar")
 
@@ -68,3 +68,4 @@ $foo = "bar"
 #date
 "This date is great! {0:yyyy-MM-dd HH:mm:ss}"
 ```
+

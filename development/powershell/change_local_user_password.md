@@ -1,6 +1,6 @@
 # Change local user password
 
-```
+```pwsh
 $Session = New-PSSession -ComputerName <host name>
 Enter-PSSession $Session
 
@@ -18,3 +18,4 @@ Invoke-Command -Session $Session -ScriptBlock {Set-LocalUser -Name <user name> -
 
 Remove-PSSession $Session
 ```
+

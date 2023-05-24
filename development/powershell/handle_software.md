@@ -1,8 +1,10 @@
-# How to install software
+# Handle software
 
-## General
+## How to install software
 
-```
+### General
+
+```pwsh
 #check if software is installed
 #@see: https://keestalkstech.com/2017/10/powershell-snippet-check-if-software-is-installed/
 #@see: https://morgantechspace.com/2018/02/check-if-software-program-is-installed-powershell.html
@@ -32,9 +34,9 @@ if (-Not $isInstalled) {
 }
 ```
 
-# How to uninstall software
+## How to uninstall software
 
-## General
+### General
 
 ```
 #Get GUID of an installed microsoft software package by its name
@@ -44,9 +46,9 @@ $listOfGUID = (Get-ItemProperty HKLM:\Software\WOW6432Node\Microsoft\Windows\Cur
 Start-Process msiexec.exe -ArgumentList "/X $listOfGUID /quiet /l*v C:\Logs\my_uninstall.log" -Wait
 ```
 
-## Remove Microsoft Teams
+### Remove Microsoft Teams
 
-```
+```pwsh
 #@see:
 #   https://community.spiceworks.com/how_to/161502-uninstall-microsoft-teams-from-all-users-on-a-pc
 #   https://www.reddit.com/r/PowerShell/comments/cmgpzt/actually_uninstall_microsoft_teams/
@@ -59,3 +61,4 @@ if (test-path C:\Users\*\AppData\Local\Microsoft\Teams\current\Teams.exe) {
     (Get-ItemProperty C:\Users\*\AppData\Local\Microsoft\Teams\Current).PSParentPath | foreach-object {Start-Process $_\Update.exe -ArgumentList "--uninstall /s" -PassThru -Wait}
 } 
 ```
+

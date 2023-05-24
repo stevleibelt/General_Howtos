@@ -6,9 +6,9 @@ PSSession is a kind of ssh+screen.
 
 `PSRemoting` is based on Web Service for Management (WS-Management) and `WinRM service` (Windows Remote Management).
 
-# General Commands
+## General Commands
 
-```
+```pwsh
 #list everything about ps sessions
 Get-Help *-PSSession
 
@@ -45,9 +45,9 @@ Disconnect-PSSession [<int: id>]
 Remove-PSSession [<int: id>]
 ```
 
-# Check Configuration
+## Check Configuration
 
-```
+```pwsh
 #show list of users and groups to conect over WinRM
 Get-PSSessionConfiguration
 
@@ -65,9 +65,9 @@ Enable-PSRemoting -SkipNetworkProfileCheck -Force
 Get-Service WinRM | Select MachineName, Name, Status, StartType
 ```
 
-# Usages Commands
+## Usages Commands
 
-```
+```pwsh
 #Run a script on multiple servers by using named sessions
 #   Create sessions
 $listOfSessions = New-PSSession -ComputerName ServerOne, ServerTwo -Name ITTaskUpdate
@@ -88,7 +88,8 @@ Invoke-Command -Session $session {<some command executed on the server>}
 Disconnect-PSSession -Session $session
 ```
 
-# Links
+## Links
 
 * [About PSSessions](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pssessions?view=powershell-7) - 20200411
 * [Enter-PSSession](http://woshub.com/enter-pssession-remote-command-shell/) - 20220119
+
