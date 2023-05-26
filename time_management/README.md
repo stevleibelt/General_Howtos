@@ -47,3 +47,10 @@ Let's start that conversation now.
 * know your bottomless bowls and slot machines (know which apps are bottomless bowls (trapdoors) and slot machines (constant checking and steeling your time) for you. move them off the first page of apps)
 
 [source](http://timewellspent.io/)
+
+## Link
+
+* [dfn schedule planner/Terminplaner: dfn.de](https://www.dfn.de/dienste/collaboration-services/) - 20230526
+* [limesurvey.org](https://www.limesurvey.org/) - 20230526
+* [nextcloud polls: nextcloud.com](https://apps.nextcloud.com/apps/polls) - 20230526
+
