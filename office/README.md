@@ -1,12 +1,22 @@
-# unfinished list of alternative office products you can use
+# Office products
 
-^close source and full of digital right management software^open source (or maybe even free as in freedom) to regain your data^
-| MS Office (Word, Excel etc.) | LibreOffice |
+## Unfinished list of alternative office products you can use
+
+| Close source and full of digital right management software | Open source (or maybe even free as in freedom) to regain your data |
+| --- | --- |
+| MS Office (Word, Excel etc.) | LibreOffice, OnlyOffice |
 | InDesign | Scribus |
 | Illustrator | Inscape |
 | Photoshop | Gimp |
 | Lightroom | Darktable |
 
-# deal with mdb files
+## How to deal with mdb files
 
-* you can export them to csv or sqlite by using [gmdb2 or access-export](https://aur.archlinux.org/packages/?O=0&K=mdb)
+* [mdbtools](https://github.com/mdbtools/mdbtools) for Read Access databases on \*nix
+* [gmdb2](https://github.com/mdbtools/gmdb2) as the official GUI for MDB Tools
+
+## Links
+
+* [libreoffice.org](https://www.libreoffice.org/) - 20230531
+* [onlyoffice.com](https://www.onlyoffice.com/) - 20230531
+
