@@ -14,6 +14,7 @@
 
 * [mdbtools](https://github.com/mdbtools/mdbtools) for Read Access databases on \*nix
 * [gmdb2](https://github.com/mdbtools/gmdb2) as the official GUI for MDB Tools
+* Open with [dbeaver](https://superuser.com/a/1632462) by creating a new database connection, select `all` and search for `access`
 
 ## Links
 
