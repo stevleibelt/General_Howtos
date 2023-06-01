@@ -26,7 +26,8 @@ borg compact /path/to/the/backup
 
 # good to know
 borg mount /path/to/the/backup /tmp/my_temporary_mountpoint
-borg info /path/to/the/backup
+borg list /path/to/the/backup               # list content of the given repository or archive
+borg info /path/to/the/backup [--last 1]    #shows info like size for a given repository or archive
 ```
 
 ## Links
