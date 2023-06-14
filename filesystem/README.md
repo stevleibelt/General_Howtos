@@ -1,5 +1,11 @@
 # Filesystem
 
+## Backup partition table
+
+```bash
+sudo sgdisk -b=$(uname -n)-_nvme0n1_partition_table.bin /dev/nvme0n1
+```
+
 ## Incomplete list of tools
 
 | Name | Description |
