@@ -3,9 +3,11 @@
 ## Keep containers alive during daemon downtime
 
 ```bash
-#/etc/docker/daemin.json
+#/etc/docker/daemon.json
 {
   "live-restore": true
+  "log-driver": "syslog",
+  "userland-proxy": false
 }
 ```
 
