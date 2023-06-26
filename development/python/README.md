@@ -17,7 +17,7 @@ pip install --upgrade pip setuptools wheel
 #create a virtual environment
 #cd to the project root
 ##.env is just a name, you can name it like you want it
-python -m venv .env
+python -m venv venv
 echo ".env" >> .gitignre
 #use virtual environment
 source .env/bin/activate
