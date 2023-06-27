@@ -1,8 +1,8 @@
-# general
+# grep
 
-grep [options] <pattern> <path or files>
+`grep [options] <pattern> <path or files>`
 
-# grep inside a shell script
+## grep inside a shell script
 
 ```
 #example, do something if 'both modified' was found
@@ -18,19 +18,19 @@ then
 fi
 ```
 
-# exit with code 0 if any match was found
+## Exit with code 0 if any match was found
 
 ```
 grep -q
 ```
 
-# print all lines that are not matching
+## Print all lines that are not matching
 
 ´´´
 grep -v
 ´´´
 
-# print only but all matchings (even if they are on the same line)
+## Print only but all matchings (even if they are on the same line)
 
 * @see: https://unix.stackexchange.com/questions/6979/count-total-number-of-occurrences-using-grep
 
@@ -51,79 +51,79 @@ cat foo.xml | grep -o '<job>' | wc -l
 rm foo.xml
 ```
 
-# print line numbers
+## Print line numbers
 
 ´´´
 grep -n
 ´´´
 
-# print only line numbers
+## Print only line numbers
 
 ´´´
 grep -n | cut -f1 -d:
 ´´´
 
-# print only filenames
+## Print only filenames
 
 ´´´
 grep -l
 ´´´
 
-# print count of matching lines
+## Print count of matching lines
 
 ´´´
 grep -c
 ´´´
 
-# print non printable characters
+## Print non printable characters
 
 ```
 grep '[^[:print:]]'
 ```
 
-# grep caseinsensitive
+## Grep caseinsensitive
 
 ´´´
 grep -i
 ´´´
 
-# search recursively
+## Search recursively
 
 ´´´
 grep -r 'pattern' *
 ´´´
 
-# pattern has a leading "-"
+## Pattern has a leading "-"
 
 ´´´
 grep -e '-pattern-' *
 ´´´
 
-# search for a whole word, not a part
+## Search for a whole word, not a part
 
 ´´´
 grep -w 'word' *
 ´´´
 
-# search for words starting with 
+## Search for words starting with 
 
 ´´´
 grep  '\<hello' *
 ´´´
 
-# search for words ending with 
+## Search for words ending with 
 
 ´´´
 grep  'hello\>' *
 ´´´
 
-# do not search in binary files
+## Do not search in binary files
 
 ```
 grep -I '<pattern>' '<path>'
 ```
 
-# exlude directory
+## Exlude directory
 
 ```
 grep --exclude-dir=<path> '<pattern>' '<path>'
@@ -131,7 +131,7 @@ grep --exclude-dir=<path> '<pattern>' '<path>'
 grep --exclude-dir={<path>,<path>} '<pattern>' '<path>'
 ```
 
-# and
+## And
 
 ```
 #with -E
@@ -140,7 +140,7 @@ grep 'foo.*bar'
 grep -E 'foo' | grep -E 'bar'
 ```
 
-# or
+## Or
 
 ```
 #with \|
@@ -153,35 +153,35 @@ grep -e 'foo' -e 'bar'
 egrep 'foo|bar'
 ```
 
-# not
+## Not
 
 ```
 #with -v
 grep -v 'foo'
 ```
 
-# do an or
+## Do an or
 
 ´´´
 # find lines that contain 'paul' or 'frank'
 grep 'paul|frank' *
 ´´´
 
-# do an and
+## Do an and
 
 ´´´
 # find lines that contain 'paul' and 'frank'
 grep 'paul' * | grep 'frank'
 ´´´
 
-# include
+## Include
 
 ´´´
 # search "foo" in files named "bar.foo"
 grep -r 'foo' --include="bar.foo" *
 ´´´
 
-# character classes
+## Character classes
 
 * [:blank:]     - space and tab
 * [:cntrl:]     - ASCI control characters (000, 037 ...)
@@ -210,25 +210,25 @@ grep 'pattern1\|pattern2'
 grep -e 'pattern1.\*pattern2'
 ´´´
 
-# output <number of> lines before match
+## Output <number of> lines before match
 
 ´´´
 grep -B<number> 'pattern'
 ´´´
 
-# output <number of> lines after match
+## Output <number of> lines after match
 
 ´´´
 grep -A<number> 'pattern'
 ´´´
 
-# output <number of> lines around match
+## Output <number of> lines around match
 
 ´´´
 grep -C<number> 'pattern'
 ´´´
 
-# suppress errors
+## Suppress errors
 
 ´´´
 grep -s <pattern>
@@ -236,7 +236,7 @@ grep -s <pattern>
 grep <pattern> 2>/dev/null
 ´´´
 
-# links
+## Links
 
 * http://www.commandlinefu.com/commands/view/2998/grep-certain-file-types-recursively
 * http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/

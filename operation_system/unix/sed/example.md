@@ -33,6 +33,25 @@ sed -n -e 's/.*<mylink>\(.*\)<\/mylink>.*/\1/p' exampleXml > myfile
 sed -n -e 's/^.*\/my\/endline\ pattern\(.*\)$/\1/p' < source.file | sort | uniq -c > destination.file. sort_and_uniq
 ```
 
+## Slice text
+
+```bash
+# assume we have lines like the following
+#   foobar.xsl:							<fo:block font-weight="bold"><xsl:value-of select="//Foo/BazFoo" /></fo:block>
+#   templates/barfoo.xsl:				<xsl:apply-templates select="foo/ap.foo.reports.foobar.content.baz"/>
+
+# -e    : Execute the following script command
+# -n    : Do not print out pattern space
+# \1    : Print out the matching content from \(.*\)
+# /pg   : Copy/Append hold space to pattern space and print out this
+#           This is needed since we told sed with -e to NOT print out
+#           Pattern space
+sed -n -e 's/^.*\ select="\(.*\)".*$/\1/pg'
+# outputs
+#   //Foo/BazFoo
+#   foo/ap.foo.reports.foobar.content.baz
+```
+
 ## Sed in place
 
 In place means, no addition/backup file will be created.
