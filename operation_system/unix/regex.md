@@ -75,6 +75,7 @@ grep "^[abc]" <file>
 
 # links
 
+* [A Practical Guide to Regular Expressions - Leanr RegEx with Real Life Examples](https://www.freecodecamp.org/news/practical-regex-guide-with-real-life-examples/) - 20230801
 * [IHateRegex.io](https://ihateregex.io/) - 2020-02-04
 * https://regex101.com/
 * http://www.regexr.com/
