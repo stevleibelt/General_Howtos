@@ -1,14 +1,16 @@
-# Installation
+# OpenProject
 
-## General
+## Installation
+
+### General
 
 * default administrator is: admin/admin
 
-## Podman
+### Podman
 
 ### Quickly test ist
 
-```
+```bash
 cat >/path/to/your/start.sh<<DELIM
 #!/bin/bash
 podman run -d -p 8080:80 -e SECRET_KEY_BASE=<your_secret> openproject/community:11
@@ -23,9 +25,9 @@ podman ps
 podman container exec -it <container_id> /bin/bash
 ```
 
-### Set it up
+#### Set it up
 
-```
+```bash
 #create your container
 podman container create docker.io/openproject/community:11 -name openproject -p 8080:80 -e SECRET_KEY_BASE=<your_secret>
 
@@ -36,6 +38,7 @@ podman container start openproject -d
 podman container stop openproject
 ```
 
-# Link
+## Links
 
-* []
+* [Official user guide: openproject.org](https://www.openproject.org/docs/user-guide/)
+* [Offizielles Benutzerhandbuch: openproject.org](https://www.openproject.org/de/docs/nutzungshandbuch/)

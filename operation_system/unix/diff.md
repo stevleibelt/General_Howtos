@@ -1,4 +1,6 @@
-# compare directories
+# diff
+
+## Compare Directories
 
 ```
 #-b - ignore changes in the amount of white space
@@ -9,11 +11,11 @@
 diff -burq <path to first directory> <path to second directory> | sort
 ```
 
-# tools
+## Links
 
-* [bdelta](https://github.com/jjwhitney/BDelta)
-* [jojodiff](http://jojodiff.sourceforge.net/)
-* [courgette](https://www.chromium.org/developers/design-documents/software-updates-courgette)
-* [xdelta](http://xdelta.org/)
 * [bsdiff](http://www.daemonology.net/bsdiff/)
+* [bdelta](https://github.com/jjwhitney/BDelta)
+* [courgette](https://www.chromium.org/developers/design-documents/software-updates-courgette)
 * [jdiff](http://javadiff.sourceforge.net/)
+* [jojodiff](http://jojodiff.sourceforge.net/)
+* [xdelta](http://xdelta.org/)
