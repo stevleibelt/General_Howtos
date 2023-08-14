@@ -37,6 +37,9 @@ sudo -E <command>
 
 #set the default shell
 sudo -s <shell> <command>
+
+#if you need to do sudo in an if statement
+if sudo bash -c 'my_sudo_command'
 ```
 
 ## Basic usage of the policy configuration file
