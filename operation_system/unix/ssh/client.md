@@ -66,6 +66,18 @@ Host bazzline.net-artodeto
 
 ## Hints
 
+### Check the ssh connection
+
+```bash
+#useful if you want to verify that your connection goes over
+#   a jumphost
+#execut the following command on your jumped host
+env | grep -i ssh_conn
+#it should contain two ip address
+#first should be the address of your jump host, second of your
+#   target host followed by the port
+```
+
 ### Secure file authorized_keys
 
 ```bash
