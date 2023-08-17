@@ -14,6 +14,7 @@ ctrl+w k #window up - move to up window
 ctrl+w j #window down - move to down window
 ctrl+w c #close current window
 ctrl+w o #close all windows except current
+ctrl+w r #move current window to the right
 ctrl+w v #duplicate current window
 ```
 
@@ -222,6 +223,8 @@ ctrl+x #counts up number below current cursor
 ## Configuration
 
 ```bash
+#get current argument valur
+:set <string: argument>?    #it is the ? at the end
 :options+enter #shows available options
 :browse set #shows all setable options
 ```
@@ -265,7 +268,7 @@ vim +PluginInstall +qall
 vim +BundleInstall +qall
 ```
 
-## Ii style key bindings in the bash
+## Vi style key bindings in the bash
 
 ```bash
 #per session
