@@ -1,4 +1,6 @@
-# how to build
+# Linux Kernel
+
+## How to build
 
 ```
 cd path/where/i/want/to/build/the/new/kernel
@@ -13,6 +15,7 @@ sudo make modules_install install
 sudo update-grub
 ```
 
-# links
+## Links
 
+* [kernelnewbies.org](https://kernelnewbies.org/) - 20230823
 * http://www.kroah.com/lkn/
