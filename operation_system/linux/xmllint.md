@@ -2,21 +2,21 @@
 
 Useful to validate an xml against an xsd.
 
-# how to validate
+## How to validate
 
-```
+```bash
 xmllint --schema foo.xsd foo.xml
 ```
 
-# how to reduce memory footprint
+## How to reduce memory footprint
 
-```
+```bash
 xmllint --schema --stream foo.xsd foo.xml
 ```
 
-# how to validate inside a bash script
+## How to validate inside a bash script
 
-```
+```bash
 #assuming your xsd file has the name "foo.xsd" and your xml file has the name "foo.xml"
 if xmllint --noout --schema foo.xsd foo.xml >/dev/null 2>&1;
 then
@@ -26,7 +26,7 @@ else
 fi
 ```
 
-# links
+## Links
 
 * [bash script variables and xmllint](https://www.experts-exchange.com/questions/28121869/bash-script-variables-and-xmllint.html)
 * [xmllint in debian](https://packages.debian.org/sid/libxml2-utils)
