@@ -1,10 +1,16 @@
 # Define variable declaration XSL-FO
 
-```xml
-<!-- simple creation -->
-<xsl:variable name="my_variable">my_value</xsl:variable>
+## Simple creation
 
-<!-- set default value if no value is set / define variable if does not exist -->
+```xml
+<xsl:variable name="my_variable">my_value</xsl:variable>
+```
+
+## Define variable if it does not exist
+
+Or set default value if no value is set
+
+```xml
 <xsl:variable name="my_possible_undefined_variable">
     <xsl:choose>
         <!-- if content of variable is not an empty string -->
