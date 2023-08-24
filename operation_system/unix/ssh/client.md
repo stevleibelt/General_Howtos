@@ -3,11 +3,16 @@
 ## Generate key
 
 ```bash
+#Useful options
+# -b    - Blocksize
+# -t    - Type of the key
+# -a    - KDF rounds
+# -C    - Comment
 cd ~
 cd .ssh/
-ssh-keygen -t rsa -b 4096
+ssh-keygen -a 420 -t rsa -b 4096
 #or, if you trust curves
-ssh-keygen -t ed25519
+ssh-keygen -a 420 -t ed25519
 ```
 
 ### Test passphrase
@@ -108,6 +113,7 @@ SendEnv BAZZLINE_ENVIRONMENT
 ## Links
 
 * [limit ssh acces by ip address](http://blog.serverbuddies.com/limit-ssh-access-by-ip-address/)
+* [Noch besser leben mit SSH: media.ccc.de](https://media.ccc.de/v/gpn21-28-noch-besser-leben-mit-ssh) - 20230824
 * [ssh keys](https://wiki.archlinux.org/index.php/SSH_Keys)
 * [ssh proxy bastion proxyjump](https://www.redhat.com/sysadmin/ssh-proxy-bastion-proxyjump) - 20221122
 
