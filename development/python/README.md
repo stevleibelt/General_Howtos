@@ -17,10 +17,27 @@ pip install --upgrade pip setuptools wheel
 #create a virtual environment
 #cd to the project root
 ##.env is just a name, you can name it like you want it
-python -m venv venv
-echo ".env" >> .gitignre
+python -m venv .venv
+echo ".venv" >> .gitignre
 #use virtual environment
 source .env/bin/activate
+
+#create .env file
+echo "FOO" >> .env
+#assuming you have a main.py file
+echo >>run.sh <<DELIM
+#!/bin/bash
+####
+
+# ref: https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html
+set -a
+source .env
+set +a
+
+source .venv/bin/activate
+
+python main.py
+DELIM
 
 #or use pipx
 #@see:
