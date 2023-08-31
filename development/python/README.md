@@ -42,6 +42,7 @@ source .venv/bin/activate
 
 python main.py
 DELIM
+#execute run.sh
 
 #or use pipx
 #@see:
