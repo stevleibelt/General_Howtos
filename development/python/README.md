@@ -23,8 +23,12 @@ echo ".venv" >> .gitignre
 source .env/bin/activate
 
 #create .env file
-echo "FOO" >> .env
+echo "FOO=BAR" >> .env
 #assuming you have a main.py file
+#in your main.py, add the following lines
+#   from os import environ
+#   ENV_FOO=environ.get('FOO')
+#   print(f'FOO: {ENV_FOO}')
 echo >>run.sh <<DELIM
 #!/bin/bash
 ####
