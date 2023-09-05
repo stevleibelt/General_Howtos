@@ -110,6 +110,7 @@ Modules are located in `c:\Python`.
   * useful packages
     * [coverage](https://pypi.org/project/coverage/) - 20200924
     * [future](http://python-future.org/automatic_conversion.html) - 20200924
+* [Python release cycle/versions with support date: devguide.python.org](https://devguide.python.org/versions/) - 20230905
 * [Get started using Python on Windows for beginners](https://docs.microsoft.com/en-us/windows/python/beginners) - 20190719
   * [Get started using Python on Windows for scripting and automation](https://docs.microsoft.com/en-us/windows/python/scripting) - 20190719
   * [Get started using Python for web development on Windows](https://docs.microsoft.com/en-us/windows/python/web-frameworks) - 20190719
