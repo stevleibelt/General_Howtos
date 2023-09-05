@@ -21,6 +21,9 @@ python -m venv .venv
 echo ".venv" >> .gitignre
 #use virtual environment
 source .env/bin/activate
+#upgrade venv
+##ref: https://docs.python.org/3/tutorial/venv.html#managing-packages-with-pip
+python -m venv --upgrade .venv
 
 #create .env file
 echo "FOO=BAR" >> .env
