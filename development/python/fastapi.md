@@ -486,10 +486,9 @@ python .\load_test.py
 ## Links
 
 * [Build apis with fastapi in python all essentials you need to get started: gitconnected.com](https://levelup.gitconnected.com/build-apis-with-fastapi-in-python-all-essentials-you-need-to-get-started-6bf9fa90c6b8) - 20230511
+* [Fast API Tutorial by JVP Design: youtube.com](https://www.youtube.com/@JVPDesign) - 20230913
+* [FastAPI Crashkurs 2022 | REST-API mit dem beliebsten Python Framework: youtube.com](https://www.youtube.com/watch?v=KXCvIV3yr7c&list=PL-lCrD3QqynX2a2sgXZlvxEGssGg9ZTCa) - 20230218
+  * [Project page: github.com](https://github.com/Coding-Crashkurse/FastAPI-Auth) - 20230219
 * [List of FastAPI packages](https://libraries.io/search?q=fastapi) - 20230327
 * [Pypi.org: FastAPI](https://pypi.org/project/fastapi/) - 20230220
 * [Tag-youre-it-backend: Example project using fastapi](https://github.com/nickatnight/tag-youre-it-backend) - 20230227
-* [Youtube.de: FastAPI Crashkurs 2022 | REST-API mit dem beliebsten Python Framework](https://www.youtube.com/watch?v=KXCvIV3yr7c&list=PL-lCrD3QqynX2a2sgXZlvxEGssGg9ZTCa) - 20230218
-  * [Github.com: Project page](https://github.com/Coding-Crashkurse/FastAPI-Auth) - 20230219
-
-
