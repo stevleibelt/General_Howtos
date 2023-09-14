@@ -127,18 +127,30 @@ class MyClass
     self.id = id
     self.search = search
 
+async def verify_x_token(x_token: str Header(...)):
+  if x_token != "my-secret"
+    raise HTTPException(status_code=400, detail="Invalid X-Token")
+
 # the next three lines are all the same
 @app.get("/full_typehint_and_depends_call/{item_id}")
-async def read_items(my_instance: MyClass=Depends(MyClass)):
+async def read_items_1(my_instance: MyClass=Depends(MyClass)):
   return {'id': my_instance.id, 'search': my_instance.search}
 
 @app.get("/no_typehint_but_depends_call/{item_id}")
-async def read_items(my_instance=Depends(MyClass)):
+async def read_items_2(my_instance=Depends(MyClass)):
   return {'id': my_instance.id, 'search': my_instance.search}
 
 @app.get("/full_typehint_and_no_depends_call/{item_id}")
-async def read_items(my_instance: MyClass=Depends()):
+async def read_items_3(my_instance: MyClass=Depends()):
   return {'id': my_instance.id, 'search': my_instance.search}
+
+# Note - if you just want to abort the request processing if
+#   something mandatory is missing (like no authentication token)
+#   than you could put the debends in the path definition
+# ref: https://youtu.be/ECjGFDVifhk?t=388
+@app.get("/header_depends_check", dependencies=[Depends(verify_x_token)])
+async def read_items_4():
+  retrun {'x_token': 'verified'}
 ```
 
 ## Example login endpoint
