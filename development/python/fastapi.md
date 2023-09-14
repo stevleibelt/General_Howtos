@@ -115,6 +115,32 @@ async def delete_item(id: int):
 DELIM
 ```
 
+## Example for dependency injection
+
+[source: youtube](https://www.youtube.com/watch?v=jJDzJg3O9ZQ) - 20220713
+
+```python
+from fastapi import Depends
+
+class MyClass
+  def __init__(self, id: int, search: str | None = None):
+    self.id = id
+    self.search = search
+
+# the next three lines are all the same
+@app.get("/full_typehint_and_depends_call/{item_id}")
+async def read_items(my_instance: MyClass=Depends(MyClass)):
+  return {'id': my_instance.id, 'search': my_instance.search}
+
+@app.get("/no_typehint_but_depends_call/{item_id}")
+async def read_items(my_instance=Depends(MyClass)):
+  return {'id': my_instance.id, 'search': my_instance.search}
+
+@app.get("/full_typehint_and_no_depends_call/{item_id}")
+async def read_items(my_instance: MyClass=Depends()):
+  return {'id': my_instance.id, 'search': my_instance.search}
+```
+
 ## Example login endpoint
 
 ```python
