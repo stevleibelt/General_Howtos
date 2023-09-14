@@ -146,7 +146,7 @@ async def read_items_3(my_instance: MyClass=Depends()):
 
 # Note - if you just want to abort the request processing if
 #   something mandatory is missing (like no authentication token)
-#   than you could put the debends in the path definition
+#   than you could put the debends in the path decorator
 # ref: https://youtu.be/ECjGFDVifhk?t=388
 @app.get("/header_depends_check", dependencies=[Depends(verify_x_token)])
 async def read_items_4():
