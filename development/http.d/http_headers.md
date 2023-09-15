@@ -1,4 +1,4 @@
-# HTTPS Headers
+# HTTP Headers
 
 ## General information
 
