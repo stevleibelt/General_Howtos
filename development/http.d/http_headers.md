@@ -139,7 +139,7 @@
 Based on the gained knowledge and [OWASP recommendations](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html), this is the recommendation area.
 
 * `Strict-Transport-Security: max-age=31536000`
-* `Content-Security-Policy: default-src 'self'; child-src: 'self'; base-uri: 'self'; navigate-to: 'self'; frame-ancestors: 'none'`
+* `Content-Security-Policy: default-src 'self'; child-src 'self'; base-uri 'self'; navigate-to 'self'; frame-ancestors 'none'`
 * `X-Frame-Options: DENY`
 * `X-Content-Type-Options: nosniff`
 * `Referrer-Policy: strict-origin-when-cross-origin`
