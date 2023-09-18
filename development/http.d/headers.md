@@ -114,6 +114,8 @@
     * Content-Security-Policy (CSP)
       * Is build to be backward compatible
       * Build as successor of `same-origin policy`
+      * Can be tested by defining the policy but replace `Content-Security-Policy` with `Content-Security-Policy-Report-Only`
+        * All bad things are than logged in the console of the webbrowser
       * Can be configured
         * as `Content-Security-Policy: policy`
         * or as `<meta http-equiv="Content-Security-Policy"\ncontent="default-src 'self'; img-src https://*; child-src 'none';" />`
