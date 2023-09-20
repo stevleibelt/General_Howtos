@@ -287,6 +287,7 @@ This is an upcomming header.
 
 ## Links
 
+* [Content Security Policy Level 3: w3.org](https://www.w3.org/TR/CSP3/) - 20230920
 * [HTTP Headers: mozilla.org](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) - 20230915
 * [HTTP Security Response Headers Cheat Sheet: owasp.org](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#referrer-policy) - 20230915
 * [Learn in 5 Minutes: HTTP Headers (General/Request/Response/Entity): youtube.com](https://www.youtube.com/watch?v=1v7RoeXyww4) - 202300912
