@@ -27,6 +27,15 @@ With [openzfs](https://openzfs.org/), the future is great!
 zpool import -l [-R /my/mountpoint] <string: zpool_id_or_name>
 ```
 
+### Load key of encrypted zpool
+
+```bash
+#assumed pool was imported without encrypting it
+#   -n  - dry-run
+#   -r  - load keys recursive
+zfs load-key [-nr] <string: zpool_id_or_name>
+```
+
 ### Prepare empty disk and add gpt/efi label
 
 ```bash
