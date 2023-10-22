@@ -9,6 +9,13 @@ Docker is server and client.
 systemctl start docker
 ```
 
+## Remove all
+
+```bash
+# This includes all volumes
+docker system prune -a --volumes
+```
+
 ## get list of images running on your local host
 
 ```bash

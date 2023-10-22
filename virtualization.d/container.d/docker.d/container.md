@@ -15,7 +15,15 @@ docker run -v /var/volumeOne -v /var/volumneTwo busybox true
 ## Remove container
 
 ```bash
-docker rm <container_id>
+docker rm <string: container_id>
+```
+
+### Remove all containers
+
+```bash
+# ref: https://linuxhandbook.com/remove-docker-containers/
+docker ps -q | xargs docker stop
+docker ps -aq | xargs docker stop
 ```
 
 ## List all available containers
