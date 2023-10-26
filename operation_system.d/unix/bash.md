@@ -108,6 +108,18 @@ history <number of last entries you want to see>
 #execute a command relative to our position
 !-2 #executes the second last command executed
 !!  #executes the previous command
+
+#execute the previous command in a subshell (recompute not re-use)
+# ref: https://stackoverflow.com/a/25599486
+$(!!)
+#to be able to store the output into a variable
+FOO=$(!!)
+#or use it in a command
+#   First execute the command to generate the output/find the files
+find . -iname "my*.pdf" -type f
+#   Secondly open the found files by calling mupdf and again doing the find
+mupdf $(!!)
+
 ```
 
 ## Links
