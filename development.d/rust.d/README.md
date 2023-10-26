@@ -67,8 +67,8 @@ cargo test
 
 ## Links
 
-* [creates.io - Rusts community create registry.](https://crates.io/) - 20201117
-* [Getting started with the Rust pacage manager, Cargo](https://opensource.com/article/20/3/rust-cargo) - 20200303
-* [The Cargo Book](https://doc.rust-lang.org/stable/cargo/) - 20200303
-* [learn rust with rustlings](https://opensource.com/article/22/7/learn-rust-rustlings) - 20220731
-
+* [Getting started with the Rust pacage manager, Cargo: opensource.com](https://opensource.com/article/20/3/rust-cargo) - 20200303
+* [Fully Automated Releases for Rust Projects: orhun.dev] - 20231026
+* [Learn rust with rustlings: opensource.com](https://opensource.com/article/22/7/learn-rust-rustlings) - 20220731
+* [Rusts community create registry: creates.io](https://crates.io/) - 20201117
+* [The Cargo Book: rust-lang.org](https://doc.rust-lang.org/stable/cargo/) - 20200303
