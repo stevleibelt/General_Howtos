@@ -237,11 +237,11 @@ cat /sys/class/block/sdX/queue/logical_block_size
 hdparm -I /dev/sdX
 ```
 
-
 ## Links
 
-* [Getting started with openZFs](https://openzfs.github.io/openzfs-docs/Getting Started) - 20210211
-* [ZFS - Pools and VDEVs - Testing, Configuration, and Expansion] - 20220813
+* [FreeNAS / TrueNAS ZFS Pools RAIDZ RAIDZ2 RAIDZ3 Capacity, Integrity, and Performance: lawrencesystems.com](https://forums.lawrencesystems.com/t/freenas-truenas-zfs-pools-raidz-raidz2-raidz3-capacity-integrity-and-performance/3569) - 20231101
+* [Getting started with OpenZFS: github.io](https://openzfs.github.io/openzfs-docs/Getting Started) - 20210211
+* [ZFS Raidz Performance, Capacity and Integrity: calomeg.org](https://calomel.org/zfs_raid_speed_capacity.html) - 20231101
 * http://stoneyforest.net/~chris/blog/freebsd/zfs/maint.html
 * https://pthree.org/2012/12/07/zfs-administration-part-iv-the-adjustable-replacement-cache/
 * https://wiki.archlinux.org/index.php/ZFS#Encryption_in_ZFS_on_linux
