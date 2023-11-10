@@ -140,10 +140,11 @@ zfs send <source pool name>[/path]@<snapshot name> | pv | zfs receive <destinati
 
 ## Links
 
+* [sanoid - policy-driven snapshot manager](https://github.com/jimsalterjrs/sanoid) - 20231110
+* [zrepl - zfs replication: github.io](https://zrepl.github.io/) - 20231110
 * https://docs.oracle.com/cd/E23824_01/html/821-1448/recover-3.html
 * https://wiki.archlinux.org/index.php/ZFS#Experimenting_with_ZFS
 * http://www.freebsd.org/doc/handbook/zfs-zfs.html
 * http://googlux.com/zfs-snapshot.html
 * http://docs.huihoo.com/opensolaris/solaris-zfs-administration-guide/html/ch06.html
 * http://docs.oracle.com/cd/E19253-01/819-5461/gbcya/index.html
-
