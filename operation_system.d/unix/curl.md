@@ -1,5 +1,11 @@
 # Curl
 
+## Define download path
+
+```bash
+curl --create-dirs --output my/wonderful/path/vmlinuz.EFI -LJO https://get.zfsbootmenu.org/efi
+```
+
 ## Check result page contains expected words
 
 
@@ -66,8 +72,7 @@ curl -i <url>
 curl -sw '\nhttp status code: %{http_code}' <url>
 ```
 
-# Links
+## Links
 
 * http://curl.haxx.se/docs/httpscripting.html
 * [Use the internet from the command line with curl](https://opensource.com/article/20/5/curl-cheat-sheet) - 2020-05-22
-
