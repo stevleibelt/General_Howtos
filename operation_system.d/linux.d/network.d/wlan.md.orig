@@ -1,0 +1,11 @@
+# scannen
+
+iwlist wlan0 scan
+
+# network management
+
+#take a look to /etc/network.d/examples
+#https://wiki.archlinux.de/title/(W)LAN_und_Arch_Linux
+
+#thats the magic line you have to put in you rc.local
+wpa_supplicant -B -D wext -i wlan0 -c /etc/wpa_supplicant.conf && dhcpcd -b wlan0
