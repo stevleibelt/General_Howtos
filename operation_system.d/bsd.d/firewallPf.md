@@ -1,3 +1,6 @@
+# Firewall Pf
+
+```bash
 #for testing, add following line to crontab
 */5 * * * * root /sbin/pfctl -d
 #add to /etc/rc.conf
@@ -98,3 +101,4 @@ pass in on $if inet proto icmp all icmp-type $icmp_types keep state
 
 # TRACEROUTE #
 pass in on $if inet proto udp from any to any port 33433 >< 33626 keep state
+```

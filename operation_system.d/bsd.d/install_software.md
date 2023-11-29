@@ -1,3 +1,6 @@
+# Install Software
+
+```bash
 #take a look to portstree
 #example by installing "sudo"
 ##compile and install it
@@ -21,3 +24,4 @@ portupgrade -r $portOne [$portTwo ...]
 
 #uninstall
 pkg_delete -r $port
+```
