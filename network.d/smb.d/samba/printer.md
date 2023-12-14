@@ -1,4 +1,6 @@
-# Howto
+# Share a printer via samba
+
+## Howto
 
 * install [samba](https://wiki.archlinux.org/index.php/Samba)
 * cd /var/samba
@@ -6,7 +8,7 @@
 * cp smb.conf.default smb.conf
 * add something like the following to your config plus adapt was needed
 
-```
+```bash
 [MASCHINNAME]
     comment = This is my supa dupa printer
     printer = m1234
@@ -18,7 +20,7 @@
     writable
 ```
 
-# Link
+## Link
 
 * [Setting up Samba as a Print Server](https://wiki.samba.org/index.php/Setting_up_Samba_as_a_Print_Server) - 2020-01-14
 * [Sharing via samba - wiki.archlinux.org](https://wiki.archlinux.org/index.php/CUPS/Printer_sharing#Sharing_via_Samba) - 2020-01-14
