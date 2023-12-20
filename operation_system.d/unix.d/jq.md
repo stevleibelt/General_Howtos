@@ -27,7 +27,7 @@ cat my_json | jq -r '[.foo, .bar.baz] | join(" | ")'
 ### Select or
 
 ```bash
-#filter out null: >>!= null<<
+#filter out null
 jq 'select((.my_key != "foo") and (.my_key != "bar"))'
 
 #search for like
@@ -43,8 +43,9 @@ jq -r '.[] | [.value[1], .metric.ruser, .metric.rhost] | @tsv'
 
 ## Links
 
-* [Official page](https://stedolan.github.io/jq/) - 20230213
-* [JQ cheat sheet](https://lzone.de/cheat-sheet/jq) - 20230213
-* [JQ select explained](https://earthly.dev/blog/jq-select/) - 20230213
-* [Some notes (to myself) about formatting text in jq](https://utcc.utoronto.ca/~cks/space/blog/sysadmin/JqFormattingTextNotes) - 20230315
+* [An introduction to JQ: earthly.dev](https://earthly.dev/blog/jq-select/) - 20231220
+* [Official page: stedolan.github.io](https://stedolan.github.io/jq/) - 20230213
+* [JQ cheat sheet: lzone.de](https://lzone.de/cheat-sheet/jq) - 20230213
+* [JQ select explained: eartly.dev](https://earthly.dev/blog/jq-select/) - 20230213
+* [Some notes (to myself) about formatting text in jq: utcc.utoronto.ca](https://utcc.utoronto.ca/~cks/space/blog/sysadmin/JqFormattingTextNotes) - 20230315
 
