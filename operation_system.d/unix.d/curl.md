@@ -1,5 +1,12 @@
 # Curl
 
+## Check for specific tls version
+
+```bash
+# This also shows the ssl certificate infromation
+curl --verbose --tlsv1.1 --tls-max 1.1 -I https://www.bazzline.net
+```
+
 ## Define download path
 
 ```bash
