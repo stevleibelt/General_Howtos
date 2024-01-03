@@ -20,39 +20,25 @@ journalctl | grep -i ' error '
 
 ```bash
 # cli
-lscpu
-lshw
+cat /proc/cpuinfo
 dmidecode -t <string: type>
-# lots of text
-hwinfo
+hwinfo  # prepare yourself for a lot of lines
+lscpu
+lsblk -O
+lspci
+lshw
+lsusb
 parted -l   #disk space information
+
 # gui
 hardinfo
 ```
 
-## cpu
-
-```bash
-cat /proc/cpuinfo
-```
-
-## block devices
-
-
-```bash
-lsblk -O
-```
-
-## memory
-
-```bash
-decode --type memory
-```
-
-* Test your memory memtest86+
+* Test your memory with memtest86+
 
 ## Links
 
+* [16 Commands to Check Hardware Information on Linux](https://www.binarytides.com/linux-commands-hardware-info/) - 20240103
 * [7 Linux commands to gather information about your system](https://www.redhat.com/sysadmin/linux-system-info-commands) - 20240103
 * [System information viewer - wiki.archlinux.org](https://wiki.archlinux.org/index.php/List_of_applications/Utilities#System_information_viewers) - 20190222
 * https://wiki.archlinux.org/index.php/Stress_Test
