@@ -1,14 +1,22 @@
-# input / output redirection
+# Input / Output Redirection or Interaction
 
-## basics
+## Basics
 
 0   -   stdin / standard input
 1   -   stdout / standard output
 2   -   stderr / standard error
 
-## twist
+## Shorthand for 2>&1 
 
+```bash
+command1 |& command2
+# is the same as
+command1 2>&1 | command2
 ```
+
+## Twist
+
+```bash
 ls -l > foo.bar # stdout redirection of 'ls -l' into file 'foo.bar'
 
 ls -l foo 2>/dev/null   # stderr redirection - prevent error message "ls: cannot access foo: No such file or directory"
@@ -22,13 +30,13 @@ ls -l foo 2>&1 >/dev/null   # redirection of stderr to stdout and stdout to /dev
 wc -c < /dev/null   # stdint redirection - redirect content of a file to word cound
 ```
 
-# pipes
+## Pipes
 
-```
+```bash
 ls -l | more    # connect stdout of 'ls -l' with stdin of 'more'
 ```
 
-# wildcards
+## Wildcards
 
 * ?             -   wildcard for single character (must exist)
 * *             -   wildcard for one or infinite number characters
@@ -48,15 +56,15 @@ ls -l | more    # connect stdout of 'ls -l' with stdin of 'more'
 * [[:space:]]   -   whitespace, tab and so one
 * [[:upper:]]   -   upper letters
 
-# braces extension
+## Braces Extension
 
-```
+```bash
 echo stev{e,o}  # output: steve stev-o
 
 touch /tmp/foo/{bar{.baz,.foo},baz{.foo,.bar}}   # creates files: bar.baz, bar.foo, baz.foo, baz.bar
 ```
 
-# links
+## Links
 
 * http://bencane.com/2014/09/02/understanding-exit-codes-and-how-to-use-them-in-bash-scripts/
 * http://steve-parker.org/sh/exitcodes.shtml
