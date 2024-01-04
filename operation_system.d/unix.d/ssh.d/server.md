@@ -92,6 +92,20 @@ KbdInteractiveAuthentication yes    #make your this line is commented out above
 #PubkeyAuthentication yes
 ```
 
+### Terrapin attack
+
+A [vulnerbility scanner](https://github.com/RUB-NDS/Terrapin-Scanner/releases/latest) is available.
+Install it with `go install github.com/RUB-NDS/Terrapin-Scanner@latest`.
+Use ist with `$HOME/go/bin/Terrapin-Scanner --connect localhost:22`
+
+```bash
+# Harden OpenSSH against Terrapin
+# ref: https://staex.io/blog/terrapin-attack-on-ssh-what-do-you-need-to-know
+# print effective ssh configuration and filter out affected ciphers
+# '*-cbc' ciphers should be disabled by default
+sshd -T | sed -nr 's/(chacha20-poly1305@openssh\.com,|,chacha20-poly1305@openssh\.com)//gip' >> /etc/ssh/sshd_config
+```
+
 ## Hints
 
 ### Disable password login
