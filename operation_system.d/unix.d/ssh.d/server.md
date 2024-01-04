@@ -10,7 +10,8 @@ sudo systemctl restart sshd.service
 
 ## List of option
 
-All is done in `/etc/ssh/sshd_config` if not mentioned otherwise.
+All is done in dedicated `/etc/ssh/sshd_config.d/*.conf` files if not mentioned otherwise.
+This way, `sshd_config` can be maintained by the package manager.
 
 ### Allow local user export variable
 
@@ -98,12 +99,14 @@ A [vulnerbility scanner](https://github.com/RUB-NDS/Terrapin-Scanner/releases/la
 Install it with `go install github.com/RUB-NDS/Terrapin-Scanner@latest`.
 Use ist with `$HOME/go/bin/Terrapin-Scanner --connect localhost:22`
 
+**Caution**, latest at 20240601, check if this is still needed
+
 ```bash
 # Harden OpenSSH against Terrapin
 # ref: https://staex.io/blog/terrapin-attack-on-ssh-what-do-you-need-to-know
 # print effective ssh configuration and filter out affected ciphers
 # '*-cbc' ciphers should be disabled by default
-sshd -T | sed -nr 's/(chacha20-poly1305@openssh\.com,|,chacha20-poly1305@openssh\.com)//gip' >> /etc/ssh/sshd_config
+sshd -T | sed -nr 's/(chacha20-poly1305@openssh\.com,|,chacha20-poly1305@openssh\.com)//gip' >> /etc/ssh/sshd_config.d/terrapin-workaround.conf
 ```
 
 ## Hints
@@ -111,7 +114,7 @@ sshd -T | sed -nr 's/(chacha20-poly1305@openssh\.com,|,chacha20-poly1305@openssh
 ### Disable password login
 
 ```bash
-/etc/ssh/sshd_config
+/etc/ssh/sshd_config.d/disable-password-login.conf
 PasswordAuthentication no
 ChallengeResponseAuthentication no
 ```
