@@ -5,24 +5,20 @@
 ```bash
 # ref: https://wiki.debian.org/UnattendedUpgrades
 # as root
-apt install unattended-upgrades apt-listchanges bsd-mailx
-echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
-dpkg-reconfigure -f noninteractive unattended-upgrades
-
-# if available, remove all unneeded exim packages
+# optional! if available, remove all unneeded exim packages
 apt purge exim*
 
-apt install ssmtp
+apt install unattended-upgrades apt-listchanges bsd-mailx ssmtp
+echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
+dpkg-reconfigure -f noninteractive unattended-upgrades
 
 dpkg-reconfigure -plow ssmtp
 # artodeto@bazzline.net
 # smtp.bazzline.net
 # 25
-# myhost.bazzline.net
+# myhost.bazzline.net - if unknown, run hostname -f
 # myhost.bazzline.net
 # yes
-
-apt install bsd-mailx
 
 # test
 # end your content with . + ENTER
