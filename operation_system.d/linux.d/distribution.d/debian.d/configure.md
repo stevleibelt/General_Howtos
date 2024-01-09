@@ -1,23 +1,25 @@
-# keyboard
+# Configure debian from cli
 
-```
+## Keyboard
+
+```bash
 dpkg-reconfigure keyboard-configuration
 ```
 
-# console
+## Console
 
-```
+```bash
 dpkg-reconfigure console-common
 ```
 
-# localization
+## Localization
 
-```
+```bash
 dpkg-reconfigure locales
 ```
 
-# set or change default editor
+## Set or change default editor
 
-```
+```bash
 update-alternatives --config editor
 ```

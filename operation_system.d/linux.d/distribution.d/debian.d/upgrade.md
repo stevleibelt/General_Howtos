@@ -1,8 +1,10 @@
-# upgrade do a new version
+# Upgrade to a new version
 
-## prepare yourself
+## How to upgrade as general workflow
 
-```
+### Prepare yourself
+
+```bash
 screen
 #if you are not root
 sudo su
@@ -14,9 +16,9 @@ sudo su
 apt-get -o APT::Get::Trivial-Only=true dist-upgrade
 ```
 
-## check package status
+### Check package status
 
-```
+```bash
 apt-get autoremove
 apt-get autoclean
 dpkg --audit
@@ -26,9 +28,9 @@ dpkg -l | pager
 apt-get install --reinstall <list of packages>
 ```
 
-## updage package source
+### Update package source
 
-```
+```bash
 #check unofficial sources and adapt them in /etc/apt/source.list when needed
 #open /etc/apt/source.list
 #   change your version with the one you want to upgrade to, e.g. replace wheezy with jessie
@@ -36,9 +38,9 @@ apt-get install --reinstall <list of packages>
 #   change your version with the one you want to upgrade to, e.g. replace wheezy with jessie
 ```
 
-## upgrade
+### Upgrade
 
-```
+```bash
 #fetch latest sources
 apt-get update
 #do the minimal system upgrade
@@ -53,18 +55,18 @@ apt-get autoclean
 
 If you run into problems, first try is to reinstall the software.
 
-```
+```bash
 apt-get install --reinstall <package name>
 #if this is failing
 apt-get remove --purge <package name>
 apt-get install <package name>
 ```
 
-# upgrade paths
+## Upgrade Paths
 
-## from 9 (stretch) to 10 (buster)
+### From 9 (stretch) to 10 (buster)
 
-```
+```bash
 #update current system
 sudo apt update && sudo apt upgrade
 sudo apt autoremove
@@ -98,9 +100,9 @@ sudo apt --purge autoremove
 cat /etc/os-release
 ```
 
-## from 10 (buster) to 11 (bullseye)
+## From 10 (buster) to 11 (bullseye)
 
-```
+```bash
 #update current system
 sudo apt update && sudo apt upgrade
 sudo apt install gcc-8-base
@@ -126,7 +128,7 @@ sudo apt --purge autoremove
 cat /etc/os-release
 ```
 
-# links
+## Links
 
 * https://www.debian.org/releases/stable/i386/release-notes/ch-upgrading.html
 * http://www.muktware.io/upgrade-from-debian-7-to-debian-8/
