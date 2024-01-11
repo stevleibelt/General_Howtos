@@ -1,5 +1,16 @@
 # Docker compose
 
+## Environment variables
+
+You can add and enforce environment variables in `docker-compose.yml`.
+
+Following a list of syntax with usecase:
+
+* `${OPTIONAL_VARIABLE:-default}`, to define a default value if variable is unset or empty
+* `${OPTIONAL_VARIABLE-default}`, to define a default value if variable is unset
+* `${MANDATORY_VARIABLE:?}`, results in an error message if variable is unset or empty
+* `${MANDATORY_VARIABLE?}`, results in an error message if variable is unset
+
 ## Examples
 
 ### PHP with redis and maria db
@@ -54,4 +65,6 @@ docker-compose scale web=4
 * https://docs.docker.com/compose/gettingstarted/
 * https://docs.docker.com/compose/wordpress/
 * https://www.safaribooksonline.com/library/view/mastering-docker/9781785287039/ch07s03.html
+* [Cheatsheet: Environment variables and precedence in Docker Compose](https://www.darraghoriordan.com/2023/04/23/docker-compose-eval-env-var) - 20240111
+* [Environment variables precedence in Docker Compose](https://docs.docker.com/compose/environment-variables/envvars-precedence/) - 20240111
 
