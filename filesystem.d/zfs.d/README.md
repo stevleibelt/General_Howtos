@@ -65,6 +65,25 @@ ls -lah /dev/disk/by-uuid
 zpool create -f -m </my/mount/point> [-o $propertyName] <my pool>  mirror|raidz id1[ id2[ id3]]
 ```
 
+### Create an encrypted mirror pool for truenas
+
+```bash
+# ref: https://www.truenas.com/community/threads/default-option-and-encryption-when-create-a-zpool-via-cli-command.109835/
+zpool create -f -o ashift=12    \
+    -O acltype=posixacl         \
+    -O compression=ztsd         \
+    -O relatime=on              \
+    -O xattr=sa                 \
+    -O encryption=on            \
+    -O keylocation=prompt       \
+    -O keyformat=passphrase     \
+    <string: pool_name>         \
+    mirror                      \
+    <string: vdev1>             \
+    <string: vdev2>
+# do not forget to zpool export your new pool if you want to import it from the gui
+```
+
 ### Create pool with special sectors
 
 ```bash
