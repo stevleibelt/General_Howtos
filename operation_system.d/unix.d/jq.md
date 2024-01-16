@@ -41,6 +41,17 @@ jq 'with_entries(select(.key(contains("<string: string>"))))'
 jq -r '.[] | [.value[1], .metric.ruser, .metric.rhost] | @tsv'
 ```
 
+### Playing with dates
+
+```bash
+# Assuming you have a json file containing rows with a date entry like
+# {Date: "06 Oct 1983 08:20:32"}
+
+# strptime is parsing the existing date format (string) to a datetime object
+# strftime is parsing from the datetime object to a string
+cat my.json | jq -c -r '.Date[5:25] | strptime("%d %b %Y %H:%M:%S") | strftime("%Y-%m-%d")'
+```
+
 ## Links
 
 * [An introduction to JQ: earthly.dev](https://earthly.dev/blog/jq-select/) - 20231220
