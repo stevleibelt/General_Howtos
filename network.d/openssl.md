@@ -33,6 +33,14 @@ PEM_FILE_PATH="cert-bundle.pem"
 while openssl x509 -noout -text; do :; done < "${PEM_FILE_PATH}"
 ```
 
+## General about certificates
+
+* Specified in RFC 2818
+* `commonName` is deprecated and superseded by `subjectAltName`
+  * if `subjectAltName` exists, `commonName` is not used
+  * `subjectAltName` has to contain the value auf `commonName` too!
+
 ## Links
 
 * [Encrypting and decrypting files with OpenSSL](https://opensource.com/article/21/4/encryption-decryption-openssl) - 20210429
+* [RFC-2818](https://datatracker.ietf.org/doc/html/rfc2818)
