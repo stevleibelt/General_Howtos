@@ -60,6 +60,20 @@ git log
 
 ## Howto's
 
+### Replace user email and name from previous commits
+
+Do this only if you are the only one using this history (without push to origin)
+
+```bash
+# ref: https://stackoverflow.com/a/8434756
+# fetch the number of previous commits you want to change
+# e.g. you want to change previous four commits
+git rebase -i HEAD~4
+
+# below each commit you want to change (line starting with `pick`)
+exec git commit --amend --author="New Author Name <email@address.example>" -C HEAD
+```
+
 ### Remove local changes
 
 ```bash
