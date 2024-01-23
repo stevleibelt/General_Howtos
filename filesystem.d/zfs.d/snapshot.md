@@ -44,8 +44,8 @@ zfs destroy <pool name>@<snapshot name>
 
 ## List
 
-```
-zfs list -t snapshot
+```bash
+zfs list -t snapshot -o name
 ```
 
 ## Diff
