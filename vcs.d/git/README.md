@@ -8,7 +8,7 @@
 git config --list --show-origin
 ```
 
-### Signe commits with ssh keys
+### Sign commits with ssh keys
 
 ```bash
 # ref: https://docs.gitlab.com/ee/user/project/repository/ssh_signed_commits/
