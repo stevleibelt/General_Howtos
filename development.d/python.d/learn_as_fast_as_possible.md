@@ -292,4 +292,5 @@ my_environment_variable = os.getenv('MY_ENVIRONMENT_VARIABLE')
 
 * [Youtube: Python AS Fast as Possible - Learn Python in ~75 Minutes](https://www.youtube.com/watch?v=VchuKL44s6E) - 20230220
 * [Youtube: the complete guide to python virtual enviroments](https://www.youtube.com/watch?v=KxvKCSwlUv8) - 20230220
+* [What is the Meaning of ** and * in Parameters and Method Calls?: improveandrepeate.com](https://improveandrepeat.com/2023/12/python-friday-206-what-is-the-meaning-of-stars-in-parameters-and-method-calls/) - 20240130
 
