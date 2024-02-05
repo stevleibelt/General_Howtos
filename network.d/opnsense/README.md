@@ -9,6 +9,7 @@
   * Create mount target: `mkdir /media/usb`
   * Mount usb: `mount_msdosfs /dev/da0s1 /media/usb`
 * Check disk: `fsck -fy /`
+  * Give it a try if you need sudo or not
 * You can use [serial console](../../operation_system/unix/tty.md) if needed
 
 ## List of HowTo's
@@ -43,6 +44,7 @@ Furthermore, you need to create a user. (`https://<opnsense ip>/system_usermanag
 ```bash
 ssh <user>@<opnsense ip>
 #if needed
+#give it a try if you need sudo or not
 sudo /usr/local/sbin/opnsense-shell
 
 #if you run into the issue >>A firmware action is currently in progress.<<
