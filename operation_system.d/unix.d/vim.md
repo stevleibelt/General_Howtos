@@ -298,3 +298,4 @@ echo 'set -o vi' >> ~/.bashrc
 * http://www.techrepublic.com/blog/linux-and-open-source/use-tabs-to-open-multiple-files-in-vim/
 * http://vim.wikia.com/wiki/Remove_unwanted_spaces
 * https://www.cs.swarthmore.edu/help/vim/selection.html
+* [Vim Key Bindings – Vim Keys List Reference: freecodecamp.org](https://www.freecodecamp.org/news/vim-key-bindings-reference/) - 20240207
