@@ -1,5 +1,13 @@
 # Curl
 
+## Display certificate information
+
+```bash
+# ref: https://stackoverflow.com/a/34812039
+# Useful if you want to check the `expire date`
+curl -vvI https://www.bazzline.net 2>&1 | awk 'BEGIN { cert=0 } /^\* SSL connection/ { cert=1 } /^\*/ { if (cert) print }'
+```
+
 ## Check for specific tls version
 
 ```bash

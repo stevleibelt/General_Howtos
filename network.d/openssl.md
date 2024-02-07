@@ -33,6 +33,15 @@ PEM_FILE_PATH="cert-bundle.pem"
 while openssl x509 -noout -text; do :; done < "${PEM_FILE_PATH}"
 ```
 
+### View full certificate info
+
+```bash
+# ref: https://stackoverflow.com/a/34812039
+HOSTNAME_WITH_PORT="www.bazzline.net:443"
+
+openssl s_client -connect ${HOSTNAME_WITH_PORT} </dev/null 2>/dev/null | openssl x509 -inform pem -text
+```
+
 ### Use pem/ca file file to verify
 
 ```bash
