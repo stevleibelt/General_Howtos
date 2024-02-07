@@ -1,5 +1,12 @@
 # Curl
 
+## Measure total response time
+
+```bash
+# ref: https://stackoverflow.com/a/28692873
+curl -o /dev/null -s -w 'Establish Connection: %{time_connect}s\nTTFB: %{time_starttransfer}s\nTotal: %{time_total}s\n'  https://www.bazzline.net
+```
+
 ## Display certificate information
 
 ```bash
