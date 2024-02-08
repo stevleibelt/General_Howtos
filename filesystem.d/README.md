@@ -153,4 +153,4 @@ sysctl -p
 * http://www.rooot.net/en/geek-stuff/linux/15-too-many-open-files.html
 * http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/
 * https://linuxconfig.org/how-to-force-fsck-to-check-filesystem-after-system-reboot-on-linux
-
+* [How Master Boot Record Disk Partitioning Works in Linux](https://www.freecodecamp.org/news/how-mbr-works-in-linux/) - 20240208
