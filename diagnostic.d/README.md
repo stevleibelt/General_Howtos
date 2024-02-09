@@ -20,6 +20,8 @@ journalctl | grep -i ' error '
 
 ```bash
 # cli
+nproc   #list number of available cpu cores
+numactl --hardware  #there are more flags to use, more fun!
 cat /proc/cpuinfo
 dmidecode -t <string: type>
 hwinfo  # prepare yourself for a lot of lines

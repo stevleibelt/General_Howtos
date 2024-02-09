@@ -1,35 +1,41 @@
-# synopsis
+# Watch
 
-```
+Maybe [inotifywait](inotifywait.md) could solve your problem better.
+
+## Synopsis
+
+```bash
 watch [-dhv] [-n <seconds>] [--differences[=cumulative]] [--help] [--interval=<seconds>] [--version] <command>  
 ```
 
-# watch used disk space
+## Examples
 
-```
+### Watch used disk space
+
+```bash
 watch du -sh
 ```
 
-# watch complex command
+### Watch complex command
 
-```
+```bash
 watch 'ls -halt | head'
 ```
 
-# watch content of a file starting with line 40
+### Watch content of a file starting with line 40
 
-```
+```bash
 watch 'more +40 myFile'
 ```
 
-# watch after each 30 seconds
+### Watch after each 30 seconds
 
-```
+```bash
 watch -n 30 uname -r
 ```
 
-# highlight differences
+### Highlight differences
 
-```
+```bash
 watch -d ls -halt
 ```
