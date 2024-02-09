@@ -328,6 +328,7 @@ git help hooks
 * [bitbucket git howto](https://www.atlassian.com/git/tutorials/setting-up-a-repository) - 20210209
 * [git concepts](https://opensource.com/article/22/11/git-concepts) - 20221117
 * [git hooks](https://githooks.com/) - 20221117
+* [Gitting Things Done – A Visual and Practical Guide to Git [Full Book]: freecodecamp.org](https://www.freecodecamp.org/news/gitting-things-done-book/) - 20240209
 * http://ricardofilipe.com/projects/firstaidgit/
 * https://git.wiki.kernel.org/
 * https://www.kernel.org/pub/software/scm/git/docs/git-checkout.html
