@@ -5,10 +5,10 @@
 ### Exchange encrypted files
 
 ```bash
-#encrypt file
+# Encrypt file
 openssl rsautl -encrypt -inkey his_public_key.pem -pubin -in top_secret.txt -out top_secret.enc
 
-#decrypt file
+# Decrypt file
 openssl rsautl -decrypt -inkey my_private_key.pem -in top_secret.enc > top_secret.txt
 ```
 
@@ -24,11 +24,11 @@ openssl s_client -connect ${HOSTNAME_WITH_PORT} 2>/dev/null </dev/null |  sed -n
 
 ```bash
 # ref: https://unix.stackexchange.com/questions/696224/using-openssl-to-display-all-certificates-of-a-pem-file
-# view a file containing one certificate
+# View a file containing one certificate
 PEM_FILE_PATH="cert.pem"
 openssl x509 -in "${PEM_FILE_PATH}" -noout -text
 
-# view a chain or cert-bundle
+# View a chain or cert-bundle
 PEM_FILE_PATH="cert-bundle.pem"
 while openssl x509 -noout -text; do :; done < "${PEM_FILE_PATH}"
 ```
@@ -45,7 +45,7 @@ openssl s_client -connect ${HOSTNAME_WITH_PORT} </dev/null 2>/dev/null | openssl
 ### Use pem/ca file file to verify
 
 ```bash
-# expected output: Verification: OK
+# Expected output: Verification: OK
 HOSTNAME_WITH_PORT="www.bazzline.net:443"
 PEM_FILE_PATH=my.pem
 openssl s_client -connect ${HOSTNAME_WITH_PORT} -showcerts -CAfile ${PEM_FILE_PATH} </dev/null 2>/dev/null | grep ^Verification
