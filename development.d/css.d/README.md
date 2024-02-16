@@ -28,3 +28,4 @@ There are two basic types, absolut and relative units. As long as possible, you 
 * [CSS Pseudo-Elements - Before and After Selectors Explained: freecodecamp.org](https://www.freecodecamp.org/news/css-pseudo-elements-before-and-after-selectors-explained/) - 20240209
 * [CSS Units – When to Use rem, em, px, and More: freecodecamp.org](https://www.freecodecamp.org/news/css-units-when-to-use-each-one/) - 20240209
 * [What is box-sizing: border-box in CSS? freecodecamp.org](https://www.freecodecamp.org/news/what-is-box-sizing-border-box-css/) - 20240206
+* [The Best CSS Frameworks to Use in Your Projects for 2024 and Beyond: freecodecamp.org](https://www.freecodecamp.org/news/best-css-frameworks-for-frontend-devs/) - 20240216
