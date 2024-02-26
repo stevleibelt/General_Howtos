@@ -3,7 +3,7 @@
 ## dig
 
 ```bash
-#list final ip address
+# list final ip address
 dig +noall +answer bazzline.net
 ```
 
@@ -11,8 +11,11 @@ dig +noall +answer bazzline.net
 
 
 ```bash
-#list ip address and mail/mx information
+# list ip address and mail/mx information
 host bazzline.net
+
+# list list name of ip address
+host <string: ip_address>
 ```
 
 ## arp
@@ -26,7 +29,7 @@ arp -n
 ## net stat
 
 ```bash
-#if you don't have netstat anymore, ss is a drop in replacement
+# if you don't have netstat anymore, ss is a drop in replacement
 netstat -i
 ```
 
@@ -39,21 +42,21 @@ lspci | grep -i net
 ## config lan
 
 ```bash
-#deprecated on arch linux, use ip or nmcli/nmtui
+# deprecated on arch linux, use ip or nmcli/nmtui
 ifconfig
 ```
 
 ## config wlan
 
 ```bash
-#deprecated on arch linux, use ip or nmcli/nmtui
+# deprecated on arch linux, use ip or nmcli/nmtui
 iwconfig
 ```
 
 ## bring interface up
 
 ```bash
-#or nmcli connection up <network_configuration>
+# or nmcli connection up <network_configuration>
 ip link set wlan0 up
 ```
 
@@ -73,7 +76,7 @@ dmesg | grep firmware
 
 ```bash
 nmcli device wifi list
-#or
+# or
 iwlist wlan0 scan
 ```
 
@@ -130,10 +133,10 @@ ping -c 3 www.google.de
 ## Measure network connection speed
 
 ```bash
-#on server:
+# on server:
 iperf -s -B <server ip address>
 
-#on client:
+# on client:
 iperf -c <server ip address> -d -t 60 -i 10
 ```
 
