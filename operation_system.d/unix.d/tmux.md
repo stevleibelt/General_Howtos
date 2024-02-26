@@ -2,22 +2,23 @@
 
 ## General
 
-* is a terminal multiplexer (opens multiple terminal sessions in one window)
-* you can share a session
+* Is a terminal multiplexer (opens multiple terminal sessions in one window)
+* You can share a session
+* Default prefix key is `Ctrl+b`
 
 ## Tmux vs screen
 
-* tmux is way younger
-* needs less ressources
-* scriptable
-* configurable
-* has layouts
-* you can syncron run the same command on many screens at the same time
+* Tmux is way younger
+* Needs less ressources
+* Scriptable
+* Configurable
+* Has layouts
+* You can syncron run the same command on many screens at the same time
 
 ## Configuration
 
 ```bash
-#example
+# example
 # move status line to top
 set -g status on
 set-option -g status-position top
@@ -47,30 +48,32 @@ set-option -ag pane-active-border-style "fg=black"
 ### Commands
 
 ```bash
-#start new session
+# start new session
 tmux new -s <session name>
 
 #stop session
 exit
 
-#detach
-CTRL+d
+# detach
+CTRL+b d
 # or
 :detach
 
-#list session
+# list session
 tmux list-sessions
+# or
+tmux ls
 
-#attach to session 0
+# attach to session 0
 tmux attach -t 0
 
-#change to other session
+# change to other session
 :switch ?
 
-#open a new window
+# open a new window
 :tmux new-window -t <name> -n <name> -d <programm like htop>
 
-#swap panel
+# swap panel
 :swap-pane -s <source id> -t <target id>
 ```
 
@@ -81,4 +84,3 @@ tmux attach -t 0
 * [tmux on archlinux](https://wiki.archlinux.org/index.php/Tmux)
 * [source code](https://github.com/tmux/tmux/wiki)
 * [tmux on wikipedia](https://en.wikipedia.org/wiki/Tmux)
-
