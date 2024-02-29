@@ -67,6 +67,7 @@ cargo test
 
 ## Links
 
+* Blessed - An unofficial guide to the Rust ecosystem: blessed.rs](https://blessed.rs/) - 20240229
 * [Getting started with the Rust pacage manager, Cargo: opensource.com](https://opensource.com/article/20/3/rust-cargo) - 20200303
 * [Fully Automated Releases for Rust Projects: orhun.dev] - 20231026
 * [Learn rust with rustlings: opensource.com](https://opensource.com/article/22/7/learn-rust-rustlings) - 20220731
