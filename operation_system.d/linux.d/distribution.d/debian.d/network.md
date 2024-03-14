@@ -3,7 +3,7 @@
 ## Set a dns/nameserver
 
 ```bash
-#vim /etc/resolv.conf
+# vim /etc/resolv.conf
 
 domain foo.bar
 search foo.bar
@@ -14,26 +14,30 @@ nameserver <an other ip address>
 ## Set a static ip
 
 ```bash
-#vim /etc/network/interfaces.d/enp0s25
+# vim /etc/network/interfaces.d/lo
 
-#loopback
+# loopback
 auto lo #auto up on start
 iface lo inet loopback
 
-#first interface
+# vim /etc/network/interfaces.d/enp0s25
+# first interface
 auto enp0s25
-    iface enp0s25 inet static
-        address 192.168.1.118  
-        gateway 192.168.1.1
-        netmask 255.255.255.0
-        network 192.168.1.0
-        broadcast 192.168.1.255
+iface enp0s25 inet static
+    address 192.168.1.118  
+    gateway 192.168.1.1
+    netmask 255.255.255.0
+    network 192.168.1.0
+    broadcast 192.168.1.255
+
+# restart networking
+sudo systemctl restart networking.service
 ```
 
 ## Configure a DHCP client
 
 ```bash
-#prevent network manager from overwriting the entries in /etc/resolv.conf
+# prevent network manager from overwriting the entries in /etc/resolv.conf
 echo "supersede domain-name-servers <name server ip one>, <name server ip two>;" >> /etc/dhcp/dhclient.conf
 ```
 
