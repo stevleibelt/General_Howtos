@@ -12,3 +12,4 @@ Whenever possible, you should donate to each of the following tools. At least to
 * [LibreGaming](https://libregaming.org/) - Webpage about free and open source games
 * [Lutris](https://lutris.net/) - Games launcher for Humble Bund,e Steam, Epic, Gog and more
 * [MangoHud](https://github.com/flightlessmango/MangoHud) - Overlay monitor for Vulkan and OpenGL to show system information while playing
+* [ProtonUp-Rs](https://github.com/auyer/Protonup-rs) - Ease up managing of proton-ge files
