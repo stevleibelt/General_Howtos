@@ -31,6 +31,9 @@ pacman -Q
 #remove package
 pacman -R $name
 
+#remove by searchin locally
+pacman -Rcns <string: package_name>
+
 #remove package and all dependencies
 pacman -Rs <name>
 # remove unneeded
