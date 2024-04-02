@@ -2,11 +2,11 @@
 
 ## Quick start
 
-* cp /etc/samba/smb.conf.default /etc/samba/smb.conf
+`cp /etc/samba/smb.conf.default /etc/samba/smb.conf`
 
 ### Add user
 
-```
+```bash
 if [smbd -V >= 3.4.0]
     pdbedit -a -u <user name>
 else
@@ -22,7 +22,7 @@ pdbedit -L
 
 ### Edit user
 
-```
+```bash
 pdbedit -t -r -u <user name>
 #or
 smbpasswd -s <user name>
@@ -30,7 +30,7 @@ smbpasswd -s <user name>
 
 ### Set stickbit for ug
 
-```
+```bash
 chmod -R ug+s <folder>
 ```
 
@@ -81,7 +81,7 @@ chmod -R ug+s <folder>
 
 ## Smbclient
 
-```
+```bash
 #<server name> can be the host name or the ip address
 #list available (public) shares
 smbclient -L <server name>
@@ -98,7 +98,7 @@ smbclient \\\\<server name>\\<share>
 
 ## Mount share 
 
-```
+```bash
 #per session
 mount –t cifs <server name>/<share name> <local mount point> -o username=<user name>,domain=<work group>
 
@@ -107,7 +107,7 @@ mount –t cifs <server name>/<share name> <local mount point> -o username=<user
 
 ### Mounting with write permissions
 
-```
+```bash
 #get the <user id> from console command "id"
 #share will be mounted with permissions 755
 #see: http://microitblog.com/micro-it-blog/2011/04/21/mounting-cifs-shares-through-linux-with-write-permissions
@@ -124,7 +124,7 @@ mount -t cifs <server name>/<share name> <local mount point> -o username=<user n
 
 ## Simple howto
 
-```
+```bash
 # based for debian
 # https://wiki.debian.org/SambaServerSimple
 apt-get samba samba-client
@@ -162,7 +162,7 @@ vim /etc/samba/smb.conf
 
 ### Example
 
-```
+```bash
 create mask = 0664
 directory mask = 0775
 force create mode = 0664
@@ -171,7 +171,7 @@ force directory mode = 0775
 
 ## Speed / make it fast
 
-```
+```bash
 ####
 #@see: https://www.samba.org/samba/docs/man/Samba3-HOWTO/speed.html
 #@see: https://wiki.amahi.org/index.php/Make_Samba_Go_Faster 
@@ -185,16 +185,11 @@ socket options = TCP_NODELAY    #default tryout ;-)
 socket options = IPTOS_LOWDELAY #if your are on a lan
 ```
 
-### Links
-
-* http://www.bodenzord.com/archives/53
-* https://askubuntu.com/questions/210808/set-umask-set-permissions-and-set-acl-but-samba-isnt-using-those
-
 ## Error handling
 
 ###  Unable to open printcap file /etc/printcap for read!
 
-```
+```bash
 #add to smb.conf
 #see: http://cmorse.org/blog/archives/142
 [global]
@@ -205,13 +200,13 @@ socket options = IPTOS_LOWDELAY #if your are on a lan
 
 ### Failed to delete pidfile /var/run/smbd.pid.
 
-```
+```bash
 #see: https://bugs.archlinux.org/task/36338
 ```
 
 ### protocol negotiation failed: NT_STATUS_INVALID_NETWORK_RESPONSE
 
-```
+```bash
 #see: https://wiki.archlinux.org/index.php/Samba/Troubleshooting#protocol_negotiation_failed:_NT_STATUS_INVALID_NETWORK_RESPONSE
 comment out your "hosts allow"
 ```
@@ -228,4 +223,8 @@ If you have tried it wot "mount -t cifs", try it with "mount.cifs".
 * https://wiki.archlinux.org/index.php/Samba
 * https://help.ubuntu.com/community/Samba/SambaServerGuide?highlight=%28%5CbCategoryNetworking%5Cb%29
 * http://www.linuxhomenetworking.com/wiki/index.php/Quick_HOWTO_:_Ch10_:_Windows,_Linux,_and_Samba
-
+* http://www.bodenzord.com/archives/53
+* https://askubuntu.com/questions/210808/set-umask-set-permissions-and-set-acl-but-samba-isnt-using-those
+* [Using the worm VFS Module](https://wiki.samba.org/index.php/Using_the_worm_VFS_Module) - 20240402
+  * **W**rite **o**nce, **r**ead **m**any
+  * Used to create a share where user can write into for a period of time before this change is turned to read-only
