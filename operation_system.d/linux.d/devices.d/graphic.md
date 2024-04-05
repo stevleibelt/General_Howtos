@@ -1,11 +1,13 @@
-# get your card
+# Graphiccard
 
-```
+# Get your card
+
+```bash
 sudo lspci -vnn | grep VGA -A 12
 ```
 
-# check if opengl is using your drivers
+## Check if opengl is using your drivers
 
-```
+```bash
 glxinfo | grep OpenGl
 ```
