@@ -4,7 +4,7 @@
 
 ## grep inside a shell script
 
-```
+```bash
 #example, do something if 'both modified' was found
 if (git status | grep -q 'both modified')
 then
@@ -20,21 +20,21 @@ fi
 
 ## Exit with code 0 if any match was found
 
-```
+```bash
 grep -q
 ```
 
 ## Print all lines that are not matching
 
-´´´
+```bash
 grep -v
-´´´
+```
 
 ## Print only but all matchings (even if they are on the same line)
 
 * @see: https://unix.stackexchange.com/questions/6979/count-total-number-of-occurrences-using-grep
 
-```
+```bash
 #you can copy past/run the following example
 #creating the file
 cat > foo.xml <<DELIM
@@ -77,7 +77,7 @@ grep -c
 
 ## Print non printable characters
 
-```
+```bash
 grep '[^[:print:]]'
 ```
 
@@ -119,13 +119,13 @@ grep  'hello\>' *
 
 ## Do not search in binary files
 
-```
+```bash
 grep -I '<pattern>' '<path>'
 ```
 
 ## Exlude directory
 
-```
+```bash
 grep --exclude-dir=<path> '<pattern>' '<path>'
 #exclude multiple dirs
 grep --exclude-dir={<path>,<path>} '<pattern>' '<path>'
@@ -133,7 +133,7 @@ grep --exclude-dir={<path>,<path>} '<pattern>' '<path>'
 
 ## And
 
-```
+```bash
 #with -E
 grep 'foo.*bar'
 #with |
@@ -142,7 +142,7 @@ grep -E 'foo' | grep -E 'bar'
 
 ## Or
 
-```
+```bash
 #with \|
 grep 'foo\|bar'
 #with -E
@@ -155,7 +155,7 @@ egrep 'foo|bar'
 
 ## Not
 
-```
+```bash
 #with -v
 grep -v 'foo'
 ```
