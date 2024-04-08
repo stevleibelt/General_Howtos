@@ -66,10 +66,28 @@ Host bazzline.net-artodeto
     #  Of course, you should create a dedicated configuration
     #   section for jump.host-user
     ProxyJump jump.host-user
-
 ```
 
 ## Hints
+
+### Use another ssh server as proxy
+
+```bash
+# Create a local socks5 proxy on a free port
+ssh -N -D 9090 remote-host
+
+# Adapt the proxy in your firefox
+#   socks5 127.0.0.1 9090
+
+# Open /etc/proxychains.conf
+#   Go down to [ProxyList]
+#   Replace existing entry with
+#       socks5 127.0.0.1 9090
+# Use proxychains-ng
+#   Start a bash
+proxychains-ng bash
+# Now you can ssh however you want
+```
 
 ### Check the ssh connection
 
