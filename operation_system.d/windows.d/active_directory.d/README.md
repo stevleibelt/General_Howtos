@@ -114,6 +114,14 @@ Set-ADUser -Identity johndoe -EmailAddress "john_doe@company.com"
 Set-ADUser -Identity johndoe -Replace @{pager = 123-456 789}
 ```
 
+## Useful LDAP-Filters
+
+```bash
+# Filter for disabled accounts
+# ref: http://www.selfadsi.de/ads-attributes/user-userAccountControl.htm
+(userAccountControl:1.2.840.113556.1.4.803:=2)
+```
+
 
 ## Links
 
@@ -122,3 +130,4 @@ Set-ADUser -Identity johndoe -Replace @{pager = 123-456 789}
 * [AGDLP - wikipedia.org](https://en.wikipedia.org/wiki/AGDLP) - 20200127
 * [Best NTFS Permissions Reporting Tools 2020](https://www.dnsstuff.com/ntfs-folder-permissions-reporting-tools) - 20201116
 * [Group Policy - wikipedia.org](https://en.wikipedia.org/wiki/Group_Policy) - 20200128
+* [SelfADSI - das LDAP Scripting Tutorial -  seladsi.de](http://www.selfadsi.de) - 20240409
