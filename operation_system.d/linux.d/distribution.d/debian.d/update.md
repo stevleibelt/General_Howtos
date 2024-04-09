@@ -24,3 +24,7 @@ dpkg-reconfigure -plow ssmtp
 # end your content with . + ENTER
 mail -s "Test email" root
 ```
+
+## Links
+
+* [Unattended Upgrades - wiki.debian.org](https://wiki.debian.org/UnattendedUpgrades) - 20240409
