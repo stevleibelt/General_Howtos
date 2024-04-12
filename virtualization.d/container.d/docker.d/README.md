@@ -3,101 +3,58 @@
 Get all commands by calling "docker" or "docker info".
 Docker is server and client.
 
-## start docker server
+## Commands
 
 ```bash
-systemctl start docker
-```
-
-## Remove all
-
-```bash
+# Cleanup system
 # This includes all volumes
 docker system prune -a --volumes
-```
 
-## get list of images running on your local host
-
-```bash
+# Get list of images running on your local host
 docker images
-```
 
-## search for an image
-
-```bash
+# Search for an image
 docker search <string>
-```
 
-## get image
-
-```bash
+# Fetch a image
 docker pull <vendor>/<image>
-```
 
-## push image
-
-```bash
+# Push image
 docker push <vendor>/<image>
-```
 
-## get running containers
-
-```bash
+# Get running containers
 docker ps
-```
 
-## get top/statistics
-
-```bash
+# Get top/statistics
 docker stats
-```
 
-## get informations about container
-
-```bash
+# Get informations about container
 docker inspect <container_id>
-```
 
-## get container id
-
-```bash
+# Get container id
 docker ps -l
-```
 
-## run command
-
-```bash
+# Run command
 docker run <vendor>/<image> <command> [<argument_one> [<argument_...> [<argument_n>]]]
-```
 
-### run shell (sh as example)
-
-```bash
+## Run shell (sh as example)
 docker run -i -t <vendor> /bin/sh
-```
 
-### install software
-
-```bash
+## Install software
 #example for an arch linux
 docker run <vendor>/<image> pacman -S <software>
-```
 
-## save image status
-
-```bash
+# Save image status
 docker commit [options] <container_id> [repository [tag]]
-```
 
-## where is stuff stored (path)
-
-```bash
-#inside the path below, cat a file prefixed with repository
+# Where is stuff stored (path)
+#   Inside the path below, cat a file prefixed with repository
 cd /var/lib/docker
 ```
 
-# links
+## Links
 
+* [Docker Best Practices for Python Developers: testdriven.io](https://testdriven.io/blog/docker-best-practices/) - 20240412
 * [reference manual](http://docs.docker.io/en/latest/reference/)
 * [container tutorials](http://containertutorials.com/)
 * [getting started](https://www.docker.io/gettingstarted/)
