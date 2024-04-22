@@ -1,4 +1,6 @@
-# general
+# Linux Distributions
+
+## General
 
 * https://archlinux.org/
 * https://nixos.org/
@@ -8,7 +10,12 @@
 * http://www.pclinuxos.com/
 * http://zorinos.com/
 
-# tiny
+## Gaming
+
+* [Garuda-Linux](https://garudalinux.org/) - Arch based
+* [Norbara-Linux](https://nobaraproject.org/) - Fedora based
+
+## Tiny
 
 * http://www.damnsmalllinux.org/
 * http://puppylinux.org/
