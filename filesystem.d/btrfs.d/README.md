@@ -1,5 +1,15 @@
 # BTRFS
 
+## General information
+
+```bash
+# show usage for root
+sudo btrfs filesystem usage /
+
+# show balance status for root
+sudo btrfs balance status usage /
+```
+
 ## Create btrfs RAID 1 with a cached device using lvm
 
 It assumed that you have one cache device and two hdds in the following device list:
@@ -65,6 +75,10 @@ sudo btrfs device scan
 sudo btrfs filesystem show
 # add a line like the following to your /etc/fstab
 # UUID=<string: uuid of btrfs file system show> /data   btrfs   defaults,noatime,compress=zstd 0 0
+
+# mount it and create subvolume
+sudo mount /dev/vg0/data-btrfs1 /data
+sudo btrfs subvolume create /data/mysubvolume
 
 # check cache hits
 sudo lvs -a -o +devices,cache_total_blocks,cache_used_blocks,cache_dirty_blocks,cache_read_hits,cache_read_misses,cache_write_hits,cache_write_misses,segtype
