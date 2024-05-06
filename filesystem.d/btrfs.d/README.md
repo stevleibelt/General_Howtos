@@ -10,7 +10,9 @@ sudo btrfs filesystem usage /
 sudo btrfs balance status usage /
 ```
 
-## Create btrfs RAID 1 with a cached device using lvm
+## Create btrfs with a cached device using lvm
+
+This example is for the usecase to create a RAID 1 but can be used for a single HDD too.
 
 It assumed that you have one cache device and two hdds in the following device list:
 
