@@ -23,6 +23,16 @@ fingerprint=$(echo -n | openssl s_client -connect $YOUR_SYNERGY_SERVER:24800 2>/
 echo "v2:sha256:$fingerprint" > ~/.synergy/SSL/Fingerprints/TrustedServers.txt
 ```
 
+## Setup ufw for barrier
+
+```bash
+# server
+sudo ufw allow from <string: client_hostname_or_ip_address> proto tcp to any port 24800 comment "barrier from <string: client_hostname>"
+
+# client
+sudo ufw allow from <string: server_hostname_or_ip_address> proto tcp to any port 24800 comment "barrier from <string: server_hostname>"
+```
+
 ## Setup autostart
 
 ## Links
