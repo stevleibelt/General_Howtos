@@ -149,6 +149,17 @@ statement = select(User.name, email_address_count.c.email_count).join_from(User,
 with engine.connect() as connection:
     for row in connection.execute(statement):
         print(f"username: {row.name} | number of email addresses: {row.email_count}")
+
+# Explicit ON clause
+# ref: https://docs.sqlalchemy.org/en/20/tutorial/data_select.html#setting-the-on-clause
+print(
+    select(address.c.email_address)
+    .select_from(User)
+    .join(
+        Address,
+        user.id = address.user_id
+    )
+)
 ```
 
 Additional informations.
@@ -163,6 +174,10 @@ print(User.name.in_(['foo', 'bar']))
 # Where expressions
 # Hint: Where can be called multiple times. Criteria is joined by AND
 select(User.name).where(User.name.in_(['foo', 'bar']))
+
+# Select with or
+# ref: https://docs.sqlalchemy.org/en/20/tutorial/data_select.html#the-where-clause
+select(User.name).where(or_(User.name == 'foo', User.name == 'bar')
 ```
 
 ### Use the ORM force
