@@ -207,6 +207,7 @@ Changed but not new objects can be seen by inspecting the attribute `.dirty`.
 
 ## Links
 
+* [SQLAlchemy: slingacademy.com](https://www.slingacademy.com/cat/sqlalchemy/) - 20240514
 * [SQLAlchemy ORM Querying Guide: sqlalchemy.org](https://docs.sqlalchemy.org/en/20/orm/queryguide/index.html) - 20240513
 * [SQLAlchemy Unified Tutorial: sqlalchemy.org](https://docs.sqlalchemy.org/en/20/tutorial/index.html) - 20240513
 * [Tutorial: SQLAlchemy 2.0 by Mike Bayer: youtube.com](https://www.youtube.com/watch?v=Uym2DHnUEno) - 20240513
