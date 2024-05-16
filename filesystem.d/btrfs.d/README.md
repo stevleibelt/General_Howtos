@@ -10,7 +10,10 @@ sudo btrfs filesystem usage /
 sudo btrfs balance status /
 ```
 
-## Create btrfs RAID 1 with a cached device using lvm
+## Create btrfs with a cached device using lvm
+
+This example is for the usecase to create a RAID 1 but can be used for a single HDD too.
+If you just have one hdd, simple skip all tasks where a `2` or a `sdb` is in the command.
 
 It assumed that you have one cache device and two hdds in the following device list:
 
@@ -30,6 +33,7 @@ sudo wipefs --all --backup /dev/sdb
 sudo wipefs --all --backup /dev/nvme1n1
 
 # prepare cache device
+#   we are creating two partitions, one for each hdd
 sudo gdisk /dev/nvme1n1
 o
 Y

@@ -60,6 +60,27 @@ git log
 
 ## Howto's
 
+### Split one big commit into smaller commits
+
+```bash
+# ref: https://www.30secondsofcode.org/git/s/split-commit/
+# 1.) Fetch the number of previous commits you want to change
+# e.g. you want to change the previous two commits
+git rebase -i HEAD~2
+
+# 2.) Mark the commit you want to split with `edit`
+# 3.) Save and close the editor to start the rebase
+# 4.) Unstage the changes
+git reset HEAD^
+# 5.) Commit the changes separately
+git add -p ...
+# 6.) Continue the rebase
+git rebase --continue
+# 6.) Check the logs to confirm the changes
+git log --oneline --decorate -4
+# 7.) Push the changes
+```
+
 ### Replace user email and name from previous commits
 
 Do this only if you are the only one using this history (without push to origin)
