@@ -7,7 +7,7 @@
 sudo btrfs filesystem usage /
 
 # show balance status for root
-sudo btrfs balance status usage /
+sudo btrfs balance status /
 ```
 
 ## Create btrfs RAID 1 with a cached device using lvm
