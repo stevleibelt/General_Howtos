@@ -24,7 +24,7 @@ alembic init db_migrations
 alembic revision --autogenerate -m "Extend table xyz with foo"
 
 # apply all needed migrations
-alembic upgread head
+alembic upgrade head
 
 # roll back latest migration
 alembic downgrade -1
