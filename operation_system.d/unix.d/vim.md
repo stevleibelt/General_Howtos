@@ -21,6 +21,10 @@ ctrl+w v #duplicate current window
 ## Open Directories
 
 ```bash
+:Explore #opens current directory  in a split view
+  * :Ex #shortcut for :Explore
+  * :Sex #horizontal splits windows and executes :Explore
+  * :Vex #vertical splits windows and executes :Explore
 o #opens file below cursor horizontally
 v #opens file below cursor vertically
 i #show more information
