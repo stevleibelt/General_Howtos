@@ -8,77 +8,93 @@ Installable via smartmontools.
 ```bash
 #smartctl is in the package smartmontools
 ## for usb
-smartctl -a -d sat /dev/<device>
+smartctl -a -d sat /dev/<string: device>
+## for nvme
+smartctl -d nvme /dev/<string: device>
 
 ## for normal devices
-smartctl -a /dev/<device>
+smartctl -a /dev/<string: device>
 #view test results
-smartctl -H /dev/<device>
+smartctl -H /dev/<string: device>
 #_or
-smartctl -a /dev/<device> | grep -i health
+smartctl -a /dev/<string: device> | grep -i health
 ```
 
 ```bash
 #check if smart is supported on your device
-smartctl -a /dev/<device>
+smartctl -a /dev/<string: device>
 #enable smartmon
 #@see
 #   man smartd
 #   man smartd.conf
-smartctl -s on /dev/<device>
+smartctl -s on /dev/<string: device>
 ```
 
 ## Run a test
 
 ### For usb devices
 
-```
+```bash
 #short test
-smartctl -t short -d sat /dev/<device>
-smartctl -l selftest -d sat /dev/<device>
+smartctl -t short -d sat /dev/<string: device>
+smartctl -l selftest -d sat /dev/<string: device>
 
 #long test
 ##start
-smartctl -t long -d sat /dev/<device> -T permissive
+smartctl -t long -d sat /dev/<string: device> -T permissive
 
 ##check result
-smartctl -l selftest -d sat /dev/<device> -T permissive
+smartctl -l selftest -d sat /dev/<string: device> -T permissive
+```
+
+### For nvme devices
+
+```bash
+#short test
+smartctl -t short -d nvme /dev/<string: device>
+
+#long test
+##start
+smartctl -t long -d nvme /dev/<string: device> -T permissive
+
+##check result
+smartctl -l selftest -d nvme /dev/<string: device> -T permissive
 ```
 
 ### For installed devices
 
-```
+```bash
 #list what kind of tests is the devices able to do
-smartctl -c /dev/<device>
+smartctl -c /dev/<string: device>
 
 #test that have a high probability of detecting device problems
-smartctl -t short /dev/<device>
+smartctl -t short /dev/<string: device>
 #check current status
-smartctl -a /dev/<device> | grep -i short
+smartctl -a /dev/<string: device> | grep -i short
 
 #short with complete disk surface examination)
-smartctl -t long /dev/<device>
+smartctl -t long /dev/<string: device>
 #check current status
-smartctl -a /dev/<device> | grep -i extended
+smartctl -a /dev/<string: device> | grep -i extended
 
 #identifies if damage incurred during transportation of the device
-smartctl -t conveyance /dev/<device>
+smartctl -t conveyance /dev/<string: device>
 #check current status
-smartctl -a /dev/<device> | grep -i conveyance
+smartctl -a /dev/<string: device> | grep -i conveyance
 ```
 
 ## Get all availabale harddisk parameters
 
-```
-hdparm -I /dev/<device> | less
+```bash
+hdparm -I /dev/<string: device> | less
 ```
 
 ## Check if ncq (natural command queue) is enabled (>1)
 
-```
-cat /sys/block/sdx/device/queue_depth
+```bash
+cat /sys/block/sdx/string: device/queue_depth
 dmesg | grep -i ncq
-smartctl -a -d ata -s on /dev/<device>
+smartctl -a -d ata -s on /dev/<string: device>
 ```
 
 ## Links
