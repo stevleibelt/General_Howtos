@@ -9,12 +9,10 @@ nmcli c
 
 #show device status
 nmcli d
+nmcli device status
 
 #show current dns
 nmcli device show | grep -i dns
-
-#check current status
-nmcli device status
 
 #reload configuration
 nmcli connection reload
