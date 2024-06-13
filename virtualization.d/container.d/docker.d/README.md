@@ -9,6 +9,12 @@ Docker is server and client.
 # Cleanup system
 # This includes all volumes
 docker system prune -a --volumes
+# The long but more verbose mode
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+docker rmi $(docker images -a -q)
+docker volume rm $(docker volume ls -q)
+docker network rm $(docker network ls -q)
 
 # Get list of images running on your local host
 docker images
