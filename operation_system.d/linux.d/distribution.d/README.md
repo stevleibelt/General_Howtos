@@ -2,18 +2,24 @@
 
 ## General
 
-* https://archlinux.org/
-* https://nixos.org/
-* http://www.slackware.com/
-* http://bedrocklinux.org/
-* https://www.gentoo.org/
-* http://www.pclinuxos.com/
-* http://zorinos.com/
+* [archlinux](https://archlinux.org/)
+* [bedrocklinux](http://bedrocklinux.org/)
+* [chimera-linux](https://chimera-linux.org/) - 20240620
+* [debian](https://www.debian.org/)
+* [gentoo](https://www.gentoo.org/)
+* [nixos](https://nixos.org/)
+* [pclinux](http://www.pclinuxos.com/)
+* [slackware](http://www.slackware.com/)
+* [voidlinux](https://voidlinux.org/)
+* [zorinos](http://zorinos.com/)
 
 ## Gaming
 
-* [Garuda-Linux](https://garudalinux.org/) - Arch based
-* [Norbara-Linux](https://nobaraproject.org/) - Fedora based
+* Arch linux based
+  * [Cachyos](https://cachyos.org/)
+  * [Garuda-Linux](https://garudalinux.org/)
+* Fedora linux based
+  * [Norbara-Linux](https://nobaraproject.org/)
 
 ## Tiny
 
