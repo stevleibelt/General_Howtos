@@ -195,7 +195,8 @@ from sqlalchemy.orm import sessionmaker
 session_factory = sessionmaker(bind=engine)
 
 with session_factory() as session:
-    result = session.execute(text("SELECT 'Hello World'"))
+    # useful to test database connection
+    result = session.scalars(text("SELECT 'Hello World'"))
     print(result.first())
 ```
 
