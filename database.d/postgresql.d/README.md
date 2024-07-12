@@ -2,10 +2,21 @@
 
 [PostgreSQL](https://www.postgresql.org/) claims to be the most advanced open soure relational database.
 
+## Check connection
+
+```bash
+# is it the right port?
+telnet <string: hostname_or_ip_address> <int: port>
+
+# use psql
+psql -U <string: username> -p <int: port> -h <string: hostname_or_ip_address> -d <string: database_name>
+```
+
 ## List of commands
 
 | Command | Description |
 | --- | --- |
+| `\q` | Quit connection |
 | `DROP ROLE <role_name>;` | Drops a role |
 | `\c <database_name>` | Connect to database name |
 | `\l` | List tables |
