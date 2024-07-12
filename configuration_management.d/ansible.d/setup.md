@@ -20,9 +20,14 @@ ansible -m command -a -uptime localhost
 ### Controll node
 
 ```bash
-# create and fill inventory
-mkdir ansible
-cat > ansible/inventory.ini <<DELIM
+# create a working directory for your current ansible environment
+mkdir my_ansible_project
+cd my_ansible_project
+ansible-config init --disabled > ansible.cfg
+# open ansible.cfg and configure the following lines
+#   inventory = ./inventory.ini
+
+cat > inventory.ini <<DELIM
 # just a hostname
 hostname
 # or a configured host
@@ -33,5 +38,8 @@ DELIM
 
 # test
 ansible -i ansible/inventory.ini -m ping all
+
+# create role
+ansible-galaxy role init roles/my_role
 ```
 
