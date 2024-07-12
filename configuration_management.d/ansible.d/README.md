@@ -1,6 +1,6 @@
 # Ansible
 
-# Terms
+## Terms
 
 * playbook
 * [task](task.md)
@@ -9,14 +9,14 @@
 * roles - package of taks, variable,s handlers, modules and other plugins
 * groups
 
-# Playbook
+## Playbook
 
 * [introduction into playbooks](http://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html)
 * [create reusable playbooks](http://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse.html)
 
-## Useful command line calls to understand an existing playbook
+### Useful command line calls to understand an existing playbook
 
-```
+```bash
 #list all available tags
 ansible-playbook playbook.ymk --list-tags
 
@@ -30,9 +30,9 @@ ansible-playbook playbook.ymk --list-tasks --tags=install
 ansible-playbook playbook.ymk --list-tasks --skip-tags=install
 ```
 
-## Execute a playbook with a parallelism level of 13
+### Execute a playbook with a parallelism level of 13
 
-```
+```bash
 ansible-playbook playbook.yml -f 13
 #check syntax with
 ansible-playbook playbook.yml --syntax-check
@@ -46,9 +46,9 @@ ansible-playboot [-i <path to the ini>] -l <hostname> <playbook> [-vvvv]
 
 ## Sudo password with ansible vault
 
-## By using your playbook
+### By using your playbook
 
-```
+```bash
 #@see: https://www.shellhacks.com/ansible-vault-encrypt-decrypt-string/
 #will output your encrypted string
 ansible-vault encrypt_string '<string: password>' --name '<string: variable_name>'
@@ -75,9 +75,9 @@ chmod 500 vault.tyt
 ansible-playboot playbook-yml -i investory.ini --vault-password-file=vault.txt
 ```
 
-## By using a dedicated file
+### By using a dedicated file
 
-```
+```bash
 #create a file for the password
 #   this file will be secured by a password
 ansible-vault edit my_password_vault.yml
@@ -106,7 +106,7 @@ ansible-playbook playbook.yml -i inventory.ini \
 
 ## Make output more human readable
 
-```
+```bash
 #@see: https://www.shellhacks.com/ansible-human-readable-output-format/
 ##on the command line to test
 ANSIBLE_STDOUT_CALLBACK=yaml ansible-playbook playbook.yml
@@ -117,7 +117,7 @@ ANSIBLE_STDOUT_CALLBACK=yaml ansible-playbook playbook.yml
 stdout_callback = yaml
 ```
 
-# Links
+## Links
 
 * [ansible cheat sheet](https://opensource.com/article/20/11/ansible-cheat-sheet) - 20201119
 * [official site - ansible.com](https://www.ansible.com) - 20200211
