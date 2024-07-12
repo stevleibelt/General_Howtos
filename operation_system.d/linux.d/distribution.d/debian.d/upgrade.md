@@ -13,7 +13,7 @@ sudo su
 #mount -o remount,rw /<mountpoint>
 
 #check your diskspace
-apt-get -o APT::Get::Trivial-Only=true dist-upgrade
+apt-get -o APT::Get::Trivial-Only=true full-upgrade
 ```
 
 ### Check package status
@@ -46,7 +46,7 @@ apt-get update
 #do the minimal system upgrade
 apt-get upgrade
 #upgrade the rest
-apt-get dist-upgrade
+apt-get full-upgrade
 #purge old cache
 apt-get purge $(dpkg -l | awk '/^rc/ { print $2 }') #dpkg -l lists installed software, if it starts with rc
 apt-get autoremove
@@ -125,6 +125,31 @@ sudo apt --purge autoremove
 
 #if you want to
 #cat /etc/issue would work too
+cat /etc/os-release
+```
+
+## From 11 (bullseye) to 12 (bookworm)
+
+```bash
+#update current system
+sudo apt update && sudo apt upgrade
+sudo apt autoremove
+sudo apt autoclean
+
+#prepare for upgrade
+sudo sed -i'.bullseye' 's/bullseye/bookworm/g' /etc/apt/sources.list
+#optional, repeat the two steps above with every file in /etc/apt/source.list.d
+
+#upgrade
+sudo apt update
+sudo apt full-upgrade
+#test that your sshd config is still working and valid
+sudo sshd -t
+sudo systemctl reboot
+sudo apt --purge autoremove
+sudo apt autoclean
+
+#check
 cat /etc/os-release
 ```
 
