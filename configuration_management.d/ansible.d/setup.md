@@ -1,4 +1,4 @@
-# Setup
+# Ansible Setup
 
 ## Simple setup
 

@@ -1,6 +1,8 @@
-# examples
+# Ansible Task
 
-## use the stdout of an command as condition
+## Examples
+
+### Use the stdout of an command as condition
 
 ```yml
 - name: This counts the number of lines
@@ -13,7 +15,7 @@
   when: number_of_directories_in_the_root.stdout > 30
 ```
 
-## check if file exists
+### Check if file exists
 
 ```yml
 # links:
@@ -35,7 +37,7 @@
 #when: your_file_status.islnk = False
 ```
 
-## execute shell script
+### Execute shell script
 
 ```yml
 # links:
@@ -59,7 +61,7 @@
   script: <path to>/my_script.sh an_argument another_argument
 ```
 
-## write an os dependend task
+### Write an os dependend task
 
 ```yml
 - name: import task for redhat
@@ -100,7 +102,7 @@
     chdir: "{{ directory | default(omit) }}"
 ```
 
-# links
+## Links
 
 * http://docs.ansible.com/ansible/shell_module.html
 * http://docs.ansible.com/ansible/playbooks_conditionals.html

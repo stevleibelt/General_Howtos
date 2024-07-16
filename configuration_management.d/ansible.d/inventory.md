@@ -1,4 +1,6 @@
-# example
+# Ansible Inventory
+
+## Example
 
 ```
 [example]           #the group identifier
