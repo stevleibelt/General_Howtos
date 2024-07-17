@@ -524,6 +524,8 @@ python .\load_test.py
 ## Links
 
 * [Build apis with fastapi in python all essentials you need to get started: gitconnected.com](https://levelup.gitconnected.com/build-apis-with-fastapi-in-python-all-essentials-you-need-to-get-started-6bf9fa90c6b8) - 20230511
+* [Database Tests for the FastAPI Application](https://improveandrepeat.com/2024/07/python-friday-234-database-tests-for-the-fastapi-application/) - 20240705
+* [DB Migrations With Alembic and FastAPI](https://improveandrepeat.com/2024/07/python-friday-235-db-migrations-with-alembic-and-fastapi/) - 20240712
 * [Fast API Tutorial by JVP Design: youtube.com](https://www.youtube.com/@JVPDesign) - 20230913
 * [FastAPI Crashkurs 2022 | REST-API mit dem beliebsten Python Framework: youtube.com](https://www.youtube.com/watch?v=KXCvIV3yr7c&list=PL-lCrD3QqynX2a2sgXZlvxEGssGg9ZTCa) - 20230218
   * [Project page: github.com](https://github.com/Coding-Crashkurse/FastAPI-Auth) - 20230219
