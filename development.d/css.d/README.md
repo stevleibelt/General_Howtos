@@ -24,6 +24,7 @@ There are two basic types, absolut and relative units. As long as possible, you 
 
 ## Links
 
+* [24 CSS Projects: Loading Animations, Progress Bars ...: youtube.com](https://www.youtube.com/embed/TzuWIHGFKCQ) - 20240719
 * [AlmondCSS Example Playground: codepen.io](https://codepen.io/chriscoyier/pen/XWPKEXg) - 20240130
 * [CSS Pseudo-Elements - Before and After Selectors Explained: freecodecamp.org](https://www.freecodecamp.org/news/css-pseudo-elements-before-and-after-selectors-explained/) - 20240209
 * [CSS Units – When to Use rem, em, px, and More: freecodecamp.org](https://www.freecodecamp.org/news/css-units-when-to-use-each-one/) - 20240209
