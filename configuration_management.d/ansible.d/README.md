@@ -1,5 +1,26 @@
 # Ansible
 
+Use `ansible-doc` to get help.
+
+```bash
+# list all commands
+ansible-doc --list
+
+# list commands by type
+ansible-doc --list --type become
+
+# read manual about user
+ansible-doc ansible.builtin.user
+```
+
+Ansible:
+
+* Is written in python. All ansible modules are located in `/usr/lib/python3/dist-packages/ansible/inventory`.
+* Works on 12 hosts at once.
+* Can do blue/green deployment (one, ten, rest)
+* Uses ssh as default user context
+* Outputs parsing errormessages you simple can skip since no YAML-Linter knows the ansible language
+
 ## Terms
 
 * playbook
