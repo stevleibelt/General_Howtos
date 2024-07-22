@@ -18,6 +18,7 @@ Ansible:
 * Is written in python. All ansible modules are located in `/usr/lib/python3/dist-packages/ansible/inventory`.
 * Works on 12 hosts at once.
 * Can do blue/green deployment (one, ten, rest)
+  * See [execution strategies: ansible.com](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_strategies.html#selecting-a-strategy)
 * Uses ssh as default user context
 * Outputs parsing errormessages you simple can skip since no YAML-Linter knows the ansible language
 
@@ -25,10 +26,40 @@ Ansible:
 
 * playbook
 * [task](task.md)
-* handler
+* [handler](handler.md)
 * [inventory](inventory.md) -  matching list of servers to groups
-* roles - package of taks, variable,s handlers, modules and other plugins
+* [roles](roles.md) - package of tasks, variable,s handlers, modules and other plugins
 * groups
+* Conditionals:
+  * There is only `when`, no else
+  * Available conditionals:
+    * `when: guard task execution`
+    * `changed_when: define change state`
+    * `failed_when: define failed state`
+* Template Engine
+  * Ansible uses [jinja](http://jinja.pocoo.org/docs/templates/) (but only a part of it)
+  * All is based around [yaml](https://yaml-multiline.info/)
+  * Iterations are possible via two ways:
+    * Template engine: `{% for ... %}`
+    * Ansible built in: `with_`-lookups
+* Hostvars
+  * Global data structure accessible by **all** hosts
+  * `ansible_facts` and `meta`-variables like:
+    * `groups`
+    * `group_names`
+    * `inventory_hostname`
+    * `inventory_hostname_short`
+    * and so one
+  * There are additional fact software like `facter` or `lenses` available
+    * Search for ansible modules `package_facts` if you want to know more
+* Authentication
+  * Is the transportlayer and called `connection` in ansible
+  * Default connection is `ssh`
+  * Check `ansible-dock --list --type connection`
+* Authorization
+  * Is the privilege escalation and called `become` in ansible
+  * Default become is `sudo`
+  * Check `ansible-dock --list --type become`
 
 ## Playbook
 
