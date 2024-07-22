@@ -33,6 +33,7 @@ Ansible:
 * You need to put "{{  }}" to create valid JSON
   * Valid JSON? Yes, since YAML is a subset of JSON
 * Ansible commands are not passed to a shell
+* You can use `--ask-become-pass` if you need to provide a sudo password
 
 ## Terms
 
