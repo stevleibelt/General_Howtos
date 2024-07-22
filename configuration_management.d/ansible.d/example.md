@@ -2,11 +2,16 @@
 
 ## Simplest of all tests
 
-`ansible -m ping all`
+* `ansible -m ping all`
+* `ansible -m command -a uptime all`
+  * `-m`: module
+  - `-a`: module arguments
 
 ## Execute your yaml files as a dry run
 
 `ansible-playbook my_playbook.yaml -CD`
+* `-C`: Start with check-mode (dry run)
+* `-D`: Start in diff-mode
 
 # Default connection (ssh) configuration
 
@@ -18,8 +23,26 @@
 
 * Create a vault password: `openssl rand -hex 8 > ~/.ansible_vault`
 * Adapt `ansible.cfg`: `vault_password_file=./.ansible_vault`
+* Encrypt your password: `echo 'my_username: my password' > group_vars/my_group/secrets.yaml`
 * Encrypt your files: `ansible-vault encrypt group_vars/my_group/secrets.yaml`
   * **Note**: The vaul passwords will only be used/asked for, if the machines in a playbook belong to the group with the secrets
+* Usage: `ansible-playbook my_playbook.yaml --ask-vault-pass`
+* Adapt `ansible.cfg` `vault_identity_list` (like `dev`, `stage`, `prod`)
+* To be able to grep for username, you could create two files
+  * `group_vars/my_group/users.yaml` like
+```yaml
+users:
+  foo:
+    full_name: ...
+    name: ...
+```
+  * `group_vars/my_group/secrets.yaml` like
+```yaml
+users:
+  foo:
+    password: ...
+```
+* List content of a vault: `ansible-vault group_vars/my_group/secrets.yaml`
 
 ## Change standard output to yaml
 
@@ -62,4 +85,20 @@ if my_variable is defined
 # bonus, use jinja filter
 #  if my_variable is not defined, my_parameter is omitted from the output
 my_parameter: "{{ my_variable | default(omit) }}"
+```
+
+## Using filters in general
+
+```yaml
+# set default if not set
+"{{ foo | default('bar') }}"
+
+# requires present of a varialbe
+"{{ foo | mandatory }}"
+
+# transform content to
+"{{ foo | no_json }}"
+"{{ foo | no_nice_json }}"
+"{{ foo | no_nice_yaml }}"
+"{{ foo | no_yaml }}"
 ```

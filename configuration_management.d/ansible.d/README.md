@@ -3,10 +3,10 @@
 Use `ansible-doc` to get help.
 
 ```bash
-# list all commands
+# list all modules
 ansible-doc --list
 
-# list commands by type
+# list modules by type
 ansible-doc --list --type become
 
 # read manual about user
@@ -16,28 +16,52 @@ ansible-doc ansible.builtin.user
 Ansible:
 
 * Is written in python. All ansible modules are located in `/usr/lib/python3/dist-packages/ansible/inventory`.
+* Does not have anykind of memory (there is no undo)
 * Works on 12 hosts at once.
 * Can do blue/green deployment (one, ten, rest)
   * See [execution strategies: ansible.com](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_strategies.html#selecting-a-strategy)
+  * `ansible.cfg` `;forks=` defines the amount of parallel processed hosts
+  * `ansible.cfg` `;serial=` defines how many machines have to finish all tasks (whole playbook)
+  * `ansible.cfg` `;throttle=` defines the amount of workers per task
 * Uses ssh as default user context
 * Outputs parsing errormessages you simple can skip since no YAML-Linter knows the ansible language
+* Ansible searchs in the following order for a ansible configuration file
+  * `ANSIBLE_CONFIG` - Great to separete user runs from ci-runs
+  * `ansible.cfg` - In the current working directory
+  * `~/.ansible.cfg` - In the home directory
+  * `/etc/ansible/ansible.cfg`
+* You need to put "{{  }}" to create valid JSON
+  * Valid JSON? Yes, since YAML is a subset of JSON
+* Ansible commands are not passed to a shell
 
 ## Terms
 
-* playbook
+* [playbook](#playbook)
 * [task](task.md)
 * [handler](handler.md)
 * [inventory](inventory.md) -  matching list of servers to groups
-* [roles](roles.md) - package of tasks, variable,s handlers, modules and other plugins
-* groups
+* [roles](roles.md) - Package of tasks, variable,s handlers, modules and other plugins
+* [groups](groups.md) - Contains group specific variables
+* Places for variables:
+  * In the inventory file
+  * In `host_vars/<string: my.host.name>/vars.yaml` -> loaded in the global namespace `hostvars` (readable from all hosts)
+  * In `group_vars/<string: my_group>/vars.yaml` -> loaded in the global namespace `hostvars` (readable from all hosts)
+  * Since `hostvars` are readable by all machines, you can use them as IPC
+  * Playbook scoped variables
+  * Task variables
+  * Extra variables
+  * [order of variable evaluation: ansible.com](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html#understanding-variable-precedence)
+
 * Conditionals:
   * There is only `when`, no else
   * Available conditionals:
     * `when: guard task execution`
     * `changed_when: define change state`
     * `failed_when: define failed state`
+    * [error handling: ansible.com](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_error_handling.html)
 * Template Engine
   * Ansible uses [jinja](http://jinja.pocoo.org/docs/templates/) (but only a part of it)
+  * `ansible-doc template`
   * All is based around [yaml](https://yaml-multiline.info/)
   * Iterations are possible via two ways:
     * Template engine: `{% for ... %}`
@@ -63,8 +87,12 @@ Ansible:
 
 ## Playbook
 
-* [introduction into playbooks](http://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html)
-* [create reusable playbooks](http://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse.html)
+* Execute a `ansible-playbook my_playbook.yaml`
+* One Playbook can contain multiple tasks
+* Links:
+  * [create reusable playbooks](http://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse.html)
+  * [faster playbook execution: redhat.com](https://www.redhat.com/sysadmin/faster-ansible-playbook-execution)
+  * [introduction into playbooks](http://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html)
 
 ### Useful command line calls to understand an existing playbook
 
@@ -166,7 +194,10 @@ ANSIBLE_STDOUT_CALLBACK=yaml ansible-playbook playbook.yml
 ##in the ansible.cfg
 [defaults]
 # Human-readable output
-stdout_callback = yaml
+stdout_callback=yaml
+# callback_plugins - defines the list of available plugins
+# You can configure multiple callbacks in parallel
+# see: ansible-doc --list --type callback
 ```
 
 ## Links

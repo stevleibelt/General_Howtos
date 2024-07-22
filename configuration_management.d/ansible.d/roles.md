@@ -1,5 +1,7 @@
 # Ansible roles
 
+Are the evolution of playbooks.
+
 Organized via a simple directory naming convetion.
 
 Roles can not use any inventory variables.

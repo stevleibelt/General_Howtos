@@ -1,5 +1,7 @@
 # Ansible Task
 
+One task can contain multiple actions.
+
 ## Examples
 
 ### Use the stdout of an command as condition
