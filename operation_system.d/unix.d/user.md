@@ -145,13 +145,14 @@ deluser --remove-home <user name>
 userdel --remove <user name>
 ```
 
-## Get user id
+## Get user information
 
 ```bash
 # all informations
-id <user name>
+id <string: user_name>
+getent passwrd <string: user_name>
 # only user id
-id -u <user name>
+id -u <user name>string: user_name>
 # groups
 id -a
 ```
