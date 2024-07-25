@@ -54,6 +54,16 @@ var_user_secrets:
   loop: "{{ var_users_with_secret | dict2items }}"
 ```
 * List content of a vault: `ansible-vault group_vars/my_group/secrets.yaml`
+* If you want to use the password, you need to hash it
+```yaml
+- name: Create users
+  ansible.builtin.user:
+    name: "{{ item.value.login }}"
+    password: "{{ item.value.password | password_hash('sha512') }}"
+    state: present
+  become: true
+  loop: "{{ var_users_with_secret | dict2items }}"
+```
 
 ## Change standard output to yaml
 
