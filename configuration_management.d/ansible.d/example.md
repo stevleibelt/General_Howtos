@@ -31,16 +31,27 @@
 * To be able to grep for username, you could create two files
   * `group_vars/my_group/users.yaml` like
 ```yaml
-users:
+var_users:
   foo:
     full_name: ...
     name: ...
 ```
   * `group_vars/my_group/secrets.yaml` like
 ```yaml
-users:
+var_user_secrets:
   foo:
     password: ...
+```
+* You need to merge the `user_secrets` into the `users` in your task
+```yaml
+- name: Create var_users_with_secret
+  ansible.builtin.set_fact:
+    var_users_with_secret: "{{ var-users | combine(var_user_secrets, recursive=True) }}"
+
+- name: Dump var_users_with_secret
+  ansible.builtin.debug:
+    var: "{{ item }}"
+  loop: "{{ var_users_with_secret | dict2items }}"
 ```
 * List content of a vault: `ansible-vault group_vars/my_group/secrets.yaml`
 
