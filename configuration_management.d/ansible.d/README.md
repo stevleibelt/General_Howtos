@@ -99,16 +99,16 @@ Ansible:
 
 ```bash
 #list all available tags
-ansible-playbook playbook.ymk --list-tags
+ansible-playbook playbook.yml --list-tags
 
 #list all available tasks
-ansible-playbook playbook.ymk --list-tasks
+ansible-playbook playbook.yml --list-tasks
 
 #list all available tasks filtered by a tag
-ansible-playbook playbook.ymk --list-tasks --tags=install
+ansible-playbook playbook.yml --list-tasks --tags=install
 
 #list all available tasks excluded by a tag
-ansible-playbook playbook.ymk --list-tasks --skip-tags=install
+ansible-playbook playbook.yml --list-tasks --skip-tags=install
 ```
 
 ### Execute a playbook with a parallelism level of 13
