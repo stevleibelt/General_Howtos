@@ -367,9 +367,10 @@ git help hooks
 * http://christoph.ruegg.name/blog/git-howto-revert-a-commit-already-pushed-to-a-remote-reposit.html
 * [deutsche git anleitung](http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/de/)
 * some plattforms or self hosting services
-    * [gitea](https://gitea.io/)
-    * [gitolite](http://gitolite.com/)
-    * [gitlab](https://www.gitlab.com/)
     * [bitbucket](https://bitbucket.org/)
+    * [forgejo](https://forgejo.org/) - Hardfork from gitea as true open source software
     * [github](https://github.com/)
+    * [gitolite](http://gitolite.com/)
+    * [gitea](https://gitea.io/)
+    * [gitlab](https://www.gitlab.com/)
 

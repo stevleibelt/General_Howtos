@@ -13,6 +13,7 @@ supervisorctl stop gitea
 
 # copy data
 cp -r gitea forgejo
+cp ~/etc/services.d/gitea.ini ~/etc/services.d/forgejo.ini
 mv forgejo/data/gitea-repositories forgejo/data/forgejo-repositories
 
 # remove old binaries
@@ -41,8 +42,14 @@ vim forgejo/custom/conf/app.ini
 # fix all issues that are listed
 ./forgejo/forgejo doctor check
 
+# change `autostart=yes` to `autostart=no`
+vim ~/etc/services.d/forgejo.ini
+
 # start forgejo
+supervisorctl reread
+supervisorctl update
 supervisorctl start forgejo
+supervisorctl status
 
 # login and check if your acounts have access to all repositories etc.
 # if all is fine
