@@ -25,7 +25,7 @@ wget -O forgejo/forgejo https://codeberg.org/forgejo/forgejo/releases/download/v
 chmod +x forgejo/forgejo
 gpg --keyserver keys.openpgp.org --recv EB114F5E6C0DC2BCDD183550A4B61A2DC5923710
 wget -O forgejo/forgejo.asc https://codeberg.org/forgejo/forgejo/releases/download/v8.0.0/forgejo-8.0.0-linux-amd64.asc
-gpg --verify forgejo.asc forgejo
+gpg --verify forgejo/forgejo.asc forgejo/forgejo
 
 # adapt configuration file
 # ref: https://forgejo.org/docs/latest/admin/upgrade/
