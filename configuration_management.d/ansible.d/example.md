@@ -123,3 +123,12 @@ my_parameter: "{{ my_variable | default(omit) }}"
 "{{ foo | no_nice_yaml }}"
 "{{ foo | no_yaml }}"
 ```
+
+## Stop execution of a task for debugging
+
+```yaml
+- name: Stop execution
+  ansible.builtin.fail:
+    msg: "Stop! Hammertime"
+```
+
