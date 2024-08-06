@@ -74,9 +74,9 @@ version_table_name = "module_one_alembic_versions"
 # With this function, you change the behavior of this alembic setup
 # to only take care about tables starting with `module_one_`
 def include_object(object, name, type_ reflected, compare_to):
-    if type_ == "table" and name.startswith("module_one_"):
-        return True
-    return False
+    if type_ == "table":
+        return name.startswith("module_one_")
+    return True
 
 # Add to both `context.configure` calls
     include_object=include_object,
