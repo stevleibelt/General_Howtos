@@ -10,7 +10,7 @@
   * Mount usb: `mount_msdosfs /dev/da0s1 /media/usb`
 * Check disk: `fsck -fy /`
   * Give it a try if you need sudo or not
-* You can use [serial console](../../operation_system/unix/tty.md) if needed
+* You can use [serial console](../../operation_system.d/unix.d/tty.md) if needed
 
 ## List of HowTo's
 
@@ -43,6 +43,7 @@ Furthermore, you need to create a user. (`https://<opnsense ip>/system_usermanag
 
 ```bash
 ssh <user>@<opnsense ip>
+# or serial console (search for TTYUSB)
 #if needed
 #give it a try if you need sudo or not
 sudo /usr/local/sbin/opnsense-shell
@@ -53,7 +54,7 @@ sudo pkg update -f
 #to reinstall all packages
 sudo pkg upgrade -f
 #just for new ones
-sudo pkg upgrade -f
+sudo pkg upgrade
 ```
 
 ## Link
