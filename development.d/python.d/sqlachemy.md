@@ -206,6 +206,32 @@ To add multiple objects at once to a session, you can use `.add_all([])`.
 New objects can be seen by inspecting the attribute `.new`.
 Changed but not new objects can be seen by inspecting the attribute `.dirty`.
 
+### Example models with foreign key mapping
+
+```python
+from typing import Set
+from sqlalchemy import ForeignKey, Integer, String
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
+
+Class MyBaseClass(DeclarativeBase):
+    __abstract__ = True
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+
+Class Role(MyBaseClass):
+    __tablename__ = "roles"
+
+    name: Mapped[str] = mapped_column(String(255), unique=True, nullable=False)
+    users: Mapped[Set["User"]] = relationship(back_populates="user")
+
+Class User(MyBaseClass):
+    __tablename__ = "users"
+
+    login: Mapped[str] = mapped_column(String(255), unique=True, nullable=False)
+    role_id: Mapped[int] = mapped_column(ForeignKey(f"{Role.__tablename__}.id"), nullable=False)
+    role: Mapped["Role"] = mapped_column(back_populates="role")
+```
+
 ## Links
 
 * [SQLAlchemy: slingacademy.com](https://www.slingacademy.com/cat/sqlalchemy/) - 20240514
