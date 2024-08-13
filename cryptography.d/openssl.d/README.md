@@ -12,9 +12,8 @@ openssl x509 -noout -text -in <string: file_path>
 ### View content of certificate from server
 
 ```bash
-openssl s_client -connect "<string: hostname_or_ip>:443"
+openssl s_client -connect "<string: hostname_or_ip>:443" -showcerts
 ```
-
 
 ## Links
 
