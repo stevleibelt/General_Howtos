@@ -10,14 +10,14 @@
 
 #### dd
 
-```
+```bash
 dd if=/dev/sdb3 of=/dev/sdc3 bs=4096 conv=noerror
 dd if=/nfs/backup/images/backup.sda1.07.28.12.img of=/dev/sda1 bs=1M conv=noerror
 ```
 
 #### ddrescue (does not break if data of device is broken)
 
-```
+```bash
 #to another disk
 ddrescue /dev/sda /dev/sdb
 #as image
@@ -26,7 +26,7 @@ ddrescue /dev/sda /mnt/my_sda_image_from.img
 
 #### partimage (backup and restore disk partitions into image files)
 
-```
+```bash
 partimage -z1 -o -d save /dev/sda2 /nfs/backup/laptop.wks01.sda1.home_07_08_2012.gz
 partimage restore /dev/sda2 /nfs/backup/laptop.wks01.sda1.home_07_08_2012.gz.000
 ```
@@ -61,4 +61,3 @@ partimage restore /dev/sda2 /nfs/backup/laptop.wks01.sda1.home_07_08_2012.gz.000
 * http://www.cyberciti.biz/open-source/linux-based-disk-cloning-imaging-software/
 * [hddguru - free software collection](https://hddguru.com/software/) - 2020-03-13
 * http://www.thefreecountry.com/utilities/backupandimage.shtml
-
