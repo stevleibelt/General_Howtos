@@ -21,6 +21,7 @@ function bar(foo : Foo):string {
 
 # links
 
+* [Learn TypeScript – A Comprehensive Guide for Beginners](https://www.freecodecamp.org/news/typescript-for-beginners-guide/) - 20240809
 * http://www.typescriptlang.org/
 * https://www.sitepoint.com/introduction-to-typescript
 * https://en.wikipedia.org/wiki/TypeScript
