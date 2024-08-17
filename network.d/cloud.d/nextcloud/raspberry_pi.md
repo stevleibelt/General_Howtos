@@ -1,6 +1,6 @@
-# alpine linux
+# Raspberry Pi with Nextcloud
 
-## steps
+## Steps to install alpine linux on a raspberry pi
 
 * [download](https://wiki.alpinelinux.org/wiki/Raspberry_Pi)
 * fdisk /dev/<path to the sd card>
@@ -59,9 +59,9 @@ DELIM
 * visudo
 * rc-update
 
-### example fdisk output from a 4 GB card
+### Example fdisk output from a 4 GB card
 
-```
+```bash
 Disk /dev/mmcblk0: 3.7 GiB, 3965190144 bytes, 7744512 sectors
 Units: sectors of 1 * 512 = 512 bytes
 Sector size (logical/physical): 512 bytes / 512 bytes
@@ -76,16 +76,7 @@ Device         Boot   Start     End Sectors  Size Id Type
 Command (m for help):
 ```
 
-## links
-
-* [>>Automatic Nextcloud Installation on Raspberry Pi<<](http://unixetc.co.uk/2017/11/25/automatic-nextcloud-installation-on-raspberry-pi/) - 2017-11-25
-* [>>Simple Nextcloud Installation on Raspberry Pi<<](http://unixetc.co.uk/2016/11/20/simple-nextcloud-installation-on-raspberry-pi/) - 2016-11-20
-* [>>NEXTCLOUD ON THE RASPBERRY PI - DIY DROPBOX!<<](https://www.instructables.com/id/NextCloud-on-the-Raspberry-Pi-DIY-Dropbox/) - 2017?
-* [>>NextCloudPi, a ready to use NextCloud image for Raspberry Pi<<](https://ownyourbits.com/2017/02/13/nextcloud-ready-raspberry-pi-image/) - 2017-02-13
-
-# raspbian
-
-## steps
+## Steps to install raspbian on a raspberry pi
 
 * [download](https://www.raspberrypi.org/downloads/raspbian/) raspbian lite
 * unzip downloaded zip
@@ -101,15 +92,19 @@ Command (m for help):
 * sudo apt-get update
 * sudo apt-get dist-upgrade
 
-## links 
+## And install/run docker image
 
-* [Traditional disk-based (sys) installation](https://wiki.alpinelinux.org/wiki/Raspberry_Pi#Traditional_disk-based_.28sys.29_installation)
-* [Raspberry Alpine Linux 3.5 Docker Host](https://codegazers.wordpress.com/2017/01/01/raspberry-alpine-docker/) - 2017-01-01
-* [Classic install or sys mode on Raspberry Pi](https://wiki.alpinelinux.org/wiki/Classic_install_or_sys_mode_on_Raspberry_Pi)
-
-# and install/run docker
-
-```
+```bash
 #@see: https://ownyourbits.com/nextcloudpi/
 docker run -d -p 4443:4443 -p 443:443 -p 80:80 -v ncdata:/data --name nextcloudpi ownyourbits/nextcloudpi-armhf $DOMAIN
 ```
+
+## Links
+
+* [>>Automatic Nextcloud Installation on Raspberry Pi<<](http://unixetc.co.uk/2017/11/25/automatic-nextcloud-installation-on-raspberry-pi/) - 2017-11-25
+* [>>Simple Nextcloud Installation on Raspberry Pi<<](http://unixetc.co.uk/2016/11/20/simple-nextcloud-installation-on-raspberry-pi/) - 2016-11-20
+* [>>NEXTCLOUD ON THE RASPBERRY PI - DIY DROPBOX!<<](https://www.instructables.com/id/NextCloud-on-the-Raspberry-Pi-DIY-Dropbox/) - 2017?
+* [>>NextCloudPi, a ready to use NextCloud image for Raspberry Pi<<](https://ownyourbits.com/2017/02/13/nextcloud-ready-raspberry-pi-image/) - 2017-02-13
+* [Traditional disk-based (sys) installation](https://wiki.alpinelinux.org/wiki/Raspberry_Pi#Traditional_disk-based_.28sys.29_installation)
+* [Raspberry Alpine Linux 3.5 Docker Host](https://codegazers.wordpress.com/2017/01/01/raspberry-alpine-docker/) - 2017-01-01
+* [Classic install or sys mode on Raspberry Pi](https://wiki.alpinelinux.org/wiki/Classic_install_or_sys_mode_on_Raspberry_Pi)
