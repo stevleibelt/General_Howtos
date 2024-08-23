@@ -8,6 +8,10 @@ Uncomplicated Firewall is a frontend for iptables.
 #install it
 pacman -S ufw
 
+#disable IPv6
+# search for >>IPv6=yes<< and replace >>yes<< with >>no<<
+vim /etc/default/ufw
+
 #list all currently open ports
 
 ss -nptl

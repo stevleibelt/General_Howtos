@@ -3,9 +3,10 @@
 ## Kickstart
 
 ```bash
+# ref: https://borgbackup.readthedocs.io/en/stable/
 # setup
 ## create a repository
-borg init --encryption=repokey /path/to/the/backup
+borg init -e repokey /path/to/the/backup
 
 ## export repository key to store it somewhere
 borg key export /path/to/the/backup
