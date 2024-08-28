@@ -16,7 +16,12 @@ hostname
 
 ```bash
 nslookup www.bazzline.net
+host bazzline.net
+host -t NS bazzline.net
+getent hosts bazzline.net
 dig bazzline.net
+dig bazzline.net +short
+dig -x 1.2.3.4 +short
 ```
 
 ## Get other informations
