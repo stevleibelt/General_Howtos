@@ -1,16 +1,20 @@
 # Libinput
 
+This can be use
+
 ## Output the devices on the system and their respective supported features
 
 ```bash
 libinput list-devices
-#same
-xinput
+# or
+xinput --list
 ```
 
 ## Get option per device
 
 ```bash
+# Fetch <string: device_number>
+# xinput --list | grep -i pad
 xinput list-props <device number>
 ```
 
@@ -24,8 +28,8 @@ xinput set-prop <device number> <option number> <setting>
 ## Disable or enable input
 
 ```bash
-xinput enable <id>
-xinput disable <id>
+xinput --enable <id>
+xinput --disable <id>
 ```
 
 ## Disable "natural scrolling"
@@ -43,7 +47,7 @@ EndSection
 
 ## Links
 
-* https://wiki.archlinux.org/index.php/Libinput
-* https://www.mankier.com/4/libinput
-* https://askubuntu.com/questions/65951/how-to-disable-the-touchpad
+* [libinput: archlinux.org](https://wiki.archlinux.org/index.php/Libinput)
+* [libinput: mankier](https://www.mankier.com/4/libinput)
+* [how to disable the touchpad: askubuntu.com](https://askubuntu.com/questions/65951/how-to-disable-the-touchpad)
 
