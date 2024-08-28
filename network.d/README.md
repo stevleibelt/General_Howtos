@@ -1,4 +1,6 @@
-# Network general readme
+# General Network Readme
+
+You can find all ports on a linux machine in the file `/etc/services`.
 
 ## dig
 
