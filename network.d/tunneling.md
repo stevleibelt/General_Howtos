@@ -15,8 +15,9 @@ ssh -ND <a port number> <user>@<hostname>
 ### Port forwarding
 
 ```bash
-#forwards from localhost 9000 to 8888
-ssh -L <local port>:target:<remote port> <user>@<hostname>
+# Forwards from localhost 9000 to 8888
+# ssh -L <int: local_port>:<string: remote_ip>:<int: remote_port> <string: user_name>@<string: hostname_or_ip>
+ssh -L 9000:127.0.0.1:8888 artodeto@bazzline.net
 ```
 
 ### Reverse tunnel (packages from hostname:remote port goes to localhost:local port)
