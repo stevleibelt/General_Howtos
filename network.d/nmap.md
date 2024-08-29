@@ -15,6 +15,10 @@ telnet <string: hostname_or_ip> <int: port>
 nmap -v -sT <network>/<mask>
 ```
 
+## Try to determine the os
+
+`nmap -O bazzline.net`
+
 ## Links
 
 * https://wiki.archlinux.org/index.php/Nmap
