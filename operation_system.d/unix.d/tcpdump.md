@@ -1,6 +1,8 @@
-# usage
+# TCPDump
 
-```
+## Usage
+
+```bash
 #list available devices
 tcpdump -D
 
@@ -37,9 +39,9 @@ tcpdump -i any -c42 -nn dst 12.34.56.78
 tcpdump -i any -c42 -nn "port 80 and (src 192.168.122.98 or src 54.204.39.132)"
 ```
 
-# output format
+## Output format
 
-```
+```bash
 08:41:13.729687 IP 192.168.64.28.22 > 192.168.64.1.41916: Flags [P.], seq 196:568, ack 1, win 309, options [nop,nop,TS val 117964079 ecr 816509256], length 372
 #08:41:13.729687        - timestamp of the received packat per local clock
 #IP                     - ipv4 is used
@@ -57,7 +59,7 @@ tcpdump -i any -c42 -nn "port 80 and (src 192.168.122.98 or src 54.204.39.132)"
 | R | RST | Connection reset |
 | . | ACK | Acknowledgment |
 
-# links
+## Links
 
 * [tcpdump manual pages](http://www.tcpdump.org/manpages/tcpdump.1.html)
 * [12 tcpdump commands](http://www.tecmint.com/12-tcpdump-commands-a-network-sniffer-tool/)
