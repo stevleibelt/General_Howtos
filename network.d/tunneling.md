@@ -1,8 +1,10 @@
-# ssh
+# Tunneling
 
-## socks (socket secure)
+## Via SSH
 
-```
+### Socks (socket secure)
+
+```bash
 #create a connection
 ssh -ND <a port number> <user>@<hostname>
 #see
@@ -10,42 +12,39 @@ ssh -ND <a port number> <user>@<hostname>
 #   https://en.wikipedia.org/wiki/SOCKS
 ```
 
-## port forwarding
+### Port forwarding
 
-```
+```bash
 #forwards from localhost 9000 to 8888
 ssh -L <local port>:target:<remote port> <user>@<hostname>
 ```
 
-## reverse tunnel (packages from hostname:remote port goes to localhost:local port)
+### Reverse tunnel (packages from hostname:remote port goes to localhost:local port)
 
-```
+```bash
 ssh -R <local port>:localhost:<remote port> <hostname>
 ```
 
-## just a ssh connection without opening a new shell
+### Just a ssh connection without opening a new shell
 
-```
+```bash
 ssh -N
 ```
 
-## agent mode (use local keys and go over an other host to the target host)
+### Agent mode (use local keys and go over an other host to the target host)
 
-```
+```bash
 ssh -A
 ```
 
-# openvpn
+## Other tools
 
-```
-```
-
-# others
-
-```
+```bash
 mosh
 socat
 stunnel
 openvpn
 tinc
+wireguard
 ```
+
