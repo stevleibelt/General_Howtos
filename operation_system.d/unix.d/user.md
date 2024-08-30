@@ -50,6 +50,9 @@ passwd <username> <<DELIM
 <new password>
 <new password>
 DELIM
+
+# Set password `password` for multiple users
+for MY_USER in username_1 username_2; echo "${MY_USER}:password" | sudo chpasswd; done
 ```
 
 ## Run command as other user
