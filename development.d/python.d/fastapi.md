@@ -523,6 +523,7 @@ python .\load_test.py
 
 ## Links
 
+* [API versioning with fastapi: improveandrepeat.com](https://improveandrepeat.com/2024/08/python-friday-242-api-versioning-in-fastapi/) - 20240831
 * [Build apis with fastapi in python all essentials you need to get started: gitconnected.com](https://levelup.gitconnected.com/build-apis-with-fastapi-in-python-all-essentials-you-need-to-get-started-6bf9fa90c6b8) - 20230511
 * [Database Tests for the FastAPI Application](https://improveandrepeat.com/2024/07/python-friday-234-database-tests-for-the-fastapi-application/) - 20240705
 * [DB Migrations With Alembic and FastAPI](https://improveandrepeat.com/2024/07/python-friday-235-db-migrations-with-alembic-and-fastapi/) - 20240712
