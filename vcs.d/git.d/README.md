@@ -186,9 +186,13 @@ git diff --staged           #show diff using staged instead of commited
 ## Remove
 
 ```bash
-git rm --cached             #remove files in stage/repository (but not in the filesystem)
+# good if you commited log files or something else you don't want to commit
+# remove files in stage/repository (but not in the filesystem)
+git rm --cached
+
+# remove all, by mistake, added __pychache__ files from the vcs
+find app/ -name '__pycache__' -type d -exec git rm -r --cached {} +
 ```
-                                #good if you commited log files or something else you don't want to commit
 
 ## Blame
 
