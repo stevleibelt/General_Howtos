@@ -7,6 +7,13 @@
 # ref: https://stackoverflow.com/a/31637405
 find /my/path -exec realpath {} \;
 
+# get a file path you can work with
+find . -iname "*.sh" -print
+
+# create a file path you can work with in a bash variable
+# for the first find result
+find . -iname "my*.sh" -type f -print -quit
+
 # find files by user foo or bar
 find /my/path \( -user foo -o -user bar \) -ls
 
