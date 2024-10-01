@@ -82,9 +82,7 @@ class MyTestTable(DeclarativeBase)
 
 You can use `DeclarativeBase.metadata.create_all()` to create all defined tables.
 
-### The Insert function
-
-By passing a Table object to the insert function, the function is able to create a SQL Insert statement out of it.
+### Log a statement
 
 ```python
 from sqlalchemy import insert
@@ -96,6 +94,10 @@ print(statement)
 # If you want to see the statement with the data
 print(statement.compile(compile_kwargs={"literal_binds": True}))
 ```
+
+### The Insert function
+
+By passing a Table object to the insert function, the function is able to create a SQL Insert statement out of it.
 
 Example how to insert pure data using sqlalchemy core functionality.
 
