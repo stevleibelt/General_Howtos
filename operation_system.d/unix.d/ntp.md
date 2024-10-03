@@ -1,40 +1,23 @@
-# set it in /etc/ntpd.conf
+# NTP
 
-## set servers (depending on your country)
+## Setup
 
+```bash
+# Install ntp
+# Open /etc/ntp.conf
+
+# Restrict to local network 192.168.0.0/24
+restrict 192.168.0.0 mask 255.255.255.0 nomodify notrap
+
+# Restart on each change
+# sudo systemctl restart ntp
+
+# Check status
+# sudo systemctl status ntp
+
+# Check taht server is synchronizing
+# ntpq -p
+
+# Enable ntp on boot
+# sudo systemctl enable ntp
 ```
-[your router like "server fritz.box"]
-server 0.de.pool.ntp.org
-server 1.de.pool.ntp.org
-server 2.de.pool.ntp.org
-server 3.de.pool.ntp.org
-```
-
-## set pool (depending on your country)
-
-```
-servers de.pool.ntp.org
-```
-
-# see output
-
-```
-ntpdc -p
-```
-
-# set hardware clock
-
-```
-hwclock --systohc
-```
-
-# check current time
-
-```
-nc fish.mirbsd.org daytime
-```
-
-# links
-
-* http://www.debianadmin.com/ntp-server-and-client-configuration-in-debian.html
-* http://www.cyberciti.biz/faq/debian-ubuntu-linux-install-ntpd/
