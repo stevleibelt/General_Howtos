@@ -34,6 +34,18 @@
 | `/` | `\2f` |
 | `\` | `\5c` |
 
+## LDAP Constraints Demystified
+
+Check out [this: windows.net](https://winprotocoldoc.blob.core.windows.net/productionwindowsarchives/MS-ERREF/%5bMS-ERREF%5d.pdf) error code reference.
+
+The error code could look like `LDAPConstraintViolationResult - 19 - constraintViolation - None - 0000052D: AtrErr: DSID-03191072`
+
+| Error Code | AtrErr | Short Description (Microsoft) | Long Description (Microsoft) | Description (samba) | Description (ldap3) | My Description |
+| --- | --- | --- | --- | --- | --- | --- |
+| `0000052D` | | `ERROR_PASSWORD_RESTRICTION` | Unable to update the password. The value provided for the new password does not meet the length, complexity, or history requirements of the domain. | A change to the same password again will not work (password history) | 0000052D error code is about a minimum age of a password. Default policy - you cannot change password more than once per 1 day. | |
+| | `DSID-03191072` | | | | | Check if First- or Lastname is part of the password |
+| `00000056` | | `ERROR_INVALID_PASSWORD` | The specified network password is not correct. | Windows (2008 at least) seems to have some small bug here: it returns "0000056A" on longer (always wrong) previous passwords. | that should mean that the old password is not the right one. | |
+
 ## Link
 
 * [Apache Directory Studio](https://directory.apache.org/studio/) - 20201028
