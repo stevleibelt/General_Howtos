@@ -1,6 +1,8 @@
-# usage
+# DKMS
 
-```
+## Usage
+
+```bash
 #list all installed modules
 dkms status
 
@@ -16,6 +18,6 @@ dkms install -m <module name> -v <version>
 dkms remove -m <module name> -v <version> --all
 ```
 
-# links
+## Links
 
 * https://wiki.archlinux.org/index.php/Dynamic_Kernel_Module_Support#List_modules
