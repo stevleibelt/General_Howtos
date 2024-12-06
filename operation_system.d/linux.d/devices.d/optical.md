@@ -1,52 +1,48 @@
-# set speed / reduce noize
+# Optical disc device handling under linux
 
-```
+## Set speed / reduce noize
+
+```bash
 #12 is good
 #4 is super silent
 eject -x 12 /dev/sr0
 ```
 
-# dvd
+## DVD
 
-## on the command line
+### Create a iso file from a dvd
 
-```
-#assuming your optical device is /dev/sr0
+```bash
+# Assuming your optical device is /dev/sr0
 dd if=/dev/sr0 of=<file path name of your dvd>.iso
 #@todo
 ```
 
-## ripping
+### Ripping
 
-### with divxenc
-
-```
+```bash
+# With divxenc
 #install mkvtoolnix to be able to encode to mp4
 #mkvtoolnix-cli
 #or
 #mkvtoolnix-gui
 
-### with ffmpeg
-
-```
+# With ffmpeg
 #assuming you have mounted your dvd to /mnt
 cat $(ls /mnt/VIDEO_TS/*.VOB) | nice ffmpeg -i - -acodec libmp3lame -ac 2 -aq 4 -vcodec libx264 -crf 20 -threads 0 <your file name>.mkv
-```
 
-### with divxenc
-
-```
+# With divxenc
 divxenc -2p -p vhq
 ```
 
-# blu ray
+## Blu ray
 
-```
+```bash
 #install
 makemkv-libaacs
 ```
 
-# links
+## Links
 
 * https://wiki.archlinux.org/index.php/Optical_disc_drive
 * https://wiki.archlinux.org/index.php/MEncoder
