@@ -349,6 +349,7 @@ git help hooks
 ## Links
 
 * http://try.github.io/
+* [10 new Git commands you should start using today](https://appwrite.io/blog/post/10-git-commands-you-should-start-using) - 20241216
 * [12 tips for git](https://opensource.com/article/18/4/12-git-tips-gits-12th-birthday)
 * [bitbucket git howto](https://www.atlassian.com/git/tutorials/setting-up-a-repository) - 20210209
 * [git concepts](https://opensource.com/article/22/11/git-concepts) - 20221117
