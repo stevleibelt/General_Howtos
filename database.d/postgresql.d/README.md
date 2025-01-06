@@ -12,6 +12,12 @@ telnet <string: hostname_or_ip_address> <int: port>
 psql -U <string: username> -p <int: port> -h <string: hostname_or_ip_address> -d <string: database_name>
 ```
 
+## Update password
+
+* Login via psql
+* `set password_encryption = 'scram-sha-256';`
+* `\password`
+
 ## List of commands
 
 | Command | Description |
