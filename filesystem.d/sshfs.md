@@ -2,72 +2,51 @@
 
 ## Installation
 
-```
+```bash
 #install package sshfs
 modprobe fuse
 ```
 
-## Mount
+## Usage
 
-```
+```bash
+# mount
 sshfs user@host:~/foo /home/bar/foo
-```
 
-### With compression
-
-```
+# with compression
 sshfs user@host:~/foo /home/bar/foo -C
-```
 
-### With ssh key
-
-```
+# with ssh key
 sshfs user@host:~/foo /home/bar/foo -o IdentityFile=~/.ssh/id_rsa
-```
 
-## Unount
-
-```
+# unmount
 fusermount -u local/mount/point
-```
+
+# debug
+sshfs -d -f <source> <target>
 
 ## Help
 
-### Debug
+```bash
+# "read: Connection reset by peer"
+# try calling it with -d -f
+# if you set the Ciphers option, the chance is high that the server does not support your cipher
 
-```
-sshfs -d -f <source> <target>
-```
-
-### "read: Connection reset by peer"
-
-* try calling it with -d -f
-* if you set the Ciphers option, the chance is high that the server does not support your cipher
-```
-
-### “invalid_argument”
-
-```
+# “invalid_argument”
 create local mount point
-```
 
-### “???” after mounting
-
-```
-check user rights on destination
+# “???” after mounting
+# check user rights on destination
 sshfs -o idmap=user <source> <target>
-```
 
-### Slow on a mac osx host
-
-```
-#[link](https://coderwall.com/p/dwvw_w/sshfs-mac-osx-mount-slow-improve-speed)
+# slow on a mac osx host
+# ref: https://coderwall.com/p/dwvw_w/sshfs-mac-osx-mount-slow-improve-speed
 sshfs user@host:remote_path local_path -oauto_cache,reconnect,defer_permissions,noappledouble
 ```
 
-### Blazing fast setting
+## Blazing fast setting
 
-```
+```bash
 sshfs <server://some/folder> </mnt/some_local_folder> -o Ciphers=arcfour -o Compression=no
 ```
 
