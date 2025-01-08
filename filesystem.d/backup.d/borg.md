@@ -31,6 +31,39 @@ borg list /path/to/the/backup               # list content of the given reposito
 borg info /path/to/the/backup [--last 1]    #shows info like size for a given repository or archive
 ```
 
+## Errorhandling
+
+### segment 1234 not found, but listed in compaction data
+
+This error message indicates a inconsistency in the repository happened during the compacting process.
+The segemnt file 1234 was expected but could not be found in the data.
+
+This could happen by an interrupted synchronisation or indicates a hardware error.
+
+How to solve it?
+
+```bash
+# check repository
+# borg will tell you what is wrong
+borg check /path/to/the/backup
+
+# repair issues
+# borg tries to rebuild missing or corrupted repository data
+borg check --repair /path/to/the/backup
+
+# rebuild index
+# borg rebuilds the index because the issue is not on the filesystem
+borg recreate --target /path/to/the/backup
+
+# manually check
+# cd /path/to/the/backup
+# search for proper file or directory fitting your invalid segment
+
+# if you can not reciver the missing segment file and the repository is unusable
+#   force borg to ignore the missing segment
+borg prune --force /path/to/the/backup
+``` 
+
 ## Links
 
 * [borgbackup on readthedocks](https://borgbackup.readthedocs.io/) - 20230328
