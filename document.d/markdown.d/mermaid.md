@@ -4,7 +4,7 @@
 
 ### Simple Flowchart
 
-```javascript
+```mermaid
 %%ref: https://www.freecodecamp.org/news/use-mermaid-javascript-library-to-create-flowcharts/%%
 flowchart TD
   start((start)) --> user_name_input[/Please insert name/]
