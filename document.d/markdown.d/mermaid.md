@@ -7,14 +7,13 @@
 ```mermaid
 %%ref: https://www.freecodecamp.org/news/use-mermaid-javascript-library-to-create-flowcharts/%%
 flowchart TD
-  start((start)) --> user_name_input[/Please insert name/]
+  START((start)) --> user_name_input[/Please insert name/]
   user_name_input --> fetch_user[Fetch user from db]
-  subgraph SB1
-    fetch_user --"Some information **describing** the process"> user_found{Username found in the db?}
-    user_found -->|Yes|--> output_user_data[/Output user data/]
-    user_found -->|No|--> output_user_not_found[/Output user not found/]
-  output_user_data --> stop(((end)))
-  output_user_not_found --> stop
+  fetch_user --> |"Some information **describing** the process"|user_found{Username found in the db?}
+  user_found --> Yes --> output_user_data[/Output user data/]
+  user_found --> No --> output_user_not_found[/Output user not found/]
+  output_user_data --> END(((end)))
+  output_user_not_found --> END
 ```
 
 ## Links
