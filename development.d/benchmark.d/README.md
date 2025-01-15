@@ -1,4 +1,4 @@
-# Benchmarking
+# Benchmarking or Performance testing
 
 ## HTTP
 
@@ -6,7 +6,7 @@ Apache jmeter was the long time defacto standard.
 
 ### Examples
 
-```
+```bash
 bombardier -c 400 -d 10s https://www.foo.bar
 
 cassowary run -u https://www.foo.bar -c 12 -n 400
