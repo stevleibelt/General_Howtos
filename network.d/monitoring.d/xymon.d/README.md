@@ -5,6 +5,7 @@ Xymon is a client/server based monitoring system for monitoring networks and ser
 ## Client
 
 * On debian, install `xymon-client hobbit-plugins`
+* Client hostname is configured in `/etc/default/xymon-client`
 * Configuration is done in `/etc/xymon/clientlaunch.d` (see `README.md`)
   * Extension `*.cfg` are enabled if they contain an `#DISABLED`
   * Extension `*.cfg` are disabled if they contain a `DISABLED`
