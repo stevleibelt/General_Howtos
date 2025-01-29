@@ -58,6 +58,12 @@ docker commit [options] <container_id> [repository [tag]]
 cd /var/lib/docker
 ```
 
+## Additional tools
+
+* [ctop: github.com](https://github.com/bcicen/ctop) - top for your containers
+* [dive: github.com](https://github.com/wagoodman/dive) - explore docker image layers
+* [lazydocker: github.com](https://github.com/jesseduffield/lazydocker) - manage docker environment centralized via a tui
+
 ## Links
 
 * [Docker Best Practices for Python Developers: testdriven.io](https://testdriven.io/blog/docker-best-practices/) - 20240412
