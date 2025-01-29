@@ -2,13 +2,26 @@
 
 Timers are a way to create a cronjob via systemd.
 
+## List and inspect
+
+```bash
+# list all timers
+systemctl list-timers --all
+
+# inspect one timer
+systemctl show my_foo.timer
+
+# show dedicated properties for all timers
+systemctl show --property=Description,NextElapseUSec,Unit,TimersCalendar,OnCalendar *.timer
+```
+
 ## Example
 
 ### Create a cron job that is executed each five minutes
 
 #### First, we need to create the service file
 
-```
+```bash
 sudo su
 cd /etc/systemd/system
 vim <your-name>.service
@@ -26,7 +39,7 @@ Group=<group name>
 
 #### Now, we need to create the timer file
 
-```
+```bash
 sudo su
 cd /etc/systemd/system
 vim <your-name>.timer
@@ -52,20 +65,20 @@ WantedBy=multi-user.target
 
 #### For testing
 
-```
+```bash
 systemctl start <your name>.service
 ```
 
 #### Enable it
 
-```
+```bash
 systemctl start <your name>.timer
 systemctl enable <your name>.timer
 ```
 
 #### Disable it
 
-```
+```bash
 systemctl disable <your name>.timer
 systemctl stop <your name>.timer
 ```
