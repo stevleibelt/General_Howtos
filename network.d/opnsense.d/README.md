@@ -43,7 +43,7 @@ Furthermore, you need to create a user. (`https://<opnsense ip>/system_usermanag
 
 ```bash
 ssh <user>@<opnsense ip>
-# or serial console (search for TTYUSB)
+# or serial console (search for TTYUSB) or minicom
 #if needed
 #give it a try if you need sudo or not
 sudo /usr/local/sbin/opnsense-shell
