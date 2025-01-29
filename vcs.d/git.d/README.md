@@ -346,6 +346,10 @@ git gc --aggressive
 git help hooks
 ```
 
+## Tools
+
+* [lazygit: github.com](https://github.com/jesseduffield/lazygit) - 2025-01-29
+
 ## Links
 
 * http://try.github.io/
