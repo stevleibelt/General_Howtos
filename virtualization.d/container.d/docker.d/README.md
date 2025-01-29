@@ -60,9 +60,9 @@ cd /var/lib/docker
 
 ## Additional tools
 
-* [ctop: github.com](https://github.com/bcicen/ctop) - top for your containers
-* [dive: github.com](https://github.com/wagoodman/dive) - explore docker image layers
-* [lazydocker: github.com](https://github.com/jesseduffield/lazydocker) - manage docker environment centralized via a tui
+* [ctop: github.com](https://github.com/bcicen/ctop) - top for your containers - 2025-01-29
+* [dive: github.com](https://github.com/wagoodman/dive) - explore docker image layers - 2025-01-29
+* [lazydocker: github.com](https://github.com/jesseduffield/lazydocker) - manage docker environment centralized via a tui - 2025-01-29
 
 ## Links
 
