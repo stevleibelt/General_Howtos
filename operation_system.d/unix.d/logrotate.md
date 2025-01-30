@@ -1,6 +1,8 @@
-# example
+# Logrotate
 
-```
+## Example
+
+```bash
 cat > /etc/logrotate.d/my_example<<DELIM
 #yes, comments are allowed
 #general option, used for all entries inside
@@ -33,7 +35,7 @@ su www-data www-data
 DELIM
 ```
 
-# how to test/debug
+## How to test/debug
 
 ```
 logrotate /etc/logrotate.d/my_example -d
@@ -42,7 +44,7 @@ logrotate /etc/logrotate.d/my_example -dv
 #
 ```
 
-# link
+## Links
 
 * [How To Setup Logrotate To Manage Log Files In Linux](https://www.looklinux.com/how-to-setup-logrotate-to-manage-log-files-in-linux/) - 20180822
 * [How To Manage Log Files With Logrotate On Ubuntu 12.10](https://www.digitalocean.com/community/tutorials/how-to-manage-log-files-with-logrotate-on-ubuntu-12-10) - 20130418
