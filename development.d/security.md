@@ -2,7 +2,7 @@
 
 ## General
 
-The OWASP Web Securityx Testing Guide is a prettxy passive but incredible good one. It contains classics like SQL injection but also way more.
+The OWASP Web Security Testing Guide is a prett passive but incredible good one. It contains classics like SQL injection but also way more.
 
 * Session
 * Cookies
@@ -41,5 +41,6 @@ The OWASP Web Securityx Testing Guide is a prettxy passive but incredible good o
 
 ## Links
 
+* [OWASP API Security Project](https://owasp.org/www-project-api-security/) - 20250203
 * [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
 
