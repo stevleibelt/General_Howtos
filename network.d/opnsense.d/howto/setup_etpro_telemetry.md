@@ -1,4 +1,4 @@
-# OS Pro Telemetry edition
+# OS Pro Telemetry edition on Opnsense
 
 ## HowTo
 

@@ -1,4 +1,4 @@
-# Setup DNS Servers
+# Setup DNS Servers on Opnsense
 
 ## HowTo
 

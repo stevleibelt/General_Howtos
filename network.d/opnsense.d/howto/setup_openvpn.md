@@ -1,4 +1,4 @@
-# Setup OpenVPN
+# Setup OpenVPN on Opnsense
 
 ## HowTo
 

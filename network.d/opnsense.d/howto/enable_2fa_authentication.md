@@ -1,4 +1,4 @@
-# Enable Two-Factor Authentication for OPNsense
+# Enable Two-Factor Authentication on Opnsense
 
 ## HowTo
 
