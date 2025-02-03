@@ -1,8 +1,12 @@
-# Useful commands
+# Screen
 
-## On the command line interface
+Screen sockets are located in `~/.screen`.
 
-```
+## Useful commands
+
+### On the command line interface
+
+```bash
 #start new screen session
 screen
 #with window name
@@ -30,12 +34,12 @@ session -dmS my_session_name bash -c 'echo "this is a test" >> bazzline.log; exe
 screen -S <pid>.<current screen session name> -X sessionname <new session name>
 ```
 
-```
+```bash
 #start a programm like irssi in a screen session
 /usr/bin/screen -DmS "irssi" /usr/bin/irssi &
 ```
 
-## In a screen session
+### In a screen session
 
 Window and shell are more or less the same.
 
@@ -59,7 +63,7 @@ Window and shell are more or less the same.
 | CTRL+a +[ | Start copy mode |
 | CTRL+a +] | Paste copied text |
 
-# links
+## Links
 
 * http://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/
 * http://www.dayid.org/comp/tm.html
