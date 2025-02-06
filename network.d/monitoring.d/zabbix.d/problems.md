@@ -2,7 +2,7 @@
 
 ## General, check the logs
 
-```
+```pwsh
 #on Windows PowerShell
 Get-Content "c:\Program Files\Zabbix Agent\zabbix_agentd.log" -tail 10 -wait
 ```
@@ -18,7 +18,7 @@ There is another option, it could be that this is triggered by the standby and t
 
 Check if `ServerActive` is pointing to the right machine.
 
-```
+```pwsh
 #Windows PowerShell
-Test-NetConnection -ComputerName <hostname or ip address> -Port 10050
+Test-NetConnection -ComputerName <string: hostname_or_ip_address> -Port 10050
 ```
