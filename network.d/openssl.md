@@ -20,6 +20,15 @@ HOSTNAME_WITH_PORT='www.bazzline.net:443'
 openssl s_client -connect ${HOSTNAME_WITH_PORT} 2>/dev/null </dev/null |  sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > ${HOSTNAME_WITH_PORT%:*}.pem;
 ```
 
+### Create a self-signed SSL certificate
+
+```bash
+# will output a cert.pem and a key.pem file
+# cert.pem contains the certificate
+# key.pem contains private key
+sudo openssl req -x509 -newkey rsa:4096 -nodes -out /var/certs/cert.pem -keyout /var/certs/key.pem -days 365
+```
+
 ### View pem files
 
 ```bash
