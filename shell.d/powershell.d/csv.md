@@ -1,14 +1,14 @@
-# Examples
+# PowerShell Examples
 
 # Update ad user properties from an csv file
 
-```
+```pwsh
 #given is that the csv file contains two columns, account and mail
 //add -Delimiter if the csv file is separated by ";"
 //add -Header column_name_one,column_name_two if your csv file has no header row
 //example how to filter for entries that have a column "organisation" with the content "bazzline"
 //  Import-Csv file.csv | where-object {$_.organisation -eq "bazzline"}
-$usere=Import-Csv c:\path\to\the.csv -Encoding UTF-8
+$users=Import-Csv c:\path\to\the.csv -Encoding UTF-8
 
 foreach ($user in $users) {
     Set-AdUser -Identity $user.account -EmailAddress $user.mail
@@ -16,7 +16,7 @@ foreach ($user in $users) {
 ```
 # Generate a csv from a data set
 
-```
+```pwsh
 $employees = @(
     [pscustomobject]@{
         FirstName = 'Adam'

@@ -2,36 +2,32 @@
 
 use command 'file' to determine the file format
 
+## Examples
+
+```bash
 # create multiple files at once
-
-## create foo1 foo2 foo3 foo4
-
-    touch foo{1,2,3,4}
+## creates foo1 foo2 foo3 foo4
+touch foo{1,2,3,4}
 
 # rename
+rename oldname newname files
+rename oldPrefix- newPrefix- oldPrefix-*
+rename .oldSuffix .newSuffix *.oldSuffix
 
-    rename oldname newname files
+# set sticky bit
+chmod +t -R *
 
-## example
+# set gid
+chmod g+s -R *
+```
 
-    rename oldPrefix- newPrefix- oldPrefix-*
-    rename .oldSuffix .newSuffix *.oldSuffix
-
-### parameters
+## Parameters
 
 * -b        -   brief mode
 * -i        -   charset (--mime)
 * -n        -   testrune (not available everywhere)
 * -v        -   verbose
 
-# set sticky bit
-
-    chmod +t -R *
-
-# set gid
-
-    chmod g+s -R *
-
-# links
+## Links
 
 * http://tips.webdesign10.com/how-to-bulk-rename-files-in-linux-in-the-terminal
