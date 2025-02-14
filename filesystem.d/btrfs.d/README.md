@@ -28,7 +28,7 @@ sudo btrfs filesystem usage /
 # accepted raid levels are raid0, raid1 and raid10
 # raid0: striping
 # raid1: mirroring
-sudo btrfs balance start -dconvert=[raid level] -mconver=[raid level] /
+sudo btrfs balance start -dconvert=[raid level] -mconvert=[raid level] /
 
 # Start defragmentation for mountpoint /
 sudo btrfs defragment -r /
