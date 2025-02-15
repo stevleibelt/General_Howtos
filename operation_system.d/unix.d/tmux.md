@@ -15,6 +15,31 @@
 * Has layouts
 * You can syncron run the same command on many screens at the same time
 
+## Keybindings
+
+```bash
+# create new window/tab
+ctrl+b c
+
+# move to next window
+ctrl+b n
+# move to next previous
+ctrl+b p
+# move to specific window
+ctrl+b <int: 0-9>
+# list all windows
+ctrl+b w
+
+# list numbers of the panes in the current window
+#   the red number indicates your currently active pannel
+# press the number for the pane you want to switch to
+ctrl+b q
+# create a new pane vertically
+ctrl+b %
+# create a new pane horizontally
+ctrl+b "
+```
+
 ## Configuration
 
 ```bash
@@ -25,7 +50,7 @@ set-option -g status-position top
 
 # you can also set colors
 
-# remap repfix to control + y
+# remap prefix to control + y
 set -g prefix C-y
 unbind C-y
 bind C-y send-prefix
