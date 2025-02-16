@@ -1,8 +1,10 @@
-# configuration
+# CUPS
 
-## server
+## Configuration
 
-```
+### Server
+
+```bash
 #allow access
 vim /etc/cups/cupsd.conf
 <Location />
@@ -20,13 +22,13 @@ Listen <hostname>:631
 Listen <host ip address>:631
 ```
 
-# error handling
+## Error Handling
 
 Set the `LogLevel` to `Debug` in `/etc/cups/cupsd.conf`.
 
-## printer is disabled / Unable to send data to printer. / The printer may not exist or is unavailable at this time
+### Printer is disabled / Unable to send data to printer. / The printer may not exist or is unavailable at this time
 
-```
+```bash
 #check current state
 lptstat -p
 
@@ -37,23 +39,22 @@ _or_
 * open `https://<cups server ip address or host name>:631`
 * go to `Printers` -> `<printer>` -> `Maintenance` -> `Recume Printer`
 
-# cupsctl
+## Cupsctl
 
-```
+```bash
 #share printer with clients in the same subnet
 cupsctl --share-printers
 #share printer with clients from any subnet
 cupsctl --share-printers --remote-any
 ```
 
+## Error
 
-# error
-
-## /var/spool/cups/tmp/.hplip'
+### /var/spool/cups/tmp/.hplip'
 
 All you have to do is go to the CUPS printer administration page and click "Resume Printer"
 
-##  Paused - "Filter failed"
+###  Paused - "Filter failed"
 
 * install sane
 * uncomment hpaio in /etc/sane.d/dll.conf
@@ -62,7 +63,7 @@ All you have to do is go to the CUPS printer administration page and click "Resu
 [source](https://bbs.archlinux.org/viewtopic.php?id=85454)
 [image](http://blog.willygroup.org/wp-content/uploads/2011/02/cups.png)
 
-# link
+## Links
 
 * [Diy quick and easy samba print server setup](https://www.techrepublic.com/blog/diy-it-guy/diy-quick-and-easy-samba-print-server-setup/) - 2020-02-18
 * [ipp based print server cups](https://www.howtoforge.com/ipp_based_print_server_cups) - 2020-02-18
@@ -75,4 +76,3 @@ All you have to do is go to the CUPS printer administration page and click "Resu
 * [network printing with ubuntu](https://help.ubuntu.com/community/NetworkPrintingWithUbuntu)
 * [CUPS Command-Line Utilities on oracle.com](https://docs.oracle.com/cd/E23824_01/html/821-1451/gllgm.html)
 * [How to resume CUPS printer from command line?](https://superuser.com/questions/280396/how-to-resume-cups-printer-from-command-line)
-
