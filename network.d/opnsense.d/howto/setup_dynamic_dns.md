@@ -1,23 +1,21 @@
-# Setup DynDNS nsupdate.info
+# Setup IPv4 dynamic dns for nsupdate.info on Opnsense
 
 ## HowTo
 
-* `System` -> `Firmware` -> `Plugins`
-  * Search fpr `os-dyndns` and install it
+* `System` -> `Firmware` -> `Plugins` (`https://<string: opnsense_ip>/ui/core/firmware#plugins`)
+  * Search for `os-ddclient` and install it
 * Reload GUI
-* `Services` -> `Dynamic DNS (legacy)` (`https://<opnsense ip>/services_dyndns_edit.php`)
+* `Services` -> `Dynamic DNS)` -> `Settings` (`https://<string: opnsense ip>/ui/dyndns`)
   * `Add`
   * Enabled: yes
-  * Type of service: custom
-  * Used interface: WAN
-  * Interface where updates are sent from: WAN
-  * Hostname: `<your name>.nsupdate.info`
-  * CURL options: force ipv4 name resolution
-  * Username: `<your name>.nsupdate.info`
-  * Password: `<password>`
-  * Update URL: `https://ipv4.nsupdate.info/nic/update`
-  * Result Check: `good %IP%|nochg %IP%`
-  * Description: `update DDNS host with IP v4 address`
+  * Service: nsupdatev4
+  * Description: `nsupdate_ipv4`
+  * Username: `<string: username>.nsupdate.info`
+  * Password: `<string: password>`
+  * Hostnames: `<string: username>.nsupdate`
+  * Check ip method: `nsupdate.info-ipv4`
+  * Check ip timeout: `10`
+  * Force SSL: yes
 
 ## Links
 

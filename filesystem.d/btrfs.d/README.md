@@ -3,11 +3,67 @@
 ## General information
 
 ```bash
-# show usage for root
+# check status for mountpoint /
+sudo btrfs filesystem show /
+
+# check statistics and errors for mountpoint /
+sudo btrfs device stats /
+
+# show usage for mountpoint /
 sudo btrfs filesystem usage /
 
-# show balance status for root
-sudo btrfs balance status /
+# check filesystem capacity for mountpoint /
+sudo btrfs filesystem df stats /
+
+# start balance status for mountpoint /
+sudo btrfs balance start /
+
+# show balance status for mountpoint /
+sudo btrfs balance status [-v] /
+
+# show usage and raid level of data and meta for mountpoint /
+sudo btrfs filesystem usage /
+
+# change raid levels for mountpoint /
+# accepted raid levels are raid0, raid1 and raid10
+# raid0: striping
+# raid1: mirroring
+sudo btrfs balance start -dconvert=[raid level] -mconvert=[raid level] /
+
+# Start defragmentation for mountpoint /
+sudo btrfs defragment -r /
+
+# Start scrubbing for mountpoint /
+sudo btrfs scrub start /
+
+# List scrubbing status for mountpoint /
+sudo btrfs scrub status /
+
+# Add a device to mountpoint /
+sudo btrfs device add -f /dev/[sdx] /
+
+# Remove a device from mountpoint /
+sudo btrfs device delete /dev/[sdx] /
+
+# Remove a missing device from mountpoint /
+sudo mount -o degraded /dev/[sdx] /
+```
+
+## Handle subvolumes
+
+```bash
+# list subvolume
+sudo btrfs subvolume list
+
+# create subvolume
+sudo btrfs subvolume create
+
+# delete subvolume
+sudo btrfs subvolume delete
+
+# create snapshot
+sudo btrfs snapshot
+
 ```
 
 ## Create btrfs with a cached device using lvm

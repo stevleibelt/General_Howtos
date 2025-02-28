@@ -1,4 +1,4 @@
-# Setup Wireguard
+# Setup wireguard on Opnsense
 
 ## HowTo
 

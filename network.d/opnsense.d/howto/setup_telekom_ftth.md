@@ -1,4 +1,4 @@
-# Setup Telekom FTTH/Glasfaser via PPPoE
+# Setup Telekom FTTH/Glasfaser via PPPoE on Opnsense
 
 ## HowTo
 
