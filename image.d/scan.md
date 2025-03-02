@@ -1,4 +1,6 @@
-# packages
+# Scan under linux
+
+## Packages
 
 * sane
 * xsane
@@ -6,24 +8,26 @@
 * [xsane-gimp]
 * [gocr]    #simple gui for orc
 
-# check if your device is supported
+## Check if your device is supported
 
-```
+```bash
+sane-find-scanner
+#or
 scanimage -L
 ```
 
-# scan on the commandline
+## Scan on the commandline
 
-```
+```bash
 scanimage -d [device name] format=tiff mode Lineart resolution
 300 > [filename]
 ```
 
-# using gimp
+## Using gimp
 
 * File -> create -> XSANE:<your device>
 
-# links
+# Links
 
 * https://wiki.archlinux.org/index.php/Scan
 * https://www.gadgetdaily.xyz/how-to-get-started-with-the-google-maps-api/
