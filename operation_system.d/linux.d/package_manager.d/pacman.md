@@ -122,6 +122,22 @@ Exec = /usr/bin/bash -c "reflector --country '$(echo ${COUNTRY_NAME})' -l $(echo
 DELIM
 ```
 
+## Update mirrorlist
+
+```bash
+# by hand, has to be done as root
+# backup old mirrorlost
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+# download new mirrorlist
+# change or remove country section
+curl -o mirrorlist "https://archlinux.org/mirrorlist/?country=DE&protocol=https&ip_version=4&ip_version=6"
+# enable servers
+sed -i 's/^#Server/Server/1' mirrorlist
+
+# by using reflector
+sudo reflector --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+```
+
 ## Links
 
 * https://wiki.archlinux.org/index.php/Pacman_tips#Custom_local_repository
