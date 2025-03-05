@@ -36,6 +36,17 @@ zpool import -l [-R /my/mountpoint] <string: zpool_id_or_name>
 zfs load-key [-nr] <string: zpool_id_or_name>
 ```
 
+### Change key of encrypted zpool
+
+```bash
+# fetch information about key
+zfs get keylocation,encryption,keyformat <string: zpool_id_or_name>
+
+# assumed keyformat is passphrase
+# ref: https://openzfs.github.io/openzfs-docs/man/master/8/zfs-change-key.8.html#Encryption
+zfs change-key -o keyformat=passphrase rpool <string: zpool_id_or_name>
+```
+
 ### Prepare empty disk and add gpt/efi label
 
 ```bash
@@ -260,6 +271,7 @@ hdparm -I /dev/sdX
 
 * [FreeNAS / TrueNAS ZFS Pools RAIDZ RAIDZ2 RAIDZ3 Capacity, Integrity, and Performance: lawrencesystems.com](https://forums.lawrencesystems.com/t/freenas-truenas-zfs-pools-raidz-raidz2-raidz3-capacity-integrity-and-performance/3569) - 20231101
 * [Getting started with OpenZFS: github.io](https://openzfs.github.io/openzfs-docs/Getting Started) - 20210211
+* [ZFS Handbook](https://www.zfshandbook.com/docs/getting-started/introduction) - 20250305
 * [ZFS Raidz Performance, Capacity and Integrity: calomeg.org](https://calomel.org/zfs_raid_speed_capacity.html) - 20231101
 * http://stoneyforest.net/~chris/blog/freebsd/zfs/maint.html
 * https://pthree.org/2012/12/07/zfs-administration-part-iv-the-adjustable-replacement-cache/
