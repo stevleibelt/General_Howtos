@@ -27,6 +27,24 @@ cp config.php config.php.<yyyymmdd>
     ]
 ```
 
+## Disable server side encryption
+
+One big remark, no backup, no sympathy.
+
+```
+# Tested on nextcloud 31.0.0
+# ref: https://github.com/nextcloud/server/issues/51066#issuecomment-2692810220
+
+# for each user
+php public/occ encryption:decrypt-all <string: user_name>
+rm -fr data/<string: user_name>/files_encryption
+rm -fr data/<string: user_name>/encryption_migration_backup*
+
+# on time
+php public/occ encryption:disable
+php public/occ app:disable encryption
+```
+
 ## Update from 20.x to 22.x
 
 "The old server-side-encryption format is enabled. We recommend disabling this. For more details see the documentation."
