@@ -2,7 +2,18 @@
 
 ref: https://forum.opnsense.org/index.php?topic=6590.0
 
+## Test network speed
+
 Use [LibreSpeed](https://librespeed.org/) to test the internet connection speed.
+
+```bash
+# For local tests
+# on server:
+iperf3 -s -B <string: server_ip_address>
+
+# on client:
+iperf3 -c <string: server_ip_address> -d -t 60 -i 10 [-B <string: client_ip_address>]
+```
 
 ## Fetch general information
 
