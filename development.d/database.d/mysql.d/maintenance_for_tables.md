@@ -1,36 +1,38 @@
-# analyze table
+# Maintenance of MySQL Table
 
-```
+## Analyze Table
+
+```bash
 mysqlcheck --analyze [--user=<user_name>] [--password=<password>] [--all-databases]
 #or
 mysql -u${MYSQL_USER_NAME} -p${MYSQL_PASSWORD} -h${MYSQL_HOST} ${MYSQL_DATABASE} --execute="ANALYZE TABLE ${TABLE_NAME_TO_TAKE_CARE_OF};"
 ```
 
-# repair table
+## Repair Table
 
-```
+```bash
 mysqlcheck --repair [--user=<user_name>] [--password=<password>] [--all-databases]
 #or
 mysql -u${MYSQL_USER_NAME} -p${MYSQL_PASSWORD} -h${MYSQL_HOST} ${MYSQL_DATABASE} --execute="REPAIR TABLE ${TABLE_NAME_TO_TAKE_CARE_OF};"
 ```
 
-# optimize table
+## Optimize Table
 
-```
+```bash
 mysqlcheck --optimize [--user=<user_name>] [--password=<password>] [--all-databases]
 #or
 mysql -u${MYSQL_USER_NAME} -p${MYSQL_PASSWORD} -h${MYSQL_HOST} ${MYSQL_DATABASE} --execute="OPTIMIZE TABLE ${TABLE_NAME_TO_TAKE_CARE_OF};"
 ```
 
-# more?
+## Do you want to know more?
 
-```
+```bash
 man mysqlcheck
 ```
 
-# As SQL Statement
+## All as SQL Statement
 
-```
+```mysql
 -- @see: http://dev.mysql.com/doc/refman/5.7/en/analyze-table.html
 ANALYZE TABLE `my_table`;
 
