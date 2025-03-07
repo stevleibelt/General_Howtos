@@ -29,6 +29,20 @@
 * [tor](https://docs.opnsense.org/manual/how-tos/tor.html) - 20230213
 * [wireguard](https://docs.opnsense.org/manual/how-tos/wireguard-client.html) - 20230213
 
+## USEFUL SHELL COMMANDS
+
+ref: https://forum.opnsense.org/index.php?msg=28319
+
+| Command | Description |
+| --- | --- |
+| sysctl net.inet.tcp.hostcache.list | View the current host cache stats |
+| vmstat -i | Query total interrupts per queue |
+| top -H -S | Watch CPU usage |
+| dmesg | grep -i msi | Verify MSI-X is being used by the NIC | 
+| netstat -ihw 1 | Look for idrops to determine hw.igb.txd and rxd | 
+| grep <interface> /var/run/dmesg.boot | Shows useful info like netmap queue/slots |
+| sysctl -A | Shows system variables |
+
 ## Update
 
 ### From cli
