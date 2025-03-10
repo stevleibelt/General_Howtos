@@ -30,6 +30,14 @@ grep -q
 grep -v
 ```
 
+## Grep using a list of files
+
+```bash
+# As example, create a file that contain files
+find /foo/bar -iname "*txt" -type f -exec realpath {} \; > /tmp/my_find_result.txt
+xargs grep <string: my_search_pattern> < /tmp/my_find_result.txt
+```
+
 ## Print only but all matchings (even if they are on the same line)
 
 * @see: https://unix.stackexchange.com/questions/6979/count-total-number-of-occurrences-using-grep
