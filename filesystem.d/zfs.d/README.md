@@ -170,6 +170,8 @@ zfs set relatime=on <pool name>[/<data set name>]
 ```bash
 #list with space
 zfs list -o space
+#list all with space
+zfs list -t all -o space
 
 #list by only one zpool and only name (to easy up piping this result into a command)
 zfs list -r <pool name> -o name
