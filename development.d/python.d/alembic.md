@@ -83,6 +83,18 @@ def include_object(object, name, type_ reflected, compare_to):
     version_table=version_table_name,
 ```
 
+## Howto's
+
+### Truncate all data to start from the beginning
+
+```bash
+# downgrade to initial version
+alembic downgrade base
+
+# upgrade to latest version
+alembic upgrade head
+```
+
 * You can now `cd` into each project and call `alembic check` etc.
 
 ## Links
