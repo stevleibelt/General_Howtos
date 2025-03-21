@@ -27,11 +27,24 @@ cp config.php config.php.<yyyymmdd>
     ]
 ```
 
+## Enable server side encryption
+
+One big remark, no backup, no sympathy.
+
+```bash
+# Tested on nextcloud 31.0.2
+# ref: https://github.com/nextcloud/server/issues/51066#issuecomment-2692810220
+
+php public/occ app:enable encryption
+php public/occ encryption:enable
+php public/occ encryption:encrypt-all
+```
+
 ## Disable server side encryption
 
 One big remark, no backup, no sympathy.
 
-```
+```bash
 # Tested on nextcloud 31.0.0
 # ref: https://github.com/nextcloud/server/issues/51066#issuecomment-2692810220
 
