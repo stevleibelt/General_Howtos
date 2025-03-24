@@ -1,20 +1,22 @@
-# configure client
+# SQLite
 
-```
+## Configure client
+
+```bash
 vi ~/.sqliterc
 ```
 
-# create database
+## Create database
 
-```
+```bash
 sqlite3 <database_name>.db
 ```
 
-# import csv file
+## Import csv file
 
 Following command will create a database table if needed
 
-```
+```bash
 sqlite3
 #switch to csv mode
 .mode csv
@@ -24,13 +26,21 @@ sqlite3
 .import <file_path>.csv <database_name>
 ```
 
-# list available tables
+## List available tables and columns
 
-```
+```bash
 sqlite3
-.schema <database_name>
+
+# list tables
+.tables
+
+# list columns
+PRAGMA table_info(table_name);
+
+# list create schema
+.schema
 ```
 
-# links
+## Links
 
 * [quick tutorial by mark litwintschik](http://tech.marksblogg.com/sqlite3-tutorial-and-guide.html)
