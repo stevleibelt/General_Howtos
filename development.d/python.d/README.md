@@ -121,6 +121,7 @@ Modules are located in `c:\Python`.
 * [packagin python modules with wheels](https://opensource.com/article/23/1/packaging-python-modules-wheels) - 20230127
 * [programming tutorial](https://www.programiz.com/python-programming/tutorial) - 20190111
 * [python build in methods](https://www.programiz.com/python-programming/methods/built-in) - 20190111
+* [python fluent booknotes](https://bjpcjp.github.io/2025/04/02/python-fluent-booknotes.html) - 20250404
 * [python list methods](https://www.programiz.com/python-programming/methods/list) - 20190111
 * [>>A dozen ways to learn Python<<](https://opensource.com/article/19/8/dozen-ways-learn-python) - 20190827
 
