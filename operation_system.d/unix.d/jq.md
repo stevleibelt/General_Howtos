@@ -57,6 +57,7 @@ cat my.json | jq -c -r '.Date[5:25] | strptime("%d %b %Y %H:%M:%S") | strftime("
 * [An introduction to JQ: earthly.dev](https://earthly.dev/blog/jq-select/) - 20231220
 * [Official page: stedolan.github.io](https://stedolan.github.io/jq/) - 20230213
 * [JQ cheat sheet: lzone.de](https://lzone.de/cheat-sheet/jq) - 20230213
+* [JQ / Playground: port.io](https://jq.port.io/) - 20250409
 * [JQ select explained: eartly.dev](https://earthly.dev/blog/jq-select/) - 20230213
 * [Some notes (to myself) about formatting text in jq: utcc.utoronto.ca](https://utcc.utoronto.ca/~cks/space/blog/sysadmin/JqFormattingTextNotes) - 20230315
 
