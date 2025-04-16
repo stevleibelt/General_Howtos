@@ -99,6 +99,11 @@ $_ = current shell
 #show full history
 history
 
+#delete line in history
+history -d <int: line_number>
+#persist change
+history -w
+
 #show partial history
 history <number of last entries you want to see>
 
