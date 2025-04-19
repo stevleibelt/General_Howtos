@@ -2,6 +2,12 @@
 
 ## Examples
 
+### Download into a directory
+
+```bash
+wget -P /my/path <string: url>
+```
+
 ### Download with different file name
 
 ```bash
