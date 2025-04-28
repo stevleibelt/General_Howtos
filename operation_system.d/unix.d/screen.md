@@ -15,7 +15,7 @@ screen -S <my name>
 #list available screen sessions
 screen -ls [<match>]
 
-#detache a running screen session
+#detach a running screen session
 screen -d [<session identifier>]
 
 #reattach to existing screen session or list available sessions
