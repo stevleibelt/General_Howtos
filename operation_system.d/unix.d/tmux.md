@@ -18,6 +18,9 @@
 ## Keybindings
 
 ```bash
+# enter command mode
+ctrl+b :
+
 # create new window/tab
 ctrl+b c
 
@@ -104,8 +107,9 @@ tmux attach -t 0
 
 ## Link
 
-* [video - tmux warum ein schwarzes fenster reicht](https://media.ccc.de/v/DCJGKA)
+* [tmux cheat sheet](https://tmuxcheatsheet.com/) - 20250314
 * [tmux crash course](https://robots.thoughtbot.com/a-tmux-crash-course)
 * [tmux on archlinux](https://wiki.archlinux.org/index.php/Tmux)
-* [source code](https://github.com/tmux/tmux/wiki)
 * [tmux on wikipedia](https://en.wikipedia.org/wiki/Tmux)
+* [source code](https://github.com/tmux/tmux/wiki)
+* [video - tmux warum ein schwarzes fenster reicht](https://media.ccc.de/v/DCJGKA)
