@@ -69,7 +69,7 @@
 * `VPN` -> `WireGuard` -> `Peer generator` (`https://<string: opnsense_ip>/ui/wireguard/general#configbuilder`)
 * Instance: `WGServer`
 * Endpoint: `my.dynamicdns.org:51820` (This is an example)
-* Name: `My Phone`
+* Name: `My_Phone`
 * Address: `10.0.0.2/32`
 
 ----

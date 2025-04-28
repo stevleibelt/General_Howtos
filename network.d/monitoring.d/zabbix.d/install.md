@@ -1,8 +1,10 @@
-# Installation
+# Zabbix
+
+## Installation
 
 * see [here](https://www.zabbix.com/download?zabbix=6.0&os_distribution=debian&os_version=11_bullseye&db=mysql&ws=apache)
 
-```
+```bash
 wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-1+debian11_all.deb
 dpkg -i zabbix-release_6.0-1+debian11_all.deb
 apt update
@@ -29,7 +31,7 @@ systemctl enable zabbix-server zabbix-agent apache2
 #continue with: https://www.zabbix.com/documentation/current/manual/installation/install#installing_frontend
 ```
 
-# Optimize MySQL
+## Optimize MySQL
 
 * If possible, balance the filesystem load to multiple disks
     * `datadir` to specify the default location, that is to dedicate the hard drives to the data directory;
@@ -84,6 +86,6 @@ FROM
     * `binlog_cache_size`
     * `net_buffer_length` 
 
-# Link
+## Link
 
 * [MySQL performance tuning 101 for Zabbix](https://blog.zabbix.com/mysql-performance-tuning-101-for-zabbix/13899/) - 20210416

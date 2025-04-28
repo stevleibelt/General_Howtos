@@ -1,10 +1,10 @@
-# Usage
+# Pi-Hole
+
+## Usage and usefull commands
 
 If you install it on a debian or fedora system use `curl -sSL https://install.pi-hole.net | bash` [source](https://github.com/pi-hole/pi-hole/#one-step-automated-install).
 
-## Usefull commands
-
-```
+```bash
 # update password
 pihole -a -p <password>
 
@@ -17,7 +17,7 @@ systemctl start pihole-FTL.service
 
 ## pihole cli
 
-```
+```bash
 Usage: pihole [options]
 Example: 'pihole -w -h'
 Add '-h' after specific commands for more information on usage
@@ -53,96 +53,30 @@ Options:
 
 ## Configuration files
 
-```
+```bash
 /etc/pihole/pihole-FTL.conf
 ```
 
-# Installation
-
-## Via Podman
-
-```
-
-```
-
-## On Archlinuxarm
-
-```
-mkdir -p software/source/org/archlinux/aur
-cd software/source/org/archlinux/aur
-git clone https://aur.archlinux.org/pi-hole-ftl.git
-cd pi-hole-server
-makepkg -Csri
-sudo pacman -U *.tar.xz
-cd ../
-#if you want to have webserver to
-git clone https://aur.archlinux.org/pi-hole-server.git
-cd pi-hole-server
-makepkg -Csri
-sudo pacman -U *.tar.xz
-```
-
-# Testing
+## Testing
 
 You should run the tests once with providing the ip address of your pi-hole and a second time without providing the ip address of your pi-hole.   
 If both tests are generating the right results, you have verified that all clients using the pi-hole as dns server.
 
-## Linux
-
-```
-# should work
+```bash
+# Linux
+# Should work
 dig @<ip of pi-hole> google.com
-
-# should be blocked
+# Should be blocked
 dig @<ip of pi-hole> s.amazon-adsystem.com
-```
 
-## Windows
-
-```
-# should work
+# Windows
+# Should work
 Resolve-DnsName -Server <ip of pi-hole> -Name google.com 
-
-# should be blocked
+# Should be blocked
 Resolve-DnsName -Server <ip of pi-hole> -Name s.amazon-adsystem.com
 ```
 
-# Error fixing
-
-## DNS resolution fails
-
-If you could please try the following steps:
-
-    Restore /etc/resolve.conf to its initial default state - contains:
-    nameserver 127.0.0.1
-
-    Check that /etc/systemd/resolved.conf contains
-    DNSStubHandler=no
-
-    Force a reload of all of systemd-resolved's configuration files
-    sudo systemctl reload-or-restart systemd-resolved
-
-    Repair Pi-hole (to ensure dnsmasq's config files are correct)
-    pihole -r
-
-    Then, if you could please report the output of
-    systemctl status dnsmasq.service systemd-resolved
-
-Should they not both be running:
-
-    if you could please try:
-    sudo systemctl daemon-reload
-
-    then once again
-    pihole -r
-
-    and once again, please report the output of
-    systemctl status dnsmasq.service systemd-resolved
-```
-
-[source](https://github.com/pi-hole/pi-hole/issues/2179)
-
-# Link
+## Links
 
 * [Pi-hole - arch linux wiki](https://wiki.archlinux.org/index.php/Pi-hole)
 * [Install Pi hole on arch](https://blog.jenningsga.com/install-pi-hole-on-arch/) - 2017-02-19

@@ -136,10 +136,10 @@ ping -c 3 www.google.de
 
 ```bash
 # on server:
-iperf -s -B <server ip address>
+iperf -s -B <string: server_ip_address>
 
 # on client:
-iperf -c <server ip address> -d -t 60 -i 10
+iperf -c <string: server_ip_address> -d -t 60 -i 10 [-B <string: client_ip_address>]
 ```
 
 ## resource record
