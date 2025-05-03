@@ -45,6 +45,28 @@ Section "InputClass"
 EndSection
 ```
 
+## Find keyboard device
+
+```bash
+# for each file in /dev/input/event*
+sudo cat /dev/input/event[1-33]
+# second terminal
+# typ in something, if you see anything in the cat,
+#  you've found your keyboard
+```
+
+## Log input
+
+```bash
+# log keyboard input
+osa -l my_file.log -n /dev/input/eventX
+# for clipboard
+#  start server
+copyq enable
+#  list copied stuff
+copyq show
+```
+
 ## Links
 
 * [libinput: archlinux.org](https://wiki.archlinux.org/index.php/Libinput)
