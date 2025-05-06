@@ -57,6 +57,8 @@ sudo cat /dev/input/event[1-33]
 
 ## Log input
 
+You can use `xev` to print contents of X events.
+
 ```bash
 # log keyboard input
 osa -l my_file.log -n /dev/input/eventX
