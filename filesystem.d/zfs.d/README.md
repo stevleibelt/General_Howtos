@@ -21,6 +21,21 @@ With [openzfs](https://openzfs.org/), the future is great!
 
 ## Regular tasks
 
+### Attach device
+
+```bash
+# If a pool has one device, the second attached device converts the pool to a
+#   mirror automatically
+# List attached devices
+zpool status
+
+# Attach device
+zpool attach <string: zpool_id_or_name> /dev/existig_device /dev/new_device
+# If you run into an error like: contains a filesystem of type ...
+wipefs -a /dev/new_device
+# Retry attaching
+```
+
 ### Mount a native encrypted zpool
 
 ```bash
