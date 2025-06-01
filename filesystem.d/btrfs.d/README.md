@@ -15,6 +15,12 @@ sudo btrfs filesystem usage /
 # check filesystem capacity for mountpoint /
 sudo btrfs filesystem df stats /
 
+# check filesystem
+btrfs check /dev/<string: device>
+
+# mount btrfs mirror with missing device as read only
+mount -o ro -o degraded /dev/<string: device> <string: mount_path>
+
 # start balance status for mountpoint /
 sudo btrfs balance start /
 
@@ -63,7 +69,6 @@ sudo btrfs subvolume delete
 
 # create snapshot
 sudo btrfs snapshot
-
 ```
 
 ## Create btrfs with a cached device using lvm
