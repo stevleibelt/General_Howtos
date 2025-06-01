@@ -134,6 +134,38 @@ zfs create -o mountpoint=<mount point> <pool name>/<data set name>
 zfs destroy <pool name>/<data set name>
 ```
 
+### Migrate from Btrfs
+
+Given:
+* You have a running btrfs mirror and want to migrate to a zfs mirror
+* Your btrfs mount point is `/data`
+* Your btrfs has two devices, `/dev/sdb` and `/dev/sdc`
+* You have a copy of the data of `/data`
+* Your zpool is named `bazzline-4qb2`
+
+```bash
+# remove one device from bpool
+umount /data
+wipefs -fa /dev/sdb
+
+# create zpool
+zpool create -o ashift=12 -o autotrim=on bazzline-4qb2 /dev/sdb
+zfs set mountpoint=/data bazzline-4qb2
+
+# mount bpool read only
+btrfs check /dev/sdc
+mkdir /old_data
+mount -o ro -o degraded /dev/sdc /old_data
+
+# copy data
+rsync -caqHS --delete /tmp/old_data/* /data/
+
+# add second device to zpool
+umount /old_data
+wipefs -fa /dev/sdc
+zpool attach bazzline-4qb2 /dev/sdb /dev/sdc
+```
+
 ## options
 
 * -r    -   recursively all children
