@@ -30,8 +30,12 @@ ctrl+b n
 ctrl+b p
 # move to specific window
 ctrl+b <int: 0-9>
+# _or
+ctrl+b <arrow_key_up|down|left|right>
 # list all windows
 ctrl+b w
+# close current active pane
+ctrl+b x
 
 # list numbers of the panes in the current window
 #   the red number indicates your currently active pannel
@@ -39,8 +43,15 @@ ctrl+b w
 ctrl+b q
 # create a new pane vertically
 ctrl+b %
+# _or
+ctrl+b :split-window -v
 # create a new pane horizontally
 ctrl+b "
+# _or
+ctrl+b :split-window -h
+
+# resize pane
+ctrl+b ctrl+<arrow_key_up|down|left|right>
 ```
 
 ## Configuration
