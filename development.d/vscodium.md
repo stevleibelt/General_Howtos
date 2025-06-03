@@ -1,8 +1,6 @@
-# Editor or IDE
+# VSCodium
 
-## VSCodium
-
-### Used Extension
+## Used Extension
 
 I am using [vscodium](https://github.com/VSCodium/vscodium) with the following extensions:
 
@@ -28,9 +26,9 @@ I am using [vscodium](https://github.com/VSCodium/vscodium) with the following e
 * [Zenburn](https://github.com/ryanolsonx/vscode-zenburn-theme)
 * [Zenburn Monolith Theme](https://github.com/nicolagranata/vscode-theme-zenburn-monolith)
 
-### HowTo
+## HowTo
 
-#### Disable Preview
+### Disable Preview
 
 * [Source](https://www.nicoespeon.com/en/2020/01/change-vscode-preview-files/) - 2020-01-01
 * Issue is, that you want to open multiple files but vscodium is "overwriting" this one tab with other files
