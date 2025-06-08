@@ -1,12 +1,12 @@
 # determine current dns server
 
-```
+```bash
 nslookup www.bazzline.net | grep "Server:"
 ```
 
 # how to set a dns server
 
-```
+```bash
 #add an entry starting with "nameserver <ip address>"
 #sudo vim /etc/resolv.conf
 #or simple add a line to the end
@@ -113,16 +113,28 @@ Unfinished list based on [this result](https://duckduckgo.com/?q=free+and+uncens
 | | 77.88.8.2 | 2a02:6b8:0:1::feed:bad | 20150701 |
 | puntCAT | 109.69.8.51 | 2a00:1508:0:4::9 | 20150701 |
 
+## DNS4EU
+
+ref: https://www.joindns4.eu/
+
+| IP Address | Comment |
+| --- | --- |
+| 86.54.11.1 | Protective Resolution |
+| 86.54.11.12 | Protective + Child Protection |
+| 86.54.11.13 | Protective + Ad blocking |
+| 86.54.11.11 | Protective + Child Protection + Ad blocking |
+| 86.54.11.100 | Unfiltered Resolution |
+
 ## free dns
 
-```
+```bash
 37.235.1.174
 37.235.1.177
 ```
 
 ## dns.watch
 
-```
+```bash
 84.200.69.80
 84.200.70.40
 2001:1608:10:25::1c04:b12f
@@ -131,7 +143,7 @@ Unfinished list based on [this result](https://duckduckgo.com/?q=free+and+uncens
 
 ## censurfridns.dk
 
-```
+```bash
 91.239.100.100
 89.233.43.71
 2001:67c:28a4::
@@ -140,7 +152,7 @@ Unfinished list based on [this result](https://duckduckgo.com/?q=free+and+uncens
 
 ## ccc e.V.
 
-```
+```bash
 213.73.91.35
 194.150.168.168
 204.152.184.76 (f.6to4-servers.net, ISC, USA)
@@ -153,7 +165,7 @@ Unfinished list based on [this result](https://duckduckgo.com/?q=free+and+uncens
 
 ## germany privacy foundation
 
-```
+```bash
 87.118.100.175
 62.141.58.13
 87.118.104.203
@@ -163,13 +175,13 @@ Unfinished list based on [this result](https://duckduckgo.com/?q=free+and+uncens
 
 ## digital courage e.V. 
 
-```
+```bash
 85.214.73.63
 ```
 
 ## opennic
 
-```
+```bash
 109.69.8.34 (ns1.bcn.es) -- 98.73% uptime
 192.71.245.208 (ns1.it) -- 99.50% uptime
 41.185.78.25 (ns1.wc.za) -- 93.24% uptime
@@ -180,14 +192,14 @@ Unfinished list based on [this result](https://duckduckgo.com/?q=free+and+uncens
 
 ## opendns
 
-```
+```bash
 208.67.222.222
 208.67.220.220
 ```
 
 ## google
 
-```
+```bash
 8.8.8.8
 8.8.4.4
 ```
