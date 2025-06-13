@@ -83,6 +83,19 @@ pip install --upgrade "project" [--user]
 python -m pip install --user virtualenv
 ```
 
+## Multiple python versions
+
+Install `pyenv` to be able to handle that.
+
+```bash
+# ref: https://www.freecodecamp.org/news/manage-multiple-python-versions-and-virtual-environments-venv-pyenv-pyvenv-a29fb00c296f/
+# Install python version 3.12
+pyenv install 3.12
+
+# Create venv for this version
+~/.pyenv/versions/3.12.11/bin/python -m venv .venv
+```
+
 ## Windows
 
 Try to use the python launcher for windows `py`.
