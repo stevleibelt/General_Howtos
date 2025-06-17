@@ -18,18 +18,30 @@ nmcli device show | grep -i dns
 nmcli connection reload
 
 #add static ethernet connection
-nmcli connection add con-name <string: connection_name> ifname <string: interface name> type ethernet
-nmcli connection modify <string: connection_name> ipv4.addresses <ip address>/<network mask>
+nmcli connection add con-name <string: connection_name> ifname <string: interface_name> type ethernet
+nmcli connection modify <string: connection_name> ipv4.addresses <ip_address>/<network_mask>
 nmcli connection modify <string: connection_name> ipv4.method manual
-nmcli connection modify <string: connection_name> ipv4.gateway <string: ip address>
-nmcli connection modify <string: connection_name> ipv4.dns "<string: ip address>[ <string: ip address>]"
+nmcli connection modify <string: connection_name> ipv4.gateway <string: ip_address>
+nmcli connection modify <string: connection_name> ipv4.dns "<string: ip_address>[ <string: ip_address>]"
 nmcli connection up <string: connection_name>
 
 #add a dhcp ethernet connection
-nmcli connection add con-name <string: connection_name> ifname <string: interface name> type ethernet
+nmcli connection add con-name <string: connection_name> ifname <string: interface_name> type ethernet
 nmcli connection modify <string: connection_name> ipv4.dhcp-timeout 30
 nmcli connection modify <string: connection_name> ipv4.may-fail no
 nmcli connection up <string: connection_name>
+
+#enable dhcp
+nmcli connection modify <string: interface_name> ipv4.method.auto
+nmcli connection up <string: interface_name>
+
+#set up a network bridge
+nmcli connection add type bridge ifname <string: bridge_name>
+#   disable spanning tree protocol
+#   ref: https://en.wikipedia.org/wiki/Spanning_Tree_Protocol
+nmcli connection modify <string: bridge_name> brdige.stp no
+nmcli connection add type brdige-slave ifname <string: interface_name> master <stringe: bridge_name>
+nmcl connection up <string: bridge_name>
 
 #list available wireless lans
 nmcli device wifi list
