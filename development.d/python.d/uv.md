@@ -28,4 +28,7 @@ uv lock --upgrade
 
 # upgrade a special package
 uv lock --upgrade-package <string: package_name>
+
+# migrate to uv
+uvx migrate-to-uv
 ```
