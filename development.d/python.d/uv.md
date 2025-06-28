@@ -8,6 +8,9 @@ uv init <string: project_name>
 # if you are in your project directory already
 uv init
 
+# create a dedicated venv
+uv venv --python 3.11
+
 # if not automatically activated, activate the virtual environment
 #   as usual
 source .venv\scripts\activate
