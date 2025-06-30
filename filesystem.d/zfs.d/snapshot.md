@@ -31,6 +31,10 @@ zfs destroy -nv <pool name>@<first snapshot name>%<last snapshot name>
 
 #delete one snapshot
 zfs destroy <pool name>@<snapshot name>
+
+#remove lot of snapshots with bash
+zfs list -t snapshot -o name | grep <string: my_search_pattern> > zfs_snapshot.txt
+for SNAPSHOT_NAME in $(cat zfs_snapshot.txt); do zfs destroy "${SNAPSHOT_NAME}"; done
 ```
 
 ### Options
