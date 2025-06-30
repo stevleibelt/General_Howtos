@@ -16,8 +16,15 @@ uv venv --python 3.11
 #   as usual
 source .venv\scripts\activate
 
+# run your python code
+# works also without activated virtual environment
+uv run main.py
+
 # add a package
 uv add requests
+
+# remove a package
+uv remove requests
 
 # pin the current environment with all dependencies
 uv lock
