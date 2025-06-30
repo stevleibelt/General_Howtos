@@ -22,6 +22,9 @@ uv run main.py
 # add a package
 uv add requests
 
+# remove a package
+uv remove requests
+
 # pin the current environment with all dependencies
 uv lock
 # create a requierements.txt file
