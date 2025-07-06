@@ -44,6 +44,10 @@ KEYS *
 
 # from index 0 to the end, list each entry
 LRANGE <string: key_name> 0 -1
+
+# list size of a queue
+# ref: https://valkey.io/commands/llen/
+LLEN <string: key_name>
 ```
 
 ### Search for keys
