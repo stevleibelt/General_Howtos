@@ -15,3 +15,7 @@ whipper drive analyze
 # Rip
 whipper cd rip
 ```
+
+## Links
+
+* [Audio CD ripping - optical drive accuracy listing: pilabor.com](https://pilabor.com/blog/2022/10/audio-cd-ripping-hardware/) - 20250707
