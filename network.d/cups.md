@@ -29,9 +29,11 @@ Set the `LogLevel` to `Debug` in `/etc/cups/cupsd.conf`.
 ### Printer is disabled / Unable to send data to printer. / The printer may not exist or is unavailable at this time
 
 ```bash
+sudo systemctl restart cups
 #check current state
-lptstat -p
+sudo lptstat -p
 
+#maybe needed
 cupsenable <printer name>
 ```
 _or_
