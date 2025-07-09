@@ -137,4 +137,5 @@ Modules are located in `c:\Python`.
 * [python fluent booknotes](https://bjpcjp.github.io/2025/04/02/python-fluent-booknotes.html) - 20250404
 * [python list methods](https://www.programiz.com/python-programming/methods/list) - 20190111
 * [>>A dozen ways to learn Python<<](https://opensource.com/article/19/8/dozen-ways-learn-python) - 20190827
+* [>>How to Use Pytest: A Simple Guide to Testing in Python<<](https://www.freecodecamp.org/news/how-to-use-pytest-a-guide-to-testing-in-python/) - 20250709
 
