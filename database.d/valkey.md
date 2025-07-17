@@ -56,6 +56,40 @@ LLEN <string: key_name>
 valkey-cli --scan --pattern "my_pattern_*"
 ```
 
+### Read and Store data types
+
+```bash
+# ref: https://www.freecodecamp.org/news/how-in-memory-caching-works-in-redis/
+# Strings - Key:Value Pair
+SET my_string "My Value"
+
+GET my_string
+
+# Lists - Ordered Collections
+LPUSH my_list "first entry"
+RPUSH my_list "last entry"
+
+LRANGE my_list 0 - 1
+
+# Sets - Unordered Collections
+SADD my_set "first entry"
+SADD my_set "second entry"
+
+SMEMBERS my_set
+
+# Sorted Sets - Ordered Collection, ordered by score
+ZADD my_sorted_set 100 "First entry"
+ZADD my_sorted_set 900 "Last entry"
+
+ZRANGE my_sorted_set 0 -1 WITHSCORES
+
+# Hashs - Like JSON Objects
+HSET users:1 firstname "Max"
+HSET users:1 lastname "Mustermann"
+
+HGETALL users:1
+```
+
 ### Truncate or flush database
 
 ```bash
