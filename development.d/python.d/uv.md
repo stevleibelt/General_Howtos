@@ -59,4 +59,19 @@ uv python use 3.11
 # install tools global
 uv tool install black
 uv tool install buff
+
+# clean cache
+uv clean cache
+
+# ignore cached version
+uv tool install --reinstall <string: package_name>
+
+# reinstall python
+uv python install --reinstall
+
+# show dependecy tree
+uv pip tree
+
+# show outdated dependecies
+uv pip tree --outdated
 ```
