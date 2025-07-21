@@ -73,5 +73,7 @@ uv python install --reinstall
 uv pip tree
 
 # show outdated dependecies
+uv pip list --outdated
+## or as tree
 uv pip tree --outdated
 ```
