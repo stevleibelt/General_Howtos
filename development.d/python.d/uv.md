@@ -37,6 +37,8 @@ uv export --format requirements-txt
 uv sync
 
 # upgrade all packages from the lock-file
+uv sync --upgrade
+## or
 uv lock --upgrade
 
 # upgrade a special package
