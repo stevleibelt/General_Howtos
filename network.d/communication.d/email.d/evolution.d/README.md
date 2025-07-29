@@ -29,6 +29,14 @@ paru -S evolution evolution-aws enchant hunspell-de hunspell-en_us libvoikko hsp
 * Select `calender` in section `foldername`
 * The new calendar should be viewable in the view `Calendar`
 
+## General Informations
+
+### Where is the data stored
+
+* `~/.local/share/evolution`: Contains user data like locally stored emails
+* `~/.config/evolution`: Contains configuration settings like login parameters
+* `~/.cache/evolution`: Contains cached data like temporarily downloaded emails
+
 ## Links
 
 * [Official Wiki: gnome.org](https://wiki.gnome.org/Apps/Evolution) - 20250613
