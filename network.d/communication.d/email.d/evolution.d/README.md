@@ -9,7 +9,7 @@
 # Install mandatory packages with your package manager
 #   paru is my current package manager
 #   enchant and hunspell-* are used to have spell check available
-paru -S evolution, evolution-aws, enchant, hunspell-de, hunspell-en_us
+paru -S evolution evolution-aws enchant hunspell-de hunspell-en_us libvoikko hspell aspell-de aspell-en nuspell
 ```
 * Start evolution
 * Clickpath: `File` -> `New` -> `E-Mail-Account`
