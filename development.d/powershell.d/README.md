@@ -106,7 +106,7 @@ New-Alias editPowerShellProfile Edit-PowerShellProfile
 | Remove-Item | rm | rm, rmdir | |
 | Rename-Item | mv | mv | |
 | Restart-Service | | | Restart-Service -InputObject $(Get-Service -Computer <computer name> -Name <service name>) |
-| Select-String | sls | find, grep | |
+| Select-String | sls | find, grep | `Select-String -Pattern "my_string" -Path .` |
 | Set-Location | cd | cd | |
 | Set-Variable | set | export, env, set, setenv | |
 | Start-Service | | | Start-Service -InputObject $(Get-Service -Computer <computer name> -Name <service name>) |
