@@ -96,7 +96,7 @@ locate -e --regex "\.pac(new|orig|save)$"
 egrep "pac(new|orig|save)" /var/log/pacman.log
 ```
 
-## install and setup reflector
+## Install and Setup Reflector
 
 ```bash
 sudo su
@@ -122,7 +122,7 @@ Exec = /usr/bin/bash -c "reflector --country '$(echo ${COUNTRY_NAME})' -l $(echo
 DELIM
 ```
 
-## Update mirrorlist
+## Update Mirrorlist
 
 ```bash
 # by hand, has to be done as root
@@ -147,4 +147,5 @@ sudo reflector --latest 20 --protocol https --sort rate --save /etc/pacman.d/mir
 * https://wiki.archlinux.org/index.php/DeveloperWiki:Pacman_Hooks
 * https://wiki.archlinux.org/index.php/Reflector
 * https://wiki.archlinux.org/index.php/Mirrors
+* [package archive](https://archive.archlinux.org/packages/)
 
