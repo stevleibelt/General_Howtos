@@ -16,6 +16,10 @@ dkms install -m <module name> -v <version>
 
 #remove module for all available kernels
 dkms remove -m <module name> -v <version> --all
+
+#fix something like: Error! nvidia/570.86.16 is broken!
+cd /var/lib/dkms/nvidia
+rm -fr 575.64.05
 ```
 
 ## Links

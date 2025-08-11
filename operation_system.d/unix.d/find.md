@@ -14,6 +14,11 @@ find . -iname "*.sh" -print
 # for the first find result
 find . -iname "my*.sh" -type f -print -quit
 
+# find files without a extension
+find . ! -iname "*.*" -type f
+# Add the extension `.bazzline` to all files without an extension
+find . ! -iname "*.*" -type f -exec mv {} {}.bazzline \;
+
 # find files by user foo or bar
 find /my/path \( -user foo -o -user bar \) -ls
 
