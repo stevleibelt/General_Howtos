@@ -45,8 +45,12 @@ uv lock --upgrade
 uv lock --upgrade-package <string: package_name>
 
 # migrate to uv
-#   uvx an alternative to `uv tool run`
+#   same as: uv tool run migrate-to-uv
 uvx migrate-to-uv
+
+# run ruff
+#   same as: uv tool run ruff
+uvx ruff
 
 # install python vesion
 uv python install 3.11
