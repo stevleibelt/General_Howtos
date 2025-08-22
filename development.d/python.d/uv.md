@@ -52,11 +52,10 @@ uvx migrate-to-uv
 uv python install 3.11
 # list installed
 uv python list
-# pin pwd to a version
+# pin to latest installed python version
 uv python pin
-
-# switch between versions
-uv python use 3.11
+# switch to another python version
+uv python pin 3.11
 
 # install tools global
 uv tool install black
