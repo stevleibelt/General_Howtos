@@ -51,6 +51,11 @@ uvx migrate-to-uv
 # run ruff
 #   same as: uv tool run ruff
 uvx ruff
+# since we are here ...
+#   check your code and let ruff list all issues
+uv tool run ruff --config pyproject.toml check
+#   let ruff fix all it can do
+uv tool run ruff --config pyproject.toml check . --fix
 
 # install python vesion
 uv python install 3.11
