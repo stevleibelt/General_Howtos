@@ -19,6 +19,20 @@ find . ! -iname "*.*" -type f
 # Add the extension `.bazzline` to all files without an extension
 find . ! -iname "*.*" -type f -exec mv {} {}.bazzline \;
 
+# calculate max level depth from current working directory
+#   `-printf '%d\n'`: `%d` expands/converts the directory name to the current level, `\n` adds a new line
+#   `sort -n`: Sort the result in natural way descending
+#   `tail -n1`: List the last line of the output
+find . -type d -printf '%d\n' | sort -n | tail -n1
+
+# find directories and add a suffix to them
+# Important, you have to do this level by level to not run into errors
+# Either by "from max level to current level"  or "from current level to max level"
+# You could automate this by running find without level limitation and calculate the
+#   existing max level
+# The follwing code will produce an error since "." can not be moved.
+find . -mindepth 1 -maxdepth 1 -type d -exec mv {} {}.d \;
+
 # find files by user foo or bar
 find /my/path \( -user foo -o -user bar \) -ls
 
