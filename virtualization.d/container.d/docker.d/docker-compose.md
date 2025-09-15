@@ -11,6 +11,17 @@ Following a list of syntax with usecase:
 * `${MANDATORY_VARIABLE:?}`, results in an error message if variable is unset or empty
 * `${MANDATORY_VARIABLE?}`, results in an error message if variable is unset
 
+## Issue Solving
+
+### `docker compose logs` | grep is not working
+
+`docker compose logs` behaves a bit different.
+
+Regulary, just add a `-a` to your `grep` command.
+
+`docker compose logs | grep -a 'foobar'` should work.   
+`docker compose logs 2>&1 | grep -a 'foobar'` includes all entries from `stderr`.
+
 ## Examples
 
 ### PHP with redis and maria db
