@@ -29,4 +29,5 @@ Every link is added with a date (old way) or a datetime (newer way) to show when
 
 * [tldr](https://tldr.sh/) - 20220520T07:53:20
 * [alternativeto - crowdsourced software recommendations](http://alternativeto.net/) - 20120910
+* [annas archiv: annas-archive.org](https://de.annas-archive.org/) - 20250922
 
