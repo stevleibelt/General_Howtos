@@ -66,6 +66,14 @@ Host bazzline.net-artodeto
     #  Of course, you should create a dedicated configuration
     #   section for jump.host-user
     ProxyJump jump.host-user
+    # Only use provided identity file
+    #   This prevents that ssh tries all known ssh keys
+    IdentitiesOnly yes
+    # Reuse connection on same host to speed up ssh
+    # ref: https://wiki.archlinux.org/title/OpenSSH#Speeding_up_SSH
+    ControlMaster auto
+    ControlPersist 10800
+    ControlPath ~/.ssh/control-%r@%h:%p
 ```
 
 ## Hints
