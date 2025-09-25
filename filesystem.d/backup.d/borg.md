@@ -26,7 +26,9 @@ borg prune --keep-daily=7 --keep-weekly=4 /path/to/the/backup
 borg compact /path/to/the/backup
 
 # good to know
-borg mount /path/to/the/backup /tmp/my_temporary_mountpoint
+# If you've secured your archive with a passphrase, run
+#   BORG_PASSPHRASE='<string: your_passphrase>'
+borg mount /path/to/the/backup::archive-name /tmp/my_temporary_mountpoint
 borg list /path/to/the/backup               # list content of the given repository or archive
 borg info /path/to/the/backup [--last 1]    #shows info like size for a given repository or archive
 ```
