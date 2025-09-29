@@ -41,6 +41,9 @@ This file is available once per project and once in `~/.config/Logseq/`.
 
 ### Additional code for `:default-query`
 
+All queries added below `:default-query` are available on all journal pages.   
+If you do **not** want that, you can put them on a dedicated page by encapsulating each query with `#-BEGIN_QUERY` and `#+END_QUERY`.
+
 ```edn
 ;; BO: Todays Schedules
  {:title "Todays Schedules"
@@ -66,7 +69,6 @@ This file is available once per project and once in `~/.config/Logseq/`.
 ;; BO: Schedules in overdue
  {:title "Overdue Schedules"
     :query [:find (pull ?b [*])
-              ;;:in $ ?start ?next
               :in $ ?next
               :where
               [?b :block/marker ?marker]
@@ -74,9 +76,7 @@ This file is available once per project and once in `~/.config/Logseq/`.
                 [?b :block/scheduled ?d]
                 [?b :block/deadline ?d])
               [(contains? #{"TODO" "DOING" "NOW" "LATER" "WAITING"} ?marker)]
-              ;;[(>= ?d ?start)]
               [(<= ?d ?next)]]
-    ;;:inputs [:365d :1d]
     :inputs [:1d]
     :result-transform (fn [result]
                         (sort-by (fn [h]
@@ -93,7 +93,69 @@ This file is available once per project and once in `~/.config/Logseq/`.
 ```
 
 In the shell where your `config.edn` exists.   
-`touch ../pages/todo_list.md`
+
+```bash
+cat > ../pages/todo_list.md <<DELIM
+- {{journal-today}}
+
+
+#+BEGIN_QUERY
+{
+:title [:h3 "Todays"]
+:query [:find (pull ?b [*])
+      :in $ ?today
+      :where
+      [?b :block/marker ?m]
+      [(contains? #{"NOW" "LATER" "TODO" "DOING" "WAITING"} ?m)]
+
+      [?b :block/page ?p]
+      [?p :block/journal? true]
+
+      (or
+        [?b :block/scheduled ?d]
+        [?b :block/deadline ?d])
+
+      [(= ?d ?today)]
+    ]
+:inputs [:today]
+:collapsed? false
+}
+#+END_QUERY
+
+#+BEGIN_QUERY
+{
+:title [:h3 "Overdue"]
+:query [:find (pull ?b [*])
+          :in $ ?next
+          :where
+          [?b :block/marker ?marker]
+          (or
+            [?b :block/scheduled ?d]
+            [?b :block/deadline ?d])
+          [(contains? #{"TODO" "DOING" "NOW" "LATER" "WAITING"} ?marker)]
+          [(<= ?d ?next)]]
+:inputs [:1d]
+:result-transform (fn [result]
+                    (sort-by (fn [h]
+                               (get h :block/priority "Z")) result))
+:collapsed? false
+:breadcrumb-show? false
+}
+#+END_QUERY
+
+#+BEGIN_QUERY
+{
+ :title [:h3 "Deadline"]
+ :query [:find (pull ?b [*])
+ :where
+   [?b :block/deadline ?d]
+   [?b :block/marker ?m]
+   (not [(contains? #{"DONE" "CANCELED"} ?m)])
+ ]
+}
+#+END_QUERY
+DELIM
+```
 
 ### Embed todays journal page
 
@@ -130,8 +192,10 @@ Add following code in your `todo_list`: `{{journal-today}}`
 
 ## Links
 
-* [Collection of logseq extensions: github.com](https://github.com/logseq/awesome-logseq) - 20240328
 * [50 LOGSEQ TIPS: Beginner to Expert in 6 Minutes | Tutorial | ROAM Research Alternative Free Version: youtube.com](https://www.youtube.com/watch?v=r_tcDooayOo) - 20230926
+* [Advanced Logseq queries can be useful: nik.tw](https://www.nik.tw/post/advanced-logseq-queries-can-be-useful/) - 20250929
+* [Collection of logseq extensions: github.com](https://github.com/logseq/awesome-logseq) - 20240328
 * [Official webpage: logseq.com](https://logseq.com/) - 20230926
   * [Official logseq glossary: logseq.com](https://docs.logseq.com/#/page/glossary) - 20240328
   * [Official logseq tutorial: logseq.com](https://docs.logseq.com/#/page/tutorial) - 20240328
+* [Queries for task management: logseq.com](https://discuss.logseq.com/t/queries-for-task-management/14937/3) - 20250929
