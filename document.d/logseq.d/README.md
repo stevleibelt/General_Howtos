@@ -35,6 +35,90 @@ Select Keyboard shortcuts.
 
 Example of a todo line `LATER /A /DEADLINE Do this ASAP`.
 
+## config.edn
+
+This file is available once per project and once in `~/.config/Logseq/`.
+
+### Additional code for `:default-query`
+
+```edn
+;; BO: Todays Schedules
+ {:title "Todays Schedules"
+      :query [:find (pull ?b [*])
+              :in $ ?today
+              :where
+              [?b :block/marker ?m]
+              [(contains? #{"NOW" "LATER" "TODO" "DOING" "WAITING"} ?m)]
+
+              [?b :block/page ?p]
+              [?p :block/journal? true]
+
+              (or
+                [?b :block/scheduled ?d]
+                [?b :block/deadline ?d])
+
+              [(= ?d ?today)]
+            ]
+      :inputs [:today]
+      :collapsed? false}
+;; EO: Todays Schedules
+
+;; BO: Schedules in overdue
+ {:title "Overdue Schedules"
+    :query [:find (pull ?b [*])
+              ;;:in $ ?start ?next
+              :in $ ?next
+              :where
+              [?b :block/marker ?marker]
+              (or
+                [?b :block/scheduled ?d]
+                [?b :block/deadline ?d])
+              [(contains? #{"TODO" "DOING" "NOW" "LATER" "WAITING"} ?marker)]
+              ;;[(>= ?d ?start)]
+              [(<= ?d ?next)]]
+    ;;:inputs [:365d :1d]
+    :inputs [:1d]
+    :result-transform (fn [result]
+                        (sort-by (fn [h]
+                                   (get h :block/priority "Z")) result))
+    :collapsed? false
+    :breadcrumb-show? false}
+;; EO: Schedules in overdue
+```
+
+### Define new start page
+
+```edn
+:default-home {:page "todo_list"}
+```
+
+In the shell where your `config.edn` exists.   
+`touch ../pages/todo_list.md`
+
+### Embed todays journal page
+
+```edn
+:macros {:journal-today "{{embed <%today%>}}"}
+```
+
+Add following code in your `todo_list`: `{{journal-today}}`
+
+### Add Macro for colors for `custom.css`
+
+```css
+:color "[:span {:style \"color: $1\"} $2]"
+
+/****
+ * Prevent issues with line breaks
+ * ref: https://discuss.logseq.com/t/change-text-color-for-individual-blocks-or-even-words/20508/17
+ ****/
+.macro,
+  .macro .hiccup_html,
+  .macro .raw_html {
+      display: inline;
+  }
+```
+
 ## Notes
 
 ### List all open tasks
