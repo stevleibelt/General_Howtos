@@ -28,6 +28,14 @@ use "-t <name>" to tag it while building.
 
 ```bash
 docker build .
+# Enable progress output of BuildKit
+DOCKER_BUILDKIT=1 docjer buikd --progress=plain .
+# Detailed timing output of buildx
+docker buildx build --progress=plain .
+# measure context transfer time
+# Good to check how much context transfer can
+#  be improved having a .dockerignore file
+time docker build --no-cache .
 ```
 
 ### From standard in
