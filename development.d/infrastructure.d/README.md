@@ -19,7 +19,6 @@ How proof is this tool.
 
 Having a working software is nice. But it is better to know how and when this software is breaking (know the limits).
 
-
 ## Test and monitor first development
 
 Instead of focus on "how to test" only, you also have to focus on how to monitor the code (how long does it take to process the data and provide a result).
@@ -27,6 +26,6 @@ Make "enable verbosity" a mantra on your development process.
 Make your code ready to help tracing user/worker ids to illustrate the flow of data.
 Add the internal and external performance (e.g. network time for each transaction) to the stack trace.
 
-# links
+## Links
 
 * [the three mistakes your company must not make](http://firstround.com/review/the-three-infrastructure-mistakes-your-company-must-not-make/)

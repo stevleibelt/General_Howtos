@@ -20,7 +20,7 @@ qemu-system-x86_64 -drive file=endeavouros.qcow2,format=qcow2 -m 4G -usb -device
 
 ```bash
 # install packages
-yay -S plasma-wayland-session binder_linux-dkms wayland
+yay -S plasma-wayland-session binder_linux-dkms waydroid
 sudo echo "binder_linux" > /etc/modules-load.d/binder_linux.conf
 
 # restart and choose wayland on login
