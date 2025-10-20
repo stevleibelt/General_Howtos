@@ -18,19 +18,21 @@ SELECT * FROM pg_stat_activity WHERE state = 'active';
 SELECT pg_cancel_backend(<int: pid_of_the_process>)
 
 #create a dump / export
-pg_dump <database_name> > <database_name>_<yyyymmddTHHMMss>.sql
+pg_dump <string: database_name> > <string: database_name>_<string: yyyymmddTHHMMss>.sql
+# or
+pg_dump -f <string: database_name>_<string: yyyymmddTHHMMss>.sql <string: database_name>
 
 #import dump
-psql -d <database_name> -f <database_name>_<yyyymmddTHHMMss>.sql
+psql -d <string: database_name> -f <string: database_name>_<string: yyyymmddTHHMMss>.sql
 
 #create database
 sudo su - postgres
 psql
-CREATE DATABASE <database_name>
+CREATE DATABASE <string: database_name>
 \q
 
-#switch connectio to a new database
-\c <database_name>
+#switch connection to a new database
+\c <string: database_name>
 
 #list available database
 \l[+] [<string: pattern>]
