@@ -12,6 +12,9 @@
 
 This can be complicated if your truenas scale has multiple network interfaces.
 
+> Error: control/dhcp/set_config | enabling dhcp: starting dhcp server: dhcpv4: creating raw udp connection: listen packet aa:bb:cc:dd:ee:ff: socket: operation not permitted | 400
+> couldn't listen on :68: listen packet aa:bb:cc:dd:ee:ff: socket: operation not permitted
+
 * Navigate to your apps adguard settings (e.g. `https://<string: ip_of_your_truenas_scale>/ui/apps/installed/community/adguard-home/edit`)
 * Go to the setting section `DNS Port`
 * Select `Publish port on the host for external access`
