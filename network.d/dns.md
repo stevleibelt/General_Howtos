@@ -1,10 +1,12 @@
-# determine current dns server
+# DNS
+
+## Determine current DNS server
 
 ```bash
 nslookup www.bazzline.net | grep "Server:"
 ```
 
-# how to set a dns server
+## How to set a DNS server
 
 ```bash
 #add an entry starting with "nameserver <ip address>"
@@ -13,7 +15,7 @@ nslookup www.bazzline.net | grep "Server:"
 sudo echo "nameserver <ip address>" >> /etc/resolv.conf
 ```
 
-# free dns server
+## Free DNS server
 
 Unfinished list based on [this result](https://duckduckgo.com/?q=free+and+uncensored+dns+server&ia=answer&iax=1) or [here](https://www.privacy-handbuch.de/handbuch_93d.htm).
 
@@ -113,7 +115,7 @@ Unfinished list based on [this result](https://duckduckgo.com/?q=free+and+uncens
 | | 77.88.8.2 | 2a02:6b8:0:1::feed:bad | 20150701 |
 | puntCAT | 109.69.8.51 | 2a00:1508:0:4::9 | 20150701 |
 
-## DNS4EU
+### DNS4EU
 
 ref: https://www.joindns4.eu/
 
@@ -125,14 +127,14 @@ ref: https://www.joindns4.eu/
 | 86.54.11.11 | Protective + Child Protection + Ad blocking |
 | 86.54.11.100 | Unfiltered Resolution |
 
-## free dns
+### Free DNS
 
 ```bash
 37.235.1.174
 37.235.1.177
 ```
 
-## dns.watch
+### DNS.watch
 
 ```bash
 84.200.69.80
@@ -141,7 +143,7 @@ ref: https://www.joindns4.eu/
 2001:1608:10:25::9249:d69b
 ```
 
-## censurfridns.dk
+### Censurfridns.dk
 
 ```bash
 91.239.100.100
@@ -150,7 +152,7 @@ ref: https://www.joindns4.eu/
 2002:d596:2a92:1:71:53:
 ```
 
-## ccc e.V.
+### CCC e.V.
 
 ```bash
 213.73.91.35
@@ -163,7 +165,7 @@ ref: https://www.joindns4.eu/
 194.95.202.198
 ```
 
-## germany privacy foundation
+### Germany privacy foundation
 
 ```bash
 87.118.100.175
@@ -173,13 +175,13 @@ ref: https://www.joindns4.eu/
 94.75.228.29
 ```
 
-## digital courage e.V. 
+### Digital courage e.V. 
 
 ```bash
 85.214.73.63
 ```
 
-## opennic
+### Opennic
 
 ```bash
 109.69.8.34 (ns1.bcn.es) -- 98.73% uptime
@@ -188,28 +190,28 @@ ref: https://www.joindns4.eu/
 193.182.144.144 (ns1.ta.il) -- 98.11% uptime
 ```
 
-# other dns server
+## Other DNS server
 
-## opendns
+### Opendns
 
 ```bash
 208.67.222.222
 208.67.220.220
 ```
 
-## google
+### Google
 
 ```bash
 8.8.8.8
 8.8.4.4
 ```
 
-## local dns caches
+### Local dns caches
 
 * [dnsmasq](https://wiki.archlinux.org/index.php/Dnsmasq#Caching_DNS_server)
 * [unbound](https://wiki.archlinux.org/index.php/Unbound)
 
-# links
+## Links
 
 * [free and not logging dns servers - kuketz-blog.de](https://www.kuketz-blog.de/empfehlungsecke/#dns)
 * [openresolve](http://roy.marples.name/projects/openresolv/wiki?name=config)
