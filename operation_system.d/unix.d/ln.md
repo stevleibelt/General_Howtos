@@ -1,12 +1,16 @@
-# create soft link
+# ln
 
-```
-#same name as the source
+# How to section
+
+### Create a soft link
+
+```bash
+# same name as the source
 ln -s <path to the source>
 
-#different name as the source
+# different name as the source
 ln -s <path to the source> <target name>
 
-#update target
+# update target
 ln -fns <path to the source> <target name>
 ```
