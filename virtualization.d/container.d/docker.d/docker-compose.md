@@ -22,6 +22,8 @@ Regulary, just add a `-a` to your `grep` command.
 `docker compose logs | grep -a 'foobar'` should work.   
 `docker compose logs 2>&1 | grep -a 'foobar'` includes all entries from `stderr`.
 
+My overall "all time" log command: `docker compose logs -t --since "1m" -f [<string: service_name>] | grep -a <string: search_pattern>`
+
 ## Examples
 
 ### PHP with redis and maria db
