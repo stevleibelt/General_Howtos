@@ -301,6 +301,12 @@ echo "options zfs zfs_arc_max=1073741824" > /etc/modprobe.d/zfs.conf
 echo "options zfs zfs_arc_max=2147483648" > /etc/modprobe.d/zfs.conf
 # for a limit of 4 GiB
 echo "options zfs zfs_arc_max=4294967296" > /etc/modprobe.d/zfs.conf
+
+# fetch information about arc
+arcstat
+arc_summary
+arc_summary -d
+arc_summary -g
 ```
 
 ### The 4k sector /advanced format performance issue
