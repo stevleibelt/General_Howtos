@@ -24,4 +24,4 @@ rm -fr 575.64.05
 
 ## Links
 
-* https://wiki.archlinux.org/index.php/Dynamic_Kernel_Module_Support#List_modules
+* [dkms: archlinux.org](https://wiki.archlinux.org/index.php/Dynamic_Kernel_Module_Support#List_modules)
