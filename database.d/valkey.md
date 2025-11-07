@@ -114,4 +114,5 @@ MONITOR
 
 ## Link
 
-* [Valkeycli](https://valkey.io/topics/cli/) - 20240905
+* [How to Set Up Valkey, The Alternative to Redis: percona.com](https://www.percona.com/blog/how-to-set-up-valkey-the-alternative-to-redis/) - 20251107
+* [Valkeycli: valkey.io](https://valkey.io/topics/cli/) - 20240905
