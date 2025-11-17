@@ -75,6 +75,14 @@ PRAGMA table_info(table_name);
 .schema
 ```
 
+## Check data
+
+```bash
+# ref: https://www.sqlite.org/pragma.html#pragma_integrity_check
+sqlite3 <string: database_name>
+pragma integrity_check;
+```
+
 ## Links
 
 * [quick tutorial by mark litwintschik](http://tech.marksblogg.com/sqlite3-tutorial-and-guide.html)
