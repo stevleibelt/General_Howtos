@@ -19,6 +19,9 @@ source .venv\scripts\activate
 # run your python code
 # works also without activated virtual environment
 uv run main.py
+# redirect tty output
+#   uv runs python child proceses in a pseudo TTY/STDER
+uv run main > my.log 2>&1
 
 # add a package
 uv add requests
