@@ -61,6 +61,7 @@ DELIM
 
 ## Links
 
+* [xdg base directory specification: freedesktop.org](https://specifications.freedesktop.org/basedir/latest/) - 20251121
 * [xdg-utils: wiki.archlinux.org](https://wiki.archlinux.org/title/Xdg-utils) - 20221229
 * https://wiki.archlinux.org/index.php/Xdg_user_directories
 * http://pastebin.com/0fmRWPZA
