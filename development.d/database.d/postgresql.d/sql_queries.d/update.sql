@@ -17,3 +17,29 @@ WHERE
 
 COMMIT;
 
+BEGIN;
+
+-- Alias for the update is not supported
+-- You need to alias the joined table to fix column name conflicts
+UPDATE my_table
+-- You can update only columns if needed
+SET
+  foo = CASE
+    WHEN foo != j.foo THEN j.foo
+    ELSE foo
+  END,
+  my_column = CASE
+    WHEN my_column != j.other_column THEN j.other_column
+    ELSE my_column
+  END
+FROM joined_table as j
+WHERE (
+  main_column = j.main_column
+  AND (
+    foo != j.foo
+    OR my_column != j.other_column
+  )
+)
+
+COMMIT;
+
