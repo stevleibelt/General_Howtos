@@ -17,20 +17,20 @@
 
 ```bash
 # use "-r" for all descendent file systems (recursive)
-zfs snapshot [-r] <pool name>@<snapshot name>
+zfs snapshot [-r] <string: pool_name>@<string: snapshot_name>
 
 # use -i to create an incremental stream from the first snapshot
-zfs snapshot -i <pool name>@<first snapshot name> <pool name>@<second snapshot name>
+zfs snapshot -i <string: pool_name>@<string: first_snapshot_name> <string: pool_name>@<string: second_snapshot_name>
 ```
 
 ## Delete
 
 ```bash
 #do a dry run (-n) to calculate estimated reclaimed space from the disk
-zfs destroy -nv <pool name>@<first snapshot name>%<last snapshot name>
+zfs destroy -nv <string: pool_name>@<string: first_snapshot_name>%<string: last_snapshot_name>
 
 #delete one snapshot
-zfs destroy <pool name>@<snapshot name>
+zfs destroy <string: pool_name>@<string: snapshot_name>
 
 #remove lot of snapshots with bash
 zfs list -t snapshot -o name | grep <string: my_search_pattern> > zfs_snapshot.txt
@@ -68,7 +68,7 @@ zfs list -t snapshot -o name
 * R     the path has been renamed
 
 ```bash
-zfs diff <source snapshot name> <destination snapshot name>|<file system>
+zfs diff <string: source_snapshot_name> <string: destination_snapshot_name>|<string: file_system>
 ```
 
 ## Rollback / restore
@@ -76,13 +76,13 @@ zfs diff <source snapshot name> <destination snapshot name>|<file system>
 ### Full pool
 
 ```bash
-zfs rollback <pool name>@<snapshot name>
+zfs rollback <string: pool_name>@<string: snapshot_name>
 ```
 
 ### Working with openzfs under linux or restore single file
 
 ```bash
-mount -t zfs <zfs pool>@<snapshot> </path/to/mount>
+mount -t zfs <string: zfs_pool_name>@<string: snapshot_name> </path/to/mount>
 
 #figuring out where is a different
 diff -R <path> </path/to/mount/path>
@@ -93,42 +93,35 @@ diff -R <path> </path/to/mount/path>
 ## Clone
 
 ```bash
-zfs clone <pool name>@<snapshot name> <pool name>[/<path>]/<to clone>
+zfs clone <string: pool_name>@<string: snapshot_name> <string: pool_name>[/<path>]/<to clone>
 ```
 
 ## Backup
 
-### On same system
-
 ```bash
-zfs send <source pool name>@<snapshot name> | zfs receive <destination pool name>
-```
+# On same system
+zfs send <string: source_pool_name>[/<string: dataset>]@<string: snapshot name> | zfs receive <string: destination_pool_name>[/<string: dataset>]
 
-### Via ssh
+# Via ssh
+zfs send <string: source_pool_name>@<string: snapshot_name> | ssh backup.me.com zfs receive <string: destination_pool_name>[/path]
 
-```bash
-zfs send <source pool name>@<snapshot name> | ssh backup.me.com zfs recv <destination pool name>[/path]
-```
-
-### Entire pool
-
-```bash
+# Entire pool or dataset
 zfs snapshot -r <source pool>@<snapshot name>
-zfs send -R <source pool name>@<snapshot name> | zfs receive -F <destination pool name>
+zfs send -R <string: source_pool_name>@<string: snapshot_name> | zfs receive -F <string: destination_pool_name>
 ```
 
 ## Rename
 
 ```bash
-zfs rename <pool name>@<old snapshot name> <pool name>@<new snapshot name>
+zfs rename <string: pool_name>@<string: old_snapshot_name> <string: pool_name>@<string: new_snapshot_name>
 # same but short
-zfs rename <pool name>@<old snapshot name> <new snapshot name>
+zfs rename <string: pool_name>@<string: old_snapshot_name> <string: new_snapshot_name>
 ```
 
 ## Backup to archive
 
 ```bash
-zfs send -Rv <pool name>@<snapshot name> | gzip > <path to archive>.gz
+zfs send -Rv <string: pool_name>@<string: snapshot_name> | gzip > <string: path_to_archive>.gz
 ```
 
 ### Hints
@@ -137,7 +130,7 @@ zfs send -Rv <pool name>@<snapshot name> | gzip > <path to archive>.gz
 * Install "pipe view" (pv) to monitor progress
 
 ```bash
-zfs send <source pool name>[/path]@<snapshot name> | pv | zfs receive <destination pool name[/path]>
+zfs send <string: source_pool_name>[/<string: dataset>]@<string: snapshot name> | pv | zfs receive <string: destination_pool_name[/<string: dataset>]>
 ```
 
 * Repeat snapshot send and receive at least twice (second run with disabled user access to source pool) to get all data in sync
