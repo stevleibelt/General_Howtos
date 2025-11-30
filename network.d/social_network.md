@@ -1,4 +1,6 @@
-# links
+# Social Media
+
+## Links
 
 * http://friendica.com/
 * http://libertree.org/
