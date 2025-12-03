@@ -4,7 +4,7 @@
 
 * You have a acpi event list located in `/etc/acpi/handler.sh`
   * This file is used from `/etc/acpi/events/anything`
-* Depending on the acpi events, there is a high chance that `systemd-logind` is called
+* Depending on the acpi events, there is a high chance that [systemd-logind](systemd.d/logind.md) is called
   * You can configure `logind` via `/etc/systemd/logind.conf`
 
 ### Check if acpi event for lid closed has has reached logind
