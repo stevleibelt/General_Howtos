@@ -3,6 +3,8 @@
 ## Unattended updates
 
 ```bash
+# ref: zcat /usr/share/doc/unattended-upgrades/README.md.gz | less
+# ref: /usr/share/doc/unattended-upgrades/README.md | less
 # ref: https://wiki.debian.org/UnattendedUpgrades
 # as root
 # optional! if available, remove all unneeded exim packages
@@ -13,6 +15,24 @@ echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | 
 dpkg-reconfigure -f noninteractive unattended-upgrades
 
 cat > /etc/apt/apt.conf.d/52unattended-upgrades-local <<DELIM
+// Fetch available one by running `apt-cache policy`
+//   check for `o=` and `a=` fields
+// `a=` is the `${distro_codename}` that can be found in `lsb_release -c`
+// `o=` is the `${distro_id}` that can be found in `lsb_release -i`
+// By default, only updates from security and update repository are
+//   processed
+// ref: https://linuxcapable.com/how-to-configure-unattended-upgrades-on-debian-linux/
+Unattended-Upgrade::Allowed-Origins {
+//      "${distro_id}:${distro_codename}";
+      "${distro_id}:${distro_codename}-security";
+      "${distro_id}:${distro_codename}-updates";
+//      "${distro_id}:${distro_codename}-proposed";
+//      "${distro_id}:${distro_codename}-backports";
+// Enables automatic updating of docker
+// ref: https://dimasmaulana.dev/posts/development/unanttended-upgrade-docker/
+//      "Docker:${distro_codename}";
+}
+
 // Send E-Mails to
 Unattended-Upgrade::Mail "root";
 
