@@ -2,6 +2,8 @@
 
 ## Unattended updates
 
+You can perform a dry run after each changes with `sudo unattended-upgrades --dry-run --debug`.
+
 ```bash
 # ref: zcat /usr/share/doc/unattended-upgrades/README.md.gz | less
 # ref: /usr/share/doc/unattended-upgrades/README.md | less
