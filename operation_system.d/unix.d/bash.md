@@ -96,30 +96,41 @@ $_ = current shell
 ## history
 
 ```bash
-#show full history
+# Show full history
 history
 
-#delete line in history
+# Search in history
+CTRL + r
+
+# Delete line in history
 history -d <int: line_number>
-#persist change
+# Persist change
 history -w
 
-#show partial history
+# Show partial history
 history <number of last entries you want to see>
 
-#execute command from history
+# Execute command from history
 !<number of the history entry>
 
-#execute a command relative to our position
+# Execute a command relative to our position
 !-2 #executes the second last command executed
-!!  #executes the previous command
+!!  #executes the previous/last command
+# Execute last command as root
+sudo !!
 
-#execute the previous command in a subshell (recompute not re-use)
+# Reuse arguments from last command
+!*
+
+# Reuse last argument from last command
+!$
+
+# Execute the previous command in a subshell (recompute not re-use)
 # ref: https://stackoverflow.com/a/25599486
 $(!!)
-#to be able to store the output into a variable
+# to be able to store the output into a variable
 FOO=$(!!)
-#or use it in a command
+# or use it in a command
 #   First execute the command to generate the output/find the files
 find . -iname "my*.pdf" -type f
 #   Secondly open the found files by calling mupdf and again doing the find
@@ -129,6 +140,8 @@ mupdf $(!!)
 
 ## Links
 
+* [bash tips for everyday at the command line](https://opensource.com/article/18/5/bash-tricks) - 20180614
+* [My favorit tricks for navigating the Linux terminal faster](https://opensource.com/article/22/11/navigate-linux-terminal-faster) - 20221115
 * http://ss64.com/bash/
 * http://www.cyberciti.biz/faq/bash-shell-temporarily-disable-an-alias/
 * https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions
