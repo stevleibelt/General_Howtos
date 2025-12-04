@@ -3,8 +3,15 @@
 ## Common commands
 
 ```bash
-#list installed packages
-sudo apt list --installed
+# List installed packages
+apt list --installed
+#  or
+apt-cache pkgnames
+
+# List upgradeable packages
+apt-get -s upgrade
+# or
+apt list --upgradable
 ```
 
 ## Fix `1 not fully installed or removed.`
