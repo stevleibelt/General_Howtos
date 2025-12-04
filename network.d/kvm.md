@@ -4,6 +4,7 @@ KVM is used for **K**eyboard, **V**ideo and **M**ouse.
 
 ## Setup encryption for barrier
 
+[Looks](https://github.com/debauchee/barrier/issues/1989) like [barrier](https://symless.com/synergy/news/why-did-barrier-fail) is dead.
 You should only run and connect with systems that have a public fingerprint.
 
 ```bash
@@ -38,6 +39,8 @@ sudo ufw allow from <string: server_hostname_or_ip_address> proto tcp to any por
 ## Links
 
 * [Arch linux wiki page: wiki.archlinux.org](https://wiki.archlinux.org/title/Input_Leap) - 20240507
-* [Barrier: github.com](https://github.com/debauchee/barrier) - Fork from synergy-core (stable but outdated) - 20240507
-* [Input-Leap: github.com](https://github.com/input-leap/input-leap) - Fork from barrier (no release candidate yet) - 20240507
+* [Barrier: github.com](https://github.com/debauchee/barrier) - Fork from synergy-core (stable but outdated and possible dead) - 20240507
+* [Deskflow: github.com](https://github.com/deskflow/deskflow) - Open sourced synergy - 20251204
+* [Input-Leap: github.com](https://github.com/input-leap/input-leap) - Fork from barrier (stable but slower development) - 20240507
+* [Lan-mouse: github.com](https://github.com/feschber/lan-mouse) - Rust reimplementation of synergy protocol (No full X11 support) - 20251204
 * [Synergy: symless.com](http://symless.com/synergy) - The initial, in the past open source, virtual kvm-switch - 20240507
