@@ -2,6 +2,7 @@
 
 ## General Information
 
+* You can monitor the logind handled events by running `sudo journalctl -f --unit=systemd-logind`
 * The cli utility is named `loginctl`
 * Core file is located in `/etc/systemd/logind.conf`
 * You can overwrite things by creating files in `/etc/systemd/logind.conf.d`
@@ -9,8 +10,21 @@
 
 ## Prevent suspend when lid is closed while connected to external power
 
+Valid options for each action are:
+
+* `halt`
+* `hibernate`
+* `hybrid-sleep`
+* `ignore`
+* `poweroff`
+* `reboot`
+* `suspend`
+* `suspend-then-hibernate`
+
 ```bash
-cat > /etc/systemd/logind.conf.d/handle_lid_switch_external_power.conf <<DELIM
+cat > /etc/systemd/logind.conf.d/handle_lid_switch.conf <<DELIM
+[Login]
+HandleLidSwitchExternalPower=ignore
 HandleLidSwitchDocked=ignore
 DELIM
 ```

@@ -1,5 +1,21 @@
 # Linux power management
 
+## General Information
+
+```bash
+# list possible available power management tools
+ps aux | egrep 'logind|gsd-power|powerdevil|xfce4-power-manager|upowerd|acpid|xfce4-power|mate-power|gnome-power-manager'
+
+# search for fitting event in the journal since this boot
+sudo journalctl -b | grep -i 'lid\|acpi\|suspend\|sleep'
+# my personal preference
+sudo journalctl -b | grep -i 'lid\||suspend\|sleep' | grep -v 'autorandr\|invalid'
+```
+
+Information about [acpid](acpid.md) is available.  
+Information about [systemd-logind](systemd.d/logind.md) is available.  
+Information about [upower](upower.md) is available.  
+
 ## How is a suspend mode triggered and which parts are used
 
 * You have a acpi event list located in `/etc/acpi/handler.sh`
