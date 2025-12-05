@@ -1,6 +1,8 @@
-# set options via xorg.conf - disable power management
+# Configure monitor settings
 
-```
+## Set options via xorg.conf - disable power management
+
+```bash
 # vim /etc/X11/xorg.conf.d/10-monitor.conf
 # @see: https://wiki.archlinux.org/index.php/Display_Power_Management_Signaling
 Section "ServerLayout"
@@ -11,15 +13,15 @@ Section "ServerLayout"
 EndSection
 ```
 
-# get options via xset
+## Get options via xset
 
-```
+```bash
 xset q
 ```
 
-# set options via xset
+## Set options via xset
 
-```
+```bash
 # change blank time to 1 minute
 xset s 60 60
 # change dpms power saving blank time to 1 minute
@@ -32,7 +34,7 @@ xset s off
 xset -dpms
 ```
 
-# use turn monitor off when using slock and reset values when turning back on
+## Use turn monitor off when using slock and reset values when turning back on
 
 ```
 #!/bin/bash
@@ -41,7 +43,7 @@ xset dpms 0 0 2
 xset dpms force off 
 ```
 
-# links
+## Links
 
 * https://wiki.archlinux.org/index.php/Display_Power_Management_Signaling
 * http://www.computerhope.com/unix/uxset.htm
