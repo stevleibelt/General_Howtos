@@ -2,6 +2,11 @@
 
 KVM is used for **K**eyboard, **V**ideo and **M**ouse.
 
+## General information
+
+Deskflow is working but I was not able to stop preventing the other system from blanking the monitor.  
+Input-Leap is working as a drop-in replacement from barrier.
+
 ## Setup encryption for barrier
 
 [Looks](https://github.com/debauchee/barrier/issues/1989) like [barrier](https://symless.com/synergy/news/why-did-barrier-fail) is dead.
