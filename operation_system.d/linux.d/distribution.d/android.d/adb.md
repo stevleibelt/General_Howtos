@@ -36,11 +36,13 @@ pacman -S android-tools android-udev
 
 ```
 #list options
-sudo fastboot help
+fastboot help
+
 #erase cache
-sudo fastboot erase cache
+fastboot erase cache
+
 #reboot into bootloader
-sudo fastboot reboot-bootloader
+fastboot reboot-bootloader
 ```
 
 ## Install custom rom
@@ -48,7 +50,7 @@ sudo fastboot reboot-bootloader
 * download something like twrp
 * connect device with pc
 * check that device is listed by "adb devices"
-L!
+
 
 * `fastboot flash recovery twrp-*.img`
 * `fastboot boot twrp-*.img`
