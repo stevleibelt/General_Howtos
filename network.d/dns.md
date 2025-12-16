@@ -1,5 +1,11 @@
 # DNS
 
+## Resolve without local dns cache
+
+```bash
+wget https://www.bazzline.net --no-dns-cache
+```
+
 ## Determine current DNS server
 
 ```bash
@@ -9,10 +15,10 @@ nslookup www.bazzline.net | grep "Server:"
 ## How to set a DNS server
 
 ```bash
-#add an entry starting with "nameserver <ip address>"
-#sudo vim /etc/resolv.conf
-#or simple add a line to the end
-sudo echo "nameserver <ip address>" >> /etc/resolv.conf
+# add an entry starting with "nameserver <ip address>"
+# vim /etc/resolv.conf
+# or simple add a line to the end
+echo "nameserver <ip address>" >> /etc/resolv.conf
 ```
 
 ## Free DNS server
