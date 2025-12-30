@@ -1,13 +1,17 @@
 # GVFs - GIO Virtual Filesystem
 
+It can happen that `gvfs-mount` is not available, but `gio mount` is.
+
 ## Examples
 
 ```bash
 # using gio
 #   mount
 gio mount smb://foo...
+#   same as: `gvfs-mount smb://foo...`
 #   umount
 gio mount -u smb://foo...
+#   same as: `gvfs-mount -u smb://foo...`
 ```
 
 ## Error solving
