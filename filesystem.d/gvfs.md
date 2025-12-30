@@ -2,6 +2,8 @@
 
 It can happen that `gvfs-mount` is not available, but `gio mount` is.
 
+You can use gvfs to mount an ftp, no direct need to install duck or other cli ftp clients.
+
 ## Examples
 
 ```bash
