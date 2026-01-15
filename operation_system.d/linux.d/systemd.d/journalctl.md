@@ -19,9 +19,16 @@ MaxFileSec=1week
 ## Add messages
 
 ```bash
-#p = priority (emerg, alert, crit, err, warning, notice, info, debug | 0 - 7)
-#t = task/identifier
+# p = priority (emerg, alert, crit, err, warning, notice, info, debug | 0 - 7)
+# t = task/identifier
+# ref: https://www.freedesktop.org/software/systemd/man/251/systemd-cat.html
 echo "Foo Bar" | systemd-cat -p info -t myapplication
+
+# also possible
+systemd-cat ls
+
+# ref: https://www.freedesktop.org/software/systemd/man/251/systemd-run.html
+systemd-run --unit=my_unique_unit_name --quiet --wait -G /opt/my_script.sh
 ```
 
 ## View messages from journal

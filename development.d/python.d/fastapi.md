@@ -12,7 +12,7 @@
 ```bash
 mkdir my_project
 cd my_project
-pyhthon -m venv venv
+python -m venv venv
 echo ".env" > .gitignore
 source .env/bin/activate
 pip install "fastapi[all]" "uvicorn[standard]"
