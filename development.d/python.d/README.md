@@ -104,6 +104,7 @@ Modules are located in `c:\Python`.
 
 ## Link
 
+* [How to Build a Singleton in Python (and Why You Probably Shouldn't): freecodecamp.org](https://www.freecodecamp.org/news/how-to-build-a-singleton-in-python-and-why-you-probably-shouldnt/) - 20260123
 * [official python documentation](https://docs.python.org/) - 20200923
   * [setup and usage](https://docs.python.org/3/using/index.html) - 20200923
   * [the python tutorial](https://docs.python.org/3/tutorial/index.html) - 20200923
