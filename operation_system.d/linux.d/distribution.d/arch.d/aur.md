@@ -1,8 +1,10 @@
-# basic howto
+# AUR - Arch User Repository
 
-## by using PKGBUILD
+## Installing Packages from AUR
 
-```
+### By using PKGBUILD
+
+```bash
 git clone https://aur.archlinux.org/<your package>
 cd <your package>
 makepkg -sri
@@ -11,80 +13,28 @@ makepkg -Acs    #A stands for ignore architecture
 pacman -U *.tar.xz
 ```
 
-## by building from source (if shipped with PKGBUILD)
+### By building from Source (if shipped with PKGBUILD)
 
-```
+```bash
 wget <source path of your package>
 tar -xzf <source file>
 makepkg -sri
 pacman -U *.tar.xz
 ```
 
-# pacaur
+## Handling Errors
 
-## installation
+### FAILED (unknown public key <key>)
 
-```
-mkdir /tmp/pacaur
-cd /tmp/pacaur
-wget https://aur.archlinux.org/cgit/aur.git/snapshot/pacaur.tar.gz
-tar -xzf pacaur.tar.gz
-cd pacaur
-makepkg -sri
-pacman -U *.tar.xz
-```
-
-# yaourt
-
-## search and install
-
-```
-yaourt <search pattern>
-```
-
-## update installed packages
-
-```
-yaourt -Syua
-```
-
-## build packages from source
-
-```
-yaourt -Sb <package>
-```
-
-## backup database
-
-```
-yaourt -B 
-```
-
-## query backup
-
-```
-yaourt -Q --backupfile <file>
-```
-
-## add yaourt repository
-
-```
-[archlinuxfr]
-SigLevel = Never
-Server = http://repo.archlinux.fr/$arch
-```
-
-# error
-
-## FAILED (unknown public key <key>)
-
-```
+```bash
 gpg --receive-keys <key>
 #or
 pgp --recv-keys <key>
 ```
-## links
 
+## Links
+
+* [How to review an AUR package: bertptrs.nl](https://bertptrs.nl/2026/01/30/how-to-review-an-aur-package.html) - 20260131
 * https://wiki.archlinux.org/index.php/AUR_helpers
 * http://archlinux.fr/man/yaourt.8.html
 * https://github.com/Jguer/yay
