@@ -6,6 +6,8 @@
 # List available options
 stty --help
 
+# List detected serial devices
+dmesg | grep -i 'tty'
 # List detected serial ports
 dmesg | grep -i ttys
 
