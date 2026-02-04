@@ -284,39 +284,44 @@ from fastapi.security import OAuth2PasswordRequestForm
 from sqlmodel import Session
 from . import database, models_and_schemas, crud, auth
 
-app = FastAPI()
+# Lifespan does not pollute your global namespace or modulespace
+# ref: https://fastapi.tiangolo.com/advanced/events/
+async def lifespan(app):
+    # Initialize all your shared ressources
+    app.state.database_connection = await create_database_connection()
+    yield   # This is when your application server is running
+    # Close all your shared resources here
+    await app.state.database_session.close()
 
-@app.on_event("startup") #create a database on server startup
-def startup_event():
-    database.create_database_and_tables()
+app = FastAPI(lifespan=lifespan)
 
-@app.on_event("shutdown")
-def shutdown_event():
-    database.shutdown()
+async def get_database_session(request: Request):
+    async with request.app.state.database_session.aquire() as session:
+        yield session
 
 @app.post("/register")
-def register_user(user: models_and_schemas.UserSchema, db: Session = Depends(database.get_database))
+def register_user(user: models_and_schemas.UserSchema, db: Session = Depends(get_database_session))
     database_user = crud.create_user(db=db, user=user)
     return database_user
 
 @app.get("/users")
-def get_all_users(db: Session = Depends(database.get_database))
+def get_all_users(db: Session = Depends(get_database_session))
     users = crud.get_users(db=db)
     return users
 
 @app.get("/secured-endpoint")
-def get_all_users(db: Session = Depends(database.get_database), claims: dict = Depends(auth.check_is_active))    #this is working since we raise an HTTPException in the check_is_active method, strange but thats the example. Furthermore, since auth.check_is_active needs a token, we've chained the dependency injection. Sad thing, we've dissimulated the fact that this endpoint is secured by an token
+def get_all_users(db: Session = Depends(get_database_session), claims: dict = Depends(auth.check_is_active))    #this is working since we raise an HTTPException in the check_is_active method, strange but thats the example. Furthermore, since auth.check_is_active needs a token, we've chained the dependency injection. Sad thing, we've dissimulated the fact that this endpoint is secured by an token
     users = crud.get_users(db=db)
     return users
 
 @app.get("/administrative-endpoint", deoendencies=[Depends(auth.check_is_administrator)])   #this would work for the "/secured-endpoint" to. The rule of thumb is, if you are not working with the returned data (like the returned claims), put the dependeny at this place
-def get_all_users(db: Session = Depends(database.get_database))
+def get_all_users(db: Session = Depends(get_database_session))
     users = crud.get_users(db=db)
     return users
 
 #endpoint when user clicked on an email link
 @app.get("/verify/{token}", response_class=HTMLResponse)    #switches from default json response to an html response
-def verify_user(token: str, db: Session = Depends(database.get_database)):
+def verify_user(token: str, db: Session = Depends(get_database_session)):
     claims = auth.decode_access_token(token)
     if claims
         username = claims.get("sub")
@@ -333,7 +338,7 @@ def verify_user(token: str, db: Session = Depends(database.get_database)):
     raise HTTPException(status_code=404, detail="Token was invalid")
 
 @app.post("/login")
-def login(db: Session = Depends(database.get_database), form_data = OAuth2PasswordRequestForm = Depends()): #OAuth2PasswordRequestForm takes care of all heavy lifting for username and password
+def login(db: Session = Depends(get_database_session), form_data = OAuth2PasswordRequestForm = Depends()): #OAuth2PasswordRequestForm takes care of all heavy lifting for username and password
     database_user_or_null = crud.get_user_by_username(db=db, username=form_data.username)
     if not database_user_or_null:
         raise HTTPException(status_code=401, detail="Username or password incorrect")
