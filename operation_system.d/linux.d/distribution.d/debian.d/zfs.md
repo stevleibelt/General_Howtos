@@ -75,6 +75,10 @@ function _update_arc_max_and_min_configuration() {
 function _main() {
   local CURRENT_KERNEL
 
+  # @todo
+  # Replace with
+  # dpkg -l | grep linux-image | awk '{print $2}' | sed 's/image/headers/'
+  # and iterate over the collection of headers
   CURRENT_KERNEL=$(uname -r)
 
   if apt-cache search linux-headers-${CURRENT_KERNEL} | grep -q linux-headers;
