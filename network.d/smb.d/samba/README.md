@@ -142,9 +142,15 @@ vim /etc/samba/smb.conf
 ##    path = /path/to/the/files
 ##    read only = no
 ##    valid users = userone,usertwo
+##    ## if you want to make it a worm
+##    vfs objects = worm
+##    worm:grace_period = 3600  #1 day = 1*60*60
+##    ## if you want to do a public share
+##    public = yes
+##    guest ok = yes
 
 # validate configuration
-#   testparm -s
+#   samba-tool testparm
 
 # add the user
 #   smbpasswd -a userone
