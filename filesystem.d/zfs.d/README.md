@@ -293,6 +293,8 @@ zpool scrub -s <pool name>
 
 ### Limit the maximum arc size
 
+ref: https://wiki.gentoo.org/wiki/ZFS#ARC
+
 ```bash
 touch /etc/modprobe.d/zfs.conf
 # for a limit of 1 GiB
@@ -303,6 +305,9 @@ echo "options zfs zfs_arc_max=2147483648" > /etc/modprobe.d/zfs.conf
 echo "options zfs zfs_arc_max=4294967296" > /etc/modprobe.d/zfs.conf
 
 # fetch information about arc
+cat /sys/module/zfs/parameters/zfs_arc_min
+cat /sys/module/zfs/parameters/zfs_arc_max
+
 arcstat
 arc_summary
 arc_summary -d
