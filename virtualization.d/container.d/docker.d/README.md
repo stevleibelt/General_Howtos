@@ -66,13 +66,14 @@ cd /var/lib/docker
 
 ## Links
 
+* [How to use docker compose with profiles, watch mode and gpu support: freecodecamp.org](https://www.freecodecamp.org/news/how-to-use-docker-compose-for-production-workloads/) - 20260306
 * [Docker Best Practices for Python Developers: testdriven.io](https://testdriven.io/blog/docker-best-practices/) - 20240412
-* [reference manual](http://docs.docker.io/en/latest/reference/)
-* [container tutorials](http://containertutorials.com/)
-* [getting started](https://www.docker.io/gettingstarted/)
-* [dockerfile](https://www.docker.io/learn/dockerfile/)
-* [docker file best practices - 1](http://crosbymichael.com/dockerfile-best-practices.html)
-* [docker file best practices - 2](http://crosbymichael.com/dockerfile-best-practices-take-2.html)
+* [Reference Manual: docker.io](http://docs.docker.io/en/latest/reference/)
+* [Container Tutorials: containertutorials.com](http://containertutorials.com/)
+* [Getting Started: docker.io](https://www.docker.io/gettingstarted/)
+* [Dockerfile: docker.io](https://www.docker.io/learn/dockerfile/)
+* [Docker File Fest Practices - 1: crosbymichael.com](http://crosbymichael.com/dockerfile-best-practices.html)
+* [Docker File Best Practices - 2: crosbymichael.com](http://crosbymichael.com/dockerfile-best-practices-take-2.html)
 * [basics](http://docs.docker.io/en/latest/use/basics/)
 * [lates docker build](http://docs.docker.io/en/latest/terms/image/)
 * [examples](http://docs.docker.io/en/latest/examples/)
