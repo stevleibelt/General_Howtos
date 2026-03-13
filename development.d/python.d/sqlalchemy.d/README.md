@@ -236,6 +236,7 @@ Class User(MyBaseClass):
 
 ## Links
 
+* [Introduction to SQLAlchemy 2 In Practice: miguelgrinberg.com](https://blog.miguelgrinberg.com/post/introduction-to-sqlalchemy-2-in-practice) - 20260313
 * [SQLAlchemy: slingacademy.com](https://www.slingacademy.com/cat/sqlalchemy/) - 20240514
 * [SQLAlchemy ORM Querying Guide: sqlalchemy.org](https://docs.sqlalchemy.org/en/20/orm/queryguide/index.html) - 20240513
 * [SQLAlchemy Unified Tutorial: sqlalchemy.org](https://docs.sqlalchemy.org/en/20/tutorial/index.html) - 20240513
