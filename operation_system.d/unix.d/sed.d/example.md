@@ -7,6 +7,12 @@
 cat file | sed -n '4p'
 ```
 
+## Replace entire/whole line
+
+```bash
+sed -e '/^my_start_of_the_line/c\my_replace_of_the_line' myfile
+```
+
 ## Replace every occurrences in a text file
 
 ```bash
