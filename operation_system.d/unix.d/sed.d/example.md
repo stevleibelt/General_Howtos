@@ -1,5 +1,22 @@
 # Sed examples
 
+## Use user input instead of file
+
+```bash
+# Given is the fact that we have files in the path of:
+#   /usr/local/www/apache24/data
+# and we want to convert this to an https link prefixed with:
+#   https://download.bazzline.net
+# We provide the file path as argument to sed
+#
+# sed
+# 	s: substitute
+# 	|: use >>|<< as delimiter to ease up handling of >>/<<
+# 	^\/usr/local...\(*\): search for >>/usr/local/...<< at the beginning and put the rest as content of matching group ()
+# 	|https://...: prefix the content of matching group 1 with >>https:/...<<
+sed 's|^/usr/local/www/apache24/data/\(\)|https://download.bazzline.net/\1|' <<< "/usr/local/www/apache24/data/media/image/quake3.png"
+```
+
 ## Show line number x 
 
 ```bash
