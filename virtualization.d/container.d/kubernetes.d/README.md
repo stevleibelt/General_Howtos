@@ -46,5 +46,6 @@ All is written down in the YAML file.
 
 ## Links
 
+* [How to Secure a Kubernetes Cluster: RBAC, Pod Hardening, and Runtime Protection: freecodecamp.org](https://www.freecodecamp.org/news/how-to-secure-a-kubernetes-cluster-handbook/) - 20260326
 * [Kubernete Architecture](https://opensource.com/article/22/2/kubernetes-architecture) - 20221222
 
