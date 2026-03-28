@@ -537,6 +537,7 @@ python .\load_test.py
 * [FastAPI Crashkurs 2022 | REST-API mit dem beliebsten Python Framework: youtube.com](https://www.youtube.com/watch?v=KXCvIV3yr7c&list=PL-lCrD3QqynX2a2sgXZlvxEGssGg9ZTCa) - 20230218
   * [Project page: github.com](https://github.com/Coding-Crashkurse/FastAPI-Auth) - 20230219
 * [How to Implement Dependency Injection in FastAPI: freecodecamp.org](https://www.freecodecamp.org/news/how-to-implement-dependency-injection-in-fastapi/) - 20251115
+* [How to Implement Token Bucket Rate Limiting with FastAPI](https://www.freecodecamp.org/news/token-bucket-rate-limiting-fastapi/) - 20260328
 * [How to Use Websockets: From Python to FastAPI: freecodecamp.org](https://www.freecodecamp.org/news/how-to-use-websockets-from-python-to-fastapi/) - 20260312
 * [List of FastAPI packages: libraries.io](https://libraries.io/search?q=fastapi) - 20230327
 * [Tag-youre-it-backend: Example project using fastapi: github.com](https://github.com/nickatnight/tag-youre-it-backend) - 20230227
