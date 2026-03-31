@@ -8,12 +8,13 @@ You can use gvfs to mount an ftp, no direct need to install duck or other cli ft
 
 ```bash
 # using gio
+#   list
+gio list
 #   mount
 gio mount smb://foo...
 #   same as: `gvfs-mount smb://foo...`
 #   umount
-gio mount -u smb://foo...
-#   same as: `gvfs-mount -u smb://foo...`
+umount <string: mount_path>
 ```
 
 ## Error solving
