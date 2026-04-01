@@ -4,7 +4,8 @@
 
 ```bash
 # check status for mountpoint /
-sudo btrfs filesystem show /
+# check status for device /dev/sdX
+sudo btrfs filesystem show <string: mountpoint_or_device>
 
 # check statistics and errors for mountpoint /
 sudo btrfs device stats /
@@ -138,7 +139,15 @@ sudo btrfs device scan
 
 # find uuid
 sudo btrfs filesystem show
-# add a line like the following to your /etc/fstab
+# Add a line like the following to your /etc/fstab
+#   UUID can befound via `lsblk --fs /dev/sdX` or `blkid /dev/sdX`
+#   Add `ssd` to option if the device is a ssd
+#   Add `subvol=<string: subvolume_name>` to option if you want to mount a subvolumn only
+# If you are running systemd: `systemctl daemon-reload` to check if your change is good
+# If you want to know more:
+#   man 5 fstab
+#   man 1 systemctl
+# Check it by executing: `mount -av`
 # UUID=<string: uuid of btrfs file system show> /data   btrfs   defaults,noatime,compress=zstd 0 0
 
 # mount it and create subvolume
