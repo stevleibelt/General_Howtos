@@ -67,14 +67,17 @@ All you have to do is go to the CUPS printer administration page and click "Resu
 
 ## Links
 
-* [Diy quick and easy samba print server setup](https://www.techrepublic.com/blog/diy-it-guy/diy-quick-and-easy-samba-print-server-setup/) - 2020-02-18
-* [ipp based print server cups](https://www.howtoforge.com/ipp_based_print_server_cups) - 2020-02-18
-* [cups printer sharing](https://www.cups.org/doc/sharing.html)
-* [cupsd.conf](https://www.cups.org/doc/man-cupsd.conf.html)
-* [lpadmin](https://www.cups.org/doc/man-lpadmin.html)
-* [cups printer sharing for arch linux](https://wiki.archlinux.org/index.php/CUPS/Printer_sharing)
-* [cups printer for arch linux](https://wiki.archlinux.org/index.php/CUPS)
-* [what is cups server and how to share a printer](https://askubuntu.com/questions/73367/what-is-cups-server-and-how-to-share-a-printer-locally-or-over-a-network)
-* [network printing with ubuntu](https://help.ubuntu.com/community/NetworkPrintingWithUbuntu)
+* [Arch Linux Install Network Printer: adamsdesk.com](https://kb.adamsdesk.com/operating_system/arch_linux_install_network_printer/) - 20260402
 * [CUPS Command-Line Utilities on oracle.com](https://docs.oracle.com/cd/E23824_01/html/821-1451/gllgm.html)
+* [cups printer for arch linux](https://wiki.archlinux.org/index.php/CUPS)
+* [cups printer sharing](https://www.cups.org/doc/sharing.html)
+* [cups printer sharing for arch linux](https://wiki.archlinux.org/index.php/CUPS/Printer_sharing)
+* [cupsd.conf](https://www.cups.org/doc/man-cupsd.conf.html)
+* [Diy quick and easy samba print server setup](https://www.techrepublic.com/blog/diy-it-guy/diy-quick-and-easy-samba-print-server-setup/) - 2020-02-18
 * [How to resume CUPS printer from command line?](https://superuser.com/questions/280396/how-to-resume-cups-printer-from-command-line)
+* [How to Set Up a Printer with CUPS on Arch Linux: siberoloji.com](https://www.siberoloji.com/how-to-set-up-a-printer-with-cups-on-arch-linux/) - 20260402
+* [ipp based print server cups](https://www.howtoforge.com/ipp_based_print_server_cups) - 2020-02-18
+* [Linux CUPS Tutorial for Beginners: A Comprehensive Guide to Printing on Linux: thelinuxvault.net](https://www.thelinuxvault.net/blog/linux-cups-tutorial-for-beginners/) - 20260402
+* [lpadmin](https://www.cups.org/doc/man-lpadmin.html)
+* [network printing with ubuntu](https://help.ubuntu.com/community/NetworkPrintingWithUbuntu)
+* [what is cups server and how to share a printer](https://askubuntu.com/questions/73367/what-is-cups-server-and-how-to-share-a-printer-locally-or-over-a-network)
