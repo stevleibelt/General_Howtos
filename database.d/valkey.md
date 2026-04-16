@@ -115,4 +115,5 @@ MONITOR
 ## Link
 
 * [How to Set Up Valkey, The Alternative to Redis: percona.com](https://www.percona.com/blog/how-to-set-up-valkey-the-alternative-to-redis/) - 20251107
+* [Pipelining and Transactions in Redis and Valkey: percona.com](https://www.percona.com/blog/pipelining-and-transactions-in-redis-and-valkey/) - 20260416
 * [Valkeycli: valkey.io](https://valkey.io/topics/cli/) - 20240905
