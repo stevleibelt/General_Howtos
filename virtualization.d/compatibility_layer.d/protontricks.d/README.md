@@ -15,7 +15,8 @@
 protontricks-launch --appid 2732960 "/path/to/the/GeneralsOnline_setup_*.exe"
 # Choose "/path/to/steam/steamapps/common/Command & Conquer Generals - Zero Hour/Generals.exe"
 # Assumed you want to start your game with mangohud
-mangohud protontricks-launch --appid 2732960 "/path/to/steam/steamapps/common/Command & Conquer Generals - Zero Hour/GeneralsOnlineZH.exe"
+# Since GeneralsOnline_setup_032926_QFE5.exe, we have to use the `_60.exe`
+mangohud protontricks-launch --appid 2732960 "/path/to/steam/steamapps/common/Command & Conquer Generals - Zero Hour/GeneralsOnlineZH_60.exe"
 # Click on Multiplayer->Online and login via steam
 # pofta buna
 
