@@ -182,14 +182,48 @@ zfs set mountpoint=</path/to/mountpoint> <pool name>
 zfs set mountpoint=</path/to/mountpoint/of/dataset> <pool name>/<data set name>
 ```
 
-### Set quota
+### Set quota and reservation
+
+ref: [Setting ZFS Quotas and Reservations](https://docs.oracle.com/cd/E23823_01/html/819-5461/gazvb.html#gbdbb) - 20260428
 
 ```bash
+# Replace `zpool/zdataset` with `<string: pool_name>/<string: dataset_name>`
+#
+# Use reservation to ensure there is at least x free space available.
+# Use quota to ensure there is at maxium x space used.
+# 
+# There are multiple quotas available.
+# Choose the one that fits to your scenario:
+#   quota: Defines a limit of disk space a file system can use
+#   refquota: Does not include descendents and snapshots
+#   groupquota: Sets quota per group
+#   userquota: Sets quota per user
+#
+# There are multiple reservation available.
+# Choose the one that fits to your scenario:
+#   reservation: Defines a limit of free disk space that must be ensured
+#   refreservation: Same as reservation but does not include disk space used by snapshots or clones
+
+# get current quota, refquota, reservation
+zfs get quota,refquota,reservation zpool/zdataset
+# for groupquota
+zfs groupspace zpool/zdataset
+# for userquota
+zfs userspace zpool/zdataset
+
 # set quota to 10 GB
-zfs set quota=10G <pool name>[/<data set name>]
+zfs set quota=10G zpool/zdataset
+# set refquota to 10 GB
+zfs set refquota=10G zpool/zdataset
+# set reservation to 10 GB
+zfs set reservation=10G zpool/zdataset
+# for groupquota
+zfs groupquota@mygroupname zpool/zdataset
+# for userquota
+zfs userquota@myusername zpool/zdataset
 
 # remove quota
-zfs set quota=none <pool name>[/<data set name>]
+zfs set quota=none zpool/zdataset
 ```
 
 ### Get all flags of data set
