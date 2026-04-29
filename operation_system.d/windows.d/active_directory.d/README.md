@@ -116,9 +116,15 @@ Set-ADUser -Identity johndoe -Replace @{pager = 123-456 789}
 
 ## Useful LDAP-Filters
 
-```bash
+```ldap
 # Filter for disabled accounts
+# ACCOUNTDISABLE is a bit (hex: `0x0002`, dezimal: `2`) that is either set to `0` or `1`
+# ref: https://learn.microsoft.com/de-de/troubleshoot/windows-server/active-directory/useraccountcontrol-manipulate-account-properties
 # ref: http://www.selfadsi.de/ads-attributes/user-userAccountControl.htm
+# ref: https://ldapwiki.com/wiki/Wiki.jsp?page=1.2.840.113556.1.4.803
+#
+# 1.2.840.113556.1.4.803 is the OID for LDAP_MATCHING_RULE_BIT_AND
+# What this filter does is to compare if the BIT is set to 1 for the decimal value of 2
 (userAccountControl:1.2.840.113556.1.4.803:=2)
 ```
 
