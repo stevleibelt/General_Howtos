@@ -3,45 +3,49 @@
 ## Load, reload or unload module
 
 ```bash
-#load module
+# load module
 modprobe <module name>
 
-#reload module
+# reload module
 modprobe -r <module name>
 
-#kill module
+# remove module
 rmmod <module name>
 ```
 
 ## List modules
 
 ```bash
-lsmod
+lsmod | grep <string: my_module>
 less /proc/modules
+grep <string: my_module> /proc/modules
 
-#list modules of the current kernel
+# list modules of the current kernel
 ls /lib/modules/`uname -r`
 
-#list used sub directories of the current kernel
+# list used sub directories of the current kernel
 ls /lib/modules/`uname -r`/kernel
 
-#list available modules
+# list available modules
 modprobe -c
 ```
 
 ## Disable module
 
-### Disable usb ports
+### Disable loading of usb ports
 
 ```bash
-echo 'install usb-storage /bin/true' > /etc/modprobe.d/disable_usb_storage.conf
+# prevents module from being loaded, automatically or manually
+echo 'install usb-storage /bin/false' > /etc/modprobe.d/disable_usb_storage.conf
 ```
 
-### Disable pcspeaker
+### Disable automatically loading of pcspeaker
 
 @see: https://wiki.archlinux.org/index.php/PC_speaker
 
 ```bash
+# prevents module from being loaded automatically
+#   it is still possible to load it manually
 echo 'blacklist pcspkr' > /etc/modprobe.d/disable_pcsprk.conf
 ```
 
