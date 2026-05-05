@@ -3,6 +3,8 @@ SET @TODAY = DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%s');
 -- current date
 SET @TODAY = CURRENT_DATE;
 
+-- yesterday in format of year-month-day
+SET @YESTERDAY_DATE = DATE_FORMAT(DATE_SUB(CURRENT_DATE, INTERVAL 1 DAY), '%Y-%m-%d');
 
 -- @see:
 --  http://w3resource.com/mysql/date-and-time-functions/mysql-adddate-function.php
