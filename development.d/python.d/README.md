@@ -104,40 +104,40 @@ Modules are located in `c:\Python`.
 
 ## Link
 
-* [How to Build a Singleton in Python (and Why You Probably Shouldn't): freecodecamp.org](https://www.freecodecamp.org/news/how-to-build-a-singleton-in-python-and-why-you-probably-shouldnt/) - 20260123
-* [official python documentation](https://docs.python.org/) - 20200923
-  * [setup and usage](https://docs.python.org/3/using/index.html) - 20200923
-  * [the python tutorial](https://docs.python.org/3/tutorial/index.html) - 20200923
-    * [simple variables](https://docs.python.org/3/tutorial/introduction.html) - 20200924
-  * [official python howto's](https://docs.python.org/3/howto/index.html) - 20200923
-  * [porting python 2 code to python 3](https://docs.python.org/3/howto/pyporting.html) - 20200923
-        * [automatic conversion to Py2/3 with future](http://python-future.org/automatic_conversion.html) - 20200924
-  * [unit testing framework](https://docs.python.org/3/library/unittest.html) - 20200923
-  * [manage dependencies](https://packaging.python.org/tutorials/managing-dependencies/#managing-dependencies) - 20200924
-  * [project summeries](https://packaging.python.org/key_projects/) - 20200924
-  * virtual environement
-    * [nox](https://nox.thea.codes/) - 20200924
-    * [pew](https://github.com/berdario/pew) - 20200924
-    * [pipenv](https://pipenv.pypa.io/) - 20200924
-    * [tox](https://tox.readthedocs.io/) - 20200924
-    * [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/) - 20200924
-  * [what is new - change log](https://docs.python.org/3/whatsnew/index.html#whatsnew-index) - 20200924
-* [official python package index - pypi.org](https://pypi.org/) - 20200924
-  * [pip reference guide](https://pip.pypa.io/en/latest/reference/) - 20200924
-  * useful packages
-    * [coverage](https://pypi.org/project/coverage/) - 20200924
-    * [future](http://python-future.org/automatic_conversion.html) - 20200924
-* [Python release cycle/versions with support date: devguide.python.org](https://devguide.python.org/versions/) - 20230905
+* [A dozen ways to learn Python: opensource.com](https://opensource.com/article/19/8/dozen-ways-learn-python) - 20190827
 * [Get started using Python on Windows for beginners](https://docs.microsoft.com/en-us/windows/python/beginners) - 20190719
   * [Get started using Python on Windows for scripting and automation](https://docs.microsoft.com/en-us/windows/python/scripting) - 20190719
   * [Get started using Python for web development on Windows](https://docs.microsoft.com/en-us/windows/python/web-frameworks) - 20190719
-* [installing packages with pip](https://packaging.python.org/tutorials/installing-packages/) - 20200923
-* [packagin python modules with wheels](https://opensource.com/article/23/1/packaging-python-modules-wheels) - 20230127
-* [programming tutorial](https://www.programiz.com/python-programming/tutorial) - 20190111
-* [python build in methods](https://www.programiz.com/python-programming/methods/built-in) - 20190111
-* [python fluent booknotes](https://bjpcjp.github.io/2025/04/02/python-fluent-booknotes.html) - 20250404
-* [python list methods](https://www.programiz.com/python-programming/methods/list) - 20190111
-* [>>A dozen ways to learn Python<<](https://opensource.com/article/19/8/dozen-ways-learn-python) - 20190827
-* [>>How to Use Pytest: A Simple Guide to Testing in Python<<](https://www.freecodecamp.org/news/how-to-use-pytest-a-guide-to-testing-in-python/) - 20250709
+* [How to Build a Singleton in Python (and Why You Probably Shouldn't): freecodecamp.org](https://www.freecodecamp.org/news/how-to-build-a-singleton-in-python-and-why-you-probably-shouldnt/) - 20260123
+* [How to Use Pytest: A Simple Guide to Testing in Python: freecodecamp.org](https://www.freecodecamp.org/news/how-to-use-pytest-a-guide-to-testing-in-python/) - 20250709
+* [Installing packages with pip](https://packaging.python.org/tutorials/installing-packages/) - 20200923
+* [Official python documentation](https://docs.python.org/) - 20200923
+  * [Setup and usage](https://docs.python.org/3/using/index.html) - 20200923
+  * [The python tutorial](https://docs.python.org/3/tutorial/index.html) - 20200923
+    * [Simple variables](https://docs.python.org/3/tutorial/introduction.html) - 20200924
+  * [Official python howto's](https://docs.python.org/3/howto/index.html) - 20200923
+  * [Porting python 2 code to python 3](https://docs.python.org/3/howto/pyporting.html) - 20200923
+    * [Automatic conversion to Py2/3 with future](http://python-future.org/automatic_conversion.html) - 20200924
+  * [Unit testing framework](https://docs.python.org/3/library/unittest.html) - 20200923
+  * [Manage dependencies](https://packaging.python.org/tutorials/managing-dependencies/#managing-dependencies) - 20200924
+  * [Project summeries](https://packaging.python.org/key_projects/) - 20200924
+  * Virtual environement
+    * [Nox](https://nox.thea.codes/) - 20200924
+    * [Pew](https://github.com/berdario/pew) - 20200924
+    * [Pipenv](https://pipenv.pypa.io/) - 20200924
+    * [Tox](https://tox.readthedocs.io/) - 20200924
+    * [Virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/) - 20200924
+  * [What is new - change log](https://docs.python.org/3/whatsnew/index.html#whatsnew-index) - 20200924
+* [Official python package index - pypi.org](https://pypi.org/) - 20200924
+  * [Pip reference guide](https://pip.pypa.io/en/latest/reference/) - 20200924
+  * Useful packages
+    * [Coverage](https://pypi.org/project/coverage/) - 20200924
+    * [Future](http://python-future.org/automatic_conversion.html) - 20200924
+* [Packaging python modules with wheels](https://opensource.com/article/23/1/packaging-python-modules-wheels) - 20230127
+* [Programming tutorial](https://www.programiz.com/python-programming/tutorial) - 20190111
+* [Python build in methods](https://www.programiz.com/python-programming/methods/built-in) - 20190111
+* [Python fluent booknotes](https://bjpcjp.github.io/2025/04/02/python-fluent-booknotes.html) - 20250404
+* [Python list methods](https://www.programiz.com/python-programming/methods/list) - 20190111
+* [Python release cycle/versions with support date: devguide.python.org](https://devguide.python.org/versions/) - 20230905
 * [Secure Coding Guide for Python: openssf.org](https://best.openssf.org/Secure-Coding-Guide-for-Python/) - 20260513
 
