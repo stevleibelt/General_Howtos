@@ -108,6 +108,7 @@ Modules are located in `c:\Python`.
 * [Get started using Python on Windows for beginners](https://docs.microsoft.com/en-us/windows/python/beginners) - 20190719
   * [Get started using Python on Windows for scripting and automation](https://docs.microsoft.com/en-us/windows/python/scripting) - 20190719
   * [Get started using Python for web development on Windows](https://docs.microsoft.com/en-us/windows/python/web-frameworks) - 20190719
+* [How to Build a Caclulator with Tkinter in Python: freecodecamp.org](https://www.freecodecamp.org/news/build-a-calculator-with-tkinter-in-python/) - 20260516
 * [How to Build a Singleton in Python (and Why You Probably Shouldn't): freecodecamp.org](https://www.freecodecamp.org/news/how-to-build-a-singleton-in-python-and-why-you-probably-shouldnt/) - 20260123
 * [How to Use Pytest: A Simple Guide to Testing in Python: freecodecamp.org](https://www.freecodecamp.org/news/how-to-use-pytest-a-guide-to-testing-in-python/) - 20250709
 * [Installing packages with pip](https://packaging.python.org/tutorials/installing-packages/) - 20200923
