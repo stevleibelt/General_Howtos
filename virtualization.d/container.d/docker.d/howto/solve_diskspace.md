@@ -29,10 +29,10 @@ docker container prune
 docker image prune
 
 # remove unused network
-docker network prunce
+docker network prune
 
 # remove unused volumes
-docker volume prunce
+docker volume prune
 
 # remove all dangling data
 docker system prune
