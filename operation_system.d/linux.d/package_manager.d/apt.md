@@ -6,7 +6,10 @@
 # List installed packages
 apt list --installed
 #  or
-apt-cache pkgnames
+apt-cache <string: package_name>
+
+# List depends on
+apt-cache depends <string: package_name>
 
 # List upgradeable packages
 apt-get -s upgrade
