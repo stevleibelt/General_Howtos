@@ -112,7 +112,7 @@ sudo apt autoclean
 #adapt source list
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.20210819
 sudo sed -i -e 's/buster/bullseye/g' /etc/apt/sources.list
-#optional, repeat the two steps above with every file in /etc/apt/source.list.d
+find /etc/apt/sources.list.d -name "*.list" -exec sed -i 's/buster/bullseye/g' {} \;
 
 #do the upgrade
 sudo apt update
@@ -138,7 +138,7 @@ sudo apt autoclean
 
 #prepare for upgrade
 sudo sed -i'.bullseye' 's/bullseye/bookworm/g' /etc/apt/sources.list
-#optional, repeat the two steps above with every file in /etc/apt/source.list.d
+find /etc/apt/sources.list.d -name "*.list" -exec sed -i 's/bullseye/bookworm/g' {} \;
 
 #upgrade
 sudo apt update
@@ -151,6 +151,12 @@ sudo apt autoclean
 
 #check
 cat /etc/os-release
+```
+
+## From 12 (bookworm) to 13 (trixie)
+
+```bash
+
 ```
 
 ## Links
