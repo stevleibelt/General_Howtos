@@ -116,6 +116,45 @@ tmux attach -t 0
 :swap-pane -s <source id> -t <target id>
 ```
 
+## Examples
+
+```bash
+cat > my_example_session_helper.sh <<DELIM
+#!/bin/bash
+
+function _main ()
+{
+    local SESSION_NAME
+
+    SESSION_NAME="my-example-session-helper"
+
+    if tmux has-session -t "\${SESSION_NAME}" 2>/dev/null;
+    then
+        # Attache to session
+        tmux attach-session -t "\${SESSION_NAME}"
+    else
+        # Create detached new session
+        tmux new-session -d -t "\${SESSION_NAME}"
+
+        # Execute command in first pane
+        tmux send-keys -t "\${SESSION_NAME}.0" 'cd /var/log' C-m
+        tmux send-keys -t "\${SESSION_NAME}.0" 'tail -f *.log' C-m
+
+        # Create vertical splitted second pane on first window
+        tmux split-windows -t "\${SESSION_NAME}:0" -v
+
+        # Execute command in second pane
+        tmux send-keys -t "top" C-m
+
+        # Attach to session
+        tmux attach-session -t "\${SESSION_NAME}"
+    fi
+}
+
+_main "\${@}"
+DELIM
+```
+
 ## Link
 
 * [tmux cheat sheet](https://tmuxcheatsheet.com/) - 20250314
