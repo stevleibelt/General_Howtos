@@ -1,11 +1,13 @@
-# adding shell script to i3status.conf
+# i3status
+
+## Adding shell script to i3status.conf
 
 You can not add a shell script to the i3status.
 But you can add i3status to a shell script.
 
-## example
+### Example
 
-```
+```bash
 #example_status_script.sh
 #!/bin/bash
 
@@ -42,7 +44,7 @@ do
 done
 ```
 
-# links
+## Links
 
 * https://faq.i3wm.org/question/4815/adding-shell-script-to-i3statusconf.1.html
 * https://pypi.python.org/pypi/py3status

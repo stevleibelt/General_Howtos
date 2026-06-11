@@ -8,6 +8,8 @@ Try to use dmenu.
 
 ### i3bar has disappeared when autorander changed profile
 
+Just for myself the note "i3status missing after i3 reload".
+
 ```bash
 cat >> ~/.config/autorandr/postswitch <<DELIM
 # net_bazzline_setup_fix_broken_i3bar
