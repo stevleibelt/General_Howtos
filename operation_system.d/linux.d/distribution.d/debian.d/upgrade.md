@@ -143,6 +143,7 @@ find /etc/apt/sources.list.d -name "*.list" -exec sed -i 's/bullseye/bookworm/g'
 #upgrade
 sudo apt update
 sudo apt full-upgrade
+
 #test that your sshd config is still working and valid
 sudo sshd -t
 sudo systemctl reboot
