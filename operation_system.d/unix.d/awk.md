@@ -3,8 +3,11 @@
 ## Change default separator
 
 ```bash
-#use ";" as separator instead of default " "
+# use ";" as separator instead of default " "
 awk 'BEGIN { FS = ";" } ; { print $1 }'
+
+# use "'" as separator
+awk -F"'" '{ print $1 }' <string: file_path>
 ```
 
 ## Show lines longer than X characters
@@ -17,7 +20,7 @@ awk 'length > 100'
 ## Print all but the first element
 
 ```bash
-awk '{$1="", $0}' <file path>
+awk '{$1="", $0}' <string: file_path>
 ```
 
 ## Awk in a nutshell
