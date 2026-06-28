@@ -21,8 +21,10 @@ wodim -v -speed=4 -sao dev=/dev/cdrom image.iso
 ln -s <path to my iso file> /tmp/burn/
 bashburn
 
-## generate checksum
-dd if=/dev/sr0 bs=2048 | md5sum
+## Verifiy result
+md5sum isoimage.iso
+blocks=$(expr $(du -b isoimage.iso | awk '{print $1}') / 2048)
+dd if=/dev/sr0 bs=2048 count=$blocks | md5sum
 ```
 
 ## Links
