@@ -259,9 +259,10 @@ my-complex-alias = "!f() { echo \"this is your user input $@\"; }; f"
 git reset <string: name>
 ```
 
-### Show information
+### Show tag information
 
 ```bash
+# This also includes the tag message
 git show 1.2.3
 ```
 
