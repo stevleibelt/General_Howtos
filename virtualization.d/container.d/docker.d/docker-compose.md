@@ -13,6 +13,13 @@ Following a list of syntax with usecase:
 
 ## Issue Solving
 
+### Network not found
+
+```bash
+# Force recreation of all containers and networks
+docker compose up --force-recreate
+```
+
 ### `docker compose logs` | grep is not working
 
 `docker compose logs` behaves a bit different.
