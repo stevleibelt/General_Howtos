@@ -96,6 +96,30 @@ pyenv install 3.12
 ~/.pyenv/versions/3.12.11/bin/python -m venv .venv
 ```
 
+## PyTest
+
+```bash
+# Useful options
+# -vv: verbose test names and details
+# -s: show output of `print()`
+# -x: stop at first failure
+# --tb=long: show longer traceback
+# --setup-show: show fixture setup and teardown
+# --pdb: open debugger on failure
+# --collect-only: inspect test discovery without running tests
+
+# Check which configuration is beeing used
+python -m pytest --trace-config
+
+# List collected tests without executing them
+python -m pytest --collect-only -vv
+
+# Run a specific test with detailed output
+# -vv: verbose test names and details
+# -s: shows `print()` output
+python -m pytest tests/test_foo.py::test_specific_use_case -vv -s
+```
+
 ## Windows
 
 Try to use the python launcher for windows `py`.
