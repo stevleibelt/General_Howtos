@@ -40,6 +40,9 @@ openssl x509 -in "${PEM_FILE_PATH}" -noout -text
 # View a chain or cert-bundle
 PEM_FILE_PATH="cert-bundle.pem"
 while openssl x509 -noout -text; do :; done < "${PEM_FILE_PATH}"
+
+# View certificate dates, subject alternative name etc.
+openssl x509 -in /path/to/my/ca.pem -noout -subject -issuer -dates -fingerprint -sha256 -ext subjectAltName
 ```
 
 ### View full certificate info
@@ -57,7 +60,7 @@ openssl s_client -connect ${HOSTNAME_WITH_PORT} </dev/null 2>/dev/null | openssl
 # Expected output: Verification: OK
 HOSTNAME_WITH_PORT="www.bazzline.net:443"
 PEM_FILE_PATH=my.pem
-openssl s_client -connect ${HOSTNAME_WITH_PORT} -showcerts -CAfile ${PEM_FILE_PATH} </dev/null 2>/dev/null | grep ^Verification
+openssl s_client -connect ${HOSTNAME_WITH_PORT} -showcerts -CAfile ${PEM_FILE_PATH} -verify_return_error </dev/null 2>&1 | grep -E 'CONNECTED|Certificate chain|subject=|issuer=|Verification|Verify return|Protocol|Cipher|handshake|error'
 ```
 
 ## General about certificates
