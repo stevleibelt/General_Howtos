@@ -7,6 +7,55 @@ DDD tries to explain why the language, collaboration and context are the most im
 
 ## Project structure
 
+[source: freecodecamp.org](https://www.freecodecamp.org/news/feature-modularization-in-flutter-combine-clean-architecture-and-domain-driven-design/#heading-the-building-blocks-clean-architecture-meets-ddd) - 20260902
+
+### The Domain Layer
+
+The domain layer contains entities, value objects, and repository interfaces. It has zero dependencies on any libraries, on local databases, or on any external package.  
+It is written pure in the project development language. It is the business logic of the feature, completely isolated from how the app is built or deployed.
+
+## The Application Layer
+
+The application layer contains use cases. A use case orchestrates domain objects to accomplish a specific business task. It depends only on the domain layer. It knows about entities and repositories but doesn't know about external libraries.
+
+## The Infrastructure Layer
+
+The infrastructure layer contains the concrete implementations of repository interfaces defined in the domain. It knows about HTTP clients, local databases, and external services. It depends on the domain layer interfaces but the domain layer never depends on it.
+
+## The Value Object
+
+A Value Object wraps a single piece of data and enforces its intrinsic validity. An EmployeeId is a Value Object, as is an email address or monetary amount. Value Objects are immutable. If the data is invalid, the Value Object throws an exception at construction time, before invalid data can enter the domain.  
+It throws immediately when invalid data is provided. This means invalid data can never exist inside your domain.  
+Value Objects are immutable. You never modify a Value Object. Instead, you create a new one.  
+Value Objects enforce atomic, intrinsic rules.
+
+## The Entity Object
+
+An Entity is a domain object with an identity and rules about how its state can change.  
+The Entity owns its state transitions.  
+Entities enforce stateful rules.
+
+## The Data Transfer Object
+
+A Data Transfer Object carries raw data from an external source: an API response, database row, or JSON payload. DTOs have no business rules or behavior. They exist only to transport data across a boundary.
+
+## The Domain Service
+
+A Domain Service handles business logic that doesn't naturally belong to a single entity. If a rule spans multiple entities or requires coordination between entities in ways that don't fit on any single entity, that logic belongs in a Domain Service.  
+Domain Services enforce rules that span multiple entities or require coordination.
+
+The rule is simple and absolute: if something is a business rule, it lives in the domain layer. The application layer calls the domain. The infrastructure layer implements the domain's interfaces. The presentation layer reacts to the results. None of them define or modify business rule.
+
+This boundary is what makes the system trustworthy. Business rules can't be bypassed by going directly to the database. They can't be skipped by calling a repository method directly from a widget. They're always enforced because the only way to change domain state is through the domain objects themselves.
+
+When a business rule is violated in the domain layer, the domain throws a DomainException. 
+
+## The Repository
+
+A Repository is an interface defined in the domain layer that describes how to persist and retrieve domain objects. The domain knows what operations it needs. The infrastructure layer provides the concrete implementation. The domain never knows which database or API is behind the repository.
+
+
+
 ```bash
 context
   # Bounded context
@@ -99,6 +148,7 @@ shared
 * [Directory structure: github.com](https://gist.github.com/satooshi/6396551) - 20150731
 * [Doman driven: opentaps.org architecture](http://www.opentaps.org/docs/index.php/Domain_Driven_Architecture) - 20150723
 * [Designing software architecture with Domain-Driven Design: endpointdev.com](https://www.endpointdev.com/blog/2026/05/designing-software-architecture-ddd-part-3/) - 20260617
+* [Feature Modularization in Flutter: How to Combine Clean Architecture and Domain-Driven Design for Self-Contained, Scalable Features: freecodecamp.org](https://www.freecodecamp.org/news/feature-modularization-in-flutter-combine-clean-architecture-and-domain-driven-design/#heading-the-building-blocks-clean-architecture-meets-ddd) - 20260901
 * [Getting Started with Domain-Driven Design in ASP.NET Core: telerik.com](https://www.telerik.com/blogs/getting-started-domain-driven-design-aspnet-core) - 20260616
 * [How to keep a complex value object immutable: stackoverflow.com](http://stackoverflow.com/questions/7405278/ddd-how-to-keep-a-complex-value-object-immutable) - 20150723
 * [State of union: github.com](https://github.com/PhpFriendsOfDdd/state-of-the-union) - 20150715
