@@ -2,23 +2,23 @@
 
 ```bash
 # add group
-groupadd <name>
+groupadd <string: name>
 
 # delete group
-groupdel <name>
+groupdel <string: name>
 
 # list groups
 cat /etc/group | sort | less
 
 # list groups per user
-groups $username
+groups <string: username>
 
 # add user to group
-usermod -a -G $group,$group $user
+usermod -a -G <string: group_name>[<string: group_name>] <string: user_name>
 #or
-gpasswd -a <user name> <group name>
+gpasswd -a <string: user_name> <string: group_name>
 #make current user session aware of this new group
-newgrp <group name>
+newgrp <string: group_name>
 
 # add groupid
 chmod -R g+s $path
