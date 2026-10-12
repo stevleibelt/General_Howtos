@@ -1,17 +1,20 @@
-# install
+# PostmarkOS
 
-* install pmbootstrap
-* pmbootstrap init
-* pmbootstrap install
+## Install
 
-# troubleshooting
+* Install pmbootstrap
+* `pmbootstrap init`
+* `pmbootstrap install`
 
-* pmbootstrap update
-* pmbootstrap -v install
-* go to the [issues](https://github.com/postmarketOS/pmbootstrap/issues/) page
-* pmbootstrap pkgrel_bump --auto
+## Troubleshooting
 
-# link
+* `pmbootstrap update`
+* `pmbootstrap -v install`
+* Go to the [issues](https://github.com/postmarketOS/pmbootstrap/issues/) page
+* `pmbootstrap pkgrel_bump --auto`
+* Default Pin: 147147
+
+## Links
 
 * [official postmarkos page](https://www.postmarketos.org)
 * [official postmarkos installation guide](https://wiki.postmarketos.org/wiki/Installation_guide)
