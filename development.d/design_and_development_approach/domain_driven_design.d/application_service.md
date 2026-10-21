@@ -1,3 +1,0 @@
-# application service
-
-* handles transactions
