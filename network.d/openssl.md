@@ -52,6 +52,9 @@ openssl x509 -in /path/to/my/ca.pem -noout -subject -issuer -dates -fingerprint 
 HOSTNAME_WITH_PORT="www.bazzline.net:443"
 
 openssl s_client -connect ${HOSTNAME_WITH_PORT} </dev/null 2>/dev/null | openssl x509 -inform pem -text
+
+# View for a postgresql server
+echo -n | openssl s_client -starttls postgres -connect ${HOSTNAME_WITH_PORT} -showcerts
 ```
 
 ### Use pem/ca file file to verify
