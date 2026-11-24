@@ -71,7 +71,7 @@ uv python pin 3.11
 
 # install tools global
 uv tool install black
-uv tool install buff
+uv tool install ruff
 
 # clean cache
 uv clean cache
